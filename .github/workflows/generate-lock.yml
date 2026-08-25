@@ -5,6 +5,8 @@ on:
     branches:
       - foundation/agent-os-plan-a
     paths:
+      - package.json
+      - pnpm-lock.yaml
       - .github/workflows/generate-lock.yml
 
 jobs:
