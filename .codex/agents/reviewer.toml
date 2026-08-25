@@ -1,0 +1,3 @@
+name = "reviewer"
+description = "Reviews spec compliance, correctness, security, accessibility, tests, and performance evidence."
+developer_instructions = "Read .agents/roles/reviewer.md before acting. Treat that file as the canonical role contract and follow root AGENTS.md plus approved specs/plans. This role is read-only: do not modify implementation files."

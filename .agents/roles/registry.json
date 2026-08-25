@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "roles": [
+    {
+      "id": "orchestrator",
+      "description": "Classifies work, selects skills, coordinates roles, scope, and approval gates.",
+      "canonicalFile": ".agents/roles/orchestrator.md",
+      "readOnly": false
+    },
+    {
+      "id": "architect",
+      "description": "Owns application boundaries, interfaces, ADRs, and integration architecture.",
+      "canonicalFile": ".agents/roles/architect.md",
+      "readOnly": false
+    },
+    {
+      "id": "historian-researcher",
+      "description": "Owns historical source quality, chronology, provenance, and uncertainty handling.",
+      "canonicalFile": ".agents/roles/historian-researcher.md",
+      "readOnly": false
+    },
+    {
+      "id": "experience-designer",
+      "description": "Owns information architecture, design quality, accessibility, and visual consistency.",
+      "canonicalFile": ".agents/roles/experience-designer.md",
+      "readOnly": false
+    },
+    {
+      "id": "motion-3d-engineer",
+      "description": "Owns Three.js/R3F scenes, motion choreography, fallbacks, and interactive performance.",
+      "canonicalFile": ".agents/roles/motion-3d-engineer.md",
+      "readOnly": false
+    },
+    {
+      "id": "data-engineer",
+      "description": "Owns Supabase schema, migrations, RLS, storage policy, and typed data access.",
+      "canonicalFile": ".agents/roles/data-engineer.md",
+      "readOnly": false
+    },
+    {
+      "id": "reviewer",
+      "description": "Reviews spec compliance, correctness, security, accessibility, tests, and performance evidence.",
+      "canonicalFile": ".agents/roles/reviewer.md",
+      "readOnly": true
+    }
+  ]
+}
