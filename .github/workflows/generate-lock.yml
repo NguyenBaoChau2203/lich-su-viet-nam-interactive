@@ -1,14 +1,9 @@
-name: Verify Task 1 foundation
+name: Verify Plan A branch
 
 on:
   push:
     branches:
       - foundation/agent-os-plan-a
-    paths:
-      - package.json
-      - pnpm-lock.yaml
-      - pnpm-workspace.yaml
-      - .github/workflows/generate-lock.yml
 
 permissions:
   contents: write
