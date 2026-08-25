@@ -22,7 +22,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24.14.0
-          cache: pnpm
       - run: pnpm install --lockfile-only
       - name: Commit generated lockfile
         run: |
