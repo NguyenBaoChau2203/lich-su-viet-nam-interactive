@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "approvedOn": "2026-08-26",
+  "upstreams": [
+    {
+      "id": "superpowers",
+      "repository": "obra/superpowers",
+      "revision": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "license": "MIT",
+      "purpose": "engineering-process"
+    },
+    {
+      "id": "taste-skill",
+      "repository": "Leonxlnx/taste-skill",
+      "revision": "ccbc15639c97057cbfcf32ecebc38ef716e4bb37",
+      "license": "MIT",
+      "purpose": "anti-slop-design"
+    },
+    {
+      "id": "design-dna",
+      "repository": "zanwei/design-dna",
+      "revision": "9d9d79568df31cd846681f89fd3be1c3ce0c2aff",
+      "license": "MIT",
+      "purpose": "design-analysis"
+    },
+    {
+      "id": "motion-design-skill",
+      "repository": "LottieFiles/motion-design-skill",
+      "revision": "f9a8a041b85185ee4881b3471d3415e939aac772",
+      "license": "MIT",
+      "purpose": "motion-direction"
+    }
+  ]
+}
