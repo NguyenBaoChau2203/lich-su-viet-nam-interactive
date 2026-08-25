@@ -37,3 +37,7 @@ jobs:
       - run: node scripts/agents/bootstrap.mjs --harness codex
       - run: node scripts/agents/bootstrap.mjs --harness antigravity
       - run: node scripts/agents/bootstrap.mjs --harness opencode
+      - name: Verify generated adapters are committed
+        run: |
+          node scripts/agents/generate-adapters.mjs
+          git diff --exit-code -- .agents/agents .opencode/agents .codex/agents
