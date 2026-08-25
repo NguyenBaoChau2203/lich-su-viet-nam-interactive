@@ -31,7 +31,7 @@ describe('coding-agent adapter generation', () => {
     });
   }
 
-  test('OpenCode reviewer denies edits', () => {
+  test('OpenCode reviewer denies the V2 edit permission', () => {
     const output = renderOpenCodeAgent({
       id: 'reviewer',
       description: 'Review implementation evidence.',
@@ -39,8 +39,8 @@ describe('coding-agent adapter generation', () => {
       readOnly: true,
     });
 
-    expect(output).toMatch(/edit:\s*deny/);
-    expect(output).toMatch(/write:\s*deny/);
+    expect(output).toMatch(/action:\s*edit/);
+    expect(output).toMatch(/effect:\s*deny/);
   });
 
   test('Codex adapter contains the required identity and instructions fields', () => {
