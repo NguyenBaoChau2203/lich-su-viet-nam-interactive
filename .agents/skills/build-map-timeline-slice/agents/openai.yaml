@@ -1,0 +1,4 @@
+interface:
+  display_name: "Xây lát cắt bản đồ–timeline"
+  short_description: "Triển khai sự kiện xuyên suốt dữ liệu và UI"
+  default_prompt: "Use $build-map-timeline-slice to implement one verified event across the timeline, map, and detail view."

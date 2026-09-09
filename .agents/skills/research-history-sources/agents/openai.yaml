@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nghiên cứu nguồn sử liệu"
+  short_description: "Thẩm định dữ kiện và nguồn lịch sử Việt Nam"
+  default_prompt: "Use $research-history-sources to research and document a Vietnamese historical event with verifiable sources."

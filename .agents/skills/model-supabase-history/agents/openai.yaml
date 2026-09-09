@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mô hình dữ liệu lịch sử"
+  short_description: "Thiết kế schema Supabase và RLS an toàn"
+  default_prompt: "Use $model-supabase-history to design a source-aware Supabase schema and safe RLS policies."

@@ -1,0 +1,39 @@
+{
+  "name": "lich-su-viet-nam-interactive",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run && node --test scripts/agent/*.test.mjs",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "agent:check": "node scripts/agent/validate-setup.mjs",
+    "agent:doctor": "node scripts/agent/doctor.mjs",
+    "verify": "pnpm agent:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "dependencies": {
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@playwright/test": "^1.63.0",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "^16.3.1",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.4",
+    "jsdom": "^27.0.0",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^5.0.0"
+  },
+  "packageManager": "pnpm@11.7.0"
+}

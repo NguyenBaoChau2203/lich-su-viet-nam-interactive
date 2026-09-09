@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^Bash$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/agent/guard-command.mjs",
+            "timeout": 10,
+            "statusMessage": "Kiểm tra an toàn lệnh shell"
+          }
+        ]
+      }
+    ]
+  }
+}
