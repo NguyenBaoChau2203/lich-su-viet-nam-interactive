@@ -3,6 +3,20 @@
   "plugin": [
     "superpowers@git+https://github.com/obra/superpowers.git#v6.3.0"
   ],
+  "mcp": {
+    "chrome-devtools": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--isolated",
+        "--no-usage-statistics",
+        "--no-performance-crux"
+      ],
+      "enabled": true
+    }
+  },
   "permission": {
     "skill": {
       "*": "allow"

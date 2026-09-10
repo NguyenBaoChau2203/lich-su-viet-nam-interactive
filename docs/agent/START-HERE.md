@@ -27,11 +27,25 @@ pnpm test:e2e
 
 GitHub CI tự cài Chromium riêng. Nếu chuyển sang máy không có Chrome, chạy `pnpm exec playwright install chromium` và đặt biến `CI=1` cho lần kiểm tra đó.
 
+### Chrome DevTools MCP
+
+Chrome DevTools MCP đã được cấu hình cho Codex, Antigravity và OpenCode để agent có thể xem DOM, console, network, accessibility tree, ảnh chụp và performance trace trong Chrome thật.
+
+- Codex và OpenCode tự mở một profile Chrome tạm thời, tách khỏi tài khoản và cookie cá nhân.
+- Với Antigravity, bấm biểu tượng Chrome ở góc trên bên phải trước khi yêu cầu agent dùng DevTools; MCP kết nối trình duyệt tích hợp qua `127.0.0.1:9222`.
+- Không đăng nhập tài khoản cá nhân hoặc mở dữ liệu nhạy cảm trong trình duyệt đang được agent kiểm tra.
+
+Prompt kiểm tra nhanh:
+
+```text
+Dùng Chrome DevTools MCP mở http://127.0.0.1:3000. Kiểm tra accessibility tree, console errors, failed network requests và chụp ảnh giao diện ở desktop. Chỉ xem dữ liệu; không sửa DOM hay đọc cookie/localStorage.
+```
+
 ## 2. Trạng thái từng agent
 
-- **Codex:** GitHub, Superpowers, Supabase và các plugin web đã bật. Project skill nằm trong `.agents/skills/`; hook an toàn nằm trong `.codex/hooks.json`. Chấp nhận/trust project hook khi Codex hỏi ở lần mở workspace đầu tiên.
-- **Antigravity:** `agy` đã có Superpowers. Mở workspace và chấp nhận/trust project hook khi IDE hỏi.
-- **OpenCode:** `opencode.json` khai báo Superpowers và policy lệnh. Khởi động lại OpenCode sau khi config đổi.
+- **Codex:** GitHub, Superpowers, Supabase, Chrome DevTools MCP và các plugin web đã bật. Project skill nằm trong `.agents/skills/`; hook an toàn nằm trong `.codex/hooks.json`. Chấp nhận/trust project hook khi Codex hỏi ở lần mở workspace đầu tiên.
+- **Antigravity:** `agy` đã có Superpowers và Chrome DevTools MCP nối với browser tích hợp. Mở workspace, bật browser và chấp nhận/trust project hook khi IDE hỏi.
+- **OpenCode:** `opencode.json` khai báo Superpowers, Chrome DevTools MCP và policy lệnh. Khởi động lại OpenCode sau khi config đổi.
 - **CodeGraph:** đã được nối vào các agent và index dự án ở `.codegraph/`. Agent phải dùng `codegraph_explore` hoặc `codegraph explore` trước khi đọc mã lan man.
 
 Trong những ngày đầu, nên dùng **một agent triển khai tại một thời điểm**. Khi đã quen mới chạy song song bằng Git worktree và không giao hai agent sửa cùng file.

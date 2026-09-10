@@ -10,6 +10,7 @@ const tools = [
   ["Antigravity launcher", "agy", ["--version"], false],
   ["OpenCode", "opencode", ["--version"], false],
   ["CodeGraph", "codegraph", ["--version"], false],
+  ["Chrome DevTools MCP", "chrome-devtools", ["--version"], false],
 ];
 
 function commandVersion(command, args) {
