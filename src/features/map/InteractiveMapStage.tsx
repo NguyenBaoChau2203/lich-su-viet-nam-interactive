@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { placesCatalog, eventsCatalog } from "@/features/history/catalog";
 import type { HistoricalPlace } from "@/features/history/types";
 import { VietnamGisMapSvg } from "./VietnamGisMapSvg";
+import { VietnamLeafletMap } from "./VietnamLeafletMap";
 import { EventDetailPopup } from "./EventDetailPopup";
 import { PanoramicTimelineBar } from "@/features/timeline/PanoramicTimelineBar";
 import { DienBienPhuTacticalLayer } from "@/features/battle/DienBienPhuTacticalLayer";
@@ -16,6 +17,7 @@ export function InteractiveMapStage() {
   const svgRef = useRef<SVGSVGElement | null>(null);
 
   // Experience states
+  const [mapEngine, setMapEngine] = useState<"leaflet" | "vector">("leaflet");
   const [mapMode, setMapMode] = useState<"overview" | "tactical-battle">("overview");
   const [viewBox, setViewBox] = useState<string>("0 0 1000 1200");
   const [selectedYear, setSelectedYear] = useState<number>(1954);
@@ -41,7 +43,7 @@ export function InteractiveMapStage() {
     return byYear || null;
   }, [activeEventId, selectedYear]);
 
-  // Transition Camera to Battle with GSAP
+  // Transition Camera to Battle
   const handleTriggerBattle = useCallback(() => {
     setMapMode("tactical-battle");
     setViewBox(DIEN_BIEN_PHU_CAMPAIGN.tacticalViewBox);
@@ -55,7 +57,7 @@ export function InteractiveMapStage() {
     }
   }, []);
 
-  // Transition Camera Back to Overview with GSAP
+  // Transition Camera Back to Overview
   const handleReturnToOverview = useCallback(() => {
     battleControl.pause();
     setMapMode("overview");
@@ -96,7 +98,7 @@ export function InteractiveMapStage() {
     }
   }, []);
 
-  // Map Zoom Controls
+  // Map Zoom Controls for Vector mode
   const handleZoomIn = () => {
     if (svgRef.current) {
       const current = svgRef.current.viewBox.baseVal;
@@ -153,14 +155,27 @@ export function InteractiveMapStage() {
             </h2>
             <p className="font-mono text-[10px] text-stone-500 hidden sm:block">
               {mapMode === "overview"
-                ? "Chọn năm trên thanh thời gian hoặc bấm vào điểm di tích để tìm hiểu"
+                ? "Bản đồ số trực quan từ vệ tinh & địa hình. Kéo thả để khám phá hoặc chọn mốc năm"
                 : "Tua thời gian hoặc chọn đợt công kích để theo dõi các mũi tiến quân"}
             </p>
           </div>
         </div>
 
-        {/* Right: Map Controls & Text Accessibility Toggle */}
+        {/* Right: Map Controls & Mode Toggles */}
         <div className="pointer-events-auto flex items-center gap-2">
+          {/* Switcher: Leaflet Internet vs Vector Schematic */}
+          <button
+            type="button"
+            onClick={() => setMapEngine(mapEngine === "leaflet" ? "vector" : "leaflet")}
+            aria-label="Chuyển đổi kiểu hiển thị bản đồ"
+            className="bg-white/95 backdrop-blur-md border border-amber-900/20 shadow-md text-stone-800 hover:text-red-700 px-2.5 py-1.5 rounded-md font-mono text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
+          >
+            <span>{mapEngine === "leaflet" ? "🌐" : "🗺️"}</span>
+            <span className="hidden sm:inline">
+              {mapEngine === "leaflet" ? "Bản đồ Số Internet" : "Bản đồ Thư tịch"}
+            </span>
+          </button>
+
           {/* Accessible Alternative View Button */}
           <button
             type="button"
@@ -173,57 +188,68 @@ export function InteractiveMapStage() {
             <span className="hidden md:inline">Xem văn bản</span>
           </button>
 
-          {/* Map Zoom Controls */}
-          <div
-            role="toolbar"
-            aria-label="Điều khiển phóng to thu nhỏ bản đồ"
-            className="flex bg-white/95 backdrop-blur-md border border-amber-900/20 shadow-md rounded-md overflow-hidden"
-          >
-            <button
-              type="button"
-              onClick={handleZoomIn}
-              aria-label="Phóng to"
-              className="w-8 h-8 flex items-center justify-center text-stone-800 hover:bg-stone-100 font-bold border-r border-amber-900/10 cursor-pointer"
+          {/* Map Zoom Controls for Vector mode */}
+          {mapEngine === "vector" && (
+            <div
+              role="toolbar"
+              aria-label="Điều khiển phóng to thu nhỏ bản đồ"
+              className="flex bg-white/95 backdrop-blur-md border border-amber-900/20 shadow-md rounded-md overflow-hidden"
             >
-              +
-            </button>
-            <button
-              type="button"
-              onClick={handleZoomOut}
-              aria-label="Thu nhỏ"
-              className="w-8 h-8 flex items-center justify-center text-stone-800 hover:bg-stone-100 font-bold border-r border-amber-900/10 cursor-pointer"
-            >
-              −
-            </button>
-            <button
-              type="button"
-              onClick={handleResetZoom}
-              aria-label="Đặt lại góc nhìn"
-              className="w-8 h-8 flex items-center justify-center text-stone-800 hover:bg-stone-100 text-xs cursor-pointer"
-            >
-              ⟲
-            </button>
-          </div>
+              <button
+                type="button"
+                onClick={handleZoomIn}
+                aria-label="Phóng to"
+                className="w-8 h-8 flex items-center justify-center text-stone-800 hover:bg-stone-100 font-bold border-r border-amber-900/10 cursor-pointer"
+              >
+                +
+              </button>
+              <button
+                type="button"
+                onClick={handleZoomOut}
+                aria-label="Thu nhỏ"
+                className="w-8 h-8 flex items-center justify-center text-stone-800 hover:bg-stone-100 font-bold border-r border-amber-900/10 cursor-pointer"
+              >
+                −
+              </button>
+              <button
+                type="button"
+                onClick={handleResetZoom}
+                aria-label="Đặt lại góc nhìn"
+                className="w-8 h-8 flex items-center justify-center text-stone-800 hover:bg-stone-100 text-xs cursor-pointer"
+              >
+                ⟲
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
-      {/* Main SVG Map Canvas */}
+      {/* Main Map Canvas: Leaflet (Default, Real Internet Map) or Vector SVG */}
       <div className="flex-1 w-full h-full relative">
-        <VietnamGisMapSvg
-          ref={svgRef}
-          viewBox={viewBox}
-          places={placesCatalog}
-          selectedPlaceId={selectedPlaceId}
-          onSelectPlace={handleSelectPlace}
-        >
-          {/* Tactical Battle Overlay when in battle mode */}
-          {mapMode === "tactical-battle" && (
-            <DienBienPhuTacticalLayer
-              campaign={DIEN_BIEN_PHU_CAMPAIGN}
-              activePhase={battleControl.activePhase}
-            />
-          )}
-        </VietnamGisMapSvg>
+        {mapEngine === "leaflet" ? (
+          <VietnamLeafletMap
+            places={placesCatalog}
+            selectedPlaceId={selectedPlaceId}
+            onSelectPlace={handleSelectPlace}
+            mapMode={mapMode}
+            activePhase={battleControl.activePhase}
+          />
+        ) : (
+          <VietnamGisMapSvg
+            ref={svgRef}
+            viewBox={viewBox}
+            places={placesCatalog}
+            selectedPlaceId={selectedPlaceId}
+            onSelectPlace={handleSelectPlace}
+          >
+            {mapMode === "tactical-battle" && (
+              <DienBienPhuTacticalLayer
+                campaign={DIEN_BIEN_PHU_CAMPAIGN}
+                activePhase={battleControl.activePhase}
+              />
+            )}
+          </VietnamGisMapSvg>
+        )}
 
         {/* Event Detail Popup Floating in Overview Mode */}
         {mapMode === "overview" && activeEvent && (

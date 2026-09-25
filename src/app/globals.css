@@ -1,13 +1,28 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --color-paper: #f1eee6;
+  --color-paper-raised: #f8f6f0;
+  --color-ink: #121212;
+  --color-ink-soft: #56534d;
+  --color-hairline: #c8c2b8;
+  --color-vermilion: #b12b1e;
+  --color-map-ink: #233b45;
+
+  --font-serif: var(--font-serif), "Source Serif 4", Georgia, serif;
+  --font-sans: var(--font-sans), "Be Vietnam Pro", system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-mono), "IBM Plex Mono", Consolas, monospace;
+}
 
 :root {
-  --paper: #f2eee3;
-  --paper-deep: #e5dece;
-  --ink: #24231f;
-  --ink-muted: #625e54;
-  --line: #b9b09f;
-  --vermilion: #9f382b;
-  --vermilion-dark: #71251e;
+  --paper: #f1eee6;
+  --paper-raised: #f8f6f0;
+  --ink: #121212;
+  --ink-soft: #56534d;
+  --hairline: #c8c2b8;
+  --vermilion: #b12b1e;
+  --map-ink: #233b45;
 }
 
 * {
@@ -15,237 +30,60 @@
 }
 
 html {
+  background-color: var(--paper);
+  color: var(--ink);
   scroll-behavior: smooth;
+}
+
+html.text-size-large {
+  font-size: 115%;
 }
 
 body {
   margin: 0;
-  background: var(--paper);
+  background-color: var(--paper);
   color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-family: var(--font-sans), "Be Vietnam Pro", system-ui, -apple-system, sans-serif;
   line-height: 1.6;
 }
 
-a {
-  color: inherit;
-}
-
-.site-shell {
-  min-height: 100vh;
-  padding: 0 clamp(1.25rem, 5vw, 5rem);
-}
-
-.masthead,
-footer {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 1rem;
-  min-height: 5rem;
-  border-bottom: 1px solid var(--line);
-  color: var(--ink-muted);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.masthead p,
-footer p {
-  margin: 0;
-}
-
-.brand-mark {
-  display: grid;
-  width: 2.5rem;
-  height: 2.5rem;
-  place-items: center;
-  border: 1px solid var(--vermilion);
-  color: var(--vermilion-dark);
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 700;
-}
-
-.status {
-  color: var(--vermilion-dark);
-}
-
-.hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
-  gap: clamp(3rem, 8vw, 8rem);
-  align-items: center;
-  min-height: calc(100vh - 5rem);
-  padding: 6rem 0;
-}
-
-.hero-copy {
-  max-width: 48rem;
-}
-
-.eyebrow,
-.era-label {
-  margin: 0 0 1.25rem;
-  color: var(--vermilion-dark);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 500;
-}
-
-h1 {
-  max-width: 12ch;
-  margin: 0;
-  font-size: clamp(3.25rem, 8vw, 7.5rem);
-  letter-spacing: -0.045em;
-  line-height: 0.95;
-}
-
-.lede {
-  max-width: 38rem;
-  margin: 2rem 0;
-  color: var(--ink-muted);
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-}
-
-.text-link {
-  display: inline-block;
-  border-bottom: 1px solid var(--ink);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.text-link:focus-visible {
-  outline: 3px solid var(--vermilion);
-  outline-offset: 0.35rem;
-}
-
-.era-figure {
-  border-top: 4px solid var(--vermilion);
-  border-bottom: 1px solid var(--line);
-  padding: 2rem 0;
-}
-
-.era-figure ol,
-.pillar-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.era-figure li {
-  display: grid;
-  grid-template-columns: 4.5rem 1fr;
-  gap: 1.25rem;
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--line);
-}
-
-.era-figure li span {
-  color: var(--vermilion-dark);
-  font-variant-numeric: tabular-nums;
-  font-weight: 700;
-}
-
-.era-figure li strong {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.15rem;
-  font-weight: 500;
-}
-
-.figure-note {
-  margin: 1.25rem 0 0;
-  color: var(--ink-muted);
-  font-size: 0.75rem;
-}
-
-.scope {
-  display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr);
-  gap: clamp(3rem, 8vw, 8rem);
-  padding: 7rem 0;
-  border-top: 1px solid var(--line);
-}
-
-.scope-heading h2 {
-  max-width: 15ch;
-  margin: 0;
-  font-size: clamp(2.25rem, 4vw, 4rem);
-  line-height: 1.05;
-}
-
-.scope-heading > p:last-child {
-  max-width: 36rem;
-  color: var(--ink-muted);
-}
-
-.pillar-list {
-  border-top: 1px solid var(--ink);
-}
-
-.pillar-list li {
-  display: grid;
-  grid-template-columns: 3rem 1fr;
-  gap: 1rem;
-  padding: 1.75rem 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.pillar-list > li > span {
-  color: var(--vermilion-dark);
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-
-.pillar-list h3 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.pillar-list p {
-  max-width: 34rem;
-  margin: 0.35rem 0 0;
-  color: var(--ink-muted);
-}
-
-footer {
-  grid-template-columns: 1fr auto;
-  border-top: 1px solid var(--line);
-  border-bottom: 0;
-}
-
-@media (max-width: 48rem) {
-  .masthead {
-    grid-template-columns: auto 1fr;
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: inherit;
   }
+}
 
-  .status {
-    display: none;
-  }
+/* Ensure button links with dark background always have high contrast paper text */
+a[class*="bg-ink"],
+button[class*="bg-ink"],
+.btn-ink {
+  color: #f1eee6 !important;
+}
 
-  .hero,
-  .scope {
-    grid-template-columns: 1fr;
-  }
+a[class*="bg-ink"]:hover,
+button[class*="bg-ink"]:hover,
+.btn-ink:hover {
+  color: #ffffff !important;
+}
 
-  .hero {
-    min-height: auto;
-    padding: 4rem 0;
-  }
+:focus-visible {
+  outline: 2px solid var(--vermilion);
+  outline-offset: 2px;
+}
 
-  .scope {
-    padding: 5rem 0;
-  }
+/* Custom styles for range inputs used across timeline and maps */
+input[type="range"] {
+  accent-color: var(--vermilion);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

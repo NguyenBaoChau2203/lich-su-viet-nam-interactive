@@ -22,7 +22,7 @@ describe("Home Page - Map-First Experience", () => {
     render(<Home />);
 
     expect(
-      screen.getByRole("region", { name: /bản đồ tương tác việt nam/i })
+      screen.getByRole("region", { name: /bản đồ.*tương tác việt nam/i })
     ).toBeInTheDocument();
 
     expect(screen.getByText(/quần đảo hoàng sa/i)).toBeInTheDocument();
