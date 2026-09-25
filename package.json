@@ -13,16 +13,18 @@
     "test:e2e": "playwright test",
     "agent:check": "node scripts/agent/validate-setup.mjs",
     "agent:doctor": "node scripts/agent/doctor.mjs",
-    "verify": "pnpm agent:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+    "history:data:check": "node scripts/history/validate-content.mjs",
+    "verify": "pnpm agent:check && pnpm history:data:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build"
   },
   "dependencies": {
+    "gsap": "^3.15.0",
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
     "@playwright/test": "^1.63.0",
+    "@tailwindcss/postcss": "^4",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "^16.3.1",
     "@types/node": "^20",
