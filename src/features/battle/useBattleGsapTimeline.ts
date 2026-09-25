@@ -51,6 +51,7 @@ export function useBattleGsapTimeline(
     // Check if user prefers reduced motion
     const prefersReducedMotion =
       typeof window !== "undefined" &&
+      typeof window.matchMedia === "function" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const baseDuration = prefersReducedMotion ? 0.01 : 12;
