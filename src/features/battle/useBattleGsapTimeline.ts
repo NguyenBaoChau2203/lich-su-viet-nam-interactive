@@ -5,7 +5,6 @@ import gsap from "gsap";
 import type { TacticalCampaignData } from "./battleData";
 
 export interface BattleTimelineControl {
-  timeline: gsap.core.Timeline | null;
   progress: number;
   isPlaying: boolean;
   activePhase: "dot-1" | "dot-2" | "dot-3";
@@ -19,8 +18,7 @@ export interface BattleTimelineControl {
 }
 
 export function useBattleGsapTimeline(
-  campaign: TacticalCampaignData,
-  containerRef?: React.RefObject<SVGGElement | null>
+  campaign: TacticalCampaignData
 ): BattleTimelineControl {
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
   const [progress, setProgress] = useState<number>(0);
@@ -151,7 +149,6 @@ export function useBattleGsapTimeline(
   const currentPhaseData = campaign.phases.find((p) => p.phaseId === activePhase) || campaign.phases[0];
 
   return {
-    timeline: timelineRef.current,
     progress,
     isPlaying,
     activePhase,

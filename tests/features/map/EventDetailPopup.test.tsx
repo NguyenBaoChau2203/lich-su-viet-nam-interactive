@@ -18,6 +18,8 @@ describe("EventDetailPopup Component", () => {
     placeIds: ["place-dien-bien"],
     summary: "Đòn quyết chiến chiến lược đập tan tập đoàn cứ điểm Pháp tại Mường Thanh.",
     learningPurpose: "Nắm vững 3 đợt tiến công và ý nghĩa quốc tế của chiến thắng.",
+    editorialStatus: "needs_evidence",
+    relatedStoryIds: [],
     claimIds: [],
     mediaIds: [],
   };

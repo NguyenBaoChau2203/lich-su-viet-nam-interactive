@@ -6,12 +6,11 @@ import type { TacticalCampaignData } from "./battleData";
 export interface DienBienPhuTacticalLayerProps {
   campaign: TacticalCampaignData;
   activePhase: "dot-1" | "dot-2" | "dot-3";
-  progress?: number;
 }
 
 export const DienBienPhuTacticalLayer = forwardRef<SVGGElement, DienBienPhuTacticalLayerProps>(
   function DienBienPhuTacticalLayer(
-    { campaign, activePhase, progress = 0 },
+    { campaign, activePhase },
     ref
   ) {
     const phase1Captured = new Set(["him-lam", "doc-lap", "ban-keo"]);

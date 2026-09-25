@@ -3,7 +3,7 @@
 import React, { useRef, useState, useMemo, useCallback } from "react";
 import gsap from "gsap";
 import { placesCatalog, eventsCatalog } from "@/features/history/catalog";
-import type { HistoricalPlace, HistoricalEvent } from "@/features/history/types";
+import type { HistoricalPlace } from "@/features/history/types";
 import { VietnamGisMapSvg } from "./VietnamGisMapSvg";
 import { EventDetailPopup } from "./EventDetailPopup";
 import { PanoramicTimelineBar } from "@/features/timeline/PanoramicTimelineBar";
@@ -221,7 +221,6 @@ export function InteractiveMapStage() {
             <DienBienPhuTacticalLayer
               campaign={DIEN_BIEN_PHU_CAMPAIGN}
               activePhase={battleControl.activePhase}
-              progress={battleControl.progress}
             />
           )}
         </VietnamGisMapSvg>

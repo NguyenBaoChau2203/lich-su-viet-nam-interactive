@@ -5,7 +5,6 @@ import type { BattleTimelineControl } from "@/features/battle/useBattleGsapTimel
 
 describe("BattlePlaybackBar Component", () => {
   const createMockControl = (overrides = {}): BattleTimelineControl => ({
-    timeline: null,
     progress: 0.35,
     isPlaying: false,
     activePhase: "dot-1",
