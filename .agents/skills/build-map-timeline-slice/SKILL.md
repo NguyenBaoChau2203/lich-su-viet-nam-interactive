@@ -24,7 +24,7 @@ description: Implement one verified historical event end-to-end across data, tim
 
 ## Boundaries
 
-- Do not add accounts, quizzes, 3D, a game, or story animation to complete a core slice.
+- Do not add accounts, quizzes, unrelated 3D, a game, or story animation to complete a core slice; the approved Three.js Vietnam tabletop and event detail scope follows `docs/superpowers/specs/2026-10-23-3d-vietnam-map-explorer-design.md`.
 - Do not introduce a second event representation for each view.
 - Do not present approximate coordinates or dates as exact.
 

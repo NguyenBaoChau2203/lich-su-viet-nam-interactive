@@ -1,0 +1,52 @@
+{
+  "sourceUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+  "dataUrl": "https://github.com/nvkelso/natural-earth-vector/tree/v5.1.2/geojson",
+  "publisher": "Natural Earth (NACIS & Natural Earth contributors)",
+  "accessedAt": "2026-10-23",
+  "license": "Public Domain (CC0 1.0 Universal / Natural Earth Terms of Use)",
+  "scope": "Illustrative 1:10m national polygon footprint of Vietnam in WGS84 [longitude, latitude], covering mainland Vietnam, major coastal islands (Phú Quốc, Côn Đảo, Cát Bà, Bạch Long Vĩ, Cù Lao Chàm, Lý Sơn, Phú Quý, Thổ Chu, Hòn Khoai, Nam Du, vịnh Bắc Bộ, Khánh Hòa, cửa sông Cửu Long – Cần Giờ), and the Hoàng Sa (Paracel) and Trường Sa (Spratly) archipelagos.",
+  "limitations": "1:10,000,000 cartographic scale suitable for a national overview tabletop; not a survey-grade cadastral, hydrographic, or historical boundary reconstruction for specific years. Small coral reefs and islets in Hoàng Sa and Trường Sa are generalized at 1:10m scale. Present-day national outline does not represent historical administrative divisions of specific periods.",
+  "sha256": "2239001e2c4030421949a760feb4e1ddae5abe192bd7827344848851a431a895",
+  "reviewEvidence": "Automated ring-closure, coordinate-bounds, nonzero-area, and Three.js ExtrudeGeometry triangulation checks (17,372 triangles; 36,249 bytes gzip) plus 2D SVG/PNG and 3D browser viewport visual inspection performed during Task A1 on 2026-10-23. No separate human cartographic sign-off claimed.",
+  "sources": [
+    {
+      "sourceId": "ne-10m-admin0-vnm-v5.1.2",
+      "title": "Natural Earth 1:10m Admin 0 Countries — Vietnam Point of View (ne_10m_admin_0_countries_vnm.geojson, v5.1.2)",
+      "publisher": "Natural Earth (Tom Patterson, Nathaniel Vaughn Kelso, and contributors)",
+      "sourceUrl": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+      "dataUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries_vnm.geojson",
+      "upstreamSha256": "90067c7f246a7e85a5d501b8f3d7367ad2287816c85ebd8d44634600caf26b64",
+      "accessedAt": "2026-10-23",
+      "license": "Public Domain (Natural Earth Terms of Use)",
+      "evidenceStatus": "verified",
+      "scope": "Mainland Vietnam (ADM0_A3=VNM, poly[0]) and principal coastal islands (Phú Quốc, Côn Đảo, Cát Bà, Phú Quý, vịnh Bắc Bộ, Khánh Hòa, cửa sông Cửu Long – Cần Giờ).",
+      "limitations": "1:10m cartographic generalization; modern national boundary."
+    },
+    {
+      "sourceId": "ne-10m-disputed-areas-v5.1.2",
+      "title": "Natural Earth 1:10m Admin 0 Breakaway and Disputed Areas (ne_10m_admin_0_disputed_areas.geojson, v5.1.2)",
+      "publisher": "Natural Earth (Tom Patterson, Nathaniel Vaughn Kelso, and contributors)",
+      "sourceUrl": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-breakaway-disputed-areas/",
+      "dataUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_disputed_areas.geojson",
+      "upstreamSha256": "9cafef8b7dfb6b164dc58f218f981f4ace9f716f6c03795d4c62d1ac9f3d50f5",
+      "accessedAt": "2026-10-23",
+      "license": "Public Domain (Natural Earth Terms of Use)",
+      "evidenceStatus": "verified",
+      "scope": "Full 1:10m multi-polygon footprints for Quần đảo Hoàng Sa (NAME='Paracel Is.', 18 polygons) and Quần đảo Trường Sa (NAME='Spratly Is.', 21 polygons), complementing the subset included in ne_10m_admin_0_countries_vnm.",
+      "limitations": "At 1:10m scale, individual island/reef polygons are small (0.002°–0.021° span) and represent generalized island groups rather than every individual reef or submerged bank."
+    },
+    {
+      "sourceId": "ne-10m-minor-islands-v5.1.2",
+      "title": "Natural Earth 1:10m Minor Islands (ne_10m_minor_islands.geojson, v5.1.2)",
+      "publisher": "Natural Earth (Tom Patterson, Nathaniel Vaughn Kelso, and contributors)",
+      "sourceUrl": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-minor-islands/",
+      "dataUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_minor_islands.geojson",
+      "upstreamSha256": "8c933ca7a4760256bdc46408355706e39764b0fa01c160c28888b90b4faec29f",
+      "accessedAt": "2026-10-23",
+      "license": "Public Domain (Natural Earth Terms of Use)",
+      "evidenceStatus": "verified",
+      "scope": "Additional named Vietnamese coastal islands not separately polygonized in the Admin 0 layer: Bạch Long Vĩ, Cù Lao Chàm, Lý Sơn, Thổ Chu, Hòn Khoai, Nam Du, and Hòn Sơn.",
+      "limitations": "1:10m physical coastline generalization."
+    }
+  ]
+}
