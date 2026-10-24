@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 1,
+  "status": "membership_verified_geometry_needs_evidence",
+  "accessedAt": "2026-10-24",
+  "referenceFramework": "Resolution 202/2025/QH15; Decision 19/2025/QD-TTg, effective 2025-07-01",
+  "governmentSource": {
+    "publisher": "Prime Minister of Vietnam / Government portal",
+    "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf",
+    "sha256": "2fd391335947affbfb86fa2b9438f0fdca90694e80887e205266542c3236aea1",
+    "bytes": 2631808,
+    "locator": "Appendix I, PDF pages 4-5 (visually inspected)"
+  },
+  "osmMetadataSource": {
+    "publisher": "OpenStreetMap contributors / Overpass API",
+    "timestamp": "2026-10-24T09:54:11Z",
+    "rawSha256": "6f872236aba6463acfcfb04a026e9c0087aabb3de677a335b2d7bfa42c29e467",
+    "license": "ODbL-1.0",
+    "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "attribution": "© OpenStreetMap contributors",
+    "scope": "Relation identity/name crosswalk only; not polygon or current geometry verification."
+  },
+  "units": [
+    {
+      "code": "01",
+      "officialName": "Thành phố Hà Nội",
+      "osmRelationId": 1903516,
+      "osmIsoCode": "VN-HN",
+      "observedOsmName": "Thành phố Hà Nội",
+      "observedRelationVersion": 183,
+      "observedRelationTimestamp": "2026-02-20T03:46:59Z"
+    },
+    {
+      "code": "04",
+      "officialName": "Tỉnh Cao Bằng",
+      "osmRelationId": 1844412,
+      "osmIsoCode": "VN-04",
+      "observedOsmName": "Tỉnh Cao Bằng",
+      "observedRelationVersion": 101,
+      "observedRelationTimestamp": "2026-03-29T08:31:11Z"
+    },
+    {
+      "code": "08",
+      "officialName": "Tỉnh Tuyên Quang",
+      "osmRelationId": 1903418,
+      "osmIsoCode": "VN-07",
+      "observedOsmName": "Tỉnh Tuyên Quang",
+      "observedRelationVersion": 105,
+      "observedRelationTimestamp": "2026-06-23T07:59:10Z"
+    },
+    {
+      "code": "11",
+      "officialName": "Tỉnh Điện Biên",
+      "osmRelationId": 1903340,
+      "osmIsoCode": "VN-71",
+      "observedOsmName": "Tỉnh Điện Biên",
+      "observedRelationVersion": 54,
+      "observedRelationTimestamp": "2025-11-21T10:40:48Z"
+    },
+    {
+      "code": "12",
+      "officialName": "Tỉnh Lai Châu",
+      "osmRelationId": 1903322,
+      "osmIsoCode": "VN-01",
+      "observedOsmName": "Tỉnh Lai Châu",
+      "observedRelationVersion": 104,
+      "observedRelationTimestamp": "2025-12-16T10:06:59Z"
+    },
+    {
+      "code": "14",
+      "officialName": "Tỉnh Sơn La",
+      "osmRelationId": 1903291,
+      "osmIsoCode": "VN-05",
+      "observedOsmName": "Tỉnh Sơn La",
+      "observedRelationVersion": 64,
+      "observedRelationTimestamp": "2026-05-23T05:57:29Z"
+    },
+    {
+      "code": "15",
+      "officialName": "Tỉnh Lào Cai",
+      "osmRelationId": 1903400,
+      "osmIsoCode": "VN-02",
+      "observedOsmName": "Tỉnh Lào Cai",
+      "observedRelationVersion": 84,
+      "observedRelationTimestamp": "2026-06-01T07:35:02Z"
+    },
+    {
+      "code": "19",
+      "officialName": "Tỉnh Thái Nguyên",
+      "osmRelationId": 1902967,
+      "osmIsoCode": "VN-69",
+      "observedOsmName": "Tỉnh Thái Nguyên",
+      "observedRelationVersion": 83,
+      "observedRelationTimestamp": "2026-05-31T03:55:24Z"
+    },
+    {
+      "code": "20",
+      "officialName": "Tỉnh Lạng Sơn",
+      "osmRelationId": 5522596,
+      "osmIsoCode": "VN-09",
+      "observedOsmName": "Tỉnh Lạng Sơn",
+      "observedRelationVersion": 87,
+      "observedRelationTimestamp": "2026-04-14T17:36:53Z"
+    },
+    {
+      "code": "22",
+      "officialName": "Tỉnh Quảng Ninh",
+      "osmRelationId": 1902947,
+      "osmIsoCode": "VN-13",
+      "observedOsmName": "Thành phố Quảng Ninh",
+      "observedRelationVersion": 157,
+      "observedRelationTimestamp": "2026-08-27T07:15:18Z"
+    },
+    {
+      "code": "24",
+      "officialName": "Tỉnh Bắc Ninh",
+      "osmRelationId": 1902690,
+      "osmIsoCode": "VN-56",
+      "observedOsmName": "Thành phố Bắc Ninh",
+      "observedRelationVersion": 168,
+      "observedRelationTimestamp": "2026-08-28T07:49:55Z"
+    },
+    {
+      "code": "25",
+      "officialName": "Tỉnh Phú Thọ",
+      "osmRelationId": 1902930,
+      "osmIsoCode": "VN-68",
+      "observedOsmName": "Tỉnh Phú Thọ",
+      "observedRelationVersion": 63,
+      "observedRelationTimestamp": "2026-06-23T07:59:10Z"
+    },
+    {
+      "code": "31",
+      "officialName": "Thành phố Hải Phòng",
+      "osmRelationId": 1902682,
+      "osmIsoCode": "VN-HP",
+      "observedOsmName": "Thành phố Hải Phòng",
+      "observedRelationVersion": 174,
+      "observedRelationTimestamp": "2026-08-27T07:15:18Z"
+    },
+    {
+      "code": "33",
+      "officialName": "Tỉnh Hưng Yên",
+      "osmRelationId": 1901032,
+      "osmIsoCode": "VN-66",
+      "observedOsmName": "Tỉnh Hưng Yên",
+      "observedRelationVersion": 66,
+      "observedRelationTimestamp": "2026-08-29T13:16:20Z"
+    },
+    {
+      "code": "37",
+      "officialName": "Tỉnh Ninh Bình",
+      "osmRelationId": 1900963,
+      "osmIsoCode": "VN-18",
+      "observedOsmName": "Tỉnh Ninh Bình",
+      "observedRelationVersion": 76,
+      "observedRelationTimestamp": "2025-08-30T13:50:00Z"
+    },
+    {
+      "code": "38",
+      "officialName": "Tỉnh Thanh Hóa",
+      "osmRelationId": 1898590,
+      "osmIsoCode": "VN-21",
+      "observedOsmName": "Tỉnh Thanh Hóa",
+      "observedRelationVersion": 92,
+      "observedRelationTimestamp": "2026-01-03T20:50:33Z"
+    },
+    {
+      "code": "40",
+      "officialName": "Tỉnh Nghệ An",
+      "osmRelationId": 1898509,
+      "osmIsoCode": "VN-22",
+      "observedOsmName": "Tỉnh Nghệ An",
+      "observedRelationVersion": 77,
+      "observedRelationTimestamp": "2026-08-11T07:51:31Z"
+    },
+    {
+      "code": "42",
+      "officialName": "Tỉnh Hà Tĩnh",
+      "osmRelationId": 1898458,
+      "osmIsoCode": "VN-23",
+      "observedOsmName": "Tỉnh Hà Tĩnh",
+      "observedRelationVersion": 72,
+      "observedRelationTimestamp": "2026-09-12T02:57:20Z"
+    },
+    {
+      "code": "44",
+      "officialName": "Tỉnh Quảng Trị",
+      "osmRelationId": 1895630,
+      "osmIsoCode": "VN-25",
+      "observedOsmName": "Tỉnh Quảng Trị",
+      "observedRelationVersion": 75,
+      "observedRelationTimestamp": "2026-08-18T02:22:27Z"
+    },
+    {
+      "code": "46",
+      "officialName": "Thành phố Huế",
+      "osmRelationId": 1891483,
+      "osmIsoCode": "VN-26",
+      "observedOsmName": "Thành phố Huế",
+      "observedRelationVersion": 70,
+      "observedRelationTimestamp": "2026-09-11T10:07:55Z"
+    },
+    {
+      "code": "48",
+      "officialName": "Thành phố Đà Nẵng",
+      "osmRelationId": 1891418,
+      "osmIsoCode": "VN-DN",
+      "observedOsmName": "Thành phố Đà Nẵng",
+      "observedRelationVersion": 97,
+      "observedRelationTimestamp": "2026-08-23T04:11:23Z"
+    },
+    {
+      "code": "51",
+      "officialName": "Tỉnh Quảng Ngãi",
+      "osmRelationId": 1890793,
+      "osmIsoCode": "VN-29",
+      "observedOsmName": "Tỉnh Quảng Ngãi",
+      "observedRelationVersion": 46,
+      "observedRelationTimestamp": "2026-08-11T02:52:43Z"
+    },
+    {
+      "code": "52",
+      "officialName": "Tỉnh Gia Lai",
+      "osmRelationId": 1884018,
+      "osmIsoCode": "VN-30",
+      "observedOsmName": "Tỉnh Gia Lai",
+      "observedRelationVersion": 72,
+      "observedRelationTimestamp": "2026-08-13T07:32:10Z"
+    },
+    {
+      "code": "56",
+      "officialName": "Tỉnh Khánh Hòa",
+      "osmRelationId": 1887959,
+      "osmIsoCode": "VN-34",
+      "observedOsmName": "Tỉnh Khánh Hòa",
+      "observedRelationVersion": 121,
+      "observedRelationTimestamp": "2026-08-11T03:09:02Z"
+    },
+    {
+      "code": "66",
+      "officialName": "Tỉnh Đắk Lắk",
+      "osmRelationId": 1884034,
+      "osmIsoCode": "VN-33",
+      "observedOsmName": "Tỉnh Đắk Lắk",
+      "observedRelationVersion": 94,
+      "observedRelationTimestamp": "2026-08-13T07:32:10Z"
+    },
+    {
+      "code": "68",
+      "officialName": "Tỉnh Lâm Đồng",
+      "osmRelationId": 1885367,
+      "osmIsoCode": "VN-35",
+      "observedOsmName": "Tỉnh Lâm Đồng",
+      "observedRelationVersion": 147,
+      "observedRelationTimestamp": "2026-09-24T05:18:46Z"
+    },
+    {
+      "code": "75",
+      "officialName": "Tỉnh Đồng Nai",
+      "osmRelationId": 1904421,
+      "osmIsoCode": "VN-39",
+      "observedOsmName": "Thành phố Đồng Nai",
+      "observedRelationVersion": 178,
+      "observedRelationTimestamp": "2026-10-02T03:48:17Z"
+    },
+    {
+      "code": "79",
+      "officialName": "Thành phố Hồ Chí Minh",
+      "osmRelationId": 1973756,
+      "osmIsoCode": "VN-SG",
+      "observedOsmName": "Thành phố Hồ Chí Minh",
+      "observedRelationVersion": 289,
+      "observedRelationTimestamp": "2026-10-02T03:48:17Z"
+    },
+    {
+      "code": "80",
+      "officialName": "Tỉnh Tây Ninh",
+      "osmRelationId": 1898961,
+      "osmIsoCode": "VN-37",
+      "observedOsmName": "Tỉnh Tây Ninh",
+      "observedRelationVersion": 165,
+      "observedRelationTimestamp": "2026-08-22T01:38:13Z"
+    },
+    {
+      "code": "82",
+      "officialName": "Tỉnh Đồng Tháp",
+      "osmRelationId": 1875866,
+      "osmIsoCode": "VN-45",
+      "observedOsmName": "Tỉnh Đồng Tháp",
+      "observedRelationVersion": 171,
+      "observedRelationTimestamp": "2026-10-16T03:44:25Z"
+    },
+    {
+      "code": "86",
+      "officialName": "Tỉnh Vĩnh Long",
+      "osmRelationId": 1875887,
+      "osmIsoCode": "VN-49",
+      "observedOsmName": "Tỉnh Vĩnh Long",
+      "observedRelationVersion": 99,
+      "observedRelationTimestamp": "2026-10-16T03:44:25Z"
+    },
+    {
+      "code": "91",
+      "officialName": "Tỉnh An Giang",
+      "osmRelationId": 1875748,
+      "osmIsoCode": "VN-44",
+      "observedOsmName": "Tỉnh An Giang",
+      "observedRelationVersion": 116,
+      "observedRelationTimestamp": "2026-10-10T02:46:32Z"
+    },
+    {
+      "code": "92",
+      "officialName": "Thành phố Cần Thơ",
+      "osmRelationId": 1874283,
+      "osmIsoCode": "VN-CT",
+      "observedOsmName": "Thành phố Cần Thơ",
+      "observedRelationVersion": 105,
+      "observedRelationTimestamp": "2026-10-11T02:58:37Z"
+    },
+    {
+      "code": "96",
+      "officialName": "Tỉnh Cà Mau",
+      "osmRelationId": 1873490,
+      "osmIsoCode": "VN-59",
+      "observedOsmName": "Tỉnh Cà Mau",
+      "observedRelationVersion": 60,
+      "observedRelationTimestamp": "2026-10-11T02:58:37Z"
+    }
+  ]
+}

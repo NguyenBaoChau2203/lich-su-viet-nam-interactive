@@ -12,11 +12,13 @@ const requiredFiles = [
   ".env.example",
   ".github/workflows/ci.yml",
   "docs/agent/START-HERE.md",
+  "docs/agent/AI-AGENT-PROMPT-STANDARD.md",
+  "docs/agent/AI-AGENT-PROMPT-TEMPLATE.md",
   "docs/product/MVP-SCOPE.md",
   "scripts/agent/guard-command.mjs",
 ];
 
-const expectedSkills = [
+const requiredSkills = [
   "build-map-timeline-slice",
   "design-history-story",
   "model-supabase-history",
@@ -76,6 +78,28 @@ export async function validateSetup(root) {
     if (!instructions.includes("CODEGRAPH_START")) {
       errors.push("AGENTS.md must retain the CodeGraph instruction block.");
     }
+    if (!instructions.includes("AI-AGENT-PROMPT-STANDARD.md")) {
+      errors.push("AGENTS.md must reference the AI agent prompt writing standard.");
+    }
+  }
+
+  const promptStandardPath = path.join(
+    root,
+    "docs",
+    "agent",
+    "AI-AGENT-PROMPT-STANDARD.md",
+  );
+  if (await exists(promptStandardPath)) {
+    const standard = await readFile(promptStandardPath, "utf8");
+    for (const requiredSection of [
+      "# AI Agent Prompt Writing Standard",
+      "## 4. Required prompt structure",
+      "## 10. Prompt review checklist",
+    ]) {
+      if (!standard.includes(requiredSection)) {
+        errors.push(`Prompt standard is missing required section: ${requiredSection}`);
+      }
+    }
   }
 
   const skillsRoot = path.join(root, ".agents", "skills");
@@ -89,9 +113,12 @@ export async function validateSetup(root) {
     errors.push(`Cannot read .agents/skills: ${error.message}`);
   }
 
-  if (skillDirectories.join("|") !== expectedSkills.join("|")) {
+  const missingSkills = requiredSkills.filter(
+    (skillName) => !skillDirectories.includes(skillName),
+  );
+  if (missingSkills.length > 0) {
     errors.push(
-      `Expected project skills: ${expectedSkills.join(", ")}; found: ${skillDirectories.join(", ") || "none"}.`,
+      `Missing required project skills: ${missingSkills.join(", ")}. Found: ${skillDirectories.join(", ") || "none"}.`,
     );
   }
 

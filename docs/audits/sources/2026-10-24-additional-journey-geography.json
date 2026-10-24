@@ -1,0 +1,137 @@
+{
+  "accessedAt": "2026-10-24",
+  "reviewMethod": "Direct readable source passages plus live public homepage server payload; agent self-review, not independent historical sign-off.",
+  "publication": {
+    "source": "GET / at task-owned localhost:3107, getExplorerEvents workflow_status=published; recheck current inventory before showing a link.",
+    "publishedEventSlugs": [
+      "nguyen-tat-thanh-ra-di-tim-duong-cuu-nuoc",
+      "nguyen-ai-quoc-ve-nuoc-lanh-dao-cach-mang",
+      "tong-khoi-nghia-gianh-chinh-quyen-o-ha-noi",
+      "tuyen-ngon-doc-lap",
+      "chien-dich-dien-bien-phu",
+      "hiep-dinh-geneve-ve-dong-duong",
+      "tong-tien-cong-va-noi-day-tet-mau-than-1968",
+      "hiep-dinh-paris-ve-viet-nam",
+      "chien-dich-ho-chi-minh",
+      "dai-hoi-dang-lan-thu-vi"
+    ],
+    "locations": [
+      {
+        "slug": "nha-hat-lon-ha-noi",
+        "name": "Nhà hát Lớn Hà Nội",
+        "latitude": 21.0245,
+        "longitude": 105.8578,
+        "originalAccuracyLevel": "exact"
+      },
+      {
+        "slug": "quang-truong-ba-dinh",
+        "name": "Quảng trường Ba Đình",
+        "latitude": 21.0369,
+        "longitude": 105.8342,
+        "originalAccuracyLevel": "exact"
+      },
+      {
+        "slug": "dien-bien-phu",
+        "name": "Điện Biên Phủ",
+        "latitude": 21.386,
+        "longitude": 103.023,
+        "originalAccuracyLevel": "region"
+      },
+      {
+        "slug": "geneve-thuy-si",
+        "name": "Genève (Thụy Sĩ)",
+        "latitude": 46.2044,
+        "longitude": 6.1432,
+        "originalAccuracyLevel": "region"
+      },
+      {
+        "slug": "sai-gon",
+        "name": "Sài Gòn",
+        "latitude": 10.7769,
+        "longitude": 106.7009,
+        "originalAccuracyLevel": "region"
+      },
+      {
+        "slug": "hue",
+        "name": "Huế",
+        "latitude": 16.4637,
+        "longitude": 107.5909,
+        "originalAccuracyLevel": "region"
+      },
+      {
+        "slug": "dinh-doc-lap",
+        "name": "Dinh Độc Lập",
+        "latitude": 10.7772,
+        "longitude": 106.6953,
+        "originalAccuracyLevel": "exact"
+      },
+      {
+        "slug": "ha-noi-khu-vuc-trung-tam",
+        "name": "Hà Nội (khu vực trung tâm)",
+        "latitude": 21.0285,
+        "longitude": 105.8542,
+        "originalAccuracyLevel": "region"
+      }
+    ]
+  },
+  "naturalEarth": {
+    "sourceUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_populated_places_simple.geojson",
+    "version": "v5.1.2",
+    "accessedAt": "2026-10-24",
+    "sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+    "features": [
+      {
+        "name": "Bắc Kạn",
+        "adm0name": "Vietnam",
+        "longitude": 105.833333,
+        "latitude": 22.133333,
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            105.833333,
+            22.133333
+          ]
+        }
+      },
+      {
+        "name": "Cao Bằng",
+        "adm0name": "Vietnam",
+        "longitude": 106.268005,
+        "latitude": 22.663998,
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            106.268005,
+            22.663998
+          ]
+        }
+      },
+      {
+        "name": "Buon Me Thuot",
+        "adm0name": "Vietnam",
+        "longitude": 108.049983,
+        "latitude": 12.667042,
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            108.049983,
+            12.667042
+          ]
+        }
+      },
+      {
+        "name": "Da Nang",
+        "adm0name": "Vietnam",
+        "longitude": 108.249971,
+        "latitude": 16.060039,
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            108.249971,
+            16.060039
+          ]
+        }
+      }
+    ]
+  }
+}

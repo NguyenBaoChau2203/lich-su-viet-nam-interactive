@@ -1,23 +1,261 @@
-# Dòng chảy Sử Việt
+# Lịch sử Việt Nam 12
 
-Nền tảng web tương tác hỗ trợ học sinh lớp 12 khám phá lịch sử Việt Nam qua dòng thời gian, bản đồ và nội dung có nguồn kiểm chứng.
+> Source ứng dụng trong thư mục này được đồng bộ từ `D:\WEB_LICH-SU_12` ngày 22/10/2026.
+> Các công cụ agent, rules, skills và hooks của repository hiện tại được giữ nguyên.
+> Bản đồng bộ này dùng **pnpm 11.7.0** để cài dependency và chạy cổng kiểm tra hiện có.
 
-## Chạy local
+**Phạm vi giao diện hiện tại (chủ dự án xác nhận 23/10/2026):** chỉ tập trung laptop/PC, với viewport kiểm tra 1280×720, 1366×768, 1440×900 và 1920×1080. Mobile/tablet được hoãn. Xem [phạm vi thiết bị và nghiệm thu](docs/product/DESKTOP-UI-SCOPE.md). Bàn phím, tương phản và reduced motion vẫn bắt buộc; các mô tả/ảnh cũ bên dưới không chứng minh giao diện mới đã được tối ưu.
 
-```powershell
-pnpm install
+```bash
+pnpm install --frozen-lockfile
 pnpm dev
+pnpm verify
 ```
 
-Mở `http://localhost:3000`.
+`pnpm verify` kiểm tra cấu hình agent, dữ liệu/schema nội dung và ngân hàng câu hỏi ở local,
+ESLint, TypeScript, unit test, test của hook và production build. Các bước này không thay thế
+việc thẩm định nguồn lịch sử hay kiểm thử RLS trên database thật. Dùng `pnpm test:e2e`
+sau khi đã cấu hình môi trường và chuẩn bị database kiểm thử; một số test E2E gốc có ghi/xóa dữ liệu.
+File môi trường cục bộ được Git ignore; tham khảo `.env.example` khi thiết lập hoặc thay cấu hình trước khi chạy ứng dụng.
+Trong các hướng dẫn gốc bên dưới, có thể thay `npm run <tên-lệnh>` bằng `pnpm <tên-lệnh>`.
 
-## Kiểm tra
+Web hỗ trợ học sinh lớp 12 tìm hiểu Lịch sử Việt Nam qua **dòng thời gian, bản đồ, ảnh tư liệu và bài học tương tác**.
+Nội dung bám theo SGK Lịch sử 12 (bộ *Kết nối tri thức với cuộc sống*). Mọi nội dung đều qua quy trình
+**biên tập → kiểm duyệt → công bố**, và sự kiện bắt buộc phải có nguồn tham khảo.
+
+> Đồ án cơ sở ngành, Viện Công nghệ số, Trường Đại học Thủ Dầu Một.
+> Đây là công cụ hỗ trợ học tập, **không thay thế sách giáo khoa**.
+
+![Trang chủ](docs/screenshots/phase4-trang-chu-desktop-sang.png)
+
+## Tính năng chính
+
+| Trang | Đường dẫn | Nội dung |
+|---|---|---|
+| Trang chủ | `/` | Địa cầu nền tối tiến về Việt Nam, sự kiện theo thời gian, kéo/phóng to, thẻ tóm tắt và hành trình chọn lọc của Chủ tịch Hồ Chí Minh có nguồn |
+| Mục lục SGK | `/muc-luc`, `/muc-luc/chu-de-N` | 6 chủ đề, 17 bài (Kết nối tri thức), tiến độ từng bài, in được |
+| Bài SGK | `/bai/[số]-[slug]` | Khuôn "trang sách": mục lục bài dính, sự kiện và chuyên đề theo từng mục, luyện tập, bài trước/sau |
+| Chuyên đề tương tác | `/bai-hoc` | Ví dụ *Chiến dịch Điện Biên Phủ*: bản đồ diễn biến 7 bước, ảnh tư liệu, tab Tư liệu (video, hiện vật 3D, di tích), thẻ ghi nhớ |
+| Ôn tập | `/trac-nghiem`, `/trac-nghiem/bai/[slug]`, `/trac-nghiem/the-ghi-nho` | Trắc nghiệm theo từng Bài SGK (gợi ý mục cần đọc lại), thẻ ghi nhớ, nhìn ảnh đoán năm |
+| Tiến độ học tập | `/ho-chieu` | Tiến độ 17 bài và con dấu; xuất/nhập mã tiến độ để học tiếp trên máy khác |
+| Khám phá, Hướng dẫn | `/kham-pha`, `/huong-dan` | Mọi công cụ ở một chỗ, phòng tư liệu 3D; cách dùng web cho học sinh và giáo viên |
+| Bản đồ 3D "như phim" | `/ban-do-3d/dien-bien-phu` | Chiến dịch diễn ra trên địa hình thật (MapLibre + Three.js) |
+| Phim 3D | `/phim-3d/doi-a1` | "Đồi A1, đêm 6/5/1954" dựng trong trình duyệt, có thuyết minh và phụ đề |
+| Dòng thời gian | `/dong-thoi-gian` | Sự kiện theo năm, lọc theo chủ đề, nhãn "Bài N", chế độ thu gọn |
+| Bản đồ | `/ban-do` | Địa điểm lịch sử (Leaflet), lọc theo bài, tìm theo bán kính (PostGIS), nút "Gần em" |
+| Tra cứu | `/tra-cuu` | Tìm sự kiện, nhân vật, địa điểm; gõ không dấu vẫn được |
+| Chi tiết | `/su-kien/…`, `/nhan-vat/…`, `/dia-diem/…`, `/chu-de/…` | Nội dung, ảnh có ghi công, nguồn tham khảo |
+| Luyện thi THPT | `/luyen-thi`, `/luyen-thi/[slug]`, `/kich-hoat` | Đề bấm giờ có giải thích từng câu; đề 1 miễn phí, các đề khác trong gói trả phí (mở bằng mã kích hoạt `LT12-…`, tối đa 3 thiết bị). Trang tự ghi đúng số đề đã công bố |
+| Kỹ năng, sổ tay, bản in | `/luyen-thi/ky-nang`, `/luyen-thi/so-tay`, `/luyen-thi/[slug]/in` | Cách làm câu Đúng/Sai và đọc tư liệu (miễn phí, ví dụ có lời giải); sổ tay ôn thi từng bài dựng từ nội dung đã kiểm duyệt (Bài 6 xem thử, còn lại thuộc gói); in đề + phiếu trả lời, nhập đáp án giấy để chấm. Trang `/luyen-thi` dựng phần "Gói gồm những gì?" từ số liệu thật; người có gói gắn tài khoản được chuyển sang Tổng quan |
+| Luyện tập, ôn thi cá nhân | `/luyen-thi/luyen-tap`, `/luyen-thi/so-cau-sai`, `/luyen-thi/de-ngau-nhien`, `/luyen-thi/tong-quan`, `/luyen-thi/lo-trinh` | Luyện theo bài chấm ngay từng câu (miễn phí 10 câu / ngày); sổ câu sai ôn ngắt quãng; đề tự sinh theo ma trận (chỉ hiện khi ngân hàng đủ câu cho 3 đề không trùng); tổng quan (điểm dự kiến, bản đồ thành thạo 17 bài, chuỗi ngày học); lộ trình ôn theo mục tiêu điểm. Phần cá nhân cần đăng nhập, phần nâng cao thuộc gói |
+| Thanh toán | `/thanh-toan/ket-qua`, `/thanh-toan/tra-cuu` | Chuyển khoản VietQR qua payOS (hoặc cổng giả lập khi phát triển); xem lại đơn và mã bằng mã đơn + email |
+| Ủng hộ | `/ung-ho` | Ủng hộ tự nguyện, Bức tường cảm ơn (lời nhắn được duyệt trước khi hiện) |
+| Tài khoản học sinh | `/dang-ky`, `/dang-nhap`, `/quen-mat-khau`, `/tai-khoan` (+ `/don-hang`, `/bao-mat`) | Đăng ký bằng email (xác nhận qua link) hoặc Google, đặt lại mật khẩu. Hộ chiếu (tiến độ) tự đồng bộ giữa các máy; gói luyện thi gắn với tài khoản mở đề ở mọi máy; thêm mã đã mua vào tài khoản; đổi mật khẩu, liên kết Google, đăng xuất mọi thiết bị, tải dữ liệu, xóa tài khoản. Nút Google chỉ hiện khi đã bật Google trong Supabase. Không bắt buộc: mọi bài học, mua gói vẫn dùng được khi chưa đăng nhập. Tài khoản học sinh **không bao giờ** có quyền nội bộ |
+| Quản trị | `/quan-tri` | Soạn nội dung, kiểm duyệt, soạn đề luyện thi, quản lý nhân sự, đơn hàng (thu hồi / mở lại mã, gỡ thiết bị, ghi nhận hoàn tiền, xử lý tiền về muộn), vận hành (cần đăng nhập) |
+
+## Công nghệ
+
+- **Next.js 16** (App Router, Turbopack), React 19, TypeScript, Tailwind CSS 4
+- **Supabase**: PostgreSQL 17 + PostGIS, Auth, Storage, Row Level Security (48 policy)
+- Bản đồ: MapLibre GL cho địa cầu trang chủ với nền/nhãn riêng; Leaflet cho các trang bản đồ 2D khác. Đồ họa mô phỏng: MapLibre GL và Three.js.
+- Thiết kế trang chủ đã duyệt: [địa cầu lịch sử và hành trình](docs/superpowers/specs/2026-10-23-curated-history-globe-design.md). Tọa độ hành trình hiện ở cấp thành phố/khu vực, được gắn nhãn gần đúng; đường nối các mốc là sơ đồ.
+- Kiểm thử: Vitest (unit), Playwright (E2E), script kiểm thử RLS trên database thật, Lighthouse
+
+> **Lưu ý cho người sửa code:** Next.js 16 có nhiều thay đổi so với các bản cũ. Đọc tài liệu đi kèm trong
+> `node_modules/next/dist/docs/` trước khi viết code (xem `AGENTS.md`).
+
+## Cài đặt
+
+Yêu cầu: **Node.js 20.9** trở lên (dự án được phát triển trên Node 24), một project Supabase (gói miễn phí là đủ).
 
 ```powershell
-pnpm verify
-pnpm test:e2e
+cd D:\lich-su-viet-nam-interactive
+pnpm install --frozen-lockfile
+Copy-Item .env.example .env.local   # rồi điền giá trị thật
 ```
 
-Hướng dẫn sử dụng Codex, Antigravity và OpenCode: [docs/agent/START-HERE.md](docs/agent/START-HERE.md).
+### Biến môi trường (`.env.local`)
 
-Phạm vi sản phẩm: [docs/product/MVP-SCOPE.md](docs/product/MVP-SCOPE.md).
+| Biến | Bắt buộc | Dùng ở đâu |
+|---|:-:|---|
+| `NEXT_PUBLIC_SUPABASE_URL` | ✅ | URL project Supabase |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | ✅ | Khóa công khai (đã có RLS bảo vệ) |
+| `SUPABASE_SECRET_KEY` | Cho trang Nhân sự | **Chỉ phía server**: tạo/khóa tài khoản nhân sự. Không bao giờ thêm tiền tố `NEXT_PUBLIC_` |
+| `DATABASE_URL` | Tùy chọn | Chạy migration/seed bằng Supabase CLI |
+| `NEXT_PUBLIC_SITE_URL` | Khi có tên miền | Địa chỉ web cho ảnh chia sẻ, `sitemap.xml`, `robots.txt` (trên Vercel tự lấy nếu bỏ trống). Với payOS phải là địa chỉ thật (người mua được chuyển về đây) |
+| `PAYMENT_PROVIDER` | Cho thanh toán | `mock` (cổng giả lập, chỉ chạy khi `PAYMENT_ENV=test`) hoặc `payos` |
+| `PAYMENT_ENV` | Cho thanh toán | `test` (hiện nhãn "Môi trường thử nghiệm") hoặc `live` |
+| `MOCK_PAYMENT_SECRET` | Khi dùng `mock` | Bí mật ký webhook của cổng giả lập (≥ 32 ký tự ngẫu nhiên) |
+| `PAYMENT_HASH_SALT` | Cho thanh toán | Muối băm IP / mã thiết bị (không lưu giá trị thô) |
+| `PAYOS_CLIENT_ID`, `PAYOS_API_KEY`, `PAYOS_CHECKSUM_KEY` | Khi dùng `payos` | **Chỉ phía server**. Hướng dẫn: Phụ lục B `docs/ke-hoach-thanh-toan.md` |
+| `TRUST_PROXY` | Tùy chọn | Đặt `1` chỉ khi tự host sau reverse proxy đáng tin; trên Vercel để trống |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | Tùy chọn | Email liên hệ hiện ở `/dieu-khoan`, `/chinh-sach-bao-mat` |
+| `RESEND_API_KEY`, `EMAIL_FROM` | Tùy chọn | **Chỉ phía server**: gửi mã kích hoạt qua email sau khi thanh toán (resend.com, cùng khóa với SMTP của Supabase). Để trống thì không gửi |
+
+**Tài khoản học sinh** cần cấu hình tay trên Supabase (mục 9 `docs/ke-hoach-tai-khoan.md`): bật *Confirm email*; *Site
+URL* = `NEXT_PUBLIC_SITE_URL`; *Redirect URLs* thêm `<địa chỉ web>/**`; dán 3 mẫu email trong `supabase/email-templates/`;
+và **SMTP riêng** (ví dụ Resend) — SMTP mặc định của Supabase chỉ gửi tới email trong nhóm dự án, tối đa 2 email/giờ.
+Đăng nhập Google: xem mục [Bật đăng nhập Google](#bật-đăng-nhập-google) bên dưới. Người đã có tài khoản học sinh muốn làm nhân sự: quản trị viên dùng **“Cấp quyền cho tài khoản đã
+có”** ở trang Nhân sự (không tạo mật khẩu mới).
+
+Lấy các giá trị Supabase trong Dashboard → *Project Settings → API* (và *Connect* cho `DATABASE_URL`). Mọi biến thanh
+toán đều **chỉ phía server** (không có tiền tố `NEXT_PUBLIC_`).
+
+### Bật đăng nhập Google
+
+Mã đã có sẵn (nút "Google" dưới form ở `/dang-nhap`, `/dang-ky`; liên kết / gỡ ở `/tai-khoan/bao-mat`). Nút **tự ẩn**
+khi Supabase chưa bật provider Google (đọc `/auth/v1/settings`, lưu đệm 5 phút) — khi chạy dev, log server nhắc một lần.
+Chỉ cần cấu hình tay, **không** thêm biến môi trường nào vào web:
+
+1. **Google Cloud Console** (<https://console.cloud.google.com>) → tạo project →
+   - *Google Auth Platform → Branding*: tên ứng dụng `Lịch sử Việt Nam 12`, email hỗ trợ, logo, trang chủ,
+     `https://<tên-miền>/chinh-sach-bao-mat`, `https://<tên-miền>/dieu-khoan`, *Authorized domains* = tên miền web.
+   - *Audience*: External. Lúc thử để *Testing* và thêm Gmail của nhóm vào *Test users*; công khai thì *Publish app*.
+   - *Data access*: chỉ `openid`, `userinfo.email`, `userinfo.profile`.
+   - *Clients → Create client → Web application*, điền bảng dưới, lưu **Client ID** + **Client Secret**. Secret chỉ dán
+     vào Supabase — không vào `.env.local`, không commit.
+2. **Supabase Dashboard** →
+   - *Authentication → Sign In / Providers → Google*: Enable, dán Client ID + Secret, Save.
+   - *Authentication → URL Configuration*: *Site URL* = `NEXT_PUBLIC_SITE_URL`; *Redirect URLs* như bảng dưới.
+   - Bật *Manual linking* (để dùng "Liên kết Google" ở `/tai-khoan/bao-mat`).
+3. Nút Google tự hiện khi lưu đệm hết hạn: đợi 5 phút rồi tải lại trang **hai lần** (lần đầu vẫn nhận bản cũ, đồng thời
+   kích hoạt làm mới). Muốn hiện ngay: dừng `npm run dev`, xóa thư mục `.next/dev/cache/fetch-cache` rồi chạy lại
+   (`next start` thì xóa `.next/cache/fetch-cache`). Chỉ khởi động lại thì **không** đủ, vì lưu đệm nằm trên đĩa.
+
+| Dán ở đâu | Giá trị |
+|---|---|
+| Google → *Authorized JavaScript origins* | `http://localhost:3000`, `https://<tên-miền>` |
+| Google → *Authorized redirect URIs* | `https://<project-ref>.supabase.co/auth/v1/callback` (chép đúng từ trang provider Google trong Supabase) |
+| Supabase → *Redirect URLs* | `http://localhost:3000/auth/callback`, `https://<tên-miền>/auth/callback`, `https://<tên-miền>/auth/confirm`; bản preview Vercel: `https://*-<team>.vercel.app/**` |
+
+Màn "Chọn tài khoản" là trang của Google (luôn hiện nhờ `prompt=select_account`). Mặc định nó ghi "Tiếp tục tới
+`<project-ref>.supabase.co`". Muốn hiện tên ứng dụng: điền *Branding* rồi gửi **Brand verification** (miễn phí, vài ngày
+làm việc). Muốn hiện tên miền riêng: dùng **Custom Domain** của Supabase (trả phí, ví dụ `auth.<tên-miền>`) — khi đó đổi
+*Authorized redirect URI* thành `https://auth.<tên-miền>/auth/v1/callback` và `NEXT_PUBLIC_SUPABASE_URL` sang tên miền đó.
+
+**Khắc phục lỗi**
+
+| Triệu chứng | Nguyên nhân | Cách sửa |
+|---|---|---|
+| Không thấy nút Google | Provider chưa bật / còn lưu đệm (trên đĩa, khởi động lại không xóa) | Bước 2; đợi 5 phút rồi tải lại hai lần, hoặc dừng dev, xóa `.next/dev/cache/fetch-cache`, chạy lại |
+| `redirect_uri_mismatch` | *Authorized redirect URI* ở Google sai | Dán đúng `https://<project-ref>.supabase.co/auth/v1/callback` |
+| Đăng nhập xong về trang chủ, không qua `/auth/callback` | `/auth/callback` chưa có trong *Redirect URLs* | Bước 2, thêm URL |
+| `/auth/loi?ly-do=google-het-han` | Mở callback ở trình duyệt khác / cookie bị chặn | Bấm lại nút Google trên cùng trình duyệt |
+| Google báo "Access blocked … not completed verification" | Ứng dụng đang *Testing*, Gmail chưa là *Test user* | Thêm *Test user* hoặc *Publish app* |
+
+Kiểm tay sau khi bật: các ca G1–G10 trong `docs/test-report.md` (mục 13, 14, 20).
+
+### Tạo database
+
+Chạy **theo đúng thứ tự tên file**, mỗi file **một lần**, trong SQL Editor của Supabase hoặc bằng CLI:
+
+```bash
+# 1. Schema, trigger, RLS, storage…
+for f in supabase/migrations/*.sql; do npx supabase db query --db-url "$DATABASE_URL" --file "$f"; done
+# 2. Dữ liệu mẫu: 7 chủ đề, 10 sự kiện, 9 nhân vật, 11 địa điểm, nguồn và ảnh
+npx supabase db query --db-url "$DATABASE_URL" --file supabase/seed.sql
+# 3. Kho ảnh (ảnh sự kiện, chân dung, ảnh di tích ngày nay; tệp ảnh nằm trong bucket `media`)
+npx supabase db query --db-url "$DATABASE_URL" --file supabase/seed-media.sql
+# 4. Nội dung theo khung chuẩn + sự kiện nháp mới (sinh từ supabase/content/*.md)
+npx supabase db query --db-url "$DATABASE_URL" --file supabase/seed-content.sql
+# 5. Câu hỏi trắc nghiệm soạn tay (sinh từ supabase/content/trac-nghiem.json)
+npx supabase db query --db-url "$DATABASE_URL" --file supabase/seed-quiz.sql
+# 6. GĐ7 nâng cấp giao diện: bảng gán sự kiện vào bài SGK, nội dung mới (nháp), dữ liệu gán ban đầu
+#    supabase/migrations/20261001000000_sgk_lesson_events.sql → supabase/seed-content-gd7.sql → supabase/seed-sgk.sql
+# 7. Thanh toán (docs/ke-hoach-thanh-toan.md):
+#    migrations/20261015000000_payments.sql → supabase/seed-payments.sql (gói, ủng hộ, 10 đề nháp)
+#    → supabase/seed-exam-mau.sql (đề mẫu 1 miễn phí + 2 trong gói, đã công bố)
+#    → migrations/20261016000000_payment_rate_limits.sql → migrations/20261017000000_late_payment.sql
+#    Kiểm thử (tự hoàn tác): supabase/tests/payments.sql, supabase/tests/late_payment.sql
+# 8. Tài khoản học sinh (docs/ke-hoach-tai-khoan.md): migrations/20261020000000_learner_accounts.sql
+#    Kiểm thử (tự hoàn tác): supabase/tests/learner_accounts.sql
+# 9. Luyện thi — ngân hàng câu hỏi (docs/ke-hoach-luyen-thi.md, GĐ1): migrations/20261025000000_exam_bank.sql
+#    (chuyển câu đề cũ sang ngân hàng; code từ GĐ1 đọc bảng mới nên PHẢI chạy trước khi chạy bản code này)
+#    Kiểm thử (tự hoàn tác): supabase/tests/exam_bank.sql. Câu soạn bằng JSON: node scripts/build-exam-bank-sql.mjs
+#    → supabase/seed-ngan-hang.sql (hoặc trang /quan-tri/ngan-hang-cau-hoi/nhap). Hướng dẫn soạn: docs/huong-dan-soan-cau-hoi.md
+# 10. Luyện thi — lượt làm bài, chấm phía server (GĐ2): migrations/20261026000000_exam_attempts.sql
+#    (trình làm đề từ GĐ2 gọi các hàm này nên PHẢI chạy trước). Kiểm thử (tự hoàn tác): supabase/tests/exam_attempts.sql
+# 11. Luyện thi — luyện tập, sổ câu sai, ôn ngắt quãng (GĐ4): migrations/20261027000000_exam_practice.sql
+#    Kiểm thử (tự hoàn tác): supabase/tests/exam_practice.sql. Sau đó chạy migrations/20261027000001_fix_grade_safeupdate.sql
+#    (sửa DELETE thiếu WHERE bị pg_safeupdate chặn khi gọi qua API)
+# 12. Luyện thi — đề tự sinh theo ma trận, mục tiêu điểm, lộ trình ôn (GĐ5): migrations/20261028000000_exam_generated.sql
+#    Kiểm thử (tự hoàn tác): supabase/tests/exam_generated.sql
+# 13. Luyện thi — báo lỗi câu hỏi, chấm lại, thống kê câu (GĐ7): migrations/20261029000000_exam_quality.sql
+#    Kiểm thử (tự hoàn tác): supabase/tests/exam_quality.sql
+# 14. Luyện thi — in đề + phiếu trả lời giấy (GĐ8): migrations/20261030000000_exam_paper.sql
+#    Kiểm thử (tự hoàn tác): supabase/tests/exam_paper.sql
+```
+
+> `supabase db query --file` không nhận file có nhiều câu lệnh. Nếu gặp lỗi *"cannot insert multiple commands
+> into a prepared statement"*, hãy dán nội dung file vào **SQL Editor** của Supabase Dashboard để chạy.
+
+### Thêm ảnh từ Wikimedia Commons
+
+```bash
+node scripts/import-commons-image.mjs --file "File:Tên ảnh.jpg" --owner su-kien:<slug> \
+  --alt "Mô tả ảnh" --caption "Chú thích" --era historical --cover
+```
+
+Script đọc tác giả và giấy phép từ Commons (từ chối giấy phép NC/ND/fair use, cảnh báo ảnh Việt Nam chưa đủ
+75 năm), nén webp 400/1200/2000 px, tải lên bucket `media` rồi **in ra câu SQL** để bạn kiểm tra trước khi chạy.
+
+Tài khoản nhân sự đầu tiên: tạo user trong *Authentication → Users*, rồi thêm hồ sơ vai trò theo hướng dẫn trong
+`supabase/staff-test-accounts.sql`. Tài khoản `@test.local` trong file đó **chỉ để thử**. Xóa hoặc đổi mật khẩu trước khi công khai.
+
+### Chạy
+
+```bash
+npm run dev      # http://localhost:3000
+npm run build && npm start   # bản production
+```
+
+`predev`/`prebuild` tự chép worker của MapLibre vào `public/vendor/` (đã được gitignore).
+
+## Kiểm thử
+
+| Bộ | Lệnh |
+|---|---|
+| Unit test | `npm test` |
+| Lint, kiểu | `npm run lint`, `npx tsc --noEmit` |
+| E2E (cần bản build và tài khoản thử) | `TEST_PW='…' npm run test:e2e` |
+| Phân quyền RLS trên DB thật | `TEST_PW='…' node tests/rls/matrix.mjs`, `TEST_PW='…' node tests/rls/payments.mjs` (thanh toán), `node tests/rls/learner.mjs` (tài khoản học sinh = khách với dữ liệu nội bộ; thêm `TEST_PW` để có cột Editor / Admin) |
+| Ràng buộc CSDL | chạy `supabase/tests/constraints.sql`, `payments.sql`, `late_payment.sql`, `learner_accounts.sql` (tự hoàn tác) |
+| E2E tài khoản học sinh | `E2E_BASE_URL=http://localhost:3200 npx playwright test tests/e2e/account.spec.ts` (cần `SUPABASE_SECRET_KEY` và server chạy cổng giả lập cho phần gói luyện thi; tự tạo và xóa tài khoản `zz-kiem-thu-hs-*@test.local`; ca cấp quyền nhân sự cần thêm `TEST_PW`) |
+| E2E thanh toán | `E2E_BASE_URL=http://localhost:3200 TEST_PW='…' npx playwright test tests/e2e/payments.spec.ts tests/e2e/payments-admin.spec.ts` (server chạy `PAYMENT_PROVIDER=mock`, `PAYMENT_ENV=test`) |
+
+Kết quả chi tiết: [`docs/test-report.md`](docs/test-report.md).
+
+## Cấu trúc thư mục
+
+```
+app/(public)/      Trang công khai (trang chủ, bài học, bản đồ, dòng thời gian, chi tiết…)
+app/quan-tri/      Trang quản trị: nội dung, kiểm duyệt, nhân sự, vận hành
+components/        Giao diện, chia theo khu vực (home, content, map, lesson, mapfilm, cinema3d, model3d, admin…)
+lib/queries/       Truy vấn Supabase phía server
+lib/actions/       Server Actions (lưu, gửi duyệt, duyệt…)
+lib/validation/    Zod schema cho form
+lib/admin/         Luật nghiệp vụ quản trị (điều kiện gửi duyệt, quyền theo vai trò…)
+lib/sgk/           Khung SGK 6 chủ đề, 17 bài (dữ liệu viết trong code)
+lib/lessons/       Chuyên đề tương tác (dữ liệu viết trong code)
+lib/battles/       Kịch bản bản đồ diễn biến
+lib/mapfilm/       Kịch bản bản đồ 3D; lib/cinema: phim 3D; lib/models3d: mô hình 3D
+supabase/          migrations/, seed.sql, tests/constraints.sql
+tests/             unit/ (Vitest), e2e/ (Playwright), rls/ (DB thật), perf/
+docs/              Báo cáo kiểm thử, dữ liệu cần kiểm chứng, lộ trình bài học, hướng dẫn giao diện, ảnh chụp màn hình
+public/            Ảnh bài học (webp đã nén), địa hình, mô hình 3D
+```
+
+## Soạn nội dung
+
+Nội dung sự kiện viết theo khung **Bối cảnh – Diễn biến – Kết quả – Ý nghĩa – Câu chuyện nhỏ – Em có biết? – Di tích ngày nay**,
+bằng cú pháp gọn: `## Tên mục`, dòng trống tách đoạn, `- ` gạch đầu dòng, `> ` trích dẫn (dòng `> — Nguồn` ghi nguồn),
+`**đậm**`, `*nghiêng*`. Trang web tự dựng thành phần tử an toàn (không nhận HTML) và đặt ảnh xen giữa các mục.
+Có thể soạn trực tiếp trong trang quản trị, hoặc soạn hàng loạt trong `supabase/content/su-kien/*.md` rồi chạy
+`node scripts/build-content-sql.mjs` để sinh `supabase/seed-content.sql`.
+
+## Nội dung và bản quyền ảnh
+
+- Mỗi ảnh ghi **tác giả, giấy phép và link trang gốc**. Ảnh dựng lại, tô màu hay minh họa đều gắn nhãn rõ.
+- Danh sách dữ liệu còn phải đối chiếu với SGK: [`docs/du-lieu-can-kiem-chung.md`](docs/du-lieu-can-kiem-chung.md).
+  Trang quản trị không cho gửi duyệt nội dung còn chữ `TODO` ở phần hiển thị công khai.
+- Địa cầu trang chủ dùng dữ liệu [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/) với nhãn chọn lọc; xem provenance cạnh các asset trong `public/maps/`. Các trang dùng nền OpenStreetMap ghi công © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright).

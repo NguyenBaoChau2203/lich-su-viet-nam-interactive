@@ -1,4 +1,7 @@
 import type { CameraView, ExplorerLimits, ExplorerState } from "@/lib/explorer/types";
+import { formatMapView, parseMapView } from "@/lib/explorer/map-view";
+import { parseJourneySelection } from "@/lib/explorer/journey";
+import { JOURNEY_REGISTRY, type JourneyRegistry } from "@/lib/explorer/journeys/registry";
 
 export const CAMERA_BOUNDS = {
   minPolar: 0.25,
@@ -12,7 +15,7 @@ export const CAMERA_BOUNDS = {
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const INTEGER_PATTERN = /^-?\d+$/;
 const NUMBER_PATTERN = /^-?\d+(?:\.\d+)?$/;
-const ALLOWED_EXPLORER_KEYS = new Set(["tu", "den", "su-kien", "goc"]);
+const ALLOWED_EXPLORER_KEYS = new Set(["tu", "den", "su-kien", "goc", "ban-do", "hanh-trinh", "moc"]);
 
 function round3(value: number): number {
   const rounded = Math.round(value * 1000) / 1000;
@@ -122,7 +125,7 @@ export function buildEventDetailHref(slug: string, state: ExplorerState): string
   return `/su-kien/${safeSlug}?kham-pha=${encodeURIComponent(explorerUrl)}`;
 }
 
-export function getExplorerReturnHref(value: unknown, fallbackSlug: string): string {
+export function getExplorerReturnHref(value: unknown, fallbackSlug: string, registry: JourneyRegistry = JOURNEY_REGISTRY): string {
   const safeFallback = SLUG_PATTERN.test(fallbackSlug)
     ? `/?su-kien=${fallbackSlug}`
     : "/";
@@ -177,5 +180,19 @@ export function getExplorerReturnHref(value: unknown, fallbackSlug: string): str
     rebuilt.push(`goc=${formatCameraParam(view)}`);
   }
 
+  const rawMap = parsed.searchParams.get("ban-do");
+  if (rawMap !== null) {
+    const view = parseMapView(rawMap);
+    if (!view) return safeFallback;
+    rebuilt.push(`ban-do=${formatMapView(view)}`);
+  }
+
+  const journeyId = parsed.searchParams.get("hanh-trinh");
+  const stopId = parsed.searchParams.get("moc");
+  if (journeyId !== null || stopId !== null) {
+    const journey = parseJourneySelection(journeyId, stopId, registry);
+    if (!journey) return safeFallback;
+    rebuilt.push(`hanh-trinh=${journey.id}`, `moc=${journey.stop}`);
+  }
   return rebuilt.length > 0 ? `/?${rebuilt.join("&")}` : safeFallback;
 }

@@ -1,0 +1,45 @@
+{
+  "sourceUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_populated_places_simple.geojson",
+  "publisher": "Natural Earth contributors",
+  "accessedAt": "2026-10-23",
+  "version": "5.1.2",
+  "scope": "Curated modern city names for geographical orientation only; approximate Natural Earth city points, not historical venues.",
+  "labels": [
+    {
+      "id": "hanoi",
+      "name": "Hà Nội",
+      "lng": 105.848068,
+      "lat": 21.035273
+    },
+    {
+      "id": "haiphong",
+      "name": "Hải Phòng",
+      "lng": 106.678147,
+      "lat": 20.831952
+    },
+    {
+      "id": "hue",
+      "name": "Huế",
+      "lng": 107.580038,
+      "lat": 16.469988
+    },
+    {
+      "id": "da-nang",
+      "name": "Đà Nẵng",
+      "lng": 108.249971,
+      "lat": 16.060039
+    },
+    {
+      "id": "ho-chi-minh-city",
+      "name": "TP. Hồ Chí Minh",
+      "lng": 106.702985,
+      "lat": 10.762125
+    },
+    {
+      "id": "can-tho",
+      "name": "Cần Thơ",
+      "lng": 105.770019,
+      "lat": 10.049993
+    }
+  ]
+}

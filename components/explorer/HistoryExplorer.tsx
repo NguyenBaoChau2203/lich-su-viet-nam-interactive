@@ -1,227 +1,236 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { ExplorerEventList } from "@/components/explorer/ExplorerEventList";
-import { TabletopStage } from "@/components/explorer/TabletopStage";
+import { ArrowRight } from "lucide-react";
+import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
+import { MapEventCard } from "@/components/explorer/MapEventCard";
+import { MapEventList } from "@/components/explorer/MapEventList";
+import { MapTimeControls } from "@/components/explorer/MapTimeControls";
+import { JourneyPanel } from "@/components/explorer/JourneyPanel";
+import { JourneyChooser } from "@/components/explorer/JourneyChooser";
+import { HomeAtlasHeader } from "@/components/layout/HomeAtlasHeader";
 import { filterExplorerEvents } from "@/lib/explorer/filters";
-import { createMapProjection } from "@/lib/explorer/projection";
-import type {
-  CameraView,
-  ExplorerEvent,
-  ExplorerLimits,
-  ExplorerState,
-  MarkerAnchor,
-} from "@/lib/explorer/types";
-import { buildExplorerUrl } from "@/lib/explorer/url";
+import { buildMapExplorerUrl, parseMapExplorerState, type MapExplorerState } from "@/lib/explorer/map-state";
+import type { MapView } from "@/lib/explorer/map-view";
+import type { ExplorerEvent, ExplorerLimits } from "@/lib/explorer/types";
+import { getJourneyById, getJourneyStop, sameJourneyArrival, type JourneyArrival } from "@/lib/explorer/journey";
+import { DEFAULT_JOURNEY_ID, JOURNEY_REGISTRY } from "@/lib/explorer/journeys/registry";
+import { createExplorerRuntime, reduceExplorerRuntime, scheduleJourneyDwell, type ExplorerAction, type ExplorerRuntime } from "@/lib/explorer/journeys/playback";
+import { usePrefersReducedMotion } from "@/lib/hooks/usePrefersReducedMotion";
+import "./explorer-map.css";
+
+const EventMap = dynamic(() => import("@/components/explorer/EventMap"), {
+  ssr: false,
+  loading: () => <div className="home-map-loading" role="status">Đang mở không gian lịch sử…</div>,
+});
 
 export type HistoryExplorerProps = {
   events: readonly ExplorerEvent[];
   limits: ExplorerLimits | null;
-  initialState: ExplorerState | null;
+  initialState: MapExplorerState | null;
   dataError?: string | null;
 };
 
-const DEFAULT_VIETNAM_BOUNDS = {
-  west: 102.118655,
-  east: 115.849152,
-  south: 8.263495,
-  north: 23.366278,
-} as const;
+const explorerReducer = (runtime: ExplorerRuntime, action: ExplorerAction) => reduceExplorerRuntime(runtime, action);
 
-export function HistoryExplorer({
-  events,
-  limits,
-  initialState,
-  dataError = null,
-}: HistoryExplorerProps) {
-  const [state, setState] = useState<ExplorerState | null>(initialState);
-  const debounceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+export function HistoryExplorer({ events, limits, initialState, dataError = null }: HistoryExplorerProps) {
+  const [runtime, dispatch] = useReducer(explorerReducer,
+    initialState ?? { from: 1911, to: 1941, selectedEvent: null, view: null }, createExplorerRuntime);
+  const { state, playing, cameraRequest, settledArrival, restoreRequest, focusRequest, readerActive, hidden, reducedMotion: playbackReducedMotion, departing } = runtime;
+  const reducedMotion = usePrefersReducedMotion();
+  const journey = state.journey ? getJourneyById(state.journey.id) : undefined;
+  const stop = state.journey ? getJourneyStop(state.journey.id, state.journey.stop) ?? null : null;
+  const journeyPathRequest = useMemo(() => !departing && journey && stop
+    ? { journey, journeyId: journey.id, stopId: stop.id, nonce: runtime.requestNonce } : null,
+  [departing, journey, stop, runtime.requestNonce]);
+  const [mapReady, setMapReady] = useState(false);
+  const journeyButton = useRef<HTMLButtonElement>(null);
+  const selectionOrigin = useRef<HTMLElement | null>(null);
+  const listRef = useRef<HTMLDetailsElement>(null);
+  const navigationPending = useRef(false);
+  const visibleEvents = useMemo(() => state ? filterExplorerEvents(events, state.from, state.to) : events, [events, state]);
+  const selectedEvent = visibleEvents.find((event) => event.slug === state?.selectedEvent) ?? null;
 
   useEffect(() => {
-    return () => {
-      if (debounceTimerRef.current) {
-        clearTimeout(debounceTimerRef.current);
+    if (!state || navigationPending.current) return;
+    const timer = setTimeout(() => {
+      if (!navigationPending.current && window.location.pathname === "/") window.history.replaceState(null, "", buildMapExplorerUrl(state));
+    }, 150);
+    // Freeze all later camera/filter writes too: a flight may finish while an
+    // outgoing Link is still waiting for server content on this mounted page.
+    const cancelForLink = (event: MouseEvent) => {
+      if (!(event.target instanceof Element) || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      const anchor = event.target.closest<HTMLAnchorElement>("a[href]");
+      if (!anchor || anchor.target === "_blank" || anchor.hasAttribute("download")) return;
+      const destination = new URL(anchor.href, window.location.href);
+      if (destination.origin === window.location.origin && destination.pathname !== "/") {
+        navigationPending.current = true;
+        dispatch({ type: "depart" });
+        clearTimeout(timer);
       }
     };
+    document.addEventListener("click", cancelForLink, true);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("click", cancelForLink, true);
+    };
+  }, [state]);
+
+  useEffect(() => {
+    const restore = () => {
+      navigationPending.current = false;
+      const next = parseMapExplorerState(new URLSearchParams(window.location.search), limits ?? { minYear: 1911, maxYear: 1941, eventSlugs: [] });
+      dispatch({ type: "restore", state: next });
+    };
+    window.addEventListener("popstate", restore);
+    return () => window.removeEventListener("popstate", restore);
+  }, [limits]);
+
+  const selectEvent = useCallback((slug: string) => {
+    selectionOrigin.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    dispatch({ type: "select-event", slug });
+    if (listRef.current) listRef.current.open = false;
   }, []);
 
-  const visibleEvents = useMemo(() => {
-    if (!state) return events;
-    return filterExplorerEvents(events, state.from, state.to);
-  }, [events, state]);
-
-  const anchors = useMemo<MarkerAnchor[]>(() => {
-    const projection = createMapProjection(DEFAULT_VIETNAM_BOUNDS, 100);
-    const list: MarkerAnchor[] = [];
-    for (const event of visibleEvents) {
-      for (const loc of event.locations) {
-        if (loc.longitude !== null && loc.latitude !== null) {
-          list.push({
-            key: `${event.slug}@${loc.slug}`,
-            eventSlug: event.slug,
-            locationSlug: loc.slug,
-            position: projection.project(loc.longitude, loc.latitude),
-            accuracyLevel: loc.accuracyLevel,
-          });
-        }
-      }
-    }
-    return list;
-  }, [visibleEvents]);
-
-  const handleViewChange = useCallback((view: CameraView) => {
-    setState((prev) => {
-      if (!prev) return prev;
-      const next: ExplorerState = { ...prev, view };
-      if (debounceTimerRef.current) {
-        clearTimeout(debounceTimerRef.current);
-      }
-      debounceTimerRef.current = setTimeout(() => {
-        if (typeof window !== "undefined") {
-          window.history.replaceState(null, "", buildExplorerUrl(next));
-        }
-      }, 150);
-      return next;
-    });
+  const pauseJourney = useCallback(() => dispatch({ type: "manual" }), []);
+  const arrive = useCallback((arrival: JourneyArrival) => {
+    if (!navigationPending.current) dispatch({ type: "arrive", arrival });
+  }, []);
+  const onReadingChange = useCallback((active: boolean) => dispatch({ type: "reading", active }), []);
+  const onReadyChange = useCallback((ready: boolean) => {
+    setMapReady(ready);
+    if (!ready) dispatch({ type: "pause" });
   }, []);
 
-  const periodText =
-    state && limits
-      ? `Giai đoạn ${state.from} – ${state.to}`
-      : limits
-        ? `Giai đoạn ${limits.minYear} – ${limits.maxYear}`
-        : "Chưa có khoảng năm đã công bố";
+  const seek = useCallback((stopId: string) => dispatch({ type: "seek", stopId }), []);
+  // The future chooser calls this same owner callback; it needs no other store.
+  const onChooseJourney = useCallback((id: string) => dispatch({ type: "choose-journey", id }), []);
+
+  function enterJourney() {
+    if (stop) return;
+    onChooseJourney(DEFAULT_JOURNEY_ID);
+    if (listRef.current) listRef.current.open = false;
+  }
+
+  function exitJourney() {
+    dispatch({ type: "exit" });
+    journeyButton.current?.focus();
+  }
+
+  function togglePlayback() {
+    if (playing) { dispatch({ type: "pause" }); return; }
+    if (!stop || !mapReady || reducedMotion || document.hidden || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    dispatch({ type: "play" });
+  }
+
+  useEffect(() => {
+    return scheduleJourneyDwell({ playing, settledArrival, cameraRequest, readerActive, hidden, reducedMotion: playbackReducedMotion, departing },
+      (arrival) => { if (!navigationPending.current) dispatch({ type: "dwell", arrival }); });
+  }, [playing, settledArrival, cameraRequest, readerActive, hidden, playbackReducedMotion, departing]);
+
+  useEffect(() => {
+    const visibility = () => dispatch({ type: "visibility", hidden: document.hidden });
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const changed = () => dispatch({ type: "motion", reduced: motion.matches });
+    visibility(); changed();
+    document.addEventListener("visibilitychange", visibility);
+    motion.addEventListener("change", changed);
+    return () => { document.removeEventListener("visibilitychange", visibility); motion.removeEventListener("change", changed); };
+  }, []);
+
+  const closeEvent = useCallback(() => {
+    dispatch({ type: "close-event" });
+    const origin = selectionOrigin.current;
+    if (origin?.isConnected && origin.getClientRects().length) origin.focus();
+    else listRef.current?.querySelector("summary")?.focus();
+  }, []);
+
+  useEffect(() => {
+    if (!selectedEvent) return;
+    const escape = (event: KeyboardEvent) => { if (event.key === "Escape") closeEvent(); };
+    window.addEventListener("keydown", escape);
+    return () => window.removeEventListener("keydown", escape);
+  }, [selectedEvent, closeEvent]);
+
+  const updateView = useCallback((view: MapView, arrival?: JourneyArrival) => {
+    if (!navigationPending.current) dispatch({ type: "view", view, arrival });
+  }, []);
+
+  function changePeriod(from: number, to: number) {
+    if (!limits || !Number.isFinite(from) || !Number.isFinite(to)) return;
+    const lower = Math.max(limits.minYear, Math.min(from, to));
+    const upper = Math.min(limits.maxYear, Math.max(from, to));
+    const matching = filterExplorerEvents(events, lower, upper);
+    dispatch({ type: "period", from: lower, to: upper, eventSlugs: matching.map((event) => event.slug) });
+  }
 
   return (
-    <div
-      data-testid="history-explorer"
-      className="mx-auto flex w-full max-w-[1600px] flex-col gap-4 px-4 py-4 lg:px-6"
-    >
-      {dataError && (
-        <div
-          role="status"
-          data-testid="explorer-data-error"
-          className="rounded-md border border-warning/40 bg-warning-bg px-4 py-2.5 text-sm text-foreground"
-        >
-          {dataError}
-        </div>
-      )}
-
-      {/* Compact Explorer Header */}
-      <header className="flex flex-wrap items-center justify-between gap-3 border-b border-border pb-3">
-        <div>
-          <h1 className="font-serif text-2xl font-bold text-foreground lg:text-3xl">
-            Sa bàn lịch sử Việt Nam 3D
-          </h1>
-          <p className="mt-0.5 text-xs text-foreground/75 lg:text-sm">
-            Khám phá không gian địa lý và các sự kiện lịch sử Việt Nam đã thẩm định nguồn ({periodText}).
-          </p>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-2 text-xs">
-          <div
-            aria-label="Bộ chọn khoảng năm"
-            className="flex items-center gap-2 rounded-md border border-border bg-surface px-3 py-1.5"
-          >
-            <label htmlFor="explorer-year-from" className="font-medium text-foreground/80">
-              Từ năm
-            </label>
-            <input
-              id="explorer-year-from"
-              type="number"
-              disabled={!limits || !state}
-              min={limits?.minYear}
-              max={limits?.maxYear}
-              value={state?.from ?? ""}
-              onChange={(e) => {
-                if (!limits) return;
-                const val = Number.parseInt(e.target.value, 10);
-                if (!Number.isFinite(val)) return;
-                const clamped = Math.min(Math.max(val, limits.minYear), limits.maxYear);
-                setState((prev) =>
-                  prev
-                    ? { ...prev, from: clamped, to: Math.max(prev.to, clamped) }
-                    : prev,
-                );
-              }}
-              className="w-16 rounded-xs border border-border bg-background px-1.5 py-0.5 text-center font-mono text-xs text-foreground disabled:opacity-50"
-            />
-            <label htmlFor="explorer-year-to" className="font-medium text-foreground/80">
-              Đến năm
-            </label>
-            <input
-              id="explorer-year-to"
-              type="number"
-              disabled={!limits || !state}
-              min={limits?.minYear}
-              max={limits?.maxYear}
-              value={state?.to ?? ""}
-              onChange={(e) => {
-                if (!limits) return;
-                const val = Number.parseInt(e.target.value, 10);
-                if (!Number.isFinite(val)) return;
-                const clamped = Math.min(Math.max(val, limits.minYear), limits.maxYear);
-                setState((prev) =>
-                  prev
-                    ? { ...prev, to: clamped, from: Math.min(prev.from, clamped) }
-                    : prev,
-                );
-              }}
-              className="w-16 rounded-xs border border-border bg-background px-1.5 py-0.5 text-center font-mono text-xs text-foreground disabled:opacity-50"
-            />
-            <button
-              type="button"
-              disabled={!limits || !state}
-              onClick={() => {
-                if (!limits) return;
-                setState((prev) =>
-                  prev ? { ...prev, from: limits.minYear, to: limits.maxYear } : prev,
-                );
-              }}
-              className="rounded-xs border border-border bg-surface-alt px-2 py-0.5 font-medium text-foreground hover:bg-border/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent disabled:opacity-50"
-            >
-              Toàn bộ
-            </button>
-          </div>
-
-          <nav aria-label="Lối tắt tư liệu và ôn tập" className="flex items-center gap-1.5">
-            <Link
-              href="/dong-thoi-gian"
-              className="rounded-md border border-border bg-surface px-2.5 py-1.5 font-medium text-foreground hover:bg-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
-            >
-              Dòng thời gian
-            </Link>
-            <Link
-              href="/muc-luc"
-              className="rounded-md border border-border bg-surface px-2.5 py-1.5 font-medium text-foreground hover:bg-surface-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
-            >
-              Mục lục SGK
-            </Link>
-            <Link
-              href="/luyen-thi"
-              className="rounded-md border border-border bg-surface px-2.5 py-1.5 font-medium text-foreground/80 hover:bg-surface-alt hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
-            >
-              Ôn tập
-            </Link>
-          </nav>
-        </div>
-      </header>
-
-      {/* Main Desktop Split: Raised 3D Tabletop + Readable Event Alternative */}
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,1fr)_370px] xl:grid-cols-[minmax(0,1fr)_410px]">
-        <TabletopStage
-          anchors={anchors}
-          initialView={state?.view ?? null}
-          onViewChange={handleViewChange}
-          className="h-[calc(100vh-230px)] min-h-[450px] max-h-[660px]"
-        />
-        <ExplorerEventList
-          events={visibleEvents}
-          state={state}
-          hasDataError={Boolean(dataError)}
-        />
+    <section className={`home-history-map${stop ? " is-journey" : ""}`} data-testid="history-explorer" aria-label="Khám phá lịch sử trên địa cầu">
+      <HomeAtlasHeader journeyActive={Boolean(stop)} journeyButtonRef={journeyButton}
+        onExplore={() => { if (stop) exitJourney(); }} onJourney={enterJourney} />
+      <div className="absolute inset-0 z-0" data-testid="home-event-map">
+        <EventMap events={visibleEvents} allEvents={events} view={state?.view ?? null} selectedEvent={selectedEvent?.slug ?? null}
+          focusRequest={stop ? null : focusRequest} onSelect={selectEvent} onViewChange={updateView}
+          journeyStop={stop} cameraRequest={cameraRequest}
+          journeyPathRequest={journeyPathRequest}
+          restoreRequest={restoreRequest} onManualInput={pauseJourney} onArrive={arrive} onReadyChange={onReadyChange} />
       </div>
-    </div>
+      <div className="home-map-intro">
+        <h1>{journey && stop ? "Khám phá hành trình" : "Lịch sử qua những địa danh"}</h1>
+        {journey && stop ? (
+          <JourneyChooser
+            journeys={JOURNEY_REGISTRY.journeys}
+            selectedJourney={journey}
+            selectedStop={stop}
+            state={state}
+            onChooseJourney={onChooseJourney}
+            onSeekStop={seek}
+          />
+        ) : (
+          <>
+            <p className="globe-hint">Kéo để di chuyển · Cuộn để phóng to</p>
+            <MapEventList events={visibleEvents} state={state} onSelect={selectEvent} detailsRef={listRef} />
+          </>
+        )}
+      </div>
+      {dataError && <p role="status" className="home-map-notice" data-testid="explorer-data-error">{dataError}</p>}
+      {state.journeyNotice && <p role="status" className="home-map-notice" data-testid="journey-notice">{state.journeyNotice}</p>}
+      {!stop && !dataError && visibleEvents.length === 0 && <p role="status" className="home-map-notice">Không có sự kiện trong khoảng năm này. Hãy chọn khoảng khác hoặc “Toàn bộ”.</p>}
+      <p className="sr-only" role="status" aria-live="polite">{visibleEvents.length} sự kiện trong khoảng thời gian đang chọn.</p>
+      {!stop && !selectedEvent && <aside className="home-map-guidance" aria-labelledby="home-map-guidance-heading" data-testid="home-map-guidance">
+        <h2 id="home-map-guidance-heading">Khám phá một sự kiện</h2>
+        <p>Chọn một điểm trên bản đồ để xem thời gian, địa điểm và câu chuyện lịch sử.</p>
+        <button type="button" onClick={enterJourney}>Xem hành trình <ArrowRight size={16} aria-hidden="true" /></button>
+      </aside>}
+      {!stop && selectedEvent && <MapEventCard key={selectedEvent.slug} event={selectedEvent} state={state} onClose={closeEvent} />}
+      {journey && stop ? <JourneyPanel key={journey.id} journey={journey} stop={stop} state={state} playing={playing} settled={sameJourneyArrival(settledArrival, cameraRequest)} travelling={Boolean(cameraRequest && !sameJourneyArrival(settledArrival, cameraRequest))} reducedMotion={reducedMotion} mapAvailable={mapReady}
+        readerActive={readerActive} eventAvailable={events.some((event) => event.slug === stop.eventSlug)} onSeek={seek} onPlay={togglePlayback} onExit={exitJourney} onReadingChange={onReadingChange} />
+        : <MapTimeControls events={events} limits={limits} state={state} onChange={changePeriod} />}
+      <noscript>
+        <div className="home-map-notice">
+          <p>
+            JavaScript đang tắt. Mở “Danh sách sự kiện” để đọc, hoặc chọn đọc các hành trình:
+          </p>
+          <ul className="mt-1 flex flex-wrap gap-2 text-xs">
+            {JOURNEY_REGISTRY.journeys.map((j) => (
+              <li key={j.id}>
+                <Link
+                  href={buildMapExplorerUrl({
+                    ...state,
+                    journey: { id: j.id, stop: j.stops[0].id },
+                    selectedEvent: null,
+                    view: j.stops[0].view,
+                  })}
+                  className="text-accent underline underline-offset-2"
+                >
+                  {j.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </noscript>
+    </section>
   );
 }

@@ -15,7 +15,8 @@ description: Verify a completed feature slice with fresh evidence across behavio
 
 - Run the narrow test for the changed learner or admin journey.
 - Exercise the complete journey in a real browser for UI changes.
-- Test keyboard navigation, meaningful focus, reduced motion, and mobile layout.
+- Follow `docs/product/DESKTOP-UI-SCOPE.md`: test laptop/PC CSS viewports 1280×720, 1366×768, 1440×900, and 1920×1080 with mouse/trackpad, keyboard navigation, meaningful focus, and reduced motion. Mobile/tablet and touch-specific checks are deferred; preserve existing responsive support.
+- Inspect mixed legacy E2E files before running them; select desktop cases for the current scope. Do not claim the full suite passed when only focused cases ran.
 - Check loading, empty, error, and no-JavaScript or static fallbacks when applicable.
 
 ## Verify trust

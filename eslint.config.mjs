@@ -12,6 +12,17 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // File chép từ node_modules bởi scripts/copy-maplibre-worker.mjs (đã nén, không phải mã của dự án)
+    "public/vendor/**",
+    // Local agent tooling, reports, and generated artifacts retained in this checkout.
+    ".codex-tmp/**",
+    ".task-reports/**",
+    ".codegraph/**",
+    ".playwright-cli/**",
+    "playwright-report/**",
+    "test-results/**",
+    "output/**",
+    "outputs/**",
   ]),
 ]);
 

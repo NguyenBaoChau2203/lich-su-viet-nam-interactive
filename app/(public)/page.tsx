@@ -2,7 +2,7 @@ import { unstable_rethrow } from "next/navigation";
 import { HistoryExplorer } from "@/components/explorer/HistoryExplorer";
 import { getExplorerLimits } from "@/lib/explorer/filters";
 import type { ExplorerEvent } from "@/lib/explorer/types";
-import { parseExplorerState } from "@/lib/explorer/url";
+import { parseMapExplorerState } from "@/lib/explorer/map-state";
 import { getExplorerEvents } from "@/lib/queries/explorer";
 
 type SearchParamsRecord = Record<string, string | string[] | undefined>;
@@ -38,19 +38,19 @@ export default async function HomePage({
 
   if (simulateDbError) {
     dataError =
-      "Chưa tải được dữ liệu sự kiện từ cơ sở dữ liệu. Sa bàn Việt Nam 3D và các liên kết tra cứu vẫn hoạt động — vui lòng thử tải lại trang sau ít phút.";
+      "Chưa tải được dữ liệu sự kiện. Bạn vẫn có thể khám phá bản đồ; hãy tải lại trang sau ít phút.";
   } else {
     try {
       events = await getExplorerEvents();
     } catch (error) {
       unstable_rethrow(error);
       dataError =
-        "Chưa tải được dữ liệu sự kiện từ cơ sở dữ liệu. Sa bàn Việt Nam 3D và các liên kết tra cứu vẫn hoạt động — vui lòng thử tải lại trang sau ít phút.";
+        "Chưa tải được dữ liệu sự kiện. Bạn vẫn có thể khám phá bản đồ; hãy tải lại trang sau ít phút.";
     }
   }
 
   const limits = getExplorerLimits(events);
-  const initialState = limits ? parseExplorerState(urlSearchParams, limits) : null;
+  const initialState = parseMapExplorerState(urlSearchParams, limits ?? { minYear: 1911, maxYear: 1941, eventSlugs: [] });
 
   return (
     <HistoryExplorer

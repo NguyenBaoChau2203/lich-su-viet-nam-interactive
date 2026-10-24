@@ -1,0 +1,201 @@
+{
+  "title": "Generalized international land boundaries for the curated cinematic globe",
+  "publisher": "Natural Earth contributors",
+  "datasetVersion": "5.1.0",
+  "repositoryTag": "v5.1.2",
+  "sourceCatalogUrl": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-boundary-lines-2/",
+  "sourceDataUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_50m_admin_0_boundary_lines_land.geojson",
+  "sourceTermsUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+  "sourcePolicyUrl": "https://www.naturalearthdata.com/about/disputed-boundaries-policy/",
+  "license": "Public domain; Natural Earth terms of use",
+  "licenseUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+  "accessedAt": "2026-10-24",
+  "sourceSha256": "2faac4f6b34386f3d21b6e018cf151f241f00e5c936d44dd17d7d9bfb147fa48",
+  "sourceBytes": 760189,
+  "sourceFeatures": 390,
+  "effectiveClassPolicy": "FCLASS_VN ?? FEATURECLA",
+  "selectedClass": "International boundary (verify)",
+  "featuresCount": 357,
+  "totalPoints": 18980,
+  "omittedSummary": {
+    "Unrecognized": 3,
+    "Indefinite (please verify)": 5,
+    "Disputed (please verify)": 16,
+    "Line of control (please verify)": 6,
+    "Admin-1 boundary": 1,
+    "Indeterminant frontier": 2
+  },
+  "omittedFeatures": [
+    {
+      "sourceId": 1746705343,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Unrecognized"
+    },
+    {
+      "sourceId": 1746705331,
+      "sourceClass": "Indefinite (please verify)",
+      "viewClass": "Indefinite (please verify)"
+    },
+    {
+      "sourceId": 1746705323,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746709121,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746705327,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746708629,
+      "sourceClass": "Line of control (please verify)",
+      "viewClass": "Line of control (please verify)"
+    },
+    {
+      "sourceId": 1746708491,
+      "sourceClass": "Line of control (please verify)",
+      "viewClass": "Line of control (please verify)"
+    },
+    {
+      "sourceId": 1746705319,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746709141,
+      "sourceClass": "Line of control (please verify)",
+      "viewClass": "Line of control (please verify)"
+    },
+    {
+      "sourceId": 1746705337,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746708623,
+      "sourceClass": "Line of control (please verify)",
+      "viewClass": "Line of control (please verify)"
+    },
+    {
+      "sourceId": 1746705351,
+      "sourceClass": "Line of control (please verify)",
+      "viewClass": "Unrecognized"
+    },
+    {
+      "sourceId": 1746705329,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746705371,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746708661,
+      "sourceClass": "Indefinite (please verify)",
+      "viewClass": "Indefinite (please verify)"
+    },
+    {
+      "sourceId": 1746706755,
+      "sourceClass": "International boundary (verify)",
+      "viewClass": "Unrecognized"
+    },
+    {
+      "sourceId": 1746707747,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746708757,
+      "sourceClass": "Line of control (please verify)",
+      "viewClass": "Line of control (please verify)"
+    },
+    {
+      "sourceId": 1746708045,
+      "sourceClass": "Indefinite (please verify)",
+      "viewClass": "Indefinite (please verify)"
+    },
+    {
+      "sourceId": 1746705335,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746708827,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746708403,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746708787,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Admin-1 boundary"
+    },
+    {
+      "sourceId": 1746708603,
+      "sourceClass": "Indeterminant frontier",
+      "viewClass": "Indeterminant frontier"
+    },
+    {
+      "sourceId": 1746708607,
+      "sourceClass": "Indeterminant frontier",
+      "viewClass": "Indeterminant frontier"
+    },
+    {
+      "sourceId": 1746708449,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746708457,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746708463,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746708469,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746708915,
+      "sourceClass": "Disputed (please verify)",
+      "viewClass": "Disputed (please verify)"
+    },
+    {
+      "sourceId": 1746708703,
+      "sourceClass": "Indefinite (please verify)",
+      "viewClass": "Indefinite (please verify)"
+    },
+    {
+      "sourceId": 1746709133,
+      "sourceClass": "Line of control (please verify)",
+      "viewClass": "Line of control (please verify)"
+    },
+    {
+      "sourceId": 1746706305,
+      "sourceClass": "Indefinite (please verify)",
+      "viewClass": "Indefinite (please verify)"
+    }
+  ],
+  "sha256": "c388e20028bcc47ffa1e1efe79c224bab7ff6a989b02daba358143af7927f809",
+  "bytes": 413412,
+  "gzipBytes": 132508,
+  "processing": "Filtered 50m land boundary lines using effective classification policy (FCLASS_VN ?? FEATURECLA). Retained only 'International boundary (verify)'. Normalized properties to { sourceId, sourceClass, viewClass }. Preserved open LineString and disconnected MultiLineString geometry. Rounded coordinates to 4 decimal places.",
+  "scope": "Generalized modern international land boundaries at 1:50,000,000; visual context for neighboring country separation on the cinematic globe.",
+  "limitations": "Modern generalized boundaries; not historical borders for specific years and not legal determinations. Disputed, control, indefinite, indeterminant, subnational, and unrecognized lines are omitted from this solid layer."
+}

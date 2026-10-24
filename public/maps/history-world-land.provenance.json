@@ -1,0 +1,16 @@
+{
+  "title": "Generalized world land for the curated history globe",
+  "publisher": "Natural Earth contributors",
+  "version": "5.1.2",
+  "sourceUrl": "https://www.naturalearthdata.com/downloads/50m-physical-vectors/50m-land/",
+  "dataUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_50m_land.geojson",
+  "accessedAt": "2026-10-23",
+  "license": "Public domain; Natural Earth terms of use",
+  "licenseUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+  "processing": "Removed all source properties and rounded coordinates to four decimal degrees. No added borders, names, or political claims.",
+  "scope": "Generalized present-day world land/coastline at 1:50,000,000; visual context for a globe.",
+  "limitations": "Not historical boundaries or precise local coastline. Use the separately sourced Vietnam layer for national detail.",
+  "sha256": "d2a0f8661ec662ba9bdd45072b2800a2c917102d2291a6d93a1401a2479a28cb",
+  "gzipBytes": 417635,
+  "features": 1420
+}
