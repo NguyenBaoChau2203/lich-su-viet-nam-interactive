@@ -12,6 +12,7 @@ import { sameJourneyArrival } from "@/lib/explorer/journey";
 import type { MapView } from "@/lib/explorer/map-view";
 import { usePrefersReducedMotion } from "@/lib/hooks/usePrefersReducedMotion";
 import { fitClusterView } from "@/lib/explorer/cluster-expansion";
+import type { ProvinceBoundarySource } from "@/lib/explorer/cinematic/province-boundaries";
 
 const INTRO_KEY = "ls12:globe-intro-seen";
 const ASSETS = { day: "/maps/globe/earth-day-4096x2048.jpg", normal: "/maps/globe/earth-normal-2048x1024.jpg", specular: "/maps/globe/earth-specular-2048x1024.jpg" };
@@ -27,6 +28,7 @@ export function CinematicEventMap(props: EventMapProps) {
   const [labels, setLabels] = useState<GlobePlaceLabel[]>([]);
   const [boundaryStatus, setBoundaryStatus] = useState<"loading" | "ready" | "unavailable">("loading");
   const [provinceStatus, setProvinceStatus] = useState<"loading" | "ready" | "unavailable">("loading");
+  const [provinceSource, setProvinceSource] = useState<ProvinceBoundarySource | null>(null);
   const [intro, setIntro] = useState(false);
   const departing = useRef(false);
   const wheelTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -261,6 +263,7 @@ export function CinematicEventMap(props: EventMapProps) {
         onReady={onSceneReady}
         onBoundariesStatus={setBoundaryStatus}
         onProvinceBoundariesStatus={setProvinceStatus}
+        onProvinceSourceChange={setProvinceSource}
         onError={() => { setRuntime(null); setViewport(null); setIntro(false); callbacks.current.onReadyChange(false); }} />
     </div>
     {scene && viewport && <GlobeMarkers key={`${props.restoreRequest}:${props.cameraRequest?.journeyId ?? ""}:${props.journeyStop?.id ?? ""}:${props.events.map(event => event.slug).join("|")}`}
@@ -286,7 +289,9 @@ export function CinematicEventMap(props: EventMapProps) {
       <p>Natural Earth · Đường biên giới đất liền hiện đại, khái quát theo Natural Earth; không tái dựng biên giới theo năm đang chọn. Một số đường có phân loại chưa chắc chắn trong nguồn được lược bỏ.{boundaryStatus === "unavailable" && " (Lớp biên giới quốc tế tùy chọn hiện không khả dụng.)"}</p>
       <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noreferrer">Dữ liệu địa lý</a> · <a href="/maps/vietnam-tabletop.provenance.json" target="_blank" rel="noreferrer">Phạm vi Việt Nam</a> · <a href="/maps/history-country-boundaries.provenance.json" target="_blank" rel="noreferrer">Ranh giới quốc tế &amp; phân loại</a>
       <p>Ranh giới 34 tỉnh/thành hiện nay là lớp tham chiếu địa lý; không mô tả địa giới tại thời điểm sự kiện.{provinceStatus === "unavailable" && " (Lớp ranh giới tỉnh/thành tùy chọn hiện không khả dụng.)"}</p>
-      <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap (ODbL)</a> · <a href="https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf" target="_blank" rel="noreferrer">Nghị quyết 202/2025/QH15 &amp; QĐ 19/2025/QĐ-TTg</a>
+      {provinceSource && <p>Nguồn: <time dateTime={provinceSource.sourceTimestamp}>{new Date(provinceSource.sourceTimestamp).toISOString().replace("T", " ").replace(".000Z", " UTC")}</time> · {provinceSource.license.attribution} · <a href={provinceSource.license.url} target="_blank" rel="noreferrer">{provinceSource.license.id}</a></p>}
+      <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap (ODbL)</a> · <a href="/maps/history-vietnam-province-boundaries.provenance.json" target="_blank" rel="noreferrer">Nguồn và xử lý ranh giới tỉnh/thành</a> · <a href="/maps/history-vietnam-province-boundaries.geojson" target="_blank" rel="noreferrer">Dữ liệu đường tham chiếu</a>
+      <p><a href="https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-so-202-2025-qh15-ve-sap-xep-don-vi-hanh-chinh-cap-tinh-119250612174148722.htm" target="_blank" rel="noreferrer">Nghị quyết 202/2025/QH15</a> · <a href="https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf" target="_blank" rel="noreferrer">QĐ 19/2025/QĐ-TTg</a></p>
       <p>Ảnh bề mặt: Solar System Scope / INOVE, CC BY 4.0; thu nhỏ và chuyển định dạng. Ảnh toàn cầu không thể hiện chi tiết đường phố.</p>
       <a href="https://www.solarsystemscope.com/textures/" target="_blank" rel="noreferrer">Nguồn ảnh</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">Giấy phép</a> · <a href="/maps/globe/assets.provenance.json" target="_blank" rel="noreferrer">Xử lý và độ phân giải</a>
     </details>

@@ -109,7 +109,9 @@ for (const size of sizes) {
     await expect(page.getByTestId("home-map-guidance")).toContainText("Khám phá một sự kiện");
     await captureAndCheck(page, "default");
     await page.locator(".globe-attribution > summary").click();
-    expect((await measure(page)).collisions).toEqual([]);
+    // Native details sizing is consumed by the stable Resize/MutationObservers.
+    // Check the settled layout, retaining zero collisions and a bounded update.
+    await expect.poll(async () => (await measure(page)).collisions, { timeout: 1_000 }).toEqual([]);
     await page.locator(".globe-attribution > summary").click();
     await page.locator('.home-event-marker[title="Chiến dịch Điện Biên Phủ"]').click();
     await expect(page.locator("#map-event-heading")).toBeFocused();
@@ -117,7 +119,7 @@ for (const size of sizes) {
     await expect(page.getByTestId("map-event-detail")).toBeInViewport();
     await captureAndCheck(page, "card");
     await page.locator(".globe-attribution > summary").click();
-    expect((await measure(page)).collisions).toEqual([]);
+    await expect.poll(async () => (await measure(page)).collisions, { timeout: 1_000 }).toEqual([]);
     await page.locator(".globe-attribution > summary").click();
     await page.keyboard.press("Escape");
     await expect(page.getByTestId("home-map-guidance")).toBeVisible();

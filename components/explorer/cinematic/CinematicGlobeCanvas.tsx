@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { CinematicAssets, CinematicScene, HighlightCollection } from "@/lib/explorer/cinematic/scene";
 import type { MapView } from "@/lib/explorer/map-view";
+import type { ProvinceBoundarySource } from "@/lib/explorer/cinematic/province-boundaries";
 
 type Props = {
   initialView: MapView;
@@ -14,6 +15,7 @@ type Props = {
   onReady?: (scene: CinematicScene) => void;
   onBoundariesStatus?: (status: "loading" | "ready" | "unavailable") => void;
   onProvinceBoundariesStatus?: (status: "loading" | "ready" | "unavailable") => void;
+  onProvinceSourceChange?: (source: ProvinceBoundarySource | null) => void;
   onError?: (error: unknown) => void;
   className?: string;
   presentation?: "prototype" | "homepage";
@@ -34,6 +36,7 @@ export function CinematicGlobeCanvas({
   onReady,
   onBoundariesStatus,
   onProvinceBoundariesStatus,
+  onProvinceSourceChange,
   onError,
   className,
   presentation = "prototype",
@@ -53,6 +56,7 @@ export function CinematicGlobeCanvas({
     onReady,
     onBoundariesStatus,
     onProvinceBoundariesStatus,
+    onProvinceSourceChange,
     onError,
   });
   useEffect(() => {
@@ -66,6 +70,7 @@ export function CinematicGlobeCanvas({
       onReady,
       onBoundariesStatus,
       onProvinceBoundariesStatus,
+      onProvinceSourceChange,
       onError,
     };
   });
@@ -79,11 +84,13 @@ export function CinematicGlobeCanvas({
     const onVisibility = () => scene?.setVisible(document.visibilityState === "visible");
     const timer = setTimeout(() => {
       abort.abort(); scene?.dispose();
+      latest.current.onProvinceSourceChange?.(null);
       setState("error"); latest.current.onError?.(new Error("Globe loading timed out"));
     }, 20_000);
 
     setBoundariesStatus("loading");
     setProvinceStatus("loading");
+    latest.current.onProvinceSourceChange?.(null);
 
     // Optional country boundaries fetch, handled concurrently with core loading
     const boundariesPromise = latest.current.countryBoundariesUrl
@@ -130,7 +137,9 @@ export function CinematicGlobeCanvas({
           initialView: options.initialView,
           signal: abort.signal,
           onContextLost: () => {
+            abort.abort();
             scene?.dispose();
+            latest.current.onProvinceSourceChange?.(null);
             setState("error");
             latest.current.onError?.(new Error("WebGL context lost"));
           },
@@ -168,9 +177,10 @@ export function CinematicGlobeCanvas({
         // Attach optional province boundaries when available
         provincePromise.then((provinces) => {
           if (abort.signal.aborted || scene !== created) return;
-          let available = Boolean(provinces);
+          let available = Boolean(provinces?.features.length);
           try {
             created.setProvinceBoundaries(provinces);
+            available = available && (created.stats().provinceBorderSegments ?? 0) > 0;
           } catch {
             // Valid source edges can exceed the render budget after spherical
             // subdivision. Optional geometry rejection must keep core readiness
@@ -180,11 +190,15 @@ export function CinematicGlobeCanvas({
           }
           const status = available ? "ready" : "unavailable";
           setProvinceStatus(status);
+          latest.current.onProvinceSourceChange?.(available && provinces
+            ? { sourceTimestamp: provinces.sourceTimestamp, license: provinces.license }
+            : null);
           latest.current.onProvinceBoundariesStatus?.(status);
         });
       } catch (error) {
         clearTimeout(timer);
         if (abort.signal.aborted) return;
+        latest.current.onProvinceSourceChange?.(null);
         setState("error");
         latest.current.onError?.(error);
       }
@@ -192,6 +206,7 @@ export function CinematicGlobeCanvas({
 
     return () => {
       abort.abort();
+      latest.current.onProvinceSourceChange?.(null);
       clearTimeout(timer);
       observer?.disconnect();
       document.removeEventListener("visibilitychange", onVisibility);
@@ -226,6 +241,7 @@ export function CinematicGlobeCanvas({
           <button
             type="button"
             onClick={() => {
+              latest.current.onProvinceSourceChange?.(null);
               setState("loading");
               setAttempt((value) => value + 1);
             }}

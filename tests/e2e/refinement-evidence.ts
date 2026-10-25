@@ -68,3 +68,22 @@ export async function pixelDifference(a: Buffer, b: Buffer, threshold = 12) {
   }
   return pixels;
 }
+
+/** Actual composited stroke contrast, excluding unchanged background/HTML pixels. */
+export async function strokeCoreContrast(withLayer: Buffer, withoutLayer: Buffer) {
+  const first = await sharp(withLayer).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+  const second = await sharp(withoutLayer).removeAlpha().raw().toBuffer();
+  if (first.data.length !== second.length) throw new Error("Canvas dimensions changed during contrast comparison");
+  const luminance = (data: Buffer, offset: number) => [0.2126, 0.7152, 0.0722].reduce((sum, weight, c) => {
+    const value = data[offset + c] / 255;
+    return sum + weight * (value <= .04045 ? value / 12.92 : ((value + .055) / 1.055) ** 2.4);
+  }, 0);
+  const contrasts: number[] = [];
+  for (let i = 0; i < second.length; i += first.info.channels) {
+    if (Math.max(...[0, 1, 2].map(c => Math.abs(first.data[i + c] - second[i + c]))) <= 12) continue;
+    const a = luminance(first.data, i), b = luminance(second, i);
+    contrasts.push((Math.max(a, b) + .05) / (Math.min(a, b) + .05));
+  }
+  contrasts.sort((a, b) => a - b);
+  return { changedPixels: contrasts.length, p95Contrast: contrasts[Math.floor(contrasts.length * .95)] ?? 1 };
+}

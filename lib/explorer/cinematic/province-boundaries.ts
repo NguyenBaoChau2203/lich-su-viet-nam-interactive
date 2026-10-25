@@ -9,7 +9,7 @@
 import { add, dot, geoToVector, normalize, scale } from "@/lib/explorer/cinematic/projection";
 
 export const PROVINCE_ALTITUDE = 1.0006;
-export const PROVINCE_SLATE = "#728277";
+export const PROVINCE_SLATE = "#c8d3c0";
 export const MAX_SAFE_PROVINCE_SEGMENTS = 50_000;
 
 export const OFFICIAL_PROVINCE_CODES = Object.freeze([
@@ -52,6 +52,8 @@ export type ProvinceBoundaryCollection = {
   license: { id: string; url: string; attribution: string };
   features: readonly ProvinceBoundaryFeature[];
 };
+
+export type ProvinceBoundarySource = Pick<ProvinceBoundaryCollection, "sourceTimestamp" | "license">;
 
 function isValidCoordinate(coord: unknown): coord is [number, number] {
   if (!Array.isArray(coord) || coord.length !== 2) return false;

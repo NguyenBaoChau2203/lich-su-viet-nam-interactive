@@ -281,7 +281,7 @@ test("a far-side Vietnam cap remains occluded instead of painting the near hemis
   await page.screenshot({ path: path.join(output, "far-side-cap-occlusion.png"), scale: "css" });
 });
 
-for (const zoom of [8, 10, 11]) test(`Task 09 actual province pixels survive the cap at zoom ${zoom} and remain passive`, async ({ page }) => {
+for (const zoom of [8, 10, 11]) test(`Task 09 synthetic province fixture pixels survive the cap at zoom ${zoom} and remain passive`, async ({ page }) => {
   const fixture = syntheticProvinceFixture();
   await page.route("**/maps/history-vietnam-province-boundaries.geojson", route => route.fulfill({ json: fixture }));
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -303,7 +303,7 @@ for (const zoom of [8, 10, 11]) test(`Task 09 actual province pixels survive the
   await expect(page.getByTestId("map-event-card").or(popup(page))).toBeVisible();
 });
 
-test("Task 09 province far-side pixels are occluded and context retry restores only the new optional layer", async ({ page }) => {
+test("Task 09 synthetic province far-side pixels are occluded and context retry restores only the new optional layer", async ({ page }) => {
   const fixture = syntheticProvinceFixture();
   let failed = true;
   await page.route("**/maps/history-vietnam-province-boundaries.geojson", route => failed
@@ -325,7 +325,7 @@ test("Task 09 province far-side pixels are occluded and context retry restores o
   expect(await pixelDifference(far, await canvas.screenshot())).toBe(0);
 });
 
-test("Task 09 optional province projection overrun falls back without an unhandled error and can retry", async ({ page }) => {
+test("Task 09 synthetic province projection overrun falls back without an unhandled error and can retry", async ({ page }) => {
   const fixture = syntheticProvinceFixture();
   const tooDense = structuredClone(fixture);
   // The envelope has <50k edges but spherical subdivision would exceed 50k.

@@ -55,3 +55,6 @@ next-env.d.ts
 /public/vendor/
 /supabase/.temp/
 /.vitest/
+
+# Offline province builder test bytecode
+/scripts/province-boundaries/__pycache__/

@@ -373,7 +373,10 @@ export async function createCinematicScene(options: CinematicSceneOptions): Prom
       provinceMaterial = new LineMaterial({
         color: new Color(PROVINCE_SLATE).getHex(),
         linewidth: Number(Math.max(0.45, Math.min(0.95, initialWidth)).toFixed(2)),
-        transparent: false,
+        // Keep alpha opaque while sorting after the transparent national cap.
+        // Otherwise the cap tints the province stroke back into its background.
+        transparent: true,
+        opacity: 1,
         depthTest: true,
         depthWrite: false,
       });
@@ -381,7 +384,7 @@ export async function createCinematicScene(options: CinematicSceneOptions): Prom
 
       provinceMesh = new LineSegments2(provinceGeometry, provinceMaterial);
       provinceMesh.scale.setScalar(surfaceLayerRadii(viewToCameraPose(view, viewport).distanceToTarget).province / PROVINCE_ALTITUDE);
-      provinceMesh.renderOrder = 2; // Above cap fill (renderOrder 2 with smaller radius 1.0004), below gold outline (renderOrder 3, 1.0008)
+      provinceMesh.renderOrder = 2.5; // After the cap; adaptive radius remains below the national outline.
       provinceMesh.frustumCulled = false;
       world.add(provinceMesh);
 

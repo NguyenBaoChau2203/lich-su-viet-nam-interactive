@@ -75,7 +75,7 @@
 .globe-attribution summary { cursor: pointer; text-align: right; }
 .globe-attribution p { margin: 6px 0; line-height: 1.5; }
 .globe-attribution a { display: inline-block; text-decoration: underline; }
-.globe-attribution[open] { width: var(--atlas-panel-width); bottom: 88px; border: 1px solid var(--border-strong); border-radius: 4px; padding: 10px 12px; }
+.globe-attribution[open] { width: var(--atlas-panel-width); max-height: min(300px, calc(100% - var(--atlas-top) - var(--atlas-rail-space) - 36px)); bottom: 88px; border: 1px solid var(--border-strong); border-radius: 4px; padding: 10px 12px; }
 .home-history-map:has(.home-map-event-card) .globe-attribution[open] { right: calc(var(--atlas-panel-edge) + var(--atlas-panel-width) + 24px); bottom: calc(var(--atlas-rail-space) + 72px); }
 .globe-skip { position: absolute; z-index: 30; top: 76px; left: 50%; transform: translateX(-50%); padding: 9px 14px; border: 1px solid #a88a53; background: #101a29; color: #f0d69e; font-size: 12px; }
 .globe-place-label { position: absolute; transform: translate(8px, -50%); font-size: 12px; color: #d4dde7; text-shadow: 0 1px 4px #000, 0 0 8px #071120; white-space: nowrap; }
