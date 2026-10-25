@@ -175,3 +175,53 @@ Thiết bị / Môi trường: Windows 11, Node v24.19.0, pnpm v11.7.0.
   - Nâng cấp độ dài lời dẫn cho 7 bước chiến dịch (mỗi bước > 200 ký tự) theo Sổ nguồn.
   - Gắn fact card và ảnh tư liệu trực quan cho từng bước.
 - Chạy cổng kiểm thử và commit.
+
+---
+
+## 2026-10-25 — Phase 4: Nâng cấp Bản đồ chiến dịch 2D (2D Campaign Map Upgrade)
+
+### 1. Mục tiêu và kết quả
+- Bổ sung hai loại đơn vị quân sự mới vào `UnitKind` trong `lib/battles/types.ts`:
+  - `"vn-armor"`: Lực lượng tăng thiết giáp của ta.
+  - `"vn-aircraft"`: Không quân nhân dân Việt Nam.
+- Thiết kế styling cho hai loại marker bản đồ Leaflet mới trong `app/globals.css`:
+  - `.battle-unit--vn-armor`: Hình chữ nhật bo góc 4px màu đỏ của ta, có biểu tượng hình thoi vàng `◆` ở tâm (tượng trưng cho thiết giáp cơ giới).
+  - `.battle-unit--vn-aircraft`: Hình tròn đỏ của ta với biểu tượng máy bay vàng `✈` ở tâm (tượng trưng cho không quân cường kích).
+- Nâng cấp toàn diện kịch bản diễn biến 2D `lib/battles/chien-dich-ho-chi-minh-1975.ts`:
+  - **Đơn vị quân sự:** Bổ sung `thietGiap203` (Lữ đoàn xe tăng 203, mũi thọc sâu của Quân đoàn 2 tiến vào Dinh Độc Lập) và `phiDoiQuyetThang` (5 máy bay cường kích A-37 xuất hiện tập kích sân bay Tân Sơn Nhất ở bước 5).
+  - **Mũi tên đồ họa mới:** Bổ sung đường tiến quân của thiết giáp (`thiet-giap-ap-sat`, `thiet-giap-trung-tam`) và đường bay không kích của Phi đội Quyết thắng từ hướng Đông Bắc vào sân bay Tân Sơn Nhất (`a37-tap-kich`).
+  - **Lời dẫn 7 bước (Step Captions):** Cả 7 bước đều được nâng cấp lời dẫn chi tiết, chuẩn xác theo Sổ nguồn sử liệu, độ dài từ 448 đến 492 ký tự (vượt xa mức tối thiểu 200 ký tự).
+  - **Thẻ dữ kiện (Step Facts) & Ảnh tư liệu (Step Images):**
+    - Bước 1 (`thoi-co`): Fact "Ba đòn điểm huyệt chiến lược".
+    - Bước 2 (`xuan-loc`): Fact "Cánh cửa thép sụp đổ" + Ảnh `tuong-dai-xuan-loc.webp`.
+    - Bước 3 (`bao-vay`): Fact "Chiến dịch mang tên Bác" + Ảnh `bao-tang-chien-dich.webp`.
+    - Bước 4 (`no-sung`): Fact "Đặc công giữ cầu huyết mạch" + Ảnh `phao-130mm-bao-tang.webp`.
+    - Bước 5 (`tan-son-nhat`): Fact "Đòn không kích sấm sét" + Ảnh `may-bay-a37-bao-tang.webp`.
+    - Bước 6 (`tong-cong-kich`): Fact "Chiến dịch di tản Gió lốc" + Ảnh `truc-thang-uss-okinawa.webp`.
+    - Bước 7 (`dinh-doc-lap`): Fact "Lá cờ trên nóc Dinh Độc Lập" + Ảnh `xe-tang-843-dinh-doc-lap.webp`.
+  - **Bổ sung chú giải (Legend):** Thêm chú giải cho Lữ đoàn xe tăng thiết giáp và Không quân ta.
+- Cập nhật kiểm thử tự động trong `tests/unit/lesson-data.test.ts` đảm bảo kiểm tra đầy đủ 5 cánh quân bộ binh cùng các đơn vị thiết giáp và không quân.
+
+### 2. Các tệp thay đổi
+- `lib/battles/types.ts`: bổ sung `"vn-armor"` và `"vn-aircraft"` vào `UnitKind`.
+- `app/globals.css`: thêm CSS cho `.battle-unit--vn-armor` và `.battle-unit--vn-aircraft`.
+- `lib/battles/chien-dich-ho-chi-minh-1975.ts`: nội dung kịch bản bản đồ 2D hoàn thiện.
+- `tests/unit/lesson-data.test.ts`: cập nhật kiểm thử kịch bản chiến dịch.
+- `docs/superpowers/plans/2026-10-25-hcm-1975-premium-lesson-progress.md`: cập nhật tiến độ Phase 4.
+
+### 3. Lệnh và kết quả kiểm chứng
+- `pnpm exec vitest run tests/unit/lesson-data.test.ts tests/unit/presentation.test.ts tests/unit/curriculum.test.ts tests/unit/mapfilm.test.ts` -> Exit code 0 (111 tests passed).
+- `pnpm verify` -> Exit code 0:
+  - `agent:check`: valid.
+  - `history:data:check`: 42 tests passed.
+  - `lint`: 0 errors, 0 warnings.
+  - `typecheck`: 0 errors.
+  - `test`: 1000 vitest tests + 26 node tests passed.
+  - `build`: 102/102 trang tĩnh xuất thành công.
+
+### 4. Kế hoạch bước tiếp theo (Phase 5)
+- Tổng quát hóa engine Bản đồ 3D (`lib/mapfilm/`):
+  - Mở rộng `PieceKind` trong `lib/mapfilm/types.ts` để bổ sung `"tank"` (xe tăng), `"jet"` (máy bay phản lực A-37), `"helicopter"` (trực thăng UH-1), `"palace"` (Dinh Độc Lập), `"gate"` (cổng Dinh).
+  - Mở rộng `UNIT_PIECE` trong `lib/mapfilm/evaluate.ts`.
+  - Thêm hình học procedural trong `lib/mapfilm/three-layer.ts` và xử lý cờ Mặt trận Dân tộc Giải phóng (nửa trên đỏ, nửa dưới xanh lam, sao vàng) mà không ảnh hưởng tới cờ đỏ sao vàng của Điện Biên Phủ.
+  - Chạy toàn bộ kiểm thử xác nhận không có bất kỳ hồi quy nào đối với Điện Biên Phủ.

@@ -128,8 +128,12 @@ describe("kịch bản Chiến dịch Hồ Chí Minh", () => {
     expect(Object.values(byId["dinh-doc-lap"]).every((status) => status === "captured")).toBe(true);
   });
 
-  it("năm cánh quân; mục tiêu nằm ở Đông Nam Bộ", () => {
-    expect(chienDichHoChiMinh1975.unitDefinitions).toHaveLength(5);
+  it("năm cánh quân cùng đơn vị thiết giáp, không quân; mục tiêu nằm ở Đông Nam Bộ", () => {
+    expect(chienDichHoChiMinh1975.unitDefinitions.length).toBeGreaterThanOrEqual(5);
+    const kinds = chienDichHoChiMinh1975.unitDefinitions.map((unit) => unit.kind);
+    expect(kinds.filter((k) => k === "vn-infantry")).toHaveLength(5);
+    expect(kinds).toContain("vn-armor");
+    expect(kinds).toContain("vn-aircraft");
     for (const point of chienDichHoChiMinh1975.strongpointDefinitions ?? []) {
       const [lat, lng] = point.position;
       expect(lat, point.id).toBeGreaterThan(10.5);

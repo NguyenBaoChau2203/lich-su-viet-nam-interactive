@@ -5,8 +5,18 @@ export type LatLng = [number, number];
  * Loại đơn vị trên sơ đồ: quyết định hình dáng và màu biểu tượng (không chỉ dựa vào màu).
  * Bạch Đằng: invader-ship / defender-boat / defender-land. Điện Biên Phủ: vn-infantry / vn-artillery / vn-hq.
  * Điện Biên Phủ trên không: invader-aircraft (máy bay địch; trạng thái "sunk" = bị bắn rơi).
+ * Chiến dịch Hồ Chí Minh: vn-armor (xe tăng thiết giáp) / vn-aircraft (không quân ta).
  */
-export type UnitKind = "invader-ship" | "invader-aircraft" | "defender-boat" | "defender-land" | "vn-infantry" | "vn-artillery" | "vn-hq";
+export type UnitKind =
+  | "invader-ship"
+  | "invader-aircraft"
+  | "defender-boat"
+  | "defender-land"
+  | "vn-infantry"
+  | "vn-artillery"
+  | "vn-hq"
+  | "vn-armor"
+  | "vn-aircraft";
 
 export type UnitStatus = "active" | "sunk";
 

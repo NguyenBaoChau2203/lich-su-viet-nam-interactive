@@ -449,6 +449,42 @@ path.battle-stake--exposed {
   font-size: 12px;
 }
 
+/* Tăng thiết giáp của ta (Chiến dịch Hồ Chí Minh): hình chữ nhật bo góc, màu đỏ, biểu tượng thoi vàng */
+.battle-unit--vn-armor {
+  border-radius: 4px;
+  background: var(--battle-ours);
+}
+
+.battle-unit--vn-armor::after {
+  content: "◆";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffd54a;
+  font-size: 10px;
+  line-height: 1;
+}
+
+/* Không quân của ta (Phi đội Quyết thắng): tròn đỏ, máy bay vàng */
+.battle-unit--vn-aircraft {
+  border-radius: 50%;
+  background: var(--battle-ours);
+}
+
+.battle-unit--vn-aircraft::after {
+  content: "✈";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffd54a;
+  font-size: 12px;
+  line-height: 1;
+}
+
 .battle-sp {
   position: relative;
   display: block;
