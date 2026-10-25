@@ -1,0 +1,1831 @@
+{
+  "schemaVersion": 1,
+  "accessedAt": "2026-10-25",
+  "limitations": [
+    "No real local DB: Docker daemon unavailable.",
+    "No direct database inventory. Anonymous configured homepage observed 10 published records spanning 1911–1986; absence there does not establish the internal workflow state.",
+    "No human review or remote publication.",
+    "Exact owner textbook printing/page alignment remains unconfirmed."
+  ],
+  "sources": [
+    {
+      "id": "wto-accession",
+      "title": "Viet Nam — Accessions",
+      "institution": "World Trade Organization",
+      "url": "https://www.wto.org/english/thewto_e/acc_e/a1_vietnam_e.htm",
+      "accessedAt": "2026-10-25",
+      "publishedAt": null
+    },
+    {
+      "id": "mofa-asean",
+      "title": "Thông tin cơ bản về ASEAN và quan hệ Việt Nam – ASEAN",
+      "institution": "Bộ Ngoại giao Việt Nam",
+      "url": "https://mofa.gov.vn/tin-chi-tiet/chi-tiet/thong-tin-co-ban-ve-asean-va-quan-he-viet-nam-asean-166.html",
+      "accessedAt": "2026-10-25",
+      "publishedAt": null
+    },
+    {
+      "id": "us-normalization",
+      "title": "Remarks by the President in announcement on normalization of diplomatic relations with Vietnam",
+      "institution": "The White House; U.S. National Archives frozen archive",
+      "url": "https://clintonwhitehouse6.archives.gov/1995/07/1995-07-11-remarks-on-normalization-of-relations-with-vietnam.html",
+      "accessedAt": "2026-10-25",
+      "publishedAt": "1995-07-11"
+    },
+    {
+      "id": "gacma-bcp",
+      "title": "Tưởng niệm, tri ân 64 liệt sĩ hy sinh tại đảo Gạc Ma",
+      "institution": "Báo Điện tử Chính phủ",
+      "url": "https://baochinhphu.vn/tuong-niem-tri-an-64-liet-si-hy-sinh-tai-dao-gac-ma-10224031414164731.htm",
+      "publishedAt": "2024-03-14",
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "gacma-vov",
+      "title": "Tri ân liệt sỹ nơi đầu sóng",
+      "institution": "Đài Tiếng nói Việt Nam (VOV)",
+      "url": "https://vov.vn/xa-hoi/tri-an-liet-sy-noi-dau-song-1074040.vov",
+      "publishedAt": null,
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "viet-bac-1947",
+      "title": "Lịch sử Biên niên Đảng Cộng sản Việt Nam — Tập 3",
+      "institution": "Cổng TTĐT Đảng Cộng sản Việt Nam; NXB Chính trị Quốc gia – Sự thật",
+      "url": "https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/book/lich-su-dang/lich-su-bien-nien-dang-cong-san-viet-nam-tap-3-176?categoryId=102000083",
+      "publishedAt": "2009",
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "bien-gioi-1950",
+      "title": "Di tích Núi Báo Đông nơi Chủ tịch Hồ Chí Minh quan sát trận đánh đồn Đông Khê",
+      "institution": "Bảo tàng Hồ Chí Minh",
+      "url": "https://baotanghochiminh.vn/di-tich-nui-bao-dong-noi-chu-tich-ho-chi-minh-quan-sat-tran-danh-don-dong-khe-chien-dich-bien-gioi-1950.htm",
+      "publishedAt": "2023-09-16",
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "dong-khoi-1960",
+      "title": "Kỷ niệm 54 năm Đồng khởi Bến Tre (17/1/1960–17/1/2014)",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/VI/Articles/3097/15652/ky-niem-54-nam-djong-khoi-ben-tre-17-1-1960-17-1-2014.html",
+      "publishedAt": "2014-01-14",
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "august-1945",
+      "title": "Tổng khởi nghĩa Cách mạng tháng Tám năm 1945",
+      "institution": "Bảo tàng Lịch sử Quốc gia; Nguyễn Thị Ngọc Anh",
+      "url": "https://baotanglichsuquocgia.vn/vi/Articles/3097/18473/tong-khoi-nghia-cach-mang-thang-tam-nam-1945.html",
+      "publishedAt": "2015-08-18",
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "buon-ma-thuot-1975",
+      "title": "Nhớ về chiến dịch mang tính bước ngoặt của mùa Xuân 1975",
+      "institution": "Báo Điện tử Chính phủ; Hà Minh Hồng",
+      "url": "https://baochinhphu.vn/nho-ve-chien-dich-mang-tinh-buoc-ngoat-cua-mua-xuan-1975-102270035.htm",
+      "publishedAt": "2020-03-24",
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "hue-1975",
+      "title": "Nghệ thuật vận dụng thời cơ trong Chiến dịch Trị Thiên",
+      "institution": "Báo Điện tử Chính phủ; nguồn QĐND/Cổng TTĐT Bộ Quốc phòng",
+      "url": "https://baochinhphu.vn/nghe-thuat-van-dung-thoi-co-trong-chien-dich-tri-thien-102180398.htm",
+      "publishedAt": "2015-03-16",
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "spring-museum",
+      "title": "Thông tin báo chí trưng bày chuyên đề Non sông liền một dải",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/VI/Articles/3090/75384/thong-tin-bao-chi-trung-bay-chuyen-dje-non-song-lien-mot-dai.html",
+      "publishedAt": "2025-04-18",
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "assembly-1976",
+      "title": "Vài nét về Quốc hội nước CHXHCN Việt Nam",
+      "institution": "Báo Điện tử Chính phủ",
+      "url": "https://baochinhphu.vn/vai-net-ve-quoc-hoi-nuoc-chxhcn-viet-nam-10271664.htm",
+      "publishedAt": null,
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "dong-du",
+      "title": "Phong trào Đông Du (1905–1908) — Một hình thức xây dựng lực lượng cách mạng những năm đầu thế kỷ XX",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/14624/phong-trao-djong-du-1905-1908-mot-hinh-thuc-xay-dung-luc-luong-cach-mang-nhung-nam-dau-the-ky-xx.html",
+      "publishedAt": null,
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "hcm-journey",
+      "title": "Chủ tịch Hồ Chí Minh và hành trình 30 năm tìm đường cứu nước giải phóng dân tộc",
+      "institution": "Cổng thông tin Hồ Chí Minh",
+      "url": "https://hochiminh.vn/tin-tuc/chu-tich-ho-chi-minh-va-hanh-trinh-30-nam-tim-duong-cuu-nuoc-giai-phong-dan-toc-9013",
+      "publishedAt": "2023-06-06",
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "cpv-founding",
+      "title": "Ngày thành lập Đảng Cộng sản Việt Nam 3-2-1930",
+      "institution": "Tư liệu Văn kiện Đảng; Cổng TTĐT ĐCSVN",
+      "url": "https://tulieuvankien.dangcongsan.vn/ho-so-su-kien-nhan-chung/su-kien-va-nhan-chung/ngay-thanh-lap-dang-cong-san-viet-nam-3-2-1930-3342",
+      "publishedAt": null,
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "thanh-lap-viet-minh-1941",
+      "title": "19/5/1941: Thành lập Mặt trận Việt Minh",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/VI/Articles/3097/16382/19-5-1941-thanh-lap-mat-tran-viet-minh.html",
+      "publishedAt": null,
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "chien-thang-ap-bac-1963",
+      "title": "Chiến thắng Ấp Bắc ngày 2-1-1963",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/vi/Articles/2002/61989/chien-thang-ap-bac-ngay-2-1-1963.html",
+      "publishedAt": null,
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "chien-thang-van-tuong-1965",
+      "title": "Kỷ niệm 48 năm (18/8/1965–18/8/2013) — Chiến thắng Vạn Tường",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/14898/ky-niem-48-nam-18-8-1965-18-8-2013-chien-thang-van-tuong.html",
+      "publishedAt": null,
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "strategic-1972",
+      "title": "Ngày 30-3-1972: Cuộc Tổng tiến công chiến lược năm 1972 bắt đầu",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/vi/Articles/2002/68267/ngay-30-3-1972-cuoc-tong-tien-cong-chien-luoc-nam-1972-bat-djau.html",
+      "publishedAt": null,
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "khoan-10",
+      "title": "Giải quyết vấn đề nông nghiệp, nông dân, nông thôn là nhiệm vụ của cả hệ thống chính trị và toàn xã hội",
+      "institution": "Báo Điện tử Chính phủ",
+      "url": "https://baochinhphu.vn/giai-quyet-van-de-nong-nghiep-nong-dan-nong-thon-la-nhiem-vu-cua-ca-he-thong-chinh-tri-va-toan-xa-hoi-102829.htm",
+      "publishedAt": null,
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "congress-viii",
+      "title": "Đại hội đại biểu toàn quốc lần thứ VIII của Đảng",
+      "institution": "Tư liệu Văn kiện Đảng; Cổng TTĐT ĐCSVN",
+      "url": "https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-viii/dai-hoi-dai-bieu-toan-quoc-lan-thu-viii-cua-dang-13",
+      "publishedAt": null,
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "viii-political-report",
+      "title": "Báo cáo Chính trị của Ban Chấp hành Trung ương Đảng khóa VII tại Đại hội VIII",
+      "institution": "Ban Chấp hành Trung ương ĐCSVN; bản số hóa Tư liệu Văn kiện Đảng",
+      "url": "https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-viii/bao-cao-chinh-tri-cua-ban-chap-hanh-trung-uong-dang-khoa-vii-tai-dai-hoi-dai-bieu-toan-quoc-lan-thu-viii-cua-dang-1549?categoryId=104000022",
+      "publishedAt": "1996",
+      "accessedAt": "2026-10-25"
+    },
+    {
+      "id": "cptpp-moit",
+      "title": "Hiệp định CPTPP chính thức có hiệu lực đối với Việt Nam từ ngày 14/01/2019",
+      "institution": "Bộ Công Thương",
+      "url": "https://moit.gov.vn/tin-tuc/thi-truong-nuoc-ngoai/hiep-dinh-cptpp-chinh-thuc-co-hieu-luc-doi-voi-viet-nam-tu-n.html",
+      "publishedAt": "2019-01-11",
+      "accessedAt": "2026-10-25"
+    }
+  ],
+  "inventory": [
+    {
+      "slug": "nguyen-tat-thanh-ra-di-tim-duong-cuu-nuoc",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/nguyen-tat-thanh-ra-di-tim-duong-cuu-nuoc.md",
+      "evidence": "needs_evidence",
+      "publication": "observed-public-homepage-2026-10-25",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "12-doi-ngoai-dau-the-ki-xx-den-1945",
+          "sectionId": "muc-2"
+        },
+        {
+          "lessonSlug": "15-khai-quat-cuoc-doi-va-su-nghiep-ho-chi-minh",
+          "sectionId": "muc-2"
+        },
+        {
+          "lessonSlug": "16-ho-chi-minh-anh-hung-giai-phong-dan-toc",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "ban-yeu-sach-cua-nhan-dan-an-nam-1919",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/ban-yeu-sach-cua-nhan-dan-an-nam-1919.md",
+      "evidence": "needs_evidence",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "12-doi-ngoai-dau-the-ki-xx-den-1945",
+          "sectionId": "muc-2"
+        },
+        {
+          "lessonSlug": "16-ho-chi-minh-anh-hung-giai-phong-dan-toc",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "nguyen-ai-quoc-ve-nuoc-lanh-dao-cach-mang",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/nguyen-ai-quoc-ve-nuoc-lanh-dao-cach-mang.md",
+      "evidence": "needs_evidence",
+      "publication": "observed-public-homepage-2026-10-25",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "6-cach-mang-thang-tam-nam-1945",
+          "sectionId": "muc-1"
+        },
+        {
+          "lessonSlug": "16-ho-chi-minh-anh-hung-giai-phong-dan-toc",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "unesco-ton-vinh-ho-chi-minh-1987",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/unesco-ton-vinh-ho-chi-minh-1987.md",
+      "evidence": "needs_evidence",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "17-dau-an-ho-chi-minh",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Government report read (resolution 18.65, printed pp.134–135); original UNESCO resolution not retrieved. No new certification of exact title/wording or resolution date."
+    },
+    {
+      "slug": "tong-khoi-nghia-gianh-chinh-quyen-o-ha-noi",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/tong-khoi-nghia-gianh-chinh-quyen-o-ha-noi.md",
+      "evidence": "needs_evidence",
+      "publication": "observed-public-homepage-2026-10-25",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "6-cach-mang-thang-tam-nam-1945",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "tuyen-ngon-doc-lap",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/tuyen-ngon-doc-lap.md",
+      "evidence": "needs_evidence",
+      "publication": "observed-public-homepage-2026-10-25",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "6-cach-mang-thang-tam-nam-1945",
+          "sectionId": "muc-1"
+        },
+        {
+          "lessonSlug": "16-ho-chi-minh-anh-hung-giai-phong-dan-toc",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "hiep-dinh-so-bo-6-3-1946",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/hiep-dinh-so-bo-6-3-1946.md",
+      "evidence": "needs_evidence",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "7-khang-chien-chong-phap",
+          "sectionId": "muc-1"
+        },
+        {
+          "lessonSlug": "13-doi-ngoai-trong-khang-chien-1945-1975",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "toan-quoc-khang-chien-19-12-1946",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/toan-quoc-khang-chien-19-12-1946.md",
+      "evidence": "needs_evidence",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "7-khang-chien-chong-phap",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "chien-dich-dien-bien-phu",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/chien-dich-dien-bien-phu.md",
+      "evidence": "needs_evidence",
+      "publication": "observed-public-homepage-2026-10-25",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "7-khang-chien-chong-phap",
+          "sectionId": "muc-3"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "hiep-dinh-geneve-ve-dong-duong",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/hiep-dinh-geneve-ve-dong-duong.md",
+      "evidence": "needs_evidence",
+      "publication": "observed-public-homepage-2026-10-25",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "7-khang-chien-chong-phap",
+          "sectionId": "muc-3"
+        },
+        {
+          "lessonSlug": "13-doi-ngoai-trong-khang-chien-1945-1975",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "tong-tien-cong-va-noi-day-tet-mau-than-1968",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/tong-tien-cong-va-noi-day-tet-mau-than-1968.md",
+      "evidence": "needs_evidence",
+      "publication": "observed-public-homepage-2026-10-25",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "ha-noi-dien-bien-phu-tren-khong-1972",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/ha-noi-dien-bien-phu-tren-khong-1972.md",
+      "evidence": "needs_evidence",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "hiep-dinh-paris-ve-viet-nam",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/hiep-dinh-paris-ve-viet-nam.md",
+      "evidence": "needs_evidence",
+      "publication": "observed-public-homepage-2026-10-25",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-2"
+        },
+        {
+          "lessonSlug": "13-doi-ngoai-trong-khang-chien-1945-1975",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "chien-dich-ho-chi-minh",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/chien-dich-ho-chi-minh.md",
+      "evidence": "needs_evidence",
+      "publication": "observed-public-homepage-2026-10-25",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-3"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "chien-tranh-bao-ve-bien-gioi-tay-nam",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/chien-tranh-bao-ve-bien-gioi-tay-nam.md",
+      "evidence": "needs_evidence",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "9-bao-ve-to-quoc-tu-sau-thang-4-1975",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "chien-tranh-bao-ve-bien-gioi-phia-bac-1979",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/chien-tranh-bao-ve-bien-gioi-phia-bac-1979.md",
+      "evidence": "needs_evidence",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "9-bao-ve-to-quoc-tu-sau-thang-4-1975",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "bao-ve-chu-quyen-gac-ma-1988",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/bao-ve-chu-quyen-gac-ma-1988.md",
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-insert-only-existing-slug-guard",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Coordinate-free; no sea-boundary claim",
+      "lessonRefs": [
+        {
+          "lessonSlug": "9-bao-ve-to-quoc-tu-sau-thang-4-1975",
+          "sectionId": "muc-3"
+        }
+      ],
+      "blocker": "Sensitive content still requires human review; existing differing rows skipped."
+    },
+    {
+      "slug": "dai-hoi-dang-lan-thu-vi",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/dai-hoi-dang-lan-thu-vi.md",
+      "evidence": "needs_evidence",
+      "publication": "observed-public-homepage-2026-10-25",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "10-khai-quat-ve-cong-cuoc-doi-moi",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "viet-nam-gia-nhap-lien-hop-quoc-1977",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/viet-nam-gia-nhap-lien-hop-quoc-1977.md",
+      "evidence": "needs_evidence",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "not-applied",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Legacy metadata is not newly certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "14-doi-ngoai-tu-nam-1975-den-nay",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Legacy narrative contains claims beyond bounded source review; no human approval inferred."
+    },
+    {
+      "slug": "viet-nam-gia-nhap-asean-1995",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/viet-nam-gia-nhap-asean-1995.md",
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-insert-only-existing-slug-guard",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Coordinate-free bounded override; legacy linked location not certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "14-doi-ngoai-tu-nam-1975-den-nay",
+          "sectionId": "muc-2"
+        },
+        {
+          "lessonSlug": "4-su-ra-doi-va-phat-trien-cua-asean",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Existing differing database content will be skipped; owner must reconcile through review, not overwrite."
+    },
+    {
+      "slug": "binh-thuong-hoa-quan-he-viet-my-1995",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/binh-thuong-hoa-quan-he-viet-my-1995.md",
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-insert-only-existing-slug-guard",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Coordinate-free bounded override; legacy linked location not certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "14-doi-ngoai-tu-nam-1975-den-nay",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Existing differing database content will be skipped; owner must reconcile through review, not overwrite."
+    },
+    {
+      "slug": "viet-nam-gia-nhap-wto-2007",
+      "decision": "reuse",
+      "legacyPath": "supabase/content/su-kien/viet-nam-gia-nhap-wto-2007.md",
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-insert-only-existing-slug-guard",
+      "media": "not-reviewed-for-event",
+      "coordinateScope": "Coordinate-free bounded override; legacy linked location not certified",
+      "lessonRefs": [
+        {
+          "lessonSlug": "10-khai-quat-ve-cong-cuoc-doi-moi",
+          "sectionId": "muc-3"
+        },
+        {
+          "lessonSlug": "14-doi-ngoai-tu-nam-1975-den-nay",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Existing differing database content will be skipped; owner must reconcile through review, not overwrite."
+    },
+    {
+      "slug": "chien-dich-viet-bac-1947",
+      "decision": "research-candidate",
+      "batch": 1,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "Coordinate-free; historical place named in source, no precise point inferred",
+      "lessonRefs": [
+        {
+          "lessonSlug": "7-khang-chien-chong-phap",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Human review, exact printing and event media pending."
+    },
+    {
+      "slug": "chien-dich-bien-gioi-1950",
+      "decision": "research-candidate",
+      "batch": 1,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "Coordinate-free; historical place named in source, no precise point inferred",
+      "lessonRefs": [
+        {
+          "lessonSlug": "7-khang-chien-chong-phap",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Human review, exact printing and event media pending."
+    },
+    {
+      "slug": "phong-trao-dong-khoi-1960",
+      "decision": "research-candidate",
+      "batch": 1,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "Coordinate-free; historical place named in source, no precise point inferred",
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Human review, exact printing and event media pending."
+    },
+    {
+      "slug": "hue-gianh-chinh-quyen-1945",
+      "decision": "research-candidate",
+      "batch": 2,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "6-cach-mang-thang-tam-nam-1945",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Human review, media and textbook printing pending."
+    },
+    {
+      "slug": "sai-gon-gianh-chinh-quyen-1945",
+      "decision": "research-candidate",
+      "batch": 2,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "6-cach-mang-thang-tam-nam-1945",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Human review, media and textbook printing pending."
+    },
+    {
+      "slug": "chien-thang-buon-ma-thuot-1975",
+      "decision": "research-candidate",
+      "batch": 2,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-3"
+        }
+      ],
+      "blocker": "Human review, media and textbook printing pending."
+    },
+    {
+      "slug": "giai-phong-hue-1975",
+      "decision": "research-candidate",
+      "batch": 3,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-3"
+        }
+      ],
+      "blocker": "Human review, media and exact printing pending."
+    },
+    {
+      "slug": "giai-phong-da-nang-1975",
+      "decision": "research-candidate",
+      "batch": 3,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-3"
+        }
+      ],
+      "blocker": "Human review, media and exact printing pending."
+    },
+    {
+      "slug": "thong-nhat-nha-nuoc-1976",
+      "decision": "source-backed-candidate-held",
+      "batch": 3,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "withheld-lesson-fit",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [],
+      "blocker": "Government source, Khóa VI paragraph, directly supports 2/7/1976 naming decision. Current lesson 9 muc-1 is Tây Nam border defense, not reunification. No suitable actual section confirmed; do not invent mapping.",
+      "researchNote": "Ngày 2/7/1976, Quốc hội quyết định tên nước Cộng hòa xã hội chủ nghĩa Việt Nam. This is a specific decision within the first session, not a substitute for the whole unification process.",
+      "sourceRefs": [
+        {
+          "id": "assembly-1976",
+          "locator": "Khóa VI (1976–1981), paragraph Cũng tại kỳ họp này, ngày 2/7/1976"
+        }
+      ]
+    },
+    {
+      "slug": "phong-trao-dong-du",
+      "decision": "research-candidate",
+      "batch": 4,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "12-doi-ngoai-dau-the-ki-xx-den-1945",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Topic-level mapping only; original textbook pages and event media pending."
+    },
+    {
+      "slug": "nguyen-ai-quoc-dai-hoi-tours-1920",
+      "decision": "research-candidate",
+      "batch": 4,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "16-ho-chi-minh-anh-hung-giai-phong-dan-toc",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Topic-level mapping only; original textbook pages and event media pending."
+    },
+    {
+      "slug": "thanh-lap-dang-cong-san-viet-nam-1930",
+      "decision": "research-candidate",
+      "batch": 4,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "15-khai-quat-cuoc-doi-va-su-nghiep-ho-chi-minh",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Topic-level mapping only; original textbook pages and event media pending."
+    },
+    {
+      "slug": "thanh-lap-viet-minh-1941",
+      "decision": "research-candidate",
+      "batch": 5,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "16-ho-chi-minh-anh-hung-giai-phong-dan-toc",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Human review, event media and exact textbook pages pending."
+    },
+    {
+      "slug": "chien-thang-ap-bac-1963",
+      "decision": "research-candidate",
+      "batch": 5,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Human review, event media and exact textbook pages pending."
+    },
+    {
+      "slug": "chien-thang-van-tuong-1965",
+      "decision": "research-candidate",
+      "batch": 5,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Human review, event media and exact textbook pages pending."
+    },
+    {
+      "slug": "tien-cong-chien-luoc-1972",
+      "decision": "research-candidate",
+      "batch": 6,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Human review and exact printing pending; no coordinate assigned to national policy impacts."
+    },
+    {
+      "slug": "nghi-quyet-khoan-10-1988",
+      "decision": "research-candidate",
+      "batch": 6,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "10-khai-quat-ve-cong-cuoc-doi-moi",
+          "sectionId": "muc-1"
+        }
+      ],
+      "blocker": "Human review and exact printing pending; no coordinate assigned to national policy impacts."
+    },
+    {
+      "slug": "dai-hoi-dang-lan-thu-viii-1996",
+      "decision": "research-candidate",
+      "batch": 6,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "10-khai-quat-ve-cong-cuoc-doi-moi",
+          "sectionId": "muc-2"
+        },
+        {
+          "lessonSlug": "11-thanh-tuu-va-bai-hoc-cua-cong-cuoc-doi-moi",
+          "sectionId": "muc-1"
+        },
+        {
+          "lessonSlug": "11-thanh-tuu-va-bai-hoc-cua-cong-cuoc-doi-moi",
+          "sectionId": "muc-2"
+        }
+      ],
+      "blocker": "Human review and exact printing pending; no coordinate assigned to national policy impacts."
+    },
+    {
+      "slug": "cptpp-co-hieu-luc-voi-viet-nam-2019",
+      "decision": "research-candidate",
+      "batch": 7,
+      "evidence": "verified",
+      "publication": "not-observed-public-homepage; internal-state-unknown",
+      "importState": "prepared-draft",
+      "media": "needs_evidence",
+      "coordinateScope": "No coordinate invented; coordinate-free until supported",
+      "lessonRefs": [
+        {
+          "lessonSlug": "14-doi-ngoai-tu-nam-1975-den-nay",
+          "sectionId": "muc-2"
+        },
+        {
+          "lessonSlug": "10-khai-quat-ve-cong-cuoc-doi-moi",
+          "sectionId": "muc-3"
+        }
+      ],
+      "blocker": "Topic-level relevance supported; exact owner printing/page fit, human review and event image pending."
+    }
+  ],
+  "events": [
+    {
+      "slug": "viet-nam-gia-nhap-wto-2007",
+      "title": "Việt Nam gia nhập Tổ chức Thương mại Thế giới (WTO)",
+      "summary": "Ngày 11/1/2007, Việt Nam trở thành thành viên thứ 150 của WTO.",
+      "content": "## Mốc hội nhập\n\nViệt Nam trở thành thành viên thứ 150 của WTO ngày 11/1/2007. Trang hồ sơ gia nhập của WTO ghi nhận đơn xin gia nhập được tiếp nhận ngày 4/1/1995.\n\n## Đọc mốc trong tiến trình Đổi mới\n\nĐây là một mốc để tìm hiểu hội nhập kinh tế quốc tế. Không thể dùng riêng ngày gia nhập để kết luận về mọi thành tựu kinh tế hay tác động đến từng ngành.",
+      "topic": "doi-ngoai-viet-nam",
+      "secondaryTopics": [
+        "cong-cuoc-doi-moi"
+      ],
+      "startYear": 2007,
+      "endYear": 2007,
+      "startDate": "2007-01-11",
+      "endDate": "2007-01-11",
+      "dateText": "11/1/2007",
+      "datePrecision": "exact",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "10-khai-quat-ve-cong-cuoc-doi-moi",
+          "sectionId": "muc-3"
+        },
+        {
+          "lessonSlug": "14-doi-ngoai-tu-nam-1975-den-nay",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "wto-accession",
+          "locator": "Opening accession paragraph; Viet Nam timeline, Application received row",
+          "scope": "Bounded date, membership/announcement and narrative; editorial reading notes are explicitly interpretive."
+        }
+      ],
+      "batch": "existing-later-a"
+    },
+    {
+      "slug": "viet-nam-gia-nhap-asean-1995",
+      "title": "Việt Nam gia nhập ASEAN",
+      "summary": "Ngày 28/7/1995, Việt Nam trở thành thành viên thứ bảy của ASEAN.",
+      "content": "## Gia nhập ASEAN\n\nBộ Ngoại giao ghi nhận ngày 28/7/1995, Việt Nam trở thành thành viên thứ bảy của ASEAN.\n\n## Cách đọc mốc\n\nMốc này giúp đối chiếu quá trình mở rộng quan hệ đối ngoại và hội nhập khu vực sau 1986. Thứ tự thành viên ở đây gắn với thời điểm năm 1995, không mô tả số thành viên hiện nay.",
+      "topic": "doi-ngoai-viet-nam",
+      "secondaryTopics": [
+        "cong-cuoc-doi-moi"
+      ],
+      "startYear": 1995,
+      "endYear": 1995,
+      "startDate": "1995-07-28",
+      "endDate": "1995-07-28",
+      "dateText": "28/7/1995",
+      "datePrecision": "exact",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "14-doi-ngoai-tu-nam-1975-den-nay",
+          "sectionId": "muc-2"
+        },
+        {
+          "lessonSlug": "4-su-ra-doi-va-phat-trien-cua-asean",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "mofa-asean",
+          "locator": "Section I, introduction/history paragraph beginning Khi mới thành lập ASEAN",
+          "scope": "Bounded date, membership/announcement and narrative; editorial reading notes are explicitly interpretive."
+        }
+      ],
+      "batch": "existing-later-a"
+    },
+    {
+      "slug": "binh-thuong-hoa-quan-he-viet-my-1995",
+      "title": "Bình thường hóa quan hệ Việt Nam – Hoa Kỳ",
+      "summary": "Ngày 11/7/1995 tại Washington, Tổng thống Bill Clinton tuyên bố bình thường hóa quan hệ ngoại giao với Việt Nam.",
+      "content": "## Tuyên bố tại Hoa Kỳ\n\nVăn bản Nhà Trắng ngày 11/7/1995 ghi lại tuyên bố của Tổng thống Bill Clinton về bình thường hóa quan hệ ngoại giao với Việt Nam. Đây là ngày theo địa điểm và thời gian của văn bản Hoa Kỳ.\n\n## Phạm vi ngày tháng\n\nBài viết dùng mốc tuyên bố này; không gộp hai tuyên bố của hai nước thành một ngày chung. Các mốc về dỡ bỏ cấm vận, mở đại sứ quán và quan hệ sau đó cần nguồn riêng.",
+      "topic": "doi-ngoai-viet-nam",
+      "secondaryTopics": [
+        "cong-cuoc-doi-moi"
+      ],
+      "startYear": 1995,
+      "endYear": 1995,
+      "startDate": "1995-07-11",
+      "endDate": "1995-07-11",
+      "dateText": "11/7/1995 (tuyên bố tại Hoa Kỳ)",
+      "datePrecision": "exact",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "14-doi-ngoai-tu-nam-1975-den-nay",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "us-normalization",
+          "locator": "Release date July 11, 1995; East Room; first substantive announcement paragraph",
+          "scope": "Bounded date, membership/announcement and narrative; editorial reading notes are explicitly interpretive."
+        }
+      ],
+      "batch": "existing-later-a"
+    },
+    {
+      "slug": "bao-ve-chu-quyen-gac-ma-1988",
+      "title": "Bảo vệ chủ quyền tại Gạc Ma năm 1988",
+      "topic": "bao-ve-to-quoc-sau-1975",
+      "secondaryTopics": [],
+      "startYear": 1988,
+      "endYear": 1988,
+      "startDate": "1988-03-14",
+      "endDate": "1988-03-14",
+      "dateText": "14/3/1988",
+      "datePrecision": "exact",
+      "summary": "Ngày 14/3/1988, 64 cán bộ, chiến sĩ Hải quân Việt Nam hy sinh trong sự kiện tại khu vực Gạc Ma.",
+      "content": "## Mốc tưởng niệm\n\nBáo Điện tử Chính phủ và VOV cùng ghi nhận ngày 14/3/1988 và 64 cán bộ, chiến sĩ Hải quân Việt Nam hy sinh trong sự kiện tại khu vực Gạc Ma.\n\n## Giới hạn nội dung\n\nBài viết ghi lại mốc và sự hy sinh được các nguồn Việt Nam nêu. Không tái dựng diễn biến tác chiến, tọa độ từng tàu hay lời nói cuối cùng của người tham chiến. Đây là nội dung cần được giáo viên đối chiếu trước khi công bố.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "9-bao-ve-to-quoc-tu-sau-thang-4-1975",
+          "sectionId": "muc-3"
+        }
+      ],
+      "sources": [
+        {
+          "id": "gacma-bcp",
+          "locator": "Opening description of 36th anniversary, 14/3/1988–14/3/2024; paragraph on 64 sailors",
+          "scope": "Date and commemoration count only; no combat reconstruction or territorial geometry."
+        },
+        {
+          "id": "gacma-vov",
+          "locator": "Paragraph beginning Lịch sử vẫn luôn nhắc nhớ; next paragraph Cuộc chiến ấy, 64 chiến sĩ",
+          "scope": "Independent broadcaster corroboration of date/count; retrieved HTTP 200 via direct fetch after web extractor failed."
+        }
+      ],
+      "batch": "existing-later-b"
+    },
+    {
+      "slug": "chien-dich-viet-bac-1947",
+      "title": "Mở đầu cuộc chiến đấu bảo vệ Việt Bắc năm 1947",
+      "topic": "khang-chien-chong-phap",
+      "secondaryTopics": [],
+      "startYear": 1947,
+      "endYear": 1947,
+      "startDate": "1947-10-07",
+      "endDate": "1947-10-07",
+      "dateText": "7/10/1947",
+      "datePrecision": "exact",
+      "summary": "Ngày 7/10/1947, quân Pháp mở cuộc tiến công lên Việt Bắc; lực lượng kháng chiến tổ chức chiến đấu bảo vệ căn cứ.",
+      "content": "## Mốc được chọn\n\nNgày 7/10/1947, quân Pháp mở cuộc tiến công lên Việt Bắc; lực lượng kháng chiến tổ chức chiến đấu bảo vệ căn cứ.\n\n## Phạm vi học tập\n\nMốc này đánh dấu ngày mở cuộc tiến công của Pháp và cuộc chiến đấu bảo vệ căn cứ. Không dùng ngày mở đầu thay cho toàn bộ thời gian của chiến dịch. Các số liệu binh lực và câu chữ có sai lệch trong bản số hóa không được đưa vào bài.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "7-khang-chien-chong-phap",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "viet-bac-1947",
+          "locator": "1947 entries: TỪ NGÀY 7-10 ĐẾN NGÀY 22-12; 9-10 and 15-10 entries",
+          "scope": "Opening milestone and bounded place description only; no unsupported campaign duration, statistics or coordinates."
+        }
+      ],
+      "batch": "candidate-1"
+    },
+    {
+      "slug": "chien-dich-bien-gioi-1950",
+      "title": "Mở chiến dịch Biên giới năm 1950",
+      "topic": "khang-chien-chong-phap",
+      "secondaryTopics": [],
+      "startYear": 1950,
+      "endYear": 1950,
+      "startDate": "1950-09-16",
+      "endDate": "1950-09-16",
+      "dateText": "16/9/1950",
+      "datePrecision": "exact",
+      "summary": "Ngày 16/9/1950, trận Đông Khê mở đầu Chiến dịch Biên giới.",
+      "content": "## Mốc được chọn\n\nNgày 16/9/1950, trận Đông Khê mở đầu Chiến dịch Biên giới.\n\n## Phạm vi học tập\n\nĐông Khê là trận mở đầu được nguồn xác định. Đây là một mốc trong chiến dịch; bài không biến ngày mở đầu thành thời gian của toàn chiến dịch, và không đưa giờ tấn công vào trường ngày chính xác.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "7-khang-chien-chong-phap",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "bien-gioi-1950",
+          "locator": "Paragraph beginning Theo chỉ thị của Người đúng 6h ngày 16/9/1950",
+          "scope": "Opening milestone and bounded place description only; no unsupported campaign duration, statistics or coordinates."
+        }
+      ],
+      "batch": "candidate-1"
+    },
+    {
+      "slug": "phong-trao-dong-khoi-1960",
+      "title": "Đồng khởi Bến Tre năm 1960",
+      "topic": "khang-chien-chong-my",
+      "secondaryTopics": [],
+      "startYear": 1960,
+      "endYear": 1960,
+      "startDate": "1960-01-17",
+      "endDate": "1960-01-17",
+      "dateText": "17/1/1960",
+      "datePrecision": "exact",
+      "summary": "Ngày 17/1/1960, Đồng khởi nổ ra tại Định Thủy, Phước Hiệp và Bình Khánh, huyện Mỏ Cày, Bến Tre.",
+      "content": "## Mốc được chọn\n\nNgày 17/1/1960, Đồng khởi nổ ra tại Định Thủy, Phước Hiệp và Bình Khánh, huyện Mỏ Cày, Bến Tre.\n\n## Phạm vi học tập\n\nBài chọn mốc Bến Tre trong phong trào Đồng khởi rộng hơn. Ngày 17/1 không phải ngày đồng loạt khởi đầu của mọi cuộc nổi dậy ở miền Nam.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-1"
+        }
+      ],
+      "sources": [
+        {
+          "id": "dong-khoi-1960",
+          "locator": "Paragraphs after Đúng theo kế hoạch, ngày 17-1-1960; preceding paragraph naming three communes",
+          "scope": "Opening milestone and bounded place description only; no unsupported campaign duration, statistics or coordinates."
+        }
+      ],
+      "batch": "candidate-1"
+    },
+    {
+      "slug": "hue-gianh-chinh-quyen-1945",
+      "title": "Huế giành chính quyền năm 1945",
+      "topic": "cach-mang-thang-tam-1945",
+      "secondaryTopics": [],
+      "startYear": 1945,
+      "endYear": 1945,
+      "startDate": "1945-08-23",
+      "endDate": "1945-08-23",
+      "dateText": "23/8/1945",
+      "datePrecision": "exact",
+      "summary": "Ngày 23/8/1945, nhân dân Huế nổi dậy giành chính quyền.",
+      "content": "## Mốc lịch sử\n\nNgày 23/8/1945, nhân dân Huế nổi dậy giành chính quyền.\n\n## Phạm vi\n\nĐây là mốc giành chính quyền ở một đô thị trong Tổng khởi nghĩa tháng Tám. Không dùng ngày này làm ngày khởi nghĩa chung của cả nước.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "6-cach-mang-thang-tam-nam-1945",
+          "sectionId": "muc-1"
+        }
+      ],
+      "sources": [
+        {
+          "id": "august-1945",
+          "locator": "Section Giành chính quyền tại Huế 23/8/1945",
+          "scope": "City milestone or bounded two-day battle; no crowd counts, anecdotes, exact sites or campaign-wide date substitution."
+        }
+      ],
+      "batch": "candidate-2"
+    },
+    {
+      "slug": "sai-gon-gianh-chinh-quyen-1945",
+      "title": "Sài Gòn giành chính quyền năm 1945",
+      "topic": "cach-mang-thang-tam-1945",
+      "secondaryTopics": [],
+      "startYear": 1945,
+      "endYear": 1945,
+      "startDate": "1945-08-25",
+      "endDate": "1945-08-25",
+      "dateText": "25/8/1945",
+      "datePrecision": "exact",
+      "summary": "Sáng 25/8/1945, lực lượng cách mạng giành chính quyền ở Sài Gòn.",
+      "content": "## Mốc lịch sử\n\nSáng 25/8/1945, lực lượng cách mạng giành chính quyền ở Sài Gòn.\n\n## Phạm vi\n\nĐây là mốc giành chính quyền ở một đô thị trong Tổng khởi nghĩa tháng Tám. Không dùng ngày này làm ngày khởi nghĩa chung của cả nước.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "6-cach-mang-thang-tam-nam-1945",
+          "sectionId": "muc-1"
+        }
+      ],
+      "sources": [
+        {
+          "id": "august-1945",
+          "locator": "Section Giành chính quyền tại Sài Gòn, 25/8/1945; paragraph Sáng 25/8",
+          "scope": "City milestone or bounded two-day battle; no crowd counts, anecdotes, exact sites or campaign-wide date substitution."
+        }
+      ],
+      "batch": "candidate-2"
+    },
+    {
+      "slug": "chien-thang-buon-ma-thuot-1975",
+      "title": "Trận Buôn Ma Thuột tháng 3/1975",
+      "topic": "khang-chien-chong-my",
+      "secondaryTopics": [],
+      "startYear": 1975,
+      "endYear": 1975,
+      "startDate": "1975-03-10",
+      "endDate": "1975-03-11",
+      "dateText": "10–11/3/1975",
+      "datePrecision": "period",
+      "summary": "Trong hai ngày 10–11/3/1975, lực lượng tiến công giải phóng thị xã Buôn Ma Thuột, mở ra bước ngoặt của Chiến dịch Tây Nguyên.",
+      "content": "## Mốc lịch sử\n\nTrong hai ngày 10–11/3/1975, lực lượng tiến công giải phóng thị xã Buôn Ma Thuột, mở ra bước ngoặt của Chiến dịch Tây Nguyên.\n\n## Phạm vi\n\nKhoảng hai ngày là thời gian trận then chốt tại thị xã được bài nguồn nêu; không phải toàn bộ thời gian Chiến dịch Tây Nguyên.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-3"
+        }
+      ],
+      "sources": [
+        {
+          "id": "buon-ma-thuot-1975",
+          "locator": "Paragraph beginning Từ ngày 10-11/3/1975",
+          "scope": "City milestone or bounded two-day battle; no crowd counts, anecdotes, exact sites or campaign-wide date substitution."
+        }
+      ],
+      "batch": "candidate-2"
+    },
+    {
+      "slug": "giai-phong-hue-1975",
+      "title": "Giải phóng Huế năm 1975",
+      "topic": "khang-chien-chong-my",
+      "secondaryTopics": [],
+      "startYear": 1975,
+      "endYear": 1975,
+      "startDate": "1975-03-26",
+      "endDate": "1975-03-26",
+      "dateText": "26/03/1975",
+      "datePrecision": "exact",
+      "summary": "Ngày 26/3/1975, thành phố Huế được giải phóng.",
+      "content": "## Mốc lịch sử\n\nNgày 26/3/1975, thành phố Huế được giải phóng.\n\n## Đọc trong Tổng tiến công mùa Xuân\n\nĐây là ngày kết thúc giải phóng một đô thị theo nguồn. Không dùng mốc này làm ngày mở đầu hay toàn bộ thời gian của chiến dịch trên khu vực rộng hơn.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-3"
+        }
+      ],
+      "sources": [
+        {
+          "id": "spring-museum",
+          "locator": "Part 3, Tài liệu, hiện vật tiêu biểu: caption list for Huế 26/3 and Đà Nẵng 29/3",
+          "scope": "Concluding city milestone only, not campaign start or duration."
+        },
+        {
+          "id": "hue-1975",
+          "locator": "Final paragraph of Đợt 2 (21–26/3/1975)",
+          "scope": "Independent city milestone corroboration."
+        }
+      ],
+      "batch": "candidate-3"
+    },
+    {
+      "slug": "giai-phong-da-nang-1975",
+      "title": "Giải phóng Đà Nẵng năm 1975",
+      "topic": "khang-chien-chong-my",
+      "secondaryTopics": [],
+      "startYear": 1975,
+      "endYear": 1975,
+      "startDate": "1975-03-29",
+      "endDate": "1975-03-29",
+      "dateText": "29/03/1975",
+      "datePrecision": "exact",
+      "summary": "Ngày 29/3/1975, lực lượng giải phóng hoàn toàn làm chủ thành phố Đà Nẵng.",
+      "content": "## Mốc lịch sử\n\nNgày 29/3/1975, lực lượng giải phóng hoàn toàn làm chủ thành phố Đà Nẵng.\n\n## Đọc trong Tổng tiến công mùa Xuân\n\nĐây là ngày kết thúc giải phóng một đô thị theo nguồn. Không dùng mốc này làm ngày mở đầu hay toàn bộ thời gian của chiến dịch trên khu vực rộng hơn.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-3"
+        }
+      ],
+      "sources": [
+        {
+          "id": "spring-museum",
+          "locator": "Part 3, Tài liệu, hiện vật tiêu biểu: caption list for Huế 26/3 and Đà Nẵng 29/3",
+          "scope": "Concluding city milestone only, not campaign start or duration."
+        }
+      ],
+      "batch": "candidate-3"
+    },
+    {
+      "slug": "phong-trao-dong-du",
+      "title": "Phong trào Đông Du",
+      "topic": "doi-ngoai-viet-nam",
+      "startYear": 1905,
+      "endYear": 1909,
+      "startDate": null,
+      "endDate": null,
+      "dateText": "1905–1909 (hoạt động chủ yếu 1905–1908)",
+      "datePrecision": "period",
+      "summary": "Từ năm 1905, Phan Bội Châu vận động thanh niên Việt Nam sang Nhật Bản học tập. Phong trào bị giải tán năm 1908; Phan Bội Châu và Cường Để bị trục xuất khỏi Nhật Bản vào tháng 2/1909.",
+      "secondaryTopics": [],
+      "content": "## Mốc lịch sử\n\nTừ năm 1905, Phan Bội Châu vận động thanh niên Việt Nam sang Nhật Bản học tập. Phong trào bị giải tán năm 1908; Phan Bội Châu và Cường Để bị trục xuất khỏi Nhật Bản vào tháng 2/1909.\n\n## Phạm vi và độ chính xác\n\nNguồn đặt tiêu đề 1905–1908 và ghi thêm việc trục xuất năm 1909 trong phần kết. Khoảng năm ở đây bao gồm cả kết cục đó; không gán một ngày chính xác cho cả phong trào.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "12-doi-ngoai-dau-the-ki-xx-den-1945",
+          "sectionId": "muc-1"
+        }
+      ],
+      "sources": [
+        {
+          "id": "dong-du",
+          "locator": "Opening Đầu năm 1905; paragraph Những hoạt động...1905 đến 1908; paragraph Tháng 9 năm 1908...Tháng 2 năm 1909",
+          "scope": "Bounded movement/month/commemoration claim; conference-wide dates, exact buildings and statistics excluded."
+        }
+      ],
+      "batch": "candidate-4"
+    },
+    {
+      "slug": "nguyen-ai-quoc-dai-hoi-tours-1920",
+      "title": "Nguyễn Ái Quốc tại Đại hội Tours",
+      "topic": "ho-chi-minh",
+      "startYear": 1920,
+      "endYear": 1920,
+      "startDate": null,
+      "endDate": null,
+      "dateText": "Tháng 12/1920",
+      "datePrecision": "approximate",
+      "summary": "Tháng 12/1920, Nguyễn Ái Quốc tham dự Đại hội Đảng Xã hội Pháp tại Tours và tham gia sáng lập Đảng Cộng sản Pháp.",
+      "secondaryTopics": [],
+      "content": "## Mốc lịch sử\n\nTháng 12/1920, Nguyễn Ái Quốc tham dự Đại hội Đảng Xã hội Pháp tại Tours và tham gia sáng lập Đảng Cộng sản Pháp.\n\n## Phạm vi và độ chính xác\n\nNgày trong bài được giữ ở mức tháng theo phạm vi chọn lọc. Trường dữ liệu hiện không có enum tháng; dùng approximate và không điền ngày đầu tháng giả định.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "16-ho-chi-minh-anh-hung-giai-phong-dan-toc",
+          "sectionId": "muc-1"
+        }
+      ],
+      "sources": [
+        {
+          "id": "hcm-journey",
+          "locator": "Paragraph Đại hội lần thứ XVIII...tại thành phố Tours tháng 12-1920; following paragraph bỏ phiếu tán thành Quốc tế III",
+          "scope": "Bounded movement/month/commemoration claim; conference-wide dates, exact buildings and statistics excluded."
+        }
+      ],
+      "batch": "candidate-4"
+    },
+    {
+      "slug": "thanh-lap-dang-cong-san-viet-nam-1930",
+      "title": "Thành lập Đảng Cộng sản Việt Nam",
+      "topic": "ho-chi-minh",
+      "startYear": 1930,
+      "endYear": 1930,
+      "startDate": "1930-02-03",
+      "endDate": "1930-02-03",
+      "dateText": "3/2/1930 (ngày thành lập được kỷ niệm)",
+      "datePrecision": "exact",
+      "summary": "Ngày 3/2/1930 được xác định là Ngày thành lập Đảng Cộng sản Việt Nam. Nguyễn Ái Quốc chủ trì việc hợp nhất các tổ chức cộng sản thành một đảng thống nhất.",
+      "secondaryTopics": [],
+      "content": "## Mốc lịch sử\n\nNgày 3/2/1930 được xác định là Ngày thành lập Đảng Cộng sản Việt Nam. Nguyễn Ái Quốc chủ trì việc hợp nhất các tổ chức cộng sản thành một đảng thống nhất.\n\n## Phạm vi và độ chính xác\n\nMốc 3/2 là ngày thành lập được kỷ niệm, không phải tuyên bố hội nghị chỉ diễn ra trong một ngày. Bài không chốt thời gian toàn hội nghị từ các niên biểu khác nhau.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "15-khai-quat-cuoc-doi-va-su-nghiep-ho-chi-minh",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "cpv-founding",
+          "locator": "Paragraph Hội nghị nhất trí...Ngày 3 tháng 2 năm 1930 trở thành Ngày thành lập Đảng Cộng sản Việt Nam",
+          "scope": "Bounded movement/month/commemoration claim; conference-wide dates, exact buildings and statistics excluded."
+        }
+      ],
+      "batch": "candidate-4"
+    },
+    {
+      "slug": "thanh-lap-viet-minh-1941",
+      "title": "Thành lập Mặt trận Việt Minh",
+      "topic": "cach-mang-thang-tam-1945",
+      "secondaryTopics": [],
+      "startYear": 1941,
+      "endYear": 1941,
+      "startDate": "1941-05-19",
+      "endDate": "1941-05-19",
+      "dateText": "19/5/1941",
+      "datePrecision": "exact",
+      "summary": "Ngày 19/5/1941, Mặt trận Việt Nam độc lập đồng minh, gọi tắt là Việt Minh, ra đời để tập hợp các lực lượng tham gia đấu tranh giải phóng dân tộc.",
+      "content": "## Mốc lịch sử\n\nNgày 19/5/1941, Mặt trận Việt Nam độc lập đồng minh, gọi tắt là Việt Minh, ra đời để tập hợp các lực lượng tham gia đấu tranh giải phóng dân tộc.\n\n## Đọc nguồn\n\nMốc thành lập tổ chức này được giữ tách biệt với mốc Nguyễn Ái Quốc trở về nước. Hai sự kiện có quan hệ trong tiến trình chuẩn bị cách mạng nhưng có danh tính và ngày riêng.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "16-ho-chi-minh-anh-hung-giai-phong-dan-toc",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "thanh-lap-viet-minh-1941",
+          "locator": "Paragraphs Hội nghị đã quyết định thành lập Việt Nam độc lập đồng minh and Ngày 19-5-1941",
+          "scope": "Date, event identity and bounded summary only; statistics, exact military positions and anecdotes excluded."
+        }
+      ],
+      "batch": "candidate-5"
+    },
+    {
+      "slug": "chien-thang-ap-bac-1963",
+      "title": "Chiến thắng Ấp Bắc",
+      "topic": "khang-chien-chong-my",
+      "secondaryTopics": [],
+      "startYear": 1963,
+      "endYear": 1963,
+      "startDate": "1963-01-02",
+      "endDate": "1963-01-02",
+      "dateText": "2/1/1963",
+      "datePrecision": "exact",
+      "summary": "Ngày 2/1/1963, trận Ấp Bắc diễn ra và lực lượng cách mạng giành thắng lợi.",
+      "content": "## Mốc lịch sử\n\nNgày 2/1/1963, trận Ấp Bắc diễn ra và lực lượng cách mạng giành thắng lợi.\n\n## Đọc nguồn\n\nBài chọn ngày của trận đánh được nguồn nêu. Không dùng một trận đánh để đại diện cho mọi diễn biến hay ngày kết thúc của một chiến lược chiến tranh; không đưa số liệu thương vong chưa được đối chiếu vào bài.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-1"
+        }
+      ],
+      "sources": [
+        {
+          "id": "chien-thang-ap-bac-1963",
+          "locator": "Title, opening place/date paragraph and paragraph Sáng ngày 2-1-1963",
+          "scope": "Date, event identity and bounded summary only; statistics, exact military positions and anecdotes excluded."
+        }
+      ],
+      "batch": "candidate-5"
+    },
+    {
+      "slug": "chien-thang-van-tuong-1965",
+      "title": "Chiến thắng Vạn Tường",
+      "topic": "khang-chien-chong-my",
+      "secondaryTopics": [],
+      "startYear": 1965,
+      "endYear": 1965,
+      "startDate": "1965-08-18",
+      "endDate": "1965-08-18",
+      "dateText": "18/8/1965",
+      "datePrecision": "exact",
+      "summary": "Ngày 18/8/1965, trận Vạn Tường diễn ra giữa lực lượng giải phóng miền Nam và quân đội Mỹ.",
+      "content": "## Mốc lịch sử\n\nNgày 18/8/1965, trận Vạn Tường diễn ra giữa lực lượng giải phóng miền Nam và quân đội Mỹ.\n\n## Đọc nguồn\n\nBài chọn ngày của trận đánh được nguồn nêu. Không dùng một trận đánh để đại diện cho mọi diễn biến hay ngày kết thúc của một chiến lược chiến tranh; không đưa số liệu thương vong chưa được đối chiếu vào bài.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "chien-thang-van-tuong-1965",
+          "locator": "Title and opening paragraph naming opposing forces and date",
+          "scope": "Date, event identity and bounded summary only; statistics, exact military positions and anecdotes excluded."
+        }
+      ],
+      "batch": "candidate-5"
+    },
+    {
+      "slug": "tien-cong-chien-luoc-1972",
+      "title": "Mở cuộc tiến công chiến lược năm 1972",
+      "topic": "khang-chien-chong-my",
+      "startYear": 1972,
+      "endYear": 1972,
+      "startDate": "1972-03-30",
+      "endDate": "1972-03-30",
+      "dateText": "30/3/1972",
+      "datePrecision": "exact",
+      "summary": "Ngày 30/3/1972, cuộc tiến công chiến lược bắt đầu, với Quảng Trị là hướng tiến công chủ yếu.",
+      "sources": [
+        {
+          "id": "strategic-1972",
+          "locator": "Paragraph Trưa 30-3-1972...Quảng Trị...phát triển rộng...kéo dài trong năm 1972",
+          "scope": "Opening date and main direction only; campaign-wide end dates excluded."
+        }
+      ],
+      "secondaryTopics": [],
+      "content": "## Mốc lịch sử\n\nNgày 30/3/1972, cuộc tiến công chiến lược bắt đầu, với Quảng Trị là hướng tiến công chủ yếu.\n\n## Phạm vi\n\nBài chọn mốc mở đầu trong tháng 3. Đây là sự kiện khác với cuộc chiến đấu chống tập kích đường không tại Hà Nội và Hải Phòng tháng 12/1972; không gộp hai sự kiện thành một.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-2"
+        }
+      ],
+      "batch": "candidate-6"
+    },
+    {
+      "slug": "nghi-quyet-khoan-10-1988",
+      "title": "Nghị quyết 10 về đổi mới quản lý kinh tế nông nghiệp",
+      "topic": "cong-cuoc-doi-moi",
+      "startYear": 1988,
+      "endYear": 1988,
+      "startDate": "1988-04-05",
+      "endDate": "1988-04-05",
+      "dateText": "5/4/1988",
+      "datePrecision": "exact",
+      "summary": "Ngày 5/4/1988, Bộ Chính trị ban hành Nghị quyết 10 về đổi mới quản lý kinh tế nông nghiệp, xác định vai trò tự chủ của kinh tế hộ.",
+      "sources": [
+        {
+          "id": "khoan-10",
+          "locator": "Paragraph Trên cơ sở thắng lợi của cơ chế Khoán 100...ngày 5/4/1988...Nghị quyết 10",
+          "scope": "Issuing body/date, policy subject and household autonomy only; no aggregate output attribution."
+        }
+      ],
+      "secondaryTopics": [],
+      "content": "## Mốc lịch sử\n\nNgày 5/4/1988, Bộ Chính trị ban hành Nghị quyết 10 về đổi mới quản lý kinh tế nông nghiệp, xác định vai trò tự chủ của kinh tế hộ.\n\n## Phạm vi\n\nĐây là ngày ban hành một chủ trương. Phạm vi áp dụng và tác động kinh tế không thể được biểu diễn bằng một điểm ban hành trên bản đồ; bài giữ sự kiện không có tọa độ.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "10-khai-quat-ve-cong-cuoc-doi-moi",
+          "sectionId": "muc-1"
+        }
+      ],
+      "batch": "candidate-6"
+    },
+    {
+      "slug": "dai-hoi-dang-lan-thu-viii-1996",
+      "title": "Đại hội đại biểu toàn quốc lần thứ VIII của Đảng",
+      "topic": "cong-cuoc-doi-moi",
+      "startYear": 1996,
+      "endYear": 1996,
+      "startDate": "1996-06-28",
+      "endDate": "1996-07-01",
+      "dateText": "28/6–1/7/1996",
+      "datePrecision": "period",
+      "summary": "Đại hội VIII diễn ra từ ngày 28/6 đến ngày 1/7/1996 tại Hà Nội, đánh giá mười năm Đổi mới và đề ra nhiệm vụ đẩy mạnh công nghiệp hóa, hiện đại hóa.",
+      "sources": [
+        {
+          "id": "congress-viii",
+          "locator": "Opening context and paragraph Trong hoàn cảnh đó...28-6 đến 1-7-1996",
+          "scope": "Congress interval/place and context."
+        },
+        {
+          "id": "viii-political-report",
+          "locator": "Assessment after 10 years, paragraph Nước ta đã ra khỏi khủng hoảng...nhưng một số mặt còn chưa vững chắc; lessons 1, 2 and 5",
+          "scope": "Attributed 1996 assessment and bounded lesson examples; not a current all-period statistical assessment."
+        }
+      ],
+      "secondaryTopics": [],
+      "content": "## Mốc lịch sử\n\nĐại hội VIII diễn ra từ ngày 28/6 đến ngày 1/7/1996 tại Hà Nội, đánh giá mười năm Đổi mới và đề ra nhiệm vụ đẩy mạnh công nghiệp hóa, hiện đại hóa.\n\n## Đọc đánh giá mười năm Đổi mới tại thời điểm 1996\n\nBáo cáo Chính trị tại Đại hội VIII đánh giá Việt Nam đã ra khỏi khủng hoảng kinh tế – xã hội, đồng thời lưu ý một số mặt chưa vững chắc. Đây là đánh giá của văn kiện ở thời điểm 1996, không phải bản tổng kết toàn bộ thời kỳ Đổi mới đến hiện nay.\n\n## Một số bài học được văn kiện nêu\n\nVăn kiện nhấn mạnh giữ mục tiêu độc lập dân tộc và chủ nghĩa xã hội; kết hợp đổi mới kinh tế với đổi mới chính trị, lấy đổi mới kinh tế làm trọng tâm; mở rộng hợp tác quốc tế đi đôi với phát huy nguồn lực bên trong.\n\n## Gợi ý đối chiếu\n\nKhi học, phân biệt kết quả được đánh giá trong một thời kỳ, chủ trương tiếp theo và các mốc hội nhập sau đó. Gia nhập WTO hoặc CPTPP là những ví dụ để đối chiếu tiến trình, không tự chứng minh mọi kết quả kinh tế – xã hội.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "10-khai-quat-ve-cong-cuoc-doi-moi",
+          "sectionId": "muc-2"
+        },
+        {
+          "lessonSlug": "11-thanh-tuu-va-bai-hoc-cua-cong-cuoc-doi-moi",
+          "sectionId": "muc-1"
+        },
+        {
+          "lessonSlug": "11-thanh-tuu-va-bai-hoc-cua-cong-cuoc-doi-moi",
+          "sectionId": "muc-2"
+        }
+      ],
+      "batch": "candidate-6"
+    },
+    {
+      "slug": "cptpp-co-hieu-luc-voi-viet-nam-2019",
+      "title": "CPTPP có hiệu lực đối với Việt Nam",
+      "topic": "doi-ngoai-viet-nam",
+      "secondaryTopics": [
+        "cong-cuoc-doi-moi"
+      ],
+      "startYear": 2019,
+      "endYear": 2019,
+      "startDate": "2019-01-14",
+      "endDate": "2019-01-14",
+      "dateText": "14/1/2019",
+      "datePrecision": "exact",
+      "summary": "Hiệp định Đối tác Toàn diện và Tiến bộ xuyên Thái Bình Dương (CPTPP) có hiệu lực đối với Việt Nam từ ngày 14/1/2019.",
+      "content": "## Mốc hội nhập sau năm 2007\n\nCPTPP có hiệu lực đối với Việt Nam từ ngày 14/1/2019. Thông tin Bộ Công Thương công bố ngày 11/1/2019 phân biệt mốc có hiệu lực với ngày Quốc hội phê chuẩn hiệp định là 12/11/2018.\n\n## Cách đọc mốc\n\nĐây là mốc của quá trình hội nhập quốc tế, được gắn ở mức chủ đề với bài Đổi mới và đối ngoại từ sau 1986. Nó không phải ngày một trận đánh, một chuyến đi hay tác động kinh tế xảy ra tại duy nhất một địa điểm; vì vậy không gán tọa độ. Sự có hiệu lực của hiệp định không tự chứng minh mọi kết quả thương mại sau đó.",
+      "evidence": "verified",
+      "workflowStatus": "draft",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "14-doi-ngoai-tu-nam-1975-den-nay",
+          "sectionId": "muc-2"
+        },
+        {
+          "lessonSlug": "10-khai-quat-ve-cong-cuoc-doi-moi",
+          "sectionId": "muc-3"
+        }
+      ],
+      "sources": [
+        {
+          "id": "cptpp-moit",
+          "locator": "Title; paragraph Đối với Việt Nam, Quốc hội đã thông qua...12 tháng 11 năm 2018...14 tháng 01 năm 2019",
+          "scope": "Entry-into-force and distinct ratification date only; not trade impact statistics or exact textbook placement."
+        }
+      ],
+      "batch": "candidate-7"
+    }
+  ],
+  "batches": [
+    {
+      "id": "existing-later-a",
+      "slugs": [
+        "viet-nam-gia-nhap-wto-2007",
+        "viet-nam-gia-nhap-asean-1995",
+        "binh-thuong-hoa-quan-he-viet-my-1995"
+      ],
+      "result": "Bounded original passages reviewed; old anecdotes and economic causal claims excluded."
+    },
+    {
+      "id": "existing-later-b",
+      "slugs": [
+        "bao-ve-chu-quyen-gac-ma-1988",
+        "unesco-ton-vinh-ho-chi-minh-1987"
+      ],
+      "result": "Gạc Ma bounded date/count corroborated; UNESCO stays needs_evidence; no approval invented."
+    },
+    {
+      "id": "candidate-1",
+      "slugs": [
+        "chien-dich-viet-bac-1947",
+        "chien-dich-bien-gioi-1950",
+        "phong-trao-dong-khoi-1960"
+      ],
+      "result": "Three original passages read; opening milestone/campaign distinction preserved; no coordinate invented."
+    },
+    {
+      "id": "candidate-2",
+      "slugs": [
+        "hue-gianh-chinh-quyen-1945",
+        "sai-gon-gianh-chinh-quyen-1945",
+        "chien-thang-buon-ma-thuot-1975"
+      ],
+      "result": "Original museum city sections and Government two-day battle paragraph read."
+    },
+    {
+      "id": "candidate-3",
+      "slugs": [
+        "giai-phong-hue-1975",
+        "giai-phong-da-nang-1975",
+        "thong-nhat-nha-nuoc-1976"
+      ],
+      "result": "Two city milestones prepared; sourced 1976 decision held because lesson fit remains unconfirmed."
+    },
+    {
+      "id": "candidate-4",
+      "slugs": [
+        "phong-trao-dong-du",
+        "nguyen-ai-quoc-dai-hoi-tours-1920",
+        "thanh-lap-dang-cong-san-viet-nam-1930"
+      ],
+      "result": "Source distinction between 1905–1908 activities and 1909 expulsion retained; Tours month only; 3/2 commemoration distinguished from conference duration."
+    },
+    {
+      "id": "candidate-5",
+      "slugs": [
+        "thanh-lap-viet-minh-1941",
+        "chien-thang-ap-bac-1963",
+        "chien-thang-van-tuong-1965"
+      ],
+      "result": "Three original museum passages read; distinct organization/battle identities retained."
+    },
+    {
+      "id": "candidate-6",
+      "slugs": [
+        "tien-cong-chien-luoc-1972",
+        "nghi-quyet-khoan-10-1988",
+        "dai-hoi-dang-lan-thu-viii-1996"
+      ],
+      "result": "Opening offensive, national policy and congress interval verified; dated explanatory assessment linked to actual lesson 11 sections without a fabricated event."
+    },
+    {
+      "id": "candidate-7",
+      "slugs": [
+        "cptpp-co-hieu-luc-voi-viet-nam-2019"
+      ],
+      "result": "Original Ministry passage read; post-2007 integration milestone prepared without guessed coordinates or textbook-page certification."
+    }
+  ],
+  "explanations": [
+    {
+      "id": "doi-moi-assessment-1996",
+      "text": "## Đọc đánh giá mười năm Đổi mới tại thời điểm 1996\n\nBáo cáo Chính trị tại Đại hội VIII đánh giá Việt Nam đã ra khỏi khủng hoảng kinh tế – xã hội, đồng thời lưu ý một số mặt chưa vững chắc. Đây là đánh giá của văn kiện ở thời điểm 1996, không phải bản tổng kết toàn bộ thời kỳ Đổi mới đến hiện nay.\n\n## Một số bài học được văn kiện nêu\n\nVăn kiện nhấn mạnh giữ mục tiêu độc lập dân tộc và chủ nghĩa xã hội; kết hợp đổi mới kinh tế với đổi mới chính trị, lấy đổi mới kinh tế làm trọng tâm; mở rộng hợp tác quốc tế đi đôi với phát huy nguồn lực bên trong.\n\n## Gợi ý đối chiếu\n\nKhi học, phân biệt kết quả được đánh giá trong một thời kỳ, chủ trương tiếp theo và các mốc hội nhập sau đó. Gia nhập WTO hoặc CPTPP là những ví dụ để đối chiếu tiến trình, không tự chứng minh mọi kết quả kinh tế – xã hội.",
+      "linkedEvent": "dai-hoi-dang-lan-thu-viii-1996",
+      "lessonRefs": [
+        {
+          "lessonSlug": "11-thanh-tuu-va-bai-hoc-cua-cong-cuoc-doi-moi",
+          "sectionId": "muc-1"
+        },
+        {
+          "lessonSlug": "11-thanh-tuu-va-bai-hoc-cua-cong-cuoc-doi-moi",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sourceId": "viii-political-report",
+      "coverage": "Bounded 1996 assessment and selected lessons; later social/economic coverage still incomplete."
+    }
+  ],
+  "publicBoundaryObservation": {
+    "observedAt": "2026-10-25T12:29:03.610Z",
+    "method": "Configured public homepage via a fresh anonymous browser context; GET/read-only. Local fixture API is stopped. No direct DB/admin query.",
+    "count": 10,
+    "range": {
+      "from": "1911",
+      "to": "1986"
+    },
+    "slugs": [
+      "nguyen-tat-thanh-ra-di-tim-duong-cuu-nuoc",
+      "nguyen-ai-quoc-ve-nuoc-lanh-dao-cach-mang",
+      "tong-khoi-nghia-gianh-chinh-quyen-o-ha-noi",
+      "tuyen-ngon-doc-lap",
+      "chien-dich-dien-bien-phu",
+      "hiep-dinh-geneve-ve-dong-duong",
+      "tong-tien-cong-va-noi-day-tet-mau-than-1968",
+      "hiep-dinh-paris-ve-viet-nam",
+      "chien-dich-ho-chi-minh",
+      "dai-hoi-dang-lan-thu-vi"
+    ],
+    "evidence": "output/playwright/journey-timeline/configured-public-catalog.json",
+    "limitations": [
+      "Homepage exposure only; not a direct database inventory or RLS audit.",
+      "No source verification, human approval or new publication inferred."
+    ]
+  }
+}

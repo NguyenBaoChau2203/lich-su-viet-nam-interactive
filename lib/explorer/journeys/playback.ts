@@ -14,6 +14,8 @@ export type ExplorerRuntime = {
   requestNonce: number;
   restoreRequest: number;
   focusRequest: { slug: string; nonce: number } | null;
+  popupOpen: boolean;
+  readerDismissed: boolean;
   playing: boolean; readerActive: boolean; hidden: boolean; reducedMotion: boolean; departing: boolean;
 };
 
@@ -21,7 +23,8 @@ export type ExplorerAction =
   | { type: "choose-journey"; id: string }
   | { type: "seek"; stopId: string }
   | { type: "arrive" | "dwell"; arrival: JourneyArrival }
-  | { type: "play" | "pause" | "manual" | "depart" | "exit" | "close-event" }
+  | { type: "play" | "pause" | "manual" | "depart" | "exit" | "close-event" | "close-reader" }
+  | { type: "open-reader"; unavailable?: boolean }
   | { type: "reading"; active: boolean }
   | { type: "visibility"; hidden: boolean }
   | { type: "motion"; reduced: boolean }
@@ -40,7 +43,7 @@ export function createExplorerRuntime(state: MapExplorerState, registry: Journey
   return { state, exploration: null, cameraRequest: requestFor(state, 0, registry, true),
     settledArrival: null, requestNonce: 0, restoreRequest: 0,
     focusRequest: !state.journey && state.selectedEvent && !state.view ? { slug: state.selectedEvent, nonce: 0 } : null,
-    playing: false, readerActive: false, hidden: false, reducedMotion: false, departing: false };
+    popupOpen: false, readerDismissed: false, playing: false, readerActive: false, hidden: false, reducedMotion: false, departing: false };
 }
 
 function currentArrival(runtime: ExplorerRuntime, arrival: JourneyArrival): boolean {
@@ -54,7 +57,7 @@ export function reduceExplorerRuntime(runtime: ExplorerRuntime, action: Explorer
   const nonce = runtime.requestNonce + 1;
   const journey = runtime.state.journey && registry.getJourneyById(runtime.state.journey.id);
   const requestStop = (state: MapExplorerState, playing = false): ExplorerRuntime => ({ ...runtime, state,
-    cameraRequest: requestFor(state, nonce, registry), settledArrival: null, requestNonce: nonce, playing });
+    cameraRequest: requestFor(state, nonce, registry), settledArrival: null, requestNonce: nonce, playing, popupOpen: false, readerDismissed: false, readerActive: false });
   switch (action.type) {
     case "choose-journey": {
       const selected = registry.getJourneyById(action.id);
@@ -70,11 +73,14 @@ export function reduceExplorerRuntime(runtime: ExplorerRuntime, action: Explorer
       if (!journey || runtime.readerActive || runtime.hidden || runtime.reducedMotion || runtime.state.journey?.stop === journey.stops.at(-1)?.id) return runtime;
       return requestStop(runtime.state, true);
     case "pause": return { ...runtime, playing: false };
+    case "close-reader": return { ...runtime, popupOpen: false, readerDismissed: true, playing: false, readerActive: false };
+    case "open-reader": return journey && (action.unavailable || !runtime.cameraRequest || sameJourneyArrival(runtime.cameraRequest, runtime.settledArrival))
+      ? { ...runtime, popupOpen: true, readerDismissed: false, playing: false } : runtime;
     case "manual": case "depart":
       return { ...runtime, playing: false, cameraRequest: null, settledArrival: null, requestNonce: nonce, departing: action.type === "depart" };
     case "arrive":
       if (!currentArrival(runtime, action.arrival) || sameJourneyArrival(runtime.settledArrival, action.arrival)) return runtime;
-      return { ...runtime, settledArrival: action.arrival,
+      return { ...runtime, settledArrival: action.arrival, popupOpen: true, readerDismissed: false,
         playing: runtime.playing && action.arrival.stopId !== journey?.stops.at(-1)?.id };
     case "dwell": {
       if (!runtime.playing || runtime.readerActive || runtime.reducedMotion || !currentArrival(runtime, action.arrival)
@@ -87,14 +93,14 @@ export function reduceExplorerRuntime(runtime: ExplorerRuntime, action: Explorer
     case "visibility": return { ...runtime, hidden: action.hidden, playing: runtime.playing && !action.hidden };
     case "motion": return { ...runtime, reducedMotion: action.reduced, playing: runtime.playing && !action.reduced };
     case "restore":
-      return { ...runtime, state: action.state, playing: false, readerActive: false, departing: false,
+      return { ...runtime, state: action.state, playing: false, readerActive: false, departing: false, popupOpen: false, readerDismissed: false,
         exploration: action.state.journey ? (runtime.state.journey ? runtime.exploration : runtime.state) : null,
         cameraRequest: requestFor(action.state, nonce, registry, true), settledArrival: null,
         requestNonce: nonce, restoreRequest: runtime.restoreRequest + 1,
         focusRequest: !action.state.journey && !action.state.view && action.state.selectedEvent ? { slug: action.state.selectedEvent, nonce } : runtime.focusRequest };
     case "exit":
       return { ...runtime, state: runtime.exploration ?? { ...runtime.state, journey: undefined, journeyNotice: undefined, view: null },
-        exploration: null, playing: false, readerActive: false, cameraRequest: null, settledArrival: null,
+        exploration: null, playing: false, readerActive: false, cameraRequest: null, settledArrival: null, popupOpen: false,
         requestNonce: nonce, restoreRequest: runtime.restoreRequest + 1 };
     case "select-event":
       return { ...runtime, state: { ...runtime.state, journey: undefined, journeyNotice: undefined, selectedEvent: action.slug },

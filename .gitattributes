@@ -18,5 +18,8 @@
 /scripts/province-boundaries/*.py text eol=lf
 /public/maps/history-vietnam-province-boundaries.geojson text eol=lf
 
+# Keep the checksum-recorded bounded content import identical on Windows/Linux.
+/supabase/seed-vietnam-timeline-2026-10-25.sql text eol=lf
+
 # Git for Windows must execute these through Git Bash without CRLF corruption.
 /.githooks/* text eol=lf

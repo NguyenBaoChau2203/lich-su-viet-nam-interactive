@@ -14,8 +14,9 @@ type Props = {
   events: readonly ExplorerEvent[]; selectedEvent: string | null;
   labels: readonly GlobePlaceLabel[]; stop: JourneyStop | null;
   onSelect(slug: string): void; onFocusCluster(request: ClusterFocusRequest): Promise<"arrived" | "cancelled">;
+  onReadStop?(): void;
 };
-const OCCUPIED = ".home-atlas-header, .home-map-intro, .home-map-guidance, .home-map-event-card, .home-map-time, .journey-timeline, .home-map-tools, .globe-attribution, .home-map-notice, .home-map-tile-error, .globe-skip";
+const OCCUPIED = ".home-atlas-header, .home-map-intro, .home-map-guidance, .home-map-event-card, .journey-popup, .journey-controls, .journey-reader-fallback, .home-map-time, .journey-timeline, .home-map-tools, .globe-attribution, .home-map-notice, .home-map-tile-error, .globe-skip";
 const targetBox = ({ x, y }: { x: number; y: number }): OverlayRect => ({ left: x - 20, right: x + 20, top: y - 20, bottom: y + 20 });
 type MarkerLayout = OverlayLayout & {
   occupied: OverlayRect[]; panel: OverlayRect | null; expanded: ExpandedMapAnchor[];
@@ -23,7 +24,7 @@ type MarkerLayout = OverlayLayout & {
 };
 
 /** Semantic HTML overlays consume only CSS-pixel projection and geographic camera commands. */
-export function GlobeMarkers({ viewport, stageRef, events, selectedEvent, labels, stop, onSelect, onFocusCluster }: Props) {
+export function GlobeMarkers({ viewport, stageRef, events, selectedEvent, labels, stop, onSelect, onFocusCluster, onReadStop }: Props) {
   const anchors = useMemo(() => getEventMapAnchors(events), [events]);
   const measureRef = useRef<HTMLSpanElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -41,12 +42,16 @@ export function GlobeMarkers({ viewport, stageRef, events, selectedEvent, labels
     const shell = stage?.closest(".home-history-map");
     if (!stage || !shell || !measureRef.current) return;
     const origin = stage.getBoundingClientRect();
-    const occupied = Array.from(shell.querySelectorAll<HTMLElement>(OCCUPIED)).flatMap((element) => {
+    const measured = Array.from(shell.querySelectorAll<HTMLElement>(OCCUPIED)).flatMap((element) => {
       const rect = element.getBoundingClientRect();
-      return rect.width && rect.height && element.checkVisibility() ? [{ left: rect.left - origin.left, right: rect.right - origin.left,
-        top: rect.top - origin.top, bottom: rect.bottom - origin.top }] : [];
+      return rect.width && rect.height && element.checkVisibility() ? [{ element, box: { left: rect.left - origin.left, right: rect.right - origin.left,
+        top: rect.top - origin.top, bottom: rect.bottom - origin.top } }] : [];
     });
-    const options = { viewport, anchors, labels: viewport.zoom >= 3 ? labels : [], occupied, selectedEvent, stop,
+    // A popup is twelve pixels from the geographic point. Its rectangle blocks
+    // labels, but must not hide that point through the marker's larger hit box.
+    const occupied = measured.filter(item => !item.element.matches(".journey-popup")).map(item => item.box);
+    const popupRects = measured.filter(item => item.element.matches(".journey-popup")).map(item => item.box);
+    const options = { viewport, anchors, labels: viewport.zoom >= 3 ? labels : [], occupied, labelObstacles: popupRects, selectedEvent, stop,
       measure(text: string) {
         const element = measureRef.current!;
         element.textContent = text;
@@ -59,7 +64,7 @@ export function GlobeMarkers({ viewport, stageRef, events, selectedEvent, labels
     const panel = group ? placeClusterPanel(group, viewport, [...occupied, ...base.groups.map(targetBox)]) : null;
     const expansion = expanded && group && panel ? buildClusterExpansion(group.anchors, viewport,
       [...occupied, panel, ...base.groups.map(targetBox)]).markers : [];
-    const next = panel ? buildOverlayLayout({ ...options, labelObstacles: [panel, ...expansion.map(targetBox)] }) : base;
+    const next = panel ? buildOverlayLayout({ ...options, labelObstacles: [...popupRects, panel, ...expansion.map(targetBox)] }) : base;
     setLayout({ ...next, panel, expanded: expansion, occupied, projection: viewport, openKey: open });
   });
   useEffect(() => {
@@ -182,8 +187,8 @@ export function GlobeMarkers({ viewport, stageRef, events, selectedEvent, labels
         </div>
       </div>;
     })}
-    {stop && layout.stop && <div aria-hidden="true">
-      <span className="globe-journey-pin" style={{ position: "absolute", left: layout.stop.x, top: layout.stop.y }} />
+    {stop && layout.stop && <div>
+      <button type="button" className="globe-journey-pin" aria-label={`Đọc mốc: ${stop.title}`} onClick={onReadStop} style={{ position: "absolute", left: layout.stop.x, top: layout.stop.y, pointerEvents: "auto" }} />
       {layout.stop.labelBox && text(layout.stop.label, layout.stop.labelBox)}
     </div>}
   </div>;

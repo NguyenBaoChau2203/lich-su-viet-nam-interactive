@@ -26,6 +26,23 @@ function owner(initial: MapExplorerState = exploration) {
 const arrive = (runtime: ReturnType<typeof owner>) => runtime.dispatch({ type: "arrive", arrival: runtime.current.cameraRequest! });
 
 describe("journey playback in the existing explorer owner", () => {
+  it("opens only the latest arrived reader; close retains the stop and explicit reopen remains paused", () => {
+    const app = owner();
+    app.dispatch({ type: "choose-journey", id: a.id });
+    const old = app.current.cameraRequest!;
+    expect(app.current.popupOpen).toBe(false);
+    app.dispatch({ type: "seek", stopId: "a-1" });
+    app.dispatch({ type: "arrive", arrival: old });
+    expect(app.current.popupOpen).toBe(false);
+    arrive(app);
+    expect(app.current.popupOpen).toBe(true);
+    app.dispatch({ type: "close-reader" });
+    expect(app.current.popupOpen).toBe(false);
+    expect(app.current.state.journey?.stop).toBe("a-1");
+    app.dispatch({ type: "open-reader" });
+    expect(app.current.popupOpen).toBe(true);
+    expect(app.current.playing).toBe(false);
+  });
   beforeEach(() => vi.useFakeTimers());
   afterEach(() => vi.useRealTimers());
 

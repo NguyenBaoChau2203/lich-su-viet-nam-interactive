@@ -91,11 +91,8 @@ describe("parseExplorerState and buildExplorerUrl (synthetic limits)", () => {
     expect(url).toBe("/?tu=1945&den=1954&su-kien=evt-b&goc=0.123,0.85,95.5,-10.25,15.5");
   });
 
-  it("resets reversed, invalid, or out-of-bounds years to the full known range", () => {
+  it("resets malformed or incomplete years to the full known range", () => {
     for (const query of [
-      "tu=1960&den=1945",
-      "tu=1900&den=1950",
-      "tu=1945&den=2000",
       "tu=abc&den=1954",
       "tu=1945.5&den=1954",
       "tu=1945",
