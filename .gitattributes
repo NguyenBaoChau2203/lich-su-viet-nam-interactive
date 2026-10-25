@@ -16,3 +16,6 @@
 # Keep the new checksum-pinned province pipeline/artifact identical on checkout.
 /scripts/province-boundaries/*.py text eol=lf
 /public/maps/history-vietnam-province-boundaries.geojson text eol=lf
+
+# Git for Windows must execute these through Git Bash without CRLF corruption.
+/.githooks/* text eol=lf

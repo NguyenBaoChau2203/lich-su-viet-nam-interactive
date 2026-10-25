@@ -7,14 +7,20 @@
     "dev": "next dev",
     "prebuild": "node scripts/copy-maplibre-worker.mjs",
     "build": "next build",
+    "build:smoke": "node scripts/agent/smoke-env.mjs",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run && node --test scripts/agent/*.test.mjs",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
+    "test:e2e:smoke": "playwright test --config playwright.smoke.config.ts",
     "kiem-tra-ngan-hang": "vitest run tests/unit/exam-bank-content.test.ts",
     "agent:check": "node scripts/agent/validate-setup.mjs",
+    "agent:setup": "node scripts/agent/setup.mjs",
+    "agent:status": "node scripts/agent/codegraph.mjs status",
+    "agent:sync": "node scripts/agent/codegraph.mjs sync",
+    "agent:index": "node scripts/agent/codegraph.mjs rebuild",
     "agent:doctor": "node scripts/agent/doctor.mjs",
     "history:data:check": "vitest run tests/unit/content-validation.test.ts tests/unit/exam-bank-content.test.ts",
     "verify": "pnpm agent:check && pnpm history:data:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build"
@@ -51,5 +57,6 @@
     "typescript": "^5",
     "vitest": "^5.0.1"
   },
-  "packageManager": "pnpm@11.7.0"
+  "packageManager": "pnpm@11.7.0",
+  "engines": { "node": ">=24 <25" }
 }

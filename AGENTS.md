@@ -1,5 +1,12 @@
 # Hướng dẫn làm việc với dự án
 
+## Single-agent execution
+
+- Use one main agent for investigation, planning, implementation, self-review and verification.
+- Do not spawn subagents, separate AI reviewers, another AI chat/CLI or automatic model calls. Adapt skill workflows to execute inline.
+- This owner policy persists until explicitly changed by the owner. Complexity or potential speed gains do not create an exception.
+- Project rules apply across AI tools. Personal plugins, global rules, MCP connections and chat history are not shared by cloning this repository. See `docs/agent/START-HERE.md` and `docs/agent/CURRENT-STATE.md`.
+
 ## Mục tiêu sản phẩm
 
 Xây dựng trải nghiệm web tương tác giúp học sinh lớp 12 khám phá lịch sử Việt Nam qua dòng thời gian, bản đồ và trang chi tiết có nguồn kiểm chứng.
@@ -11,9 +18,11 @@ Phạm vi bắt buộc của phiên bản đầu:
 - Quản trị nội dung ở mức cơ bản.
 - Giao diện tập trung laptop/PC theo `docs/product/DESKTOP-UI-SCOPE.md`, truy cập được bằng bàn phím và có chế độ giảm chuyển động. Mobile/tablet được hoãn ở giai đoạn hiện tại.
 
-Trang chủ dùng bản đồ địa lý 2D tràn vùng nội dung theo yêu cầu mới nhất tại `docs/superpowers/specs/2026-10-23-fullscreen-history-map-design.md`. Không dựng lại sa bàn 3D ở trang chủ. Mô phỏng và vật dụng 3D trong trang chi tiết sự kiện vẫn theo thiết kế đã duyệt.
+Trang chủ hiện dùng địa cầu theo thiết kế đã duyệt `docs/superpowers/specs/2026-10-23-curated-history-globe-design.md` và các bổ sung ngày 24–25/10 được dẫn trong `docs/agent/CURRENT-STATE.md`. Thiết kế bản đồ 2D và sa bàn cũ là hồ sơ lịch sử, không phải hướng dẫn dựng lại trang chủ. Mô phỏng và vật dụng 3D trong trang chi tiết sự kiện vẫn theo phạm vi riêng đã duyệt.
 
 Tài khoản học sinh, yêu thích, quiz, AI, scrollytelling nâng cao, game và các mô hình 3D ngoài phạm vi trang chi tiết sự kiện đã duyệt là phạm vi tùy chọn. Không thêm chúng khi chưa có yêu cầu và thiết kế riêng.
+
+Repository đã tiếp nhận các module học tập, tài khoản và thanh toán từ ứng dụng trước. Giữ hành vi hiện hữu khi sửa phần liên quan; sự tồn tại của module không cho phép tự mở rộng phạm vi. Dùng bản đồ mã tại `docs/agent/CURRENT-STATE.md` để tránh triển khai lại tính năng đã có.
 
 ## Nguồn sự thật
 
@@ -102,9 +111,9 @@ Không sửa, đổi tên, di chuyển hoặc đưa file Word vào commit trừ 
 
 ## Git và nhiều agent
 
-- Tạo nhánh ngắn cho từng tính năng; nhánh do Codex tạo dùng tiền tố `codex/`.
-- Một agent sở hữu một lát cắt tại một thời điểm. Dùng worktree riêng nếu chạy song song.
-- Không để nhiều agent sửa cùng file. Agent triển khai không tự coi kết quả của mình là review độc lập.
+- Đặt tên nhánh theo mục đích: `feat/<task>` cho tính năng, `fix/<task>` cho sửa lỗi, `chore/<task>` cho công cụ/bảo trì và `docs/<task>` cho tài liệu. Không dùng tiền tố `codex/`.
+- Thực hiện từng lát cắt bằng một agent. Người bạn có thể làm trên nhánh/checkout riêng theo cùng quy trình; không tự tạo thêm agent hoặc reviewer.
+- Gọi việc tự kiểm tra là self-review; không mô tả như review độc lập.
 - Commit nhỏ, một mục đích, theo dạng `feat:`, `fix:`, `test:`, `docs:` hoặc `chore:`.
 - Không push, merge, tạo PR hoặc thay đổi dịch vụ bên ngoài khi người dùng chưa yêu cầu.
 
@@ -127,6 +136,8 @@ Trong repository có thư mục `.codegraph/`, dùng CodeGraph trước `rg`/`fi
 
 - Nếu có MCP `codegraph_explore`, hỏi bằng tên symbol/file hoặc câu hỏi kiến trúc để lấy source và call path.
 - Nếu không có MCP, chạy `codegraph explore "<symbol hoặc câu hỏi>"`.
+
+Đầu task và sau thay đổi/checkout/pull, dùng `pnpm agent:status` hoặc `pnpm agent:sync` để kiểm tra chỉ mục mã nguồn. Thư mục `.codegraph/` có thể chỉ chứa `.gitignore` trên máy mới; nếu thiếu database/CLI hoặc graph bỏ sót nội dung, dùng `rg`/đọc file có mục tiêu và báo giới hạn. Chỉ tạo/rebuild index qua `pnpm agent:index` khi cần. Xem `docs/agent/CODEGRAPH.md`: graph không thay thế Markdown, JSON/GeoJSON, SQL, dữ liệu live hay lịch sử chat.
 
 Chỉ quay lại `rg` hoặc đọc file trực tiếp khi graph không chứa thông tin cần thiết.
 <!-- CODEGRAPH_END -->

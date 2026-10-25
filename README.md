@@ -4,6 +4,8 @@
 > Các công cụ agent, rules, skills và hooks của repository hiện tại được giữ nguyên.
 > Bản đồng bộ này dùng **pnpm 11.7.0** để cài dependency và chạy cổng kiểm tra hiện có.
 
+**Làm việc cùng AI Agent trên máy mới:** đọc [hướng dẫn thiết lập cho Codex, Antigravity và Claude Code trên Windows](docs/agent/START-HERE.md), [bản đồ code/spec hiện tại](docs/agent/CURRENT-STATE.md) và [cách đồng bộ CodeGraph](docs/agent/CODEGRAPH.md). Dùng Node **24.x**, pnpm **11.7.0** và quy trình một agent trong `AGENTS.md`; không cần sao chép plugin, Memory hoặc đường dẫn cá nhân của người khác.
+
 **Phạm vi giao diện hiện tại (chủ dự án xác nhận 23/10/2026):** chỉ tập trung laptop/PC, với viewport kiểm tra 1280×720, 1366×768, 1440×900 và 1920×1080. Mobile/tablet được hoãn. Xem [phạm vi thiết bị và nghiệm thu](docs/product/DESKTOP-UI-SCOPE.md). Bàn phím, tương phản và reduced motion vẫn bắt buộc; các mô tả/ảnh cũ bên dưới không chứng minh giao diện mới đã được tối ưu.
 
 ```bash

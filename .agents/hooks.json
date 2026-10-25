@@ -1,10 +1,17 @@
 {
-  "enabled": true,
-  "PreToolUse": [
-    {
-      "matcher": "run_command",
-      "command": "node scripts/agent/guard-command.mjs",
-      "timeout": 10
-    }
-  ]
+  "history-command-guard": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"const p=require('node:path');const c=require('node:child_process');const r=c.spawnSync(process.execPath,[p.join(c.execFileSync('git',['rev-parse','--show-toplevel'],{encoding:'utf8'}).trim(),'scripts/agent/guard-command.mjs')],{stdio:'inherit'});process.exit(r.status??2)\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
 }

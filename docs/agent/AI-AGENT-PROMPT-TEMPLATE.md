@@ -53,6 +53,7 @@ If `.codegraph/` exists, use CodeGraph before broad search or exploratory file r
 - [Historical-data integrity rule, when applicable]
 - [Security and secret-handling rule]
 - Do not reset or overwrite unrelated local changes.
+- Use one main agent for investigation, implementation, self-review and verification. Do not spawn subagents or another AI process.
 - Do not push, merge, deploy, publish, or modify external services unless explicitly authorized.
 - Do not modify or stage Word files, `.env`, secrets, build output, or unrelated files.
 
@@ -75,7 +76,7 @@ This is a starting map. Trace actual dependencies before editing.
 
 ## Execution workflow
 
-1. Inspect `git status` and the relevant context.
+1. Inspect `git status`, `docs/agent/CURRENT-STATE.md` and the relevant context. If using CodeGraph, run `pnpm agent:sync`; fall back to targeted reads when it is unavailable or the file type is unsupported.
 2. Reproduce the current behavior with a focused failing test or measurable baseline.
 3. Implement the smallest complete change.
 4. Run narrow verification and inspect the result.

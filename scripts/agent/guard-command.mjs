@@ -8,6 +8,7 @@ const destructivePatterns = [
   /^git\s+reset\s+--hard\b/i,
   /^git\s+clean\s+-(?=[a-z]*f)(?=[a-z]*d)[a-z]+\b/i,
   /^git\s+checkout\s+--(?:\s|$)/i,
+  /^git\s+restore\b(?=.*(?:--worktree|(?:^|\s)\.(?:\s|$)))/i,
   /^git\s+push\b.*(?:--force(?:-with-lease)?|-f)(?:\s|$)/i,
   /^(?:rm|sudo\s+rm)\s+-(?=[a-z]*r)(?=[a-z]*f)[a-z]+\s+(?:\/|~|\$home|\$env:userprofile)(?:\s|$)/i,
   /^remove-item\b(?=.*-recurse\b)(?=.*-force\b).*\s(?:[a-z]:\\|\.|\.\/|~|\$home|\$env:userprofile)["']?\s*$/i,
@@ -20,7 +21,11 @@ export function extractCommand(payload) {
   return (
     payload?.tool_input?.command ??
     payload?.tool_input?.cmd ??
+    payload?.toolCall?.args?.CommandLine ??
+    payload?.toolCall?.args?.command ??
+    payload?.toolCall?.args?.cmd ??
     payload?.tool_args?.CommandLine ??
+    payload?.tool_args?.cmd ??
     payload?.tool_args?.command ??
     payload?.toolArgs?.command ??
     payload?.command ??
@@ -51,10 +56,11 @@ export function classifyCommand(command) {
   }
 
   for (const segment of executableSegments(command)) {
-    if (destructivePatterns.some((pattern) => pattern.test(segment))) {
+    const normalized = segment.replace(/^git\s+(?:-C\s+(?:"[^"]+"|'[^']+'|\S+)\s+)+/i, "git ");
+    if (destructivePatterns.some((pattern) => pattern.test(normalized))) {
       return {
         allowed: false,
-        reason: `Blocked: destructive command requires an explicit manual review (${segment.slice(0, 120)}).`,
+        reason: "Blocked: destructive command requires an explicit manual review.",
       };
     }
   }
@@ -83,6 +89,11 @@ async function main() {
     const raw = await readStdin();
     const payload = JSON.parse(raw || "{}");
     const result = classifyCommand(extractCommand(payload));
+
+    if (payload?.toolCall?.name === "run_command") {
+      process.stdout.write(`${JSON.stringify({ decision: result.allowed ? "allow" : "deny", ...(result.reason ? { reason: result.reason } : {}) })}\n`);
+      return;
+    }
 
     if (!result.allowed) {
       process.stderr.write(`${result.reason}\n`);

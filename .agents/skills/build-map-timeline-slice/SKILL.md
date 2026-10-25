@@ -1,6 +1,6 @@
 ---
 name: build-map-timeline-slice
-description: Implement one verified historical event end-to-end across data, timeline, map, search, and detail UI. Use when building or changing the project's core event browsing experience.
+description: Use when building or changing the project's historical event browsing across data, timeline, map, search and detail UI.
 ---
 
 # Build a Map–Timeline Slice
@@ -8,8 +8,9 @@ description: Implement one verified historical event end-to-end across data, tim
 ## Before coding
 
 - Read `AGENTS.md` and the current feature spec.
-- Use CodeGraph first when `.codegraph/` exists.
-- Require a researched event record; invoke `research-history-sources` if provenance is missing.
+- Read `docs/agent/CURRENT-STATE.md` to locate the existing explorer, shared event query and tests. Extend those paths rather than rebuilding the initial slice.
+- Use CodeGraph first when its database is usable; check/sync through `docs/agent/CODEGRAPH.md` and use targeted file reads for unsupported or missing files.
+- Require research when adding/changing historical claims. Reuse existing sourced records for interaction-only work; do not force new research for unchanged facts.
 - Define one observable learner journey and its acceptance test.
 
 ## Implement vertically
@@ -24,7 +25,8 @@ description: Implement one verified historical event end-to-end across data, tim
 
 ## Boundaries
 
-- Do not add accounts, quizzes, unrelated 3D, a game, or story animation to complete a core slice; the approved Three.js Vietnam tabletop and event detail scope follows `docs/superpowers/specs/2026-10-23-3d-vietnam-map-explorer-design.md`.
+- Follow the approved globe design in `docs/superpowers/specs/2026-10-23-curated-history-globe-design.md` and current amendments linked in `docs/agent/CURRENT-STATE.md`. Do not restore the superseded tabletop or tiled-map homepage. Event-detail simulations have their own scope.
+- Preserve existing imported modules without adding account, quiz, payment, game or unrelated story features to a core browsing task.
 - Do not introduce a second event representation for each view.
 - Do not present approximate coordinates or dates as exact.
 

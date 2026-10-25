@@ -1,13 +1,13 @@
 ---
 name: design-history-story
-description: Design accessible visual storytelling for a Vietnamese historical event or period. Use when creating a story route, scroll narrative, editorial composition, motion direction, or a small educational interaction.
+description: Use when creating or changing a historical story route, editorial composition, motion direction or small educational interaction.
 ---
 
 # Design a History Story
 
 ## Start with the lesson
 
-1. State what the learner should understand, compare, or remember.
+1. Read `docs/agent/CURRENT-STATE.md` and the applicable approved design; state what the learner should understand, compare, or remember.
 2. Select only sourced facts and assets that serve that outcome.
 3. Write the reading order as a plain, useful page before adding motion.
 4. Choose one visual thesis grounded in the period, material, place, or archival medium.
@@ -25,7 +25,7 @@ description: Design accessible visual storytelling for a Vietnamese historical e
 - Add GSAP ScrollTrigger only when scroll position must control a multi-step historical sequence.
 - Let one engine own each animated property.
 - Respect `prefers-reduced-motion` and preserve content order with motion disabled.
-- Use Three.js for the approved Vietnam tabletop explorer and event detail reconstructions (`docs/superpowers/specs/2026-10-23-3d-vietnam-map-explorer-design.md`); defer unrelated 3D unless spatial depth teaches something a 2D map or diagram cannot and has approved scope.
+- Preserve the approved homepage globe (`docs/superpowers/specs/2026-10-23-curated-history-globe-design.md`) and separately scoped event-detail reconstructions. Do not restore the earlier tabletop. Defer unrelated 3D unless its learning value and scope are approved.
 
 ## Interactive game check
 

@@ -1,0 +1,8 @@
+#!/bin/sh
+# Optional local intelligence must never reject an otherwise successful Git operation.
+if command -v node >/dev/null 2>&1; then
+  node scripts/agent/codegraph.mjs sync --optional
+else
+  echo "CodeGraph sync skipped: Node.js is not on PATH." >&2
+fi
+exit 0

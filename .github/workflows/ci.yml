@@ -12,6 +12,12 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    # Public synthetic values satisfy the existing SSR client constructor.
+    # No valid key, live project or database is used by the selected smoke cases.
+    env:
+      NEXT_PUBLIC_SUPABASE_URL: http://127.0.0.1:54321
+      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: sb_publishable_smoke_fixture_not_a_real_key
+      NEXT_PUBLIC_SITE_URL: http://localhost:3100
 
     steps:
       - name: Checkout
@@ -37,5 +43,13 @@ jobs:
       - name: Install Chromium
         run: pnpm exec playwright install --with-deps chromium
 
-      - name: Run browser smoke test
-        run: pnpm test:e2e
+      - name: Run public browser smoke test without database credentials
+        run: pnpm test:e2e:smoke
+
+      - name: Upload browser failure evidence
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-failure-evidence
+          path: test-results/
+          retention-days: 7

@@ -1,6 +1,13 @@
+---
+trigger: always_on
+---
+
 # Quy tắc workspace
 
 Luôn đọc và tuân theo `../../AGENTS.md` trước khi lập kế hoạch, sửa mã hoặc báo hoàn tất.
+
+- Chỉ dùng một agent cho toàn bộ task, bao gồm self-review; không tạo subagent/reviewer hoặc tiến trình AI khác.
+- Đọc `../../docs/agent/CURRENT-STATE.md` để xác định module hiện hữu và thiết kế địa cầu đang áp dụng. Các hướng dẫn sa bàn hoặc bản đồ 2D cũ không thay thế thiết kế đã duyệt sau đó.
 
 - Giữ đúng MVP 25–35 sự kiện, timeline, bản đồ, tìm kiếm, chi tiết và quản trị cơ bản.
 - Giao diện hiện chỉ tập trung laptop/PC theo `../../docs/product/DESKTOP-UI-SCOPE.md`: kiểm tra 1280×720, 1366×768, 1440×900 và 1920×1080; mobile/tablet và cử chỉ cảm ứng được hoãn. Giữ yêu cầu bàn phím, tương phản và reduced motion.

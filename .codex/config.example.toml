@@ -1,0 +1,26 @@
+# Optional project MCP configuration. Review before copying/merging into config.toml.
+# Never overwrite an existing local config or add credentials here.
+# Codex project trust and a fresh chat/restart are required to load new tools.
+
+[mcp_servers.context7]
+url = "https://mcp.context7.com/mcp"
+enabled_tools = ["resolve-library-id", "query-docs"]
+startup_timeout_sec = 30
+tool_timeout_sec = 60
+
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
+enabled_tools = ["search_openai_docs", "fetch_openai_doc", "list_openai_docs"]
+startup_timeout_sec = 30
+tool_timeout_sec = 60
+
+# Optional: install the tested CodeGraph CLI on PATH first. MCP receives the
+# active project from the client; do not hard-code another person's checkout.
+#[mcp_servers.codegraph]
+#command = "cmd.exe"
+#args = ["/d", "/s", "/c", "codegraph serve --mcp"]
+#startup_timeout_sec = 60
+#tool_timeout_sec = 120
+# On macOS/Linux, use command = "codegraph", args = ["serve", "--mcp"].
+
+# Personal Memory is deliberately not configured. It is not shared repo state.
