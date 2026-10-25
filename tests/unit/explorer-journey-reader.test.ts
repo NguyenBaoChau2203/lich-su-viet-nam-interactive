@@ -38,6 +38,14 @@ describe("selected journey reader", () => {
     expect(decodeURIComponent(published)).toContain("hanh-trinh=synthetic-reader");
   });
 
+  it("closing reading leaves navigation, exit and an explicit reopen control", () => {
+    const html = renderToStaticMarkup(createElement(JourneyPanel, { ...props, popupOpen: false }));
+    expect(html).toContain("Đọc mốc hiện tại");
+    expect(html).toContain('aria-label="Thoát hành trình"');
+    expect(html).toContain('aria-label="Mốc trước"');
+    expect(html).not.toContain(stop.summary);
+  });
+
   it("keeps Pause available during the final flight and disables playback after its arrival", () => {
     const travelling = renderToStaticMarkup(createElement(JourneyPanel, { ...props, playing: true, settled: false, travelling: true }));
     expect(travelling.match(/<button\b[^>]*aria-label="Tạm dừng hành trình"[^>]*>/)?.[0]).not.toContain("disabled");

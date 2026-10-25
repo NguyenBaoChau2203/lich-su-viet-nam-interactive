@@ -300,7 +300,7 @@ for (const size of [{ width: 1280, height: 720 }, { width: 1366, height: 768 }, 
     await panel(page).locator(".journey-sources summary").click();
     await expect(panel(page).getByRole("link", { name: "Cổng thông tin Hồ Chí Minh", exact: true })).toBeVisible();
 
-    const reader = (await panel(page).boundingBox())!, timeline = (await page.getByTestId("journey-timeline").boundingBox())!;
+    const reader = (await page.getByTestId("journey-popup").boundingBox())!, timeline = (await page.getByTestId("journey-timeline").boundingBox())!;
     expect(reader.y + reader.height).toBeLessThanOrEqual(timeline.y);
 
     const intro = (await page.locator(".home-map-intro").boundingBox())!;
@@ -359,7 +359,7 @@ for (const size of [{ width: 1280, height: 720 }, { width: 1366, height: 768 }, 
           return document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2)?.closest("button,select") === element;
         })).toBe(true);
       }
-      const reader = (await panel(page).boundingBox())!, timeline = (await page.getByTestId("journey-timeline").boundingBox())!;
+      const reader = (await page.getByTestId("journey-popup").boundingBox())!, timeline = (await page.getByTestId("journey-timeline").boundingBox())!;
       const chooser = (await page.locator(".home-map-intro").boundingBox())!;
       expect(reader.y + reader.height).toBeLessThanOrEqual(timeline.y);
       expect(chooser.y + chooser.height).toBeLessThanOrEqual(timeline.y);
@@ -378,7 +378,21 @@ for (const size of [{ width: 1280, height: 720 }, { width: 1366, height: 768 }, 
         const a11y = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze();
         expect(a11y.violations.map(v => ({ id: v.id, targets: v.nodes.map(n => n.target) }))).toEqual([]);
       }
-      await details.locator("summary").focus(); await page.keyboard.press("Enter");
+      // Camera inspection can put the point offstage and replace the popup with
+      // a closed native reader. Reveal it before targeting its source summary;
+      // focusing hidden content otherwise leaves Enter on the stop-list summary.
+      const fallback = page.getByTestId("journey-reader-fallback");
+      if (await fallback.count() && await fallback.getAttribute("open") === null) {
+        await fallback.locator(":scope > summary").focus();
+        await page.keyboard.press("Enter");
+      }
+      await expect(details.locator("summary")).toBeVisible();
+      if (await details.getAttribute("open") !== null) {
+        await details.locator("summary").focus();
+        await expect(details.locator("summary")).toBeFocused();
+        await page.keyboard.press("Enter");
+      }
+      await expect(stops).not.toHaveAttribute("open", "");
     }
     writeFileSync(path.join(task09Output, `four-journeys-${size.width}x${size.height}.json`), JSON.stringify(evidence, null, 2));
   });

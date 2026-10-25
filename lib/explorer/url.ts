@@ -1,4 +1,5 @@
 import type { CameraView, ExplorerLimits, ExplorerState } from "@/lib/explorer/types";
+import { normalizeYearRange } from "@/lib/explorer/timeline-years";
 import { formatMapView, parseMapView } from "@/lib/explorer/map-view";
 import { parseJourneySelection } from "@/lib/explorer/journey";
 import { JOURNEY_REGISTRY, type JourneyRegistry } from "@/lib/explorer/journeys/registry";
@@ -74,17 +75,8 @@ export function parseExplorerState(params: URLSearchParams, limits: ExplorerLimi
   let from = limits.minYear;
   let to = limits.maxYear;
 
-  if (
-    rawFrom !== null &&
-    rawTo !== null &&
-    rawFrom >= limits.minYear &&
-    rawFrom <= limits.maxYear &&
-    rawTo >= limits.minYear &&
-    rawTo <= limits.maxYear &&
-    rawFrom <= rawTo
-  ) {
-    from = rawFrom;
-    to = rawTo;
+  if (rawFrom !== null && rawTo !== null) {
+    ({ from, to } = normalizeYearRange(rawFrom, rawTo, limits));
   }
 
   const rawEvent = params.get("su-kien");

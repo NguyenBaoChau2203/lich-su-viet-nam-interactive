@@ -65,6 +65,15 @@ export function CinematicEventMap(props: EventMapProps) {
   }, [scene]);
 
   useEffect(() => {
+    const request = props.journeyPathRequest, stop = props.journeyStop, stage = stageRef.current;
+    if (!request || !stop || !viewport || !scene || !stage) { callbacks.current.onJourneyAnchor?.(null); return; }
+    const origin = stage.getBoundingClientRect(), parent = stage.closest(".home-history-map")?.getBoundingClientRect();
+    callbacks.current.onJourneyAnchor?.({ journeyId: request.journeyId, stopId: request.stopId, nonce: request.nonce,
+      point: viewport.project(stop.view.lng, stop.view.lat), stageSize: { width: viewport.width, height: viewport.height },
+      offset: { x: origin.left - (parent?.left ?? origin.left), y: origin.top - (parent?.top ?? origin.top) } });
+  }, [viewport, scene, props.journeyPathRequest, props.journeyStop]);
+
+  useEffect(() => {
     if (!camera || props.restoreRequest === 0) return;
     departing.current = false;
     camera.cancel();
@@ -268,7 +277,7 @@ export function CinematicEventMap(props: EventMapProps) {
     </div>
     {scene && viewport && <GlobeMarkers key={`${props.restoreRequest}:${props.cameraRequest?.journeyId ?? ""}:${props.journeyStop?.id ?? ""}:${props.events.map(event => event.slug).join("|")}`}
       viewport={viewport} stageRef={stageRef} events={props.events} selectedEvent={props.selectedEvent} labels={labels} stop={props.journeyStop}
-      onSelect={props.onSelect} onFocusCluster={(request) => {
+      onSelect={props.onSelect} onReadStop={props.onReadStop} onFocusCluster={(request) => {
         if (departing.current || !camera) return Promise.resolve("cancelled");
         const fit = fitClusterView(stageSize(), request);
         if (!fit) return Promise.resolve("cancelled");

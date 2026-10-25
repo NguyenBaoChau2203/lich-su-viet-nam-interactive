@@ -23,6 +23,12 @@ The approved `docs/superpowers/specs/2026-10-23-curated-history-globe-design.md`
 | Supabase schema/source records | `supabase/migrations/`, `supabase/content/`, `supabase/tests/`; live DB readiness is separate from local schema checks |
 | Verification | `tests/unit/`, `tests/e2e/`, `scripts/agent/*.test.mjs`, `package.json`, `.github/workflows/ci.yml` |
 
+## Journey popup and all-year timeline local handoff (2026-10-25)
+
+Journey reading now uses `JourneyStopReader.tsx` and `JourneyStopPopup.tsx`; `HistoryExplorer` remains the sole playback/presentation-state owner. The cinematic adapter forwards a tagged stage-CSS projection, with `journeys/popup-layout.ts` handling placement. Stop media and its provenance are in `journeys/media.ts` and the dated media ledger. The owner explicitly permits coursework use of Internet images and requires historical event imagery instead of present-day place photos; educational-use entries do not assert an open license. All 20 stop bindings now use archival images, documents or explicitly labelled historical illustrations/context, with no present-day place image eligible.
+
+`timeline-years.ts` derives inclusive all-year choices and normalizes ranges. The bounded local content package is `supabase/content/timeline-2026-10-25/`; its dedicated generator prepares insert-only draft SQL and does not feed a production fallback catalog. Read `docs/content/grade-12-vietnam-timeline-coverage.md` and `docs/audits/2026-10-25-journey-timeline-acceptance.md` for evidence, blocked database checks and remaining source/printing gaps. No remote import/publication is implied. The read-only network fixture under `tests/e2e/journey-catalog-server.mjs` is test-only and is not Supabase/RLS evidence.
+
 Province lines are sourced modern shared-interior **reference lines**, not complete administrative polygons, cadastral geography, historical borders or point-in-province assignment. Preserve the honest limitation, source provenance and intentionally failing full-polygon research control when changing that pipeline.
 
 ## Route to the right skill

@@ -14,6 +14,12 @@ export type GlobeViewport = {
 export type GlobePlaceLabel = { id: string; name: string; lng: number; lat: number };
 
 export type GlobeCameraRequest = JourneyArrival & { view: MapView; instant?: boolean };
+export type JourneyPopupAnchor = JourneyArrival & {
+  point: ScreenPoint | null;
+  stageSize: { width: number; height: number };
+  /** Rendering-boundary conversion from stage CSS pixels to explorer CSS pixels. */
+  offset: ScreenPoint;
+};
 export type EventMapProps = {
   events: readonly ExplorerEvent[]; allEvents: readonly ExplorerEvent[]; view: MapView | null;
   selectedEvent: string | null; focusRequest: { slug: string; nonce: number } | null;
@@ -23,4 +29,6 @@ export type EventMapProps = {
   onSelect(slug: string): void; onViewChange(view: MapView, arrival?: JourneyArrival): void;
   onManualInput(): void; onArrive(arrival: JourneyArrival): void;
   onReadyChange(ready: boolean): void;
+  onJourneyAnchor?(anchor: JourneyPopupAnchor | null): void;
+  onReadStop?(): void;
 };

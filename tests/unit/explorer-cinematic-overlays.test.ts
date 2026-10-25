@@ -17,6 +17,12 @@ const measure = () => ({ width: 100, height: 24 });
 const overlaps = (a: OverlayRect, b: OverlayRect) => a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
 
 describe("prototype spherical overlays", () => {
+  it("reserves nearby popup text without treating it as an obstacle to the active point", () => {
+    const stop = { ...HISTORY_JOURNEY.stops[0], view: { lat: 20, lng: 100, zoom: 4 } };
+    const layout = buildOverlayLayout({ viewport, anchors: [], labels: [], occupied: [], labelObstacles: [{ left: 412, right: 772, top: 100, bottom: 540 }], measure, stop });
+    expect(layout.stop).toMatchObject({ x: 400, y: 300 });
+    expect(layout.stop?.labelBox?.right).toBeLessThanOrEqual(412);
+  });
   it("projects before grouping, preserving public identity and approximate semantics while hiding occluded anchors", () => {
     const layout = buildOverlayLayout({ viewport, anchors, labels: [], occupied: [], measure });
     expect(layout.groups.map((group) => group.anchors[0].event.slug)).toEqual(["one", "two"]);

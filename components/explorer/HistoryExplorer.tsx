@@ -11,8 +11,10 @@ import { JourneyPanel } from "@/components/explorer/JourneyPanel";
 import { JourneyChooser } from "@/components/explorer/JourneyChooser";
 import { HomeAtlasHeader } from "@/components/layout/HomeAtlasHeader";
 import { filterExplorerEvents } from "@/lib/explorer/filters";
+import { normalizeYearRange } from "@/lib/explorer/timeline-years";
 import { buildMapExplorerUrl, parseMapExplorerState, type MapExplorerState } from "@/lib/explorer/map-state";
 import type { MapView } from "@/lib/explorer/map-view";
+import type { JourneyPopupAnchor } from "@/lib/explorer/globe-contract";
 import type { ExplorerEvent, ExplorerLimits } from "@/lib/explorer/types";
 import { getJourneyById, getJourneyStop, sameJourneyArrival, type JourneyArrival } from "@/lib/explorer/journey";
 import { DEFAULT_JOURNEY_ID, JOURNEY_REGISTRY } from "@/lib/explorer/journeys/registry";
@@ -45,6 +47,8 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
     ? { journey, journeyId: journey.id, stopId: stop.id, nonce: runtime.requestNonce } : null,
   [departing, journey, stop, runtime.requestNonce]);
   const [mapReady, setMapReady] = useState(false);
+  const [journeyAnchor, setJourneyAnchor] = useState<JourneyPopupAnchor | null>(null);
+  const focusReader = useRef(false);
   const journeyButton = useRef<HTMLButtonElement>(null);
   const selectionOrigin = useRef<HTMLElement | null>(null);
   const listRef = useRef<HTMLDetailsElement>(null);
@@ -98,6 +102,31 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
     if (!navigationPending.current) dispatch({ type: "arrive", arrival });
   }, []);
   const onReadingChange = useCallback((active: boolean) => dispatch({ type: "reading", active }), []);
+  const openReader = useCallback(() => {
+    const heading = document.getElementById("journey-stop-heading");
+    const fallback = document.querySelector<HTMLDetailsElement>(".journey-reader-fallback");
+    if (fallback) fallback.open = true;
+    if (heading) heading.focus({ preventScroll: true });
+    else focusReader.current = true;
+    dispatch({ type: "open-reader", unavailable: !mapReady });
+  }, [mapReady]);
+  const closeReader = useCallback(() => {
+    dispatch({ type: "close-reader" });
+    document.querySelector<HTMLButtonElement>(".journey-read-current")?.focus({ preventScroll: true });
+  }, []);
+  useEffect(() => {
+    if (!runtime.popupOpen || !focusReader.current) return;
+    const fallback = document.querySelector<HTMLDetailsElement>(".journey-reader-fallback");
+    if (fallback) fallback.open = true;
+    document.getElementById("journey-stop-heading")?.focus({ preventScroll: true });
+    focusReader.current = false;
+  }, [runtime.popupOpen]);
+  useEffect(() => {
+    if (!stop || (!runtime.popupOpen && (mapReady || runtime.readerDismissed))) return;
+    const escape = (event: KeyboardEvent) => { if (event.key === "Escape") { event.preventDefault(); closeReader(); } };
+    window.addEventListener("keydown", escape);
+    return () => window.removeEventListener("keydown", escape);
+  }, [stop, runtime.popupOpen, runtime.readerDismissed, mapReady, closeReader]);
   const onReadyChange = useCallback((ready: boolean) => {
     setMapReady(ready);
     if (!ready) dispatch({ type: "pause" });
@@ -159,8 +188,7 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
 
   function changePeriod(from: number, to: number) {
     if (!limits || !Number.isFinite(from) || !Number.isFinite(to)) return;
-    const lower = Math.max(limits.minYear, Math.min(from, to));
-    const upper = Math.min(limits.maxYear, Math.max(from, to));
+    const { from: lower, to: upper } = normalizeYearRange(from, to, limits);
     const matching = filterExplorerEvents(events, lower, upper);
     dispatch({ type: "period", from: lower, to: upper, eventSlugs: matching.map((event) => event.slug) });
   }
@@ -174,7 +202,8 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
           focusRequest={stop ? null : focusRequest} onSelect={selectEvent} onViewChange={updateView}
           journeyStop={stop} cameraRequest={cameraRequest}
           journeyPathRequest={journeyPathRequest}
-          restoreRequest={restoreRequest} onManualInput={pauseJourney} onArrive={arrive} onReadyChange={onReadyChange} />
+          restoreRequest={restoreRequest} onManualInput={pauseJourney} onArrive={arrive} onReadyChange={onReadyChange}
+          onJourneyAnchor={setJourneyAnchor} onReadStop={openReader} />
       </div>
       <div className="home-map-intro">
         <h1>{journey && stop ? "Khám phá hành trình" : "Lịch sử qua những địa danh"}</h1>
@@ -205,8 +234,12 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
       </aside>}
       {!stop && selectedEvent && <MapEventCard key={selectedEvent.slug} event={selectedEvent} state={state} onClose={closeEvent} />}
       {journey && stop ? <JourneyPanel key={journey.id} journey={journey} stop={stop} state={state} playing={playing} settled={sameJourneyArrival(settledArrival, cameraRequest)} travelling={Boolean(cameraRequest && !sameJourneyArrival(settledArrival, cameraRequest))} reducedMotion={reducedMotion} mapAvailable={mapReady}
+        popupOpen={runtime.popupOpen} readerDismissed={runtime.readerDismissed} anchor={sameJourneyArrival(journeyAnchor, journeyPathRequest) ? journeyAnchor : null}
+        onOpenReader={openReader} onCloseReader={closeReader}
         readerActive={readerActive} eventAvailable={events.some((event) => event.slug === stop.eventSlug)} onSeek={seek} onPlay={togglePlayback} onExit={exitJourney} onReadingChange={onReadingChange} />
-        : <MapTimeControls events={events} limits={limits} state={state} onChange={changePeriod} />}
+        : <MapTimeControls events={events} limits={limits} state={state} onChange={changePeriod} onOpenEvents={() => {
+          if (listRef.current) { listRef.current.open = true; listRef.current.querySelector("summary")?.focus(); }
+        }} />}
       <noscript>
         <div className="home-map-notice">
           <p>
