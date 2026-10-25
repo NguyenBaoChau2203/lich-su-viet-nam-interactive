@@ -281,3 +281,55 @@ Thiết bị / Môi trường: Windows 11, Node v24.19.0, pnpm v11.7.0.
   - Động tác hành tiến của xe tăng (`tank`), pháo kích (`barrage`), máy bay phản lực A-37 (`jet`) ném bom Tân Sơn Nhất, trực thăng di tản (`helicopter`), Dinh Độc Lập (`palace`) và cổng Dinh (`gate`).
   - Đăng ký kịch bản vào `lib/mapfilm/index.ts` và kích hoạt `mapFilm: "chien-dich-ho-chi-minh"` trong bài học.
   - Chạy toàn bộ kiểm thử và cổng soát lỗi.
+
+---
+
+## 2026-10-25 — Phase 6: Xây dựng Kịch bản Phim Bản đồ 3D Chiến dịch Hồ Chí Minh (3D Map Film Script)
+
+### 1. Mục tiêu và kết quả
+- **Xây dựng kịch bản Phim Bản đồ 3D hoàn chỉnh trong `lib/mapfilm/chien-dich-ho-chi-minh.ts`:**
+  - Gồm 7 cảnh phim khớp tương ứng 1-1 với 7 bước của kịch bản diễn biến 2D:
+    1. `thoi-co`: Toàn cảnh miền Nam sau các thắng lợi Tây Nguyên và Huế – Đà Nẵng, bay dần từ Tây Nguyên/Duyên hải về Đông Nam Bộ.
+    2. `xuan-loc`: Đập tan "cánh cửa thép" Xuân Lộc, pháo kích và thọc sâu của Quân đoàn 4 giải phóng Xuân Lộc lúc 21/4.
+    3. `bao-vay`: Năm cánh quân hình thành thế bao vây cô lập sào huyệt Sài Gòn, vùng bao vây `vong-vay` hiện dần.
+    4. `no-sung`: Đúng 17 giờ ngày 26/4 nổ súng mở màn, pháo tầm xa bắn phá căn cứ Biên Hòa và Đồng Dù, đặc công giữ cầu Rạch Chiếc và cầu Sài Gòn, đoàn xe tăng 203 cơ động.
+    5. `tan-son-nhat`: Phi đội Quyết thắng (5 chiếc A-37) bất ngờ dội bom sân bay Tân Sơn Nhất, phá hủy 24 máy bay địch, pháo Nhơn Trạch khóa chặt đường hàng không.
+    6. `tong-cong-kich`: Năm cánh quân đồng loạt thọc sâu vào nội đô, trực thăng UH-1 mở chiến dịch di tản Gió lốc (Operation Frequent Wind) ra hạm đội ngoài khơi, Dinh Độc Lập và cổng Dinh hiện diện.
+    7. `dinh-doc-lap`: Xe tăng 390 và 843 húc tung cổng chính Dinh Độc Lập, hiệu ứng khói chấn động lúc 10h45, cắm cờ Mặt trận Dân tộc Giải phóng miền Nam trên nóc Dinh lúc 11h30, toàn thắng.
+  - Tổng thời lượng phim: 274 giây (~4.5 phút), nằm trong khoảng chuẩn 200s – 330s.
+  - Toàn bộ phụ đề được kiểm chứng theo Sổ nguồn sử liệu, tốc độ đọc 1.9 – 2.8 từ/giây (đạt chuẩn an toàn ≤ 4.4 từ/giây).
+  - Tận dụng đầy đủ các mô hình 3D thủ tục: xe tăng T-54 (`tank`), máy bay phản lực A-37 (`jet`), trực thăng UH-1 (`helicopter`), Dinh Độc Lập (`palace`), cổng Dinh (`gate`), cờ Mặt trận Giải phóng (`flagsMt`) và cờ Sài Gòn (`flagsArvn`).
+- **Đăng ký và tích hợp kịch bản:**
+  - Đăng ký `chienDichHoChiMinhMapFilm` trong `lib/mapfilm/index.ts`.
+  - Kích hoạt `mapFilm: "chien-dich-ho-chi-minh"` trong `lib/lessons/chien-dich-ho-chi-minh.ts`, mở nút chuyển đổi 2D/3D trên giao diện bài học.
+- **Kiểm thử tự động:**
+  - Mở rộng `tests/unit/mapfilm.test.ts` với suite kiểm thử chuyên biệt 9 test cases cho Chiến dịch Hồ Chí Minh (tính toàn vẹn id hành động, camera, phụ đề, khớp trạng thái 2D/3D ở từng cảnh, liên tục thời gian, không thoái lui trạng thái cứ điểm).
+  - 31/31 unit tests trong `mapfilm.test.ts` passed.
+
+### 2. Các tệp thay đổi
+- `lib/mapfilm/chien-dich-ho-chi-minh.ts`: kịch bản phim 3D hoàn chỉnh.
+- `lib/mapfilm/index.ts`: đăng ký kịch bản phim vào registry.
+- `lib/lessons/chien-dich-ho-chi-minh.ts`: kích hoạt cờ `mapFilm`.
+- `tests/unit/mapfilm.test.ts`: bổ sung 9 test cases kiểm thử kịch bản.
+- `docs/superpowers/plans/2026-10-25-hcm-1975-premium-lesson-progress.md`: cập nhật tiến độ Phase 6.
+
+### 3. Lệnh và kết quả kiểm chứng
+- `pnpm exec vitest run tests/unit/mapfilm.test.ts` -> Exit code 0 (31 tests passed).
+- `pnpm verify` -> Exit code 0:
+  - `agent:check`: valid.
+  - `history:data:check`: 42 tests passed.
+  - `lint`: 0 errors, 0 warnings.
+  - `typecheck`: 0 errors.
+  - `test`: 1009 vitest tests + 26 node tests passed.
+  - `build`: 103/103 trang tĩnh xuất thành công (bao gồm trang `/ban-do-3d/chien-dich-ho-chi-minh`).
+
+### 4. Kế hoạch bước tiếp theo (Phase 7)
+- Xây dựng các mô hình 3D chi tiết cao theo chuẩn procedural Three.js (`lib/models3d/specs.ts`):
+  - `xe-tang-t54-843` (Xe tăng T-54 số hiệu 843).
+  - `xe-tang-t54-390` (Xe tăng T-54 số hiệu 390).
+  - `dinh-doc-lap` (Dinh Độc Lập / Dinh Thống Nhất).
+  - `may-bay-a37` (Máy bay phản lực A-37 Dragonfly).
+  - `truc-thang-uh1` (Trực thăng UH-1 Huey).
+- Bổ sung tab "Mô hình 3D" trong `components/lessons/ResourceSection.tsx` để người dùng có thể tương tác xoay 360°, phóng to, thu nhỏ và đọc thông tin lịch sử của từng mô hình.
+- Khai báo danh sách `models3d: ["xe-tang-t54-843", "xe-tang-t54-390", "dinh-doc-lap", "may-bay-a37", "truc-thang-uh1"]` trong bài học `lib/lessons/chien-dich-ho-chi-minh.ts`.
+- Mở rộng kiểm thử và chạy cổng xác thực.

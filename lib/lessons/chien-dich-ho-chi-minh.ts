@@ -333,6 +333,7 @@ export const chienDichHoChiMinhLesson: Lesson = {
     { date: "2/5/1975", text: "Tỉnh Châu Đốc được giải phóng — toàn bộ miền Nam hoàn toàn giải phóng" },
   ],
   battle: chienDichHoChiMinh1975,
+  mapFilm: "chien-dich-ho-chi-minh",
   resultsScan: SCAN_DINH_DOC_LAP,
   resultsImage: DINH_THONG_NHAT,
   artifacts: [
