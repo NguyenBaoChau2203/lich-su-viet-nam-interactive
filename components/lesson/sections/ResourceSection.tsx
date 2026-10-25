@@ -1,10 +1,13 @@
 import { CinemaPlayer } from "@/components/cinema3d/CinemaPlayer";
 import { Credit, exhibitItem, photoItem, SectionHeading } from "@/components/lesson/sections/shared";
 import { VideoEmbed } from "@/components/lesson/VideoEmbed";
+import { ModelGallery } from "@/components/model3d/ModelGallery";
 import { DepthPhotoGallery } from "@/components/photo3d/DepthPhotoGallery";
 import { SafeImage } from "@/components/ui/SafeImage";
 import { Tabs, type TabItem } from "@/components/ui/Tabs";
 import type { Lesson } from "@/lib/lessons/types";
+import { getModelSpec } from "@/lib/models3d/specs";
+import type { ModelSpec } from "@/lib/models3d/types";
 
 /**
  * Mục "Tư liệu" (V-22): video, hiện vật, sa bàn 3D, di tích ngày nay, phim 3D gom vào các tab. Chỉ tab đang mở được
@@ -94,6 +97,28 @@ function buildResourceTabs(lesson: Lesson): TabItem[] {
         </div>
       ),
     });
+  }
+
+  if (lesson.models3d && lesson.models3d.length > 0) {
+    const specs = lesson.models3d
+      .map((id) => getModelSpec(id))
+      .filter((s): s is ModelSpec => Boolean(s));
+    if (specs.length > 0) {
+      tabs.push({
+        id: "mo-hinh-3d",
+        label: "Mô hình 3D",
+        hint: `${specs.length}`,
+        content: (
+          <div data-resource="mo-hinh-3d">
+            <h3 className="mb-1 font-serif text-xl font-bold text-foreground">Mô hình hiện vật và công trình 3D</h3>
+            <p className="mb-5 max-w-3xl text-muted-foreground">
+              Khám phá chi tiết khí tài quân sự và công trình lịch sử được dựng 3D bằng mã. Bấm vào mô hình để xoay 360°, phóng to, thu nhỏ và tương tác với các điểm chú thích.
+            </p>
+            <ModelGallery specs={specs} label="Chọn mô hình 3D" />
+          </div>
+        ),
+      });
+    }
   }
 
   if (lesson.resultsScan || lesson.resultsImage?.depthSrc) {

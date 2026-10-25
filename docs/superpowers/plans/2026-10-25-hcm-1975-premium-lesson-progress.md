@@ -333,3 +333,62 @@ Thiết bị / Môi trường: Windows 11, Node v24.19.0, pnpm v11.7.0.
 - Bổ sung tab "Mô hình 3D" trong `components/lessons/ResourceSection.tsx` để người dùng có thể tương tác xoay 360°, phóng to, thu nhỏ và đọc thông tin lịch sử của từng mô hình.
 - Khai báo danh sách `models3d: ["xe-tang-t54-843", "xe-tang-t54-390", "dinh-doc-lap", "may-bay-a37", "truc-thang-uh1"]` trong bài học `lib/lessons/chien-dich-ho-chi-minh.ts`.
 - Mở rộng kiểm thử và chạy cổng xác thực.
+
+---
+
+## 2026-10-25 — Phase 7: Mô hình 3D Chi tiết cao & Tab Mô hình trong Bài học (High-Detail 3D Models & Model Tab)
+
+### 1. Mục tiêu và kết quả
+- **Xây dựng 4 bộ dựng mô hình 3D thủ tục chất lượng cao trong `components/model3d/builders/`:**
+  - `components/model3d/builders/tank-t54.ts`:
+    - Hàm dựng đa hình `tankT54Builder("843" | "390")` hỗ trợ hai chiếc xe tăng huyền thoại.
+    - Dựng đầy đủ: thân xe vát nghiêng 60°, 5 cặp bánh chịu nặng kèm dải xích thép, thùng dầu phụ 200L phía sau, tháp pháo bán cầu đúc đặc trưng của dòng T-54, nòng pháo 100mm D-10T có bầu hút khói đầu nòng, đèn pha, số hiệu 843 hoặc 390 vẽ bằng canvas, cột cờ và cờ Mặt trận Dân tộc Giải phóng miền Nam bay nhấp nhô theo thời gian (`update()`).
+  - `components/model3d/builders/independence-palace.ts`:
+    - Dựng công trình Dinh Độc Lập theo kiến trúc thực tế của KTS Ngô Viết Thụ: thảm cỏ, đài phun nước tròn phía trước, khối nhà 3 tầng với hệ lam "rèm hoa đá" đốt trúc thanh thoát, sảnh đón trệt, sân thượng có bãi đáp trực thăng tròn màu vàng kèm chữ H và hai vết bom ngày 8/4, cột cờ nóc dinh cắm cờ Mặt trận Giải phóng, cổng chính với hai cánh cổng sắt mở toang.
+  - `components/model3d/builders/a37.ts`:
+    - Dựng máy bay phản lực cường kích hạng nhẹ A-37 Dragonfly (Phi đội Quyết thắng): thân vuốt thon, buồng lái hai chỗ ngồi song song có kính vòm, cánh thẳng kèm thùng nhiên liệu phụ ở đầu mút cánh sơn đầu vàng, hai động cơ phản lực General Electric J85 ở rễ cánh, cánh đuôi đứng và ngang, càng đáp 3 bánh và các giá treo mang bom công phá.
+  - `components/model3d/builders/uh1.ts`:
+    - Dựng trực thăng UH-1 Iroquois (Huey) dùng trong chiến dịch Frequent Wind: cabin bo tròn, kính buồng lái màu xanh, khoang lùa chở quân, càng hạ cánh kim loại dạng trượt kép, dầm đuôi dài, cánh quạt chính 2 lá và cánh quạt đuôi; cơ cấu chuyển động hoạt hình xoay liên tục trong `update()`.
+- **Đăng ký mô hình trong `components/model3d/builders/index.ts`:**
+  - Đăng ký đầy đủ 5 mô hình: `"xe-tang-t54-843"`, `"xe-tang-t54-390"`, `"dinh-doc-lap"`, `"may-bay-a37"`, `"truc-thang-uh1"`.
+- **Đặc tả mô hình đầy đủ trong `lib/models3d/specs.ts`:**
+  - Khai báo 5 `ModelSpec` chuẩn mực với tiêu đề, tóm tắt, mô tả chi tiết > 60 ký tự, ghi chú minh họa > 30 ký tự, điểm chú thích (hotspots) tương tác với tọa độ 3D chính xác, khoảng cách camera hợp lệ.
+- **Tích hợp Tab "Mô hình 3D" trong `components/lesson/sections/ResourceSection.tsx`:**
+  - Hiển thị tab "Mô hình 3D" khi bài học khai báo `models3d`, cho phép chuyển đổi mượt mà qua `ModelGallery` và tương tác 360°, phóng to/thu nhỏ, đọc chú thích.
+- **Khai báo `models3d` trong bài học `lib/lessons/chien-dich-ho-chi-minh.ts`:**
+  - Khai báo danh sách 5 mô hình khí tài và di tích 1975.
+- **Kiểm thử tự động:**
+  - Bổ sung kiểm tra tính hợp lệ của `models3d` trong `tests/unit/lesson-data.test.ts`.
+  - Toàn bộ 9/9 unit tests trong `tests/unit/models3d.test.ts` passed.
+
+### 2. Các tệp thay đổi
+- `components/model3d/builders/tank-t54.ts`: tệp mới.
+- `components/model3d/builders/independence-palace.ts`: tệp mới.
+- `components/model3d/builders/a37.ts`: tệp mới.
+- `components/model3d/builders/uh1.ts`: tệp mới.
+- `components/model3d/builders/index.ts`: đăng ký 5 mô hình mới.
+- `lib/models3d/specs.ts`: định nghĩa 5 ModelSpec mới.
+- `components/lesson/sections/ResourceSection.tsx`: bổ sung tab "Mô hình 3D".
+- `lib/lessons/chien-dich-ho-chi-minh.ts`: khai báo thuộc tính `models3d`.
+- `tests/unit/lesson-data.test.ts`: cập nhật kiểm thử bài học HCM 1975.
+- `docs/superpowers/plans/2026-10-25-hcm-1975-premium-lesson-progress.md`: cập nhật tiến độ Phase 7.
+
+### 3. Lệnh và kết quả kiểm chứng
+- `pnpm exec vitest run tests/unit/models3d.test.ts tests/unit/lesson-data.test.ts` -> Exit code 0 (72 tests passed).
+- `pnpm verify` -> Exit code 0:
+  - `agent:check`: valid.
+  - `history:data:check`: 42 tests passed.
+  - `lint`: 0 errors, 0 warnings.
+  - `typecheck`: 0 errors.
+  - `test`: 1009 vitest tests + 26 node tests passed.
+  - `build`: 108/108 trang tĩnh xuất thành công (bao gồm 5 trang `/mo-hinh-3d/*` tương ứng).
+
+### 4. Kế hoạch bước tiếp theo (Phase 8)
+- Kiểm tra toàn diện chất lượng giao diện (Visual Acceptance & Polish) trên các độ phân giải desktop chuẩn: 1280×720, 1366×768, 1440×900, 1920×1080.
+- Chụp ảnh màn hình đối chiếu với ảnh baseline ban đầu ở Phase 0:
+  - Header & Hero (depth photo parallax).
+  - Bản đồ 2D (5 cánh quân, thiết giáp, không quân, các mốc tiến công).
+  - Phim Bản đồ 3D (`/ban-do-3d/chien-dich-ho-chi-minh`).
+  - Tab "Mô hình 3D" trong mục Tư liệu.
+  - Tab "Hiện vật", "Di tích ngày nay", "Sa bàn 3D".
+- Đảm bảo 0 console errors, 0 cảnh báo layout shift, 0 gãy vỡ CSS.

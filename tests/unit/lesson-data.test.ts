@@ -157,6 +157,14 @@ describe("kịch bản Chiến dịch Hồ Chí Minh", () => {
     expect(hcmLesson!.todayScans?.length).toBeGreaterThanOrEqual(1);
     expect(hcmLesson!.videos.length).toBe(4);
     expect(hcmLesson!.flashcards.length).toBe(8);
+    expect(hcmLesson!.mapFilm).toBe("chien-dich-ho-chi-minh");
+    expect(hcmLesson!.models3d).toEqual([
+      "xe-tang-t54-843",
+      "xe-tang-t54-390",
+      "dinh-doc-lap",
+      "may-bay-a37",
+      "truc-thang-uh1",
+    ]);
   });
 });
 

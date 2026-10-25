@@ -334,6 +334,13 @@ export const chienDichHoChiMinhLesson: Lesson = {
   ],
   battle: chienDichHoChiMinh1975,
   mapFilm: "chien-dich-ho-chi-minh",
+  models3d: [
+    "xe-tang-t54-843",
+    "xe-tang-t54-390",
+    "dinh-doc-lap",
+    "may-bay-a37",
+    "truc-thang-uh1",
+  ],
   resultsScan: SCAN_DINH_DOC_LAP,
   resultsImage: DINH_THONG_NHAT,
   artifacts: [
