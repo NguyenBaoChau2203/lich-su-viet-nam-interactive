@@ -11,11 +11,34 @@ import { LEARNER_LOGIN, isProtectedLearnerPath, safeNext } from "@/lib/auth/rout
 export async function updateSession(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request });
 
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+
+  // Thiếu cấu hình Supabase (chưa tạo .env.local): không thể có phiên đăng nhập. Trang công khai vẫn
+  // hiển thị bình thường; khu vực cần đăng nhập thì chuyển về trang đăng nhập thay vì làm sập mọi request.
+  if (!supabaseUrl || !supabaseKey) {
+    const pathname = request.nextUrl.pathname;
+    if (isProtectedAdminPath(pathname)) {
+      const loginUrl = request.nextUrl.clone();
+      loginUrl.pathname = ADMIN_LOGIN;
+      loginUrl.search = "";
+      return NextResponse.redirect(loginUrl);
+    }
+    if (isProtectedLearnerPath(pathname)) {
+      const loginUrl = request.nextUrl.clone();
+      loginUrl.pathname = LEARNER_LOGIN;
+      loginUrl.search = "";
+      loginUrl.searchParams.set("next", safeNext(`${pathname}${request.nextUrl.search}`));
+      return NextResponse.redirect(loginUrl);
+    }
+    return supabaseResponse;
+  }
+
   // Với Fluid compute: không lưu client này vào biến toàn cục,
   // luôn tạo mới trong mỗi request.
   const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
+    supabaseUrl,
+    supabaseKey,
     {
       cookies: {
         getAll() {
