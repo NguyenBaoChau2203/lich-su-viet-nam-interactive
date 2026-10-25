@@ -89,3 +89,40 @@ Thiết bị / Môi trường: Windows 11, Node v24.19.0, pnpm v11.7.0.
 ### 4. Kế hoạch bước tiếp theo (Phase 2)
 - Chuyển giao Sổ nguồn cho chủ dự án rà soát.
 - Khi chủ dự án duyệt, bắt đầu Phase 2: Tải các hình ảnh đã thẩm tra vào `.media-work/`, chạy quy trình tối ưu sharp xuất sang `public/lessons/chien-dich-ho-chi-minh/*.webp` (≤ 250 KB), tạo depth maps qua `@huggingface/transformers` (≤ 60 KB), xác định tọa độ hotspots chính xác.
+
+
+---
+
+## 2026-10-25 — Phase 2: Pipeline Media (Tải ảnh, Nén chuẩn & Bản đồ độ sâu Depth Maps)
+
+### 1. Mục tiêu và kết quả
+- Tải 7 ảnh tư liệu mới từ Wikimedia Commons theo Sổ nguồn Phase 1:
+  - `cong-dinh-doc-lap.webp`: 1400×788, 234.5 KB (CC BY-SA 2.0)
+  - `san-thuong-dinh-doc-lap.webp`: 771×581, 196.2 KB (CC BY-SA 2.0)
+  - `ham-chi-huy-dinh-doc-lap.webp`: 1400×788, 119.8 KB (CC BY 2.0)
+  - `t54-bao-tang-ha-noi.webp`: 1400×792, 71.6 KB (CC0 1.0)
+  - `truc-thang-uh1-bao-tang.webp`: 1400×1053, 240.5 KB (CC BY-SA 2.0)
+  - `phao-130mm-bao-tang.webp`: 1400×796, 226.9 KB (CC BY-SA 3.0)
+  - `cau-rach-chiec.webp`: 1400×786, 65.6 KB (CC BY 3.0)
+- Toàn bộ 15 ảnh tư liệu trong `public/lessons/chien-dich-ho-chi-minh/` đều nằm trong ngân sách ≤ 245 KB (giới hạn tối đa 250 KB).
+- Tạo thành công 15 bản đồ độ sâu `-depth.webp` (512 px) bằng mô hình Depth Anything V2 Small qua `@huggingface/transformers` (sử dụng sharp native để xử lý chuẩn color space trên Windows):
+  - Kích thước mọi tệp `-depth.webp` đều dao động từ 1.3 KB đến 4.9 KB (đạt chuẩn ≤ 60 KB của unit test).
+  - Tỉ lệ khung hình của bản đồ độ sâu hoàn toàn khớp với ảnh gốc.
+- Đã chuẩn bị sẵn tọa độ phần trăm (3–97%) và nội dung chú thích (hotspots) cho từng ảnh, sẵn sàng nạp vào dữ liệu bài học ở Phase 3.
+
+### 2. Các tệp thay đổi
+- Thêm 7 ảnh `.webp` mới vào `public/lessons/chien-dich-ho-chi-minh/`.
+- Thêm 15 tệp bản đồ độ sâu `-depth.webp` vào `public/lessons/chien-dich-ho-chi-minh/`.
+- Cập nhật tiến độ: `docs/superpowers/plans/2026-10-25-hcm-1975-premium-lesson-progress.md`.
+
+### 3. Lệnh và kết quả kiểm chứng
+- `pnpm verify` -> Exit code 0 (agent:check, history:data:check, lint, typecheck, 1000 vitest + 26 node tests passed, next build 102/102 pages passed).
+
+### 4. Kế hoạch bước tiếp theo (Phase 3)
+- Cập nhật toàn diện `lib/lessons/chien-dich-ho-chi-minh.ts` để đạt cấu trúc ngang hàng (parity) với chuyên đề Điện Biên Phủ:
+  - Bổ sung `artifacts` (8 hiện vật kèm depthSrc, hotspots, scan 360°).
+  - Bổ sung `today` (6 địa danh kèm depthSrc và hotspots).
+  - Bổ sung `todayScans`, `resultsScan` (Dinh Độc Lập), `resultsImage`.
+  - Bổ sung `quote` (thơ chúc Tết Bác Hồ năm 1969).
+  - Bổ sung 4 mục tiêu bài học, 10 mốc thời gian, 8 flashcards, 10 câu trắc nghiệm.
+  - Mở rộng unit test `tests/unit/lesson-data.test.ts` kiểm soát nghiêm ngặt bài học Hồ Chí Minh.
