@@ -1,10 +1,17 @@
 import { describe, expect, it } from "vitest";
+import {
+  gateGeometry,
+  helicopterGeometry,
+  jetGeometry,
+  palaceGeometry,
+  tankGeometry,
+} from "@/components/mapfilm/models";
 import { dienBienPhu1954 } from "@/lib/battles/dien-bien-phu-1954";
 import { evaluateMapCamera, interpolateCam } from "@/lib/mapfilm/camera";
 import { dienBienPhuMapFilm as film } from "@/lib/mapfilm/dien-bien-phu";
 import { evaluateScene, nightAt, totalDuration } from "@/lib/mapfilm/evaluate";
 import { angleDelta, distanceMeters, fromLocal, fromMercator, pointAlong, toLocal, toMercator } from "@/lib/mapfilm/geo";
-import type { MapCam } from "@/lib/mapfilm/types";
+import type { MapCam, PieceKind, Side } from "@/lib/mapfilm/types";
 
 describe("mapfilm/geo", () => {
   it("Mercator đi rồi về giữ nguyên tọa độ", () => {
@@ -226,5 +233,29 @@ describe("mapfilm/kịch bản Điện Biên Phủ", () => {
     const total = totalDuration(film);
     expect(total).toBeGreaterThan(200);
     expect(total).toBeLessThan(330);
+  });
+});
+
+describe("mapfilm/mô hình 3D mở rộng và khí tài 1975", () => {
+  it("khởi tạo đầy đủ hình học xe tăng T-54, phản lực A-37, trực thăng UH-1, Dinh Độc Lập, cổng Dinh", () => {
+    const models = [
+      { name: "tank", geom: tankGeometry() },
+      { name: "jet", geom: jetGeometry() },
+      { name: "helicopter", geom: helicopterGeometry() },
+      { name: "palace", geom: palaceGeometry() },
+      { name: "gate", geom: gateGeometry() },
+    ];
+    for (const { name, geom } of models) {
+      expect(geom.getAttribute("position").count, name).toBeGreaterThan(10);
+      expect(geom.getAttribute("color"), name).toBeDefined();
+      expect(geom.boundingSphere?.radius, name).toBeGreaterThan(0.5);
+    }
+  });
+
+  it("mở rộng PieceKind và Side hỗ trợ đầy đủ các bên và chủng loại mới", () => {
+    const validPieces: PieceKind[] = ["infantry", "artillery", "hq", "porter", "tank", "jet", "helicopter", "palace", "gate"];
+    expect(validPieces).toHaveLength(9);
+    const validSides: Side[] = ["vn", "fr", "mt", "arvn"];
+    expect(validSides).toHaveLength(4);
   });
 });

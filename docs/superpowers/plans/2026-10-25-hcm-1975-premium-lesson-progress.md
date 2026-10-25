@@ -225,3 +225,59 @@ Thiết bị / Môi trường: Windows 11, Node v24.19.0, pnpm v11.7.0.
   - Mở rộng `UNIT_PIECE` trong `lib/mapfilm/evaluate.ts`.
   - Thêm hình học procedural trong `lib/mapfilm/three-layer.ts` và xử lý cờ Mặt trận Dân tộc Giải phóng (nửa trên đỏ, nửa dưới xanh lam, sao vàng) mà không ảnh hưởng tới cờ đỏ sao vàng của Điện Biên Phủ.
   - Chạy toàn bộ kiểm thử xác nhận không có bất kỳ hồi quy nào đối với Điện Biên Phủ.
+
+---
+
+## 2026-10-25 — Phase 5: Tổng quát hóa Engine Bản đồ 3D (3D Map Film Engine Generalization)
+
+### 1. Mục tiêu và kết quả
+- **Mở rộng hệ thống chủng loại quân cờ và phe tham chiến trong `lib/mapfilm/types.ts`:**
+  - `Side`: Bổ sung `"mt"` (Quân Giải phóng miền Nam / Mặt trận Dân tộc Giải phóng) và `"arvn"` (Quân lực Việt Nam Cộng hòa) bên cạnh `"vn"` và `"fr"`.
+  - `PieceKind`: Bổ sung 5 loại hình học mới: `"tank"` (xe tăng T-54), `"jet"` (máy bay cường kích A-37), `"helicopter"` (trực thăng UH-1), `"palace"` (công trình Dinh Độc Lập), `"gate"` (cổng sắt Dinh Độc Lập) bên cạnh 4 loại hiện có (`"infantry"`, `"artillery"`, `"hq"`, `"porter"`).
+- **Mở rộng bộ ánh xạ đơn vị 2D sang 3D trong `lib/mapfilm/evaluate.ts`:**
+  - Ánh xạ `"vn-armor"` -> `"tank"`, `"vn-aircraft"` -> `"jet"`.
+  - Gán `side: script.slug === "chien-dich-ho-chi-minh" ? "mt" : "vn"` cho các đơn vị chuyển từ kịch bản chiến dịch.
+- **Xây dựng 5 mô hình hình học thủ tục (Procedural BufferGeometry) chuẩn xác trong `components/mapfilm/models.ts`:**
+  - `tankGeometry()`: Thân xe T-54 vát nghiêng (`#3d4a2d`), 2 dải xích (`#1e201b`), tháp pháo bán cầu đúc đặc trưng (`#455433`), nòng pháo 100mm D-10T kèm loa giảm giật, 2 thùng nhiên liệu phụ phía sau.
+  - `jetGeometry()`: Thân thon dài A-37 Dragonfly (`#4a554a`), kính buồng lái nghiêng (`#88aacc`), cánh thẳng kèm thùng dầu đầu cánh, 2 động cơ phản lực J85 và ống xả.
+  - `helicopterGeometry()`: Cabin trực thăng UH-1 Iroquois Huey (`#384232`), kính buồng lái, đuôi dài, cánh quạt chính 2 lá xoay ngang (`#222222`), cánh quạt đuôi, càng hạ cánh dạng trượt kép (skids).
+  - `palaceGeometry()`: Kiến trúc Dinh Độc Lập 3 tầng (`#f0ece1`), hệ lam chắn nắng "rèm hoa đá" mặt tiền cách điệu đốt trúc (`#d8d2c4`), sảnh đón tầng trệt, sân thượng có bãi đáp trực thăng tròn màu vàng kèm chữ **H**, cột cờ đỉnh dinh.
+  - `gateGeometry()`: 2 cột trụ bê tông sừng sững (`#c8c2b5`) và 2 cánh cổng sắt hoa văn uốn lượn màu đen xám (`#282c30`), phù hiệu tròn ở tâm.
+  - `flagTexture(kind)`: Hỗ trợ tạo texture Canvas cho `"mt"` (nửa trên đỏ `#da251d`, nửa dưới xanh lam `#1b6bb5`, sao vàng 5 cánh ở tâm) và `"arvn"` (nền vàng `#fbd116`, 3 sọc đỏ `#da251d`), đồng thời duy trì 100% texture cờ đỏ sao vàng `"vn"` và cờ 3 màu `"fr"`.
+- **Nâng cấp `components/mapfilm/three-layer.ts`:**
+  - Khởi tạo InstancedMesh (Batch) cho 5 loại mô hình mới và 2 loại cờ mới (`flagsMt`, `flagsArvn`).
+  - Hỗ trợ vẽ động trong `drawPiece()` cho tất cả các loại hình học và tự động gán cờ Giải phóng (`flagsMt`) cho đơn vị bên ta trong Chiến dịch Hồ Chí Minh.
+  - Xử lý hoán đổi cờ cứ điểm căn cứ theo slug kịch bản (`isHcm`): hạ cờ Sài Gòn (`flagsArvn`), kéo cờ Mặt trận (`flagsMt`).
+- **Nâng cấp `components/mapfilm/runtime.ts`:**
+  - Truyền `script.slug` vào `createThreeLayer(script.origin, script.slug)` để ThreeLayer nhận diện ngữ cảnh chiến dịch.
+- **Kiểm thử tự động:**
+  - Bổ sung test suites mới trong `tests/unit/mapfilm.test.ts` kiểm tra tính hợp lệ của cả 5 mô hình hình học (position attribute, color attribute, boundingSphere radius) và tính toàn vẹn của kiểu dữ liệu mở rộng.
+  - 22/22 unit tests trong `mapfilm.test.ts` passed.
+
+### 2. Các tệp thay đổi
+- `lib/mapfilm/types.ts`: mở rộng `PieceKind` và `Side`.
+- `lib/mapfilm/evaluate.ts`: ánh xạ đơn vị thiết giáp/không quân và phe Mặt trận.
+- `components/mapfilm/models.ts`: bổ sung 5 geometries và hỗ trợ flagTexture `mt` / `arvn`.
+- `components/mapfilm/three-layer.ts`: quản lý batch instances và render cờ/mô hình theo slug.
+- `components/mapfilm/runtime.ts`: truyền `script.slug` vào ThreeLayer.
+- `tests/unit/mapfilm.test.ts`: bổ sung unit tests cho hình học 1975.
+- `docs/superpowers/plans/2026-10-25-hcm-1975-premium-lesson-progress.md`: cập nhật tiến độ Phase 5.
+
+### 3. Lệnh và kết quả kiểm chứng
+- `pnpm exec vitest run tests/unit/mapfilm.test.ts` -> Exit code 0 (22 tests passed).
+- `pnpm verify` -> Exit code 0:
+  - `agent:check`: valid.
+  - `history:data:check`: 42 tests passed.
+  - `lint`: 0 errors, 0 warnings.
+  - `typecheck`: 0 errors.
+  - `test`: 1000 vitest tests + 26 node tests passed.
+  - `build`: 102/102 trang tĩnh xuất thành công.
+
+### 4. Kế hoạch bước tiếp theo (Phase 6)
+- Xây dựng kịch bản Phim Bản đồ 3D cho Chiến dịch Hồ Chí Minh (`lib/mapfilm/chien-dich-ho-chi-minh.ts`):
+  - 7 cảnh phim khớp hoàn toàn với 7 bước bản đồ 2D (`thoi-co`, `xuan-loc`, `bao-vay`, `no-sung`, `tan-son-nhat`, `tong-cong-kich`, `dinh-doc-lap`).
+  - Đường bay camera điện ảnh 3D với góc nghiêng pitch 45–60°, zoom cận cảnh hành tiến của các cánh quân.
+  - Lời bình chạy phụ đề chuẩn sử liệu, kiểm soát tốc độ đọc ≤ 4.4 từ/giây.
+  - Động tác hành tiến của xe tăng (`tank`), pháo kích (`barrage`), máy bay phản lực A-37 (`jet`) ném bom Tân Sơn Nhất, trực thăng di tản (`helicopter`), Dinh Độc Lập (`palace`) và cổng Dinh (`gate`).
+  - Đăng ký kịch bản vào `lib/mapfilm/index.ts` và kích hoạt `mapFilm: "chien-dich-ho-chi-minh"` trong bài học.
+  - Chạy toàn bộ kiểm thử và cổng soát lỗi.
