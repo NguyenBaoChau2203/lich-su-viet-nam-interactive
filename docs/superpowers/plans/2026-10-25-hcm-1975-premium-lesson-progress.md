@@ -53,3 +53,39 @@ Thiết bị / Môi trường: Windows 11, Node v24.19.0, pnpm v11.7.0.
 - Tìm kiếm và kiểm tra giấy phép ảnh Wikimedia Commons, mô hình quét 3D Sketchfab (oEmbed), video YouTube chính thống.
 - Dự thảo toàn bộ nội dung tiếng Việt mới.
 - Dừng ở cuối Phase 1 để người dùng duyệt nguồn trước khi tải ảnh/tạo bản đồ độ sâu ở Phase 2.
+
+
+---
+
+## 2026-10-25 — Phase 1: Khảo sát sử liệu và lập Sổ nguồn (Source Ledger)
+
+### 1. Mục tiêu và kết quả
+- Hoàn thành Sổ nguồn chi tiết tại `docs/audits/2026-10-25-hcm-1975-lesson-sources.md`.
+- Xác minh độc lập 23/23 dữ kiện lịch sử (F1 – F23) qua ít nhất 2 nguồn chính thống (SGK Lịch sử 12 Kết nối tri thức, Hồi ký *Đại thắng mùa Xuân*, Bảo tàng Lịch sử Quốc gia, Bảo tàng Lịch sử Quân sự Việt Nam, Bảo tàng Chiến dịch Hồ Chí Minh, Di tích Dinh Độc Lập, các quyết định Bảo vật Quốc gia của Thủ tướng).
+- Thẩm định 15 tọa độ địa lý chiến dịch trên OpenStreetMap (Dinh Độc Lập, Tân Sơn Nhất, Bộ Tổng tham mưu, Biên Hòa, Đồng Dù, Xuân Lộc, cầu Rạch Chiếc, cầu Sài Gòn, Đài phát thanh Sài Gòn, sân bay Thành Sơn, Vũng Tàu, Châu Đốc...).
+- Khảo sát và thẩm tra 14 tệp hình ảnh tư liệu trên Wikimedia Commons: đảm bảo giấy phép tự do (Public Domain, CC0, CC BY 4.0, CC BY 2.0, CC BY-SA 3.0), không dùng ảnh báo chí 1975 chưa đủ 75 năm bảo hộ; loại trừ ảnh di tản đại sứ quán khỏi vị trí Hero.
+- Tìm kiếm và xác thực qua Sketchfab oEmbed API 4 mô hình 3D xoay 360° có giấy phép CC BY 4.0:
+  - Dinh Độc Lập (`2c4905c6a1fd4fb18981886a77ba4fa9` - tác giả Hoàng Huy)
+  - Xe tăng T-54 (`6bde9f748c3e472e878d333998b506f9` - tác giả SGAstudio)
+  - Trực thăng UH-1 Huey (`29ae1fb161a04128b006089b95ab1017` - tác giả bunnellrl1)
+  - Cường kích A-37 Dragonfly (`181dcd131e4342e89df5bafaf96be1b1` - tác giả manilov.ap)
+- Xác thực 4 video tư liệu YouTube chính thống qua oEmbed:
+  - `TnQYFiXX1Zg`: "Chiến dịch Hồ Chí Minh trong 4 phút" (VTV24)
+  - `bPwhnZWX-5k`: "51 năm Ngày Giải phóng miền Nam, thống nhất đất nước" (VTV24)
+  - `gzFbBjCbGMY`: "Chiến dịch Hồ Chí Minh bắt đầu" (VTV24)
+  - `FM1rvymqyow`: "Đại Thắng Mùa Xuân 1975: Hành Trình Tiến Về Sài Gòn Giải Phóng Miền Nam" (QPVN Digital)
+- Dự thảo đầy đủ toàn bộ nội dung tiếng Việt mới: 4 mục tiêu bài học SGK, 10 mốc thời gian, lời dẫn 7 bước bản đồ 2D (> 200 ký tự), 8 hiện vật (kèm 2-4 hotspots), 6 địa danh ngày nay, 4 luận điểm ý nghĩa, thơ chúc Tết Bác Hồ 1969, 4 nhân vật lịch sử, 8 thẻ ghi nhớ, 10 câu trắc nghiệm chất lượng cao, kịch bản phụ đề và phân cảnh 7 cảnh bản đồ 3D (tốc độ đọc ≤ 4.4 từ/giây).
+
+### 2. Các tệp thay đổi
+- `docs/audits/2026-10-25-hcm-1975-lesson-sources.md`: Sổ nguồn sử liệu và hồ sơ thẩm tra tư liệu.
+- `docs/superpowers/plans/2026-10-25-hcm-1975-premium-lesson-progress.md`: cập nhật tiến độ Phase 1.
+
+### 3. Lệnh và kết quả kiểm chứng
+- `pnpm history:data:check` -> Exit code 0 (42 passed)
+- `pnpm agent:check` -> Exit code 0
+- `pnpm lint` -> Exit code 0
+- `pnpm typecheck` -> Exit code 0
+
+### 4. Kế hoạch bước tiếp theo (Phase 2)
+- Chuyển giao Sổ nguồn cho chủ dự án rà soát.
+- Khi chủ dự án duyệt, bắt đầu Phase 2: Tải các hình ảnh đã thẩm tra vào `.media-work/`, chạy quy trình tối ưu sharp xuất sang `public/lessons/chien-dich-ho-chi-minh/*.webp` (≤ 250 KB), tạo depth maps qua `@huggingface/transformers` (≤ 60 KB), xác định tọa độ hotspots chính xác.
