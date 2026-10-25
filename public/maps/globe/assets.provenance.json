@@ -1,0 +1,129 @@
+{
+  "title": "Matched label-free Earth surface texture set for the cinematic history globe",
+  "publisher": "Solar System Scope (developed by INOVE)",
+  "publisherUrl": "https://www.solarsystemscope.com/textures/",
+  "accessedAt": "2026-10-23",
+  "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "permissionStatement": "Distributed under Attribution 4.0 International license: You may use, adapt, and share these textures for any purpose, even commercially.",
+  "projection": "Equirectangular (WGS84 / plate carrée 2:1 aspect ratio, [-180°, 180°] longitude by [-90°, 90°] latitude, centered at 0° longitude, 0° latitude)",
+  "scope": "Label-free global planetary surface albedo (day map), tangent-space relief normal map, and land/water specular mask for the homepage 3D globe.",
+  "limitations": "Modern seasonal vegetation/albedo composite; not a historical land-cover or border reconstruction. National and event geography must come from the sourced GeoJSON layers (/maps/vietnam-tabletop.geojson, /maps/history-world-land.geojson) and event coordinate records.",
+  "budgetSummary": {
+    "totalLocalBytes": 812259,
+    "totalLocalKiB": 793.22,
+    "transferBudgetBytes": 3145728,
+    "estimatedDecodedGpuBytesWithMipmaps": 67108864,
+    "estimatedDecodedGpuMiBWithMipmaps": 64.0,
+    "decodedGpuBudgetMiB": 96.0
+  },
+  "assets": [
+    {
+      "id": "earth-day-4k",
+      "localPath": "/maps/globe/earth-day-4096x2048.jpg",
+      "role": "Primary label-free Earth day albedo texture (sRGB)",
+      "creator": "Solar System Scope / INOVE",
+      "sourcePageUrl": "https://www.solarsystemscope.com/textures/",
+      "upstreamDownloadUrl": "https://www.solarsystemscope.com/textures/download/8k_earth_daymap.jpg",
+      "accessedAt": "2026-10-23",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "upstream": {
+        "filename": "8k_earth_daymap.jpg",
+        "format": "image/jpeg",
+        "width": 8192,
+        "height": 4096,
+        "channels": 3,
+        "colorSpace": "srgb",
+        "bytes": 4565076,
+        "sha256": "88ab060b6e7d241cfc590c69f528fab2b3247b738d40124cb590999a6fe44abc"
+      },
+      "local": {
+        "filename": "earth-day-4096x2048.jpg",
+        "format": "image/jpeg",
+        "width": 4096,
+        "height": 2048,
+        "channels": 3,
+        "colorSpace": "srgb",
+        "chromaSubsampling": "4:2:0",
+        "bytes": 604686,
+        "sha256": "dd19f035724ef42464c89a4feb0d46ad4cbdf9fa591fed9bf4c861768e16cfa2",
+        "estimatedDecodedGpuMiBWithMipmaps": 42.67
+      },
+      "transformations": [
+        "Downscaled 2:1 from 8192×4096 to 4096×2048 using sharp 0.35.5 with Lanczos3 kernel to meet the ≤4096×2048 initial globe texture budget without keeping the 8K file in the repository.",
+        "Encoded as MozJPEG (quality 84, sRGB, 4:2:0 chroma subsampling). No geographic cropping, warping, or artificial label/border painting applied."
+      ]
+    },
+    {
+      "id": "earth-normal-2k",
+      "localPath": "/maps/globe/earth-normal-2048x1024.jpg",
+      "role": "Secondary tangent-space terrain normal map (linear RGB)",
+      "creator": "Solar System Scope / INOVE",
+      "sourcePageUrl": "https://www.solarsystemscope.com/textures/",
+      "upstreamDownloadUrl": "https://www.solarsystemscope.com/textures/download/2k_earth_normal_map.tif",
+      "accessedAt": "2026-10-23",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "upstream": {
+        "filename": "2k_earth_normal_map.tif",
+        "format": "image/tiff",
+        "width": 2048,
+        "height": 1024,
+        "channels": 3,
+        "bytes": 521376,
+        "sha256": "f518ce2646ca935dbc17e316041de4fea7a5da0ec441e4eb22e711eabd843ba2"
+      },
+      "local": {
+        "filename": "earth-normal-2048x1024.jpg",
+        "format": "image/jpeg",
+        "width": 2048,
+        "height": 1024,
+        "channels": 3,
+        "chromaSubsampling": "4:4:4",
+        "bytes": 74177,
+        "sha256": "8cb5fd182d1647104825de7f62a441fea00eb0f45e0a68aeb7b37d6792d2f0a5",
+        "estimatedDecodedGpuMiBWithMipmaps": 10.67
+      },
+      "transformations": [
+        "Transcoded from upstream 2048×1024 TIFF (not natively decoded by browser HTMLImageElement / THREE.TextureLoader) to 2048×1024 JPEG using sharp 0.35.5.",
+        "Encoded as MozJPEG (quality 92, 4:4:4 full chroma resolution) to preserve X/Y tangent-space normal vector accuracy across mountain ranges without resolution or projection changes."
+      ]
+    },
+    {
+      "id": "earth-specular-2k",
+      "localPath": "/maps/globe/earth-specular-2048x1024.jpg",
+      "role": "Secondary land/water specular and roughness response mask (linear)",
+      "creator": "Solar System Scope / INOVE",
+      "sourcePageUrl": "https://www.solarsystemscope.com/textures/",
+      "upstreamDownloadUrl": "https://www.solarsystemscope.com/textures/download/2k_earth_specular_map.tif",
+      "accessedAt": "2026-10-23",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "upstream": {
+        "filename": "2k_earth_specular_map.tif",
+        "format": "image/tiff",
+        "width": 2048,
+        "height": 1024,
+        "channels": 3,
+        "bytes": 338524,
+        "sha256": "6b90ecfce248591a1ecc9a3e49acca1a7059b6828877e718302ed9a6b4471bd7"
+      },
+      "local": {
+        "filename": "earth-specular-2048x1024.jpg",
+        "format": "image/jpeg",
+        "width": 2048,
+        "height": 1024,
+        "channels": 3,
+        "chromaSubsampling": "4:2:0",
+        "bytes": 133396,
+        "sha256": "465ce53d3185694ce0878b97e7a4a2a1b39e14f6522dbd8717a08b93bbd321f7",
+        "estimatedDecodedGpuMiBWithMipmaps": 10.67
+      },
+      "transformations": [
+        "Transcoded from upstream 2048×1024 TIFF to 2048×1024 MozJPEG (quality 85) using sharp 0.35.5 for browser TextureLoader compatibility.",
+        "No resolution, orientation, or coastline changes applied; matches the equirectangular UV grid of earth-day-4096x2048.jpg and earth-normal-2048x1024.jpg."
+      ]
+    }
+  ]
+}

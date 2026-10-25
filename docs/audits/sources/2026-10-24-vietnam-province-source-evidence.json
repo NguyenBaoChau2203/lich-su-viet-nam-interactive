@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 1,
+  "status": "needs_evidence",
+  "productionReady": false,
+  "accessedAt": "2026-10-24",
+  "source": {
+    "publisher": "OpenStreetMap contributors / Geofabrik GmbH",
+    "url": "https://download.geofabrik.de/asia/vietnam-261023.osm.pbf",
+    "downloadedVia": "https://download.geofabrik.de/asia/vietnam-latest.osm.pbf",
+    "sourceBytes": 331456690,
+    "sourceSha256": "c2d0d493638ba152370c89252f9b9a5f0844e7936505f3ab617fadd7023a5c90",
+    "publisherMd5": "bdf516510a27fab5223bee468f79c79a",
+    "timestamp": "2026-10-23T20:20:51Z",
+    "license": "ODbL-1.0",
+    "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "attribution": "© OpenStreetMap contributors",
+    "relationVersionsMatchingNextDayMetadata": 34,
+    "revisionDifferences": []
+  },
+  "researchExtraction": {
+    "python": "3.13.5",
+    "pyosmium": "4.3.2",
+    "rawBytes": 15166255,
+    "rawSha256": "587a00e6aedc42f461c100fcaa33c4ac80f78dd5c00afddc1f7d748e9e3fef3c",
+    "gzipBytes": 3231099,
+    "gzipSha256": "5504fab937f8f991a4926334e441da1f9f1b6a9219ec303eff82dd44f41c76d0",
+    "runsIdentical": true,
+    "note": "Research extraction only, not a completed province builder or runtime artifact."
+  },
+  "validation": {
+    "schemaVersion": 1,
+    "status": "needs_evidence",
+    "productionReady": false,
+    "polygonValidity": "not_verified",
+    "sourceTimestamp": "2026-10-23T20:20:51Z",
+    "membership": {
+      "expected": 34,
+      "matched": 34
+    },
+    "topology": {
+      "availableWays": 2326,
+      "referencedWays": 2342,
+      "missingWays": 16,
+      "availableNodes": 218035,
+      "sharedWays": 1726,
+      "singleOwnerWays": 600,
+      "excludedSharedWays": 32,
+      "interiorCandidateSegments": 144617
+    },
+    "nameDifferences": [
+      {
+        "provinceCode": "22",
+        "officialName": "Tỉnh Quảng Ninh",
+        "osmName": "Thành phố Quảng Ninh"
+      },
+      {
+        "provinceCode": "24",
+        "officialName": "Tỉnh Bắc Ninh",
+        "osmName": "Thành phố Bắc Ninh"
+      },
+      {
+        "provinceCode": "75",
+        "officialName": "Tỉnh Đồng Nai",
+        "osmName": "Thành phố Đồng Nai"
+      }
+    ],
+    "issues": [
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1120240923,
+        "role": "outer"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1120240925,
+        "role": "outer"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1120240927,
+        "role": "outer"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1120240928,
+        "role": "outer"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1120240930,
+        "role": "outer"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1120240931,
+        "role": "inner"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1120240932,
+        "role": "outer"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1120240934,
+        "role": "outer"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1120240941,
+        "role": "outer"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1120240942,
+        "role": "outer"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1120240947,
+        "role": "outer"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1120240954,
+        "role": "outer"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1120240955,
+        "role": "outer"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1199677144,
+        "role": "outer"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1319181446,
+        "role": "outer"
+      },
+      {
+        "code": "MISSING_WAY",
+        "provinceCode": "56",
+        "relationId": 1887959,
+        "wayId": 1368675506,
+        "role": "outer"
+      }
+    ],
+    "structurallyComplete": false
+  },
+  "polygonResearch": {
+    "tool": "Shapely 2.1.2 / GEOS",
+    "validUnits": 33,
+    "notChecked": [
+      {
+        "relationId": 1887959,
+        "name": "Tỉnh Khánh Hòa",
+        "status": "not_checked_missing_parts",
+        "missingWays": [
+          {
+            "type": "w",
+            "ref": 1120240941,
+            "role": "outer"
+          },
+          {
+            "type": "w",
+            "ref": 1120240942,
+            "role": "outer"
+          },
+          {
+            "type": "w",
+            "ref": 1120240932,
+            "role": "outer"
+          },
+          {
+            "type": "w",
+            "ref": 1319181446,
+            "role": "outer"
+          },
+          {
+            "type": "w",
+            "ref": 1120240928,
+            "role": "outer"
+          },
+          {
+            "type": "w",
+            "ref": 1120240930,
+            "role": "outer"
+          },
+          {
+            "type": "w",
+            "ref": 1120240925,
+            "role": "outer"
+          },
+          {
+            "type": "w",
+            "ref": 1120240927,
+            "role": "outer"
+          },
+          {
+            "type": "w",
+            "ref": 1199677144,
+            "role": "outer"
+          },
+          {
+            "type": "w",
+            "ref": 1120240934,
+            "role": "outer"
+          },
+          {
+            "type": "w",
+            "ref": 1368675506,
+            "role": "outer"
+          },
+          {
+            "type": "w",
+            "ref": 1120240931,
+            "role": "inner"
+          },
+          {
+            "type": "w",
+            "ref": 1120240947,
+            "role": "outer"
+          },
+          {
+            "type": "w",
+            "ref": 1120240923,
+            "role": "outer"
+          },
+          {
+            "type": "w",
+            "ref": 1120240955,
+            "role": "outer"
+          },
+          {
+            "type": "w",
+            "ref": 1120240954,
+            "role": "outer"
+          }
+        ]
+      }
+    ],
+    "note": "Ring validity for available complete units is not complete 34-unit coverage or a legal/survey determination."
+  },
+  "budgets": {
+    "interpretation": "Record both raw and gzip. Existing runtime geography budget measures gzip transfer size; the baseline exceeds 800 KiB if interpreted as raw JSON.",
+    "primaryRuntime": {
+      "bytes": 1777643,
+      "gzipBytes": 586931
+    },
+    "allMapsJsonIncludingProvenance": {
+      "bytes": 1796447,
+      "gzipBytes": 592714
+    },
+    "provinceArtifact": null,
+    "provinceSegments": null,
+    "rawInteriorCandidateSegments": 144617,
+    "files": [
+      {
+        "file": "public/maps/globe/assets.provenance.json",
+        "bytes": 6213,
+        "gzipBytes": 2040,
+        "sha256": "e35d548fe6e0ef9847d82a82bff0995b689e8f45b172f9a90ce23691b7482958"
+      },
+      {
+        "file": "public/maps/history-country-boundaries.geojson",
+        "bytes": 413412,
+        "gzipBytes": 132508,
+        "sha256": "c388e20028bcc47ffa1e1efe79c224bab7ff6a989b02daba358143af7927f809"
+      },
+      {
+        "file": "public/maps/history-country-boundaries.provenance.json",
+        "bytes": 6799,
+        "gzipBytes": 1341,
+        "sha256": "b34e99652d52345a974e248ff25dac94cee0d5895167de2f3f54e1ca3fb006f4"
+      },
+      {
+        "file": "public/maps/history-vietnam-labels.json",
+        "bytes": 1071,
+        "gzipBytes": 540,
+        "sha256": "af6491c8bf671ccf4444d1507406e23fd223b824e1ba6b67a92cfbe3f31aefac"
+      },
+      {
+        "file": "public/maps/history-world-land.geojson",
+        "bytes": 1257963,
+        "gzipBytes": 417635,
+        "sha256": "d2a0f8661ec662ba9bdd45072b2800a2c917102d2291a6d93a1401a2479a28cb"
+      },
+      {
+        "file": "public/maps/history-world-land.provenance.json",
+        "bytes": 1010,
+        "gzipBytes": 583,
+        "sha256": "8a999e03b5088956b77859ac46a2467f140dbf3c453dcab9063ae9aad7c6914c"
+      },
+      {
+        "file": "public/maps/vietnam-tabletop.geojson",
+        "bytes": 105197,
+        "gzipBytes": 36248,
+        "sha256": "2239001e2c4030421949a760feb4e1ddae5abe192bd7827344848851a431a895"
+      },
+      {
+        "file": "public/maps/vietnam-tabletop.provenance.json",
+        "bytes": 4782,
+        "gzipBytes": 1819,
+        "sha256": "485b9da431fbd019fec0e4f723ed1eb9adfe655f164dd1d78a26717a7a0f40ae"
+      }
+    ],
+    "otherPublicGeojson": [
+      {
+        "file": "public/mapfilm/indochina-borders.geojson",
+        "bytes": 14891,
+        "gzipBytes": 4942,
+        "sha256": "fc2919bdafd02205bb8eb19081d76da5493dcfd7f4b1299f5b37fa7c3e9e75a8"
+      }
+    ],
+    "allPublicGeographyIncludingMapfilm": {
+      "bytes": 1811338,
+      "gzipBytes": 597656
+    }
+  },
+  "previews": [
+    {
+      "file": "output/playwright/explorer-refinement/task-05/source-overview-incomplete.png",
+      "sha256": "9bfea4713c19d2c36d63403e9aae70ba31702bdcb429dd0d1361ce58170e5d26",
+      "bytes": 211927
+    },
+    {
+      "file": "output/playwright/explorer-refinement/task-05/khanh-hoa-available-parts.png",
+      "sha256": "8a580b0b8f8cc8cca564c348e80cf7ce9cbaa9016076fc878d5be4bb59bf4e0b",
+      "bytes": 233525
+    }
+  ],
+  "productionDeliverables": {
+    "builder": null,
+    "geojson": null,
+    "provenance": null,
+    "runtimeParser": null,
+    "reason": "Missing 16 source ways, including an inner ring, prevents verified complete geometry. No production asset or loader is created."
+  },
+  "researchCodeHashes": [
+    {
+      "file": "scripts/extract-vietnam-province-research.py",
+      "sha256": "58df5d29c62811706ea7a9b12e44687a08888343f4c2e66a9f33f760d1a2899f"
+    },
+    {
+      "file": "scripts/validate-vietnam-province-source.mjs",
+      "sha256": "988f6deeaa0581e452eb7ccc73357d66cecd7bb3e9c08e6cf9eaa07b8bac128a"
+    }
+  ]
+}

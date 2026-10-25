@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kiểm chứng lát cắt phát hành"
+  short_description: "Kiểm tra đầy đủ trước khi bàn giao tính năng"
+  default_prompt: "Use $verify-release-slice to verify a completed feature slice and report concrete evidence."

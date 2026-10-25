@@ -1,0 +1,69 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound, unstable_rethrow } from "next/navigation";
+import { EventDetailView } from "@/components/content/detail/EventDetailView";
+import { getEventDetail } from "@/lib/queries/event-detail";
+import { getTimelineEvents, type TimelineEvent } from "@/lib/queries/events";
+import { pickCover } from "@/lib/media";
+import { shareImage } from "@/lib/site";
+import { truncateForMeta } from "@/lib/utils/text";
+import { getExplorerReturnHref } from "@/lib/explorer/url";
+
+type EventPageProps = { params: Promise<{ slug: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> };
+
+export async function generateMetadata({ params }: EventPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const event = await getEventDetail(slug);
+  if (!event) return { title: "Không tìm thấy nội dung" };
+
+  const description = truncateForMeta(event.summary);
+  return {
+    title: event.title,
+    description,
+    openGraph: {
+      title: event.title,
+      description,
+      type: "article",
+      images: [shareImage("su-kien", event.slug, event.title, pickCover(event.media) !== null)],
+    },
+  };
+}
+
+/** Danh sách sự kiện cho "trước/sau" và "cùng chủ đề". Nội dung phụ: lỗi thì bỏ qua, không làm hỏng trang. */
+async function loadTimelineQuietly(): Promise<TimelineEvent[]> {
+  try {
+    return await getTimelineEvents();
+  } catch (error) {
+    unstable_rethrow(error); // tín hiệu nội bộ của Next.js (redirect, notFound, render động) phải được ném tiếp
+    return [];
+  }
+}
+
+/** Sự kiện trước/sau trên dòng thời gian + sự kiện cùng chủ đề (hàm thuần trên danh sách đã sắp theo thời gian). */
+function pickNeighbours(all: TimelineEvent[], slug: string, topicSlug: string | undefined) {
+  const index = all.findIndex((event) => event.slug === slug);
+  return {
+    previous: index > 0 ? all[index - 1] : undefined,
+    next: index >= 0 ? all[index + 1] : undefined,
+    sameTopic: topicSlug
+      ? all.filter((event) => event.topicSlugs.includes(topicSlug) && event.slug !== slug).slice(0, 3)
+      : [],
+  };
+}
+
+export default async function EventPage({ params, searchParams }: EventPageProps) {
+  const { slug } = await params;
+  // Hai truy vấn độc lập → chạy SONG SONG (trước đây tuần tự làm thời gian phản hồi gấp đôi). Chi tiết sự kiện
+  // đã được `generateMetadata` nạp cùng request nhờ React cache nên không tốn thêm lượt gọi.
+  const [event, timeline] = await Promise.all([getEventDetail(slug), loadTimelineQuietly()]);
+  if (!event) notFound();
+
+  const { previous, next, sameTopic } = pickNeighbours(timeline, slug, event.topicSlug);
+  const context = (await searchParams)?.["kham-pha"];
+  return <>
+    {context !== undefined && <div className="mx-auto max-w-6xl px-4 pt-4 sm:px-6">
+      <Link href={getExplorerReturnHref(context, slug)} className="text-sm font-semibold text-accent underline underline-offset-4">← Trở lại bản đồ</Link>
+    </div>}
+    <EventDetailView event={event} previous={previous} next={next} sameTopic={sameTopic} />
+  </>;
+}

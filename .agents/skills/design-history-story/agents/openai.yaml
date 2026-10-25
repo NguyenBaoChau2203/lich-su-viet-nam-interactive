@@ -1,0 +1,4 @@
+interface:
+  display_name: "Thiết kế câu chuyện lịch sử"
+  short_description: "Thiết kế kể chuyện dễ đọc và có chủ đích"
+  default_prompt: "Use $design-history-story to design an accessible historical storytelling route without generic AI visuals."

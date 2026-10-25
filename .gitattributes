@@ -1,0 +1,22 @@
+* text=auto
+
+*.css text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.geojson text eol=lf
+*.md text eol=lf
+*.mjs text eol=lf
+*.mts text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+*.docx binary
+
+# Keep the new checksum-pinned province pipeline/artifact identical on checkout.
+/scripts/province-boundaries/*.py text eol=lf
+/public/maps/history-vietnam-province-boundaries.geojson text eol=lf
+
+# Git for Windows must execute these through Git Bash without CRLF corruption.
+/.githooks/* text eol=lf

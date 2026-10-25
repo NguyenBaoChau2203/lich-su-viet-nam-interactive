@@ -1,0 +1,12 @@
+{
+  "exclude": [
+    "outputs/",
+    "output/",
+    ".review-render*/",
+    ".task-reports/",
+    ".codex-tmp/",
+    "supabase/.temp/",
+    "public/vendor/",
+    "**/__pycache__/"
+  ]
+}
