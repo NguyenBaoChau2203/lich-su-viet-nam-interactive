@@ -28,7 +28,7 @@
 .globe-map .cinematic-globe-canvas:focus-visible { outline: 2px solid #f5d99b; outline-offset: -4px; }
 .globe-overlay { pointer-events: none; z-index: 5; overflow: hidden; }
 .home-map-intro { position: absolute; z-index: 20; top: var(--atlas-top); left: var(--atlas-edge); width: 320px; max-height: calc(100% - var(--atlas-top) - var(--atlas-rail-space) - 16px); overflow-y: auto; overscroll-behavior: contain; color: var(--foreground); scrollbar-width: thin; scrollbar-color: #a88a5355 transparent; }
-.home-map-intro::before { content: ""; position: absolute; inset: -26px -35px -30px -30px; z-index: -1; pointer-events: none; background: radial-gradient(ellipse at top left, #050b14ed 10%, #050b1499 55%, transparent 72%); }
+.home-map-intro::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(ellipse at top left, #050b14ed 10%, #050b1499 55%, transparent 72%); }
 .home-map-intro h1 { margin: 0; font-family: var(--font-serif), Georgia, serif; font-size: clamp(40px, 3.2vw, 48px); font-weight: 500; line-height: 1.2; letter-spacing: -.025em; text-wrap: balance; }
 .globe-description { margin-top: 14px; font-size: 13px; line-height: 1.7; color: var(--muted-foreground); }
 .globe-hint { margin-top: 18px; padding-top: 14px; font-size: 12px; line-height: 1.7; color: #c5cbd2; }

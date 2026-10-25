@@ -1,5 +1,26 @@
 import { test, expect } from "./refinement-test";
 
+for (const size of [
+  { width: 1280, height: 720 },
+  { width: 1366, height: 768 },
+  { width: 1440, height: 900 },
+  { width: 1920, height: 1080 },
+]) {
+  test(`intro decoration does not create scrollbars at ${size.width}x${size.height}`, async ({ page }) => {
+    await page.setViewportSize(size);
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await page.goto("/");
+    await expect(page.getByTestId("globe-map")).toHaveAttribute("data-ready", "true", { timeout: 30_000 });
+    await page.evaluate(() => document.fonts.ready);
+    const scroll = await page.locator(".home-map-intro").evaluate(element => ({
+      width: element.clientWidth, contentWidth: element.scrollWidth,
+      height: element.clientHeight, contentHeight: element.scrollHeight,
+    }));
+    expect(scroll.contentWidth).toBeLessThanOrEqual(scroll.width + 1);
+    expect(scroll.contentHeight).toBeLessThanOrEqual(scroll.height + 1);
+  });
+}
+
 test("country geometry over the render budget degrades without an unhandled error", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   const errors: string[] = [];

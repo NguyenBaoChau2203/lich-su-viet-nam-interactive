@@ -6,9 +6,27 @@ The owner requested a final review, necessary optimization, a local commit and a
 
 ## Review result
 
-Source, builder, production artifact, optional loading, render ordering, attribution and desktop tests have been inspected. No additional runtime correction is currently justified by the inspected code and fresh checks. Keep the existing measured simplification, single batched province layer and stable observer lifecycle. Do not introduce a speculative visual rewrite or a new rendering dependency.
+Source, builder, production artifact, optional loading, render ordering, attribution and desktop tests have been inspected. Province data and rendering need no further correction. Keep the existing measured simplification, single batched province layer and stable observer lifecycle. The later visible-browser pass identified the separate decorative overflow defect below.
 
-**Handoff gate passed.** Fresh full verification, offline reproduction, real-data measurement and all 162 selected public desktop browser cases passed. No additional application runtime code was changed in this final review; this audit records why the existing implementation and optimization were retained.
+**Handoff gates passed.** Fresh full verification, offline reproduction, real-data measurement and all 162 selected public desktop browser cases passed on commit `d0a74ac`. The later CSS-only follow-up passed fresh full verification and 17 focused browser cases; the complete 162-case selection was not repeated after that one-property CSS change.
+
+### Headed-browser follow-up — decorative overflow
+
+The final visible Edge window exposed a pre-existing presentation defect that the earlier page-level overflow assertions did not detect: the intro's decorative `::before` extends 35px right and 30px down outside its scroll container. At CSS 1440×900 the intro had 345×310px content inside a 310×280px client area. Classic scrollbars consume width and force an extra heading line; headless overlay scrollbars made this less obvious.
+
+Follow-up plan: add four direct intro-content overflow regressions; prove them red on the current build; keep the decorative box inside its own panel; rerun the narrow browser/desktop/journey cases and full `pnpm verify`; then commit this small fix separately. Preserve intentional vertical scrolling for long journey content. Do not change globe geometry, camera, fonts or source data.
+
+The four new tests failed on the original production build, each detecting the decorative horizontal overflow. The fix changes only the pseudo-element's negative inset to `inset: 0`, preserving the panel's normal vertical overflow behavior. Fresh `pnpm verify` exited 0 with 1,000 unit / 78 files, eight hook/setup tests, lint/strict types and build 102 pages. New build: `drh5EFB4j4oe8goElZu4t`.
+
+All **17 focused browser cases passed in 75.197 seconds**, with no skipped/flaky/unexpected cases, no unhandled page errors and no HTTP errors. They cover four direct intro overflow regressions, four composited-text contrast checks, four default/card/journey layout checks, keyboard navigation and all four journeys at all four desktop viewports. The refreshed visible Edge window now has intro content/client dimensions both **320×225px**, without the accidental scrollbars; the heading returns to two lines. Core/country/province are ready, one canvas is mounted and the page has no horizontal overflow. No source artifact, geographic geometry or journey data changed in this follow-up.
+
+```powershell
+$env:E2E_BASE_URL='http://127.0.0.1:3000'
+$env:REFINEMENT_DIAGNOSTICS_DIR='output/playwright/province-final-review/intro-green-diagnostics'
+pnpm exec playwright test tests/e2e/home-final-review.spec.ts tests/e2e/home-cinematic-globe.spec.ts tests/e2e/home-journey-choices.spec.ts tests/e2e/home-cinematic-acceptance.spec.ts --grep 'intro decoration|atlas shell default/card/journey|atlas keyboard|Task 09 all four journeys|projected text has readable' --workers=1
+```
+
+Follow-up evidence: `intro-red-results.json`, `intro-green-results.json`, `intro-fix-verification.json` and the updated `owner-homepage-1440x900.png` under `output/playwright/province-final-review/`. The three-file follow-up is committed separately from the province feature.
 
 ## Confirmed feature and scope
 
@@ -77,6 +95,6 @@ All 162 diagnostic records passed and contain zero unhandled page errors. Four H
 
 The 18 protected map/texture/journey hashes match review entry. No event/journey content, national/island/country geometry, framework dependency, database, Word document, private environment file or external service was changed by this review. The ignored raw PBF/research input is used only for offline reproduction and is not shipped.
 
-The existing full-polygon uncertainty, official/OSM name-prefix discrepancies and exact textbook-printing/page gap remain recorded in the source ledger. Existing detail-route external OSM tile failures and stream-close symptoms are classified above; they are not silently attributed to province geometry or suppressed. The owner-authorized local commit covers the 25 implementation/plan/prompt files and this review audit; protected academic and ignored local artifacts remain outside it.
+The existing full-polygon uncertainty, official/OSM name-prefix discrepancies and exact textbook-printing/page gap remain recorded in the source ledger. Existing detail-route external OSM tile failures and stream-close symptoms are classified above; they are not silently attributed to province geometry or suppressed. The owner-authorized first local commit covers the 25 implementation/plan/prompt files and this review audit; the small CSS follow-up updates its own test and this audit. Protected academic and ignored local artifacts remain outside both commits.
 
 Local evidence: `output/playwright/province-final-review/`, `.task-reports/province-final-review-work/` and `.task-reports/2026-10-25-0845-province-final-review.md`. These are ignored local artifacts, not commit inputs. Only the task's code, checked public data, tests, source record and project documentation are intended for the owner-authorized local commit. No push, merge, PR, deploy or publication is authorized.
