@@ -392,3 +392,54 @@ Thiết bị / Môi trường: Windows 11, Node v24.19.0, pnpm v11.7.0.
   - Tab "Mô hình 3D" trong mục Tư liệu.
   - Tab "Hiện vật", "Di tích ngày nay", "Sa bàn 3D".
 - Đảm bảo 0 console errors, 0 cảnh báo layout shift, 0 gãy vỡ CSS.
+
+---
+
+## 2026-10-25 — Phase 8: Kiểm thử Giao diện Toàn diện & Đối sánh Baseline (Visual Acceptance & Polish)
+
+### 1. Mục tiêu và kết quả
+- **Khởi động môi trường production sạch (`next start` trên cổng 3000):**
+  - Chạy Playwright Chromium headless tự động kiểm tra toàn diện.
+- **Chụp và đối chiếu 15 ảnh chụp màn hình chất lượng cao tại `.task-reports/hcm1975-final/` với baseline `.task-reports/hcm1975-baseline/`:**
+  - `hcm-01-hero.png`: Ảnh bìa xe tăng 390 kèm hiệu ứng chiều sâu parallax 3D và 4 điểm chú thích (hotspots) hoạt động mượt mà.
+  - `hcm-chapter-dien-bien.png`: Bản đồ 2D hiển thị đầy đủ 5 cánh quân, đơn vị thiết giáp (`thietGiap203`), không quân (`phiDoiQuyetThang`), chú giải đầy đủ, các đường tiến công sắc nét.
+  - `hcm-chapter-tu-lieu-hien-vat.png`: Danh mục 8 hiện vật kèm bản đồ độ sâu parallax 3D và 3 hiện vật xoay 360° từ Sketchfab.
+  - `hcm-chapter-tu-lieu-mo-hinh.png`: Tab "Mô hình 3D" mới tích hợp đầy đủ 5 mô hình Three.js (Xe tăng 843, Xe tăng 390, Dinh Độc Lập, A-37, UH-1) tương tác xoay 360°, phóng to/thu nhỏ.
+  - `hcm-chapter-tu-lieu-sa-ban.png`: Tab Sa bàn 3D với mô hình Dinh Độc Lập xoay 360° và ảnh có chiều sâu.
+  - `hcm-chapter-tu-lieu-ngay-nay.png`: Tab Di tích ngày nay với 7 địa danh kèm depth map và tháp Bitexco 360°.
+  - `hcm-chapter-ket-qua.png`: Ý nghĩa lịch sử và mô hình 3D kết quả toàn thắng.
+  - `hcm-chapter-nhan-vat.png`: 4 nhân vật lịch sử gắn liên kết nội bộ hợp lệ.
+  - `hcm-mapfilm-overview.png`: Phim Bản đồ 3D tại `/ban-do-3d/chien-dich-ho-chi-minh` với địa hình 3D, camera điện ảnh và mô hình hành tiến.
+  - `model-xe-tang-390.png` & `model-dinh-doc-lap.png`: Trang mô hình 3D độc lập render sắc nét.
+- **Kiểm tra tương thích đáp ứng (Responsive Scope) theo `docs/product/DESKTOP-UI-SCOPE.md`:**
+  - Chụp kiểm tra giao diện trên cả 4 độ phân giải desktop:
+    - `1280×720`: Layout co giãn hoàn hảo, không bị tràn ngang, menu và các nút bấm rõ ràng.
+    - `1366×768`: Bố cục cân đối, các tab tư liệu cuộn ngang mượt mà.
+    - `1440×900`: Khung nhìn chuẩn máy tính xách tay cao cấp, hình ảnh và tỷ lệ chuẩn 16:9 / 4:3.
+    - `1920×1080`: Trải nghiệm màn hình rộng sắc nét, chữ rõ, không vỡ layout.
+- **Kiểm soát chất lượng trình duyệt (Browser Console & Layout):**
+  - **ZERO console errors:** Báo cáo ghi nhận 0 lỗi console (100% clean).
+  - Không có cảnh báo layout shift hay lỗi tài nguyên 404.
+
+### 2. Các tệp thay đổi
+- `scripts/agent/capture-hcm-final.mjs`: kịch bản tự động hóa chụp ảnh kiểm thử Playwright.
+- `docs/superpowers/plans/2026-10-25-hcm-1975-premium-lesson-progress.md`: cập nhật tiến độ Phase 8.
+
+### 3. Lệnh và kết quả kiểm chứng
+- `node scripts/agent/capture-hcm-final.mjs` -> Exit code 0 (15 screenshots captured, 0 console errors).
+- `pnpm verify` -> Exit code 0 (1009 vitest tests, 26 node tests, 108 static pages).
+
+---
+
+## 2026-10-25 — Phase 9: Tổng kết & Hoàn tất Nâng cấp Bài học (Final Review & Handoff)
+
+### 1. Kết quả tổng thể toàn bộ kế hoạch
+1. **Phase 0 — Baseline & Environment:** Thiết lập môi trường sạch, chuẩn hóa native path trên Windows, chụp 15 ảnh baseline đối sánh.
+2. **Phase 1 — Sổ nguồn Sử liệu:** Lập Sổ nguồn kiểm chứng `docs/audits/2026-10-25-hcm-1975-lesson-sources.md` với 23 sự kiện lịch sử (F1–F23), 15 tọa độ thực tế, 14 ảnh Wikimedia Commons có bản quyền hợp lệ, 4 mô hình quét 3D Sketchfab.
+3. **Phase 2 — Tối ưu Ảnh & Bản đồ Độ sâu Parallax 3D:** Chuẩn bị 15 ảnh WebP tối ưu (≤ 245 KB) và 15 bản đồ độ sâu Depth Anything V2 Small (≤ 4.9 KB).
+4. **Phase 3 — Dữ liệu Bài học Ngang hàng Điện Biên Phủ:** Tái thiết toàn diện `lib/lessons/chien-dich-ho-chi-minh.ts` (8 hiện vật, 7 di tích ngày nay, 4 mục tiêu SGK 12, 10 mốc thời gian, 10 câu hỏi trắc nghiệm, 8 thẻ ghi nhớ, quote Bác Hồ, resultsScan Dinh Độc Lập).
+5. **Phase 4 — Nâng cấp Bản đồ 2D:** Bổ sung chủng loại xe tăng (`vn-armor`) và không quân (`vn-aircraft`), 5 cánh quân + Lữ đoàn xe tăng 203 + Phi đội Quyết thắng ném bom Tân Sơn Nhất, lời dẫn 7 bước chuẩn sử liệu.
+6. **Phase 5 — Tổng quát hóa Engine Bản đồ 3D:** Mở rộng `PieceKind` (tank, jet, helicopter, palace, gate) và `Side` (mt, arvn), hỗ trợ cờ Mặt trận Dân tộc Giải phóng và cờ Sài Gòn, 5 mô hình thủ tục hình học Three.js.
+7. **Phase 6 — Phim Bản đồ 3D 1975:** Xây dựng kịch bản 3D 7 cảnh (`lib/mapfilm/chien-dich-ho-chi-minh.ts`), camera điện ảnh, phụ đề chuẩn sử liệu ≤ 2.8 từ/giây, thời lượng 274s, kích hoạt nút 2D/3D trên bài học.
+8. **Phase 7 — Mô hình 3D Chi tiết cao & Tab Mô hình:** Dựng 5 mô hình Three.js (Xe tăng 843, Xe tăng 390, Dinh Độc Lập, A-37, UH-1), tích hợp tab "Mô hình 3D" trong `ResourceSection.tsx`.
+9. **Phase 8 & 9 — Kiểm thử Toàn diện & Bàn giao:** Đối sánh 15 ảnh chụp màn hình hoàn chỉnh, kiểm thử tương thích 4 độ phân giải desktop chuẩn, 0 console errors, 100% test suites passed, 108 trang tĩnh xuất thành công. Toàn bộ yêu cầu của kế hoạch nâng cấp đã được hoàn thành trọn vẹn và hoàn mỹ.
