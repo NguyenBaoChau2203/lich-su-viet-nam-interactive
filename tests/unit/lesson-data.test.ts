@@ -138,6 +138,22 @@ describe("kịch bản Chiến dịch Hồ Chí Minh", () => {
       expect(lng, point.id).toBeLessThan(107.4);
     }
   });
+
+  it("dữ liệu bài học đạt chuẩn tương đương Điện Biên Phủ: hiện vật ≥ 8, di tích ≥ 6, trắc nghiệm = 10, mốc thời gian = 10", () => {
+    const hcmLesson = getLesson("chien-dich-ho-chi-minh-1975");
+    expect(hcmLesson).toBeDefined();
+    expect(hcmLesson!.artifacts?.length).toBeGreaterThanOrEqual(8);
+    expect(hcmLesson!.today.length).toBeGreaterThanOrEqual(6);
+    expect(hcmLesson!.quiz?.length).toBe(10);
+    expect(hcmLesson!.keyDates.length).toBe(10);
+    expect(hcmLesson!.quote).toBeDefined();
+    expect(hcmLesson!.quote?.text).toContain("Tiến lên! Chiến sĩ, đồng bào");
+    expect(hcmLesson!.resultsScan).toBeDefined();
+    expect(hcmLesson!.resultsImage).toBeDefined();
+    expect(hcmLesson!.todayScans?.length).toBeGreaterThanOrEqual(1);
+    expect(hcmLesson!.videos.length).toBe(4);
+    expect(hcmLesson!.flashcards.length).toBe(8);
+  });
 });
 
 describe("dữ liệu bài học", () => {

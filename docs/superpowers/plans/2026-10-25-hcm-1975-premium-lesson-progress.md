@@ -126,3 +126,52 @@ Thiết bị / Môi trường: Windows 11, Node v24.19.0, pnpm v11.7.0.
   - Bổ sung `quote` (thơ chúc Tết Bác Hồ năm 1969).
   - Bổ sung 4 mục tiêu bài học, 10 mốc thời gian, 8 flashcards, 10 câu trắc nghiệm.
   - Mở rộng unit test `tests/unit/lesson-data.test.ts` kiểm soát nghiêm ngặt bài học Hồ Chí Minh.
+
+---
+
+## 2026-10-25 — Phase 3: Hoàn thiện dữ liệu bài học (Lesson Data Parity)
+
+### 1. Mục tiêu và kết quả
+- Bổ sung thuộc tính `models3d?: string[];` vào kiểu dữ liệu `Lesson` trong `lib/lessons/types.ts` để hỗ trợ hiển thị mô hình 3D (sẽ tích hợp đầy đủ ở Phase 7).
+- Viết lại toàn diện `lib/lessons/chien-dich-ho-chi-minh.ts` đạt mức độ phong phú và chi tiết hoàn toàn tương đương với chuyên đề Điện Biên Phủ:
+  - **Hero & Hero Stats:** Ảnh xe tăng 390 kèm depth map và 4 hotspots; 3 chỉ số nổi bật (5 cánh quân, 3 chiến dịch lớn, 21 năm kháng chiến chống Mỹ).
+  - **Mục tiêu học tập SGK:** 4 mục tiêu chuẩn theo SGK Lịch sử 12 (Kết nối tri thức), Bài 8.
+  - **Mốc thời gian then chốt (Key Dates):** 10 mốc thời gian sắp xếp theo trình tự thời gian nghiêm ngặt (từ 10/3/1975 đến 2/5/1975).
+  - **Hiện vật & Bộ sưu tập 3D (Artifacts):** 8 hiện vật (Xe tăng 390, Xe tăng 843, Cổng Dinh Độc Lập, Máy bay A-37, Trực thăng UH-1, Bãi trực thăng nóc Dinh, Hầm chỉ huy Dinh Độc Lập, Pháo nòng dài 130 mm). Tất cả đều có ảnh độ phân giải cao kèm bản đồ độ sâu parallax 3D và 3–4 hotspots; 3 hiện vật có mô hình quét 3D Sketchfab xoay 360° (T-54, A-37, UH-1).
+  - **Kết quả & Ý nghĩa lịch sử:**
+    - `resultsScan`: Mô hình 3D Dinh Độc Lập xoay 360° (tác giả Hoàng Huy, CC BY 4.0).
+    - `resultsImage`: Ảnh Dinh Thống Nhất kèm depth map và 3 hotspots.
+    - `significance`: 4 luận điểm ý nghĩa lịch sử sâu sắc và toàn diện.
+  - **Trích dẫn lịch sử (Quote):** Lời thơ chúc Tết Kỷ Dậu 1969 của Chủ tịch Hồ Chí Minh: *"Tiến lên! Chiến sĩ, đồng bào / Bắc Nam sum họp, xuân nào vui hơn!"*.
+  - **Nhân vật lịch sử (Figures):** 4 nhân vật tiêu biểu (Đại tướng Văn Tiến Dũng, đồng chí Phạm Hùng, đồng chí Lê Đức Thọ, Anh hùng Nguyễn Thành Trung; kèm liên kết nội bộ hợp lệ `/nhan-vat/*`).
+  - **Thẻ ghi nhớ (Flashcards):** 8 thẻ ghi nhớ dạng hỏi – đáp súc tích, bao quát toàn bộ chiến dịch.
+  - **Trắc nghiệm (Quiz):** 10 câu hỏi trắc nghiệm chất lượng cao (4 lựa chọn duy nhất, lời giải thích chi tiết > 20 ký tự, có tích hợp hình ảnh tư liệu minh họa).
+  - **Di tích ngày nay (Today):** 7 địa danh lịch sử (Dinh Thống Nhất, Cổng Dinh, Sân thượng Dinh, Bảo tàng Chiến dịch Hồ Chí Minh, Tượng đài Xuân Lộc, Cầu Rạch Chiếc, Dinh Độc Lập 2025); tất cả đều có bản đồ độ sâu `-depth.webp` và hotspots tương tác.
+  - **Mô hình 3D di tích (todayScans):** Tháp Bitexco TP.HCM đại diện cho biểu tượng đô thị ngày nay (`66f45144e7a44fdaa841f7eed78a28a2`).
+  - **Video tư liệu:** 4 video YouTube chính thống từ VTV24 và QPVN.
+  - **`mapFilm` flag:** Chưa bật trong Phase 3 để tránh lỗi giao diện khi kịch bản 3D chưa được đăng ký (sẽ kích hoạt ở Phase 6).
+- Mở rộng bộ kiểm thử `tests/unit/lesson-data.test.ts` với test case chuyên biệt kiểm tra dữ liệu Chiến dịch Hồ Chí Minh (hiện vật ≥ 8, di tích ≥ 6, trắc nghiệm = 10, mốc thời gian = 10, quote hợp lệ, resultsScan/resultsImage hợp lệ).
+
+### 2. Các tệp thay đổi
+- `lib/lessons/types.ts`: thêm `models3d?: string[];` vào `Lesson`.
+- `lib/lessons/chien-dich-ho-chi-minh.ts`: nội dung dữ liệu bài học hoàn thiện.
+- `tests/unit/lesson-data.test.ts`: bổ sung kiểm thử xác thực cấu trúc bài học Chiến dịch Hồ Chí Minh.
+- `docs/superpowers/plans/2026-10-25-hcm-1975-premium-lesson-progress.md`: cập nhật tiến độ Phase 3.
+
+### 3. Lệnh và kết quả kiểm chứng
+- `pnpm exec vitest run tests/unit/lesson-data.test.ts tests/unit/presentation.test.ts tests/unit/curriculum.test.ts` -> Exit code 0 (91 tests passed).
+- `pnpm verify` -> Exit code 0:
+  - `agent:check`: valid.
+  - `history:data:check`: 42 tests passed.
+  - `lint`: 0 errors, 0 warnings.
+  - `typecheck`: 0 errors.
+  - `test`: 1000 vitest tests + 26 node tests passed.
+  - `build`: 102/102 trang tĩnh xuất thành công.
+
+### 4. Kế hoạch bước tiếp theo (Phase 4)
+- Tiến hành nâng cấp Bản đồ 2D (`lib/battles/chien-dich-ho-chi-minh-1975.ts`):
+  - Bổ sung chủng loại đơn vị mới `"vn-armor"` (xe tăng thiết giáp) và `"vn-aircraft"` (không quân cường kích) vào `UnitKind` trong `lib/battles/types.ts` và styling tương ứng trong `app/globals.css`.
+  - Bổ sung đơn vị thiết giáp cho 5 cánh quân và đường bay ném bom Tân Sơn Nhất của Phi đội Quyết thắng.
+  - Nâng cấp độ dài lời dẫn cho 7 bước chiến dịch (mỗi bước > 200 ký tự) theo Sổ nguồn.
+  - Gắn fact card và ảnh tư liệu trực quan cho từng bước.
+- Chạy cổng kiểm thử và commit.
