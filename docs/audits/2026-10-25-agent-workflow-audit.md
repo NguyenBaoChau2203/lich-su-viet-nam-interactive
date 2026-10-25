@@ -53,6 +53,12 @@ The new wrapper checks initialized state, checkout identity, pending changes, ex
 
 ## Remaining limits
 
+### Publication follow-up: checksum-safe Git checkout
+
+A later full unit run in a real clean Git clone exposed a Windows checkout issue that the earlier build/smoke probes did not exercise. With `core.autocrlf=true`, Git changed the final LF of `history-world-land.geojson` to CRLF. The existing integrity test failed: the original working file and committed blob have 1,257,963 bytes / SHA-256 `d2a0f8661ec662ba9bdd45072b2800a2c917102d2291a6d93a1401a2479a28cb`; the clone had 1,257,964 bytes / SHA-256 `953cff0e5efc4a3808ab98718c2cb9891967ea982f49f292c923adacfda91973`.
+
+The publication fix adds `*.geojson text eol=lf` to shared Git attributes. Geometry, provenance hashes and integrity tests remain unchanged. The failing clean-clone test is the negative control; fresh verification and a new checkout of the corrected commit must establish the green handoff before publication. The earlier clean-snapshot build/smoke evidence does not claim that this full unit gate had passed in that earlier snapshot.
+
 Claude Code is not installed on the audited machine, and the Antigravity app was not driven through a live model session. Adapters were verified against official documentation and executed directly, not claimed to be activated inside those apps. Each contributor must review/trust the workspace/hooks and verify the loaded rule/skill/tool catalog. No extra AI session was launched for testing.
 
 Public smoke checks do not verify authenticated workflows, historical source quality, payment handling or live RLS. The full legacy integration suite was intentionally not run against the owner's live environment. GitHub Actions was edited and checked locally, not executed remotely. No push, PR, deploy, service write or global configuration upgrade was performed.
