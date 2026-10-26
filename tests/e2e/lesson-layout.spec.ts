@@ -101,4 +101,42 @@ test.describe("Lesson layout regression tests", () => {
       }
     });
   }
+
+  // L3: Hero stats right edge within 40px of container right edge at >=1366; CTA visible at 1280x720
+  for (const slug of TARGET_SLUGS) {
+    test(`[L3] ${slug} - hero stats right edge within 40px at 1366x768`, async ({ page }) => {
+      await page.setViewportSize({ width: 1366, height: 768 });
+      await page.goto(`/bai-hoc/${slug}`, { waitUntil: "domcontentloaded" });
+      await page.waitForTimeout(500);
+
+      const metrics = await page.evaluate(() => {
+        const stats = document.querySelector("ul[aria-label='Số liệu chính']");
+        const container = stats?.closest(".max-w-\\[80rem\\]");
+        if (!stats || !container) throw new Error("Stats or container not found");
+        const sRect = stats.getBoundingClientRect();
+        const cRect = container.getBoundingClientRect();
+        return {
+          diff: Math.abs(cRect.right - sRect.right),
+          statsRight: sRect.right,
+          containerRight: cRect.right,
+        };
+      });
+
+      expect(metrics.diff, `Stats right (${metrics.statsRight}) vs container right (${metrics.containerRight})`).toBeLessThanOrEqual(40);
+    });
+
+    test(`[L3] ${slug} - hero CTA buttons visible without scrolling at 1280x720`, async ({ page }) => {
+      await page.setViewportSize({ width: 1280, height: 720 });
+      await page.goto(`/bai-hoc/${slug}`, { waitUntil: "domcontentloaded" });
+      await page.waitForTimeout(500);
+
+      const ctaBottom = await page.evaluate(() => {
+        const cta = document.querySelector("a[href='#dien-bien']");
+        if (!cta) throw new Error("CTA button not found");
+        return cta.getBoundingClientRect().bottom;
+      });
+
+      expect(ctaBottom, `CTA bottom (${ctaBottom}) must be <= 720px`).toBeLessThanOrEqual(720);
+    });
+  }
 });

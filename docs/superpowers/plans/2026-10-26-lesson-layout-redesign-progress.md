@@ -11,7 +11,7 @@ Mục tiêu: Sắp xếp lại bố cục trang chuyên đề bài học (`/bai-
 |---|---|---|---|
 | P1 | Content column hẹp (~864px trên màn 1440px), lề thừa lớn, các block thụt thò không thẳng mép do `max-w-3xl` | Tăng page frame lên 1280px (`max-w-[80rem]`), content column ≥ 900px, bỏ `max-w-3xl` trên block elements | Đã giải quyết (Phase 1) |
 | P2 | Khoảng cách dọc quá lớn (gap-16 khắp nơi), thiếu phân tách rõ ràng giữa các chương | `gap-20` giữa các chương, `gap-12` trong chương, thêm primitive `ChapterLabel` có vạch chỉ vàng | Đã giải quyết (Phase 1) |
-| P3 | Hero stats co cụm bên trái, để trống 40% bên phải; credit ảnh bị ngắt dòng khó chịu | Chia grid 2 cột `[7fr_5fr]`, stats xếp dọc bên phải với viền phân tách mỏng, credit chuyển xuống hàng phụ | Chờ Phase 2 |
+| P3 | Hero stats co cụm bên trái, để trống 40% bên phải; credit ảnh bị ngắt dòng khó chịu | Chia grid 2 cột `[7fr_5fr]`, stats xếp dọc bên phải với viền phân tách mỏng, credit chuyển xuống hàng phụ | Đã giải quyết (Phase 2) |
 | P4 | 10 mốc thời gian HCM để lại 2 ô trống ở hàng cuối; GoalBox 1 cột kéo dài | Timeline track ngang với dot viền trên, `balancedColumns`; GoalBox chia 2 cột khi ≥ 4 mục | Chờ Phase 3 |
 | P5 | Khoảng trống khổng lồ 400-600px dưới bản đồ 2D do map cuộn mất khi duyệt các bước | Cột trái sticky (`lg:sticky lg:top-24`), map responsive clamp, bước diễn biến gọn gàng ngày/tiêu đề | Chờ Phase 4 |
 | P6 | Khung callout cảnh báo bản đồ hẹp hơn map; toggle 2D/3D & hướng dẫn rời rạc | Hợp nhất thanh điều khiển trên 1 hàng flex; callout căng đều chiều rộng content | Chờ Phase 4 |
@@ -42,7 +42,13 @@ Mục tiêu: Sắp xếp lại bố cục trang chuyên đề bài học (`/bai-
   - Container 1280px, grid `[13.5rem_minmax(0,1fr)]`, gap-20 trong `LessonView.tsx` & `ChapterShell.tsx`
   - Parity test verify (6/6 passed) & L1/L2 verify (100% green)
   - Báo cáo: `.task-reports/2026-10-26-1415-lesson-layout-phase-1.md`
-- [ ] **Phase 2: Hero Section**
+- [x] **Phase 2: Hero Section**
+  - Tái cấu trúc grid 2 cột `[minmax(0,7fr)_minmax(0,5fr)]`
+  - Stats chuyển sang cột phải xếp dọc với viền phân tách mỏng
+  - Credit ảnh chuyển xuống hàng riêng ở đáy cột trái
+  - Chiều cao `min-h-[min(80vh,38rem)]`, CTA buttons hiển thị trọn vẹn ở 1280x720
+  - Parity test verify (6/6 passed) & L3 verify (16/16 passed)
+  - Báo cáo: `.task-reports/2026-10-26-1430-lesson-layout-phase-2.md`
 - [ ] **Phase 3: Chương 1 - Mở đầu & Mốc thời gian**
 - [ ] **Phase 4: Chương 2 - Diễn biến trên bản đồ**
 - [ ] **Phase 5: Chương 3 & 4 - Kết quả & Nhân vật**
