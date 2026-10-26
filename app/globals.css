@@ -917,6 +917,42 @@ span.battle-legend-siege {
   --text-8xl: clamp(3.6rem, 8.889vh, 6rem);
 }
 
+/* ---- Lesson Timeline Track (Phần mốc thời gian bài học) ---- */
+.lesson-timeline {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.lesson-timeline__item {
+  position: relative;
+  padding-top: 1.25rem;
+}
+
+.lesson-timeline__item::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--border);
+  pointer-events: none;
+}
+
+.lesson-timeline__item::after {
+  content: "";
+  position: absolute;
+  top: 0.5px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--background);
+  z-index: 1;
+}
+
 /* ---- In (mục lục, khung bài) ----
    Nền trắng, chữ đen; menu, thanh tab, nút bấm đã có class print:hidden. */
 @media print {
@@ -929,5 +965,18 @@ span.battle-legend-siege {
   }
   a {
     text-decoration: none;
+  }
+  .lesson-timeline__item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .lesson-timeline__item::before {
+    background-color: #cbd5e1;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .lesson-timeline__item::after {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 }

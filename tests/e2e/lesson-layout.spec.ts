@@ -139,4 +139,47 @@ test.describe("Lesson layout regression tests", () => {
       expect(ctaBottom, `CTA bottom (${ctaBottom}) must be <= 720px`).toBeLessThanOrEqual(720);
     });
   }
+
+  // L4: KeyDates balanced columns - number of items in last visual row
+  for (const slug of TARGET_SLUGS) {
+    test(`[L4] ${slug} - KeyDates balanced timeline rows at 1440x900`, async ({ page }) => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.goto(`/bai-hoc/${slug}`, { waitUntil: "domcontentloaded" });
+      await page.waitForTimeout(500);
+
+      const result = await page.evaluate(() => {
+        const items = Array.from(document.querySelectorAll("ol.lesson-timeline > li.lesson-timeline__item"));
+        if (items.length === 0) throw new Error("No timeline items found");
+
+        const rows: { top: number; count: number }[] = [];
+        for (const item of items) {
+          const top = Math.round(item.getBoundingClientRect().top);
+          const existingRow = rows.find((r) => Math.abs(r.top - top) <= 4);
+          if (existingRow) {
+            existingRow.count++;
+          } else {
+            rows.push({ top, count: 1 });
+          }
+        }
+
+        const totalItems = items.length;
+        const firstRowCount = rows[0]?.count || 1;
+        const lastRowCount = rows[rows.length - 1]?.count || 0;
+        const expectedLast = totalItems % firstRowCount === 0 ? firstRowCount : totalItems % firstRowCount;
+
+        return {
+          totalItems,
+          firstRowCount,
+          lastRowCount,
+          expectedLast,
+          rowCount: rows.length,
+        };
+      });
+
+      expect(
+        result.lastRowCount,
+        `Last row count (${result.lastRowCount}) must equal expected (${result.expectedLast}) for ${result.totalItems} items across ${result.firstRowCount} columns`
+      ).toBe(result.expectedLast);
+    });
+  }
 });
