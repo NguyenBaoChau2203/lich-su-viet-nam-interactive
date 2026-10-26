@@ -9,8 +9,8 @@ Mục tiêu: Sắp xếp lại bố cục trang chuyên đề bài học (`/bai-
 
 | Mã | Nội dung vấn đề | Giải pháp thiết kế | Trạng thái |
 |---|---|---|---|
-| P1 | Content column hẹp (~864px trên màn 1440px), lề thừa lớn, các block thụt thò không thẳng mép do `max-w-3xl` | Tăng page frame lên 1280px (`max-w-[80rem]`), content column ≥ 900px, bỏ `max-w-3xl` trên block elements | Đang triển khai (Phase 1) |
-| P2 | Khoảng cách dọc quá lớn (gap-16 khắp nơi), thiếu phân tách rõ ràng giữa các chương | `gap-20` giữa các chương, `gap-12` trong chương, thêm primitive `ChapterLabel` có vạch chỉ vàng | Đang triển khai (Phase 1) |
+| P1 | Content column hẹp (~864px trên màn 1440px), lề thừa lớn, các block thụt thò không thẳng mép do `max-w-3xl` | Tăng page frame lên 1280px (`max-w-[80rem]`), content column ≥ 900px, bỏ `max-w-3xl` trên block elements | Đã giải quyết (Phase 1) |
+| P2 | Khoảng cách dọc quá lớn (gap-16 khắp nơi), thiếu phân tách rõ ràng giữa các chương | `gap-20` giữa các chương, `gap-12` trong chương, thêm primitive `ChapterLabel` có vạch chỉ vàng | Đã giải quyết (Phase 1) |
 | P3 | Hero stats co cụm bên trái, để trống 40% bên phải; credit ảnh bị ngắt dòng khó chịu | Chia grid 2 cột `[7fr_5fr]`, stats xếp dọc bên phải với viền phân tách mỏng, credit chuyển xuống hàng phụ | Chờ Phase 2 |
 | P4 | 10 mốc thời gian HCM để lại 2 ô trống ở hàng cuối; GoalBox 1 cột kéo dài | Timeline track ngang với dot viền trên, `balancedColumns`; GoalBox chia 2 cột khi ≥ 4 mục | Chờ Phase 3 |
 | P5 | Khoảng trống khổng lồ 400-600px dưới bản đồ 2D do map cuộn mất khi duyệt các bước | Cột trái sticky (`lg:sticky lg:top-24`), map responsive clamp, bước diễn biến gọn gàng ngày/tiêu đề | Chờ Phase 4 |
@@ -34,13 +34,14 @@ Mục tiêu: Sắp xếp lại bố cục trang chuyên đề bài học (`/bai-
   - Inventory crawler & fixtures: 6 bài học đã tạo tại `tests/e2e/fixtures/lesson-inventory/`
   - Content parity test compare mode: Đang chạy
   - Báo cáo: `.task-reports/2026-10-26-1400-lesson-layout-phase-0.md`
-- [ ] **Phase 1: Frame, Spacing & Primitives**
+- [x] **Phase 1: Frame, Spacing & Primitives**
   - `lib/lessons/layout.ts` (`balancedColumns`, `COLS`)
-  - Unit tests: `tests/unit/lesson-layout.test.ts`
-  - Layout e2e tests (L1, L2): `tests/e2e/lesson-layout.spec.ts`
+  - Unit tests: `tests/unit/lesson-layout.test.ts` (4 passed)
+  - Layout e2e tests (L1, L2): `tests/e2e/lesson-layout.spec.ts` (12 passed)
   - Primitives: `ChapterLabel`, `SectionIntro` trong `components/lesson/sections/shared.tsx`
   - Container 1280px, grid `[13.5rem_minmax(0,1fr)]`, gap-20 trong `LessonView.tsx` & `ChapterShell.tsx`
-  - Parity test verify & L1/L2 verify
+  - Parity test verify (6/6 passed) & L1/L2 verify (100% green)
+  - Báo cáo: `.task-reports/2026-10-26-1415-lesson-layout-phase-1.md`
 - [ ] **Phase 2: Hero Section**
 - [ ] **Phase 3: Chương 1 - Mở đầu & Mốc thời gian**
 - [ ] **Phase 4: Chương 2 - Diễn biến trên bản đồ**

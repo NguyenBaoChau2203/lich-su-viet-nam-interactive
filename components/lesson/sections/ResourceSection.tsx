@@ -1,5 +1,5 @@
 import { CinemaPlayer } from "@/components/cinema3d/CinemaPlayer";
-import { Credit, exhibitItem, photoItem, SectionHeading } from "@/components/lesson/sections/shared";
+import { Credit, exhibitItem, photoItem, SectionHeading, SectionIntro } from "@/components/lesson/sections/shared";
 import { VideoEmbed } from "@/components/lesson/VideoEmbed";
 import { ModelGallery } from "@/components/model3d/ModelGallery";
 import { DepthPhotoGallery } from "@/components/photo3d/DepthPhotoGallery";
@@ -19,9 +19,9 @@ export function ResourceSection({ lesson }: { lesson: Lesson }) {
   return (
     <section aria-labelledby="tu-lieu">
       <SectionHeading id="tu-lieu" eyebrow="Tư liệu" title="Xem tận mắt: phim, hiện vật và di tích" />
-      <p className="-mt-3 mb-5 max-w-3xl text-muted-foreground">
+      <SectionIntro>
         Chọn một loại tư liệu. Video và mô hình 3D chỉ tải khi em bấm xem, dung lượng ghi rõ trên từng mục; mỗi lúc chỉ mở một trình xem.
-      </p>
+      </SectionIntro>
       <Tabs items={tabs} label="Loại tư liệu" />
     </section>
   );

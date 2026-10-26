@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FlipCard } from "@/components/lesson/FlipCard";
-import { SectionHeading } from "@/components/lesson/sections/shared";
+import { SectionHeading, SectionIntro } from "@/components/lesson/sections/shared";
 import { LessonStudiedMarker } from "@/components/progress/LessonStudiedMarker";
 import { PASSPORT_HREF } from "@/components/progress/StampNotice";
 import { LinkButton } from "@/components/ui/Button";
@@ -13,7 +13,7 @@ export function ReviewSection({ lesson }: { lesson: Lesson }) {
   return (
     <section aria-labelledby="ghi-nho">
       <SectionHeading id="ghi-nho" eyebrow="Tự ôn tập" title="Ghi nhớ nhanh" />
-      <p className="-mt-3 mb-5 text-muted-foreground">Đọc câu hỏi, tự trả lời trong đầu, rồi bấm để lật thẻ xem đáp án.</p>
+      <SectionIntro>Đọc câu hỏi, tự trả lời trong đầu, rồi bấm để lật thẻ xem đáp án.</SectionIntro>
       <LessonStudiedMarker slug={lesson.slug} />
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {lesson.flashcards.map((card, index) => (

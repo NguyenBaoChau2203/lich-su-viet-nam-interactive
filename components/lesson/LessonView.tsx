@@ -46,7 +46,7 @@ export function LessonView({ lesson }: { lesson: Lesson }) {
       <ScrollProgress />
 
       {/* Breadcrumb ở trên cùng, trước ảnh mở đầu (V-25). */}
-      <div className="mx-auto max-w-6xl px-4 py-3 sm:px-6">
+      <div className="mx-auto max-w-[80rem] px-6 py-3 xl:px-8">
         <Breadcrumb
           items={[
             { label: "Mục lục", href: sgkPaths.toc },
@@ -58,7 +58,7 @@ export function LessonView({ lesson }: { lesson: Lesson }) {
 
       <LessonHero lesson={lesson} placement={placement} />
 
-      <div className="mx-auto max-w-6xl px-4 pb-20 sm:px-6 lg:pt-10">
+      <div className="mx-auto max-w-[80rem] px-6 pb-20 xl:px-8 lg:pt-10">
         <ChapterShell chapters={chapters} slug={lesson.slug} title={`chuyên đề ${lesson.title}`} />
       </div>
     </article>

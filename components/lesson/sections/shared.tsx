@@ -1,5 +1,36 @@
+import type { ReactNode } from "react";
 import type { DepthPhotoItem } from "@/components/photo3d/DepthPhotoGallery";
 import type { LessonExhibit, LessonImage } from "@/lib/lessons/types";
+
+/** Nhãn trang trí đầu mỗi chương: CHƯƠNG {index} · {TITLE} */
+export function ChapterLabel({ index, title }: { index: number; title: string }) {
+  return (
+    <div
+      aria-hidden="true"
+      className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.14em] text-gold-deep"
+    >
+      <span className="h-px w-8 bg-gold-deep/60" />
+      <span>
+        CHƯƠNG {index} · {title}
+      </span>
+    </div>
+  );
+}
+
+/** Lời dẫn đầu mục / chương thay thế cho đoạn lặp lại `-mt-3 mb-5 text-muted-foreground`. */
+export function SectionIntro({
+  children,
+  className = "",
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <p className={`-mt-3 mb-5 max-w-[70ch] text-muted-foreground ${className}`.trim()}>
+      {children}
+    </p>
+  );
+}
 
 /** Tiêu đề mục của chuyên đề: dòng nhỏ (loại nội dung) + tiêu đề lớn. */
 export function SectionHeading({ id, eyebrow, title }: { id: string; eyebrow: string; title: string }) {
