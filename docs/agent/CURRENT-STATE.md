@@ -31,6 +31,12 @@ Journey reading now uses `JourneyStopReader.tsx` and `JourneyStopPopup.tsx`; `Hi
 
 Province lines are sourced modern shared-interior **reference lines**, not complete administrative polygons, cadastral geography, historical borders or point-in-province assignment. Preserve the honest limitation, source provenance and intentionally failing full-polygon research control when changing that pipeline.
 
+## Timeline content approval (2026-10-26)
+
+After the draft-only release, the owner delegated review and publication of the 22-item package. `supabase/content/timeline-review-2026-10-26/approved-events.json` records the bounded approved narratives, directly checked source locators and Vietnamese public notes. `publish-reviewed.sql` is a single-use operation guarded by the exact reviewed draft/source/link snapshot, not a general seed or schema migration. The source-review decisions and live verification are in `docs/audits/2026-10-26-timeline-content-review.md`.
+
+Actual project `lichsu_12` now has 32 published events and 14 other drafts (46 total), with public timeline bounds 1905–2019. The 18 additions and four reconciled legacy drafts were published after source checks; the original ten public events remain unchanged. Four uncertified old event/place associations were removed without changing location records. This is an agent source review under owner delegation, not approval by a teacher or certification of an exact textbook edition/page. The held 1976 candidate, UNESCO wording and other legacy narratives remain outside this review. The 2026-10-25 package/audits above remain dated evidence of the earlier draft stage.
+
 ## Route to the right skill
 
 - Core browsing/state/filter changes: `build-map-timeline-slice`; do not research unchanged facts again for an interaction-only fix.

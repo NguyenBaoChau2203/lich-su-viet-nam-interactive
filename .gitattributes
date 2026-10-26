@@ -20,6 +20,7 @@
 
 # Keep the checksum-recorded bounded content import identical on Windows/Linux.
 /supabase/seed-vietnam-timeline-2026-10-25.sql text eol=lf
+/supabase/content/timeline-review-2026-10-26/publish-reviewed.sql text eol=lf
 
 # Git for Windows must execute these through Git Bash without CRLF corruption.
 /.githooks/* text eol=lf

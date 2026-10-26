@@ -1,0 +1,1037 @@
+{
+  "reviewKind": "owner-delegated-agent-source-review",
+  "reviewedAt": "2026-10-26",
+  "teacherApproval": false,
+  "originalPackage": "supabase/content/timeline-2026-10-25/review-package.json",
+  "originalPackageSha256": "976b827b8492551ed644ee13b726ea4d4caabdf8b2cd2294364c56a8ac00a1d9",
+  "scope": "Bounded event identities, dates and narratives, with topic-level lesson associations. No teacher, exact textbook edition/page, coordinate or media certification.",
+  "sources": [
+    {
+      "id": "wto-accession",
+      "title": "Viet Nam — Accessions",
+      "institution": "World Trade Organization",
+      "url": "https://www.wto.org/english/thewto_e/acc_e/a1_vietnam_e.htm",
+      "accessedAt": "2026-10-26",
+      "publishedAt": null
+    },
+    {
+      "id": "mofa-asean",
+      "title": "Thông tin cơ bản về ASEAN và quan hệ Việt Nam – ASEAN",
+      "institution": "Bộ Ngoại giao Việt Nam",
+      "url": "https://mofa.gov.vn/tin-chi-tiet/chi-tiet/thong-tin-co-ban-ve-asean-va-quan-he-viet-nam-asean-166.html",
+      "accessedAt": "2026-10-26",
+      "publishedAt": null
+    },
+    {
+      "id": "us-normalization",
+      "title": "Remarks by the President in announcement on normalization of diplomatic relations with Vietnam",
+      "institution": "The White House; U.S. National Archives frozen archive",
+      "url": "https://clintonwhitehouse6.archives.gov/1995/07/1995-07-11-remarks-on-normalization-of-relations-with-vietnam.html",
+      "accessedAt": "2026-10-26",
+      "publishedAt": "1995-07-11"
+    },
+    {
+      "id": "gacma-bcp",
+      "title": "Tưởng niệm, tri ân 64 liệt sĩ hy sinh tại đảo Gạc Ma",
+      "institution": "Báo Điện tử Chính phủ",
+      "url": "https://baochinhphu.vn/tuong-niem-tri-an-64-liet-si-hy-sinh-tai-dao-gac-ma-10224031414164731.htm",
+      "publishedAt": "2024-03-14",
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "gacma-vov",
+      "title": "Tri ân liệt sỹ nơi đầu sóng",
+      "institution": "Đài Tiếng nói Việt Nam (VOV)",
+      "url": "https://vov.vn/xa-hoi/tri-an-liet-sy-noi-dau-song-1074040.vov",
+      "publishedAt": null,
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "viet-bac-1947",
+      "title": "Lịch sử Biên niên Đảng Cộng sản Việt Nam — Tập 3",
+      "institution": "Cổng TTĐT Đảng Cộng sản Việt Nam; NXB Chính trị Quốc gia – Sự thật",
+      "url": "https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/book/lich-su-dang/lich-su-bien-nien-dang-cong-san-viet-nam-tap-3-176?categoryId=102000083",
+      "publishedAt": "2009",
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "dong-khoi-1960",
+      "title": "Kỷ niệm 54 năm Đồng khởi Bến Tre (17/1/1960–17/1/2014)",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/VI/Articles/3097/15652/ky-niem-54-nam-djong-khoi-ben-tre-17-1-1960-17-1-2014.html",
+      "publishedAt": "2014-01-14",
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "august-1945",
+      "title": "Tổng khởi nghĩa Cách mạng tháng Tám năm 1945",
+      "institution": "Bảo tàng Lịch sử Quốc gia; Nguyễn Thị Ngọc Anh",
+      "url": "https://baotanglichsuquocgia.vn/vi/Articles/3097/18473/tong-khoi-nghia-cach-mang-thang-tam-nam-1945.html",
+      "publishedAt": "2015-08-18",
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "buon-ma-thuot-1975",
+      "title": "Nhớ về chiến dịch mang tính bước ngoặt của mùa Xuân 1975",
+      "institution": "Báo Điện tử Chính phủ; Hà Minh Hồng",
+      "url": "https://baochinhphu.vn/nho-ve-chien-dich-mang-tinh-buoc-ngoat-cua-mua-xuan-1975-102270035.htm",
+      "publishedAt": "2020-03-24",
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "hue-1975",
+      "title": "Nghệ thuật vận dụng thời cơ trong Chiến dịch Trị Thiên",
+      "institution": "Báo Điện tử Chính phủ; nguồn QĐND/Cổng TTĐT Bộ Quốc phòng",
+      "url": "https://baochinhphu.vn/nghe-thuat-van-dung-thoi-co-trong-chien-dich-tri-thien-102180398.htm",
+      "publishedAt": "2015-03-16",
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "spring-museum",
+      "title": "Thông tin báo chí trưng bày chuyên đề Non sông liền một dải",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/VI/Articles/3090/75384/thong-tin-bao-chi-trung-bay-chuyen-dje-non-song-lien-mot-dai.html",
+      "publishedAt": "2025-04-18",
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "dong-du",
+      "title": "Phong trào Đông Du (1905–1908) — Một hình thức xây dựng lực lượng cách mạng những năm đầu thế kỷ XX",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/14624/phong-trao-djong-du-1905-1908-mot-hinh-thuc-xay-dung-luc-luong-cach-mang-nhung-nam-dau-the-ky-xx.html",
+      "publishedAt": null,
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "hcm-journey",
+      "title": "Chủ tịch Hồ Chí Minh và hành trình 30 năm tìm đường cứu nước giải phóng dân tộc",
+      "institution": "Cổng thông tin Hồ Chí Minh",
+      "url": "https://hochiminh.vn/tin-tuc/chu-tich-ho-chi-minh-va-hanh-trinh-30-nam-tim-duong-cuu-nuoc-giai-phong-dan-toc-9013",
+      "publishedAt": "2023-06-06",
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "cpv-founding",
+      "title": "Ngày thành lập Đảng Cộng sản Việt Nam 3-2-1930",
+      "institution": "Tư liệu Văn kiện Đảng; Cổng TTĐT ĐCSVN",
+      "url": "https://tulieuvankien.dangcongsan.vn/ho-so-su-kien-nhan-chung/su-kien-va-nhan-chung/ngay-thanh-lap-dang-cong-san-viet-nam-3-2-1930-3342",
+      "publishedAt": null,
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "thanh-lap-viet-minh-1941",
+      "title": "19/5/1941: Thành lập Mặt trận Việt Minh",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/VI/Articles/3097/16382/19-5-1941-thanh-lap-mat-tran-viet-minh.html",
+      "publishedAt": null,
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "chien-thang-ap-bac-1963",
+      "title": "Chiến thắng Ấp Bắc ngày 2-1-1963",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/vi/Articles/2002/61989/chien-thang-ap-bac-ngay-2-1-1963.html",
+      "publishedAt": null,
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "chien-thang-van-tuong-1965",
+      "title": "Kỷ niệm 48 năm (18/8/1965–18/8/2013) — Chiến thắng Vạn Tường",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/14898/ky-niem-48-nam-18-8-1965-18-8-2013-chien-thang-van-tuong.html",
+      "publishedAt": null,
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "strategic-1972",
+      "title": "Ngày 30-3-1972: Cuộc Tổng tiến công chiến lược năm 1972 bắt đầu",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/vi/Articles/2002/68267/ngay-30-3-1972-cuoc-tong-tien-cong-chien-luoc-nam-1972-bat-djau.html",
+      "publishedAt": null,
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "khoan-10",
+      "title": "Giải quyết vấn đề nông nghiệp, nông dân, nông thôn là nhiệm vụ của cả hệ thống chính trị và toàn xã hội",
+      "institution": "Báo Điện tử Chính phủ",
+      "url": "https://baochinhphu.vn/giai-quyet-van-de-nong-nghiep-nong-dan-nong-thon-la-nhiem-vu-cua-ca-he-thong-chinh-tri-va-toan-xa-hoi-102829.htm",
+      "publishedAt": null,
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "congress-viii",
+      "title": "Đại hội đại biểu toàn quốc lần thứ VIII của Đảng",
+      "institution": "Tư liệu Văn kiện Đảng; Cổng TTĐT ĐCSVN",
+      "url": "https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-viii/dai-hoi-dai-bieu-toan-quoc-lan-thu-viii-cua-dang-13",
+      "publishedAt": null,
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "viii-political-report",
+      "title": "Báo cáo Chính trị của Ban Chấp hành Trung ương Đảng khóa VII tại Đại hội VIII",
+      "institution": "Ban Chấp hành Trung ương ĐCSVN; bản số hóa Tư liệu Văn kiện Đảng",
+      "url": "https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-viii/bao-cao-chinh-tri-cua-ban-chap-hanh-trung-uong-dang-khoa-vii-tai-dai-hoi-dai-bieu-toan-quoc-lan-thu-viii-cua-dang-1549?categoryId=104000022",
+      "publishedAt": "1996",
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "cptpp-moit",
+      "title": "Hiệp định CPTPP chính thức có hiệu lực đối với Việt Nam từ ngày 14/01/2019",
+      "institution": "Bộ Công Thương",
+      "url": "https://moit.gov.vn/tin-tuc/thi-truong-nuoc-ngoai/hiep-dinh-cptpp-chinh-thuc-co-hieu-luc-doi-voi-viet-nam-tu-n.html",
+      "publishedAt": "2019-01-11",
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "bien-gioi-national-museum",
+      "title": "Chiến dịch Biên giới Thu đông (16/9–17/10/1950): sự thành công trong sử dụng kế hoạch tác chiến",
+      "institution": "Bảo tàng Lịch sử Quốc gia",
+      "url": "https://baotanglichsu.vn/vi/Articles/2002/68257/chien-dich-bien-gioi-thu-djong-16-9-17-10-1950-su-thanh-cong-trong-su-dung-ke-hoach-tac-chien.html",
+      "publishedAt": null,
+      "accessedAt": "2026-10-26"
+    },
+    {
+      "id": "vn-normalization",
+      "title": "30 năm bình thường hóa quan hệ Việt – Mỹ: Nỗ lực phi thường, hành trình độc đáo",
+      "institution": "Báo Điện tử Chính phủ",
+      "url": "https://baochinhphu.vn/30-nam-binh-thuong-hoa-quan-he-viet-my-no-luc-phi-thuong-hanh-trinh-doc-dao-102250711172515901.htm",
+      "publishedAt": "2025-07-11",
+      "accessedAt": "2026-10-26"
+    }
+  ],
+  "events": [
+    {
+      "slug": "viet-nam-gia-nhap-wto-2007",
+      "title": "Việt Nam gia nhập Tổ chức Thương mại Thế giới (WTO)",
+      "summary": "Ngày 11/1/2007, Việt Nam trở thành thành viên thứ 150 của WTO.",
+      "content": "## Mốc hội nhập\n\nNgày 11/1/2007, Việt Nam trở thành thành viên thứ 150 của Tổ chức Thương mại Thế giới (WTO). Hồ sơ của WTO ghi nhận đơn xin gia nhập của Việt Nam được tiếp nhận ngày 4/1/1995.\n\n## Gợi ý học tập\n\nĐặt hai mốc trên cạnh nhau để nhận biết quá trình chuẩn bị và thời điểm chính thức trở thành thành viên. Gia nhập WTO là một mốc hội nhập kinh tế quốc tế; để đánh giá tác động đối với xuất khẩu, đầu tư hay từng ngành kinh tế, cần đối chiếu thêm số liệu của thời kỳ tương ứng.",
+      "topic": "doi-ngoai-viet-nam",
+      "secondaryTopics": [
+        "cong-cuoc-doi-moi"
+      ],
+      "startYear": 2007,
+      "endYear": 2007,
+      "startDate": "2007-01-11",
+      "endDate": "2007-01-11",
+      "dateText": "11/1/2007",
+      "datePrecision": "exact",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "10-khai-quat-ve-cong-cuoc-doi-moi",
+          "sectionId": "muc-3"
+        },
+        {
+          "lessonSlug": "14-doi-ngoai-tu-nam-1975-den-nay",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "wto-accession",
+          "locator": "Opening accession paragraph; Viet Nam timeline, Application received row",
+          "scope": "Bounded date, membership/announcement and narrative; editorial reading notes are explicitly interpretive.",
+          "publicNote": "Phần giới thiệu xác nhận thành viên thứ 150 ngày 11/1/2007; bảng Viet Nam’s Timeline, dòng Application received ghi 4/1/1995.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "existing-later-a",
+      "decision": "approve"
+    },
+    {
+      "slug": "viet-nam-gia-nhap-asean-1995",
+      "title": "Việt Nam gia nhập ASEAN",
+      "summary": "Ngày 28/7/1995, Việt Nam trở thành thành viên thứ bảy của ASEAN.",
+      "content": "## Mốc gia nhập\n\nNgày 28/7/1995, Việt Nam trở thành thành viên thứ bảy của Hiệp hội các quốc gia Đông Nam Á (ASEAN), theo tài liệu của Bộ Ngoại giao.\n\n## Gợi ý học tập\n\nĐây là một mốc để tìm hiểu quá trình mở rộng quan hệ đối ngoại và hội nhập khu vực của Việt Nam sau năm 1986. Cụm từ thành viên thứ bảy thể hiện thứ tự gia nhập ở thời điểm năm 1995; khi tìm hiểu cơ cấu ASEAN ở một thời điểm khác, cần đọc tài liệu của thời điểm đó.",
+      "topic": "doi-ngoai-viet-nam",
+      "secondaryTopics": [
+        "cong-cuoc-doi-moi"
+      ],
+      "startYear": 1995,
+      "endYear": 1995,
+      "startDate": "1995-07-28",
+      "endDate": "1995-07-28",
+      "dateText": "28/7/1995",
+      "datePrecision": "exact",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "14-doi-ngoai-tu-nam-1975-den-nay",
+          "sectionId": "muc-2"
+        },
+        {
+          "lessonSlug": "4-su-ra-doi-va-phat-trien-cua-asean",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "mofa-asean",
+          "locator": "Section I, introduction/history paragraph beginning Khi mới thành lập ASEAN",
+          "scope": "Bounded date, membership/announcement and narrative; editorial reading notes are explicitly interpretive.",
+          "publicNote": "Mục I – Khái quát, đoạn lịch sử mở rộng thành viên ghi Việt Nam gia nhập ngày 28/7/1995, là thành viên thứ bảy.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "existing-later-a",
+      "decision": "approve"
+    },
+    {
+      "slug": "binh-thuong-hoa-quan-he-viet-my-1995",
+      "title": "Bình thường hóa quan hệ Việt Nam – Hoa Kỳ",
+      "summary": "Tháng 7/1995, Việt Nam và Hoa Kỳ tuyên bố bình thường hóa quan hệ ngoại giao. Văn bản Nhà Trắng ghi ngày 11/7 theo thời gian Hoa Kỳ; nguồn Việt Nam ghi mốc 12/7/1995.",
+      "content": "## Tuyên bố bình thường hóa\n\nVăn bản Nhà Trắng ngày 11/7/1995 ghi lại tuyên bố của Tổng thống Bill Clinton về bình thường hóa quan hệ ngoại giao với Việt Nam. Đây là ngày theo thời gian tại Hoa Kỳ.\n\nBáo Điện tử Chính phủ ghi mốc bình thường hóa là ngày 12/7/1995 khi nhìn lại quan hệ hai nước.\n\n## Đọc ngày tháng trong nguồn\n\nHai cách ghi ngày cần được đọc cùng bối cảnh của từng nước. Khi so sánh tài liệu, hãy ghi rõ nguồn và địa điểm của tuyên bố. Bình thường hóa quan hệ ngoại giao, dỡ bỏ cấm vận và khai trương đại sứ quán là những mốc khác nhau; mỗi mốc cần được đối chiếu bằng tài liệu riêng.",
+      "topic": "doi-ngoai-viet-nam",
+      "secondaryTopics": [
+        "cong-cuoc-doi-moi"
+      ],
+      "startYear": 1995,
+      "endYear": 1995,
+      "startDate": "1995-07-11",
+      "endDate": "1995-07-12",
+      "dateText": "11–12/7/1995 (theo cách ghi ngày của hai nước)",
+      "datePrecision": "period",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "14-doi-ngoai-tu-nam-1975-den-nay",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "us-normalization",
+          "locator": "Release date July 11, 1995; East Room; first substantive announcement paragraph",
+          "scope": "Bounded date, membership/announcement and narrative; editorial reading notes are explicitly interpretive.",
+          "publicNote": "Văn bản Nhà Trắng đề ngày 11/7/1995, phần mở đầu tuyên bố bình thường hóa quan hệ ngoại giao; ngày theo thời gian Hoa Kỳ.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        },
+        {
+          "id": "vn-normalization",
+          "locator": "Opening summary and first body paragraph, 12/7/1995; following paragraph naming both leaders",
+          "scope": "Vietnamese source date convention only; no inference that two declarations were simultaneous.",
+          "publicNote": "Đoạn mở đầu và đoạn đầu phần nội dung ghi mốc bình thường hóa ngày 12/7/1995 trong cách nhìn lại của nguồn Việt Nam.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "existing-later-a",
+      "decision": "approve"
+    },
+    {
+      "slug": "bao-ve-chu-quyen-gac-ma-1988",
+      "title": "Bảo vệ chủ quyền tại Gạc Ma năm 1988",
+      "topic": "bao-ve-to-quoc-sau-1975",
+      "secondaryTopics": [],
+      "startYear": 1988,
+      "endYear": 1988,
+      "startDate": "1988-03-14",
+      "endDate": "1988-03-14",
+      "dateText": "14/3/1988",
+      "datePrecision": "exact",
+      "summary": "Ngày 14/3/1988, 64 cán bộ, chiến sĩ Hải quân Việt Nam hy sinh trong sự kiện tại khu vực Gạc Ma.",
+      "content": "## Mốc tưởng niệm\n\nNgày 14/3/1988, 64 cán bộ, chiến sĩ Hải quân Việt Nam hy sinh trong sự kiện tại khu vực Gạc Ma. Ngày và số người hy sinh này được Báo Điện tử Chính phủ và Đài Tiếng nói Việt Nam cùng ghi nhận.\n\n## Gợi ý học tập\n\nMốc tưởng niệm giúp tìm hiểu sự hy sinh của người lính trong nhiệm vụ bảo vệ chủ quyền biển, đảo. Nội dung ở đây tập trung vào ngày và số liệt sĩ được hai nguồn xác nhận. Khi tìm hiểu diễn biến chiến đấu hoặc lời kể của người tham gia, cần đọc thêm tài liệu và kiểm tra xuất xứ của từng chi tiết.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "9-bao-ve-to-quoc-tu-sau-thang-4-1975",
+          "sectionId": "muc-3"
+        }
+      ],
+      "sources": [
+        {
+          "id": "gacma-bcp",
+          "locator": "Opening description of 36th anniversary, 14/3/1988–14/3/2024; paragraph on 64 sailors",
+          "scope": "Date and commemoration count only; no combat reconstruction or territorial geometry.",
+          "publicNote": "Đoạn mở đầu và đoạn về lễ tưởng niệm xác nhận ngày 14/3/1988 và 64 liệt sĩ.",
+          "publicScope": "Xác nhận ngày và số liệt sĩ; không dùng để tái dựng chi tiết tác chiến."
+        },
+        {
+          "id": "gacma-vov",
+          "locator": "Paragraph beginning Lịch sử vẫn luôn nhắc nhớ; next paragraph Cuộc chiến ấy, 64 chiến sĩ",
+          "scope": "Independent broadcaster corroboration of date/count; retrieved HTTP 200 via direct fetch after web extractor failed.",
+          "publicNote": "Hai đoạn bắt đầu bằng “Lịch sử vẫn luôn nhắc nhớ” và “Cuộc chiến ấy” xác nhận ngày 14/3/1988 và 64 chiến sĩ hy sinh.",
+          "publicScope": "Xác nhận ngày và số liệt sĩ; không dùng để tái dựng chi tiết tác chiến."
+        }
+      ],
+      "batch": "existing-later-b",
+      "decision": "approve"
+    },
+    {
+      "slug": "chien-dich-viet-bac-1947",
+      "title": "Mở đầu cuộc chiến đấu bảo vệ Việt Bắc năm 1947",
+      "topic": "khang-chien-chong-phap",
+      "secondaryTopics": [],
+      "startYear": 1947,
+      "endYear": 1947,
+      "startDate": "1947-10-07",
+      "endDate": "1947-10-07",
+      "dateText": "7/10/1947",
+      "datePrecision": "exact",
+      "summary": "Ngày 7/10/1947, quân Pháp mở cuộc tiến công lên Việt Bắc; lực lượng kháng chiến tổ chức chiến đấu bảo vệ căn cứ.",
+      "content": "## Mở đầu cuộc chiến đấu\n\nNgày 7/10/1947, quân Pháp mở cuộc tiến công lên Việt Bắc. Lực lượng kháng chiến tổ chức chiến đấu bảo vệ căn cứ.\n\n## Gợi ý học tập\n\nDòng thời gian chọn ngày mở đầu để xác định sự kiện. Khi trình bày cuộc chiến đấu bảo vệ Việt Bắc, hãy phân biệt mốc mở đầu với các diễn biến tiếp theo và kết quả của toàn bộ cuộc chiến đấu. Một ngày được đánh dấu trên timeline không thể thay cho thời gian của cả chiến dịch.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "7-khang-chien-chong-phap",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "viet-bac-1947",
+          "locator": "1947 entries: TỪ NGÀY 7-10 ĐẾN NGÀY 22-12; 9-10 and 15-10 entries",
+          "scope": "Opening milestone and bounded place description only; no unsupported campaign duration, statistics or coordinates.",
+          "publicNote": "Niên biểu năm 1947, mục từ ngày 7/10 đến 22/12 và các mục 9/10, 15/10 về cuộc tiến công lên Việt Bắc.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-1",
+      "decision": "approve"
+    },
+    {
+      "slug": "chien-dich-bien-gioi-1950",
+      "title": "Mở chiến dịch Biên giới năm 1950",
+      "topic": "khang-chien-chong-phap",
+      "secondaryTopics": [],
+      "startYear": 1950,
+      "endYear": 1950,
+      "startDate": "1950-09-16",
+      "endDate": "1950-09-16",
+      "dateText": "16/9/1950",
+      "datePrecision": "exact",
+      "summary": "Ngày 16/9/1950, trận Đông Khê mở đầu Chiến dịch Biên giới.",
+      "content": "## Mở chiến dịch\n\nNgày 16/9/1950, trận Đông Khê mở đầu Chiến dịch Biên giới. Mốc tiến công Đông Khê được Bảo tàng Lịch sử Quốc gia và bộ Lịch sử Biên niên Đảng Cộng sản Việt Nam ghi nhận.\n\n## Gợi ý học tập\n\nPhân biệt ngày mở đầu chiến dịch với ngày kết thúc trận Đông Khê và thời gian của toàn chiến dịch. Mốc ngày 16/9 trên timeline giúp định vị điểm khởi đầu; khi học diễn biến và kết quả, cần theo dõi thêm các mốc tiếp theo trong nguồn tham khảo.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "7-khang-chien-chong-phap",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "bien-gioi-national-museum",
+          "locator": "Paragraph beginning Ngày 16-9-1950, Trung đoàn 174 và Trung đoàn 209",
+          "scope": "Opening attack on Đông Khê only; not campaign ending or exact coordinates.",
+          "publicNote": "Đoạn bắt đầu bằng “Ngày 16-9-1950” ghi cuộc tiến công cứ điểm Đông Khê.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        },
+        {
+          "id": "viet-bac-1947",
+          "locator": "1950 chronology: paragraph beginning Ngày 16-9-1950, quân đội ta đánh Đông Khê, mở chiến dịch Đường số 4",
+          "scope": "Corroboration of opening date and Đông Khê identity.",
+          "publicNote": "Niên biểu năm 1950, đoạn ghi ngày 16/9/1950 đánh Đông Khê, mở chiến dịch Đường số 4.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-1",
+      "decision": "approve"
+    },
+    {
+      "slug": "phong-trao-dong-khoi-1960",
+      "title": "Đồng khởi Bến Tre năm 1960",
+      "topic": "khang-chien-chong-my",
+      "secondaryTopics": [],
+      "startYear": 1960,
+      "endYear": 1960,
+      "startDate": "1960-01-17",
+      "endDate": "1960-01-17",
+      "dateText": "17/1/1960",
+      "datePrecision": "exact",
+      "summary": "Ngày 17/1/1960, Đồng khởi nổ ra tại Định Thủy, Phước Hiệp và Bình Khánh, huyện Mỏ Cày, Bến Tre.",
+      "content": "## Đồng khởi tại Bến Tre\n\nNgày 17/1/1960, Đồng khởi nổ ra tại ba xã Định Thủy, Phước Hiệp và Bình Khánh, huyện Mỏ Cày, Bến Tre.\n\n## Gợi ý học tập\n\nĐây là mốc tại Bến Tre trong phong trào Đồng khởi rộng hơn. Khi trình bày, hãy phân biệt nơi nổ ra cuộc nổi dậy, sự lan rộng của phong trào và kết quả. Ngày 17/1/1960 không có nghĩa mọi cuộc nổi dậy ở miền Nam đều khởi đầu cùng ngày.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-1"
+        }
+      ],
+      "sources": [
+        {
+          "id": "dong-khoi-1960",
+          "locator": "Paragraphs after Đúng theo kế hoạch, ngày 17-1-1960; preceding paragraph naming three communes",
+          "scope": "Opening milestone and bounded place description only; no unsupported campaign duration, statistics or coordinates.",
+          "publicNote": "Các đoạn về kế hoạch khởi nghĩa và ngày 17/1/1960 nêu ba xã Định Thủy, Phước Hiệp, Bình Khánh ở Bến Tre.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-1",
+      "decision": "approve"
+    },
+    {
+      "slug": "hue-gianh-chinh-quyen-1945",
+      "title": "Huế giành chính quyền năm 1945",
+      "topic": "cach-mang-thang-tam-1945",
+      "secondaryTopics": [],
+      "startYear": 1945,
+      "endYear": 1945,
+      "startDate": "1945-08-23",
+      "endDate": "1945-08-23",
+      "dateText": "23/8/1945",
+      "datePrecision": "exact",
+      "summary": "Ngày 23/8/1945, nhân dân Huế nổi dậy giành chính quyền.",
+      "content": "## Mốc giành chính quyền\n\nNgày 23/8/1945, nhân dân Huế nổi dậy giành chính quyền trong Tổng khởi nghĩa tháng Tám.\n\n## Gợi ý học tập\n\nĐặt mốc Huế bên cạnh các mốc giành chính quyền ở Hà Nội và Sài Gòn để theo dõi tiến trình Tổng khởi nghĩa. Khi trình bày, cần ghi rõ ngày và địa phương; ngày giành chính quyền của một đô thị không phải ngày khởi nghĩa chung cho cả nước.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "6-cach-mang-thang-tam-nam-1945",
+          "sectionId": "muc-1"
+        }
+      ],
+      "sources": [
+        {
+          "id": "august-1945",
+          "locator": "Section Giành chính quyền tại Huế 23/8/1945",
+          "scope": "City milestone or bounded two-day battle; no crowd counts, anecdotes, exact sites or campaign-wide date substitution.",
+          "publicNote": "Các mục giành chính quyền tại Huế ngày 23/8/1945 và Sài Gòn ngày 25/8/1945.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-2",
+      "decision": "approve"
+    },
+    {
+      "slug": "sai-gon-gianh-chinh-quyen-1945",
+      "title": "Sài Gòn giành chính quyền năm 1945",
+      "topic": "cach-mang-thang-tam-1945",
+      "secondaryTopics": [],
+      "startYear": 1945,
+      "endYear": 1945,
+      "startDate": "1945-08-25",
+      "endDate": "1945-08-25",
+      "dateText": "25/8/1945",
+      "datePrecision": "exact",
+      "summary": "Ngày 25/8/1945, lực lượng cách mạng giành chính quyền ở Sài Gòn.",
+      "content": "## Mốc giành chính quyền\n\nNgày 25/8/1945, lực lượng cách mạng giành chính quyền ở Sài Gòn trong Tổng khởi nghĩa tháng Tám.\n\n## Gợi ý học tập\n\nĐặt mốc Sài Gòn bên cạnh các mốc Hà Nội và Huế để theo dõi tiến trình Tổng khởi nghĩa. Hãy ghi rõ địa phương khi dẫn ngày tháng, đồng thời phân biệt sự kiện giành chính quyền ở một đô thị với tiến trình trên phạm vi cả nước.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "6-cach-mang-thang-tam-nam-1945",
+          "sectionId": "muc-1"
+        }
+      ],
+      "sources": [
+        {
+          "id": "august-1945",
+          "locator": "Section Giành chính quyền tại Sài Gòn, 25/8/1945; paragraph Sáng 25/8",
+          "scope": "City milestone or bounded two-day battle; no crowd counts, anecdotes, exact sites or campaign-wide date substitution.",
+          "publicNote": "Các mục giành chính quyền tại Huế ngày 23/8/1945 và Sài Gòn ngày 25/8/1945.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-2",
+      "decision": "approve"
+    },
+    {
+      "slug": "chien-thang-buon-ma-thuot-1975",
+      "title": "Trận Buôn Ma Thuột tháng 3/1975",
+      "topic": "khang-chien-chong-my",
+      "secondaryTopics": [],
+      "startYear": 1975,
+      "endYear": 1975,
+      "startDate": "1975-03-10",
+      "endDate": "1975-03-11",
+      "dateText": "10–11/3/1975",
+      "datePrecision": "period",
+      "summary": "Trong hai ngày 10–11/3/1975, lực lượng tiến công giải phóng thị xã Buôn Ma Thuột, mở ra bước ngoặt của Chiến dịch Tây Nguyên.",
+      "content": "## Trận Buôn Ma Thuột\n\nTrong hai ngày 10–11/3/1975, lực lượng tiến công giải phóng thị xã Buôn Ma Thuột, tạo bước ngoặt trong Chiến dịch Tây Nguyên.\n\n## Gợi ý học tập\n\nKhoảng ngày trên dành cho trận đánh tại thị xã Buôn Ma Thuột. Cần phân biệt trận đánh này với toàn bộ Chiến dịch Tây Nguyên và Tổng tiến công mùa Xuân năm 1975. Khi lập bảng diễn biến, nên ghi riêng tên trận đánh, tên chiến dịch và thời gian tương ứng.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-3"
+        }
+      ],
+      "sources": [
+        {
+          "id": "buon-ma-thuot-1975",
+          "locator": "Paragraph beginning Từ ngày 10-11/3/1975",
+          "scope": "City milestone or bounded two-day battle; no crowd counts, anecdotes, exact sites or campaign-wide date substitution.",
+          "publicNote": "Đoạn về trận then chốt mở màn ghi cuộc tiến công giải phóng thị xã Buôn Ma Thuột trong ngày 10–11/3/1975.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-2",
+      "decision": "approve"
+    },
+    {
+      "slug": "giai-phong-hue-1975",
+      "title": "Giải phóng Huế năm 1975",
+      "topic": "khang-chien-chong-my",
+      "secondaryTopics": [],
+      "startYear": 1975,
+      "endYear": 1975,
+      "startDate": "1975-03-26",
+      "endDate": "1975-03-26",
+      "dateText": "26/3/1975",
+      "datePrecision": "exact",
+      "summary": "Ngày 26/3/1975, thành phố Huế được giải phóng.",
+      "content": "## Mốc giải phóng Huế\n\nNgày 26/3/1975, thành phố Huế được giải phóng. Mốc này được Bảo tàng Lịch sử Quốc gia và Báo Điện tử Chính phủ ghi nhận.\n\n## Gợi ý học tập\n\nĐặt mốc Huế trong tiến trình Tổng tiến công mùa Xuân năm 1975. Đây là ngày giải phóng thành phố; khi học về chiến dịch trên khu vực Trị Thiên, cần phân biệt thời gian của cả chiến dịch với mốc hoàn thành giải phóng một đô thị.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-3"
+        }
+      ],
+      "sources": [
+        {
+          "id": "spring-museum",
+          "locator": "Part 3, Tài liệu, hiện vật tiêu biểu: caption list for Huế 26/3 and Đà Nẵng 29/3",
+          "scope": "Concluding city milestone only, not campaign start or duration.",
+          "publicNote": "Phần 3, danh mục tài liệu và hiện vật tiêu biểu ghi giải phóng Huế ngày 26/3 và làm chủ Đà Nẵng ngày 29/3/1975.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        },
+        {
+          "id": "hue-1975",
+          "locator": "Final paragraph of Đợt 2 (21–26/3/1975)",
+          "scope": "Independent city milestone corroboration.",
+          "publicNote": "Mục Đợt 2, đoạn cuối ghi đến ngày 26/3/1975 giải phóng thành phố Huế.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-3",
+      "decision": "approve"
+    },
+    {
+      "slug": "giai-phong-da-nang-1975",
+      "title": "Giải phóng Đà Nẵng năm 1975",
+      "topic": "khang-chien-chong-my",
+      "secondaryTopics": [],
+      "startYear": 1975,
+      "endYear": 1975,
+      "startDate": "1975-03-29",
+      "endDate": "1975-03-29",
+      "dateText": "29/3/1975",
+      "datePrecision": "exact",
+      "summary": "Ngày 29/3/1975, lực lượng giải phóng hoàn toàn làm chủ thành phố Đà Nẵng.",
+      "content": "## Mốc giải phóng Đà Nẵng\n\nNgày 29/3/1975, lực lượng giải phóng hoàn toàn làm chủ thành phố Đà Nẵng.\n\n## Gợi ý học tập\n\nĐặt mốc Đà Nẵng cạnh các mốc Buôn Ma Thuột, Huế và Sài Gòn để theo dõi tiến trình Tổng tiến công mùa Xuân năm 1975. Ngày giải phóng thành phố là một mốc trong tiến trình đó; không dùng riêng ngày này để biểu thị thời gian của toàn bộ chiến dịch hay cuộc Tổng tiến công.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-3"
+        }
+      ],
+      "sources": [
+        {
+          "id": "spring-museum",
+          "locator": "Part 3, Tài liệu, hiện vật tiêu biểu: caption list for Huế 26/3 and Đà Nẵng 29/3",
+          "scope": "Concluding city milestone only, not campaign start or duration.",
+          "publicNote": "Phần 3, danh mục tài liệu và hiện vật tiêu biểu ghi giải phóng Huế ngày 26/3 và làm chủ Đà Nẵng ngày 29/3/1975.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-3",
+      "decision": "approve"
+    },
+    {
+      "slug": "phong-trao-dong-du",
+      "title": "Phong trào Đông Du",
+      "topic": "doi-ngoai-viet-nam",
+      "startYear": 1905,
+      "endYear": 1909,
+      "startDate": null,
+      "endDate": null,
+      "dateText": "1905–1909 (hoạt động chủ yếu 1905–1908)",
+      "datePrecision": "period",
+      "summary": "Từ năm 1905, Phan Bội Châu vận động thanh niên Việt Nam sang Nhật Bản học tập. Phong trào bị giải tán năm 1908; Phan Bội Châu và Cường Để bị trục xuất khỏi Nhật Bản vào tháng 2/1909.",
+      "secondaryTopics": [],
+      "content": "## Hoạt động của phong trào\n\nTừ năm 1905, Phan Bội Châu vận động thanh niên Việt Nam sang Nhật Bản học tập. Phong trào bị giải tán năm 1908. Tháng 2/1909, Phan Bội Châu và Cường Để bị trục xuất khỏi Nhật Bản.\n\n## Phân biệt hoạt động và kết cục\n\nBảo tàng Lịch sử Quốc gia đặt tên phong trào theo giai đoạn hoạt động 1905–1908 và ghi thêm việc trục xuất năm 1909 trong phần kết. Khoảng năm 1905–1909 trên timeline bao gồm phần kết này. Khi trả lời về thời gian hoạt động chủ yếu của phong trào, cần giữ rõ giai đoạn 1905–1908.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "12-doi-ngoai-dau-the-ki-xx-den-1945",
+          "sectionId": "muc-1"
+        }
+      ],
+      "sources": [
+        {
+          "id": "dong-du",
+          "locator": "Opening Đầu năm 1905; paragraph Những hoạt động...1905 đến 1908; paragraph Tháng 9 năm 1908...Tháng 2 năm 1909",
+          "scope": "Bounded movement/month/commemoration claim; conference-wide dates, exact buildings and statistics excluded.",
+          "publicNote": "Các đoạn về đầu năm 1905, giải tán tổ chức học sinh tháng 9/1908 và trục xuất Phan Bội Châu, Cường Để tháng 2/1909.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-4",
+      "decision": "approve"
+    },
+    {
+      "slug": "nguyen-ai-quoc-dai-hoi-tours-1920",
+      "title": "Nguyễn Ái Quốc tại Đại hội Tours",
+      "topic": "ho-chi-minh",
+      "startYear": 1920,
+      "endYear": 1920,
+      "startDate": null,
+      "endDate": null,
+      "dateText": "Tháng 12/1920",
+      "datePrecision": "approximate",
+      "summary": "Tháng 12/1920, Nguyễn Ái Quốc tham dự Đại hội Đảng Xã hội Pháp tại Tours và tham gia sáng lập Đảng Cộng sản Pháp.",
+      "secondaryTopics": [],
+      "content": "## Đại hội Tours\n\nTháng 12/1920, Nguyễn Ái Quốc tham dự Đại hội Đảng Xã hội Pháp tại thành phố Tours. Tại đại hội, Người bỏ phiếu tán thành Quốc tế III và tham gia sáng lập Đảng Cộng sản Pháp.\n\n## Gợi ý học tập\n\nMốc trên timeline được ghi ở mức tháng để thể hiện phạm vi của nội dung này. Khi học về quá trình hoạt động của Nguyễn Ái Quốc, hãy đặt sự kiện trong tiến trình tìm đường giải phóng dân tộc và đối chiếu trực tiếp đoạn tư liệu về Đại hội Tours trong nguồn tham khảo.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "16-ho-chi-minh-anh-hung-giai-phong-dan-toc",
+          "sectionId": "muc-1"
+        }
+      ],
+      "sources": [
+        {
+          "id": "hcm-journey",
+          "locator": "Paragraph Đại hội lần thứ XVIII...tại thành phố Tours tháng 12-1920; following paragraph bỏ phiếu tán thành Quốc tế III",
+          "scope": "Bounded movement/month/commemoration claim; conference-wide dates, exact buildings and statistics excluded.",
+          "publicNote": "Đoạn về Đại hội Đảng Xã hội Pháp tại Tours tháng 12/1920 và đoạn tiếp theo về việc tán thành Quốc tế III, tham gia sáng lập Đảng Cộng sản Pháp.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-4",
+      "decision": "approve"
+    },
+    {
+      "slug": "thanh-lap-dang-cong-san-viet-nam-1930",
+      "title": "Thành lập Đảng Cộng sản Việt Nam",
+      "topic": "ho-chi-minh",
+      "startYear": 1930,
+      "endYear": 1930,
+      "startDate": "1930-02-03",
+      "endDate": "1930-02-03",
+      "dateText": "3/2/1930 (ngày thành lập được kỷ niệm)",
+      "datePrecision": "exact",
+      "summary": "Ngày 3/2/1930 được xác định là Ngày thành lập Đảng Cộng sản Việt Nam. Nguyễn Ái Quốc chủ trì việc hợp nhất các tổ chức cộng sản thành một đảng thống nhất.",
+      "secondaryTopics": [],
+      "content": "## Mốc thành lập\n\nNgày 3/2/1930 được xác định là Ngày thành lập Đảng Cộng sản Việt Nam. Nguyễn Ái Quốc chủ trì việc hợp nhất các tổ chức cộng sản thành một đảng thống nhất.\n\n## Đọc mốc ngày\n\nNgày 3/2 là ngày thành lập được kỷ niệm. Mốc này không có nghĩa toàn bộ hội nghị hợp nhất chỉ diễn ra trong một ngày. Khi trình bày, cần phân biệt ngày thành lập, quá trình chuẩn bị và nội dung của hội nghị.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "15-khai-quat-cuoc-doi-va-su-nghiep-ho-chi-minh",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "cpv-founding",
+          "locator": "Paragraph Hội nghị nhất trí...Ngày 3 tháng 2 năm 1930 trở thành Ngày thành lập Đảng Cộng sản Việt Nam",
+          "scope": "Bounded movement/month/commemoration claim; conference-wide dates, exact buildings and statistics excluded.",
+          "publicNote": "Đoạn về hội nghị hợp nhất và câu xác định ngày 3/2/1930 là Ngày thành lập Đảng Cộng sản Việt Nam.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-4",
+      "decision": "approve"
+    },
+    {
+      "slug": "thanh-lap-viet-minh-1941",
+      "title": "Thành lập Mặt trận Việt Minh",
+      "topic": "cach-mang-thang-tam-1945",
+      "secondaryTopics": [],
+      "startYear": 1941,
+      "endYear": 1941,
+      "startDate": "1941-05-19",
+      "endDate": "1941-05-19",
+      "dateText": "19/5/1941",
+      "datePrecision": "exact",
+      "summary": "Ngày 19/5/1941, Mặt trận Việt Nam độc lập đồng minh, gọi tắt là Việt Minh, ra đời để tập hợp các lực lượng tham gia đấu tranh giải phóng dân tộc.",
+      "content": "## Mặt trận Việt Minh ra đời\n\nNgày 19/5/1941, Mặt trận Việt Nam độc lập đồng minh, gọi tắt là Việt Minh, ra đời để tập hợp các lực lượng tham gia đấu tranh giải phóng dân tộc.\n\n## Gợi ý học tập\n\nPhân biệt mốc thành lập tổ chức với mốc Nguyễn Ái Quốc trở về nước. Hai sự kiện có quan hệ trong quá trình chuẩn bị cách mạng, nhưng có tên gọi và ngày tháng riêng. Khi lập bảng thời gian, hãy ghi thành hai dòng để thể hiện đúng trình tự.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "16-ho-chi-minh-anh-hung-giai-phong-dan-toc",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "thanh-lap-viet-minh-1941",
+          "locator": "Paragraphs Hội nghị đã quyết định thành lập Việt Nam độc lập đồng minh and Ngày 19-5-1941",
+          "scope": "Date, event identity and bounded summary only; statistics, exact military positions and anecdotes excluded.",
+          "publicNote": "Các đoạn về quyết định thành lập Việt Nam độc lập đồng minh và ngày ra đời 19/5/1941.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-5",
+      "decision": "approve"
+    },
+    {
+      "slug": "chien-thang-ap-bac-1963",
+      "title": "Chiến thắng Ấp Bắc",
+      "topic": "khang-chien-chong-my",
+      "secondaryTopics": [],
+      "startYear": 1963,
+      "endYear": 1963,
+      "startDate": "1963-01-02",
+      "endDate": "1963-01-02",
+      "dateText": "2/1/1963",
+      "datePrecision": "exact",
+      "summary": "Ngày 2/1/1963, trận Ấp Bắc diễn ra và lực lượng cách mạng giành thắng lợi.",
+      "content": "## Trận Ấp Bắc\n\nNgày 2/1/1963, trận Ấp Bắc diễn ra và lực lượng cách mạng giành thắng lợi.\n\n## Gợi ý học tập\n\nĐây là mốc ngày của một trận đánh. Khi học về cuộc kháng chiến chống Mỹ, hãy đặt trận Ấp Bắc trong giai đoạn tương ứng, phân biệt diễn biến của trận đánh với diễn biến trên toàn chiến trường. Một trận thắng không đồng nghĩa với việc mọi hoạt động quân sự của đối phương kết thúc ngay trong ngày đó.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-1"
+        }
+      ],
+      "sources": [
+        {
+          "id": "chien-thang-ap-bac-1963",
+          "locator": "Title, opening place/date paragraph and paragraph Sáng ngày 2-1-1963",
+          "scope": "Date, event identity and bounded summary only; statistics, exact military positions and anecdotes excluded.",
+          "publicNote": "Tiêu đề và các đoạn về ngày 2/1/1963, trận đánh tại Ấp Bắc.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-5",
+      "decision": "approve"
+    },
+    {
+      "slug": "chien-thang-van-tuong-1965",
+      "title": "Chiến thắng Vạn Tường",
+      "topic": "khang-chien-chong-my",
+      "secondaryTopics": [],
+      "startYear": 1965,
+      "endYear": 1965,
+      "startDate": "1965-08-18",
+      "endDate": "1965-08-18",
+      "dateText": "18/8/1965",
+      "datePrecision": "exact",
+      "summary": "Ngày 18/8/1965, trận Vạn Tường diễn ra giữa lực lượng giải phóng miền Nam và quân đội Mỹ.",
+      "content": "## Trận Vạn Tường\n\nNgày 18/8/1965, trận Vạn Tường diễn ra giữa lực lượng giải phóng miền Nam và quân đội Mỹ.\n\n## Gợi ý học tập\n\nĐặt trận Vạn Tường trong tiến trình cuộc kháng chiến chống Mỹ để so sánh với các mốc trước và sau năm 1965. Khi trình bày, cần phân biệt thời gian của một trận đánh với thời gian của cả giai đoạn chiến tranh; kết quả của từng trận cần được đọc trong nguồn tương ứng.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-2"
+        }
+      ],
+      "sources": [
+        {
+          "id": "chien-thang-van-tuong-1965",
+          "locator": "Title and opening paragraph naming opposing forces and date",
+          "scope": "Date, event identity and bounded summary only; statistics, exact military positions and anecdotes excluded.",
+          "publicNote": "Tiêu đề và đoạn mở đầu về trận Vạn Tường ngày 18/8/1965, giữa lực lượng giải phóng miền Nam và quân đội Mỹ.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-5",
+      "decision": "approve"
+    },
+    {
+      "slug": "tien-cong-chien-luoc-1972",
+      "title": "Mở cuộc tiến công chiến lược năm 1972",
+      "topic": "khang-chien-chong-my",
+      "startYear": 1972,
+      "endYear": 1972,
+      "startDate": "1972-03-30",
+      "endDate": "1972-03-30",
+      "dateText": "30/3/1972",
+      "datePrecision": "exact",
+      "summary": "Ngày 30/3/1972, cuộc tiến công chiến lược bắt đầu, với Quảng Trị là hướng tiến công chủ yếu.",
+      "sources": [
+        {
+          "id": "strategic-1972",
+          "locator": "Paragraph Trưa 30-3-1972...Quảng Trị...phát triển rộng...kéo dài trong năm 1972",
+          "scope": "Opening date and main direction only; campaign-wide end dates excluded.",
+          "publicNote": "Đoạn bắt đầu bằng “Trưa 30-3-1972” xác định thời điểm mở cuộc tiến công và hướng chủ yếu Quảng Trị.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "secondaryTopics": [],
+      "content": "## Mở cuộc tiến công\n\nNgày 30/3/1972, cuộc tiến công chiến lược bắt đầu, với Quảng Trị là hướng tiến công chủ yếu.\n\n## Gợi ý học tập\n\nTimeline chọn ngày mở đầu cuộc tiến công. Khi tìm hiểu các diễn biến trong năm 1972, hãy phân biệt sự kiện này với các cuộc chiến đấu chống tập kích đường không. Ghi riêng từng sự kiện và thời gian của nó giúp tránh gộp những hoạt động quân sự khác nhau thành một mốc duy nhất.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "8-khang-chien-chong-my-cuu-nuoc",
+          "sectionId": "muc-2"
+        }
+      ],
+      "batch": "candidate-6",
+      "decision": "approve"
+    },
+    {
+      "slug": "nghi-quyet-khoan-10-1988",
+      "title": "Nghị quyết 10 về đổi mới quản lý kinh tế nông nghiệp",
+      "topic": "cong-cuoc-doi-moi",
+      "startYear": 1988,
+      "endYear": 1988,
+      "startDate": "1988-04-05",
+      "endDate": "1988-04-05",
+      "dateText": "5/4/1988",
+      "datePrecision": "exact",
+      "summary": "Ngày 5/4/1988, Bộ Chính trị ban hành Nghị quyết 10 về đổi mới quản lý kinh tế nông nghiệp, xác định vai trò tự chủ của kinh tế hộ.",
+      "sources": [
+        {
+          "id": "khoan-10",
+          "locator": "Paragraph Trên cơ sở thắng lợi của cơ chế Khoán 100...ngày 5/4/1988...Nghị quyết 10",
+          "scope": "Issuing body/date, policy subject and household autonomy only; no aggregate output attribution.",
+          "publicNote": "Đoạn về Khoán 100 và Nghị quyết 10 ngày 5/4/1988, vai trò đơn vị kinh tế tự chủ của hộ gia đình.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "secondaryTopics": [],
+      "content": "## Nghị quyết 10\n\nNgày 5/4/1988, Bộ Chính trị ban hành Nghị quyết 10 về đổi mới quản lý kinh tế nông nghiệp. Nghị quyết xác định vai trò tự chủ của kinh tế hộ.\n\n## Gợi ý học tập\n\nĐây là một mốc chủ trương trong quá trình Đổi mới. Khi đánh giá tác động của chính sách, cần phân biệt ngày ban hành với quá trình thực hiện và kết quả ở từng thời kỳ. Các số liệu về sản xuất, thu nhập hay đời sống nông dân cần được dẫn từ tài liệu tương ứng.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "10-khai-quat-ve-cong-cuoc-doi-moi",
+          "sectionId": "muc-1"
+        }
+      ],
+      "batch": "candidate-6",
+      "decision": "approve"
+    },
+    {
+      "slug": "dai-hoi-dang-lan-thu-viii-1996",
+      "title": "Đại hội đại biểu toàn quốc lần thứ VIII của Đảng",
+      "topic": "cong-cuoc-doi-moi",
+      "startYear": 1996,
+      "endYear": 1996,
+      "startDate": "1996-06-28",
+      "endDate": "1996-07-01",
+      "dateText": "28/6–1/7/1996",
+      "datePrecision": "period",
+      "summary": "Đại hội VIII diễn ra từ ngày 28/6 đến ngày 1/7/1996 tại Hà Nội, đánh giá mười năm Đổi mới và đề ra nhiệm vụ đẩy mạnh công nghiệp hóa, hiện đại hóa.",
+      "sources": [
+        {
+          "id": "congress-viii",
+          "locator": "Opening context and paragraph Trong hoàn cảnh đó...28-6 đến 1-7-1996",
+          "scope": "Congress interval/place and context.",
+          "publicNote": "Đoạn ghi Đại hội VIII diễn ra từ 28/6 đến 1/7/1996 tại Hà Nội.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        },
+        {
+          "id": "viii-political-report",
+          "locator": "Assessment after 10 years, paragraph Nước ta đã ra khỏi khủng hoảng...nhưng một số mặt còn chưa vững chắc; lessons 1, 2 and 5",
+          "scope": "Attributed 1996 assessment and bounded lesson examples; not a current all-period statistical assessment.",
+          "publicNote": "Phần đánh giá mười năm Đổi mới, đoạn về ra khỏi khủng hoảng nhưng một số mặt chưa vững chắc; các bài học 1, 2 và 5.",
+          "publicScope": "Đánh giá và bài học của văn kiện năm 1996; không phải tổng kết đến hiện nay."
+        }
+      ],
+      "secondaryTopics": [],
+      "content": "## Mốc lịch sử\n\nĐại hội VIII diễn ra từ ngày 28/6 đến ngày 1/7/1996 tại Hà Nội, đánh giá mười năm Đổi mới và đề ra nhiệm vụ đẩy mạnh công nghiệp hóa, hiện đại hóa.\n\n## Đọc đánh giá mười năm Đổi mới tại thời điểm 1996\n\nBáo cáo Chính trị tại Đại hội VIII đánh giá Việt Nam đã ra khỏi khủng hoảng kinh tế – xã hội, đồng thời lưu ý một số mặt chưa vững chắc. Đây là đánh giá của văn kiện ở thời điểm 1996, không phải bản tổng kết toàn bộ thời kỳ Đổi mới đến hiện nay.\n\n## Một số bài học được văn kiện nêu\n\nVăn kiện nhấn mạnh giữ mục tiêu độc lập dân tộc và chủ nghĩa xã hội; kết hợp đổi mới kinh tế với đổi mới chính trị, lấy đổi mới kinh tế làm trọng tâm; mở rộng hợp tác quốc tế đi đôi với phát huy nguồn lực bên trong.\n\n## Gợi ý đối chiếu\n\nKhi học, phân biệt kết quả được đánh giá trong một thời kỳ, chủ trương tiếp theo và các mốc hội nhập sau đó. Gia nhập WTO hoặc CPTPP là những ví dụ để đối chiếu tiến trình, không tự chứng minh mọi kết quả kinh tế – xã hội.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "10-khai-quat-ve-cong-cuoc-doi-moi",
+          "sectionId": "muc-2"
+        },
+        {
+          "lessonSlug": "11-thanh-tuu-va-bai-hoc-cua-cong-cuoc-doi-moi",
+          "sectionId": "muc-1"
+        },
+        {
+          "lessonSlug": "11-thanh-tuu-va-bai-hoc-cua-cong-cuoc-doi-moi",
+          "sectionId": "muc-2"
+        }
+      ],
+      "batch": "candidate-6",
+      "decision": "approve"
+    },
+    {
+      "slug": "cptpp-co-hieu-luc-voi-viet-nam-2019",
+      "title": "CPTPP có hiệu lực đối với Việt Nam",
+      "topic": "doi-ngoai-viet-nam",
+      "secondaryTopics": [
+        "cong-cuoc-doi-moi"
+      ],
+      "startYear": 2019,
+      "endYear": 2019,
+      "startDate": "2019-01-14",
+      "endDate": "2019-01-14",
+      "dateText": "14/1/2019",
+      "datePrecision": "exact",
+      "summary": "Hiệp định Đối tác Toàn diện và Tiến bộ xuyên Thái Bình Dương (CPTPP) có hiệu lực đối với Việt Nam từ ngày 14/1/2019.",
+      "content": "## Mốc hội nhập\n\nHiệp định Đối tác Toàn diện và Tiến bộ xuyên Thái Bình Dương (CPTPP) có hiệu lực đối với Việt Nam từ ngày 14/1/2019. Bộ Công Thương phân biệt mốc này với ngày Quốc hội thông qua nghị quyết phê chuẩn hiệp định và các văn kiện liên quan là 12/11/2018.\n\n## Gợi ý học tập\n\nPhân biệt phê chuẩn hiệp định với thời điểm hiệp định có hiệu lực. Đặt CPTPP cạnh các mốc ASEAN và WTO để tìm hiểu quá trình hội nhập quốc tế của Việt Nam. Khi đánh giá kết quả thương mại sau đó, cần dùng số liệu và tài liệu của giai đoạn tương ứng.",
+      "evidence": "verified",
+      "workflowStatus": "published",
+      "location": null,
+      "media": null,
+      "lessonRefs": [
+        {
+          "lessonSlug": "14-doi-ngoai-tu-nam-1975-den-nay",
+          "sectionId": "muc-2"
+        },
+        {
+          "lessonSlug": "10-khai-quat-ve-cong-cuoc-doi-moi",
+          "sectionId": "muc-3"
+        }
+      ],
+      "sources": [
+        {
+          "id": "cptpp-moit",
+          "locator": "Title; paragraph Đối với Việt Nam, Quốc hội đã thông qua...12 tháng 11 năm 2018...14 tháng 01 năm 2019",
+          "scope": "Entry-into-force and distinct ratification date only; not trade impact statistics or exact textbook placement.",
+          "publicNote": "Đoạn về Việt Nam ghi ngày Quốc hội thông qua nghị quyết phê chuẩn 12/11/2018 và thời điểm có hiệu lực 14/1/2019.",
+          "publicScope": "Xác nhận mốc và phạm vi nội dung được dẫn trong bài; gợi ý học tập là phần biên tập."
+        }
+      ],
+      "batch": "candidate-7",
+      "decision": "approve"
+    }
+  ]
+}
