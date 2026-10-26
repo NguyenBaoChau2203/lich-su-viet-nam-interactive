@@ -40,4 +40,11 @@ describe("owner-delegated timeline publication review", () => {
     expect(get("binh-thuong-hoa-quan-he-viet-my-1995").content).toContain("11/7/1995");
     expect(get("bao-ve-chu-quyen-gac-ma-1988").sources.length).toBeGreaterThanOrEqual(2);
   });
+
+  it("keeps public source citations free of internal storage instructions", () => {
+    for (const source of reviewed.sources) {
+      expect(source.publicCitation, source.id).toContain("Truy cập ngày 26/10/2026");
+      expect(source.publicCitation, source.id).not.toMatch(/event_sources|ledger|accessed|locators/i);
+    }
+  });
 });
