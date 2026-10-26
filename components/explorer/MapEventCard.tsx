@@ -5,12 +5,16 @@ import { SafeImage } from "@/components/ui/SafeImage";
 import type { ExplorerEvent } from "@/lib/explorer/types";
 import { buildMapEventHref, type MapExplorerState } from "@/lib/explorer/map-state";
 import { accuracyLevelLabels, datePrecisionLabels } from "@/lib/utils/labels";
+import { getLessonForEvent } from "@/lib/lessons";
 
 type Props = { event: ExplorerEvent; state: MapExplorerState | null; onClose(): void };
 
 export function MapEventCard({ event, state, onClose }: Props) {
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => { heading.current?.focus({ preventScroll: true }); }, []);
+  const lesson = getLessonForEvent(event.slug);
+  const detailHref = lesson ? `/bai-hoc/${lesson.slug}` : buildMapEventHref(event.slug, state);
+
   return (
     <section className="home-map-event-card" aria-labelledby="map-event-heading" data-testid="map-event-card">
       <button type="button" onClick={onClose} aria-label="Đóng thông tin sự kiện"
@@ -34,7 +38,7 @@ export function MapEventCard({ event, state, onClose }: Props) {
         <p className="mt-4 text-sm leading-relaxed text-foreground">{event.summary}</p>
         <p className="mt-4 flex items-center gap-1.5 text-xs text-muted-foreground"><BookOpen size={14} aria-hidden="true" />{event.sourceCount} nguồn tham khảo</p>
       </div>
-      <Link href={buildMapEventHref(event.slug, state)} data-testid="map-event-detail"
+      <Link href={detailHref} data-testid="map-event-detail"
         className="flex shrink-0 items-center justify-between border-t border-border px-5 py-4 text-sm font-bold text-accent underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-accent">
         Xem chi tiết <ArrowRight size={18} aria-hidden="true" />
       </Link>
