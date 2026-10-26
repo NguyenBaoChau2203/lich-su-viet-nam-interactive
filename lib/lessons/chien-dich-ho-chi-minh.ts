@@ -290,6 +290,38 @@ const TRUC_THANG_USS_OKINAWA: LessonImage = {
   sourceUrl: `${COMMONS}Operation_Frequent_Wind_-_Helicopter_pushed_overboard.jpg`,
 };
 
+const VAN_TIEN_DUNG_PORTRAIT: LessonImage = {
+  src: `${PHOTO}/van-tien-dung.webp`,
+  alt: "Chân dung Đại tướng Văn Tiến Dũng năm 1954",
+  caption: "Đại tướng Văn Tiến Dũng (1917–2002).",
+  credit: "Bộ Quốc phòng Việt Nam / Wikimedia Commons, phạm vi công cộng",
+  sourceUrl: `${COMMONS}Van_Tien_Dung_1954.jpg`,
+};
+
+const PHAM_HUNG_PORTRAIT: LessonImage = {
+  src: `${PHOTO}/pham-hung.webp`,
+  alt: "Chân dung đồng chí Phạm Hùng thời kỳ kháng chiến",
+  caption: "Đồng chí Phạm Hùng (1912–1988).",
+  credit: "Ảnh tư liệu lưu trữ / Wikimedia Commons, phạm vi công cộng",
+  sourceUrl: `${COMMONS}Pham_Hung.jpg`,
+};
+
+const LE_DUC_THO_PORTRAIT: LessonImage = {
+  src: `${PHOTO}/le-duc-tho.webp`,
+  alt: "Chân dung đồng chí Lê Đức Thọ tại sân bay Orly năm 1972",
+  caption: "Đồng chí Lê Đức Thọ năm 1972.",
+  credit: "Wikimedia Commons, CC BY-SA 3.0 nl",
+  sourceUrl: `${COMMONS}Le_Duc_Tho_at_Orly_Field_1972_(cropped).jpg`,
+};
+
+const NGUYEN_THANH_TRUNG_PORTRAIT: LessonImage = {
+  src: `${PHOTO}/nguyen-thanh-trung.webp`,
+  alt: "Trung úy phi công Nguyễn Thành Trung đội mũ bay sau chuyến bay ném bom Dinh Độc Lập ngày 8/4/1975",
+  caption: "Phi công Nguyễn Thành Trung sau khi ném bom Dinh Độc Lập (8/4/1975).",
+  credit: "Ảnh tư liệu lịch sử / Bảo tàng Lịch sử Quân sự, phạm vi công cộng",
+  sourceUrl: `${COMMONS}Nguyen_Thanh_Trung_1975.jpg`,
+};
+
 export const chienDichHoChiMinhLesson: Lesson = {
   slug: "chien-dich-ho-chi-minh-1975",
   eventSlug: "chien-dich-ho-chi-minh",
@@ -447,22 +479,26 @@ export const chienDichHoChiMinhLesson: Lesson = {
       role: "Tư lệnh Chiến dịch Hồ Chí Minh",
       text: "Đại tướng, Tổng Tham mưu trưởng Quân đội nhân dân Việt Nam; trực tiếp chỉ huy các chiến dịch Tây Nguyên và Hồ Chí Minh trong mùa Xuân 1975.",
       href: "/nhan-vat/van-tien-dung",
+      image: VAN_TIEN_DUNG_PORTRAIT,
     },
     {
       name: "Phạm Hùng",
       role: "Chính ủy Chiến dịch Hồ Chí Minh",
       text: "Ủy viên Bộ Chính trị, Bí thư Trung ương Cục miền Nam; cùng Bộ Chỉ huy chiến dịch lãnh đạo, chỉ đạo các lực lượng tiến công và nổi dậy giải phóng Sài Gòn.",
+      image: PHAM_HUNG_PORTRAIT,
     },
     {
       name: "Lê Đức Thọ",
       role: "Đại diện Bộ Chính trị tại mặt trận",
       text: "Ủy viên Bộ Chính trị, được cử vào chiến trường cùng Bộ Chỉ huy chiến dịch truyền đạt và chỉ đạo thực hiện quyết tâm giải phóng Sài Gòn trước mùa mưa.",
       href: "/nhan-vat/le-duc-tho",
+      image: LE_DUC_THO_PORTRAIT,
     },
     {
       name: "Nguyễn Thành Trung",
       role: "Phi công Phi đội Quyết thắng",
       text: "Ngày 8/4/1975 lái máy bay ném bom Dinh Độc Lập rồi bay về vùng giải phóng; chiều 28/4 trực tiếp dẫn đầu Phi đội Quyết thắng ném bom sân bay Tân Sơn Nhất.",
+      image: NGUYEN_THANH_TRUNG_PORTRAIT,
     },
   ],
   flashcards: [

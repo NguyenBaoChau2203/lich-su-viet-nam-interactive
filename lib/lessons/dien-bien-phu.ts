@@ -82,6 +82,22 @@ const VO_NGUYEN_GIAP_PORTRAIT = {
   sourceUrl: `${COMMONS}Vo_Nguyen_Giap_2008.jpg`,
 };
 
+const PHAN_DINH_GIOT_PORTRAIT = {
+  src: `${PHOTO}/phan-dinh-giot.webp`,
+  alt: "Chân dung Anh hùng Liệt sĩ Phan Đình Giót",
+  caption: "Anh hùng Phan Đình Giót (1922–1954).",
+  credit: "Ảnh tư liệu lịch sử, phạm vi công cộng",
+  sourceUrl: `${COMMONS}Phan_Dinh_Giot.jpg`,
+};
+
+const TO_VINH_DIEN_PORTRAIT = {
+  src: `${PHOTO}/to-vinh-dien.webp`,
+  alt: "Chân dung Anh hùng Liệt sĩ Tô Vĩnh Diện mặc quân phục đội mũ ca-lô",
+  caption: "Anh hùng Tô Vĩnh Diện (1924–1954).",
+  credit: "Ảnh tư liệu lịch sử, phạm vi công cộng",
+  sourceUrl: `${COMMONS}T%C3%B4_V%C4%A9nh_Di%E1%BB%87n.jpg`,
+};
+
 const HAM_DE_CASTRIES_NAY = {
   src: `${PHOTO}/ham-de-castries-nay.webp`,
   alt: "Hầm chỉ huy của De Castries được bảo tồn, có mái vòm bằng thép",
@@ -367,11 +383,13 @@ export const dienBienPhuLesson: Lesson = {
       name: "Phan Đình Giót",
       role: "Anh hùng Lực lượng vũ trang nhân dân",
       text: "Trong trận Him Lam ngày 13/3/1954, anh lấy thân mình lấp lỗ châu mai của địch để đồng đội xung phong.",
+      image: PHAN_DINH_GIOT_PORTRAIT,
     },
     {
       name: "Tô Vĩnh Diện",
       role: "Anh hùng Lực lượng vũ trang nhân dân",
       text: "Hy sinh khi lấy thân mình chèn bánh xe, giữ khẩu pháo không lao xuống vực trên đường kéo pháo.",
+      image: TO_VINH_DIEN_PORTRAIT,
     },
   ],
   flashcards: [
