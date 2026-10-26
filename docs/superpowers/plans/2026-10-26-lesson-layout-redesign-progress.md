@@ -13,8 +13,8 @@ Mục tiêu: Sắp xếp lại bố cục trang chuyên đề bài học (`/bai-
 | P2 | Khoảng cách dọc quá lớn (gap-16 khắp nơi), thiếu phân tách rõ ràng giữa các chương | `gap-20` giữa các chương, `gap-12` trong chương, thêm primitive `ChapterLabel` có vạch chỉ vàng | Đã giải quyết (Phase 1) |
 | P3 | Hero stats co cụm bên trái, để trống 40% bên phải; credit ảnh bị ngắt dòng khó chịu | Chia grid 2 cột `[7fr_5fr]`, stats xếp dọc bên phải với viền phân tách mỏng, credit chuyển xuống hàng phụ | Đã giải quyết (Phase 2) |
 | P4 | 10 mốc thời gian HCM để lại 2 ô trống ở hàng cuối; GoalBox 1 cột kéo dài | Timeline track ngang với dot viền trên, `balancedColumns`; GoalBox chia 2 cột khi ≥ 4 mục | Đã giải quyết (Phase 3) |
-| P5 | Khoảng trống khổng lồ 400-600px dưới bản đồ 2D do map cuộn mất khi duyệt các bước | Cột trái sticky (`lg:sticky lg:top-24`), map responsive clamp, bước diễn biến gọn gàng ngày/tiêu đề | Chờ Phase 4 |
-| P6 | Khung callout cảnh báo bản đồ hẹp hơn map; toggle 2D/3D & hướng dẫn rời rạc | Hợp nhất thanh điều khiển trên 1 hàng flex; callout căng đều chiều rộng content | Chờ Phase 4 |
+| P5 | Khoảng trống khổng lồ 400-600px dưới bản đồ 2D do map cuộn mất khi duyệt các bước | Cột trái sticky (`lg:sticky lg:top-24`), map responsive clamp, bước diễn biến gọn gàng ngày/tiêu đề | Đã giải quyết (Phase 4) |
+| P6 | Khung callout cảnh báo bản đồ hẹp hơn map; toggle 2D/3D & hướng dẫn rời rạc | Hợp nhất thanh điều khiển trên 1 hàng flex; callout căng đều chiều rộng content | Đã giải quyết (Phase 4) |
 | P7 | Kết quả & ý nghĩa trông như dashboard rời rạc với nhiều card hộp | Băng kết quả số liệu nguyên khối có viền; ý nghĩa 2 cột với số thứ tự `01`, `02`; quote căn giữa | Chờ Phase 5 |
 | P8 | FlipCard cố định `h-72` gây cắt chữ (như De Castries); credit/link lủng lẳng | Grid stacking fix (`grid-area: 1/1`), chiều cao tối thiểu `min-h-[18rem]`, thẻ nhân vật bằng nhau | Chờ Phase 5 |
 | P9 | Phim tư liệu video chính cao chênh lệch so với danh sách phụ gây khoảng trống lớn | Grid video cân bằng (`lg:grid-cols-{balancedColumns}`) | Chờ Phase 6 |
@@ -56,7 +56,14 @@ Mục tiêu: Sắp xếp lại bố cục trang chuyên đề bài học (`/bai-
   - Hỗ trợ in ấn với `break-inside: avoid` và `print-color-adjust: exact`
   - Parity test verify (6/6 passed) & L4 verify (18/18 passed)
   - Báo cáo: `.task-reports/2026-10-26-1435-lesson-layout-phase-3.md`
-- [ ] **Phase 4: Chương 2 - Diễn biến trên bản đồ**
+- [x] **Phase 4: Chương 2 - Diễn biến trên bản đồ**
+  - BattleMapSection: hợp nhất thanh 2D/3D và nút "Cách dùng bản đồ" trên cùng một hàng flex
+  - BattleReenactment: grid `[minmax(0,1fr)_23.75rem]`, cột trái sticky `lg:sticky lg:top-24`, chiều cao responsive `sm:h-[clamp(24rem,56vh,36rem)]`
+  - Nút chọn bước tinh gọn `p-2.5`, mốc ngày tháng căn phải
+  - Callout cảnh báo căng đều độ rộng cột nội dung
+  - Parity test verify (6/6 passed) & L5, L6 verify (22/22 passed)
+  - Regression check Bạch Đằng (`battle.spec.ts` 7/7 passed) & Bản đồ 3D (`mapfilm.spec.ts` 8/8 passed)
+  - Báo cáo: `.task-reports/2026-10-26-1445-lesson-layout-phase-4.md`
 - [ ] **Phase 5: Chương 3 & 4 - Kết quả & Nhân vật**
 - [ ] **Phase 6: Chương 5 - Tư liệu**
 - [ ] **Phase 7: Chương 6 & 7 - Ôn tập & Nguồn tham khảo**

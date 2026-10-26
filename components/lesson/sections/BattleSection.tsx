@@ -20,7 +20,7 @@ export function BattleSection({ lesson }: { lesson: Lesson }) {
         )}
       </SectionIntro>
       <BattleMapSection scenario={lesson.battle} mapFilm={lesson.mapFilm} />
-      <Callout variant="warning" title="Lưu ý: bản đồ minh họa" className="mt-4">
+      <Callout variant="warning" title="Lưu ý: bản đồ minh họa" className="mt-6">
         {lesson.battle.disclaimer}
       </Callout>
     </section>

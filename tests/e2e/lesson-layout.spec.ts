@@ -182,4 +182,54 @@ test.describe("Lesson layout regression tests", () => {
       ).toBe(result.expectedLast);
     });
   }
+
+  // L5: Sticky map visibility when scrolling to last step button
+  for (const slug of TARGET_SLUGS) {
+    test(`[L5] ${slug} - sticky map fully visible when scrolled to last step`, async ({ page }) => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.goto(`/bai-hoc/${slug}`, { waitUntil: "domcontentloaded" });
+      await page.waitForTimeout(500);
+
+      // Scroll so the last step button is at the bottom of the viewport
+      const lastStepBtn = page.locator("nav[aria-label='Các bước diễn biến'] button").last();
+      const btnBox = await lastStepBtn.boundingBox();
+      if (btnBox) {
+        const deltaY = btnBox.y + btnBox.height - 900;
+        await page.mouse.wheel(0, deltaY);
+        await page.waitForTimeout(400);
+      }
+
+      const mapBox = await page.locator("[role='region'][aria-label^='Bản đồ mô phỏng']").boundingBox();
+      expect(mapBox, "Map region bounding box must exist").not.toBeNull();
+
+      if (mapBox) {
+        expect(mapBox.y, `Map region top (${mapBox.y}) must be >= 64px`).toBeGreaterThanOrEqual(64);
+        expect(
+          mapBox.y + mapBox.height,
+          `Map region bottom (${mapBox.y + mapBox.height}) must be <= window height (900)`
+        ).toBeLessThanOrEqual(900);
+      }
+    });
+
+    test(`[L6] ${slug} - warning callout width equals content width (+-2px)`, async ({ page }) => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.goto(`/bai-hoc/${slug}`, { waitUntil: "domcontentloaded" });
+      await page.waitForTimeout(500);
+
+      const widths = await page.evaluate(() => {
+        const contentCol = document.querySelector(".lg\\:grid > .min-w-0");
+        const callout = document.querySelector("section[aria-labelledby='dien-bien-tieu-de'] [data-callout-variant='warning'], section[aria-labelledby='dien-bien-tieu-de'] .border-warning, section[aria-labelledby='dien-bien-tieu-de'] .rounded-card.border-warning\\/40");
+        if (!contentCol || !callout) throw new Error("Content column or callout not found");
+        return {
+          colWidth: Math.round(contentCol.getBoundingClientRect().width),
+          calloutWidth: Math.round(callout.getBoundingClientRect().width),
+        };
+      });
+
+      expect(
+        Math.abs(widths.calloutWidth - widths.colWidth),
+        `Callout width (${widths.calloutWidth}) equals content column width (${widths.colWidth})`
+      ).toBeLessThanOrEqual(2);
+    });
+  }
 });
