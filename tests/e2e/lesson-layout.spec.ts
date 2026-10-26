@@ -442,4 +442,22 @@ test.describe("Lesson layout regression tests", () => {
       }
     });
   }
+
+  // L12: Quiz CTA button height <= 56px (single line)
+  for (const slug of TARGET_SLUGS) {
+    test(`[L12] ${slug} - quiz CTA button height <= 56px`, async ({ page }) => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.goto(`/bai-hoc/${slug}`, { waitUntil: "domcontentloaded" });
+      await page.waitForTimeout(500);
+
+      const quizBtn = page.locator("section[aria-labelledby='ghi-nho'] a[href*='/trac-nghiem/']");
+      if ((await quizBtn.count()) > 0) {
+        const box = await quizBtn.boundingBox();
+        expect(box, "Quiz button bounding box should exist").not.toBeNull();
+        if (box) {
+          expect(box.height, `Quiz CTA button height (${box.height}) must be <= 56px`).toBeLessThanOrEqual(56);
+        }
+      }
+    });
+  }
 });

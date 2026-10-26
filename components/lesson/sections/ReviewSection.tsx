@@ -5,17 +5,22 @@ import { SectionHeading, SectionIntro } from "@/components/lesson/sections/share
 import { LessonStudiedMarker } from "@/components/progress/LessonStudiedMarker";
 import { PASSPORT_HREF } from "@/components/progress/StampNotice";
 import { LinkButton } from "@/components/ui/Button";
+import { balancedColumns, COLS, type ColCount } from "@/lib/lessons/layout";
+import { cn } from "@/lib/utils/cn";
 import type { Lesson } from "@/lib/lessons/types";
 import { quizPaths } from "@/lib/quiz/sets";
 
 /** Ôn tập cuối chuyên đề: thẻ ghi nhớ lật được + lối vào trắc nghiệm (đọc tới đây thì được ghi là đã học). */
 export function ReviewSection({ lesson }: { lesson: Lesson }) {
+  const flashcardCols = balancedColumns(lesson.flashcards.length, 3, 4) as ColCount;
+  const colClass = COLS[flashcardCols] || "lg:grid-cols-4";
+
   return (
     <section aria-labelledby="ghi-nho">
       <SectionHeading id="ghi-nho" eyebrow="Tự ôn tập" title="Ghi nhớ nhanh" />
       <SectionIntro>Đọc câu hỏi, tự trả lời trong đầu, rồi bấm để lật thẻ xem đáp án.</SectionIntro>
       <LessonStudiedMarker slug={lesson.slug} />
-      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className={cn("grid gap-4 sm:grid-cols-2", colClass)}>
         {lesson.flashcards.map((card, index) => (
           <li key={card.question}>
             <FlipCard
@@ -37,7 +42,7 @@ export function ReviewSection({ lesson }: { lesson: Lesson }) {
         ))}
       </ul>
       {lesson.quiz && lesson.quiz.length > 0 && (
-        <div className="mt-6 flex flex-col items-start gap-3 rounded-card border border-border bg-surface p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-6 flex flex-col items-start gap-4 rounded-card border border-border bg-surface p-5 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-foreground">
             <strong>Kiểm tra nhanh:</strong> 10 câu trắc nghiệm có ảnh, chấm điểm ngay và gợi ý phần cần ôn lại. Đạt từ 7/10 là em được đóng dấu vào{" "}
             <Link href={PASSPORT_HREF} className="text-accent underline">
@@ -45,7 +50,7 @@ export function ReviewSection({ lesson }: { lesson: Lesson }) {
             </Link>
             .
           </p>
-          <LinkButton href={quizPaths.lesson(lesson.slug)} size="lg">
+          <LinkButton href={quizPaths.lesson(lesson.slug)} size="lg" className="shrink-0 whitespace-nowrap">
             Làm trắc nghiệm
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </LinkButton>
