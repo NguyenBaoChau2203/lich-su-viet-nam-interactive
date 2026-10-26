@@ -117,10 +117,10 @@ function DepthPhotoStageVisual({
   }, [hotspots, image.depthSrc, image.src, onStarted, phase, placeMarkers]);
 
   useEffect(() => {
-    if (autoStart && phase === "idle") {
-      void start();
-    }
-  }, [autoStart, phase, start]);
+    if (!autoStart) return;
+    const id = requestAnimationFrame(() => void start());
+    return () => cancelAnimationFrame(id);
+  }, [autoStart, start]);
 
   useEffect(() => {
     const onFullscreenChange = () => setFullscreen(Boolean(document.fullscreenElement));
@@ -134,8 +134,8 @@ function DepthPhotoStageVisual({
     const tick = () => {
       const m = motion.current;
       m.tilt = {
-        x: m.tilt.x + (m.target.x - m.tilt.x) * 0.1,
-        y: m.tilt.y + (m.target.y - m.tilt.y) * 0.1,
+        x: m.tilt.x + (m.target.x - m.tilt.x) * (reducedMotion ? 1 : 0.1),
+        y: m.tilt.y + (m.target.y - m.tilt.y) * (reducedMotion ? 1 : 0.1),
       };
       rendererRef.current?.draw(m.tilt, m.zoom, m.center);
       placeMarkers();
@@ -143,7 +143,7 @@ function DepthPhotoStageVisual({
     };
     frameId = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frameId);
-  }, [phase, placeMarkers]);
+  }, [phase, placeMarkers, reducedMotion]);
 
   useEffect(() => {
     return () => {

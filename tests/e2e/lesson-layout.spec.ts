@@ -1,3 +1,4 @@
+import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 import { hasHorizontalOverflow } from "./support";
 
@@ -458,6 +459,27 @@ test.describe("Lesson layout regression tests", () => {
           expect(box.height, `Quiz CTA button height (${box.height}) must be <= 56px`).toBeLessThanOrEqual(56);
         }
       }
+    });
+  }
+
+  // L13: Dark theme at 1440x900: axe scan reports no serious/critical violations
+  for (const slug of TARGET_SLUGS) {
+    test(`[L13] ${slug} - dark theme axe accessibility at 1440x900`, async ({ page }) => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.emulateMedia({ colorScheme: "dark" });
+      await page.goto(`/bai-hoc/${slug}`, { waitUntil: "domcontentloaded" });
+      await page.waitForTimeout(1000);
+
+      const results = await new AxeBuilder({ page })
+        .exclude(".leaflet-container")
+        .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
+        .analyze();
+
+      const blocking = results.violations
+        .filter((violation) => violation.impact === "serious" || violation.impact === "critical")
+        .map((violation) => `${violation.id}: ${violation.help} — ${violation.nodes.slice(0, 3).map((node) => node.target.join(" ")).join(" | ")}`);
+
+      expect(blocking, `Axe accessibility violations in ${slug}: ${blocking.join("\n")}`).toEqual([]);
     });
   }
 });

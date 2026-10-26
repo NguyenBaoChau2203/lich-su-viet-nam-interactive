@@ -70,6 +70,20 @@ hiện vật 3D, sa bàn, di tích) nằm trong các tab của `ResourceSection`
 được dựng khi khung đã có kích thước (khung trong chương đang ẩn có kích thước 0 làm Leaflet tính ra tọa độ NaN), và tự
 đo lại khi khung đổi cỡ.
 
+### Khuôn chuyên đề tương tác (Chuẩn thiết kế Desktop 2026)
+
+Trang chuyên đề tương tác được thiết kế đọc như trang sách lịch sử biên tập cân đối trên các độ phân giải desktop (1280×720, 1366×768, 1440×900, 1920×1080), bảo toàn 100% dữ liệu (Zero Content Loss):
+- **Khung trang & Lưới chương:** Khung rộng `max-w-[80rem]` (1280px), nhịp chương `ChapterShell` dùng grid 2 cột `[13.5rem_minmax(0,1fr)]` trên `lg:`. Cột trái hiển thị nhãn chương (`ChapterLabel` gồm số La Mã/Ả Rập, tên chương, chỉ báo tiến độ đọc), cột phải là nội dung chuyên đề (chiều rộng hiệu dụng ≥ 900px).
+- **Mở đầu chương (`SectionIntro`):** Lời dẫn chương chuẩn hóa, kiểu chữ biên tập kèm kẻ chỉ phân cách mỏng màu trang nhã.
+- **Hero chuyên đề (`LessonHero`):** Chia lưới 2 cột `[7fr_5fr]` — bên trái là tiêu đề Lora lớn, mô tả và nút điều hướng CTA; bên phải là thanh số liệu thống kê xếp dọc có viền mảnh phân tách. Thông tin tác quyền / credit ảnh đặt riêng ở chân cột trái.
+- **Mục tiêu & Mốc thời gian (`GoalBox`, `KeyDates`):** `GoalBox` tự động chia 2 cột khi có từ 4 mục tiêu trở lên. Dòng thời gian `KeyDates` hiển thị dưới dạng timeline track ngang với dot 10px đặt trực tiếp trên viền track, áp dụng hàm `balancedColumns` giúp chia đều số cột cho từng hàng (ví dụ 10 mốc chia 5 cột × 2 hàng, 8 mốc chia 4 cột × 2 hàng), không để ô trống mồ côi.
+- **Bản đồ diễn biến (`BattleSection`):** Thanh điều khiển 2D/3D và nút "Cách dùng bản đồ" gom gọn trên 1 hàng flex. Bố cục 2 cột `[minmax(0,1fr)_23.75rem]`, bản đồ bên trái cố định dính (`lg:sticky lg:top-24`) theo dòng cuộn danh sách các bước; các nút bước thiết kế gọn gàng; hộp lưu ý (callout) kéo dài căng đều toàn bộ chiều rộng nội dung.
+- **Dải kết quả biên tập (`ResultsSection`):** Thống kê số liệu nằm gọn trong một dải băng đơn viền; phần ý nghĩa chia 2 cột đều nhau với số thứ tự lớn phong cách biên tập (`01`, `02`); trích dẫn lịch sử căn giữa nổi bật với 2 dải kẻ vàng viền trên/dưới.
+- **Thẻ nhân vật thẳng hàng (`FiguresSection`):** Sử dụng `balancedColumns`, ảnh chân dung chuẩn tỷ lệ 4:3. Thẻ lật dùng grid stacking (`grid-area: 1/1` trong `FlipCard`) không cố định chiều cao cứng; áp dụng CSS Subgrid (`row-span-2 grid grid-rows-subgrid gap-2`) liên kết thân thẻ và chân trang (credit/link), đảm bảo 100% các đáy thẻ trong cùng một hàng luôn thẳng tắp.
+- **Phòng trưng bày tư liệu 2 pane (`DepthPhotoGallery`, `ModelGallery`):** Màn chiếu ảnh chiều sâu / mô hình 3D đặt bên trái với chiều cao chuẩn `min(72vh, 40rem)`. Cột bên phải (20rem) chia làm 2 phần: trên là bộ chọn danh sách dọc (persistent `role="tablist"` hiển thị đầy đủ tên hiện vật, thumbnail, nhãn 360°, hỗ trợ đầy đủ phím mũi tên `ArrowUp/Down/Left/Right/Home/End`), dưới là thông tin chi tiết (nút chuyển chế độ, mô tả, danh sách điểm tương tác, credit).
+- **Lưới tư liệu video (`VideoEmbed`):** Tự động chia cột cân bằng (`balancedColumns`), chú thích dưới video (`figcaption`) dùng cấu trúc lưới 3 hàng (`grid-rows-[auto_1fr_auto]`) để căn đều chân chú thích.
+- **Ôn tập & Nguồn (`ReviewSection`, `SourcesSection`):** Thẻ ghi nhớ flashcard chia cột đều; nút "Làm bài trắc nghiệm" giữ nguyên tỷ lệ không bị co cụm hoặc xuống dòng xấu. Nguồn tham khảo chia 2 cột `[2fr_1fr]` (bên trái là danh sách tài liệu và ghi chú biên tập, bên phải là khối điều hướng "Đi tiếp" tới các bài học hoặc công cụ liên quan).
+
 ## 6. Tiến độ học (localStorage `ls12:tien-do`)
 
 - `sgk[slug] = { sections: { "muc-1": ISO, … }, lastSection, lastAt }` — trường thêm sau, không bắt buộc, nên dữ
