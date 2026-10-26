@@ -5,6 +5,8 @@ import { ModelGallery } from "@/components/model3d/ModelGallery";
 import { DepthPhotoGallery } from "@/components/photo3d/DepthPhotoGallery";
 import { SafeImage } from "@/components/ui/SafeImage";
 import { Tabs, type TabItem } from "@/components/ui/Tabs";
+import { balancedColumns, COLS, type ColCount } from "@/lib/lessons/layout";
+import { cn } from "@/lib/utils/cn";
 import type { Lesson } from "@/lib/lessons/types";
 import { getModelSpec } from "@/lib/models3d/specs";
 import type { ModelSpec } from "@/lib/models3d/types";
@@ -30,9 +32,11 @@ export function ResourceSection({ lesson }: { lesson: Lesson }) {
 /** Các tab của mục "Tư liệu"; tab nào không có dữ liệu thì bỏ. Nội dung chỉ được dựng khi tab mở (components/ui/Tabs). */
 function buildResourceTabs(lesson: Lesson): TabItem[] {
   const tabs: TabItem[] = [];
-  const [mainVideo, ...otherVideos] = lesson.videos;
 
-  if (mainVideo) {
+  if (lesson.videos && lesson.videos.length > 0) {
+    const videoCols = balancedColumns(lesson.videos.length, 2, 3) as ColCount;
+    const colClass = COLS[videoCols] || "lg:grid-cols-2";
+
     tabs.push({
       id: "video",
       label: "Phim tư liệu",
@@ -40,15 +44,12 @@ function buildResourceTabs(lesson: Lesson): TabItem[] {
       content: (
         <div data-resource="video">
           <h3 className="mb-4 font-serif text-xl font-bold text-foreground">{lesson.copy.videoTitle}</h3>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]">
-            <VideoEmbed video={mainVideo} />
-            <div className="flex flex-col gap-6">
-              {otherVideos.map((video) => (
-                <VideoEmbed key={video.youtubeId} video={video} />
-              ))}
-            </div>
+          <div className={cn("grid gap-x-6 gap-y-8", colClass)}>
+            {lesson.videos.map((video, idx) => (
+              <VideoEmbed key={video.youtubeId} video={video} priority={idx === 0} />
+            ))}
           </div>
-          <p className="mt-4 text-xs text-muted-foreground">
+          <p className="mt-6 text-xs text-muted-foreground">
             Video phát từ YouTube của kênh truyền hình nêu tên; bản quyền thuộc kênh đó. Video chỉ tải khi bạn bấm phát.
           </p>
         </div>

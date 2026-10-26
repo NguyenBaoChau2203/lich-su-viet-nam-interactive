@@ -305,4 +305,141 @@ test.describe("Lesson layout regression tests", () => {
       expect(rowMismatches, `Figure card alignment mismatches: ${rowMismatches.join(", ")}`).toEqual([]);
     });
   }
+
+  // L9: Video tab: all video frames have equal width (+-1px); empty area under any column <= 48px
+  for (const slug of TARGET_SLUGS) {
+    test(`[L9] ${slug} - video tab equal widths and aligned bottoms at 1440x900`, async ({ page }) => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.goto(`/bai-hoc/${slug}`, { waitUntil: "domcontentloaded" });
+      await page.waitForTimeout(500);
+
+      const videoTab = page.locator("[data-resource='video']");
+      if ((await videoTab.count()) > 0) {
+        const metrics = await page.evaluate(() => {
+          const frames = Array.from(document.querySelectorAll("[data-resource='video'] figure .aspect-video"));
+          const figs = Array.from(document.querySelectorAll("[data-resource='video'] figure"));
+          if (frames.length === 0) return { error: "No video frames found", maxWidthDiff: 0, maxRowBottomDiff: 0 };
+
+          const widths = frames.map((f) => Math.round(f.getBoundingClientRect().width));
+          const baseWidth = widths[0];
+          const widthDiffs = widths.map((w) => Math.abs(w - baseWidth));
+
+          // Group figures by row (similar top within 20px)
+          const rows: { top: number; bottoms: number[] }[] = [];
+          for (const fig of figs) {
+            const r = fig.getBoundingClientRect();
+            const top = Math.round(r.top);
+            const bottom = Math.round(r.bottom);
+            const existingRow = rows.find((row) => Math.abs(row.top - top) <= 20);
+            if (existingRow) {
+              existingRow.bottoms.push(bottom);
+            } else {
+              rows.push({ top, bottoms: [bottom] });
+            }
+          }
+
+          const rowDiffs = rows.map((r) => {
+            if (r.bottoms.length <= 1) return 0;
+            return Math.max(...r.bottoms) - Math.min(...r.bottoms);
+          });
+
+          return {
+            widths,
+            maxWidthDiff: Math.max(...widthDiffs),
+            maxRowBottomDiff: Math.max(...rowDiffs, 0),
+          };
+        });
+
+        expect(metrics.maxWidthDiff, `Video frame width diff (${metrics.maxWidthDiff}) must be <= 1px`).toBeLessThanOrEqual(1);
+        expect(metrics.maxRowBottomDiff, `Video column bottom diff in same row (${metrics.maxRowBottomDiff}) must be <= 48px`).toBeLessThanOrEqual(48);
+      }
+    });
+  }
+
+  // L10: Galleries: for every role=tablist inside [data-resource], scrollWidth <= clientWidth
+  for (const slug of TARGET_SLUGS) {
+    test(`[L10] ${slug} - gallery tablists have no horizontal overflow`, async ({ page }) => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.goto(`/bai-hoc/${slug}`, { waitUntil: "domcontentloaded" });
+      await page.waitForTimeout(500);
+
+      const tabs = ["hien-vat", "sa-ban", "ngay-nay", "mo-hinh-3d"];
+      for (const tabId of tabs) {
+        const tabBtn = page.locator(`button[id$='-${tabId}']`);
+        if ((await tabBtn.count()) > 0) {
+          await tabBtn.click();
+          await page.waitForTimeout(300);
+
+          const result = await page.evaluate((tid) => {
+            const container = document.querySelector(`[data-resource='${tid}']`);
+            if (!container) return { exists: false, errors: [] };
+            const tablists = Array.from(container.querySelectorAll<HTMLElement>("[role='tablist']"));
+            const errors: string[] = [];
+
+            for (const tl of tablists) {
+              if (tl.scrollWidth > tl.clientWidth + 1) {
+                errors.push(`Tablist ${tl.getAttribute("aria-label")} has scrollWidth ${tl.scrollWidth} > clientWidth ${tl.clientWidth}`);
+              }
+              const tabs = Array.from(tl.querySelectorAll<HTMLElement>("[role='tab']"));
+              const tlRect = tl.getBoundingClientRect();
+              for (const tab of tabs) {
+                const tr = tab.getBoundingClientRect();
+                if (tr.left < tlRect.left - 2 || tr.right > tlRect.right + 2) {
+                  errors.push(`Tab ${tab.textContent?.slice(0, 20)} is outside tablist bounds`);
+                }
+              }
+            }
+            return { exists: true, errors };
+          }, tabId);
+
+          if (result.exists) {
+            expect(result.errors, `L10 errors in tab ${tabId}: ${result.errors.join(", ")}`).toEqual([]);
+          }
+        }
+      }
+    });
+  }
+
+  // L11: Galleries at >=1366: stage and picker are side by side and picker top equals stage top (+-4px)
+  for (const slug of TARGET_SLUGS) {
+    test(`[L11] ${slug} - gallery stage and picker side by side at 1440x900`, async ({ page }) => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.goto(`/bai-hoc/${slug}`, { waitUntil: "domcontentloaded" });
+      await page.waitForTimeout(500);
+
+      const tabs = ["hien-vat", "sa-ban", "ngay-nay", "mo-hinh-3d"];
+      for (const tabId of tabs) {
+        const tabBtn = page.locator(`button[id$='-${tabId}']`);
+        if ((await tabBtn.count()) > 0) {
+          await tabBtn.click();
+          await page.waitForTimeout(300);
+
+          const metrics = await page.evaluate((tid) => {
+            const container = document.querySelector(`[data-resource='${tid}']`);
+            if (!container) return { exists: false };
+            const picker = container.querySelector<HTMLElement>("[role='tablist']");
+            const stage = container.querySelector<HTMLElement>("[data-testid='photo3d-stage'], [data-testid='scan-stage'], [data-testid='model-stage']");
+            if (!picker || !stage) return { exists: false, noPane: true };
+
+            const pr = picker.getBoundingClientRect();
+            const sr = stage.getBoundingClientRect();
+
+            return {
+              exists: true,
+              pickerLeft: pr.left,
+              stageRight: sr.right,
+              pickerTop: pr.top,
+              stageTop: sr.top,
+              topDiff: Math.abs(pr.top - sr.top),
+            };
+          }, tabId);
+
+          if (metrics.exists && !metrics.noPane && metrics.pickerLeft !== undefined && metrics.stageRight !== undefined && metrics.topDiff !== undefined) {
+            expect(metrics.pickerLeft, `In tab ${tabId}, picker left (${metrics.pickerLeft}) must be > stage right (${metrics.stageRight})`).toBeGreaterThan(metrics.stageRight);
+            expect(metrics.topDiff, `In tab ${tabId}, picker top (${metrics.pickerTop}) must equal stage top (${metrics.stageTop}) within 4px`).toBeLessThanOrEqual(4);
+          }
+        }
+      }
+    });
+  }
 });
