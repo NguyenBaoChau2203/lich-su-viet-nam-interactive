@@ -232,4 +232,77 @@ test.describe("Lesson layout regression tests", () => {
       ).toBeLessThanOrEqual(2);
     });
   }
+
+  // L7: No clipping on flip cards (front and back faces)
+  for (const slug of TARGET_SLUGS) {
+    test(`[L7] ${slug} - no clipping on flip cards (front and back)`, async ({ page }) => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.goto(`/bai-hoc/${slug}`, { waitUntil: "domcontentloaded" });
+      await page.waitForTimeout(500);
+
+      const clippingIssues = await page.evaluate(() => {
+        const faces = Array.from(document.querySelectorAll<HTMLElement>(".flip-card__face"));
+        const issues: { text: string; scrollHeight: number; clientHeight: number }[] = [];
+        for (const face of faces) {
+          if (face.scrollHeight > face.clientHeight + 1) {
+            issues.push({
+              text: (face.textContent || "").slice(0, 40).replace(/\s+/g, " "),
+              scrollHeight: face.scrollHeight,
+              clientHeight: face.clientHeight,
+            });
+          }
+        }
+        return issues;
+      });
+
+      expect(clippingIssues, `Clipping found in flip card faces: ${JSON.stringify(clippingIssues)}`).toEqual([]);
+    });
+  }
+
+  // L8: Figures card tops and bottoms are equal within row (+-2px)
+  for (const slug of TARGET_SLUGS) {
+    test(`[L8] ${slug} - figures card tops and bottoms are equal within row`, async ({ page }) => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.goto(`/bai-hoc/${slug}`, { waitUntil: "domcontentloaded" });
+      await page.waitForTimeout(500);
+
+      const rowMismatches = await page.evaluate(() => {
+        const cards = Array.from(document.querySelectorAll<HTMLElement>("section[aria-labelledby='nhan-vat'] ul > li button.flip-card"));
+        if (cards.length === 0) return [{ error: "No figure cards found" }];
+
+        const rows: { top: number; bottom: number; items: { name: string; top: number; bottom: number }[] }[] = [];
+        for (const card of cards) {
+          const r = card.getBoundingClientRect();
+          const top = Math.round(r.top);
+          const bottom = Math.round(r.bottom);
+          const name = (card.textContent || "").slice(0, 25).trim();
+
+          const existingRow = rows.find((row) => Math.abs(row.top - top) <= 4);
+          if (existingRow) {
+            existingRow.items.push({ name, top, bottom });
+          } else {
+            rows.push({ top, bottom, items: [{ name, top, bottom }] });
+          }
+        }
+
+        const errors: string[] = [];
+        for (const row of rows) {
+          if (row.items.length <= 1) continue;
+          const baseBottom = row.items[0].bottom;
+          const baseTop = row.items[0].top;
+          for (const item of row.items) {
+            if (Math.abs(item.top - baseTop) > 2) {
+              errors.push(`Top mismatch in row: ${item.name} top=${item.top} vs base=${baseTop}`);
+            }
+            if (Math.abs(item.bottom - baseBottom) > 2) {
+              errors.push(`Bottom mismatch in row: ${item.name} bottom=${item.bottom} vs base=${baseBottom}`);
+            }
+          }
+        }
+        return errors;
+      });
+
+      expect(rowMismatches, `Figure card alignment mismatches: ${rowMismatches.join(", ")}`).toEqual([]);
+    });
+  }
 });

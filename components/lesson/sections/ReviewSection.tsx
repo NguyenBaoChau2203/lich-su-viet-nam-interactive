@@ -19,7 +19,7 @@ export function ReviewSection({ lesson }: { lesson: Lesson }) {
         {lesson.flashcards.map((card, index) => (
           <li key={card.question}>
             <FlipCard
-              className="h-52"
+              className="h-full min-h-[13rem]"
               front={
                 <>
                   <span className="text-xs font-semibold uppercase tracking-wide text-gold-deep">Câu {index + 1}</span>
