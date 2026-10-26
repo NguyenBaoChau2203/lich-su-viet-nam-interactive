@@ -3,6 +3,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { flushSync } from "react-dom";
 import { ArrowLeft, ArrowRight, ChevronDown } from "lucide-react";
+import { ChapterLabel } from "@/components/lesson/sections/shared";
 import { SectionNav } from "@/components/sgk/SectionNav";
 import { cn } from "@/lib/utils/cn";
 
@@ -68,7 +69,7 @@ export function ChapterShell({ chapters, slug, title }: { chapters: Chapter[]; s
   const navItems = chapters.map((chapter, i) => ({ id: chapterAnchor(chapter.id), label: chapter.title, numeral: String(i + 1) }));
 
   return (
-    <div className="lg:grid lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-10">
+    <div className="lg:grid lg:grid-cols-[13.5rem_minmax(0,1fr)] lg:gap-10 xl:grid-cols-[14.5rem_minmax(0,1fr)] xl:gap-14">
       <aside className="hidden lg:block">
         <SectionNav lessonSlug={slug} items={navItems} title={title} variant="desktop" />
       </aside>
@@ -111,10 +112,11 @@ export function ChapterShell({ chapters, slug, title }: { chapters: Chapter[]; s
           )}
         </nav>
 
-        <div className="flex flex-col gap-16 pt-8 lg:pt-0">
+        <div className="flex flex-col gap-20 pt-8 lg:pt-0">
           {chapters.map((chapter, i) => {
             const previous = chapters[i - 1];
             const next = chapters[i + 1];
+            const duplicateHero = chapter.title.trim().toLowerCase() === title.trim().toLowerCase();
             return (
               <div
                 key={chapter.id}
@@ -122,7 +124,10 @@ export function ChapterShell({ chapters, slug, title }: { chapters: Chapter[]; s
                 data-chapter={chapter.id}
                 className={cn("scroll-mt-32 lg:scroll-mt-24", chapter.id === active ? "" : "hidden lg:block print:block")}
               >
-                <div className="flex flex-col gap-16">{chapter.content}</div>
+                <div className="flex flex-col gap-12">
+                  {!duplicateHero && <ChapterLabel index={i + 1} title={chapter.title} />}
+                  {chapter.content}
+                </div>
                 <div className="mt-10 flex gap-3 lg:hidden print:hidden">
                   {previous && (
                     <button

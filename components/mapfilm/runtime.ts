@@ -93,7 +93,7 @@ export async function createMapFilmRuntime(options: MapFilmRuntimeOptions): Prom
   map.setTerrain({ source: "dem", exaggeration: TERRAIN_EXAGGERATION });
   // Ô ghi nguồn thu gọn thành nút "i" (nguồn đầy đủ có ở dòng chú thích dưới bản đồ)
   container.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show");
-  const three = createThreeLayer(script.origin);
+  const three = createThreeLayer(script.origin, script.slug);
   map.addLayer(three.layer);
   const base = createMapBase(maplibre, map, script.scenario, options.basemap);
 

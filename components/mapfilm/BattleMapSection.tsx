@@ -56,6 +56,8 @@ function MapHelp({ hasFilm }: { hasFilm: boolean }) {
 /** Mục "Diễn biến trên bản đồ" của bài học: chuyển giữa bản đồ 2D (nhẹ, mặc định) và bản đồ 3D chạy như một thước phim. */
 export function BattleMapSection({ scenario, mapFilm }: BattleMapSectionProps) {
   const [mode, setMode] = useState<"2d" | "3d">("2d");
+  const [helpOpen, setHelpOpen] = useState(false);
+
   if (!mapFilm) {
     return (
       <div className="flex flex-col gap-4">
@@ -94,8 +96,30 @@ export function BattleMapSection({ scenario, mapFilm }: BattleMapSectionProps) {
             <ExternalLink className="h-4 w-4" aria-hidden="true" />
           </Link>
         )}
+        <div className="ml-auto">
+          <button
+            type="button"
+            aria-expanded={helpOpen}
+            aria-controls="map-help"
+            onClick={() => setHelpOpen((value) => !value)}
+            className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1.5 text-sm font-medium text-foreground hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+          >
+            <HelpCircle className="h-4 w-4 text-gold-deep" aria-hidden="true" />
+            Cách dùng bản đồ
+          </button>
+        </div>
       </div>
-      <MapHelp hasFilm />
+      {helpOpen && (
+        <ol id="map-help" className="list-decimal rounded-card border border-info/40 bg-info-bg py-3 pl-8 pr-4 text-sm leading-relaxed text-foreground">
+          <li>
+            Bấm <strong>Phát</strong> để bản đồ tự chạy qua các bước, hoặc chọn một bước trong danh sách các bước để dừng lại xem kỹ.
+          </li>
+          <li>Đọc lời dẫn của mỗi bước; nút <strong>Chú giải</strong> ở góc trên bản đồ giải thích các ký hiệu (quân ta màu đỏ, quân địch màu xanh).</li>
+          <li>
+            Chọn “Bản đồ 3D như phim” để xem trên địa hình thật (máy cần hỗ trợ WebGL, tải nặng hơn).
+          </li>
+        </ol>
+      )}
       {mode === "2d" ? (
         <BattleReenactment scenario={scenario} />
       ) : (

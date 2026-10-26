@@ -1,4 +1,4 @@
-import { SectionHeading } from "@/components/lesson/sections/shared";
+import { SectionHeading, SectionIntro } from "@/components/lesson/sections/shared";
 import { BattleMapSection } from "@/components/mapfilm/BattleMapSection";
 import { Callout } from "@/components/ui/Callout";
 import type { Lesson } from "@/lib/lessons/types";
@@ -8,7 +8,7 @@ export function BattleSection({ lesson }: { lesson: Lesson }) {
   return (
     <section aria-labelledby="dien-bien-tieu-de" id="dien-bien" className="scroll-mt-32 lg:scroll-mt-20">
       <SectionHeading id="dien-bien-tieu-de" eyebrow="Diễn biến trên bản đồ" title={lesson.copy.mapTitle} />
-      <p className="-mt-3 mb-5 max-w-3xl text-muted-foreground">
+      <SectionIntro>
         Bấm <strong className="text-foreground">Phát</strong> để bản đồ tự chạy qua {lesson.battle.steps.length} bước, hoặc chọn một bước trong danh sách các
         bước. {lesson.copy.mapHint}
         {lesson.mapFilm && (
@@ -18,9 +18,9 @@ export function BattleSection({ lesson }: { lesson: Lesson }) {
             điểm nổ tung và đổi cờ, có thuyết minh.
           </>
         )}
-      </p>
+      </SectionIntro>
       <BattleMapSection scenario={lesson.battle} mapFilm={lesson.mapFilm} />
-      <Callout variant="warning" title="Lưu ý: bản đồ minh họa" className="mt-4 max-w-3xl">
+      <Callout variant="warning" title="Lưu ý: bản đồ minh họa" className="mt-6">
         {lesson.battle.disclaimer}
       </Callout>
     </section>

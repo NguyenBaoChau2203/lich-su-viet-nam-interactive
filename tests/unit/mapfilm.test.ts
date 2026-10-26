@@ -1,10 +1,20 @@
 import { describe, expect, it } from "vitest";
+import {
+  gateGeometry,
+  helicopterGeometry,
+  jetGeometry,
+  palaceGeometry,
+  tankGeometry,
+} from "@/components/mapfilm/models";
+import { chienDichHoChiMinh1975 } from "@/lib/battles/chien-dich-ho-chi-minh-1975";
 import { dienBienPhu1954 } from "@/lib/battles/dien-bien-phu-1954";
 import { evaluateMapCamera, interpolateCam } from "@/lib/mapfilm/camera";
+import { chienDichHoChiMinhMapFilm as hcmFilm } from "@/lib/mapfilm/chien-dich-ho-chi-minh";
 import { dienBienPhuMapFilm as film } from "@/lib/mapfilm/dien-bien-phu";
 import { evaluateScene, nightAt, totalDuration } from "@/lib/mapfilm/evaluate";
 import { angleDelta, distanceMeters, fromLocal, fromMercator, pointAlong, toLocal, toMercator } from "@/lib/mapfilm/geo";
-import type { MapCam } from "@/lib/mapfilm/types";
+import { getMapFilm } from "@/lib/mapfilm";
+import type { MapCam, PieceKind, Side } from "@/lib/mapfilm/types";
 
 describe("mapfilm/geo", () => {
   it("Mercator đi rồi về giữ nguyên tọa độ", () => {
@@ -224,6 +234,146 @@ describe("mapfilm/kịch bản Điện Biên Phủ", () => {
     expect(nightAt(scene, 10)).toBeGreaterThan(0.8);
     expect(nightAt(scene, 25)).toBeLessThan(0.2);
     const total = totalDuration(film);
+    expect(total).toBeGreaterThan(200);
+    expect(total).toBeLessThan(330);
+  });
+});
+
+describe("mapfilm/mô hình 3D mở rộng và khí tài 1975", () => {
+  it("khởi tạo đầy đủ hình học xe tăng T-54, phản lực A-37, trực thăng UH-1, Dinh Độc Lập, cổng Dinh", () => {
+    const models = [
+      { name: "tank", geom: tankGeometry() },
+      { name: "jet", geom: jetGeometry() },
+      { name: "helicopter", geom: helicopterGeometry() },
+      { name: "palace", geom: palaceGeometry() },
+      { name: "gate", geom: gateGeometry() },
+    ];
+    for (const { name, geom } of models) {
+      expect(geom.getAttribute("position").count, name).toBeGreaterThan(10);
+      expect(geom.getAttribute("color"), name).toBeDefined();
+      expect(geom.boundingSphere?.radius, name).toBeGreaterThan(0.5);
+    }
+  });
+
+  it("mở rộng PieceKind và Side hỗ trợ đầy đủ các bên và chủng loại mới", () => {
+    const validPieces: PieceKind[] = ["infantry", "artillery", "hq", "porter", "tank", "jet", "helicopter", "palace", "gate"];
+    expect(validPieces).toHaveLength(9);
+    const validSides: Side[] = ["vn", "fr", "mt", "arvn"];
+    expect(validSides).toHaveLength(4);
+  });
+});
+
+describe("mapfilm/kịch bản Chiến dịch Hồ Chí Minh", () => {
+  const steps = chienDichHoChiMinh1975.steps;
+
+  it("đăng ký hợp lệ trong getMapFilm", () => {
+    expect(getMapFilm("chien-dich-ho-chi-minh")).toBe(hcmFilm);
+    expect(hcmFilm.slug).toBe("chien-dich-ho-chi-minh");
+    expect(hcmFilm.scenario).toBe(chienDichHoChiMinh1975);
+  });
+
+  it("mỗi bước của bản đồ 2D có đúng một cảnh, cùng thứ tự", () => {
+    expect(hcmFilm.scenes.map((s) => s.stepId)).toEqual(steps.map((s) => s.id));
+    expect(hcmFilm.scenes).toHaveLength(7);
+  });
+
+  it("mọi id trong hành động đều tồn tại trong kịch bản", () => {
+    const arrows = new Set(chienDichHoChiMinh1975.arrowDefinitions?.map((a) => a.id));
+    const zones = new Set(chienDichHoChiMinh1975.zoneDefinitions?.map((z) => z.id));
+    const points = new Set(chienDichHoChiMinh1975.strongpointDefinitions?.map((s) => s.id));
+    for (const scene of hcmFilm.scenes) {
+      for (const action of scene.actions) {
+        if (action.type === "arrow") expect(arrows.has(action.arrow), action.arrow).toBe(true);
+        if (action.type === "march" && !Array.isArray(action.path)) {
+          const arrowExists = arrows.has(action.path.arrow) || scene.extraArrows?.some((e) => e.id === (action.path as { arrow: string }).arrow);
+          expect(arrowExists, action.path.arrow).toBe(true);
+        }
+        if (action.type === "zone") expect(zones.has(action.id), action.id).toBe(true);
+        if (action.type === "strongpoint") expect(points.has(action.id), action.id).toBe(true);
+        if (action.type === "reveal") action.ids.forEach((id) => expect(points.has(id), id).toBe(true));
+      }
+    }
+  });
+
+  it("mốc thời gian của hành động, phụ đề và camera nằm trong cảnh", () => {
+    hcmFilm.scenes.forEach((scene) => {
+      const d = scene.duration;
+      for (const action of scene.actions) {
+        const times = "t" in action ? [action.t] : [action.t0, action.t1];
+        times.forEach((t) => {
+          expect(t, `${scene.stepId}/${action.type}`).toBeGreaterThanOrEqual(0);
+          expect(t, `${scene.stepId}/${action.type}`).toBeLessThanOrEqual(d);
+        });
+      }
+      scene.camera.forEach((key, i) => {
+        if (i > 0) expect(key.t).toBeGreaterThan(scene.camera[i - 1].t);
+        expect(key.t).toBeLessThanOrEqual(d);
+      });
+      expect(scene.camera[0].t).toBe(0);
+    });
+  });
+
+  it("phụ đề không chồng nhau và đủ thời gian đọc (≥ số từ / 4.4 từ mỗi giây)", () => {
+    for (const scene of hcmFilm.scenes) {
+      scene.subtitles.forEach((s, i) => {
+        expect(s.t1).toBeGreaterThan(s.t0);
+        expect(s.t1).toBeLessThanOrEqual(scene.duration);
+        if (i > 0) expect(s.t0).toBeGreaterThanOrEqual(scene.subtitles[i - 1].t1);
+        const words = s.text.trim().split(/\s+/).length;
+        expect(s.t1 - s.t0, s.text.slice(0, 40)).toBeGreaterThanOrEqual(words / 4.4);
+      });
+    }
+  });
+
+  it("cuối mỗi cảnh, bản đồ 3D khớp đúng trạng thái của bước 2D (cứ điểm, mũi tên, vùng, đơn vị)", () => {
+    hcmFilm.scenes.forEach((scene, index) => {
+      const step = steps[index];
+      const frame = evaluateScene(hcmFilm, index, scene.duration);
+      const shown = Object.fromEntries(frame.strongpoints.filter((s) => s.opacity > 0.99).map((s) => [s.id, s.status]));
+      expect(shown, scene.stepId).toEqual(step.strongpoints ?? {});
+      const arrows = frame.arrows.filter((a) => a.progress >= 1 && a.opacity > 0.99 && !scene.extraArrows?.some((e) => e.id === a.id)).map((a) => a.id);
+      expect(arrows.sort(), scene.stepId).toEqual([...(step.arrows ?? [])].sort());
+      const zones = Object.entries(frame.zones)
+        .filter(([, value]) => value > 0.99)
+        .map(([id]) => id);
+      expect(zones.sort(), scene.stepId).toEqual([...(step.zones ?? [])].sort());
+      for (const [id, unit] of Object.entries(step.units)) {
+        const piece = frame.pieces.find((p) => p.key === id);
+        if (!unit.visible) {
+          expect(piece, `${scene.stepId}/${id}`).toBeUndefined();
+          continue;
+        }
+        expect(piece, `${scene.stepId}/${id}`).toBeDefined();
+        expect(piece!.position[0]).toBeCloseTo(unit.position[0], 6);
+        expect(piece!.position[1]).toBeCloseTo(unit.position[1], 6);
+      }
+    });
+  });
+
+  it("đầu mỗi cảnh (từ cảnh 2) nối tiếp trạng thái cuối cảnh trước", () => {
+    for (let index = 1; index < hcmFilm.scenes.length; index++) {
+      const start = evaluateScene(hcmFilm, index, 0);
+      const end = evaluateScene(hcmFilm, index - 1, hcmFilm.scenes[index - 1].duration);
+      const startStatus = Object.fromEntries(start.strongpoints.map((s) => [s.id, s.status]));
+      for (const s of end.strongpoints) if (s.opacity > 0.99) expect(startStatus[s.id], `${hcmFilm.scenes[index].stepId}/${s.id}`).toBe(s.status);
+    }
+  });
+
+  it("cứ điểm đã được giải phóng không bao giờ trở lại tay đối phương", () => {
+    const captured = new Set<string>();
+    hcmFilm.scenes.forEach((scene, index) => {
+      for (let t = 0; t <= scene.duration; t += 0.5) {
+        for (const s of evaluateScene(hcmFilm, index, t).strongpoints) {
+          if (captured.has(s.id)) expect(s.status, `${scene.stepId} t=${t} ${s.id}`).toBe("captured");
+          if (s.status === "captured") captured.add(s.id);
+        }
+      }
+    });
+    expect(captured.size).toBe(6);
+  });
+
+  it("tổng thời lượng phim nằm trong khoảng hợp lý (200s - 330s)", () => {
+    const total = totalDuration(hcmFilm);
     expect(total).toBeGreaterThan(200);
     expect(total).toBeLessThan(330);
   });

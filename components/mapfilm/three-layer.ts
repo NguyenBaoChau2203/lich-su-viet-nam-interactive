@@ -10,13 +10,18 @@ import {
   chuteGeometry,
   createWavingCloth,
   flagTexture,
+  gateGeometry,
   gunGeometry,
+  helicopterGeometry,
   hqGeometry,
+  jetGeometry,
+  palaceGeometry,
   planeGeometry,
   poleGeometry,
   porterGeometry,
   ringGeometry,
   soldierGeometry,
+  tankGeometry,
 } from "@/components/mapfilm/models";
 
 /** Độ cao mặt đất (m, đã nhân hệ số phóng đại địa hình) tại một điểm. */
@@ -179,7 +184,8 @@ const COLOR_HELD = new THREE.Color("#2f6fc0");
 const COLOR_ATTACKED = new THREE.Color("#ff8a3d");
 const COLOR_CAPTURED = new THREE.Color("#d0342c");
 
-export function createThreeLayer(origin: LatLng): ThreeLayer {
+export function createThreeLayer(origin: LatLng, scriptSlug?: string): ThreeLayer {
+  const isHcm = scriptSlug === "chien-dich-ho-chi-minh";
   let map: MapLibreMap | null = null;
   let renderer: THREE.WebGLRenderer | null = null;
   const scene = new THREE.Scene();
@@ -205,11 +211,38 @@ export function createThreeLayer(origin: LatLng): ThreeLayer {
   const planes = new Batch(planeGeometry(), new THREE.MeshLambertMaterial({ vertexColors: true }), 8);
   const chutes = new Batch(chuteGeometry(), lambert, 40);
   const rings = new Batch(ringGeometry(), new THREE.MeshBasicMaterial({ transparent: true, opacity: 0.85, depthWrite: false, side: THREE.DoubleSide }), 24, true);
+  const tanks = new Batch(tankGeometry(), lambert, 60);
+  const jets = new Batch(jetGeometry(), new THREE.MeshLambertMaterial({ vertexColors: true }), 16);
+  const helicopters = new Batch(helicopterGeometry(), lambert, 24);
+  const palaces = new Batch(palaceGeometry(), lambert, 4);
+  const gates = new Batch(gateGeometry(), lambert, 4);
   const cloth = createWavingCloth(2.4, 1.6);
-  const flagMaterial = (kind: "vn" | "fr") => new THREE.MeshLambertMaterial({ map: flagTexture(kind), side: THREE.DoubleSide, emissive: new THREE.Color(0.18, 0.05, 0.03) });
+  const flagMaterial = (kind: "vn" | "fr" | "mt" | "arvn") => new THREE.MeshLambertMaterial({ map: flagTexture(kind), side: THREE.DoubleSide, emissive: new THREE.Color(0.18, 0.05, 0.03) });
   const flagsVn = new Batch(cloth.geometry, flagMaterial("vn"), 260);
   const flagsFr = new Batch(cloth.geometry, flagMaterial("fr"), 24);
-  const batches = [soldiers, porters, guns, hqs, bunkers, poles, smallPoles, planes, chutes, rings, flagsVn, flagsFr];
+  const flagsMt = new Batch(cloth.geometry, flagMaterial("mt"), 260);
+  const flagsArvn = new Batch(cloth.geometry, flagMaterial("arvn"), 24);
+  const batches = [
+    soldiers,
+    porters,
+    guns,
+    hqs,
+    bunkers,
+    poles,
+    smallPoles,
+    planes,
+    chutes,
+    rings,
+    flagsVn,
+    flagsFr,
+    tanks,
+    jets,
+    helicopters,
+    palaces,
+    gates,
+    flagsMt,
+    flagsArvn,
+  ];
   rings.mesh.renderOrder = 5;
   for (const b of batches) scene.add(b.mesh);
 
@@ -278,7 +311,8 @@ export function createThreeLayer(origin: LatLng): ThreeLayer {
         const h = (-piece.heading * Math.PI) / 180;
         const fx = x + (0.35 * Math.cos(h) + -0.9 * Math.sin(h)) * scale;
         const fz = z + (-0.35 * Math.sin(h) + -0.9 * Math.cos(h)) * scale;
-        placeFlag(flagsVn, fx, y + (3.4 + bob(0)) * scale, fz, scale, 0.55);
+        const infFlag = piece.side === "mt" ? flagsMt : flagsVn;
+        placeFlag(infFlag, fx, y + (3.4 + bob(0)) * scale, fz, scale, 0.55);
         break;
       }
       case "artillery": {
@@ -302,7 +336,8 @@ export function createThreeLayer(origin: LatLng): ThreeLayer {
         place(hqs, x, y, z, piece.heading, scale);
         place(smallPoles, x, y, z, piece.heading, scale * 1.4, [1.6, 0, 0]);
         const h = (-piece.heading * Math.PI) / 180;
-        placeFlag(flagsVn, x + 1.6 * Math.cos(h) * scale * 1.4, y + 3.4 * scale * 1.4, z - 1.6 * Math.sin(h) * scale * 1.4, scale * 1.4, 0.55);
+        const hqFlag = piece.side === "mt" ? flagsMt : flagsVn;
+        placeFlag(hqFlag, x + 1.6 * Math.cos(h) * scale * 1.4, y + 3.4 * scale * 1.4, z - 1.6 * Math.sin(h) * scale * 1.4, scale * 1.4, 0.55);
         place(soldiers, x, y, z, piece.heading, scale, [-2.4, 0, -1.8]);
         place(soldiers, x, y, z, piece.heading, scale, [2.6, 0, -2.0]);
         break;
@@ -310,6 +345,34 @@ export function createThreeLayer(origin: LatLng): ThreeLayer {
       case "porter":
         place(porters, x, y, z, piece.heading, scale, [0, bob(0) * 0.5, 0]);
         break;
+      case "tank": {
+        place(tanks, x, y, z, piece.heading, scale * 1.1);
+        place(smallPoles, x, y, z, piece.heading, scale * 0.9, [0.45, 1.8, 0]);
+        const h = (-piece.heading * Math.PI) / 180;
+        const fx = x + 0.45 * Math.cos(h) * scale * 0.9;
+        const fz = z - 0.45 * Math.sin(h) * scale * 0.9;
+        const tankFlag = piece.side === "mt" ? flagsMt : flagsVn;
+        placeFlag(tankFlag, fx, y + (1.8 + 3.0) * scale * 0.9, fz, scale * 0.7, 0.55);
+        break;
+      }
+      case "jet": {
+        place(jets, x, y + 22 * tokenScale, z, piece.heading, scale * 0.7);
+        break;
+      }
+      case "helicopter": {
+        place(helicopters, x, y + 16 * tokenScale, z, piece.heading, scale * 0.65);
+        break;
+      }
+      case "palace": {
+        place(palaces, x, y, z, piece.heading, scale * 1.5);
+        const palaceFlag = piece.side === "arvn" ? flagsArvn : flagsMt;
+        placeFlag(palaceFlag, x, y + 11.5 * scale * 1.5, z, scale * 1.8, 1.0);
+        break;
+      }
+      case "gate": {
+        place(gates, x, y, z, piece.heading, scale * 1.2);
+        break;
+      }
     }
   }
 
@@ -346,8 +409,10 @@ export function createThreeLayer(origin: LatLng): ThreeLayer {
       place(poles, x, y, z, 0, scale, [0, 2.3, 0]);
       const top = y + (2.3 + 6) * scale;
       const travel = 4.6 * scale;
-      if (sp.flagFr > 0.02) placeFlag(flagsFr, x, top - travel * (1 - sp.flagFr), z, scale);
-      if (sp.flagVn > 0.02) placeFlag(flagsVn, x, top - travel * (1 - sp.flagVn), z, scale);
+      const flagEnemy = isHcm ? flagsArvn : flagsFr;
+      const flagOurs = isHcm ? flagsMt : flagsVn;
+      if (sp.flagFr > 0.02) placeFlag(flagEnemy, x, top - travel * (1 - sp.flagFr), z, scale);
+      if (sp.flagVn > 0.02) placeFlag(flagOurs, x, top - travel * (1 - sp.flagVn), z, scale);
     }
 
     for (const piece of frame.pieces) drawPiece(piece, ground, tokenScale, t);
