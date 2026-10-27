@@ -29,3 +29,11 @@ No production mutation test, synthetic account, content deletion or re-import is
 ## Integration state
 
 Feature starting HEAD: 6a38f58. Fresh origin/main: ad81a55, 24 commits ahead with premium lesson/layout/auth/hook changes. Preserve those changes when merging and record actual conflicts, final verification, PR/merge and final production checks in this audit and the ignored local report.
+
+Feature commit 263c3ca was merged with origin/main ad81a55 in c500a7f. Git merged automatically without conflicts; the lesson/layout/portrait, proxy and hook fixes remain present. The feature-only diff against origin/main passes git diff --check; a pre-existing Markdown hard-break warning inside an incoming main document was not rewritten.
+
+Fresh post-integration pnpm verify exits 0 with **1,210 unit tests / 109 files**, **26 script tests**, lint, strict types and production build. New checkout and year-input regressions are included. The unchanged feature fixture build passed **72/72 public browser cases** across all four required desktop sizes. The real disposable Auth/PostgREST administration build passed **8/8 cases**, including four viewport/keyboard/axe checks, revision/stale-tab handling, reviewer transitions and eight role/graph denials. Two concurrent PostgreSQL races passed with observed lock waits and deferred rollback of the conflicting operation; the dedicated disposable fixture was reset afterward.
+
+Fresh production observation at 2026-10-27T11:58:30Z confirms **35 public profiles, 35 with images, 35 with stories, 35 with source claims and 34/34 localities**. No schema/content replay is needed. Browser fixture evidence, real disposable permissions and actual production observations are separate evidence classes.
+
+Remaining integration gates are CI/PR merge, isolated smoke and a final read-only browser pass on the integrated configured build. Their exact outcomes and PR URL are recorded in the final local task report; no future success is asserted here.
