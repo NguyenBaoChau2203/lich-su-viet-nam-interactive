@@ -25,6 +25,15 @@ const linkClass = "underline decoration-dotted underline-offset-2 hover:text-for
  * rơi về "Nguồn: <tiêu đề nguồn>" như trước.
  */
 export function MediaCredit({ item, className }: { item: MediaItem; className?: string }) {
+  if (item.usageBasis === "coursework_reference") {
+    const credit = item.photographer || item.sourceTitle || "Nguồn tư liệu";
+    return (
+      <p className={cn("text-xs text-muted-foreground", className)}>
+        <span>Tư liệu học tập — {credit}</span>
+      </p>
+    );
+  }
+
   const parts: React.ReactNode[] = [];
   if (item.photographer) parts.push(<span key="author">Ảnh: {item.photographer}</span>);
   if (item.license) {

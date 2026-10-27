@@ -198,7 +198,7 @@ Confirmed all facts from Section 2 of implementation plan:
 ---
 
 ## Phase 5 — Homepage: state, panel, globe, card, markers, tests — 2026-10-27 23:15 (Asia/Saigon)
-- Branch/HEAD: `feat/heritage-sites-by-locality`
+- Branch/HEAD: `feat/heritage-sites-by-locality` @ `57f5ed7`
 - Skills used: `verify-release-slice`
 - Changed files:
   - `lib/local-heroes/state.ts` (extended LocalHeroUrlState with places mode & place param; helpers normalizeLocalHeroReturnHref, getPlaceReturnHref, buildPlaceDetailHref)
@@ -236,6 +236,33 @@ Confirmed all facts from Section 2 of implementation plan:
   - `pnpm exec vitest run`: 116 test files, 1253 unit tests passed (0 failures).
 - Open issues / held items: None.
 - Next allowed Phase: Phase 6 — Detail Page (`/dia-diem/[slug]`).
+
+---
+
+## Phase 6 — Detail Page (`/dia-diem/[slug]`) — 2026-10-27 23:30 (Asia/Saigon)
+- Branch/HEAD: `feat/heritage-sites-by-locality`
+- Skills used: `verify-release-slice`
+- Changed files:
+  - `components/heritage/HeritageStory.tsx` (new: ordered narrative sections, citation anchors `#nguon-[i]`, uncertainty notes, ordered source list)
+  - `components/heritage/HeritageVideos.tsx` (new: balanced columns, lazy VideoEmbed, verification date, educational disclaimer)
+  - `components/heritage/LocalityPeople.tsx` (new: server component querying max 4 local historical figures linking to `/nhan-vat/[slug]`)
+  - `components/content/MediaCredit.tsx` (extended with `coursework_reference` badge)
+  - `components/content/detail/LocationDetailView.tsx` (integrated returnHref, badges, story, videos, lesson card, locality figures)
+  - `app/(public)/dia-diem/[slug]/page.tsx` (metadata teaser, safe return URL parsing via `getPlaceReturnHref`)
+  - `tests/e2e/fixtures/heritage-sites/catalog.mjs` (added synthetic detail location & legacy location fixtures)
+  - `playwright.local-heroes.config.ts` (added `heritage-detail.spec.ts`)
+  - `tests/e2e/heritage-detail.spec.ts` (new E2E suite P1-P8)
+  - `.task-reports/2026-10-27-2330-heritage-phase-6.md` (new, ignored)
+- Commands and results:
+  - `pnpm exec playwright test heritage-detail.spec.ts --config playwright.local-heroes.config.ts`: 32/32 tests passed across 4 viewports (1280x720, 1366x768, 1440x900, 1920x1080).
+  - `pnpm exec playwright test --project 1280x720 --config playwright.local-heroes.config.ts`: 39/39 tests passed across all 4 suites.
+  - `pnpm lint`: 0 errors, 0 warnings.
+  - `pnpm typecheck`: 0 errors.
+  - `node scripts/content/heritage-sites-validate.mjs --package supabase/content/heritage-sites/v1 --mode release`: 100% valid (64 sites, 66 sources, 34 Grade 12 localities).
+  - `pnpm exec vitest run`: 116 test files, 1253 unit tests passed (0 failures).
+- Open issues / held items: None.
+- Next allowed Phase: Phase 7 — Admin editing (basic).
+
 
 
 
