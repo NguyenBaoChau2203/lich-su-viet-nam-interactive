@@ -148,7 +148,7 @@ export async function getFigureForEdit(id: string) {
 
 /** Cột ảnh cần cho khu quản lý ảnh (MediaManager) ở trang sửa. */
 const ADMIN_MEDIA_FIELDS =
-  "id, file_url, media_type, caption, alt_text, source_id, sort_order, era, year_taken, photographer, license, license_url, source_page_url, is_reenactment, is_colorized, is_cover, focal_point" as const;
+  "id, file_url, media_type, caption, alt_text, source_id, sort_order, era, year_taken, photographer, license, license_url, source_page_url, is_reenactment, is_colorized, is_cover, focal_point, usage_basis" as const;
 
 export async function getLocationForEdit(id: string) {
   const supabase = await createClient();
@@ -156,7 +156,13 @@ export async function getLocationForEdit(id: string) {
     .from("historical_locations")
     .select(
       `id, name, historical_name, slug, description, latitude, longitude, accuracy_level, accuracy_note, workflow_status, review_note,
-       media_assets(${ADMIN_MEDIA_FIELDS})`,
+       locality_code, heritage_tier, heritage_rank, heritage_period, heritage_teaser, lesson_slug,
+       media_assets(${ADMIN_MEDIA_FIELDS}),
+       location_story_sections(
+         id, sort_order, heading, body, certainty, uncertainty_note,
+         location_story_sources(section_id, source_id, locator, scope_note)
+       ),
+       location_videos(id, youtube_id, title, channel, channel_url, note, embed_checked_at, sort_order)`,
     )
     .eq("id", id)
     .maybeSingle();
@@ -259,6 +265,8 @@ type MediaForReadiness = {
   alt_text: string | null;
   license: string | null;
   photographer: string | null;
+  usage_basis?: string | null;
+  is_cover?: boolean | null;
 };
 
 const isBlank = (text: string | null) => !text || text.trim() === "";
@@ -267,7 +275,7 @@ function mediaStats(media: MediaForReadiness[]): MediaStats {
   return {
     count: media.length,
     missingAlt: media.filter((item) => isBlank(item.alt_text)).length,
-    missingLicense: media.filter((item) => isBlank(item.license)).length,
+    missingLicense: media.filter((item) => item.usage_basis !== "coursework_reference" && isBlank(item.license)).length,
   };
 }
 
@@ -316,26 +324,64 @@ export async function getReadinessSnapshot(
 
   if (kind === "dia-diem") {
     const location = await getLocationForEdit(id);
-    return location
+    if (!location) return null;
+
+    const sections = (location.location_story_sections ?? []) as Array<{
+      heading: string;
+      body: string;
+      uncertainty_note: string | null;
+      location_story_sources?: Array<{ source_id: string }>;
+    }>;
+    const videos = location.location_videos ?? [];
+    const media = (location.media_assets ?? []) as MediaForReadiness[];
+
+    const isHeritage = Boolean(location.heritage_tier);
+    const heritageReadiness = isHeritage
       ? {
-          status: location.workflow_status,
-          snapshot: {
-            kind,
-            latitude: location.latitude,
-            longitude: location.longitude,
-            accuracyLevel: location.accuracy_level,
-            description: location.description,
-            publicTexts: [
-              location.name,
-              location.historical_name,
-              location.description,
-              location.accuracy_note,
-              ...mediaTexts(location.media_assets),
-            ],
-            media: mediaStats(location.media_assets),
-          },
+          tier: location.heritage_tier as "grade12" | "extended",
+          localityCode: location.locality_code,
+          teaser: location.heritage_teaser,
+          period: location.heritage_period,
+          latitude: location.latitude,
+          longitude: location.longitude,
+          accuracyLevel: location.accuracy_level,
+          sectionsCount: sections.length,
+          sectionsWithNoSources: sections.filter(
+            (s) => !s.location_story_sources || s.location_story_sources.length === 0,
+          ).length,
+          hasCoverWithUsageBasis: media.some(
+            (m) => m.is_cover && m.usage_basis && m.usage_basis.trim() !== "",
+          ),
+          videoCount: videos.length,
         }
-      : null;
+      : undefined;
+
+    const storyTexts = sections.flatMap((s) => [s.heading, s.body, s.uncertainty_note]);
+    const videoTexts = videos.flatMap((v) => [v.title, v.note]);
+
+    return {
+      status: location.workflow_status,
+      snapshot: {
+        kind,
+        latitude: location.latitude,
+        longitude: location.longitude,
+        accuracyLevel: location.accuracy_level,
+        description: location.description,
+        publicTexts: [
+          location.name,
+          location.historical_name,
+          location.description,
+          location.accuracy_note,
+          location.heritage_teaser,
+          location.heritage_period,
+          ...storyTexts,
+          ...videoTexts,
+          ...mediaTexts(media),
+        ],
+        media: mediaStats(media),
+        heritage: heritageReadiness,
+      },
+    };
   }
 
   const event = await getEventForEdit(id);

@@ -25,6 +25,7 @@ export type MediaItemData = {
   era: string;
   year_taken: number | null;
   photographer: string | null;
+  usage_basis?: string | null;
   license: string | null;
   license_url: string | null;
   source_page_url: string | null;
@@ -104,12 +105,23 @@ function MediaMetaFields({
         <Field name={`${prefix}-photographer`} label="Tác giả" error={errors.photographer}>
           {(props) => <Input {...props} name="photographer" defaultValue={text("photographer")} maxLength={200} />}
         </Field>
+        <Field name={`${prefix}-usage-basis`} label="Căn cứ bản quyền / sử dụng" error={errors.usage_basis}>
+          {(props) => (
+            <Select key={text("usage_basis")} {...props} name="usage_basis" defaultValue={text("usage_basis")}>
+              <option value="">— Chưa chọn (mặc định giấy phép) —</option>
+              <option value="open_license">Giấy phép mở (CC BY, CC BY-SA, CC0...)</option>
+              <option value="public_domain">Phạm vi công cộng</option>
+              <option value="permission">Được phép của tác giả / bảo tàng</option>
+              <option value="coursework_reference">Tư liệu học tập (trích dẫn hợp lý)</option>
+            </Select>
+          )}
+        </Field>
         <Field
           name={`${prefix}-license`}
           label="Giấy phép"
-          required
+          required={text("usage_basis") !== "coursework_reference"}
           error={errors.license}
-          hint="Ví dụ: CC BY-SA 4.0 · Phạm vi công cộng · Được phép của Bảo tàng …"
+          hint={text("usage_basis") === "coursework_reference" ? "Với tư liệu học tập (trích dẫn), để trống ô giấy phép." : "Ví dụ: CC BY-SA 4.0 · Phạm vi công cộng · Được phép của Bảo tàng …"}
         >
           {(props) => <Input {...props} name="license" defaultValue={text("license")} maxLength={200} />}
         </Field>

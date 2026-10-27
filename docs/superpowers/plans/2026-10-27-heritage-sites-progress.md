@@ -240,7 +240,7 @@ Confirmed all facts from Section 2 of implementation plan:
 ---
 
 ## Phase 6 — Detail Page (`/dia-diem/[slug]`) — 2026-10-27 23:30 (Asia/Saigon)
-- Branch/HEAD: `feat/heritage-sites-by-locality`
+- Branch/HEAD: `feat/heritage-sites-by-locality` @ `8b6b138`
 - Skills used: `verify-release-slice`
 - Changed files:
   - `components/heritage/HeritageStory.tsx` (new: ordered narrative sections, citation anchors `#nguon-[i]`, uncertainty notes, ordered source list)
@@ -262,6 +262,39 @@ Confirmed all facts from Section 2 of implementation plan:
   - `pnpm exec vitest run`: 116 test files, 1253 unit tests passed (0 failures).
 - Open issues / held items: None.
 - Next allowed Phase: Phase 7 — Admin editing (basic).
+
+---
+
+## Phase 7 — Admin editing (basic) — 2026-10-27 23:50 (Asia/Saigon)
+- Branch/HEAD: `feat/heritage-sites-by-locality`
+- Skills used: `verify-release-slice`
+- Changed files:
+  - `lib/validation/content.ts` (extended locationSchema with heritage tier conditional rules; added USAGE_BASES; mediaSchema with usage_basis and coursework_reference rule)
+  - `lib/heritage/youtube.ts` (new: parseYouTubeId helper for 11-char IDs across standard, short, embed, shorts URLs)
+  - `lib/actions/heritage.ts` (new server actions: checkYouTubeEmbedAction with 5s timeout, save/delete/reorder story sections and videos)
+  - `components/admin/forms/LocationForm.tsx` (new fieldset for heritage tier, locality, rank, period, teaser counter, lesson slug)
+  - `components/admin/MediaManager.tsx` (added usage_basis selector and dynamic license requirement)
+  - `components/admin/heritage/HeritageStoryEditor.tsx` (new: section manager with reordering, certainty, notes, and source citations)
+  - `components/admin/heritage/HeritageVideoEditor.tsx` (new: video manager with oEmbed verification, reordering, and external links)
+  - `lib/admin/readiness.ts` (added HeritageReadiness snapshot and blocking checks for incomplete heritage places)
+  - `lib/queries/admin-content.ts` (updated getLocationForEdit, ADMIN_MEDIA_FIELDS, and getReadinessSnapshot)
+  - `app/quan-tri/(noi-bo)/noi-dung/[loai]/[id]/page.tsx` (integrated story and video editors)
+  - `tests/unit/heritage-admin-readiness.test.ts` (new: 8 unit tests for heritage readiness rules)
+  - `tests/unit/heritage-admin-actions.test.ts` (new: 10 unit tests for YouTube parsing, locationSchema, and mediaSchema)
+  - `.task-reports/2026-10-27-2350-heritage-phase-7.md` (new, ignored)
+- Commands and results:
+  - `pnpm exec vitest run tests/unit/heritage-admin-readiness.test.ts tests/unit/heritage-admin-actions.test.ts`: 18/18 passed.
+  - `pnpm exec playwright test --project 1280x720 --config playwright.local-heroes.config.ts`: 39/39 tests passed.
+  - `pnpm verify`:
+    - `agent:check`: Valid (5 project skills).
+    - `history:data:check`: 42 passed (2 test files).
+    - `eslint`: 0 errors, 0 warnings.
+    - `typecheck`: 0 errors.
+    - `test`: 118 test files, 1271 unit tests passed + 26 agent tests passed.
+    - `build`: 110 static pages generated successfully (exit code 0).
+- Open issues / held items: None.
+- Next allowed Phase: Phase 8 — Acceptance, performance, docs.
+
 
 
 

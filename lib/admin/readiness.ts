@@ -26,6 +26,20 @@ type CommonChecks = {
   media?: MediaStats;
 };
 
+export type HeritageReadiness = {
+  tier: "grade12" | "extended" | null;
+  localityCode: string | null;
+  teaser: string | null;
+  period: string | null;
+  latitude: number | null;
+  longitude: number | null;
+  accuracyLevel: string;
+  sectionsCount: number;
+  sectionsWithNoSources: number;
+  hasCoverWithUsageBasis: boolean;
+  videoCount: number;
+};
+
 export type ReadinessSnapshot = CommonChecks &
   (
   | { kind: "chu-de"; description: string | null }
@@ -36,6 +50,7 @@ export type ReadinessSnapshot = CommonChecks &
       longitude: number | null;
       accuracyLevel: string;
       description: string | null;
+      heritage?: HeritageReadiness;
     }
   | {
       kind: "su-kien";
@@ -123,6 +138,34 @@ export function evaluateReadiness(snapshot: ReadinessSnapshot): ReadinessResult 
       }
       if (!snapshot.description || snapshot.description.trim() === "") {
         warnings.push("Chưa có mô tả.");
+      }
+
+      if (snapshot.heritage && snapshot.heritage.tier) {
+        const h = snapshot.heritage;
+        if (!h.localityCode) {
+          blocking.push("Chưa chọn địa phương cho địa danh lịch sử.");
+        }
+        if (!h.teaser || h.teaser.trim().length < 40 || h.teaser.trim().length > 360) {
+          blocking.push("Lời giới thiệu (teaser) phải từ 40 đến 360 ký tự.");
+        }
+        if (!h.period || h.period.trim().length === 0) {
+          blocking.push("Chưa nhập thời kỳ lịch sử.");
+        }
+        if (h.sectionsCount < 3) {
+          blocking.push("Địa danh lịch sử cần ít nhất 3 phần câu chuyện.");
+        }
+        if (h.sectionsWithNoSources > 0) {
+          blocking.push("Mỗi phần câu chuyện cần ít nhất 1 nguồn tham khảo.");
+        }
+        if (h.latitude === null || h.longitude === null || h.accuracyLevel === "unknown") {
+          blocking.push("Tọa độ phải được xác định (độ chính xác không được là 'Chưa xác định').");
+        }
+        if (!h.hasCoverWithUsageBasis) {
+          blocking.push("Cần ít nhất 1 ảnh bìa có thiết lập căn cứ bản quyền/sử dụng.");
+        }
+        if (h.videoCount === 0) {
+          warnings.push("Chưa có video tư liệu (khuyến khích bổ sung nếu có).");
+        }
       }
       break;
     }

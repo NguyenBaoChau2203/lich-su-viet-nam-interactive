@@ -188,6 +188,9 @@ export type FigureInput = z.infer<typeof figureSchema>;
 
 // ---------- Địa điểm ----------
 
+export const HERITAGE_TIERS = ["grade12", "extended"] as const;
+export type HeritageTier = (typeof HERITAGE_TIERS)[number];
+
 export const locationSchema = z
   .object({
     name: requiredText("tên địa điểm", 200),
@@ -198,6 +201,12 @@ export const locationSchema = z
     longitude: optionalDecimal("kinh độ", -180, 180),
     accuracy_level: z.enum(ACCURACY_LEVELS, { error: "Vui lòng chọn độ chính xác của tọa độ." }),
     accuracy_note: optionalText("ghi chú độ chính xác", 1000),
+    locality_code: z.preprocess(blankToNull, z.string().regex(/^[0-9]{2}$/, "Mã địa phương phải gồm 2 chữ số.").nullable()),
+    heritage_tier: z.preprocess(blankToNull, z.enum(HERITAGE_TIERS, { error: "Nhóm địa danh không hợp lệ." }).nullable()),
+    heritage_rank: optionalInt("thứ hạng địa danh", 1, 9),
+    heritage_period: optionalText("thời kỳ lịch sử", 60),
+    heritage_teaser: optionalText("lời giới thiệu ngắn (teaser)", 360),
+    lesson_slug: z.preprocess(blankToNull, z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Slug chuyên đề không hợp lệ.").nullable()),
   })
   .superRefine((value, context) => {
     // Khớp CHECK ((latitude is null) = (longitude is null)).
@@ -206,6 +215,20 @@ export const locationSchema = z
     }
     if (value.longitude !== null && value.latitude === null) {
       context.addIssue({ code: "custom", path: ["latitude"], message: "Nhập cả vĩ độ khi đã có kinh độ (hoặc bỏ trống cả hai)." });
+    }
+    if (value.heritage_tier !== null) {
+      if (!value.locality_code) {
+        context.addIssue({ code: "custom", path: ["locality_code"], message: "Khi chọn nhóm địa danh lịch sử, phải chọn địa phương." });
+      }
+      if (value.heritage_rank === null) {
+        context.addIssue({ code: "custom", path: ["heritage_rank"], message: "Khi chọn nhóm địa danh lịch sử, phải chọn thứ hạng." });
+      }
+      if (!value.heritage_period || value.heritage_period.trim().length === 0) {
+        context.addIssue({ code: "custom", path: ["heritage_period"], message: "Khi chọn nhóm địa danh lịch sử, phải nhập thời kỳ lịch sử." });
+      }
+      if (!value.heritage_teaser || value.heritage_teaser.trim().length < 40 || value.heritage_teaser.trim().length > 360) {
+        context.addIssue({ code: "custom", path: ["heritage_teaser"], message: "Lời giới thiệu ngắn (teaser) phải từ 40 đến 360 ký tự." });
+      }
     }
   });
 export type LocationInput = z.infer<typeof locationSchema>;
@@ -335,6 +358,9 @@ export const MEDIA_STORAGE_FOLDERS: Record<MediaOwnerKind, string> = {
 /** Ảnh tư liệu năm đó / ảnh chụp ngày nay / tranh, ảnh minh họa (khớp CHECK media_assets.era). */
 export const MEDIA_ERAS = ["historical", "today", "illustration"] as const;
 
+export const USAGE_BASES = ["open_license", "public_domain", "permission", "coursework_reference"] as const;
+export type UsageBasis = (typeof USAGE_BASES)[number];
+
 /** Điểm lấy nét khi cắt ảnh, dạng "50% 30%" (ngang dọc). */
 const FOCAL_POINT_PATTERN = /^(100|[1-9]?[0-9])% (100|[1-9]?[0-9])%$/;
 
@@ -349,8 +375,8 @@ const mediaMetaShape = {
   era: z.enum(MEDIA_ERAS, { error: "Vui lòng chọn loại ảnh." }),
   year_taken: optionalInt("năm chụp", 1800, 2100),
   photographer: optionalText("tác giả", 200),
-  // Bắt buộc: không rõ giấy phép thì chưa được đưa ảnh lên trang học sinh xem.
-  license: requiredText("giấy phép (ví dụ: CC BY-SA 4.0, Phạm vi công cộng, Được phép của …)", 200),
+  usage_basis: z.preprocess(blankToNull, z.enum(USAGE_BASES, { error: "Căn cứ bản quyền không hợp lệ." }).nullable()),
+  license: optionalText("giấy phép", 200),
   license_url: optionalHttpUrl("đường dẫn giấy phép"),
   source_page_url: optionalHttpUrl("trang gốc của ảnh"),
   is_reenactment: checkbox,
@@ -365,6 +391,21 @@ const mediaMetaShape = {
   ),
 };
 
+function refineMediaUsage(val: { usage_basis?: string | null; license?: string | null; license_url?: string | null }, ctx: z.RefinementCtx) {
+  if (val.usage_basis === "coursework_reference") {
+    if (val.license && val.license.trim() !== "") {
+      ctx.addIssue({ code: "custom", path: ["license"], message: "Với tư liệu học tập (trích dẫn), để trống ô giấy phép." });
+    }
+    if (val.license_url && val.license_url.trim() !== "") {
+      ctx.addIssue({ code: "custom", path: ["license_url"], message: "Với tư liệu học tập, để trống đường dẫn giấy phép." });
+    }
+  } else {
+    if (!val.license || val.license.trim() === "") {
+      ctx.addIssue({ code: "custom", path: ["license"], message: "Vui lòng nhập giấy phép (ví dụ: CC BY-SA 4.0, Phạm vi công cộng...)." });
+    }
+  }
+}
+
 export const mediaSchema = z.object({
   ...mediaMetaShape,
   width: optionalInt("chiều rộng ảnh", 1, 20000),
@@ -377,11 +418,11 @@ export const mediaSchema = z.object({
       .max(2000, "Địa chỉ ảnh quá dài.")
       .refine(isHttpUrl, "Địa chỉ ảnh phải bắt đầu bằng http:// hoặc https://."),
   ),
-});
+}).superRefine(refineMediaUsage);
 export type MediaInput = z.infer<typeof mediaSchema>;
 
 /** Sửa media đã có: không cho đổi địa chỉ tệp hay kích thước, chỉ đổi thông tin mô tả và ghi công. */
-export const mediaUpdateSchema = z.object(mediaMetaShape);
+export const mediaUpdateSchema = z.object(mediaMetaShape).superRefine(refineMediaUsage);
 export type MediaUpdateInput = z.infer<typeof mediaUpdateSchema>;
 
 /** Cột chủ sở hữu tương ứng trong media_assets. */
@@ -398,6 +439,7 @@ export function mediaColumns(input: MediaUpdateInput) {
     era: input.era,
     year_taken: input.year_taken,
     photographer: input.photographer,
+    usage_basis: input.usage_basis ?? null,
     license: input.license,
     license_url: input.license_url,
     source_page_url: input.source_page_url,

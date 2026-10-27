@@ -7,6 +7,8 @@ import { FigureForm } from "@/components/admin/forms/FigureForm";
 import { LocationForm } from "@/components/admin/forms/LocationForm";
 import { SourceForm } from "@/components/admin/forms/SourceForm";
 import { TopicForm } from "@/components/admin/forms/TopicForm";
+import { HeritageStoryEditor, type StorySectionData } from "@/components/admin/heritage/HeritageStoryEditor";
+import { HeritageVideoEditor } from "@/components/admin/heritage/HeritageVideoEditor";
 import { MediaManager } from "@/components/admin/MediaManager";
 import { QuizQuestionManager } from "@/components/admin/QuizQuestionManager";
 import { Notice } from "@/components/admin/Notice";
@@ -157,6 +159,18 @@ async function EditWorkflowContent({
 
       {record.form}
 
+      {record.story && (
+        <div className="max-w-3xl">
+          {record.story}
+        </div>
+      )}
+
+      {record.videos && (
+        <div className="max-w-3xl">
+          {record.videos}
+        </div>
+      )}
+
       {record.media && (
         <section aria-labelledby="anh-tu-lieu" className="flex max-w-3xl flex-col gap-4">
           <h2 id="anh-tu-lieu" className="font-serif text-xl font-bold text-foreground">
@@ -203,6 +217,8 @@ async function EditWorkflowContent({
     title: string;
     reviewNote: string | null;
     form: React.ReactNode;
+    story?: React.ReactNode;
+    videos?: React.ReactNode;
     media?: React.ReactNode;
     quiz?: React.ReactNode;
     catalogGraph?: LocalHeroAdminGraph | null;
@@ -253,17 +269,75 @@ async function EditWorkflowContent({
     if (recordKind === "dia-diem") {
       const [location, options] = await Promise.all([getLocationForEdit(recordId), getFormOptions()]);
       if (!location) return null;
+
+      const rawSections = (location.location_story_sections ?? []) as Array<{
+        id: string;
+        sort_order: number;
+        heading: string;
+        body: string;
+        certainty: "verified" | "approximate" | "disputed" | "editorial";
+        uncertainty_note: string | null;
+        location_story_sources?: Array<{
+          source_id: string;
+          locator: string;
+          scope_note: string;
+        }>;
+      }>;
+
+      const sections: StorySectionData[] = rawSections.map((s) => ({
+        id: s.id,
+        sort_order: s.sort_order,
+        heading: s.heading,
+        body: s.body,
+        certainty: s.certainty,
+        uncertainty_note: s.uncertainty_note,
+        sources: (s.location_story_sources ?? []).map((src) => ({
+          source_id: src.source_id,
+          locator: src.locator,
+          scope_note: src.scope_note,
+          source_title: options.sources.find((opt) => opt.id === src.source_id)?.label,
+        })),
+      }));
+
+      const rawVideos = (location.location_videos ?? []) as Array<{
+        id: string;
+        youtube_id: string;
+        title: string;
+        channel: string;
+        channel_url: string | null;
+        note: string | null;
+        embed_checked_at: string;
+        sort_order: number;
+      }>;
+
+      const readOnlyLoc = isReadOnly(location.workflow_status);
+
       return {
         status: location.workflow_status,
         title: location.name,
         reviewNote: location.review_note,
-        form: <LocationForm id={recordId} initial={location} readOnly={isReadOnly(location.workflow_status)} />,
+        form: <LocationForm id={recordId} initial={location} readOnly={readOnlyLoc} />,
+        story: (
+          <HeritageStoryEditor
+            locationId={recordId}
+            sections={sections}
+            sources={options.sources}
+            readOnly={readOnlyLoc}
+          />
+        ),
+        videos: (
+          <HeritageVideoEditor
+            locationId={recordId}
+            videos={rawVideos}
+            readOnly={readOnlyLoc}
+          />
+        ),
         media: (
           <MediaManager
             owner={{ kind: "dia-diem", id: recordId }}
             media={sortMedia(location.media_assets)}
             sources={options.sources}
-            readOnly={isReadOnly(location.workflow_status)}
+            readOnly={readOnlyLoc}
           />
         ),
       };
