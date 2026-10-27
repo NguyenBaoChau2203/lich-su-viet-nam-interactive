@@ -6,14 +6,14 @@
     "totalSites": 64,
     "grade12Sites": 34,
     "extendedSites": 30,
-    "acceptedSites": 13,
-    "heldSites": 51,
+    "acceptedSites": 27,
+    "heldSites": 37,
     "rejectedSites": 0,
     "totalSources": 66
   },
   "files": {
     "localities.json": "6defdd026f0eee06f72f978240c9c2fa250cecc6ca4dbb6f71653d2b43f6c4eb",
     "sources.json": "28db2a9df43b6ce0080153f03d6c9eed5c14d11c811dffe1dc2222d5d278f17b",
-    "sites.json": "68578980b028c08ef29f8cc1aa002417cda6273dc727cde94a266af1a312bf81"
+    "sites.json": "edd16cdd91ff0a36ea03bc53a3ab5fac2a1a3ea0536d8e6da8ffbff6d235b2c3"
   }
 }

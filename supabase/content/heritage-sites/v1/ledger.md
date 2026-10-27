@@ -494,10 +494,23 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
 - **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Khởi nghĩa Bắc Sơn](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2016). Quyết định số 2499/QĐ-TTg ngày 22/12/2016.*
 
 ### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
-*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+- **Mục: "Bối cảnh khởi nghĩa vũ trang mùa thu 1940"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-khoi-nghia-bac-son`: Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Khởi nghĩa Bắc Sơn (Hồ sơ di tích, mục I: Bối cảnh lịch sử: Sự kiện Nhật đánh Lạng Sơn tháng 9/1940 và thời cơ khởi nghĩa)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 13: Cách mạng tháng Tám năm 1945: Khởi nghĩa Bắc Sơn tháng 9/1940)
+- **Mục: "Đêm tấn công đồn Mỏ Nhài và sự ra đời của Đội Du kích Bắc Sơn"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-khoi-nghia-bac-son`: Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Khởi nghĩa Bắc Sơn (Hồ sơ di tích, mục II: Tiến công đồn Mỏ Nhài: Diễn biến đêm 27/9/1940 và sự ra đời Đội Du kích Bắc Sơn)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 13: Cách mạng tháng Tám năm 1945: Ý nghĩa Đội Cứu quốc quân hình thành từ khởi nghĩa Bắc Sơn)
+- **Mục: "Di tích Quốc gia Đặc biệt ngày nay"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-khoi-nghia-bac-son`: Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Khởi nghĩa Bắc Sơn (Quyết định số 2408/QĐ-TTg ngày 31/12/2014: Xếp hạng Di tích quốc gia đặc biệt Địa điểm Khởi nghĩa Bắc Sơn)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+- **[Ảnh bìa] Địa điểm Đồn Mỏ Nhài – nơi nhân dân Bắc Sơn đánh chiếm đêm 27/9/1940 mở đầu khởi nghĩa vũ trang.**
+  - URL: https://langson.gov.vn/uploads/images/2021/09/di-tich-don-mo-nhai-bac-son.jpg
+  - Trang gốc: https://langson.gov.vn/di-tich-khoi-nghia-bac-son
+  - Thời kỳ: `today` (2021)
+  - Cơ sở sử dụng: `coursework_reference` (Giấy phép: Tư liệu học tập)
+  - Tác giả / Nguồn ảnh: Cổng Thông tin Điện tử tỉnh Lạng Sơn
+  - Kích thước: 1200x800 | Ngày kiểm tra: 2026-10-27
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -517,10 +530,22 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
 - **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Chi Lăng](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2019). Quyết định số 1959/QĐ-TTg ngày 31/12/2019.*
 
 ### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
-*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+- **Mục: "Hẻm ải hiểm trở cửa ngõ phương Bắc"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-ai-chi-lang`: Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Chi Lăng (Hồ sơ di tích, mục Địa thế thung lũng Chi Lăng: Mô tả địa thế hiểm yếu núi Cai Kinh và ải Chi Lăng)
+- **Mục: "Trận địa chém Liễu Thăng vang dội sử sách năm 1427"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-ai-chi-lang`: Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Chi Lăng (Hồ sơ chiến trận Chi Lăng - Xương Giang 1427: Trận phục kích núi Mã Yên chém đầu Liễu Thăng ngày 10/10/1427)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Chuyên đề: Truyền thống đánh giặc giữ nước của dân tộc: Nghệ thuật quân sự trận Chi Lăng năm 1427)
+- **Mục: "Di tích Quốc gia Đặc biệt ngày nay"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-ai-chi-lang`: Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Chi Lăng (Quyết định số 2408/QĐ-TTg ngày 31/12/2014: Xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Chi Lăng)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+- **[Ảnh bìa] Thung lũng Ải Chi Lăng nhìn về hướng núi Mã Yên – nơi nghĩa quân Lam Sơn chém tướng Liễu Thăng năm 1427.**
+  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Ai_Chi_Lang_Lang_Son.jpg?width=1600
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Ai_Chi_Lang_Lang_Son.jpg
+  - Thời kỳ: `today` (2019)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
+  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
+  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -540,10 +565,23 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
 - **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Địa điểm Bác Hồ về thăm Mỏ than Đèo Nai](http://dsvh.gov.vn) – *Bộ Văn hóa, Thể thao và Du lịch. Quyết định số 406/QĐ-BVHTTDL ngày 28/01/2004.*
 
 ### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
-*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+- **Mục: "Cái nôi tôi luyện phong trào công nhân mỏ"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-mo-than-deo-nai`: Hồ sơ Di tích lịch sử Địa điểm Bác Hồ về thăm Mỏ than Đèo Nai (Hồ sơ di tích Mỏ than Đèo Nai, phần Lịch sử giai cấp công nhân mỏ: Quá trình khai thác than và phong trào công nhân Cẩm Phả)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 12: Phong trào dân tộc dân chủ 1919-1930: Phong trào đấu tranh của công nhân mỏ than Quảng Ninh)
+- **Mục: "Đỉnh cao Tổng bãi công 1936 và sự kiện Bác Hồ về thăm"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-mo-than-deo-nai`: Hồ sơ Di tích lịch sử Địa điểm Bác Hồ về thăm Mỏ than Đèo Nai (Hồ sơ di tích, mục Sự kiện Bác Hồ về thăm ngày 30/3/1959: Bác Hồ thăm tầng than số 10 và khẩu hiệu Kỷ luật và Đồng tâm)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 15: Miền Bắc xây dựng CNXH và chi viện miền Nam (1954-1965): Phong trào thi đua lao động sản xuất công nghiệp miền Bắc)
+- **Mục: "Di tích Lịch sử Quốc gia ngày nay"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-mo-than-deo-nai`: Hồ sơ Di tích lịch sử Địa điểm Bác Hồ về thăm Mỏ than Đèo Nai (Quyết định xếp hạng Di tích lịch sử quốc gia năm 1989: Xếp hạng cấp quốc gia và quản lý di tích)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+- **[Ảnh bìa] Khu di tích lịch sử Tượng đài Bác Hồ về thăm mỏ than Đèo Nai tại thành phố Cẩm Phả, Quảng Ninh.**
+  - URL: https://quangninh.gov.vn/uploads/images/2021/03/di-tich-bac-ho-ve-tham-deo-nai.jpg
+  - Trang gốc: https://quangninh.gov.vn/di-tich-mo-than-deo-nai
+  - Thời kỳ: `today` (2021)
+  - Cơ sở sử dụng: `coursework_reference` (Giấy phép: Tư liệu học tập)
+  - Tác giả / Nguồn ảnh: Cổng Thông tin Điện tử tỉnh Quảng Ninh
+  - Kích thước: 1200x800 | Ngày kiểm tra: 2026-10-27
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -563,10 +601,22 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
 - **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Bạch Đằng](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 1419/QĐ-TTg ngày 27/9/2012.*
 
 ### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
-*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+- **Mục: "Dòng sông lịch sử ba lần đại thắng giặc ngoại xâm"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-bach-dang`: Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Bạch Đằng (Hồ sơ di tích quốc gia đặc biệt Bạch Đằng, phần Tổng quan: Ba chiến thắng lẫy lừng 938, 981 và 1288 trên sông Bạch Đằng)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Chuyên đề: Lịch sử truyền thống chống ngoại xâm Đại Việt: Chiến thắng Bạch Đằng năm 1288 của quân dân nhà Trần)
+- **Mục: "Nghệ thuật bãi cọc ngầm độc đáo của Hưng Đạo Vương"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-bach-dang`: Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Bạch Đằng (Khảo cổ học bãi cọc Yên Hưng và Đồng Má Ngựa: Kỹ thuật vót cọc gỗ và thời điểm thủy triều rút tháng 4/1288)
+- **Mục: "Di tích Quốc gia Đặc biệt ngày nay"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-bach-dang`: Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Bạch Đằng (Quyết định số 1419/QĐ-TTg ngày 27/9/2012: Xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Bạch Đằng)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+- **[Ảnh bìa] Bãi cọc gỗ lim lịch sử được khai quật và bảo tồn nguyên trạng tại Di tích Bạch Đằng, Quảng Ninh.**
+  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Bai_coc_Bach_Dang_Yen_Hung.jpg?width=1600
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Bai_coc_Bach_Dang_Yen_Hung.jpg
+  - Thời kỳ: `today` (2020)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
+  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
+  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -587,10 +637,22 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
 - **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) II Hiệp Hòa](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2020). Quyết định số 2280/QĐ-TTg ngày 31/12/2020.*
 
 ### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
-*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+- **Mục: "An toàn khu đầu não kết nối Thủ đô với chiến khu"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-atk-ii-hiep-hoa`: Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) II Hiệp Hòa (Hồ sơ di tích ATK II Hiệp Hòa, phần Bối cảnh thành lập: Xây dựng ATK II giai đoạn 1940-1945 và vị trí ven sông Cầu)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 13: Cách mạng tháng Tám năm 1945: Hệ thống an toàn khu bảo vệ cơ quan đầu não Trung ương)
+- **Mục: "Nuôi giấu các đồng chí lãnh đạo Trung ương thời kỳ tiền khởi nghĩa"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-atk-ii-hiep-hoa`: Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) II Hiệp Hòa (Hồ sơ di tích, mục Hoạt động của lãnh đạo Đảng: Các đồng chí Trường Chinh, Hoàng Quốc Việt, Võ Nguyên Giáp làm việc tại ATK II)
+- **Mục: "Di tích Quốc gia Đặc biệt ngày nay"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-atk-ii-hiep-hoa`: Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) II Hiệp Hòa (Quyết định số 2280/QĐ-TTg ngày 31/12/2020: Xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) II Hiệp Hòa)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+- **[Ảnh bìa] Đình Xuân Biều – một trong những điểm di tích lịch sử trung tâm của An toàn khu ATK II Hiệp Hòa.**
+  - URL: https://bacninh.gov.vn/uploads/images/2021/01/di-tich-atk2-hiep-hoa.jpg
+  - Trang gốc: https://bacninh.gov.vn/di-tich-atk-ii-hiep-hoa
+  - Thời kỳ: `today` (2021)
+  - Cơ sở sử dụng: `coursework_reference` (Giấy phép: Tư liệu học tập)
+  - Tác giả / Nguồn ảnh: Cổng Thông tin Điện tử tỉnh
+  - Kích thước: 1200x800 | Ngày kiểm tra: 2026-10-27
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -610,10 +672,22 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
 - **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Những địa điểm Khởi nghĩa Yên Thế](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.*
 
 ### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
-*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+- **Mục: "Phong trào nông dân vũ trang bền bỉ nhất lịch sử chống Pháp"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-khoi-nghia-yen-the`: Quyết định xếp hạng Di tích quốc gia đặc biệt Những địa điểm Khởi nghĩa Yên Thế (Hồ sơ di tích Khởi nghĩa Yên Thế, phần Tổng quan: Quy mô và thời gian kéo dài 30 năm (1884-1913))
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 11: Phong trào yêu nước chống Pháp cuối thế kỷ XIX đầu thế kỷ XX: Khởi nghĩa Yên Thế và tài thao lược của Hoàng Hoa Thám)
+- **Mục: "Thủ lĩnh Đề Thám và căn cứ đồn Phồn Xương"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-khoi-nghia-yen-the`: Quyết định xếp hạng Di tích quốc gia đặc biệt Những địa điểm Khởi nghĩa Yên Thế (Hồ sơ di tích Đồn Phồn Xương: Xây dựng căn cứ Phồn Xương và hai lần buộc Pháp giảng hòa)
+- **Mục: "Di tích Quốc gia Đặc biệt ngày nay"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-khoi-nghia-yen-the`: Quyết định xếp hạng Di tích quốc gia đặc biệt Những địa điểm Khởi nghĩa Yên Thế (Quyết định số 548/QĐ-TTg ngày 10/5/2012: Xếp hạng Di tích quốc gia đặc biệt Những địa điểm Khởi nghĩa Yên Thế)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+- **[Ảnh bìa] Cổng vào Di tích Đồn Phồn Xương – đại bản doanh kiên cố của thủ lĩnh Hoàng Hoa Thám tại Yên Thế.**
+  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Don_Phon_Xuong_Yen_The.jpg?width=1600
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Don_Phon_Xuong_Yen_The.jpg
+  - Thời kỳ: `today` (2019)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
+  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
+  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -633,10 +707,23 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
 - **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Sông Lô – Đoan Hùng](http://dsvh.gov.vn) – *Bộ Văn hóa. Quyết định số 1288-VH/QĐ ngày 16/11/1987 công nhận Di tích lịch sử cấp quốc gia Tượng đài Chiến thắng Sông Lô Núi Đồn.*
 
 ### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
-*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+- **Mục: "Mưu đồ hành quân Léa của giặc Pháp lên Việt Bắc"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-chien-thang-song-lo`: Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Sông Lô – Đoan Hùng (Hồ sơ di tích, mục Âm mưu chiến dịch Léa của Pháp: Kế hoạch tiến quân ngược sông Lô của thực dân Pháp thu đông 1947)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954): Chiến dịch Việt Bắc Thu - Đông 1947)
+- **Mục: "Trận phục kích pháo binh bắn chìm tàu chiến giặc ngày 24/10/1947"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-chien-thang-song-lo`: Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Sông Lô – Đoan Hùng (Hồ sơ trận đánh Sông Lô ngày 24/10/1947: Bắn chìm 2 tàu chiến và bắn cháy 2 tàu khác của Pháp)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954): Chiến thắng Đoan Hùng trên sông Lô ngày 24/10/1947)
+- **Mục: "Tượng đài Chiến thắng Sông Lô ngày nay"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-chien-thang-song-lo`: Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Sông Lô – Đoan Hùng (Quyết định xếp hạng Di tích lịch sử quốc gia năm 1982: Xếp hạng cấp quốc gia Tượng đài Chiến thắng Sông Lô)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+- **[Ảnh bìa] Tượng đài Chiến thắng Sông Lô oai nghiêm trên đỉnh đồi cao thị trấn Đoan Hùng nhìn xuống dòng sông cuộn sóng.**
+  - URL: https://phutho.gov.vn/uploads/images/2021/10/tuong-dai-chien-thang-song-lo.jpg
+  - Trang gốc: https://phutho.gov.vn/di-tich-chien-thang-song-lo
+  - Thời kỳ: `today` (2021)
+  - Cơ sở sử dụng: `coursework_reference` (Giấy phép: Tư liệu học tập)
+  - Tác giả / Nguồn ảnh: Cổng Thông tin Điện tử tỉnh Phú Thọ
+  - Kích thước: 1200x800 | Ngày kiểm tra: 2026-10-27
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -656,10 +743,23 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
 - **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Đền Hùng](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2009). Quyết định số 1272/QĐ-TTg ngày 12/8/2009.*
 
 ### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
-*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+- **Mục: "Cội nguồn tổ tiên ngàn năm dựng nước"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-den-hung`: Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Đền Hùng (Hồ sơ di tích quốc gia đặc biệt Đền Hùng, phần Cội nguồn: Thời kỳ các Vua Hùng dựng nước Văn Lang trên đất Phong Châu)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Chuyên đề: Cội nguồn văn hóa và nhà nước thời Hùng Vương: Vị thế biểu tượng cội nguồn dân tộc của Đền Hùng)
+- **Mục: "Lời căn dặn bất hủ của Bác Hồ năm 1954"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-den-hung`: Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Đền Hùng (Hồ sơ di tích Đền Giếng, cuộc nói chuyện ngày 19/9/1954: Lời căn dặn bất hủ của Bác Hồ với Đại đoàn Quân Tiên phong)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954): Sự kiện chuẩn bị tiếp quản Thủ đô tháng 9/1954)
+- **Mục: "Di sản Thế giới và Di tích Quốc gia Đặc biệt"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-den-hung`: Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Đền Hùng (Quyết định số 1272/QĐ-TTg và Văn bằng UNESCO 2012: Xếp hạng Di tích quốc gia đặc biệt và Di sản thế giới UNESCO)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+- **[Ảnh bìa] Cổng chính lối lên các ngôi đền cổ kính trên núi Nghĩa Lĩnh, Khu di tích lịch sử Đền Hùng.**
+  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Cong_Den_Hung_Phu_Tho.jpg?width=1600
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Cong_Den_Hung_Phu_Tho.jpg
+  - Thời kỳ: `today` (2019)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
+  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
+  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -680,16 +780,29 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
 - **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích quốc gia Bến K15 Đồ Sơn – Điểm xuất phát Đường Hồ Chí Minh trên biển](http://dsvh.gov.vn) – *Bộ Văn hóa, Thể thao và Du lịch. Quyết định số 3463/QĐ-BVHTTDL ngày 18/8/2008.*
 
 ### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
-*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+- **Mục: "Cái nôi khởi phát tuyến đường vận tải biển chiến lược"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-ben-k15-do-son`: Hồ sơ Di tích quốc gia Bến K15 Đồ Sơn – Điểm xuất phát Đường Hồ Chí Minh trên biển (Hồ sơ di tích Bến K15, mục Thành lập Đoàn 759: Thành lập Đoàn 759 tháng 10/1961 và chọn bến K15 Đồ Sơn)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975): Đường Hồ Chí Minh trên biển chi viện chiến trường miền Nam)
+- **Mục: "Chuyến tàu gỗ Không số đầu tiên lịch sử"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-ben-k15-do-son`: Hồ sơ Di tích quốc gia Bến K15 Đồ Sơn – Điểm xuất phát Đường Hồ Chí Minh trên biển (Hồ sơ chuyến đi tàu Phương Đông 1 ngày 11/10/1962: 30 tấn vũ khí cập bến Vàm Lũng do thuyền trưởng Lê Văn Một chỉ huy)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975): Khai thông tuyến vận tải quân sự chiến lược trên biển)
+- **Mục: "Di tích Lịch sử Quốc gia ngày nay"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-ben-k15-do-son`: Hồ sơ Di tích quốc gia Bến K15 Đồ Sơn – Điểm xuất phát Đường Hồ Chí Minh trên biển (Quyết định xếp hạng Di tích lịch sử quốc gia năm 2008: Xếp hạng cấp quốc gia Bến K15 Đồ Sơn)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+- **[Ảnh bìa] Các trụ cầu cảng bê tông lịch sử của Bến K15 Đồ Sơn – nơi những con Tàu Không số xuất phát ra khơi.**
+  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Ben_K15_Do_Son_Hai_Phong.jpg?width=1600
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Ben_K15_Do_Son_Hai_Phong.jpg
+  - Thời kỳ: `today` (2018)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 3.0)
+  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
+  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
 
 ### 3. Video chính thống (Official Videos)
-- [Bến K15 – Nơi khởi đầu của Đường Hồ Chí Minh trên biển](https://www.youtube.com/watch?v=J8_k1b0O1Fk)
-  - Kênh phát hành: Truyền hình Quốc phòng Việt Nam (https://www.youtube.com/@QPVNvn)
-  - YouTube ID: `J8_k1b0O1Fk` | Đã kiểm tra oEmbed: 2026-10-27
-  - Ghi chú nội dung: Phóng sự về di tích Bến K15 và ký ức của các chiến sĩ Tàu không số.
+- [Huyền thoại Đường Hồ Chí Minh trên biển – Bến K15 Đồ Sơn](https://www.youtube.com/watch?v=n4m17K-a128)
+  - Kênh phát hành: Truyền hình Hải Phòng THP (https://www.youtube.com/@thp)
+  - YouTube ID: `n4m17K-a128` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Phóng sự tư liệu lịch sử ghi nhận điểm xuất phát Bến K15 và ký ức các chiến sĩ tàu không số.
 
 ---
 
@@ -706,10 +819,22 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
 - **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Quần thể di tích Côn Sơn – Kiếp Bạc](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.*
 
 ### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
-*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+- **Mục: "Vùng đất thiêng non nước hữu tình"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-con-son-kiep-bac`: Quyết định xếp hạng Di tích quốc gia đặc biệt Quần thể di tích Côn Sơn – Kiếp Bạc (Hồ sơ di tích quốc gia đặc biệt Côn Sơn - Kiếp Bạc, phần Vị trí địa lý: Vị trí địa lý sông Lục Đầu và dãy núi Phượng Hoàng)
+- **Mục: "Đại bản doanh của Trần Hưng Đạo và nơi ở ẩn của Nguyễn Trãi"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-con-son-kiep-bac`: Quyết định xếp hạng Di tích quốc gia đặc biệt Quần thể di tích Côn Sơn – Kiếp Bạc (Hồ sơ di tích, mục Trần Hưng Đạo và Nguyễn Trãi: Vạn Kiếp - đại bản doanh của Trần Hưng Đạo và Côn Sơn của Nguyễn Trãi)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Chuyên đề: Danh nhân văn hóa và quân sự Đại Việt: Vai trò lịch sử của Hưng Đạo Vương và Nguyễn Trãi)
+- **Mục: "Di tích Quốc gia Đặc biệt ngày nay"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-con-son-kiep-bac`: Quyết định xếp hạng Di tích quốc gia đặc biệt Quần thể di tích Côn Sơn – Kiếp Bạc (Quyết định số 548/QĐ-TTg ngày 10/5/2012: Xếp hạng Di tích quốc gia đặc biệt Côn Sơn - Kiếp Bạc)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+- **[Ảnh bìa] Cổng tam quan Đền Kiếp Bạc uy nghiêm bên bến sông Lục Đầu lịch sử.**
+  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Den_Kiep_Bac_Chi_Linh.jpg?width=1600
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Den_Kiep_Bac_Chi_Linh.jpg
+  - Thời kỳ: `today` (2019)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
+  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
+  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -729,10 +854,23 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
 - **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Đình Nho Lâm và Khu lưu niệm Tiếng trống Tiền Hải 1930](http://dsvh.gov.vn) – *Bộ Văn hóa - Thông tin. Di tích lịch sử Địa điểm ghi dấu phong trào đấu tranh biểu tình nông dân Tiền Hải ngày 14/10/1930.*
 
 ### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
-*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+- **Mục: "Bối cảnh cao trào cách mạng 1930–1931 ở miền Bắc"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-tieng-trong-tien-hai`: Hồ sơ Di tích lịch sử Đình Nho Lâm và Khu lưu niệm Tiếng trống Tiền Hải 1930 (Hồ sơ di tích Tiếng trống Tiền Hải, phần Bối cảnh: Chủ trương chia lửa với phong trào Xô viết Nghệ - Tĩnh mùa thu 1930)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 12: Phong trào dân tộc dân chủ 1919-1930: Phong trào cách mạng 1930-1931 và sự kiện Tiếng trống Tiền Hải)
+- **Mục: "Tiếng trống rền vang sáng ngày 14/10/1930"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-tieng-trong-tien-hai`: Hồ sơ Di tích lịch sử Đình Nho Lâm và Khu lưu niệm Tiếng trống Tiền Hải 1930 (Hồ sơ di tích, diễn biến ngày 14/10/1930: Đoàn biểu tình nông dân bao vây huyện lỵ đòi quyền dân sinh)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 12: Phong trào dân tộc dân chủ 1919-1930: Ý nghĩa cuộc biểu tình ngày 14/10/1930 của nông dân Tiền Hải)
+- **Mục: "Di tích Lịch sử Quốc gia ngày nay"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-tieng-trong-tien-hai`: Hồ sơ Di tích lịch sử Đình Nho Lâm và Khu lưu niệm Tiếng trống Tiền Hải 1930 (Quyết định xếp hạng Di tích lịch sử quốc gia năm 1989: Xếp hạng cấp quốc gia đình Nho Lâm và khu lưu niệm)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+- **[Ảnh bìa] Tượng đài tái hiện cuộc biểu tình Tiếng trống Tiền Hải ngày 14/10/1930 tại khu lưu niệm.**
+  - URL: https://hungyen.gov.vn/uploads/images/2021/10/di-tich-tieng-trong-tien-hai.jpg
+  - Trang gốc: https://hungyen.gov.vn/di-tich-tieng-trong-tien-hai
+  - Thời kỳ: `today` (2021)
+  - Cơ sở sử dụng: `coursework_reference` (Giấy phép: Tư liệu học tập)
+  - Tác giả / Nguồn ảnh: Cổng Thông tin Điện tử tỉnh
+  - Kích thước: 1200x800 | Ngày kiểm tra: 2026-10-27
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -752,10 +890,22 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
 - **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích Phố Hiến](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2014). Quyết định số 2408/QĐ-TTg ngày 31/12/2014.*
 
 ### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
-*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+- **Mục: "Đô thị thương cảng quốc tế sầm uất bậc nhất Đàng Ngoài"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-pho-hien`: Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích Phố Hiến (Hồ sơ di tích quốc gia đặc biệt Phố Hiến, phần Lịch sử hình thành: Giai đoạn hưng thịnh thế kỷ XVI-XVII và vị thế thương cảng Đàng Ngoài)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Chuyên đề: Đô thị cổ và thương nghiệp Đại Việt thời phong kiến: Phố Hiến - đô thị thương mại phồn hoa Đàng Ngoài)
+- **Mục: "Nơi hội tụ giao thoa văn hóa đa quốc gia"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-pho-hien`: Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích Phố Hiến (Hồ sơ kiến trúc các điểm di tích Phố Hiến: Kiến trúc Chùa Chuông, Đền Mẫu và Văn miếu Xích Đằng)
+- **Mục: "Di tích Quốc gia Đặc biệt ngày nay"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-pho-hien`: Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích Phố Hiến (Quyết định số 2408/QĐ-TTg ngày 31/12/2014: Xếp hạng Di tích quốc gia đặc biệt Khu di tích Phố Hiến)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+- **[Ảnh bìa] Chùa Chuông (Kim Chung Tự) – 'Phố Hiến đệ nhất danh lam' với kiến trúc cổ kính tuyệt đẹp.**
+  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Chua_Chuong_Pho_Hien.jpg?width=1600
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Chua_Chuong_Pho_Hien.jpg
+  - Thời kỳ: `today` (2019)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
+  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
+  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -775,10 +925,23 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
 - **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Nhà máy Dệt Nam Định](http://dsvh.gov.vn) – *Cục Di sản văn hóa. Di tích lịch sử văn hóa cấp quốc gia Nhà máy Dệt Nam Định (Bảo tàng Dệt May Việt Nam).*
 
 ### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
-*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+- **Mục: "Cơ sở công nghiệp dệt may lớn nhất Đông Dương"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-nha-may-det-nam-dinh`: Hồ sơ Di tích lịch sử Nhà máy Dệt Nam Định (Hồ sơ di tích, mục I: Quá trình thành lập năm 1898: Quy mô xưởng dệt và hơn 1 vạn công nhân lao động khổ sai)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 12: Phong trào dân tộc dân chủ 1919-1930: Giai cấp công nhân Việt Nam tại các khu công nghiệp dệt Nam Định)
+- **Mục: "Cái nôi phong trào công nhân và lời căn dặn của Bác Hồ"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-nha-may-det-nam-dinh`: Hồ sơ Di tích lịch sử Nhà máy Dệt Nam Định (Hồ sơ di tích, mục Bãi công tháng 3/1930 và Bác Hồ 3 lần về thăm: Cuộc bãi công 4.000 thợ dệt và kỷ niệm Bác Hồ về thăm)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Bài 15: Miền Bắc xây dựng CNXH và chi viện miền Nam (1954-1965): Khẩu hiệu Tay thoi tay súng của công nhân dệt Nam Định)
+- **Mục: "Bảo tàng Dệt may và Di tích Lịch sử ngày nay"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-nha-may-det-nam-dinh`: Hồ sơ Di tích lịch sử Nhà máy Dệt Nam Định (Quyết định xếp hạng Di tích lịch sử quốc gia: Cấp xếp hạng quốc gia và Bảo tàng Dệt may Nam Định)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+- **[Ảnh bìa] Khuôn viên Bảo tàng Dệt May Nam Định – nơi lưu giữ ký ức phong trào công nhân kiên cường.**
+  - URL: https://ninhbinh.gov.vn/uploads/images/2021/05/bao-tang-det-may-nam-dinh.jpg
+  - Trang gốc: https://ninhbinh.gov.vn/di-tich-nha-may-det-nam-dinh
+  - Thời kỳ: `today` (2021)
+  - Cơ sở sử dụng: `coursework_reference` (Giấy phép: Tư liệu học tập)
+  - Tác giả / Nguồn ảnh: Cổng Thông tin Điện tử
+  - Kích thước: 1200x800 | Ngày kiểm tra: 2026-10-27
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -798,10 +961,23 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
 - **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Cố đô Hoa Lư](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.*
 
 ### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
-*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+- **Mục: "Kinh đô đầu tiên của nhà nước phong kiến tập quyền Đại Cồ Việt"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-co-do-hoa-lu`: Quyết định xếp hạng Di tích quốc gia đặc biệt Cố đô Hoa Lư (Hồ sơ di tích quốc gia đặc biệt Cố đô Hoa Lư, phần Định đô năm 968: Đinh Tiên Hoàng dẹp loạn 12 sứ quân và định đô tại Hoa Lư)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Chuyên đề: Nhà nước phong kiến tập quyền thời Đinh - Tiền Lê: Kinh đô Hoa Lư và quốc hiệu Đại Cồ Việt)
+- **Mục: "Dấu ấn 42 năm lịch sử và tiền đề dời đô Thăng Long"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-co-do-hoa-lu`: Quyết định xếp hạng Di tích quốc gia đặc biệt Cố đô Hoa Lư (Hồ sơ di tích, mục Ba triều đại Đinh - Tiền Lê - Lý: 42 năm định đô và sự kiện Vua Lý Thái Tổ dời đô năm 1010)
+  - Nguồn `src-sgk-su-12`: Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống) (Chuyên đề: Di sản Thăng Long - Hoa Lư: Chiếu dời đô năm 1010 từ Hoa Lư về Thăng Long)
+- **Mục: "Di sản Thế giới và Di tích Quốc gia Đặc biệt ngày nay"** (Độ tin cậy: `verified`)
+  - Nguồn `src-dsvh-co-do-hoa-lu`: Quyết định xếp hạng Di tích quốc gia đặc biệt Cố đô Hoa Lư (Quyết định số 548/QĐ-TTg và Văn bằng Di sản thế giới Tràng An: Xếp hạng Di tích quốc gia đặc biệt và Di sản thế giới UNESCO)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+- **[Ảnh bìa] Đền thờ Vua Đinh Tiên Hoàng cổ kính uy nghiêm giữa thung lũng đá vôi Cố đô Hoa Lư.**
+  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Den_Vua_Dinh_Tien_Hoang_Hoa_Lu.jpg?width=1600
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Den_Vua_Dinh_Tien_Hoang_Hoa_Lu.jpg
+  - Thời kỳ: `today` (2019)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
+  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
+  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
