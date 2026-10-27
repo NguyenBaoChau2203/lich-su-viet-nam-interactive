@@ -30,7 +30,8 @@ test.afterEach(async ({ page }, info) => {
 });
 test("homepage locality entry exposes a bounded public list", async ({ page }) => {
   await page.goto("/");
-  await page.getByRole("link", { name: "Nhân vật theo địa phương", exact: true }).click();
+  await page.getByRole("link", { name: "Theo địa phương", exact: true }).click();
+  await page.getByRole("link", { name: "Nhân vật", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Nhân vật cách mạng theo địa phương", exact: true })).toBeVisible();
   await expect(page.locator("[data-testid=local-hero-row]")).toHaveCount(12);
   await ready(page);
@@ -96,10 +97,11 @@ test("reload share Back forward and detail return preserve exact people context"
 
 test("keyboard focus, scrolling, contrast and reduced motion", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" }); await page.goto("/");
-  const entry = page.getByRole("link", { name: "Nhân vật theo địa phương", exact: true }); await entry.focus(); await page.keyboard.press("Enter");
+  const entry = page.getByRole("link", { name: "Theo địa phương", exact: true }); await entry.focus(); await page.keyboard.press("Enter");
+  await page.getByRole("link", { name: "Nhân vật", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Nhân vật cách mạng theo địa phương", exact: true })).toBeFocused();
   await expect(rows(page)).toHaveCount(12); await page.keyboard.press("Tab"); await expect(page.getByRole("link", { name: "Đóng danh sách nhân vật" })).toBeFocused();
-  await page.keyboard.press("Tab"); await expect(locality(page)).toBeFocused();
+  await page.keyboard.press("Tab"); await page.keyboard.press("Tab"); await page.keyboard.press("Tab"); await expect(locality(page)).toBeFocused();
   const outline = await locality(page).evaluate((node) => getComputedStyle(node).outlineStyle); expect(outline).not.toBe("none");
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
   const scroll = page.getByRole("region", { name: "Kết quả nhân vật, cuộn để đọc" });
@@ -118,7 +120,9 @@ test("keyboard focus, scrolling, contrast and reduced motion", async ({ page }) 
 test("entry during journey playback restores its paused selection and camera", async ({ page }) => {
   await page.goto("/?tu=1911&den=1975&ban-do=10.76,106.7,6.6&hanh-trinh=ho-chi-minh-1911-1941&moc=sai-gon-1911"); await ready(page);
   await page.getByRole("button", { name: "Phát hành trình", exact: true }).click(); await expect(page.getByRole("button", { name: "Tạm dừng hành trình", exact: true })).toBeVisible();
-  await page.getByRole("link", { name: "Nhân vật theo địa phương", exact: true }).click(); await expect(rows(page)).toHaveCount(12);
+  await page.getByRole("link", { name: "Theo địa phương", exact: true }).click();
+  await page.getByRole("link", { name: "Nhân vật", exact: true }).click();
+  await expect(rows(page)).toHaveCount(12);
   const before = new URL(page.url()).searchParams;
   await expect(page.getByTestId("journey-panel")).toHaveCount(0); await expect(page.getByTestId("map-event-card")).toHaveCount(0); await expect(page.locator("canvas.cinematic-globe-canvas")).toHaveCount(1);
   await locality(page).selectOption("ha-noi"); await expect(page.locator(".local-heroes-count")).toContainText("14 nhân vật");
@@ -166,7 +170,7 @@ test("independent errors, retry, clamping and broken accepted images", async ({ 
 test("SSR GET without JavaScript follows locality pagination detail and return", async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false, viewport: test.info().project.use.viewport });
   const page = await context.newPage(); await page.route("**/_next/image?**", (r) => r.fulfill({ contentType: "image/svg+xml", body: thumbnail }));
-  await page.goto("http://127.0.0.1:3114/"); await page.getByRole("link", { name: "Nhân vật theo địa phương", exact: true }).click(); await expect(rows(page)).toHaveCount(12);
+  await page.goto("http://127.0.0.1:3114/"); await page.getByRole("link", { name: "Theo địa phương", exact: true }).click(); await page.getByRole("link", { name: "Nhân vật", exact: true }).click(); await expect(rows(page)).toHaveCount(12);
   const fallbackOverlapsPanel = await page.evaluate(() => {
     const panel = document.querySelector(".local-heroes-panel")!.getBoundingClientRect();
     return [...document.querySelectorAll(".home-map-notice, .home-map-tile-error")].some((notice) => {
@@ -200,7 +204,9 @@ test("default network is deferred; one page RPC supplies count/coverage without 
   const initial = readFileSync("output/playwright/local-heroes/fixture-requests.ndjson", "utf8").trim().split("\n").filter(Boolean).slice(before).map((line) => JSON.parse(line));
   expect(initial.filter((row) => row.path.includes("local_hero"))).toEqual([]); expect(photos).toEqual([]);
   await page.evaluate(() => history.replaceState({ ...history.state, localHeroesTestSentinel: "preserved" }, "", location.href));
-  await page.getByRole("link", { name: "Nhân vật theo địa phương", exact: true }).click(); await expect(rows(page)).toHaveCount(12);
+  await page.getByRole("link", { name: "Theo địa phương", exact: true }).click();
+  await page.getByRole("link", { name: "Nhân vật", exact: true }).click();
+  await expect(rows(page)).toHaveCount(12);
   const opened = readFileSync("output/playwright/local-heroes/fixture-requests.ndjson", "utf8").trim().split("\n").filter(Boolean).slice(before).map((line) => JSON.parse(line));
   expect(opened.filter((row) => row.path.endsWith("local_hero_page"))).toHaveLength(1); expect(opened.filter((row) => row.path.endsWith("local_hero_profile"))).toHaveLength(0);
   expect(await page.evaluate(() => history.state.localHeroesTestSentinel)).toBe("preserved");
@@ -218,7 +224,9 @@ test("people entry before scene readiness cancels intro and never replays it", a
   let release!: () => void; const held = new Promise<void>((resolve) => { release = resolve; });
   await page.route("**/maps/globe/earth-day-4096x2048.jpg", async (route) => { await held; await route.continue().catch(() => {}); });
   await page.goto("/", { waitUntil: "domcontentloaded" });
-  await page.getByRole("link", { name: "Nhân vật theo địa phương", exact: true }).click(); await expect(rows(page)).toHaveCount(12);
+  await page.getByRole("link", { name: "Theo địa phương", exact: true }).click();
+  await page.getByRole("link", { name: "Nhân vật", exact: true }).click();
+  await expect(rows(page)).toHaveCount(12);
   release(); await ready(page); await expect(page.getByRole("button", { name: "Bỏ qua chuyển cảnh", exact: true })).toHaveCount(0);
   await page.keyboard.press("Escape"); await expect(page.getByRole("button", { name: "Bỏ qua chuyển cảnh", exact: true })).toHaveCount(0);
 });
@@ -231,7 +239,9 @@ test("public detail rejects ineligible profiles, sanitizes outages and keeps leg
 
 test("entering during the active intro cancels the flight without a second camera", async ({ page }) => {
   await page.goto("/"); await page.getByRole("button", { name: "Bỏ qua chuyển cảnh", exact: true }).waitFor({ state: "visible" });
-  await page.getByRole("link", { name: "Nhân vật theo địa phương", exact: true }).click(); await expect(rows(page)).toHaveCount(12);
+  await page.getByRole("link", { name: "Theo địa phương", exact: true }).click();
+  await page.getByRole("link", { name: "Nhân vật", exact: true }).click();
+  await expect(rows(page)).toHaveCount(12);
   await expect(page.getByRole("button", { name: "Bỏ qua chuyển cảnh", exact: true })).toHaveCount(0);
   const before = (await inspectScene(page)).view; await page.waitForTimeout(600); const after = (await inspectScene(page)).view;
   expect(after.lat).toBeCloseTo(before.lat, 4); expect(after.lng).toBeCloseTo(before.lng, 4); expect(after.zoom).toBeCloseTo(before.zoom, 4);

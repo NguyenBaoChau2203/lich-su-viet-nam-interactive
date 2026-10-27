@@ -34,6 +34,7 @@ export function CinematicEventMap(props: EventMapProps) {
   const wheelTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const drag = useRef<{ id: number; x: number; y: number } | null>(null);
   const handledFocus = useRef<{ slug: string; nonce: number } | null>(null);
+  const handledPlacesCamera = useRef<number | null>(null);
   const activeJourney = useRef<GlobeCameraRequest | null>(null);
   const clearInput = useCallback(() => {
     clearTimeout(wheelTimer.current ?? undefined);
@@ -41,7 +42,7 @@ export function CinematicEventMap(props: EventMapProps) {
   }, []);
   useEffect(() => { callbacks.current = props; }, [props]);
   useEffect(() => {
-    if (props.readingMode !== "people") return;
+    if (props.readingMode !== "people" && props.readingMode !== "places") return;
     activeJourney.current = null;
     camera?.cancel(); clearInput(); scene?.setJourneyPath(null);
   }, [props.readingMode, camera, scene, clearInput]);
@@ -127,7 +128,17 @@ export function CinematicEventMap(props: EventMapProps) {
   }, [camera, scene, clearInput]);
 
   useEffect(() => {
-    if (props.readingMode === "people" || !scene || !camera || departing.current || camera.isFlying() || drag.current || wheelTimer.current) return;
+    if (!camera || !props.placesCamera || departing.current) return;
+    const { view, nonce } = props.placesCamera;
+    if (handledPlacesCamera.current === nonce) return;
+    handledPlacesCamera.current = nonce;
+    clearInput();
+    const instant = reducedMotion || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    void camera.flyTo(view, instant ? 0 : 1100);
+  }, [camera, props.placesCamera, reducedMotion, clearInput]);
+
+  useEffect(() => {
+    if (props.readingMode === "people" || props.readingMode === "places" || !scene || !camera || departing.current || camera.isFlying() || drag.current || wheelTimer.current) return;
     const view = props.view;
     if (!view) return;
     const current = scene.getView();
@@ -239,14 +250,14 @@ export function CinematicEventMap(props: EventMapProps) {
   function onSceneReady(ready: CinematicScene) {
     const controller = createGlobeCameraController(ready, (view) => {
       const arrival = activeJourney.current;
-      if (!departing.current && callbacks.current.readingMode !== "people" && (!arrival || sameJourneyArrival(arrival, callbacks.current.cameraRequest)))
+      if (!departing.current && callbacks.current.readingMode !== "people" && callbacks.current.readingMode !== "places" && (!arrival || sameJourneyArrival(arrival, callbacks.current.cameraRequest)))
         callbacks.current.onViewChange(view, arrival ?? undefined);
     });
     controller.setVisible(!document.hidden);
     setRuntime({ scene: ready, camera: controller });
     callbacks.current.onReadyChange(true);
     const opening = callbacks.current;
-    if (!departing.current && opening.readingMode !== "people" && opening.restoreRequest === 0 && !opening.view && !opening.selectedEvent && !opening.journeyStop) {
+    if (!departing.current && opening.readingMode !== "people" && opening.readingMode !== "places" && opening.restoreRequest === 0 && !opening.view && !opening.selectedEvent && !opening.journeyStop) {
       let seen = false;
       try { seen = sessionStorage.getItem(INTRO_KEY) === "1"; } catch { /* Optional storage. */ }
       const target = vietnamOverviewView(stageSize());
@@ -282,6 +293,7 @@ export function CinematicEventMap(props: EventMapProps) {
     </div>
     {scene && viewport && <GlobeMarkers key={`${props.restoreRequest}:${props.cameraRequest?.journeyId ?? ""}:${props.journeyStop?.id ?? ""}:${props.events.map(event => event.slug).join("|")}`}
       viewport={viewport} stageRef={stageRef} events={props.events} selectedEvent={props.selectedEvent} labels={labels} stop={props.journeyStop}
+      entityLabel={props.readingMode === "places" ? { one: "địa danh", many: "địa danh", regionLabel: "Các địa danh tại khu vực", closeLabel: "Đóng nhóm địa danh" } : undefined}
       onSelect={props.onSelect} onReadStop={props.onReadStop} onFocusCluster={(request) => {
         if (departing.current || !camera) return Promise.resolve("cancelled");
         const fit = fitClusterView(stageSize(), request);
@@ -289,7 +301,7 @@ export function CinematicEventMap(props: EventMapProps) {
         manualInput();
         return camera.flyTo(fit.view, reducedMotion ? 0 : 500);
       }} />}
-    {props.readingMode !== "people" && intro && !props.view && !props.selectedEvent && !props.journeyStop && props.restoreRequest === 0 && !reducedMotion && <button type="button" className="globe-skip" onClick={() => {
+    {props.readingMode !== "people" && props.readingMode !== "places" && intro && !props.view && !props.selectedEvent && !props.journeyStop && props.restoreRequest === 0 && !reducedMotion && <button type="button" className="globe-skip" onClick={() => {
       manualInput(); camera?.jumpTo(vietnamOverviewView(stageSize()));
       stageRef.current?.querySelector("canvas")?.focus({ preventScroll: true });
     }}>Bỏ qua chuyển cảnh</button>}

@@ -195,6 +195,49 @@ Confirmed all facts from Section 2 of implementation plan:
 - Open issues / held items: None.
 - Next allowed Phase: Phase 5 — State, reducer, URL and globe markers.
 
+---
+
+## Phase 5 — Homepage: state, panel, globe, card, markers, tests — 2026-10-27 23:15 (Asia/Saigon)
+- Branch/HEAD: `feat/heritage-sites-by-locality`
+- Skills used: `verify-release-slice`
+- Changed files:
+  - `lib/local-heroes/state.ts` (extended LocalHeroUrlState with places mode & place param; helpers normalizeLocalHeroReturnHref, getPlaceReturnHref, buildPlaceDetailHref)
+  - `lib/explorer/journeys/playback.ts` (explorer runtime reducer: place-select, people-enter mode places, people-change keepPlace, people-exit)
+  - `lib/explorer/globe-contract.ts` (added readingMode places, placesCamera)
+  - `components/explorer/cinematic/CinematicEventMap.tsx` (places camera handling, entityLabel)
+  - `components/explorer/GlobeMarkers.tsx` (entityLabel support for địa danh vs sự kiện)
+  - `components/explorer/explorer-map.css` (gold diamond markers for places, LocalityTabs, HeritagePanel, HeritageSiteCard left positioning)
+  - `components/heritage/LocalityTabs.tsx` (new switcher component)
+  - `components/heritage/HeritageVideoDialog.tsx` (new modal video dialog with lazy iframe & escape trap)
+  - `components/heritage/HeritageSiteCard.tsx` (new card component with focus restoration and links)
+  - `components/heritage/HeritageSiteList.tsx` (new list component with grouping)
+  - `components/heritage/HeritagePanel.tsx` (new panel component with coverage & locality filters)
+  - `hooks/useHeritageCatalog.ts` (new client hook with sequence/nonce fetch guard)
+  - `components/explorer/LocalHeroesPanel.tsx` (added tabs slot)
+  - `components/layout/HomeAtlasHeader.tsx` (header renamed to "Theo địa phương", added placesHref & placesActive)
+  - `components/explorer/HistoryExplorer.tsx` (integrated HeritagePanel, HeritageSiteCard, camera fly, camera nonce)
+  - `app/(public)/page.tsx` (SSR parallel fetch initialPlacesLoad)
+  - `tests/unit/heritage-url-state.test.ts` (new, 12 tests)
+  - `tests/unit/heritage-runtime.test.ts` (new, 7 tests)
+  - `tests/e2e/fixtures/heritage-sites/catalog.mjs` (new synthetic sites fixture)
+  - `tests/e2e/local-heroes-catalog-server.mjs` (added /rest/v1/historical_locations handler)
+  - `tests/e2e/home-heritage-sites.spec.ts` (new Playwright E2E suite H1-H14)
+  - `playwright.local-heroes.config.ts` (added home-heritage-sites.spec.ts to testMatch)
+  - `tests/e2e/home-local-heroes.spec.ts` (updated for unified locality header and tab transitions)
+  - `.task-reports/2026-10-27-2315-heritage-phase-5.md` (new, ignored)
+- Commands and results:
+  - `pnpm exec vitest run tests/unit/heritage-url-state.test.ts tests/unit/heritage-runtime.test.ts`: 19/19 passed.
+  - `node scripts/agent/local-heroes-e2e.mjs build`: Succeeded (110 static pages).
+  - `pnpm exec playwright test home-heritage-sites.spec.ts --config playwright.local-heroes.config.ts`: 52/52 tests passed across 4 viewports (1280x720, 1366x768, 1440x900, 1920x1080) with 0 failures!
+  - `pnpm exec playwright test --project 1280x720 --config playwright.local-heroes.config.ts`: 31/31 tests passed across figure-stories, home-heritage-sites, and home-local-heroes!
+  - `node scripts/content/heritage-sites-validate.mjs --package supabase/content/heritage-sites/v1 --mode release`: 100% valid (64 sites, 66 sources, 34 Grade 12 localities).
+  - `pnpm lint`: 0 errors, 0 warnings.
+  - `pnpm typecheck`: 0 errors.
+  - `pnpm exec vitest run`: 116 test files, 1253 unit tests passed (0 failures).
+- Open issues / held items: None.
+- Next allowed Phase: Phase 6 — Detail Page (`/dia-diem/[slug]`).
+
+
 
 
 

@@ -12,13 +12,28 @@ type Props = {
   onExplore(): void;
   onJourney(): void;
   peopleActive?: boolean;
+  placesActive?: boolean;
   peopleHref?: string;
+  placesHref?: string;
   peopleLinkRef?: RefObject<HTMLAnchorElement | null>;
   onPeople?(): void;
+  onPlaces?(): void;
 };
 
-export function HomeAtlasHeader({ journeyActive, journeyButtonRef, onExplore, onJourney, peopleActive = false, peopleHref = "/?noi-dung=nhan-vat", peopleLinkRef, onPeople }: Props) {
+export function HomeAtlasHeader({
+  journeyActive,
+  journeyButtonRef,
+  onExplore,
+  onJourney,
+  peopleActive = false,
+  placesActive = false,
+  placesHref = "/?noi-dung=dia-danh",
+  peopleLinkRef,
+  onPeople,
+  onPlaces,
+}: Props) {
   const secondary = useRef<HTMLDetailsElement>(null);
+  const localityActive = peopleActive || placesActive;
   useEffect(() => {
     const dismiss = (event: PointerEvent) => {
       if (secondary.current && event.target instanceof Node && !secondary.current.contains(event.target)) secondary.current.open = false;
@@ -31,15 +46,21 @@ export function HomeAtlasHeader({ journeyActive, journeyButtonRef, onExplore, on
     <header className="home-atlas-header" data-testid="home-atlas-header">
       <Link href="/" className="home-atlas-brand">Lịch sử Việt Nam</Link>
       <nav className="home-atlas-modes" aria-label="Cách khám phá">
-        <button type="button" aria-pressed={!peopleActive && !journeyActive} onClick={onExplore}>Khám phá</button>
-        <button type="button" ref={journeyButtonRef} aria-pressed={!peopleActive && journeyActive} onClick={onJourney}>Hành trình</button>
-        <a ref={peopleLinkRef} href={peopleHref} aria-expanded={peopleActive} aria-controls={peopleActive ? "local-heroes-panel" : undefined} className="home-atlas-people-entry" onClick={(event) => {
-          if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || !onPeople) return;
-          event.preventDefault(); onPeople();
-        }}>Nhân vật theo địa phương</a>
+        <button type="button" aria-pressed={!localityActive && !journeyActive} onClick={onExplore}>Khám phá</button>
+        <button type="button" ref={journeyButtonRef} aria-pressed={!localityActive && journeyActive} onClick={onJourney}>Hành trình</button>
+        <a ref={peopleLinkRef} href={placesHref} aria-expanded={localityActive} aria-controls={placesActive ? "locality-panel" : peopleActive ? "local-heroes-panel" : undefined} className="home-atlas-people-entry" onClick={(event) => {
+          if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+          if (onPlaces) {
+            event.preventDefault();
+            onPlaces();
+          } else if (onPeople) {
+            event.preventDefault();
+            onPeople();
+          }
+        }}>Theo địa phương</a>
         <noscript>
           <span className="home-atlas-modes-noscript">
-            <Link href="/?kham-pha=1" className={!journeyActive ? "is-active" : ""}>Khám phá</Link>
+            <Link href="/?kham-pha=1" className={!journeyActive && !localityActive ? "is-active" : ""}>Khám phá</Link>
             <Link href={`/?hanh-trinh=${DEFAULT_JOURNEY_ID}&moc=sai-gon-1911`} className={journeyActive ? "is-active" : ""}>Hành trình</Link>
           </span>
         </noscript>

@@ -10,9 +10,18 @@ import { MapTimeControls } from "@/components/explorer/MapTimeControls";
 import { JourneyPanel } from "@/components/explorer/JourneyPanel";
 import { JourneyChooser } from "@/components/explorer/JourneyChooser";
 import { LocalHeroesPanel } from "@/components/explorer/LocalHeroesPanel";
+import { HeritagePanel } from "@/components/heritage/HeritagePanel";
+import { HeritageSiteCard } from "@/components/heritage/HeritageSiteCard";
+import { LocalityTabs } from "@/components/heritage/LocalityTabs";
 import { buildLocalHeroHomeHref, parseLocalHeroState, type LocalHeroUrlState } from "@/lib/local-heroes/state";
 import { useLocalHeroPage } from "@/lib/local-heroes/use-local-hero-page";
-import type { LocalHeroFilters, LocalHeroLoadState } from "@/lib/local-heroes/types";
+import { useHeritageCatalog } from "@/hooks/useHeritageCatalog";
+import { heritageMarkerEvents } from "@/lib/heritage/markers";
+import { localityFallbackView } from "@/lib/heritage/locality-views";
+import { fitClusterView } from "@/lib/explorer/cluster-expansion";
+import { vietnamOverviewView } from "@/lib/explorer/cinematic/camera";
+import type { LocalHeroFilters, LocalHeroLoadState, LocalityCode } from "@/lib/local-heroes/types";
+import type { HeritageLoadState } from "@/lib/heritage/types";
 import { HomeAtlasHeader } from "@/components/layout/HomeAtlasHeader";
 import { filterExplorerEvents } from "@/lib/explorer/filters";
 import { normalizeYearRange } from "@/lib/explorer/timeline-years";
@@ -38,22 +47,33 @@ export type HistoryExplorerProps = {
   dataError?: string | null;
   initialPeople?: LocalHeroUrlState;
   initialPeopleLoad?: LocalHeroLoadState;
+  initialPlacesLoad?: HeritageLoadState;
 };
 
 const explorerReducer = (runtime: ExplorerRuntime, action: ExplorerAction) => reduceExplorerRuntime(runtime, action);
 
-export function HistoryExplorer({ events, limits, initialState, dataError = null, initialPeople, initialPeopleLoad = { status: "idle" } }: HistoryExplorerProps) {
+export function HistoryExplorer({
+  events,
+  limits,
+  initialState,
+  dataError = null,
+  initialPeople,
+  initialPeopleLoad = { status: "idle" },
+  initialPlacesLoad = { status: "idle" },
+}: HistoryExplorerProps) {
   const [runtime, dispatch] = useReducer(explorerReducer,
     initialState ?? { from: 1911, to: 1941, selectedEvent: null, view: null }, (state) => createExplorerRuntime(state, JOURNEY_REGISTRY, initialPeople));
   const { state, playing, cameraRequest, settledArrival, restoreRequest, focusRequest, readerActive, hidden, reducedMotion: playbackReducedMotion, departing } = runtime;
   const reducedMotion = usePrefersReducedMotion();
   const peopleActive = runtime.people.discovery.mode === "people";
+  const placesActive = runtime.people.discovery.mode === "places";
+  const localityActive = peopleActive || placesActive;
   const peopleMap = runtime.people.suspended?.state ?? state;
   const journey = state.journey ? getJourneyById(state.journey.id) : undefined;
   const stop = state.journey ? getJourneyStop(state.journey.id, state.journey.stop) ?? null : null;
-  const journeyPathRequest = useMemo(() => !peopleActive && !departing && journey && stop
+  const journeyPathRequest = useMemo(() => !localityActive && !departing && journey && stop
     ? { journey, journeyId: journey.id, stopId: stop.id, nonce: runtime.requestNonce } : null,
-  [peopleActive, departing, journey, stop, runtime.requestNonce]);
+  [localityActive, departing, journey, stop, runtime.requestNonce]);
   const [mapReady, setMapReady] = useState(false);
   const [journeyAnchor, setJourneyAnchor] = useState<JourneyPopupAnchor | null>(null);
   const focusReader = useRef(false);
@@ -64,6 +84,102 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
   const historyIntent = useRef<"push" | "replace" | "restore">("replace");
   const peopleTrigger = useRef<HTMLElement | null>(null);
   const peopleLink = useRef<HTMLAnchorElement>(null);
+
+  // Heritage Places Catalog
+  const heritageCatalog = useHeritageCatalog(placesActive, initialPlacesLoad);
+  const catalogData = heritageCatalog.load.status === "ready" ? heritageCatalog.load.data : null;
+  const allHeritageSites = useMemo(() => catalogData?.items ?? [], [catalogData]);
+  const localityCode = runtime.people.discovery.filters.localityCode;
+  const selectedPlaceSlug = runtime.people.discovery.place;
+
+  const visibleHeritageSites = useMemo(() => {
+    if (!localityCode) return allHeritageSites;
+    return allHeritageSites.filter((site) => site.locality.code === localityCode);
+  }, [allHeritageSites, localityCode]);
+
+  const selectedHeritageSite = useMemo(() => {
+    if (!selectedPlaceSlug) return null;
+    return allHeritageSites.find((site) => site.slug === selectedPlaceSlug) ?? null;
+  }, [allHeritageSites, selectedPlaceSlug]);
+
+  const [placesCameraNonce, setPlacesCameraNonce] = useState(0);
+  const placesCameraView = useMemo(() => {
+    if (!placesActive) return null;
+    if (selectedHeritageSite) {
+      return {
+        lat: selectedHeritageSite.latitude,
+        lng: selectedHeritageSite.longitude,
+        zoom: 9,
+      };
+    }
+    if (localityCode) {
+      const sites = visibleHeritageSites;
+      if (sites.length >= 2) {
+        const stage = {
+          width: typeof window !== "undefined" ? window.innerWidth : 1280,
+          height: typeof window !== "undefined" ? window.innerHeight : 720,
+        };
+        const safeArea = {
+          left: 32,
+          right: Math.max(32, stage.width - 560 - 32),
+          top: 80,
+          bottom: stage.height - 32,
+        };
+        const fit = fitClusterView(stage, {
+          locations: sites.map((s) => ({ lat: s.latitude, lng: s.longitude })),
+          safeArea,
+        });
+        if (fit) {
+          return {
+            ...fit.view,
+            zoom: Math.min(9, Math.max(6.2, fit.view.zoom)),
+          };
+        }
+      }
+      if (sites.length === 1) {
+        return {
+          lat: sites[0].latitude,
+          lng: sites[0].longitude,
+          zoom: 8.5,
+        };
+      }
+      return localityFallbackView(localityCode);
+    }
+    const stage = {
+      width: typeof window !== "undefined" ? window.innerWidth : 1280,
+      height: typeof window !== "undefined" ? window.innerHeight : 720,
+    };
+    return vietnamOverviewView(stage);
+  }, [placesActive, selectedHeritageSite, localityCode, visibleHeritageSites]);
+
+  const lastPlacesIntent = useRef<{ mode: string; locality: string | null; place: string | null }>({
+    mode: runtime.people.discovery.mode,
+    locality: localityCode,
+    place: selectedPlaceSlug ?? null,
+  });
+
+  useEffect(() => {
+    if (!placesActive) return;
+    const currentIntent = {
+      mode: runtime.people.discovery.mode,
+      locality: localityCode,
+      place: selectedPlaceSlug ?? null,
+    };
+    const changed =
+      lastPlacesIntent.current.mode !== currentIntent.mode ||
+      lastPlacesIntent.current.locality !== currentIntent.locality ||
+      lastPlacesIntent.current.place !== currentIntent.place;
+    if (changed) {
+      lastPlacesIntent.current = currentIntent;
+      setPlacesCameraNonce((n) => n + 1);
+    }
+  }, [placesActive, localityCode, selectedPlaceSlug, runtime.people.discovery.mode]);
+
+  const placesCamera = useMemo(() => {
+    if (!placesActive || !placesCameraView || placesCameraNonce === 0) return null;
+    return { view: placesCameraView, nonce: placesCameraNonce };
+  }, [placesActive, placesCameraView, placesCameraNonce]);
+
   const changePeople = useCallback((filters: LocalHeroFilters) => {
     historyIntent.current = "push"; dispatch({ type: "people-change", filters });
   }, []);
@@ -73,7 +189,34 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
   const peoplePage = useLocalHeroPage(runtime.people.discovery, initialPeopleLoad, clampPeople);
   const enterPeople = useCallback(() => {
     peopleTrigger.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    historyIntent.current = "push"; dispatch({ type: "people-enter" });
+    historyIntent.current = "push"; dispatch({ type: "people-enter", mode: "people" });
+  }, []);
+  const enterPlaces = useCallback(() => {
+    peopleTrigger.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    historyIntent.current = "push";
+    dispatch({ type: "people-enter", mode: "places" });
+    setPlacesCameraNonce((n) => n + 1);
+  }, []);
+  const changeLocality = useCallback((code: LocalityCode | null) => {
+    historyIntent.current = "push";
+    const belongs = code ? allHeritageSites.some((s) => s.locality.code === code && s.slug === runtime.people.discovery.place) : true;
+    dispatch({
+      type: "people-change",
+      filters: { localityCode: code, query: "", page: 1 },
+      keepPlace: belongs,
+    });
+  }, [allHeritageSites, runtime.people.discovery.place]);
+  const selectPlace = useCallback((slug: string) => {
+    historyIntent.current = "push";
+    dispatch({ type: "place-select", slug });
+  }, []);
+  const closePlace = useCallback(() => {
+    historyIntent.current = "push";
+    dispatch({ type: "place-select", slug: null });
+  }, []);
+  const switchLocalityMode = useCallback((mode: "places" | "people") => {
+    historyIntent.current = "push";
+    dispatch({ type: "people-enter", mode });
   }, []);
   const closePeople = useCallback(() => {
     historyIntent.current = "push"; dispatch({ type: "people-exit" });
@@ -88,6 +231,24 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
     window.addEventListener("keydown", escape);
     return () => window.removeEventListener("keydown", escape);
   }, [peopleActive, closePeople]);
+
+  useEffect(() => {
+    if (!placesActive) return;
+    const escape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && !event.defaultPrevented) {
+        if (document.querySelector("dialog[open]")) return;
+        if (runtime.people.discovery.place) {
+          event.preventDefault();
+          closePlace();
+        } else {
+          event.preventDefault();
+          closePeople();
+        }
+      }
+    };
+    window.addEventListener("keydown", escape);
+    return () => window.removeEventListener("keydown", escape);
+  }, [placesActive, runtime.people.discovery.place, closePlace, closePeople]);
   const visibleEvents = useMemo(() => state ? filterExplorerEvents(events, state.from, state.to) : events, [events, state]);
   const selectedEvent = visibleEvents.find((event) => event.slug === state?.selectedEvent) ?? null;
 
@@ -240,22 +401,41 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
   }
 
   return (
-    <section className={`home-history-map${stop ? " is-journey" : ""}${peopleActive ? " is-people" : ""}`} data-testid="history-explorer" aria-label="Khám phá lịch sử trên địa cầu">
+    <section className={`home-history-map${stop ? " is-journey" : ""}${peopleActive ? " is-people" : ""}${placesActive ? " is-places" : ""}`}
+      data-testid="history-explorer"
+      data-places-camera-nonce={placesCameraNonce}
+      aria-label="Khám phá lịch sử trên địa cầu">
       <HomeAtlasHeader journeyActive={Boolean(stop)} journeyButtonRef={journeyButton}
-        peopleActive={peopleActive} peopleLinkRef={peopleLink} peopleHref={buildLocalHeroHomeHref(peopleMap, { ...runtime.people.discovery, mode: "people" })} onPeople={enterPeople}
-        onExplore={() => { if (peopleActive) closePeople(); if (stop) exitJourney(); }} onJourney={() => { if (peopleActive) closePeople(); enterJourney(); }} />
+        peopleActive={peopleActive} placesActive={placesActive} peopleLinkRef={peopleLink}
+        peopleHref={buildLocalHeroHomeHref(peopleMap, { ...runtime.people.discovery, mode: "people" })}
+        placesHref={buildLocalHeroHomeHref(peopleMap, { ...runtime.people.discovery, mode: "places" })}
+        onPeople={enterPeople} onPlaces={enterPlaces}
+        onExplore={() => { if (localityActive) closePeople(); if (stop) exitJourney(); }} onJourney={() => { if (localityActive) closePeople(); enterJourney(); }} />
       <div className="absolute inset-0 z-0" data-testid="home-event-map">
-        <EventMap events={peopleActive ? [] : visibleEvents} allEvents={events} view={state?.view ?? null} selectedEvent={peopleActive ? null : selectedEvent?.slug ?? null}
-          readingMode={peopleActive ? "people" : "events"}
-          focusRequest={peopleActive || stop ? null : focusRequest} onSelect={selectEvent} onViewChange={updateView}
-          journeyStop={peopleActive ? null : stop} cameraRequest={peopleActive ? null : cameraRequest}
+        <EventMap
+          events={placesActive ? heritageMarkerEvents(visibleHeritageSites) : peopleActive ? [] : visibleEvents}
+          allEvents={events}
+          view={state?.view ?? null}
+          selectedEvent={placesActive ? (selectedPlaceSlug ? `place:${selectedPlaceSlug}` : null) : peopleActive ? null : selectedEvent?.slug ?? null}
+          readingMode={placesActive ? "places" : peopleActive ? "people" : "events"}
+          placesCamera={placesCamera}
+          focusRequest={localityActive || stop ? null : focusRequest}
+          onSelect={(slug) => {
+            if (placesActive) {
+              selectPlace(slug.startsWith("place:") ? slug.slice(6) : slug);
+            } else {
+              selectEvent(slug);
+            }
+          }}
+          onViewChange={updateView}
+          journeyStop={localityActive ? null : stop} cameraRequest={localityActive ? null : cameraRequest}
           journeyPathRequest={journeyPathRequest}
           restoreRequest={restoreRequest} onManualInput={pauseJourney} onArrive={arrive} onReadyChange={onReadyChange}
           onJourneyAnchor={setJourneyAnchor} onReadStop={openReader} />
       </div>
       <div className="home-map-intro">
-        <h1>{journey && stop ? "Khám phá hành trình" : "Lịch sử qua những địa danh"}</h1>
-        {peopleActive ? <p className="globe-hint">Chọn địa phương để đọc những hồ sơ có nguồn dẫn.</p> : journey && stop ? (
+        <h1>{journey && stop ? "Khám phá hành trình" : placesActive ? "Địa danh theo địa phương" : "Lịch sử qua những địa danh"}</h1>
+        {placesActive ? <p className="globe-hint">Chọn địa phương để xem các địa danh đã được thẩm định.</p> : peopleActive ? <p className="globe-hint">Chọn địa phương để đọc những hồ sơ có nguồn dẫn.</p> : journey && stop ? (
           <JourneyChooser
             journeys={JOURNEY_REGISTRY.journeys}
             selectedJourney={journey}
@@ -273,25 +453,64 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
       </div>
       {dataError && <p role="status" className="home-map-notice" data-testid="explorer-data-error">{dataError}</p>}
       {state.journeyNotice && <p role="status" className="home-map-notice" data-testid="journey-notice">{state.journeyNotice}</p>}
-      {!peopleActive && !stop && !dataError && visibleEvents.length === 0 && <p role="status" className="home-map-notice">Không có sự kiện trong khoảng năm này. Hãy chọn khoảng khác hoặc “Toàn bộ”.</p>}
+      {!localityActive && !stop && !dataError && visibleEvents.length === 0 && <p role="status" className="home-map-notice">Không có sự kiện trong khoảng năm này. Hãy chọn khoảng khác hoặc “Toàn bộ”.</p>}
       <p className="sr-only" role="status" aria-live="polite">{visibleEvents.length} sự kiện trong khoảng thời gian đang chọn.</p>
-      {!peopleActive && !stop && !selectedEvent && <aside className="home-map-guidance" aria-labelledby="home-map-guidance-heading" data-testid="home-map-guidance">
+      {!localityActive && !stop && !selectedEvent && <aside className="home-map-guidance" aria-labelledby="home-map-guidance-heading" data-testid="home-map-guidance">
         <h2 id="home-map-guidance-heading">Khám phá một sự kiện</h2>
         <p>Chọn một điểm trên bản đồ để xem thời gian, địa điểm và câu chuyện lịch sử.</p>
         <button type="button" onClick={enterJourney}>Xem hành trình <ArrowRight size={16} aria-hidden="true" /></button>
       </aside>}
-      {!peopleActive && !stop && selectedEvent && <MapEventCard key={selectedEvent.slug} event={selectedEvent} state={state} onClose={closeEvent} />}
-      {peopleActive ? <LocalHeroesPanel map={peopleMap} discovery={runtime.people.discovery} load={peoplePage.load} onChange={changePeople} onClose={closePeople} onRetry={peoplePage.retry} /> : journey && stop ? <JourneyPanel key={journey.id} journey={journey} stop={stop} state={state} playing={playing} settled={sameJourneyArrival(settledArrival, cameraRequest)} travelling={Boolean(cameraRequest && !sameJourneyArrival(settledArrival, cameraRequest))} reducedMotion={reducedMotion} mapAvailable={mapReady}
-        popupOpen={runtime.popupOpen} readerDismissed={runtime.readerDismissed} anchor={sameJourneyArrival(journeyAnchor, journeyPathRequest) ? journeyAnchor : null}
-        onOpenReader={openReader} onCloseReader={closeReader}
-        readerActive={readerActive} eventAvailable={events.some((event) => event.slug === stop.eventSlug)} onSeek={seek} onPlay={togglePlayback} onExit={exitJourney} onReadingChange={onReadingChange} />
-        : <MapTimeControls events={events} limits={limits} state={state} onChange={changePeriod} onOpenEvents={() => {
+      {!localityActive && !stop && selectedEvent && <MapEventCard key={selectedEvent.slug} event={selectedEvent} state={state} onClose={closeEvent} />}
+      {placesActive && selectedHeritageSite && (
+        <HeritageSiteCard
+          key={selectedHeritageSite.slug}
+          site={selectedHeritageSite}
+          homeHref={buildLocalHeroHomeHref(peopleMap, runtime.people.discovery)}
+          onClose={closePlace}
+        />
+      )}
+      {placesActive ? (
+        <HeritagePanel
+          map={peopleMap}
+          discovery={runtime.people.discovery}
+          load={heritageCatalog.load}
+          onLocalityChange={changeLocality}
+          onSelectPlace={selectPlace}
+          onSwitchMode={switchLocalityMode}
+          onClose={closePeople}
+          onRetry={heritageCatalog.retry}
+        />
+      ) : peopleActive ? (
+        <LocalHeroesPanel
+          map={peopleMap}
+          discovery={runtime.people.discovery}
+          load={peoplePage.load}
+          tabs={
+            <LocalityTabs
+              active="people"
+              placesHref={buildLocalHeroHomeHref(peopleMap, { ...runtime.people.discovery, mode: "places" })}
+              peopleHref={buildLocalHeroHomeHref(peopleMap, { ...runtime.people.discovery, mode: "people" })}
+              onSwitch={switchLocalityMode}
+            />
+          }
+          onChange={changePeople}
+          onClose={closePeople}
+          onRetry={peoplePage.retry}
+        />
+      ) : journey && stop ? (
+        <JourneyPanel key={journey.id} journey={journey} stop={stop} state={state} playing={playing} settled={sameJourneyArrival(settledArrival, cameraRequest)} travelling={Boolean(cameraRequest && !sameJourneyArrival(settledArrival, cameraRequest))} reducedMotion={reducedMotion} mapAvailable={mapReady}
+          popupOpen={runtime.popupOpen} readerDismissed={runtime.readerDismissed} anchor={sameJourneyArrival(journeyAnchor, journeyPathRequest) ? journeyAnchor : null}
+          onOpenReader={openReader} onCloseReader={closeReader}
+          readerActive={readerActive} eventAvailable={events.some((event) => event.slug === stop.eventSlug)} onSeek={seek} onPlay={togglePlayback} onExit={exitJourney} onReadingChange={onReadingChange} />
+      ) : (
+        <MapTimeControls events={events} limits={limits} state={state} onChange={changePeriod} onOpenEvents={() => {
           if (listRef.current) { listRef.current.open = true; listRef.current.querySelector("summary")?.focus(); }
-        }} />}
+        }} />
+      )}
       <noscript>
         <div className="home-map-notice">
           <p>
-            {peopleActive ? "JavaScript đang tắt. Bạn vẫn có thể chọn địa phương, tìm kiếm và chuyển trang bằng biểu mẫu. Hoặc chọn đọc các hành trình:" : "JavaScript đang tắt. Mở “Danh sách sự kiện” để đọc, hoặc chọn đọc các hành trình:"}
+            {placesActive ? "JavaScript đang tắt. Bạn vẫn có thể chọn địa phương bằng biểu mẫu. Hoặc chọn đọc các hành trình:" : peopleActive ? "JavaScript đang tắt. Bạn vẫn có thể chọn địa phương, tìm kiếm và chuyển trang bằng biểu mẫu. Hoặc chọn đọc các hành trình:" : "JavaScript đang tắt. Mở “Danh sách sự kiện” để đọc, hoặc chọn đọc các hành trình:"}
           </p>
           <ul className="mt-1 flex flex-wrap gap-2 text-xs">
             {JOURNEY_REGISTRY.journeys.map((j) => (

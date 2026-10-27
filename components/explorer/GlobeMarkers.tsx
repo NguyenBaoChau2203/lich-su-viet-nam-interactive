@@ -9,10 +9,25 @@ import type { GlobePlaceLabel, GlobeViewport } from "@/lib/explorer/globe-contra
 import type { ExplorerEvent } from "@/lib/explorer/types";
 import type { JourneyStop } from "@/lib/explorer/journey";
 
+export type EntityLabel = {
+  one: string;
+  many: string;
+  regionLabel: string;
+  closeLabel?: string;
+};
+
+const DEFAULT_ENTITY_LABEL: EntityLabel = {
+  one: "sự kiện",
+  many: "sự kiện",
+  regionLabel: "Các sự kiện tại khu vực",
+  closeLabel: "Đóng nhóm sự kiện",
+};
+
 type Props = {
   viewport: GlobeViewport; stageRef: RefObject<HTMLDivElement | null>;
   events: readonly ExplorerEvent[]; selectedEvent: string | null;
   labels: readonly GlobePlaceLabel[]; stop: JourneyStop | null;
+  entityLabel?: EntityLabel;
   onSelect(slug: string): void; onFocusCluster(request: ClusterFocusRequest): Promise<"arrived" | "cancelled">;
   onReadStop?(): void;
 };
@@ -24,7 +39,8 @@ type MarkerLayout = OverlayLayout & {
 };
 
 /** Semantic HTML overlays consume only CSS-pixel projection and geographic camera commands. */
-export function GlobeMarkers({ viewport, stageRef, events, selectedEvent, labels, stop, onSelect, onFocusCluster, onReadStop }: Props) {
+export function GlobeMarkers({ viewport, stageRef, events, selectedEvent, labels, stop, entityLabel = DEFAULT_ENTITY_LABEL, onSelect, onFocusCluster, onReadStop }: Props) {
+  const entity = entityLabel;
   const anchors = useMemo(() => getEventMapAnchors(events), [events]);
   const measureRef = useRef<HTMLSpanElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -146,7 +162,7 @@ export function GlobeMarkers({ viewport, stageRef, events, selectedEvent, labels
       const entries = [...new Map(group.anchors.map((anchor) => [anchor.event.slug, anchor.event])).values()];
       const single = group.anchors.length === 1; const selected = entries.some((event) => event.slug === selectedEvent);
       const approximate = group.anchors.some((anchor) => anchor.location.accuracyLevel !== "exact");
-      const description = entries.length === 1 ? `${entries[0].title}${single ? "" : ` · ${group.anchors.length} địa điểm`}` : `${entries.length} sự kiện tại khu vực này`;
+      const description = entries.length === 1 ? `${entries[0].title}${single ? "" : ` · ${group.anchors.length} địa điểm`}` : `${entries.length} ${entity.many} tại khu vực này`;
       const popupHeight = Math.min(260, viewport.height - 160);
       return <div key={group.key}>
         {group.labelBox && text(group.label, group.labelBox)}
@@ -164,8 +180,8 @@ export function GlobeMarkers({ viewport, stageRef, events, selectedEvent, labels
               focusExpanded.current = viewport.zoom >= MAX_INTERACTIVE_ZOOM || coincident;
             }}><span>{single ? "" : entries.length === 1 ? group.anchors.length : entries.length}</span></button>
           {!single && open === group.key && layout.openKey === open && layout.panel && <div className="globe-cluster" style={{ bottom: "auto", top: layout.panel.top - group.y,
-            maxHeight: Math.min(popupHeight, layout.panel.bottom - layout.panel.top), width: layout.panel.right - layout.panel.left, left: layout.panel.left - group.x }} role="region" aria-label="Các sự kiện tại khu vực">
-            <button type="button" className="globe-cluster-close" onClick={() => closeCluster()} aria-label="Đóng nhóm sự kiện">×</button>
+            maxHeight: Math.min(popupHeight, layout.panel.bottom - layout.panel.top), width: layout.panel.right - layout.panel.left, left: layout.panel.left - group.x }} role="region" aria-label={entity.regionLabel}>
+            <button type="button" className="globe-cluster-close" onClick={() => closeCluster()} aria-label={entity.closeLabel ?? `Đóng nhóm ${entity.many}`}>×</button>
             {expanded && <p className="globe-cluster-note" id={explanationId}>Các mốc gần nhau được tách để chọn; đường nối chỉ về vị trí gốc. Danh sách bên dưới giữ đủ sự kiện.</p>}
             <ul>{entries.map((event) => <li key={event.slug}><button type="button" onClick={() => { if (!expanded) closeCluster(); onSelect(event.slug); }}>
               {expanded && <span className="globe-cluster-entry-index" aria-hidden="true">{layout.expanded.flatMap((marker, index) => marker.event.slug === event.slug ? [index + 1] : []).join(", ")}</span>}

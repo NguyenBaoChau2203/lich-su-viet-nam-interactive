@@ -1,7 +1,8 @@
 import http from "node:http";
 import { spawn } from "node:child_process";
-import { appendFileSync, mkdirSync, writeFileSync } from "node:fs";
+import { appendFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { events, people, localities, pageResult, profileResult } from "./fixtures/local-heroes/catalog.mjs";
+import { syntheticHeritageSites } from "./fixtures/heritage-sites/catalog.mjs";
 import { localHeroesEnvironment } from "../../scripts/agent/local-heroes-e2e.mjs";
 if (process.env.LOCAL_HEROES_E2E !== "1" || process.env.E2E_BASE_URL) throw new Error("Explicit isolated fixture only.");
 mkdirSync("output/playwright/local-heroes", { recursive: true });
@@ -39,6 +40,19 @@ const server = http.createServer((req, res) => {
     const data = p ? { id: p.id, slug: p.slug, name: p.name, birth_year: null, death_year: null, biography: null, other_names: null, portrait_url: null, is_local_hero: true, workflow_status: "published", media_assets: [], event_figures: [], contribution_summary: p.contributionSummary, catalog_aliases: p.aliases }
       : slug === "synthetic-legacy" ? { id: "legacy", slug, name: "Synthetic legacy person", workflow_status: "published", is_local_hero: false, biography: "Synthetic legacy biography", birth_year: null, death_year: null, other_names: null, portrait_url: null, media_assets: [], event_figures: [] } : null;
     return finish(200, data);
+  }
+  if (u.pathname === "/rest/v1/historical_locations") {
+    if (u.searchParams.get("workflow_status") !== "eq.published") return finish(403, { message: "Explicit public filter required" });
+    const select = u.searchParams.get("select") || "";
+    if (select.includes("heritage_tier")) {
+      if (existsSync("output/playwright/local-heroes/heritage-outage.flag") || u.searchParams.has("fixture-error")) {
+        return finish(503, { message: "Synthetic heritage outage" });
+      }
+      const slug = u.searchParams.get("slug")?.replace(/^eq\./u, "");
+      const rows = syntheticHeritageSites.filter((s) => !slug || s.slug === slug);
+      res.setHeader("Content-Range", `0-${Math.max(0, rows.length - 1)}/${rows.length}`);
+      return finish(200, String(req.headers.accept).includes("vnd.pgrst.object") ? rows[0] ?? null : rows);
+    }
   }
   return finish(404, { message: "Unsupported fixture route" });
 });

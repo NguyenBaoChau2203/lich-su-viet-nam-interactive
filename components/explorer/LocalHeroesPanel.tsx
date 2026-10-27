@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, type MouseEvent } from "react";
+import { useEffect, useState, type MouseEvent, type ReactNode } from "react";
 import { LocalitySelect } from "@/components/local-heroes/LocalitySelect";
 import { LocalHeroList } from "@/components/local-heroes/LocalHeroList";
 import { LOCALITIES } from "@/lib/local-heroes/localities";
@@ -7,9 +7,9 @@ import { normalizeLocalHeroQuery } from "@/lib/local-heroes/normalize";
 import { buildLocalHeroHomeHref, type LocalHeroUrlState } from "@/lib/local-heroes/state";
 import { buildMapExplorerUrl, type MapExplorerState } from "@/lib/explorer/map-state";
 import type { LocalHeroFilters, LocalHeroLoadState } from "@/lib/local-heroes/types";
-type Props = { map: MapExplorerState; discovery: LocalHeroUrlState; load: LocalHeroLoadState; onChange(filters: LocalHeroFilters): void; onClose(): void; onRetry(): void };
+type Props = { map: MapExplorerState; discovery: LocalHeroUrlState; load: LocalHeroLoadState; tabs?: ReactNode; onChange(filters: LocalHeroFilters): void; onClose(): void; onRetry(): void };
 const modified = (event: MouseEvent) => event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey;
-export function LocalHeroesPanel({ map, discovery, load, onChange, onClose, onRetry }: Props) {
+export function LocalHeroesPanel({ map, discovery, load, tabs, onChange, onClose, onRetry }: Props) {
   const filters = discovery.filters;
   const [search, setSearch] = useState({ committed: filters.query, draft: filters.query });
   if (search.committed !== filters.query) setSearch({ committed: filters.query, draft: filters.query });
@@ -27,6 +27,7 @@ export function LocalHeroesPanel({ map, discovery, load, onChange, onClose, onRe
   return <aside id="local-heroes-panel" className="local-heroes-panel" aria-labelledby="local-heroes-heading" data-testid="local-heroes-panel">
     <div className="local-heroes-top"><div><p className="local-heroes-eyebrow">Con người &amp; địa phương</p><h2 id="local-heroes-heading" tabIndex={-1}>Nhân vật cách mạng theo địa phương</h2></div>
       <a className="local-heroes-close" href={exitHref} aria-label="Đóng danh sách nhân vật" onClick={(event) => { if (!modified(event)) { event.preventDefault(); onClose(); } }}>Đóng <span aria-hidden="true">×</span></a></div>
+    {tabs}
     <form method="get" action="/" className="local-heroes-filters" onSubmit={(event) => { event.preventDefault(); onChange({ ...filters, query: normalizeLocalHeroQuery(search.draft), page: 1 }); }}>
       <input type="hidden" name="noi-dung" value="nhan-vat" />
       {Array.from(mapParams).map(([key, value]) => <input key={key} type="hidden" name={key} value={value} />)}

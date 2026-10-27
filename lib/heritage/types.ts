@@ -70,13 +70,24 @@ export type HeritageCatalog = {
   };
 };
 
+export const HERITAGE_CATALOG_FAILURE = {
+  code: "DATA_UNAVAILABLE",
+  message: "Chưa tải được danh sách địa danh. Vui lòng thử lại.",
+  retryable: true,
+} as const;
+
 export type HeritageCatalogResponse =
   | { ok: true; data: HeritageCatalog }
   | {
       ok: false;
-      error: {
-        code: "DATA_UNAVAILABLE";
-        message: "Chưa tải được danh sách địa danh. Vui lòng thử lại.";
-        retryable: true;
-      };
+      error: typeof HERITAGE_CATALOG_FAILURE;
+    };
+
+export type HeritageLoadState =
+  | { status: "idle" }
+  | { status: "loading" }
+  | { status: "ready"; data: HeritageCatalog }
+  | {
+      status: "error";
+      error: typeof HERITAGE_CATALOG_FAILURE;
     };

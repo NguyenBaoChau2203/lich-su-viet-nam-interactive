@@ -6,7 +6,9 @@ import { parseMapExplorerState } from "@/lib/explorer/map-state";
 import { getExplorerEvents } from "@/lib/queries/explorer";
 import { parseLocalHeroState } from "@/lib/local-heroes/state";
 import { loadLocalHeroPage } from "@/lib/local-heroes/load";
+import { loadHeritageCatalog } from "@/lib/heritage/load";
 import type { LocalHeroLoadState } from "@/lib/local-heroes/types";
+import type { HeritageLoadState } from "@/lib/heritage/types";
 
 type SearchParamsRecord = Record<string, string | string[] | undefined>;
 
@@ -30,8 +32,9 @@ export default async function HomePage({
   const resolvedParams = searchParams ? await searchParams : {};
   const urlSearchParams = toUrlSearchParams(resolvedParams);
   const initialPeople = parseLocalHeroState(urlSearchParams);
-  // Start only the requested bounded page. Default event mode makes no people query.
+  // Start only the requested bounded page. Default event mode makes no people or places query.
   const peopleRequest = initialPeople.mode === "people" ? loadLocalHeroPage(initialPeople.filters) : null;
+  const placesRequest = initialPeople.mode === "places" ? loadHeritageCatalog() : null;
 
   // Explicit test-only error simulation when ?__test_db_error=1 is passed in local/E2E tests
   const simulateDbError =
@@ -57,10 +60,16 @@ export default async function HomePage({
 
   const limits = getExplorerLimits(events);
   const initialState = parseMapExplorerState(urlSearchParams, limits ?? { minYear: 1911, maxYear: 1941, eventSlugs: [] });
-  const peopleResponse = await peopleRequest;
+  const [peopleResponse, placesResponse] = await Promise.all([peopleRequest, placesRequest]);
   const initialPeopleLoad: LocalHeroLoadState = peopleResponse ? peopleResponse.ok ? { status: "ready", data: peopleResponse.data }
     : { status: "error", filters: initialPeople.filters, error: peopleResponse.error } : { status: "idle" };
   if (peopleResponse?.ok) initialPeople.filters = peopleResponse.data.filters;
+
+  const initialPlacesLoad: HeritageLoadState = placesResponse
+    ? placesResponse.ok
+      ? { status: "ready", data: placesResponse.data }
+      : { status: "error", error: placesResponse.error }
+    : { status: "idle" };
 
   return (
     <HistoryExplorer
@@ -70,6 +79,7 @@ export default async function HomePage({
       dataError={dataError}
       initialPeople={initialPeople}
       initialPeopleLoad={initialPeopleLoad}
+      initialPlacesLoad={initialPlacesLoad}
     />
   );
 }

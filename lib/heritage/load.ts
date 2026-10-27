@@ -1,13 +1,9 @@
 import "server-only";
 import { unstable_rethrow } from "next/navigation";
 import { getHeritageCatalog } from "@/lib/queries/heritage";
-import type { HeritageCatalogResponse } from "./types";
+import { HERITAGE_CATALOG_FAILURE, type HeritageCatalogResponse } from "./types";
 
-export const HERITAGE_CATALOG_FAILURE = {
-  code: "DATA_UNAVAILABLE",
-  message: "Chưa tải được danh sách địa danh. Vui lòng thử lại.",
-  retryable: true,
-} as const;
+export { HERITAGE_CATALOG_FAILURE };
 
 export async function loadHeritageCatalog(signal?: AbortSignal): Promise<HeritageCatalogResponse> {
   try {

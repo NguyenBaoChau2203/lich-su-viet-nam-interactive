@@ -44,11 +44,32 @@ function requestFor(state: MapExplorerState, nonce: number, registry: JourneyReg
 }
 
 export function createExplorerRuntime(state: MapExplorerState, registry: JourneyRegistry = JOURNEY_REGISTRY, discovery: LocalHeroUrlState = parseLocalHeroState(new URLSearchParams())): ExplorerRuntime {
-  const people: LocalHeroRuntimeState = { discovery: { mode: discovery.mode, filters: normalizeLocalHeroFilters(discovery.filters) }, suspended: discovery.mode === "people" ? { state: structuredClone(state), exploration: null } : null };
-  return { state, people, exploration: null, cameraRequest: discovery.mode === "people" ? null : requestFor(state, 0, registry, true),
-    settledArrival: null, requestNonce: 0, restoreRequest: 0,
-    focusRequest: discovery.mode !== "people" && !state.journey && state.selectedEvent && !state.view ? { slug: state.selectedEvent, nonce: 0 } : null,
-    popupOpen: false, readerDismissed: false, playing: false, readerActive: false, hidden: false, reducedMotion: false, departing: false };
+  const isSuspended = discovery.mode !== "events";
+  const people: LocalHeroRuntimeState = {
+    discovery: {
+      mode: discovery.mode,
+      filters: normalizeLocalHeroFilters(discovery.filters),
+      ...(discovery.mode === "places" ? { place: discovery.place ?? null } : {}),
+    },
+    suspended: isSuspended ? { state: structuredClone(state), exploration: null } : null,
+  };
+  return {
+    state,
+    people,
+    exploration: null,
+    cameraRequest: isSuspended ? null : requestFor(state, 0, registry, true),
+    settledArrival: null,
+    requestNonce: 0,
+    restoreRequest: 0,
+    focusRequest: !isSuspended && !state.journey && state.selectedEvent && !state.view ? { slug: state.selectedEvent, nonce: 0 } : null,
+    popupOpen: false,
+    readerDismissed: false,
+    playing: false,
+    readerActive: false,
+    hidden: false,
+    reducedMotion: false,
+    departing: false,
+  };
 }
 
 function currentArrival(runtime: ExplorerRuntime, arrival: JourneyArrival): boolean {
@@ -59,28 +80,95 @@ function currentArrival(runtime: ExplorerRuntime, arrival: JourneyArrival): bool
 /** Pure transitions only. HistoryExplorer remains the sole runtime and timer owner. */
 export function reduceExplorerRuntime(runtime: ExplorerRuntime, action: ExplorerAction, registry: JourneyRegistry = JOURNEY_REGISTRY): ExplorerRuntime {
   if (runtime.departing && action.type !== "restore") return runtime;
-  if (runtime.people.discovery.mode === "people" && ["choose-journey", "seek", "play", "arrive", "dwell", "reading", "open-reader", "select-event", "period", "close-event", "view", "exit"].includes(action.type)) return runtime;
+  if (runtime.people.discovery.mode !== "events" && ["choose-journey", "seek", "play", "arrive", "dwell", "reading", "open-reader", "select-event", "period", "close-event", "view", "exit"].includes(action.type)) return runtime;
   const nonce = runtime.requestNonce + 1;
   const journey = runtime.state.journey && registry.getJourneyById(runtime.state.journey.id);
   const requestStop = (state: MapExplorerState, playing = false): ExplorerRuntime => ({ ...runtime, state,
     cameraRequest: requestFor(state, nonce, registry), settledArrival: null, requestNonce: nonce, playing, popupOpen: false, readerDismissed: false, readerActive: false });
   switch (action.type) {
-    case "people-enter":
-      return runtime.people.discovery.mode === "people" ? runtime : { ...runtime,
-        state: structuredClone(runtime.state), exploration: structuredClone(runtime.exploration),
-        people: { discovery: { ...runtime.people.discovery, mode: "people" }, suspended: structuredClone({ state: runtime.state, exploration: runtime.exploration }) },
-        playing: false, readerActive: false, popupOpen: false, readerDismissed: true, cameraRequest: null, settledArrival: null, focusRequest: null, requestNonce: nonce };
+    case "people-enter": {
+      const targetMode = action.mode ?? "people";
+      if (runtime.people.discovery.mode === targetMode) return runtime;
+      if (runtime.people.discovery.mode !== "events") {
+        const nextDiscovery: LocalHeroUrlState = {
+          ...runtime.people.discovery,
+          mode: targetMode,
+        };
+        if (targetMode === "places") {
+          nextDiscovery.place = runtime.people.discovery.place ?? null;
+        } else {
+          delete nextDiscovery.place;
+        }
+        return {
+          ...runtime,
+          people: {
+            ...runtime.people,
+            discovery: nextDiscovery,
+          },
+        };
+      }
+      const nextDiscovery: LocalHeroUrlState = {
+        ...runtime.people.discovery,
+        mode: targetMode,
+      };
+      if (targetMode === "places") nextDiscovery.place = null;
+      else delete nextDiscovery.place;
+      return {
+        ...runtime,
+        state: structuredClone(runtime.state),
+        exploration: structuredClone(runtime.exploration),
+        people: {
+          discovery: nextDiscovery,
+          suspended: structuredClone({ state: runtime.state, exploration: runtime.exploration }),
+        },
+        playing: false,
+        readerActive: false,
+        popupOpen: false,
+        readerDismissed: true,
+        cameraRequest: null,
+        settledArrival: null,
+        focusRequest: null,
+        requestNonce: nonce,
+      };
+    }
+    case "place-select":
+      if (runtime.people.discovery.mode !== "places") return runtime;
+      return {
+        ...runtime,
+        people: {
+          ...runtime.people,
+          discovery: {
+            ...runtime.people.discovery,
+            place: action.slug,
+          },
+        },
+      };
     case "people-change": {
       const previous = runtime.people.discovery.filters, filters = normalizeLocalHeroFilters(action.filters);
       if (filters.localityCode !== previous.localityCode || filters.query !== previous.query) filters.page = 1;
-      return { ...runtime, people: { ...runtime.people, discovery: { ...runtime.people.discovery, filters } } };
+      const localityChanged = filters.localityCode !== previous.localityCode;
+      const nextDiscovery: LocalHeroUrlState = {
+        ...runtime.people.discovery,
+        filters,
+      };
+      if (runtime.people.discovery.mode === "places") {
+        nextDiscovery.place = localityChanged && !action.keepPlace ? null : (runtime.people.discovery.place ?? null);
+      } else {
+        delete nextDiscovery.place;
+      }
+      return { ...runtime, people: { ...runtime.people, discovery: nextDiscovery } };
     }
     case "people-exit": {
       const suspended = runtime.people.suspended;
       if (!suspended) return runtime;
       const state = structuredClone(suspended.state), cameraRequest = requestFor(state, nonce, registry, true);
+      const nextDiscovery: LocalHeroUrlState = {
+        ...runtime.people.discovery,
+        mode: "events",
+      };
+      delete nextDiscovery.place;
       return { ...runtime, state, exploration: structuredClone(suspended.exploration),
-        people: { discovery: { ...runtime.people.discovery, mode: "events" }, suspended: null },
+        people: { discovery: nextDiscovery, suspended: null },
         playing: false, readerActive: false, popupOpen: false, readerDismissed: true, focusRequest: null,
         cameraRequest: cameraRequest && { ...cameraRequest, view: state.view ?? cameraRequest.view }, settledArrival: null, requestNonce: nonce, restoreRequest: runtime.restoreRequest + 1 };
     }
