@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "kind": "localities",
+  "records": [
+    {
+      "code": "01",
+      "slug": "ha-noi",
+      "officialName": "Thành phố Hà Nội",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "04",
+      "slug": "cao-bang",
+      "officialName": "Tỉnh Cao Bằng",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "08",
+      "slug": "tuyen-quang",
+      "officialName": "Tỉnh Tuyên Quang",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "11",
+      "slug": "dien-bien",
+      "officialName": "Tỉnh Điện Biên",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "12",
+      "slug": "lai-chau",
+      "officialName": "Tỉnh Lai Châu",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "14",
+      "slug": "son-la",
+      "officialName": "Tỉnh Sơn La",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "15",
+      "slug": "lao-cai",
+      "officialName": "Tỉnh Lào Cai",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "19",
+      "slug": "thai-nguyen",
+      "officialName": "Tỉnh Thái Nguyên",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "20",
+      "slug": "lang-son",
+      "officialName": "Tỉnh Lạng Sơn",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "22",
+      "slug": "quang-ninh",
+      "officialName": "Tỉnh Quảng Ninh",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "24",
+      "slug": "bac-ninh",
+      "officialName": "Tỉnh Bắc Ninh",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "25",
+      "slug": "phu-tho",
+      "officialName": "Tỉnh Phú Thọ",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "31",
+      "slug": "hai-phong",
+      "officialName": "Thành phố Hải Phòng",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "33",
+      "slug": "hung-yen",
+      "officialName": "Tỉnh Hưng Yên",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "37",
+      "slug": "ninh-binh",
+      "officialName": "Tỉnh Ninh Bình",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "38",
+      "slug": "thanh-hoa",
+      "officialName": "Tỉnh Thanh Hóa",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "40",
+      "slug": "nghe-an",
+      "officialName": "Tỉnh Nghệ An",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "42",
+      "slug": "ha-tinh",
+      "officialName": "Tỉnh Hà Tĩnh",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "44",
+      "slug": "quang-tri",
+      "officialName": "Tỉnh Quảng Trị",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "46",
+      "slug": "hue",
+      "officialName": "Thành phố Huế",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "48",
+      "slug": "da-nang",
+      "officialName": "Thành phố Đà Nẵng",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "51",
+      "slug": "quang-ngai",
+      "officialName": "Tỉnh Quảng Ngãi",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "52",
+      "slug": "gia-lai",
+      "officialName": "Tỉnh Gia Lai",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "56",
+      "slug": "khanh-hoa",
+      "officialName": "Tỉnh Khánh Hòa",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "66",
+      "slug": "dak-lak",
+      "officialName": "Tỉnh Đắk Lắk",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "68",
+      "slug": "lam-dong",
+      "officialName": "Tỉnh Lâm Đồng",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "75",
+      "slug": "dong-nai",
+      "officialName": "Tỉnh Đồng Nai",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "79",
+      "slug": "ho-chi-minh",
+      "officialName": "Thành phố Hồ Chí Minh",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "80",
+      "slug": "tay-ninh",
+      "officialName": "Tỉnh Tây Ninh",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "82",
+      "slug": "dong-thap",
+      "officialName": "Tỉnh Đồng Tháp",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "86",
+      "slug": "vinh-long",
+      "officialName": "Tỉnh Vĩnh Long",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "91",
+      "slug": "an-giang",
+      "officialName": "Tỉnh An Giang",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "92",
+      "slug": "can-tho",
+      "officialName": "Thành phố Cần Thơ",
+      "referenceFramework": "VN-34-2025"
+    },
+    {
+      "code": "96",
+      "slug": "ca-mau",
+      "officialName": "Tỉnh Cà Mau",
+      "referenceFramework": "VN-34-2025"
+    }
+  ]
+}

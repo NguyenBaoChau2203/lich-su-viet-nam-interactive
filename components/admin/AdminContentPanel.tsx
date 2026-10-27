@@ -17,6 +17,7 @@ type AdminContentPanelProps = {
   id: string;
   status: WorkflowStatus;
   title: string;
+  catalogRevision?: string;
 };
 
 function Stale({ state }: { state: ActionState }) {
@@ -36,7 +37,7 @@ const errorOnly = (state: ActionState): ActionState => (state.status === "error"
  * Khung thao tác của QUẢN TRỊ VIÊN trên một nội dung (UC14): khôi phục về nháp, ẩn, xóa vĩnh viễn.
  * Ưu tiên "Ẩn" hơn "Xóa": nút xóa nằm cuối, có hộp thoại xác nhận, và bị khóa ngoại chặn nếu còn được dùng.
  */
-export function AdminContentPanel({ kind, id, status, title }: AdminContentPanelProps) {
+export function AdminContentPanel({ kind, id, status, title, catalogRevision }: AdminContentPanelProps) {
   // Sau mỗi thao tác, trang được làm mới với trạng thái mới → các nút khả dụng thay đổi, form vừa bấm có thể biến mất.
   // Vì vậy thông báo thành công được giữ ở cấp khung thay vì trong từng form.
   const [notice, setNotice] = useState<string | null>(null);
@@ -52,13 +53,14 @@ export function AdminContentPanel({ kind, id, status, title }: AdminContentPanel
   const [hideState, hideForm, hiding] = useActionState(track(adminHideAction), initialActionState);
   const [deleteState, deleteForm, deleting] = useActionState(deleteContentAction, initialActionState);
 
-  const actions = availableAdminContentActions(status);
+  const actions = availableAdminContentActions(status).filter((action) => catalogRevision === undefined || action !== "delete");
   const busy = restoring || hiding || deleting;
 
   const hidden = (
     <>
       <input type="hidden" name="kind" value={kind} />
       <input type="hidden" name="id" value={id} />
+      {catalogRevision !== undefined && <input type="hidden" name="expected_revision" value={catalogRevision} />}
     </>
   );
 

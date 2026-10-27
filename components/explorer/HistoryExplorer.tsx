@@ -9,6 +9,10 @@ import { MapEventList } from "@/components/explorer/MapEventList";
 import { MapTimeControls } from "@/components/explorer/MapTimeControls";
 import { JourneyPanel } from "@/components/explorer/JourneyPanel";
 import { JourneyChooser } from "@/components/explorer/JourneyChooser";
+import { LocalHeroesPanel } from "@/components/explorer/LocalHeroesPanel";
+import { buildLocalHeroHomeHref, parseLocalHeroState, type LocalHeroUrlState } from "@/lib/local-heroes/state";
+import { useLocalHeroPage } from "@/lib/local-heroes/use-local-hero-page";
+import type { LocalHeroFilters, LocalHeroLoadState } from "@/lib/local-heroes/types";
 import { HomeAtlasHeader } from "@/components/layout/HomeAtlasHeader";
 import { filterExplorerEvents } from "@/lib/explorer/filters";
 import { normalizeYearRange } from "@/lib/explorer/timeline-years";
@@ -32,20 +36,24 @@ export type HistoryExplorerProps = {
   limits: ExplorerLimits | null;
   initialState: MapExplorerState | null;
   dataError?: string | null;
+  initialPeople?: LocalHeroUrlState;
+  initialPeopleLoad?: LocalHeroLoadState;
 };
 
 const explorerReducer = (runtime: ExplorerRuntime, action: ExplorerAction) => reduceExplorerRuntime(runtime, action);
 
-export function HistoryExplorer({ events, limits, initialState, dataError = null }: HistoryExplorerProps) {
+export function HistoryExplorer({ events, limits, initialState, dataError = null, initialPeople, initialPeopleLoad = { status: "idle" } }: HistoryExplorerProps) {
   const [runtime, dispatch] = useReducer(explorerReducer,
-    initialState ?? { from: 1911, to: 1941, selectedEvent: null, view: null }, createExplorerRuntime);
+    initialState ?? { from: 1911, to: 1941, selectedEvent: null, view: null }, (state) => createExplorerRuntime(state, JOURNEY_REGISTRY, initialPeople));
   const { state, playing, cameraRequest, settledArrival, restoreRequest, focusRequest, readerActive, hidden, reducedMotion: playbackReducedMotion, departing } = runtime;
   const reducedMotion = usePrefersReducedMotion();
+  const peopleActive = runtime.people.discovery.mode === "people";
+  const peopleMap = runtime.people.suspended?.state ?? state;
   const journey = state.journey ? getJourneyById(state.journey.id) : undefined;
   const stop = state.journey ? getJourneyStop(state.journey.id, state.journey.stop) ?? null : null;
-  const journeyPathRequest = useMemo(() => !departing && journey && stop
+  const journeyPathRequest = useMemo(() => !peopleActive && !departing && journey && stop
     ? { journey, journeyId: journey.id, stopId: stop.id, nonce: runtime.requestNonce } : null,
-  [departing, journey, stop, runtime.requestNonce]);
+  [peopleActive, departing, journey, stop, runtime.requestNonce]);
   const [mapReady, setMapReady] = useState(false);
   const [journeyAnchor, setJourneyAnchor] = useState<JourneyPopupAnchor | null>(null);
   const focusReader = useRef(false);
@@ -53,14 +61,48 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
   const selectionOrigin = useRef<HTMLElement | null>(null);
   const listRef = useRef<HTMLDetailsElement>(null);
   const navigationPending = useRef(false);
+  const historyIntent = useRef<"push" | "replace" | "restore">("replace");
+  const peopleTrigger = useRef<HTMLElement | null>(null);
+  const peopleLink = useRef<HTMLAnchorElement>(null);
+  const changePeople = useCallback((filters: LocalHeroFilters) => {
+    historyIntent.current = "push"; dispatch({ type: "people-change", filters });
+  }, []);
+  const clampPeople = useCallback((filters: LocalHeroFilters) => {
+    historyIntent.current = "replace"; dispatch({ type: "people-change", filters });
+  }, []);
+  const peoplePage = useLocalHeroPage(runtime.people.discovery, initialPeopleLoad, clampPeople);
+  const enterPeople = useCallback(() => {
+    peopleTrigger.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    historyIntent.current = "push"; dispatch({ type: "people-enter" });
+  }, []);
+  const closePeople = useCallback(() => {
+    historyIntent.current = "push"; dispatch({ type: "people-exit" });
+    const trigger = peopleTrigger.current;
+    if (trigger?.isConnected && trigger.getClientRects().length) trigger.focus({ preventScroll: true });
+    else peopleLink.current?.focus({ preventScroll: true });
+  }, []);
+  useEffect(() => {
+    if (!peopleActive) return;
+    document.getElementById("local-heroes-heading")?.focus({ preventScroll: true });
+    const escape = (event: KeyboardEvent) => { if (event.key === "Escape" && !event.defaultPrevented) { event.preventDefault(); closePeople(); } };
+    window.addEventListener("keydown", escape);
+    return () => window.removeEventListener("keydown", escape);
+  }, [peopleActive, closePeople]);
   const visibleEvents = useMemo(() => state ? filterExplorerEvents(events, state.from, state.to) : events, [events, state]);
   const selectedEvent = visibleEvents.find((event) => event.slug === state?.selectedEvent) ?? null;
 
   useEffect(() => {
     if (!state || navigationPending.current) return;
-    const timer = setTimeout(() => {
-      if (!navigationPending.current && window.location.pathname === "/") window.history.replaceState(null, "", buildMapExplorerUrl(state));
-    }, 150);
+    const intent = historyIntent.current;
+    historyIntent.current = "replace";
+    const write = () => {
+      if (navigationPending.current || window.location.pathname !== "/") return;
+      const href = buildLocalHeroHomeHref(runtime.people.suspended?.state ?? state, runtime.people.discovery);
+      if (`${window.location.pathname}${window.location.search}` === href) return;
+      window.history[intent === "push" ? "pushState" : "replaceState"](window.history.state, "", href);
+    };
+    if (intent === "push") write();
+    const timer = intent === "replace" ? setTimeout(write, 150) : undefined;
     // Freeze all later camera/filter writes too: a flight may finish while an
     // outgoing Link is still waiting for server content on this mounted page.
     const cancelForLink = (event: MouseEvent) => {
@@ -79,16 +121,20 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
       clearTimeout(timer);
       document.removeEventListener("click", cancelForLink, true);
     };
-  }, [state]);
+  }, [state, runtime.people]);
 
   useEffect(() => {
     const restore = () => {
       navigationPending.current = false;
-      const next = parseMapExplorerState(new URLSearchParams(window.location.search), limits ?? { minYear: 1911, maxYear: 1941, eventSlugs: [] });
-      dispatch({ type: "restore", state: next });
+      historyIntent.current = "restore";
+      const params = new URLSearchParams(window.location.search);
+      const next = parseMapExplorerState(params, limits ?? { minYear: 1911, maxYear: 1941, eventSlugs: [] });
+      dispatch({ type: "restore", state: next, people: parseLocalHeroState(params) });
     };
+    const returned = (event: PageTransitionEvent) => { if (event.persisted || navigationPending.current) restore(); };
     window.addEventListener("popstate", restore);
-    return () => window.removeEventListener("popstate", restore);
+    window.addEventListener("pageshow", returned);
+    return () => { window.removeEventListener("popstate", restore); window.removeEventListener("pageshow", returned); };
   }, [limits]);
 
   const selectEvent = useCallback((slug: string) => {
@@ -122,11 +168,11 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
     focusReader.current = false;
   }, [runtime.popupOpen]);
   useEffect(() => {
-    if (!stop || (!runtime.popupOpen && (mapReady || runtime.readerDismissed))) return;
+    if (peopleActive || !stop || (!runtime.popupOpen && (mapReady || runtime.readerDismissed))) return;
     const escape = (event: KeyboardEvent) => { if (event.key === "Escape") { event.preventDefault(); closeReader(); } };
     window.addEventListener("keydown", escape);
     return () => window.removeEventListener("keydown", escape);
-  }, [stop, runtime.popupOpen, runtime.readerDismissed, mapReady, closeReader]);
+  }, [peopleActive, stop, runtime.popupOpen, runtime.readerDismissed, mapReady, closeReader]);
   const onReadyChange = useCallback((ready: boolean) => {
     setMapReady(ready);
     if (!ready) dispatch({ type: "pause" });
@@ -176,11 +222,11 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
   }, []);
 
   useEffect(() => {
-    if (!selectedEvent) return;
+    if (peopleActive || !selectedEvent) return;
     const escape = (event: KeyboardEvent) => { if (event.key === "Escape") closeEvent(); };
     window.addEventListener("keydown", escape);
     return () => window.removeEventListener("keydown", escape);
-  }, [selectedEvent, closeEvent]);
+  }, [peopleActive, selectedEvent, closeEvent]);
 
   const updateView = useCallback((view: MapView, arrival?: JourneyArrival) => {
     if (!navigationPending.current) dispatch({ type: "view", view, arrival });
@@ -194,20 +240,22 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
   }
 
   return (
-    <section className={`home-history-map${stop ? " is-journey" : ""}`} data-testid="history-explorer" aria-label="Khám phá lịch sử trên địa cầu">
+    <section className={`home-history-map${stop ? " is-journey" : ""}${peopleActive ? " is-people" : ""}`} data-testid="history-explorer" aria-label="Khám phá lịch sử trên địa cầu">
       <HomeAtlasHeader journeyActive={Boolean(stop)} journeyButtonRef={journeyButton}
-        onExplore={() => { if (stop) exitJourney(); }} onJourney={enterJourney} />
+        peopleActive={peopleActive} peopleLinkRef={peopleLink} peopleHref={buildLocalHeroHomeHref(peopleMap, { ...runtime.people.discovery, mode: "people" })} onPeople={enterPeople}
+        onExplore={() => { if (peopleActive) closePeople(); if (stop) exitJourney(); }} onJourney={() => { if (peopleActive) closePeople(); enterJourney(); }} />
       <div className="absolute inset-0 z-0" data-testid="home-event-map">
-        <EventMap events={visibleEvents} allEvents={events} view={state?.view ?? null} selectedEvent={selectedEvent?.slug ?? null}
-          focusRequest={stop ? null : focusRequest} onSelect={selectEvent} onViewChange={updateView}
-          journeyStop={stop} cameraRequest={cameraRequest}
+        <EventMap events={peopleActive ? [] : visibleEvents} allEvents={events} view={state?.view ?? null} selectedEvent={peopleActive ? null : selectedEvent?.slug ?? null}
+          readingMode={peopleActive ? "people" : "events"}
+          focusRequest={peopleActive || stop ? null : focusRequest} onSelect={selectEvent} onViewChange={updateView}
+          journeyStop={peopleActive ? null : stop} cameraRequest={peopleActive ? null : cameraRequest}
           journeyPathRequest={journeyPathRequest}
           restoreRequest={restoreRequest} onManualInput={pauseJourney} onArrive={arrive} onReadyChange={onReadyChange}
           onJourneyAnchor={setJourneyAnchor} onReadStop={openReader} />
       </div>
       <div className="home-map-intro">
         <h1>{journey && stop ? "Khám phá hành trình" : "Lịch sử qua những địa danh"}</h1>
-        {journey && stop ? (
+        {peopleActive ? <p className="globe-hint">Chọn địa phương để đọc những hồ sơ có nguồn dẫn.</p> : journey && stop ? (
           <JourneyChooser
             journeys={JOURNEY_REGISTRY.journeys}
             selectedJourney={journey}
@@ -225,15 +273,15 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
       </div>
       {dataError && <p role="status" className="home-map-notice" data-testid="explorer-data-error">{dataError}</p>}
       {state.journeyNotice && <p role="status" className="home-map-notice" data-testid="journey-notice">{state.journeyNotice}</p>}
-      {!stop && !dataError && visibleEvents.length === 0 && <p role="status" className="home-map-notice">Không có sự kiện trong khoảng năm này. Hãy chọn khoảng khác hoặc “Toàn bộ”.</p>}
+      {!peopleActive && !stop && !dataError && visibleEvents.length === 0 && <p role="status" className="home-map-notice">Không có sự kiện trong khoảng năm này. Hãy chọn khoảng khác hoặc “Toàn bộ”.</p>}
       <p className="sr-only" role="status" aria-live="polite">{visibleEvents.length} sự kiện trong khoảng thời gian đang chọn.</p>
-      {!stop && !selectedEvent && <aside className="home-map-guidance" aria-labelledby="home-map-guidance-heading" data-testid="home-map-guidance">
+      {!peopleActive && !stop && !selectedEvent && <aside className="home-map-guidance" aria-labelledby="home-map-guidance-heading" data-testid="home-map-guidance">
         <h2 id="home-map-guidance-heading">Khám phá một sự kiện</h2>
         <p>Chọn một điểm trên bản đồ để xem thời gian, địa điểm và câu chuyện lịch sử.</p>
         <button type="button" onClick={enterJourney}>Xem hành trình <ArrowRight size={16} aria-hidden="true" /></button>
       </aside>}
-      {!stop && selectedEvent && <MapEventCard key={selectedEvent.slug} event={selectedEvent} state={state} onClose={closeEvent} />}
-      {journey && stop ? <JourneyPanel key={journey.id} journey={journey} stop={stop} state={state} playing={playing} settled={sameJourneyArrival(settledArrival, cameraRequest)} travelling={Boolean(cameraRequest && !sameJourneyArrival(settledArrival, cameraRequest))} reducedMotion={reducedMotion} mapAvailable={mapReady}
+      {!peopleActive && !stop && selectedEvent && <MapEventCard key={selectedEvent.slug} event={selectedEvent} state={state} onClose={closeEvent} />}
+      {peopleActive ? <LocalHeroesPanel map={peopleMap} discovery={runtime.people.discovery} load={peoplePage.load} onChange={changePeople} onClose={closePeople} onRetry={peoplePage.retry} /> : journey && stop ? <JourneyPanel key={journey.id} journey={journey} stop={stop} state={state} playing={playing} settled={sameJourneyArrival(settledArrival, cameraRequest)} travelling={Boolean(cameraRequest && !sameJourneyArrival(settledArrival, cameraRequest))} reducedMotion={reducedMotion} mapAvailable={mapReady}
         popupOpen={runtime.popupOpen} readerDismissed={runtime.readerDismissed} anchor={sameJourneyArrival(journeyAnchor, journeyPathRequest) ? journeyAnchor : null}
         onOpenReader={openReader} onCloseReader={closeReader}
         readerActive={readerActive} eventAvailable={events.some((event) => event.slug === stop.eventSlug)} onSeek={seek} onPlay={togglePlayback} onExit={exitJourney} onReadingChange={onReadingChange} />
@@ -243,7 +291,7 @@ export function HistoryExplorer({ events, limits, initialState, dataError = null
       <noscript>
         <div className="home-map-notice">
           <p>
-            JavaScript đang tắt. Mở “Danh sách sự kiện” để đọc, hoặc chọn đọc các hành trình:
+            {peopleActive ? "JavaScript đang tắt. Bạn vẫn có thể chọn địa phương, tìm kiếm và chuyển trang bằng biểu mẫu. Hoặc chọn đọc các hành trình:" : "JavaScript đang tắt. Mở “Danh sách sự kiện” để đọc, hoặc chọn đọc các hành trình:"}
           </p>
           <ul className="mt-1 flex flex-wrap gap-2 text-xs">
             {JOURNEY_REGISTRY.journeys.map((j) => (

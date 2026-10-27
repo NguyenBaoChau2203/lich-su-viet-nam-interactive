@@ -21,6 +21,7 @@ type ReviewPanelProps = {
   /** Hành động vai trò hiện tại được làm ở trạng thái này (tính ở server). */
   actions: ReviewAction[];
   reviewNote: string | null;
+  catalogRevision?: string;
   checklist: string[];
   /** Lưu ý cho người duyệt (không chặn). */
   notes: string[];
@@ -46,7 +47,7 @@ function StaleNotice({ state }: { state: ActionState }) {
  * Checklist chỉ để người duyệt tự theo dõi (không lưu, không chặn công bố — đã chốt với người dùng); nếu còn mục
  * chưa tick thì hộp xác nhận khi công bố sẽ nhắc.
  */
-export function ReviewPanel({ kind, id, status, actions, reviewNote, checklist, notes, sources }: ReviewPanelProps) {
+export function ReviewPanel({ kind, id, status, actions, reviewNote, checklist, notes, sources, catalogRevision }: ReviewPanelProps) {
   const [checked, setChecked] = useState<boolean[]>(() => checklist.map(() => false));
   const remaining = checked.filter((value) => !value).length;
 
@@ -62,6 +63,7 @@ export function ReviewPanel({ kind, id, status, actions, reviewNote, checklist, 
     <>
       <input type="hidden" name="kind" value={kind} />
       <input type="hidden" name="id" value={id} />
+      {catalogRevision !== undefined && <input type="hidden" name="expected_revision" value={catalogRevision} />}
     </>
   );
 

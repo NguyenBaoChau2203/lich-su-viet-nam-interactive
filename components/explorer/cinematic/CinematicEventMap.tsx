@@ -40,6 +40,11 @@ export function CinematicEventMap(props: EventMapProps) {
     wheelTimer.current = null; drag.current = null;
   }, []);
   useEffect(() => { callbacks.current = props; }, [props]);
+  useEffect(() => {
+    if (props.readingMode !== "people") return;
+    activeJourney.current = null;
+    camera?.cancel(); clearInput(); scene?.setJourneyPath(null);
+  }, [props.readingMode, camera, scene, clearInput]);
   useEffect(() => () => {
     camera?.dispose();
     clearInput();
@@ -122,13 +127,13 @@ export function CinematicEventMap(props: EventMapProps) {
   }, [camera, scene, clearInput]);
 
   useEffect(() => {
-    if (!scene || !camera || departing.current || camera.isFlying() || drag.current || wheelTimer.current) return;
+    if (props.readingMode === "people" || !scene || !camera || departing.current || camera.isFlying() || drag.current || wheelTimer.current) return;
     const view = props.view;
     if (!view) return;
     const current = scene.getView();
     if (Math.abs(current.lat - view.lat) > 0.0002 || Math.abs(current.lng - view.lng) > 0.0002 || Math.abs(current.zoom - view.zoom) > 0.02)
       camera.jumpTo(view);
-  }, [scene, camera, props.view]);
+  }, [scene, camera, props.view, props.readingMode]);
 
   useEffect(() => {
     if (!camera || !props.focusRequest || departing.current) return;
@@ -234,14 +239,14 @@ export function CinematicEventMap(props: EventMapProps) {
   function onSceneReady(ready: CinematicScene) {
     const controller = createGlobeCameraController(ready, (view) => {
       const arrival = activeJourney.current;
-      if (!departing.current && (!arrival || sameJourneyArrival(arrival, callbacks.current.cameraRequest)))
+      if (!departing.current && callbacks.current.readingMode !== "people" && (!arrival || sameJourneyArrival(arrival, callbacks.current.cameraRequest)))
         callbacks.current.onViewChange(view, arrival ?? undefined);
     });
     controller.setVisible(!document.hidden);
     setRuntime({ scene: ready, camera: controller });
     callbacks.current.onReadyChange(true);
     const opening = callbacks.current;
-    if (!departing.current && opening.restoreRequest === 0 && !opening.view && !opening.selectedEvent && !opening.journeyStop) {
+    if (!departing.current && opening.readingMode !== "people" && opening.restoreRequest === 0 && !opening.view && !opening.selectedEvent && !opening.journeyStop) {
       let seen = false;
       try { seen = sessionStorage.getItem(INTRO_KEY) === "1"; } catch { /* Optional storage. */ }
       const target = vietnamOverviewView(stageSize());
@@ -284,7 +289,7 @@ export function CinematicEventMap(props: EventMapProps) {
         manualInput();
         return camera.flyTo(fit.view, reducedMotion ? 0 : 500);
       }} />}
-    {intro && !props.view && !props.selectedEvent && !props.journeyStop && props.restoreRequest === 0 && !reducedMotion && <button type="button" className="globe-skip" onClick={() => {
+    {props.readingMode !== "people" && intro && !props.view && !props.selectedEvent && !props.journeyStop && props.restoreRequest === 0 && !reducedMotion && <button type="button" className="globe-skip" onClick={() => {
       manualInput(); camera?.jumpTo(vietnamOverviewView(stageSize()));
       stageRef.current?.querySelector("canvas")?.focus({ preventScroll: true });
     }}>Bỏ qua chuyển cảnh</button>}

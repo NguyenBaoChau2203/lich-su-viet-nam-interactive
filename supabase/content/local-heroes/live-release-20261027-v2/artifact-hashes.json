@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "releaseHash": "6f2671966eb3a15ba59b10a7a163dd39fd0c705a6c44b64ef44e1d83f8575afe",
+  "inputSnapshotHash": "bc6bdbf6f6fcd6c4259987b9b010514109b5fdffe044c50f0fa52329a5c74a53",
+  "inputManifestHash": "06080db323af8f89364355323cd585824f3772963e96316dd8ae72aa0fc54416",
+  "files": [
+    {
+      "name": "snapshot.json",
+      "sha256": "3898b926082c069e7d8a086fb9915c44f36f56d11dced8b0a232b8338273e20b"
+    },
+    {
+      "name": "publish.sql",
+      "sha256": "d32ffe65a4bd2d23a6956943cc4967c28ec390f438eb9e23a4999b2567b9c36f"
+    },
+    {
+      "name": "rollback-content.sql",
+      "sha256": "6aa375ee5a92f04a3f8f80c7a91d7de5cd8821e64e06ea7982ebb5fe3ed3b4e0"
+    }
+  ]
+}

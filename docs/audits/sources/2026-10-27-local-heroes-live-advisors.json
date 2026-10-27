@@ -1,0 +1,210 @@
+{
+  "recordedAt": "2026-10-27T11:26:14.807Z",
+  "projectRef": "ueolfjujjybutyuyfxha",
+  "command": "supabase db advisors --linked --type all --level info --fail-on error --output json",
+  "exitCode": 1,
+  "beforeCount": 89,
+  "afterCount": 98,
+  "newErrors": [],
+  "existingErrors": [
+    {
+      "name": "security_definer_view",
+      "title": "Security Definer View",
+      "level": "ERROR",
+      "facing": "EXTERNAL",
+      "categories": [
+        "SECURITY"
+      ],
+      "description": "Detects views defined with the SECURITY DEFINER property. These views enforce Postgres permissions and row level security policies (RLS) of the view creator, rather than that of the querying user",
+      "detail": "View \\`public.donation_wall\\` is defined with the SECURITY DEFINER property",
+      "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0010_security_definer_view",
+      "metadata": {
+        "name": "donation_wall",
+        "schema": "public",
+        "type": "view"
+      },
+      "cache_key": "security_definer_view_public_donation_wall"
+    }
+  ],
+  "added": [
+    {
+      "name": "unindexed_foreign_keys",
+      "title": "Unindexed foreign keys",
+      "level": "INFO",
+      "facing": "EXTERNAL",
+      "categories": [
+        "PERFORMANCE"
+      ],
+      "description": "Identifies foreign key constraints without a covering index, which can impact database performance.",
+      "detail": "Table \\`public.figure_localities\\` has a foreign key \\`figure_localities_claim_fkey\\` without a covering index. This can lead to suboptimal query performance.",
+      "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0001_unindexed_foreign_keys",
+      "metadata": {
+        "fkey_columns": [
+          2,
+          7,
+          8
+        ],
+        "fkey_name": "figure_localities_claim_fkey",
+        "name": "figure_localities",
+        "schema": "public",
+        "type": "table"
+      },
+      "cache_key": "unindexed_foreign_keys_public_figure_localities_figure_localities_claim_fkey"
+    },
+    {
+      "name": "unindexed_foreign_keys",
+      "title": "Unindexed foreign keys",
+      "level": "INFO",
+      "facing": "EXTERNAL",
+      "categories": [
+        "PERFORMANCE"
+      ],
+      "description": "Identifies foreign key constraints without a covering index, which can impact database performance.",
+      "detail": "Table \\`public.figure_media_evidence\\` has a foreign key \\`figure_media_evidence_owner_fkey\\` without a covering index. This can lead to suboptimal query performance.",
+      "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0001_unindexed_foreign_keys",
+      "metadata": {
+        "fkey_columns": [
+          1,
+          2
+        ],
+        "fkey_name": "figure_media_evidence_owner_fkey",
+        "name": "figure_media_evidence",
+        "schema": "public",
+        "type": "table"
+      },
+      "cache_key": "unindexed_foreign_keys_public_figure_media_evidence_figure_media_evidence_owner_fkey"
+    },
+    {
+      "name": "unused_index",
+      "title": "Unused Index",
+      "level": "INFO",
+      "facing": "EXTERNAL",
+      "categories": [
+        "PERFORMANCE"
+      ],
+      "description": "Detects if an index has never been used and may be a candidate for removal.",
+      "detail": "Index \\`figure_localities_locality_idx\\` on table \\`public.figure_localities\\` has not been used",
+      "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index",
+      "metadata": {
+        "name": "figure_localities",
+        "schema": "public",
+        "type": "table"
+      },
+      "cache_key": "unused_index_public_figure_localities_figure_localities_locality_idx"
+    },
+    {
+      "name": "multiple_permissive_policies",
+      "title": "Multiple Permissive Policies",
+      "level": "WARN",
+      "facing": "EXTERNAL",
+      "categories": [
+        "PERFORMANCE"
+      ],
+      "description": "Detects if multiple permissive row level security policies are present on a table for the same \\`role\\` and \\`action\\` (e.g. insert). Multiple permissive policies are suboptimal for performance as each policy must be executed for every relevant query.",
+      "detail": "Table \\`public.figure_localities\\` has multiple permissive policies for role \\`authenticated\\` for action \\`SELECT\\`. Policies include \\`{lh_localities_editable,lh_localities_public,lh_localities_staff}\\`",
+      "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0006_multiple_permissive_policies",
+      "metadata": {
+        "name": "figure_localities",
+        "schema": "public",
+        "type": "table"
+      },
+      "cache_key": "multiple_permissive_policies_public_figure_localities_authenticated_SELECT"
+    },
+    {
+      "name": "multiple_permissive_policies",
+      "title": "Multiple Permissive Policies",
+      "level": "WARN",
+      "facing": "EXTERNAL",
+      "categories": [
+        "PERFORMANCE"
+      ],
+      "description": "Detects if multiple permissive row level security policies are present on a table for the same \\`role\\` and \\`action\\` (e.g. insert). Multiple permissive policies are suboptimal for performance as each policy must be executed for every relevant query.",
+      "detail": "Table \\`public.figure_media_evidence\\` has multiple permissive policies for role \\`authenticated\\` for action \\`SELECT\\`. Policies include \\`{lh_media_editable,lh_media_public,lh_media_staff}\\`",
+      "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0006_multiple_permissive_policies",
+      "metadata": {
+        "name": "figure_media_evidence",
+        "schema": "public",
+        "type": "table"
+      },
+      "cache_key": "multiple_permissive_policies_public_figure_media_evidence_authenticated_SELECT"
+    },
+    {
+      "name": "multiple_permissive_policies",
+      "title": "Multiple Permissive Policies",
+      "level": "WARN",
+      "facing": "EXTERNAL",
+      "categories": [
+        "PERFORMANCE"
+      ],
+      "description": "Detects if multiple permissive row level security policies are present on a table for the same \\`role\\` and \\`action\\` (e.g. insert). Multiple permissive policies are suboptimal for performance as each policy must be executed for every relevant query.",
+      "detail": "Table \\`public.figure_sources\\` has multiple permissive policies for role \\`authenticated\\` for action \\`SELECT\\`. Policies include \\`{lh_figure_sources_editable,lh_figure_sources_public,lh_figure_sources_staff}\\`",
+      "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0006_multiple_permissive_policies",
+      "metadata": {
+        "name": "figure_sources",
+        "schema": "public",
+        "type": "table"
+      },
+      "cache_key": "multiple_permissive_policies_public_figure_sources_authenticated_SELECT"
+    },
+    {
+      "name": "multiple_permissive_policies",
+      "title": "Multiple Permissive Policies",
+      "level": "WARN",
+      "facing": "EXTERNAL",
+      "categories": [
+        "PERFORMANCE"
+      ],
+      "description": "Detects if multiple permissive row level security policies are present on a table for the same \\`role\\` and \\`action\\` (e.g. insert). Multiple permissive policies are suboptimal for performance as each policy must be executed for every relevant query.",
+      "detail": "Table \\`public.figure_stories\\` has multiple permissive policies for role \\`authenticated\\` for action \\`SELECT\\`. Policies include \\`{lh_stories_editable,lh_stories_public,lh_stories_staff}\\`",
+      "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0006_multiple_permissive_policies",
+      "metadata": {
+        "name": "figure_stories",
+        "schema": "public",
+        "type": "table"
+      },
+      "cache_key": "multiple_permissive_policies_public_figure_stories_authenticated_SELECT"
+    },
+    {
+      "name": "multiple_permissive_policies",
+      "title": "Multiple Permissive Policies",
+      "level": "WARN",
+      "facing": "EXTERNAL",
+      "categories": [
+        "PERFORMANCE"
+      ],
+      "description": "Detects if multiple permissive row level security policies are present on a table for the same \\`role\\` and \\`action\\` (e.g. insert). Multiple permissive policies are suboptimal for performance as each policy must be executed for every relevant query.",
+      "detail": "Table \\`public.figure_stories\\` has multiple permissive policies for role \\`authenticated\\` for action \\`UPDATE\\`. Policies include \\`{lh_stories_editable,lh_stories_review}\\`",
+      "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0006_multiple_permissive_policies",
+      "metadata": {
+        "name": "figure_stories",
+        "schema": "public",
+        "type": "table"
+      },
+      "cache_key": "multiple_permissive_policies_public_figure_stories_authenticated_UPDATE"
+    },
+    {
+      "name": "multiple_permissive_policies",
+      "title": "Multiple Permissive Policies",
+      "level": "WARN",
+      "facing": "EXTERNAL",
+      "categories": [
+        "PERFORMANCE"
+      ],
+      "description": "Detects if multiple permissive row level security policies are present on a table for the same \\`role\\` and \\`action\\` (e.g. insert). Multiple permissive policies are suboptimal for performance as each policy must be executed for every relevant query.",
+      "detail": "Table \\`public.figure_story_sources\\` has multiple permissive policies for role \\`authenticated\\` for action \\`SELECT\\`. Policies include \\`{lh_story_sources_editable,lh_story_sources_public,lh_story_sources_staff}\\`",
+      "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0006_multiple_permissive_policies",
+      "metadata": {
+        "name": "figure_story_sources",
+        "schema": "public",
+        "type": "table"
+      },
+      "cache_key": "multiple_permissive_policies_public_figure_story_sources_authenticated_SELECT"
+    }
+  ],
+  "classification": {
+    "multiple_permissive_policies": "Six performance advisories for deliberate public/staff/editor/reviewer policy unions; RLS authorization remains verified by the actual-schema disposable role suite. No security ERROR added.",
+    "unindexed_foreign_keys": "Two INFO covering-index opportunities for composite owner/claim foreign keys; current small-catalog query budgets pass. Retained as performance follow-up, not a missing RLS gate.",
+    "unused_index": "One INFO freshly created locality index not yet used by the observed planner; do not remove a correctness/query-support index merely because it is newly unused."
+  },
+  "scope": "Existing donation_wall view, old security-definer functions, Auth password settings and unrelated indexes are outside this feature publication; no false zero-advisory claim."
+}

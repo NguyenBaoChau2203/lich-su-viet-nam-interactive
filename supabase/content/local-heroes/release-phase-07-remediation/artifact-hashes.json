@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "snapshotHash": "bc6bdbf6f6fcd6c4259987b9b010514109b5fdffe044c50f0fa52329a5c74a53",
+  "inputManifestHash": "06080db323af8f89364355323cd585824f3772963e96316dd8ae72aa0fc54416",
+  "acceptanceSha256": "a3b9a521007c8a86dc2316094b3ee18f5b44ab8418e2f15e4ef63736d01c6790",
+  "files": [
+    {
+      "name": "draft-import.sql",
+      "sha256": "ecaf88179e77c337a9fd47a90f15c85a9e917369dfbd9f6c661614c56ecf85c1"
+    },
+    {
+      "name": "local-promotion-rehearsal.sql",
+      "sha256": "9e6dee529e18bb6bb94ac42541a74c718e7a2b1be5683f20e15f859cb7ae745a"
+    },
+    {
+      "name": "rollback.sql",
+      "sha256": "a74a128f18bd4ae886ee589ac2d7be8ea8f3e37919c9f19f35ab993bcca2cafe"
+    },
+    {
+      "name": "snapshot.json",
+      "sha256": "09c27257b4670ef0abf8663f920fe4ba35c3c2bb4758e8e7ca4d7ca3e40b02ae"
+    }
+  ]
+}

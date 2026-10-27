@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "phase": "02",
+  "status": "passed-backend-phase-only",
+  "recordedAt": "2026-10-26T12:31:14.568Z",
+  "timezone": "Asia/Bangkok",
+  "reviewType": "self-review",
+  "singleMainAgent": true,
+  "branch": "feat/local-revolutionary-heroes",
+  "head": "6a38f582515102c03ccc7ac806ae6d3f1becbbb0",
+  "contractId": "LH-1.0.0-draft.1",
+  "approvedManifestVersion": 14,
+  "approvedManifestHash": "893156e86b5e2e350698d05b05ddc0f93804ab174b5f043f0d2d62210c036305",
+  "localReport": "D:/lich-su-viet-nam-interactive/.task-reports/2026-10-26-1917-local-heroes-phase-02.md",
+  "commands": [
+    {
+      "command": "node scripts/content/check-local-heroes.mjs",
+      "exitCode": 0,
+      "result": "valid research; 35 selected, 2 complete, 2 prepared localities, releaseReady=false"
+    },
+    {
+      "command": "node scripts/content/check-local-heroes.mjs --mode release",
+      "exitCode": 2,
+      "expected": true,
+      "result": "release blocked; all 34 locality states reported"
+    },
+    {
+      "command": "pnpm exec vitest run tests/unit/local-heroes-query.test.ts tests/unit/local-heroes-content.test.ts",
+      "exitCode": 0,
+      "tests": 32,
+      "files": 2
+    },
+    {
+      "command": "supabase test db --local --workdir .task-reports/local-heroes-phase-02-work/db",
+      "exitCode": 0,
+      "assertions": 288,
+      "scope": "Phase 02 TAP file and included synthetic fixture, copied to the isolated CLI project"
+    },
+    {
+      "command": "node tests/rls/local-heroes-concurrency.mjs --target .task-reports/local-heroes-disposable-db.json",
+      "exitCode": 0,
+      "cases": 2,
+      "lockWaitObserved": true
+    },
+    {
+      "command": "pnpm verify",
+      "exitCode": 0,
+      "historyTests": 42,
+      "unitTests": 1092,
+      "unitFiles": 90,
+      "scriptTests": 26,
+      "staticPages": 102
+    },
+    {
+      "command": "pnpm agent:sync; pnpm agent:status",
+      "exitCode": 0,
+      "indexedSupportedFiles": 788,
+      "pendingChanges": 0
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "database": {
+    "project": "local-heroes-phase02-disposable",
+    "container": "supabase_db_local-heroes-phase02-disposable",
+    "host": "127.0.0.1",
+    "port": 55342,
+    "purpose": "local-heroes-tests",
+    "database": "postgres",
+    "serverVersion": "17.6",
+    "encoding": "UTF8",
+    "icu": true,
+    "localities": 34,
+    "localCatalogPeople": 0,
+    "authUsers": 0,
+    "migrationVersion": "20261031000001",
+    "roleActors": [
+      "anon",
+      "learner",
+      "active editor",
+      "active reviewer",
+      "active system_admin",
+      "locked editor",
+      "locked reviewer",
+      "locked system_admin"
+    ],
+    "raceResults": [
+      {
+        "case": "publish_vs_source_edit",
+        "passed": true,
+        "lockWaitObserved": true,
+        "publicationCommitted": true,
+        "sourceEditRolledBack": true
+      },
+      {
+        "case": "two_last_links",
+        "passed": true,
+        "lockWaitObserved": true,
+        "firstDeletionCommitted": true,
+        "lastDeletionRolledBack": true,
+        "evidence": "deferred invariant under database-owner fixture sessions"
+      }
+    ],
+    "fixtureCleanup": true,
+    "schemaRollback": {
+      "target": "supabase_db_local-heroes-phase02-disposable",
+      "baselineVersion": "20261031000000",
+      "newVersion": "20261031000001",
+      "migrationSha256": "762beb458820fb7e0df7fcbbb539fe00ca2fff17563af1c5739ad4bcf3f8d655",
+      "baselineConfirmed": true,
+      "newSchemaVisibleInTransaction": true,
+      "ddlRollbackRestoredBaseline": true,
+      "oldSourceLockRestored": true
+    }
+  },
+  "content": {
+    "validResearch": true,
+    "releaseReady": false,
+    "selected": 35,
+    "complete": 2,
+    "incompleteSelected": 33,
+    "held": 18,
+    "preparedLocalities": 2,
+    "totalLocalities": 34,
+    "publicSnapshot": null
+  },
+  "preservation": {
+    "entryFiles": 84,
+    "byteIdentical": 82,
+    "originalPrefixesPreserved": 2,
+    "deleted": 0,
+    "overwritten": 0
+  },
+  "additionalCheck": {
+    "command": "supabase db lint --local --schema public,private --level error --fail-on error --workdir .task-reports/local-heroes-phase-02-work/db",
+    "catalogFunctionErrors": 0,
+    "legacyFinding": {
+      "function": "public.exam_grade_attempt",
+      "sqlState": "42P01",
+      "relation": "pg_temp.exam_graded",
+      "source": "supabase/migrations/20261027000001_fix_grade_safeupdate.sql",
+      "sourceCreatesTempBeforeUse": true,
+      "changedByThisPhase": false
+    },
+    "overallClean": false
+  },
+  "notPerformed": [
+    "remote writes/import/publication",
+    "commit/push/PR/merge/deploy",
+    "UI phases 03–05 and their browser/performance gates",
+    "live public catalog verification",
+    "national content completion",
+    "independent or historical certification"
+  ],
+  "newSourceAndTestFiles": [
+    "lib/actions/local-heroes.ts",
+    "lib/local-heroes/admin-types.ts",
+    "lib/local-heroes/database.generated.ts",
+    "lib/local-heroes/legacy-workflow.ts",
+    "lib/local-heroes/localities.ts",
+    "lib/local-heroes/normalize.ts",
+    "lib/local-heroes/readiness.ts",
+    "lib/local-heroes/state.ts",
+    "lib/local-heroes/types.ts",
+    "lib/local-heroes/validation.ts",
+    "lib/queries/local-heroes-admin.ts",
+    "lib/queries/local-heroes.ts",
+    "scripts/content/check-local-heroes.mjs",
+    "scripts/content/extract-local-heroes-types.mjs",
+    "scripts/content/local-heroes-schema.mjs",
+    "scripts/content/local-heroes-validator.mjs",
+    "supabase/migrations/20261031000001_local_hero_catalog.sql",
+    "supabase/tests/fixtures/local-heroes.inc",
+    "supabase/tests/local_heroes.sql",
+    "tests/rls/local-heroes-concurrency.mjs",
+    "tests/unit/fixtures/local-heroes-negative.mjs",
+    "tests/unit/local-heroes-actions.test.ts",
+    "tests/unit/local-heroes-admin-query.test.ts",
+    "tests/unit/local-heroes-content.test.ts",
+    "tests/unit/local-heroes-query.test.ts",
+    "tests/unit/local-heroes-readiness.test.ts",
+    "tests/unit/local-heroes-target.test.ts",
+    "tests/unit/local-heroes-workflow.test.ts"
+  ],
+  "modifiedSourceFiles": [
+    "lib/actions/admin-content.ts",
+    "lib/actions/content.ts",
+    "lib/actions/review.ts",
+    "lib/admin/readiness.ts",
+    "lib/database.types.ts",
+    "lib/queries/admin-content.ts"
+  ],
+  "implementationDocuments": [
+    "docs/audits/2026-10-26-local-heroes-phase-02-contract.md",
+    "docs/audits/2026-10-26-local-heroes-phase-02-handoff.md",
+    "docs/audits/2026-10-26-local-heroes-phase-02-verification.json",
+    "docs/superpowers/plans/2026-10-26-local-heroes-phase-02-plan.md"
+  ],
+  "evidence": [
+    {
+      "path": ".task-reports/local-heroes-phase-02-work/pnpm-verify-final.log",
+      "sha256": "393318aa974a864ae1bed50180f386a44e9e13277e6c9847d7f3637f85a57db8"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-02-work/focused-final.log",
+      "sha256": "d5d6e64f9ba79baaa105957ff8d6665ac5adc388860d8d2027cf5a053006a245"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-02-work/db-final.log",
+      "sha256": "994b2ff8ac2596ddf1aac4fb816559afbe34943f62ef6ee9709fd7f3b7a33cf9"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-02-work/concurrency-final.json",
+      "sha256": "dfeee2f3bd9950cf3fb960e75a7402d24526313070720db16ef79055edd3c3e9"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-02-work/schema-rollback.json",
+      "sha256": "d826c620013608bbcccac3f1724442af6d32c29246e623e3914a3a10a823dcf7"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-02-work/db-final-state.json",
+      "sha256": "18b39e99e7da14ace8e2f36592f6c8c991d259746eca3650ff4f58036fa2a07d"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-02-work/content-final-research.json",
+      "sha256": "733a93e9e7e8db502f0b37bb06bc7ddd35529fa9c5a587f457e455dc710ca1be"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-02-work/content-final-release.json",
+      "sha256": "1e2b33d317a2560917dce21225fbcb7adc6483f5bc95893b888424bb180a7235"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-02-work/agent-final.log",
+      "sha256": "cd93f5470a942a7d4ad8023e6979544d1e01f698b2638118c0c41d6c479aa17d"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-02-work/db-lint.log",
+      "sha256": "8084f9e423de078d42a9a04f05d7da434068d3de39afb9c5c813e3cd3b6f082d"
+    }
+  ],
+  "generatedTypes": {
+    "cliVersion": "2.111.0",
+    "source": "explicitly disposable local PostgreSQL schema",
+    "path": "lib/local-heroes/database.generated.ts",
+    "sha256": "ae8f8ebc9f9803bd760928b18f7c05362acc268f2abb5eeab124171b2bfc1cdd",
+    "generateCommand": "supabase gen types --local --schema public --workdir .task-reports/local-heroes-phase-02-work/db",
+    "extractCommand": "node scripts/content/extract-local-heroes-types.mjs .task-reports/local-heroes-phase-02-work/database.generated.ts",
+    "legacyRefinementsRetained": true
+  }
+}

@@ -1,0 +1,1739 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-heroes-draft-rehearsal",
+  "contractId": "LH-1.0.0-draft.1",
+  "inputManifestHash": "84d8a8a5833ec66382aa4e96b50cfdfd9495e15fc1c524f2205c4279866e8dfb",
+  "inputManifestVersion": 17,
+  "acceptanceSha256": "084769e78ef13f1d1af767651713850384c4c3da0a13d536c3e7f75d6a48831b",
+  "inputFiles": [
+    {
+      "name": "claims.json",
+      "sha256": "80388e48170b881286475575979a0dee7d622baeab78f7baaa1083744f099d21"
+    },
+    {
+      "name": "coverage.json",
+      "sha256": "4b5f0e264da2c0bfa4950a6fd43d22a4765a66506cb1932be0221b6195801bce"
+    },
+    {
+      "name": "localities.json",
+      "sha256": "47ea7e2757240bfc0c1f57fc68c6f4045f463505c591a7d757666ad17c311846"
+    },
+    {
+      "name": "media.json",
+      "sha256": "a211ddb0167c6c1419d1b09f5495686793706401d8278b4ee20903aade313c84"
+    },
+    {
+      "name": "people.json",
+      "sha256": "3bec7fa3ccda0858694e801e641ae19af022dd71c17a228ad4ab8059ebb8dccd"
+    },
+    {
+      "name": "relations.json",
+      "sha256": "80170c53841aa3db34b2b63001b8b2a69d4db974fcf1fe2df342ebe61c27a9fe"
+    },
+    {
+      "name": "roster.json",
+      "sha256": "76c1cc98f3ddd9e55887d97956cf78b8b9f4586281537fde36fb703f4b4d089d"
+    },
+    {
+      "name": "sources.json",
+      "sha256": "7c3146886c9e3d46b957199017f3e6f6e1786b8601553a4e21af11616b476e77"
+    },
+    {
+      "name": "stories.json",
+      "sha256": "e1bff603f9598e953ac82a81269713730be74accf814c86fa2161cb0355db1c4"
+    },
+    {
+      "name": "manifest.json",
+      "sha256": "59fce5332fc8746cfe792ac62cc9462dd35c6d18683c4a6469bfb7a994548878"
+    }
+  ],
+  "idNamespace": "bfcdd5b2-7473-4ea9-9a21-a633400a3ca0",
+  "idNamePattern": "national-v1/<person|source|story|media|relation>/<package-key>",
+  "nationalReleaseReady": false,
+  "mandatoryPeople": 35,
+  "mandatoryLocalities": 34,
+  "reviewCompletePeople": 2,
+  "representedLocalities": 2,
+  "warning": "Local rehearsal only: 33 identity shells are incomplete and cannot be promoted. No national publication is ready or authorized.",
+  "people": [
+    {
+      "personKey": "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+      "id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+      "slug": "van-tien-dung",
+      "name": "Văn Tiến Dũng",
+      "mode": "reviewed_graph",
+      "blockers": []
+    },
+    {
+      "personKey": "figure:c6eb511d-898f-4fab-8875-42ddd0700cd4",
+      "id": "c6eb511d-898f-4fab-8875-42ddd0700cd4",
+      "slug": "pham-van-dong",
+      "name": "Phạm Văn Đồng",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Nguồn dakbla.quangngai.gov.vn có tư liệu bài viết nhưng không cung cấp chân dung lịch sử hoặc ảnh bối cảnh của nhân vật; giữ trạng thái chờ tư liệu ảnh kiểm chứng.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "figure:dff00764-7ef6-4b82-981e-9f66f080d653",
+      "id": "dff00764-7ef6-4b82-981e-9f66f080d653",
+      "slug": "le-duan",
+      "name": "Lê Duẩn",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Original image page returns 404; file response cannot be decoded as an image. No current original image evidence.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:be-van-dan",
+      "id": "e7d9d93d-6096-580e-a03a-602279e2ef28",
+      "slug": "be-van-dan",
+      "name": "Bế Văn Đàn",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "The narrative adds artillery/air cover and a wounded-gunner/dead-assistant sequence beyond the cited profile, whose gunner sequence differs. Image depiction is also incorrect. Hold the narrative pending precise reconciliation.",
+        "The downloaded 300x401 primary profile image is a portrait, not the claimed contextual infographic. Correct depiction/caption/identity evidence and measure its configured thumbnail before acceptance.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:bong-van-dia",
+      "id": "2fa5dc61-a644-511e-b0a3-0f2aae82e10f",
+      "slug": "bong-van-dia",
+      "name": "Bông Văn Dĩa",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:chau-van-liem",
+      "id": "ff0dbd3f-c107-59d0-8091-47b85028d34f",
+      "slug": "chau-van-liem",
+      "name": "Châu Văn Liêm",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:dinh-nup",
+      "id": "a610d9ce-6329-503e-853e-e5a508c0772d",
+      "slug": "dinh-nup",
+      "name": "Đinh Núp",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Nguồn baogialai.com.vn phản ánh chuyến về nguồn năm 2019, các hình ảnh đính kèm là đoàn đại biểu hiện đại, không có ảnh chân dung lịch sử hoặc tư liệu bối cảnh 1858–1975; giữ trạng thái chờ tư liệu ảnh kiểm chứng.",
+        "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+        "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:doi-can",
+      "id": "0afcf543-b9ab-5005-9996-35994de9f744",
+      "slug": "doi-can",
+      "name": "Đội Cấn",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "The story and its origins claim say linh kho do, while the cited provincial article explicitly says linh kho xanh. The short monument article does not substantiate the added inner thoughts and detailed attack scenes.",
+        "Visual inspection shows contemporary visitors at a 2022 exhibition. This is present-day commemoration and does not qualify as a historical representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:hoang-le-kha",
+      "id": "a57b9351-4a81-5d6f-b58c-87f6afe6a904",
+      "slug": "hoang-le-kha",
+      "name": "Hoàng Lê Kha",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "The story says Ha Phong but the cited museum article says Hoa Phong. The precise Tam Hap/Trang Lon execution location is not established by that cited article. Correct and recheck every paragraph before admission.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:hoang-truong-minh",
+      "id": "bef3a2a7-2181-5984-9408-0cfc6fd9758d",
+      "slug": "hoang-truong-minh",
+      "name": "Hoàng Trường Minh",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh chân dung hoặc ảnh tư liệu bối cảnh trực tiếp về đồng chí Hoàng Trường Minh; ảnh bài báo gốc là đồng chí Vũ Văn Thụ; link cdn ảnh bài báo trả về 404.",
+        "Chưa đủ chứng cứ độc lập về nhân thân để công bố câu chuyện hoàn chỉnh.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:hoang-van-thu",
+      "id": "e191bc61-a10c-5e98-933a-a2f2bbcf7fb2",
+      "slug": "hoang-van-thu",
+      "name": "Hoàng Văn Thụ",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage; link ảnh kế thừa baochinhphu trả về 404",
+        "Nguồn có một câu bất hợp niên biểu về kết nạp năm 1928; không dùng câu đó. Cần nguồn thứ hai đối chiếu trước khi biên soạn câu chuyện chi tiết.",
+        "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+        "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:huynh-van-nghe",
+      "id": "01394714-2542-5ba6-a358-9e3ce8531864",
+      "slug": "huynh-van-nghe",
+      "name": "Huỳnh Văn Nghệ",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "A false portrait is used and the 350–700-word narrative, exact poetry quotation, personal motivations and formal honors require scoped paragraph-level reconciliation. No complete accepted profile is claimed.",
+        "Visual inspection shows a speaker at a 2018 staff conference, not an authenticated portrait of Huynh Van Nghe. A URL appearing elsewhere on the same page does not prove identity.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:kim-dong",
+      "id": "82f103c8-28e6-5d62-80d7-cfe9f954ffa8",
+      "slug": "kim-dong",
+      "name": "Kim Đồng",
+      "mode": "reviewed_graph",
+      "blockers": []
+    },
+    {
+      "personKey": "new:le-thi-pha",
+      "id": "ac511b75-8f85-5c2d-96ce-447b39daf1ff",
+      "slug": "le-thi-pha",
+      "name": "Lê Thị Pha",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Original portrait and main interview were inspected, including 1968/1971/1972 and 1978. The second source returns 403; paragraph 2 adds detailed training/transport/road-20 battle assertions requiring their own support. Not admitted as a fully reconciled narrative.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:lo-van-gia",
+      "id": "44deb6f9-f743-5831-8472-54c0b6d7920e",
+      "slug": "lo-van-gia",
+      "name": "Lò Văn Giá",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Visual inspection shows a contemporary memorial building. Historical era is misclassified; a present-day monument cannot satisfy the representative-image gate.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:luong-van-tuy",
+      "id": "85b08e4b-1184-51ea-9884-59edffffe163",
+      "slug": "luong-van-tuy",
+      "name": "Lương Văn Tụy",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Ảnh đính kèm trong bài viết gốc Báo Ninh Bình trả về HTTP 404 do máy chủ báo đã thanh lọc tệp tải lên năm 2012; thiếu ảnh tư liệu bối cảnh hoặc chân dung được kiểm chứng trực tiếp.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:ngo-gia-tu",
+      "id": "f327ff05-8821-5126-a1b5-c8fddac61b0e",
+      "slug": "ngo-gia-tu",
+      "name": "Ngô Gia Tự",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "File response is not a decodable image; the recorded image page actually concerns ancient Vietnamese monarchs. Wrong-page/identity evidence is held.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:nguyen-chi-dieu",
+      "id": "5993f911-20b4-52df-ac65-19fee9056262",
+      "slug": "nguyen-chi-dieu",
+      "name": "Nguyễn Chí Diểu",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Original image page and file cannot be fetched. Reopen a correct original and inspect its actual bytes before acceptance.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:nguyen-duc-canh",
+      "id": "ae80ac4b-0aac-57c8-aa3f-4c4123a36fcd",
+      "slug": "nguyen-duc-canh",
+      "name": "Nguyễn Đức Cảnh",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Original page is a soft 404. Downloaded image is the national emblem, 640x360 / 24220 bytes, different from the stored hash and 640x427 dimensions. It is not the claimed temple/context image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:nguyen-thai-hoc",
+      "id": "3d86f7bc-5c34-5c5c-bbc2-c5305d58b9b1",
+      "slug": "nguyen-thai-hoc",
+      "name": "Nguyễn Thái Học",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Văn bản nguồn trên trang Cổng thông tin thị xã Buôn Hồ quá ngắn (130 từ), không đủ dữ kiện độc lập để biên soạn câu chuyện 350 từ có trích dẫn mà không suy diễn; trang nguồn không có ảnh chân dung hay ảnh bối cảnh.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:nguyen-thi-minh-khai",
+      "id": "501d793e-6c25-5351-849d-c6d46a9beb5d",
+      "slug": "nguyen-thi-minh-khai",
+      "name": "Nguyễn Thị Minh Khai",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "File response is not a decodable image; the recorded original page is about Egyptian mummies in Singapore. Wrong-page/identity evidence is held.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:nguyen-van-troi",
+      "id": "e69ef035-5e5d-5f88-b8a1-7809e11d10be",
+      "slug": "nguyen-van-troi",
+      "name": "Nguyễn Văn Trỗi",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:pham-hung",
+      "id": "d69f584d-cdc1-5e64-8663-3215c92e5cae",
+      "slug": "pham-hung",
+      "name": "Phạm Hùng",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Nguồn baotanglichsu.vn phản ánh hội thảo kỷ niệm 110 năm ngày sinh nhưng các ảnh đính kèm là quang cảnh và đại biểu hội thảo năm 2022, không có chân dung lịch sử hoặc tư liệu thời kỳ 1858–1975; giữ trạng thái chờ tư liệu ảnh kiểm chứng.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:ta-xuan-thu",
+      "id": "9d4fbbfc-984a-5538-9eb8-1c6702bda64d",
+      "slug": "ta-xuan-thu",
+      "name": "Tạ Xuân Thu",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Historical claims and the modern photo/caption must be reconciled separately. The current photo cannot substantiate a 1945 scene; the full narrative is not admitted.",
+        "Visual inspection shows a contemporary delegation at Na Nua Shack. The source caption does not turn these visitors into a 1945 archival scene; historical era is false.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:thai-phien",
+      "id": "662546af-1d95-5e8d-87d3-1736a40ae942",
+      "slug": "thai-phien",
+      "name": "Thái Phiên",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Văn bản nguồn trên trang Mặt trận Đà Nẵng chỉ liệt kê tên trong danh sách chí sĩ khởi nghĩa năm 1916; thiếu hồ sơ tiểu sử chi tiết để xác lập câu chuyện độc lập; thiếu ảnh chân dung hoặc tư liệu bối cảnh.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:to-hieu",
+      "id": "737cd7cd-fb9b-5bc9-a552-8ae1d53bbe49",
+      "slug": "to-hieu",
+      "name": "Tô Hiệu",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Visual inspection shows masked visitors at a modern memorial exhibition. The stored caption claims a cemetery ceremony; it is not qualifying historical imagery.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:to-vinh-dien",
+      "id": "f9aa2582-58f4-585e-97fb-278d9b7ffa7d",
+      "slug": "to-vinh-dien",
+      "name": "Tô Vĩnh Diện",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "The museum title says 1924–1953 while its event chronology and TTXVN corroboration concern 1 February 1954. The narrative needs explicit scoped chronology reconciliation; do not infer an exact death year from a title.",
+        "Recorded original article is reachable but the file URL cannot be decoded as an image and is absent from that page. Original bytes are unverified.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:ton-duc-thang",
+      "id": "e3cda332-746c-50ea-9c12-50992f9bcbda",
+      "slug": "ton-duc-thang",
+      "name": "Tôn Đức Thắng",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Không đưa chi tiết Biển Đen, ngày thành lập Công hội hoặc nhận định về Ba Son vào chuyện nếu chưa có đối chiếu theo từng claim.",
+        "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+        "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:tran-can",
+      "id": "227678c8-84c3-5749-bb2e-5497001b5a2a",
+      "slug": "tran-can",
+      "name": "Trần Can",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "The downloaded 300x411 primary profile image is a portrait, not the claimed contextual infographic. Correct depiction/caption/identity evidence and measure its configured thumbnail before acceptance.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:tran-phu",
+      "id": "fe45941e-1e73-528b-b620-0d344aaa5188",
+      "slug": "tran-phu",
+      "name": "Trần Phú",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "File response is not a decodable image; the recorded image page actually concerns monkey fossils in Panama. Wrong-page/identity evidence is held.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:tran-quoc-manh",
+      "id": "1ebc02e0-10ce-5804-b81a-2e4bcc418067",
+      "slug": "tran-quoc-manh",
+      "name": "Trần Quốc Mạnh",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Visual inspection shows a contemporary memorial stele at Ban Luot. Historical era is misclassified; a present-day monument cannot satisfy the representative-image gate.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:tran-thi-nhuong",
+      "id": "872e8155-aee1-5a5e-b1b0-bfa55a1c31a2",
+      "slug": "tran-thi-nhuong",
+      "name": "Trần Thị Nhượng",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Nguồn baodongthap.vn phản ánh khởi nghĩa Sa Đéc tháng 8/1945 nhưng hình ảnh bài viết là di tích Đình Tân Trào và cơ sở khác, không có ảnh trực tiếp của đồng chí Trần Thị Nhượng; giữ trạng thái chờ tư liệu ảnh kiểm chứng.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:vo-van-ky",
+      "id": "de2f8fe7-e52e-5e9e-afbe-d9dddc0c1521",
+      "slug": "vo-van-ky",
+      "name": "Võ Văn Ký",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Nguồn namnhatrang.khanhhoa.gov.vn phản ánh diễn biến trận chiến đấu ga Nha Trang ngày 23/10/1945 nhưng bài viết không có hình ảnh; giữ trạng thái chờ tư liệu ảnh kiểm chứng.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:vu-van-hieu",
+      "id": "6b8be249-503c-58bd-934f-2612df59ad49",
+      "slug": "vu-van-hieu",
+      "name": "Vũ Văn Hiếu",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Visual inspection shows a contemporary monument. Historical era is misclassified; a present-day monument cannot satisfy the representative-image gate.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:y-bloc-eban",
+      "id": "52a94044-1dbe-5680-8ace-f125e63b40b5",
+      "slug": "y-bloc-eban",
+      "name": "Y Blốk Êban",
+      "mode": "identity_shell_only",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    }
+  ],
+  "rows": {
+    "sources": [
+      {
+        "id": "82324bac-d375-5581-b3f7-1e957fdc239b",
+        "title": "Tiểu sử sơ lược 5 đội viên đầu tiên của Đội TNTP Hồ Chí Minh.",
+        "author_org": "Ban Tuyên giáo Tỉnh Đoàn Cao Bằng (tổng hợp)",
+        "publisher": "Ban Tuyên giáo Tỉnh Đoàn Cao Bằng (tổng hợp)",
+        "published_year": null,
+        "url": "https://tinhdoan.caobang.gov.vn/index.php/hoat-dong-doi/tieu-su-so-luoc-5-doi-vien-dau-tien-cua-doi-tntp-ho-chi-minh-1615.html",
+        "source_type": "article",
+        "citation": "Ban Tuyên giáo Tỉnh Đoàn Cao Bằng (tổng hợp). Tiểu sử sơ lược 5 đội viên đầu tiên của Đội TNTP Hồ Chí Minh.. Không xác định ngày xuất bản trong lần đọc. Truy cập 2026-10-26.",
+        "accessed_at": "2026-10-26"
+      },
+      {
+        "id": "6d6ce116-e8ff-51d7-9164-61fb87eed18f",
+        "title": "Kỷ niệm 105 năm Ngày sinh Đại tướng Văn Tiến Dũng: Vị Đại tướng Anh hùng",
+        "author_org": "Bảo tàng Lịch sử quốc gia (đăng lại Báo Quân đội nhân dân)",
+        "publisher": "Bảo tàng Lịch sử quốc gia (đăng lại Báo Quân đội nhân dân)",
+        "published_year": 2022,
+        "url": "https://baotanglichsu.vn/vi/Articles/3098/73084/ky-niem-105-nam-ngay-sinh-djai-tuong-van-tien-dung-vi-djai-tuong-anh-hung.html",
+        "source_type": "article",
+        "citation": "Bảo tàng Lịch sử quốc gia (đăng lại Báo Quân đội nhân dân). Kỷ niệm 105 năm Ngày sinh Đại tướng Văn Tiến Dũng: Vị Đại tướng Anh hùng. 2022-05-04. Truy cập 2026-10-26.",
+        "accessed_at": "2026-10-26"
+      },
+      {
+        "id": "4fcb4ee9-be27-5dad-9b98-1ae8fd088d3b",
+        "title": "Bằng khen của Tổng bộ Việt Minh truy tặng anh Kim Đồng – Người đội trưởng đầu tiên của Đội TNTP HCM.",
+        "author_org": "Bảo tàng Lịch sử quốc gia",
+        "publisher": "Bảo tàng Lịch sử quốc gia",
+        "published_year": 2013,
+        "url": "https://baotanglichsu.vn/vi/Articles/1002/14283/bang-khen-cua-tong-bo-viet-minh-truy-tang-anh-kim-djong-nguoi-djoi-truong-djau-tien-cua-djoi-tntp-hcm.html",
+        "source_type": "article",
+        "citation": "Bảo tàng Lịch sử quốc gia. Bằng khen của Tổng bộ Việt Minh truy tặng anh Kim Đồng – Người đội trưởng đầu tiên của Đội TNTP HCM.. 2013-05-16. Truy cập 2026-10-26.",
+        "accessed_at": "2026-10-26"
+      },
+      {
+        "id": "25fdc599-bec0-5577-867b-44db445bb056",
+        "title": "100 năm ngày sinh Đại tướng Văn Tiến Dũng (2/5/1917-2/5/2017): Vị tướng chính trị - quân sự song toàn",
+        "author_org": "Bảo tàng Lịch sử quốc gia; bài dẫn nguồn Tiền Phong",
+        "publisher": "Bảo tàng Lịch sử quốc gia; bài dẫn nguồn Tiền Phong",
+        "published_year": 2017,
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/19898/100-nam-ngay-sinh-djai-tuong-van-tien-dung-2-5-1917-2-5-2017-vi-tuong-chinh-tri-quan-su-song-toan.html",
+        "source_type": "article",
+        "citation": "Bảo tàng Lịch sử quốc gia; bài dẫn nguồn Tiền Phong. 100 năm ngày sinh Đại tướng Văn Tiến Dũng (2/5/1917-2/5/2017): Vị tướng chính trị - quân sự song toàn. 2017-04-25. Truy cập 2026-10-26.",
+        "accessed_at": "2026-10-26"
+      },
+      {
+        "id": "964abd24-dc65-5243-a496-a77b4b897759",
+        "title": "15/5/1941: Thành lập Đội Thiếu niên Tiền phong Hồ Chí Minh",
+        "author_org": "Lê Khiêm (tổng hợp) — Bảo tàng Lịch sử quốc gia",
+        "publisher": "Lê Khiêm (tổng hợp) — Bảo tàng Lịch sử quốc gia",
+        "published_year": 2014,
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/16339/15-5-1941-thanh-lap-djoi-thieu-nien-tien-phong-ho-chi-minh.html",
+        "source_type": "article",
+        "citation": "Lê Khiêm (tổng hợp) — Bảo tàng Lịch sử quốc gia. 15/5/1941: Thành lập Đội Thiếu niên Tiền phong Hồ Chí Minh. 2014-05-14. Truy cập 2026-10-26.",
+        "accessed_at": "2026-10-26"
+      },
+      {
+        "id": "9bd86ca5-8298-57a0-8f87-5139528a6f3b",
+        "title": "Chiến dịch Hồ Chí Minh lịch sử (26/4-30/4/1975)",
+        "author_org": "Minh Vượng (tổng hợp) — Bảo tàng Lịch sử quốc gia",
+        "publisher": "Minh Vượng (tổng hợp) — Bảo tàng Lịch sử quốc gia",
+        "published_year": 2013,
+        "url": "https://baotanglichsu.vn/vi/Articles/2002/67989/chien-dich-ho-chi-minh-lich-su-26-4-30-4-1975.html",
+        "source_type": "article",
+        "citation": "Minh Vượng (tổng hợp) — Bảo tàng Lịch sử quốc gia. Chiến dịch Hồ Chí Minh lịch sử (26/4-30/4/1975). 2013-04-24. Truy cập 2026-10-26.",
+        "accessed_at": "2026-10-26"
+      }
+    ],
+    "historical_figures": [
+      {
+        "id": "82f103c8-28e6-5d62-80d7-cfe9f954ffa8",
+        "name": "Kim Đồng",
+        "slug": "kim-dong",
+        "other_names": "Nông Văn Dền",
+        "birth_year": 1929,
+        "death_year": 1943,
+        "biography": "Nông Văn Dền, bí danh Kim Đồng, là thiếu niên người Nùng ở Nà Mạ, Cao Bằng, làm đội trưởng tổ chức Đội năm 1941.",
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": "Làm đội trưởng tổ chức Đội tại Nà Mạ và tham gia liên lạc, bảo vệ cán bộ cách mạng giai đoạn 1941–1943.",
+        "contribution_start_year": 1941,
+        "contribution_end_year": 1943,
+        "catalog_aliases": [
+          "Nông Văn Dền"
+        ]
+      },
+      {
+        "id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "name": "Văn Tiến Dũng",
+        "slug": "van-tien-dung",
+        "other_names": "Lê Hoài",
+        "birth_year": null,
+        "death_year": null,
+        "biography": "Văn Tiến Dũng quê Cổ Nhuế, Hà Nội, hoạt động trong phong trào công nhân và về sau làm công tác chỉ huy, tham mưu quân sự.",
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": "Tham gia phong trào công nhân Hà Nội và công tác tham mưu quân sự; làm Tư lệnh Chiến dịch Hồ Chí Minh năm 1975.",
+        "contribution_start_year": 1934,
+        "contribution_end_year": 1975,
+        "catalog_aliases": [
+          "Lê Hoài"
+        ]
+      },
+      {
+        "id": "01394714-2542-5ba6-a358-9e3ce8531864",
+        "name": "Huỳnh Văn Nghệ",
+        "slug": "huynh-van-nghe",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "0afcf543-b9ab-5005-9996-35994de9f744",
+        "name": "Đội Cấn",
+        "slug": "doi-can",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "1ebc02e0-10ce-5804-b81a-2e4bcc418067",
+        "name": "Trần Quốc Mạnh",
+        "slug": "tran-quoc-manh",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "227678c8-84c3-5749-bb2e-5497001b5a2a",
+        "name": "Trần Can",
+        "slug": "tran-can",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "2fa5dc61-a644-511e-b0a3-0f2aae82e10f",
+        "name": "Bông Văn Dĩa",
+        "slug": "bong-van-dia",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "3d86f7bc-5c34-5c5c-bbc2-c5305d58b9b1",
+        "name": "Nguyễn Thái Học",
+        "slug": "nguyen-thai-hoc",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "44deb6f9-f743-5831-8472-54c0b6d7920e",
+        "name": "Lò Văn Giá",
+        "slug": "lo-van-gia",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "501d793e-6c25-5351-849d-c6d46a9beb5d",
+        "name": "Nguyễn Thị Minh Khai",
+        "slug": "nguyen-thi-minh-khai",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "52a94044-1dbe-5680-8ace-f125e63b40b5",
+        "name": "Y Blốk Êban",
+        "slug": "y-bloc-eban",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "5993f911-20b4-52df-ac65-19fee9056262",
+        "name": "Nguyễn Chí Diểu",
+        "slug": "nguyen-chi-dieu",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "662546af-1d95-5e8d-87d3-1736a40ae942",
+        "name": "Thái Phiên",
+        "slug": "thai-phien",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "6b8be249-503c-58bd-934f-2612df59ad49",
+        "name": "Vũ Văn Hiếu",
+        "slug": "vu-van-hieu",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "737cd7cd-fb9b-5bc9-a552-8ae1d53bbe49",
+        "name": "Tô Hiệu",
+        "slug": "to-hieu",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "85b08e4b-1184-51ea-9884-59edffffe163",
+        "name": "Lương Văn Tụy",
+        "slug": "luong-van-tuy",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "872e8155-aee1-5a5e-b1b0-bfa55a1c31a2",
+        "name": "Trần Thị Nhượng",
+        "slug": "tran-thi-nhuong",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "9d4fbbfc-984a-5538-9eb8-1c6702bda64d",
+        "name": "Tạ Xuân Thu",
+        "slug": "ta-xuan-thu",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "a57b9351-4a81-5d6f-b58c-87f6afe6a904",
+        "name": "Hoàng Lê Kha",
+        "slug": "hoang-le-kha",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "a610d9ce-6329-503e-853e-e5a508c0772d",
+        "name": "Đinh Núp",
+        "slug": "dinh-nup",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "ac511b75-8f85-5c2d-96ce-447b39daf1ff",
+        "name": "Lê Thị Pha",
+        "slug": "le-thi-pha",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "ae80ac4b-0aac-57c8-aa3f-4c4123a36fcd",
+        "name": "Nguyễn Đức Cảnh",
+        "slug": "nguyen-duc-canh",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "bef3a2a7-2181-5984-9408-0cfc6fd9758d",
+        "name": "Hoàng Trường Minh",
+        "slug": "hoang-truong-minh",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "c6eb511d-898f-4fab-8875-42ddd0700cd4",
+        "name": "Phạm Văn Đồng",
+        "slug": "pham-van-dong",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "d69f584d-cdc1-5e64-8663-3215c92e5cae",
+        "name": "Phạm Hùng",
+        "slug": "pham-hung",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "de2f8fe7-e52e-5e9e-afbe-d9dddc0c1521",
+        "name": "Võ Văn Ký",
+        "slug": "vo-van-ky",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "dff00764-7ef6-4b82-981e-9f66f080d653",
+        "name": "Lê Duẩn",
+        "slug": "le-duan",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "e191bc61-a10c-5e98-933a-a2f2bbcf7fb2",
+        "name": "Hoàng Văn Thụ",
+        "slug": "hoang-van-thu",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "e3cda332-746c-50ea-9c12-50992f9bcbda",
+        "name": "Tôn Đức Thắng",
+        "slug": "ton-duc-thang",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "e69ef035-5e5d-5f88-b8a1-7809e11d10be",
+        "name": "Nguyễn Văn Trỗi",
+        "slug": "nguyen-van-troi",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "e7d9d93d-6096-580e-a03a-602279e2ef28",
+        "name": "Bế Văn Đàn",
+        "slug": "be-van-dan",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "f327ff05-8821-5126-a1b5-c8fddac61b0e",
+        "name": "Ngô Gia Tự",
+        "slug": "ngo-gia-tu",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "f9aa2582-58f4-585e-97fb-278d9b7ffa7d",
+        "name": "Tô Vĩnh Diện",
+        "slug": "to-vinh-dien",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "fe45941e-1e73-528b-b620-0d344aaa5188",
+        "name": "Trần Phú",
+        "slug": "tran-phu",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      },
+      {
+        "id": "ff0dbd3f-c107-59d0-8091-47b85028d34f",
+        "name": "Châu Văn Liêm",
+        "slug": "chau-van-liem",
+        "other_names": null,
+        "birth_year": null,
+        "death_year": null,
+        "biography": null,
+        "portrait_url": null,
+        "workflow_status": "draft",
+        "review_note": null,
+        "is_local_hero": true,
+        "contribution_summary": null,
+        "contribution_start_year": null,
+        "contribution_end_year": null,
+        "catalog_aliases": []
+      }
+    ],
+    "figure_sources": [
+      {
+        "figure_id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "claim_key": "aliases",
+        "source_id": "6d6ce116-e8ff-51d7-9164-61fb87eed18f",
+        "claim_text": "Lê Hoài",
+        "locator": "Mục Người chiến sĩ cách mạng kiên trung: sinh ở Cổ Nhuế và hoạt động cùng thợ thuyền Hà Nội năm 1934.",
+        "scope_note": "Danh tính, đóng góp và thời kỳ hoạt động được nêu rõ trong đoạn nguồn.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "82f103c8-28e6-5d62-80d7-cfe9f954ffa8",
+        "claim_key": "aliases",
+        "source_id": "82324bac-d375-5581-b3f7-1e957fdc239b",
+        "claim_text": "Nông Văn Dền",
+        "locator": "Mục 1 “NÔNG VĂN DỀN – BÍ DANH KIM ĐỒNG (1929–1943)”.",
+        "scope_note": "Danh tính, đóng góp và thời kỳ hoạt động được nêu rõ trong đoạn nguồn.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "82f103c8-28e6-5d62-80d7-cfe9f954ffa8",
+        "claim_key": "biography",
+        "source_id": "82324bac-d375-5581-b3f7-1e957fdc239b",
+        "claim_text": "Nông Văn Dền, bí danh Kim Đồng, là thiếu niên người Nùng ở Nà Mạ, Cao Bằng, làm đội trưởng tổ chức Đội năm 1941.",
+        "locator": "Mục 1 “NÔNG VĂN DỀN – BÍ DANH KIM ĐỒNG (1929–1943)”.",
+        "scope_note": "Danh tính, đóng góp và thời kỳ hoạt động được nêu rõ trong đoạn nguồn.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "claim_key": "biography",
+        "source_id": "6d6ce116-e8ff-51d7-9164-61fb87eed18f",
+        "claim_text": "Văn Tiến Dũng quê Cổ Nhuế, Hà Nội, hoạt động trong phong trào công nhân và về sau làm công tác chỉ huy, tham mưu quân sự.",
+        "locator": "Mục Người chiến sĩ cách mạng kiên trung: Cổ Nhuế và hoạt động năm 1934.",
+        "scope_note": "Nguồn gốc Hà Nội và mốc hoạt động đầu được kiểm chứng.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "claim_key": "biography",
+        "source_id": "25fdc599-bec0-5577-867b-44db445bb056",
+        "claim_text": "Văn Tiến Dũng quê Cổ Nhuế, Hà Nội, hoạt động trong phong trào công nhân và về sau làm công tác chỉ huy, tham mưu quân sự.",
+        "locator": "Đoạn vai trò Tư lệnh Chiến dịch Hồ Chí Minh.",
+        "scope_note": "Vai trò chỉ huy năm 1975.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "82f103c8-28e6-5d62-80d7-cfe9f954ffa8",
+        "claim_key": "birth_year",
+        "source_id": "82324bac-d375-5581-b3f7-1e957fdc239b",
+        "claim_text": "1929",
+        "locator": "Mục 1 “NÔNG VĂN DỀN – BÍ DANH KIM ĐỒNG (1929–1943)”.",
+        "scope_note": "Danh tính, đóng góp và thời kỳ hoạt động được nêu rõ trong đoạn nguồn.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "82f103c8-28e6-5d62-80d7-cfe9f954ffa8",
+        "claim_key": "contribution",
+        "source_id": "82324bac-d375-5581-b3f7-1e957fdc239b",
+        "claim_text": "Làm đội trưởng tổ chức Đội tại Nà Mạ và tham gia liên lạc, bảo vệ cán bộ cách mạng giai đoạn 1941–1943.",
+        "locator": "Mục 1 “NÔNG VĂN DỀN – BÍ DANH KIM ĐỒNG (1929–1943)”.",
+        "scope_note": "Danh tính, đóng góp và thời kỳ hoạt động được nêu rõ trong đoạn nguồn.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "claim_key": "contribution",
+        "source_id": "6d6ce116-e8ff-51d7-9164-61fb87eed18f",
+        "claim_text": "Tham gia phong trào công nhân Hà Nội và công tác tham mưu quân sự; làm Tư lệnh Chiến dịch Hồ Chí Minh năm 1975.",
+        "locator": "Mục Người chiến sĩ cách mạng kiên trung: Cổ Nhuế và hoạt động năm 1934.",
+        "scope_note": "Nguồn gốc Hà Nội và mốc hoạt động đầu được kiểm chứng.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "claim_key": "contribution",
+        "source_id": "25fdc599-bec0-5577-867b-44db445bb056",
+        "claim_text": "Tham gia phong trào công nhân Hà Nội và công tác tham mưu quân sự; làm Tư lệnh Chiến dịch Hồ Chí Minh năm 1975.",
+        "locator": "Đoạn vai trò Tư lệnh Chiến dịch Hồ Chí Minh.",
+        "scope_note": "Vai trò chỉ huy năm 1975.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "82f103c8-28e6-5d62-80d7-cfe9f954ffa8",
+        "claim_key": "death_year",
+        "source_id": "82324bac-d375-5581-b3f7-1e957fdc239b",
+        "claim_text": "1943",
+        "locator": "Mục 1 “NÔNG VĂN DỀN – BÍ DANH KIM ĐỒNG (1929–1943)”.",
+        "scope_note": "Danh tính, đóng góp và thời kỳ hoạt động được nêu rõ trong đoạn nguồn.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "82f103c8-28e6-5d62-80d7-cfe9f954ffa8",
+        "claim_key": "identity",
+        "source_id": "82324bac-d375-5581-b3f7-1e957fdc239b",
+        "claim_text": "Kim Đồng — Làm đội trưởng tổ chức Đội tại Nà Mạ và tham gia liên lạc, bảo vệ cán bộ cách mạng giai đoạn 1941–1943.",
+        "locator": "Mục 1 “NÔNG VĂN DỀN – BÍ DANH KIM ĐỒNG (1929–1943)”.",
+        "scope_note": "Danh tính, đóng góp và thời kỳ hoạt động được nêu rõ trong đoạn nguồn.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "claim_key": "identity",
+        "source_id": "6d6ce116-e8ff-51d7-9164-61fb87eed18f",
+        "claim_text": "Văn Tiến Dũng — nhà chỉ huy quân sự, bí danh Lê Hoài, được nguồn định danh qua hoạt động cách mạng.",
+        "locator": "Mục Người chiến sĩ cách mạng kiên trung: sinh ở Cổ Nhuế và hoạt động cùng thợ thuyền Hà Nội năm 1934.",
+        "scope_note": "Danh tính, đóng góp và thời kỳ hoạt động được nêu rõ trong đoạn nguồn.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "claim_key": "locality:01:birthplace",
+        "source_id": "6d6ce116-e8ff-51d7-9164-61fb87eed18f",
+        "claim_text": "Bài bảo tàng ghi trực tiếp Văn Tiến Dũng sinh ở Cổ Nhuế, Hà Nội. Chỉ xác nhận quan hệ cấp thành phố, không coi quận/phường trong bài cũ là đơn vị hiện hành.",
+        "locator": "Mục Người chiến sĩ cách mạng kiên trung: sinh ở Cổ Nhuế và hoạt động cùng thợ thuyền Hà Nội năm 1934.",
+        "scope_note": "Nguồn nêu trực tiếp quan hệ nhân vật với địa điểm; không suy từ việc tưởng niệm.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "82f103c8-28e6-5d62-80d7-cfe9f954ffa8",
+        "claim_key": "locality:04:activity",
+        "source_id": "82324bac-d375-5581-b3f7-1e957fdc239b",
+        "claim_text": "Kim Đồng làm đội trưởng tổ chức Đội tại Nà Mạ, Cao Bằng năm 1941 và bảo vệ cán bộ tại địa phương năm 1943.",
+        "locator": "Mục 1 “NÔNG VĂN DỀN – BÍ DANH KIM ĐỒNG (1929–1943)”.",
+        "scope_note": "Nguồn nêu trực tiếp quan hệ nhân vật với địa điểm; không suy từ việc tưởng niệm.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "claim_key": "period",
+        "source_id": "6d6ce116-e8ff-51d7-9164-61fb87eed18f",
+        "claim_text": "Các mốc được chọn có bằng chứng trong khoảng 1934–1975; không khẳng định hoạt động liên tục từng năm.",
+        "locator": "Mục Người chiến sĩ cách mạng kiên trung: Cổ Nhuế và hoạt động năm 1934.",
+        "scope_note": "Nguồn gốc Hà Nội và mốc hoạt động đầu được kiểm chứng.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "claim_key": "period",
+        "source_id": "25fdc599-bec0-5577-867b-44db445bb056",
+        "claim_text": "Các mốc được chọn có bằng chứng trong khoảng 1934–1975; không khẳng định hoạt động liên tục từng năm.",
+        "locator": "Đoạn vai trò Tư lệnh Chiến dịch Hồ Chí Minh.",
+        "scope_note": "Vai trò chỉ huy năm 1975.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "figure_id": "82f103c8-28e6-5d62-80d7-cfe9f954ffa8",
+        "claim_key": "period",
+        "source_id": "82324bac-d375-5581-b3f7-1e957fdc239b",
+        "claim_text": "Hoạt động được kiểm chứng trong hồ sơ này: 1941–1943. Đây là khoảng có bằng chứng được chọn, không khẳng định toàn bộ sự nghiệp.",
+        "locator": "Mục 1 “NÔNG VĂN DỀN – BÍ DANH KIM ĐỒNG (1929–1943)”.",
+        "scope_note": "Danh tính, đóng góp và thời kỳ hoạt động được nêu rõ trong đoạn nguồn.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      }
+    ],
+    "figure_stories": [
+      {
+        "id": "4448dff1-64ed-5648-980b-9d62984a8f54",
+        "figure_id": "82f103c8-28e6-5d62-80d7-cfe9f954ffa8",
+        "slug": "kim-dong-na-ma-va-dau-vet-tu-lieu",
+        "title": "Kim Đồng ở Nà Mạ: người đội trưởng và dấu vết tư liệu",
+        "summary": "Từ tổ chức Đội tại Nà Mạ năm 1941 đến bằng truy tặng năm 1944, tìm hiểu đóng góp của Kim Đồng và cách đọc một chứng tích lịch sử.",
+        "body": "Nông Văn Dền, bí danh Kim Đồng, sinh năm 1929, là thiếu niên người Nùng ở làng Nà Mạ, Cao Bằng. Khi tìm hiểu cuộc đời anh, địa danh Nà Mạ là điểm nối giữa gia đình, cộng đồng và hoạt động cách mạng tại địa phương. Hồ sơ do Tỉnh Đoàn Cao Bằng giới thiệu đặt Kim Đồng trong nhóm những đội viên đầu tiên của tổ chức thiếu nhi cứu quốc. [[cite:origins]]\n\nNgày 15/5/1941, tại Nà Mạ, tổ chức Nhi đồng Cứu quốc được thành lập với năm đội viên; Kim Đồng được bầu làm đội trưởng. Tổ chức này gắn với Mặt trận Việt Minh và việc tập hợp thiếu nhi tham gia công cuộc giành độc lập. Những công việc được tài liệu nêu gồm liên lạc, trinh sát và bảo vệ xóm làng. Từ các nhiệm vụ cụ thể, người học có thể nhận ra sự tham gia của thiếu nhi trong mạng lưới hoạt động cách mạng lúc bấy giờ. [[cite:team]]\n\nĐầu năm 1943, khi phát hiện lực lượng truy lùng cán bộ, Kim Đồng báo cho các đội viên tìm cách báo động và đánh lạc hướng để bảo vệ cuộc họp. Anh bị trúng đạn và hy sinh trong năm ấy. Trách nhiệm của người liên lạc hiện ra qua việc giữ an toàn cho những người đang hoạt động bí mật. Câu chuyện cần được đọc cùng bối cảnh tổ chức Đội tại Nà Mạ. [[cite:protection]]\n\nNgày 2/9/1944, Tổng bộ Việt Minh truy tặng Nông Văn Dền, tức Kim Đồng, bằng Có công với nước. Bảo tàng Lịch sử quốc gia cho biết đang lưu giữ và trưng bày văn bản này. Bản chụp tấm bằng giúp người đọc tiếp cận một chứng tích về sự ghi nhận đối với anh sau khi hy sinh. Tên người được truy tặng, cơ quan trao bằng và thời điểm ghi trên tài liệu là những chi tiết cần chú ý khi đọc hiện vật. [[cite:certificate]]\n\nGợi ý học tập: hãy xếp ba mốc thành lập Đội, Kim Đồng hy sinh và bằng truy tặng theo thứ tự thời gian. Sau đó, đối chiếu cách một bài tiểu sử kể lại hoạt động với những thông tin có thể đọc từ một văn bản ghi công. Bài tập này giúp phân biệt thời điểm sự việc diễn ra, thời điểm ghi nhận và cách thế hệ sau tìm hiểu lịch sử qua các loại tư liệu. [[cite:learning]]",
+        "sort_order": 0,
+        "is_primary": true,
+        "workflow_status": "draft",
+        "review_note": null
+      },
+      {
+        "id": "a3cbabb1-6fdc-53f8-9e03-f250108252f5",
+        "figure_id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "slug": "van-tien-dung-tu-tham-muu-den-hiep-dong",
+        "title": "Văn Tiến Dũng: từ công tác tham mưu đến hiệp đồng chiến dịch",
+        "summary": "Các mốc từ phong trào công nhân Hà Nội đến nhiệm vụ chỉ huy năm 1975, qua đó tìm hiểu vai trò của tổ chức và hiệp đồng.",
+        "body": "Văn Tiến Dũng quê Cổ Nhuế, Hà Nội. Từ năm 1934, ông hoạt động trong phong trào công nhân ở thành phố. Đến năm 1939, ông đảm nhiệm công việc trong Ban Thường trực Liên đoàn Lao động Hà Nội. Những mốc ấy đặt chặng đường của người chỉ huy về sau trong môi trường tổ chức và vận động người lao động, trước khi ông giữ các trọng trách quân sự. [[cite:origins]]\n\nNăm 1975, trên cương vị Tư lệnh Chiến dịch Hồ Chí Minh, Văn Tiến Dũng cùng Bộ Tư lệnh bàn cách sử dụng lực lượng. Phương án kết hợp việc bao vây, chia cắt các đơn vị đối phương ở vòng ngoài với những mũi tiến nhanh vào các mục tiêu trong nội thành. Việc tổ chức tiến công còn gắn với yêu cầu hạn chế thiệt hại cho nhân dân và thành phố. Đó là những nội dung cụ thể để tìm hiểu công việc của bộ chỉ huy. [[cite:command-method]]\n\nTrong Bộ chỉ huy, Phạm Hùng đảm nhiệm vai trò Chính ủy, bên cạnh Tư lệnh và các cán bộ phụ trách những mặt công tác khác. Lực lượng tiến công được tổ chức thành năm hướng. Ngày 26/4/1975, cuộc tiến công quy mô lớn vào Sài Gòn bắt đầu. Các đơn vị chủ lực phối hợp với lực lượng vũ trang địa phương và phong trào nổi dậy của quần chúng. Đến ngày 30/4, chiến dịch giành thắng lợi. Đặt vai trò Văn Tiến Dũng trong tập thể chỉ huy giúp người học nhìn được nhiều thành phần cùng tham gia một chiến dịch. [[cite:campaign-context]]\n\nMột ảnh tư liệu được Bảo tàng Lịch sử quốc gia giới thiệu ghi lại Văn Tiến Dũng điện báo tin chiến thắng Tây Nguyên trong tháng 3/1975. Bức ảnh đưa người đọc trở lại công việc liên lạc trong chiến tranh. Đây là tư liệu về một thời điểm trước Chiến dịch Hồ Chí Minh, nên cần đọc chú thích tháng và sự kiện đi kèm khi đặt nó cạnh câu chuyện về tháng Tư. [[cite:photo-evidence]]\n\nGợi ý học tập: hãy lập hai cột, một cột ghi nhiệm vụ của người chỉ huy, cột kia ghi lực lượng và công việc cần phối hợp. Từ những mốc trên, có thể thảo luận vì sao một kế hoạch quân sự cần thông tin, phân công và sự hiệp đồng. Cách đọc ấy nối tiểu sử một con người với quá trình tổ chức lực lượng được các tài liệu mô tả. [[cite:learning]]",
+        "sort_order": 0,
+        "is_primary": true,
+        "workflow_status": "draft",
+        "review_note": null
+      }
+    ],
+    "figure_story_sources": [
+      {
+        "story_id": "4448dff1-64ed-5648-980b-9d62984a8f54",
+        "claim_key": "learning",
+        "source_id": "964abd24-dc65-5243-a496-a77b4b897759",
+        "claim_text": "Nhận xét/bài tập biên tập dựa trên tư liệu: Đọc niên biểu, phân công tổ chức và dấu vết tư liệu để đặt nhân vật trong bối cảnh.",
+        "locator": "Các đoạn thành lập và phát triển tổ chức Đội; nhận xét biên tập dựa trên niên biểu và bằng truy tặng.",
+        "scope_note": "Hỗ trợ đoạn tương ứng; các lời gợi ý học tập là diễn giải biên tập, không phải lời nhân vật lịch sử.",
+        "certainty": "editorial",
+        "uncertainty_note": "Bài tập do người biên soạn đề xuất; không gán cho nhân vật hoặc coi là kết luận sử học đã được thẩm định."
+      },
+      {
+        "story_id": "a3cbabb1-6fdc-53f8-9e03-f250108252f5",
+        "claim_key": "learning",
+        "source_id": "9bd86ca5-8298-57a0-8f87-5139528a6f3b",
+        "claim_text": "Nhận xét/bài tập biên tập dựa trên tư liệu: Đọc niên biểu, phân công tổ chức và dấu vết tư liệu để đặt nhân vật trong bối cảnh.",
+        "locator": "Các đoạn tổ chức Bộ chỉ huy và phối hợp các cánh quân; nhận xét biên tập.",
+        "scope_note": "Hỗ trợ đoạn tương ứng; các lời gợi ý học tập là diễn giải biên tập, không phải lời nhân vật lịch sử.",
+        "certainty": "editorial",
+        "uncertainty_note": "Bài tập do người biên soạn đề xuất; không gán cho nhân vật hoặc coi là kết luận sử học đã được thẩm định."
+      },
+      {
+        "story_id": "a3cbabb1-6fdc-53f8-9e03-f250108252f5",
+        "claim_key": "campaign-context",
+        "source_id": "9bd86ca5-8298-57a0-8f87-5139528a6f3b",
+        "claim_text": "Phạm Hùng làm Chính ủy; năm hướng tiến công phối hợp lực lượng địa phương. Chiến dịch diễn ra 26–30/4/1975 và giành thắng lợi.",
+        "locator": "Đoạn thành lập Bộ chỉ huy, Phạm Hùng làm Chính ủy; 5 hướng và tiến công ngày 26–30/4.",
+        "scope_note": "Hỗ trợ đoạn tương ứng; các lời gợi ý học tập là diễn giải biên tập, không phải lời nhân vật lịch sử.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "story_id": "4448dff1-64ed-5648-980b-9d62984a8f54",
+        "claim_key": "certificate",
+        "source_id": "4fcb4ee9-be27-5dad-9b98-1ae8fd088d3b",
+        "claim_text": "Tổng bộ Việt Minh truy tặng Nông Văn Dền–Kim Đồng bằng Có công với nước ngày 2/9/1944; bảo tàng lưu giữ văn bản.",
+        "locator": "Đoạn và chú thích bằng Tổng bộ Việt Minh truy tặng ngày 2/9/1944.",
+        "scope_note": "Hỗ trợ đoạn tương ứng; các lời gợi ý học tập là diễn giải biên tập, không phải lời nhân vật lịch sử.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "story_id": "a3cbabb1-6fdc-53f8-9e03-f250108252f5",
+        "claim_key": "command-method",
+        "source_id": "25fdc599-bec0-5577-867b-44db445bb056",
+        "claim_text": "Với vai trò Tư lệnh năm 1975, Văn Tiến Dũng cùng Bộ Tư lệnh kết hợp bao vây vòng ngoài với tiến công nội thành, chú ý hạn chế thiệt hại.",
+        "locator": "Đoạn vai trò Tư lệnh và cách đánh Chiến dịch Hồ Chí Minh.",
+        "scope_note": "Hỗ trợ đoạn tương ứng; các lời gợi ý học tập là diễn giải biên tập, không phải lời nhân vật lịch sử.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "story_id": "4448dff1-64ed-5648-980b-9d62984a8f54",
+        "claim_key": "origins",
+        "source_id": "82324bac-d375-5581-b3f7-1e957fdc239b",
+        "claim_text": "Nông Văn Dền, bí danh Kim Đồng, sinh năm 1929, người Nùng ở Nà Mạ, Cao Bằng.",
+        "locator": "Mục 1, tên thật, năm sinh, dân tộc và quê quán.",
+        "scope_note": "Hỗ trợ đoạn tương ứng; các lời gợi ý học tập là diễn giải biên tập, không phải lời nhân vật lịch sử.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "story_id": "a3cbabb1-6fdc-53f8-9e03-f250108252f5",
+        "claim_key": "origins",
+        "source_id": "6d6ce116-e8ff-51d7-9164-61fb87eed18f",
+        "claim_text": "Văn Tiến Dũng quê Cổ Nhuế, hoạt động trong phong trào công nhân Hà Nội từ 1934 và công tác tại Liên đoàn Lao động Hà Nội năm 1939.",
+        "locator": "Mục Người chiến sĩ cách mạng kiên trung, các đoạn 1934 và 1939.",
+        "scope_note": "Hỗ trợ đoạn tương ứng; các lời gợi ý học tập là diễn giải biên tập, không phải lời nhân vật lịch sử.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "story_id": "a3cbabb1-6fdc-53f8-9e03-f250108252f5",
+        "claim_key": "photo-evidence",
+        "source_id": "25fdc599-bec0-5577-867b-44db445bb056",
+        "claim_text": "Chú thích ảnh ghi Văn Tiến Dũng điện báo tin chiến thắng Tây Nguyên tháng 3/1975; ảnh có trước chiến dịch tháng Tư.",
+        "locator": "Ảnh đầu bài, chú thích Văn Tiến Dũng điện báo tin chiến thắng Tây Nguyên tháng 3/1975.",
+        "scope_note": "Hỗ trợ đoạn tương ứng; các lời gợi ý học tập là diễn giải biên tập, không phải lời nhân vật lịch sử.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "story_id": "4448dff1-64ed-5648-980b-9d62984a8f54",
+        "claim_key": "protection",
+        "source_id": "82324bac-d375-5581-b3f7-1e957fdc239b",
+        "claim_text": "Kim Đồng làm nhiệm vụ bảo vệ cán bộ, đánh lạc hướng lực lượng truy lùng và hy sinh năm 1943.",
+        "locator": "Mục 1, các đoạn đưa thư, bảo vệ cán bộ và hy sinh năm 1943.",
+        "scope_note": "Hỗ trợ đoạn tương ứng; các lời gợi ý học tập là diễn giải biên tập, không phải lời nhân vật lịch sử.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "story_id": "4448dff1-64ed-5648-980b-9d62984a8f54",
+        "claim_key": "team",
+        "source_id": "964abd24-dc65-5243-a496-a77b4b897759",
+        "claim_text": "Tổ chức Nhi đồng Cứu quốc tại Nà Mạ thành lập 15/5/1941 với năm đội viên; Kim Đồng làm đội trưởng. Thiếu nhi tham gia liên lạc, bảo vệ.",
+        "locator": "Đoạn ngày 15/5/1941, 5 đội viên và đoạn nhiệm vụ liên lạc/bảo vệ của thiếu nhi.",
+        "scope_note": "Hỗ trợ đoạn tương ứng; các lời gợi ý học tập là diễn giải biên tập, không phải lời nhân vật lịch sử.",
+        "certainty": "verified",
+        "uncertainty_note": null
+      }
+    ],
+    "figure_localities": [
+      {
+        "id": "a167c4af-269b-59d9-be98-223a7f9276d9",
+        "figure_id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "locality_code": "01",
+        "relationship_kind": "birthplace",
+        "historical_place_label": "Cổ Nhuế, Từ Liêm, Hà Nội; bài năm 2022 chú giải Cổ Nhuế 2, Bắc Từ Liêm",
+        "explanation": "Bài bảo tàng ghi trực tiếp Văn Tiến Dũng sinh ở Cổ Nhuế, Hà Nội. Chỉ xác nhận quan hệ cấp thành phố, không coi quận/phường trong bài cũ là đơn vị hiện hành.",
+        "claim_key": "locality:01:birthplace",
+        "primary_source_id": "6d6ce116-e8ff-51d7-9164-61fb87eed18f",
+        "certainty": "verified",
+        "uncertainty_note": null
+      },
+      {
+        "id": "60fb3389-a30b-5ab4-bb39-055bccd8a5de",
+        "figure_id": "82f103c8-28e6-5d62-80d7-cfe9f954ffa8",
+        "locality_code": "04",
+        "relationship_kind": "activity",
+        "historical_place_label": "Nà Mạ, Trường Hà, Hà Quảng, Cao Bằng theo nguồn",
+        "explanation": "Kim Đồng làm đội trưởng tổ chức Đội tại Nà Mạ, Cao Bằng năm 1941 và bảo vệ cán bộ tại địa phương năm 1943.",
+        "claim_key": "locality:04:activity",
+        "primary_source_id": "82324bac-d375-5581-b3f7-1e957fdc239b",
+        "certainty": "verified",
+        "uncertainty_note": null
+      }
+    ],
+    "media_assets": [
+      {
+        "id": "038bfb3c-2bab-5dcb-9be2-7a4ee79d4a9c",
+        "figure_id": "82f103c8-28e6-5d62-80d7-cfe9f954ffa8",
+        "event_id": null,
+        "location_id": null,
+        "file_url": "https://baotanglichsu.vn/DataFiles/Uploaded/image/Kim-dong-2.jpg",
+        "media_type": "image",
+        "caption": "Tư liệu bối cảnh, không phải chân dung. Bản chụp bằng Có công với nước do Tổng bộ Việt Minh truy tặng Nông Văn Dền–Kim Đồng ngày 2/9/1944, được Bảo tàng Lịch sử quốc gia giới thiệu. Ảnh chụp văn bản lịch sử; tác giả và năm chụp không được ghi.",
+        "alt_text": "Bản chụp tấm bằng Có công với nước trong khung trưng bày; có nhãn giới thiệu truy tặng Kim Đồng năm 1944, một phần giấy bị lóa sáng.",
+        "source_id": "4fcb4ee9-be27-5dad-9b98-1ae8fd088d3b",
+        "sort_order": 0,
+        "era": "historical",
+        "year_taken": null,
+        "is_reenactment": false,
+        "is_colorized": false,
+        "is_cover": true,
+        "photographer": "Bảo tàng Lịch sử quốc gia · không rõ tác giả",
+        "license": null,
+        "license_url": null,
+        "source_page_url": "https://baotanglichsu.vn/vi/Articles/1002/14283/bang-khen-cua-tong-bo-viet-minh-truy-tang-anh-kim-djong-nguoi-djoi-truong-djau-tien-cua-djoi-tntp-hcm.html",
+        "width": 480,
+        "height": 322,
+        "focal_point": null
+      },
+      {
+        "id": "d823562e-6a2c-5866-bcd6-d1055c24ad7f",
+        "figure_id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "event_id": null,
+        "location_id": null,
+        "file_url": "https://baotanglichsu.vn/DataFiles/Uploaded/image/data%20Hung/thang%204%20nam%202017/vi%20tuong%20chinh%20tri/1.jpg",
+        "media_type": "image",
+        "caption": "Tư liệu bối cảnh, không phải chân dung. Văn Tiến Dũng điện báo tin chiến thắng Tây Nguyên, tháng 3/1975, theo chú thích nguồn. Ảnh tư liệu; tác giả không được ghi. Nguồn: Bảo tàng Lịch sử quốc gia/Tiền Phong.",
+        "alt_text": "Ảnh đen trắng hai người ngồi bên máy liên lạc; nguồn xác định Văn Tiến Dũng điện báo tin chiến thắng Tây Nguyên tháng 3/1975.",
+        "source_id": "25fdc599-bec0-5577-867b-44db445bb056",
+        "sort_order": 0,
+        "era": "historical",
+        "year_taken": 1975,
+        "is_reenactment": false,
+        "is_colorized": false,
+        "is_cover": true,
+        "photographer": "Bảo tàng Lịch sử quốc gia · không rõ tác giả",
+        "license": null,
+        "license_url": null,
+        "source_page_url": "https://baotanglichsu.vn/vi/Articles/3097/19898/100-nam-ngay-sinh-djai-tuong-van-tien-dung-2-5-1917-2-5-2017-vi-tuong-chinh-tri-quan-su-song-toan.html",
+        "width": 480,
+        "height": 286,
+        "focal_point": null
+      }
+    ],
+    "figure_media_evidence": [
+      {
+        "media_id": "038bfb3c-2bab-5dcb-9be2-7a4ee79d4a9c",
+        "figure_id": "82f103c8-28e6-5d62-80d7-cfe9f954ffa8",
+        "depiction_kind": "historical_context",
+        "decision": "accepted",
+        "identity_source_id": "4fcb4ee9-be27-5dad-9b98-1ae8fd088d3b",
+        "identity_locator": "Ảnh thứ hai, tên file Kim-dong-2.jpg; chú thích bằng Có công với nước ngày 2/9/1944 và đoạn hiện vật đang được lưu giữ.",
+        "identity_certainty": "verified",
+        "usage_basis": "coursework_reference",
+        "usage_source_id": null,
+        "usage_locator": null,
+        "usage_note": "Chỉ dùng làm tư liệu tham chiếu cho đồ án học tập theo chính sách chủ dự án đã được ghi tại docs/audits/2026-10-25-journey-popup-media-sources.md và hợp đồng LH-1.0.0-draft.1 mục Evidence and media readiness. Ghi nguồn gốc https://baotanglichsu.vn/vi/Articles/1002/14283/bang-khen-cua-tong-bo-viet-minh-truy-tang-anh-kim-djong-nguoi-djoi-truong-djau-tien-cua-djoi-tntp-hcm.html. Không xác lập giấy phép mở, quyền tái cấp phép, tải lên hoặc xuất bản rộng hơn. Với ảnh văn bản, historical là niên đại tư liệu được tái hiện, không khẳng định ngày chụp khung trưng bày. LH-1.0.0-draft.1; https://baotanglichsu.vn/vi/Articles/1002/14283/bang-khen-cua-tong-bo-viet-minh-truy-tang-anh-kim-djong-nguoi-djoi-truong-djau-tien-cua-djoi-tntp-hcm.html",
+        "checked_at": "2026-10-26T08:52:19.063Z"
+      },
+      {
+        "media_id": "d823562e-6a2c-5866-bcd6-d1055c24ad7f",
+        "figure_id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "depiction_kind": "historical_context",
+        "decision": "accepted",
+        "identity_source_id": "25fdc599-bec0-5577-867b-44db445bb056",
+        "identity_locator": "Ảnh đầu bài (1.jpg), chú thích “Đại tướng Văn Tiến Dũng điện báo tin chiến thắng Tây Nguyên, tháng 3/1975”.",
+        "identity_certainty": "verified",
+        "usage_basis": "coursework_reference",
+        "usage_source_id": null,
+        "usage_locator": null,
+        "usage_note": "Chỉ dùng làm tư liệu tham chiếu cho đồ án học tập theo chính sách chủ dự án đã được ghi tại docs/audits/2026-10-25-journey-popup-media-sources.md và hợp đồng LH-1.0.0-draft.1 mục Evidence and media readiness. Ghi nguồn gốc https://baotanglichsu.vn/vi/Articles/3097/19898/100-nam-ngay-sinh-djai-tuong-van-tien-dung-2-5-1917-2-5-2017-vi-tuong-chinh-tri-quan-su-song-toan.html. Không xác lập giấy phép mở, quyền tái cấp phép, tải lên hoặc xuất bản rộng hơn. Với ảnh văn bản, historical là niên đại tư liệu được tái hiện, không khẳng định ngày chụp khung trưng bày. LH-1.0.0-draft.1; https://baotanglichsu.vn/vi/Articles/3097/19898/100-nam-ngay-sinh-djai-tuong-van-tien-dung-2-5-1917-2-5-2017-vi-tuong-chinh-tri-quan-su-song-toan.html",
+        "checked_at": "2026-10-26T08:52:19.063Z"
+      }
+    ]
+  },
+  "sourceRecords": [
+    {
+      "id": "src-research-hcm-campaign-1975",
+      "existingSourceId": null,
+      "title": "Chiến dịch Hồ Chí Minh lịch sử (26/4-30/4/1975)",
+      "authorOrg": "Minh Vượng (tổng hợp) — Bảo tàng Lịch sử quốc gia",
+      "publisher": "Minh Vượng (tổng hợp) — Bảo tàng Lịch sử quốc gia",
+      "publishedYear": 2013,
+      "publishedOn": "2013-04-24",
+      "url": "https://baotanglichsu.vn/vi/Articles/2002/67989/chien-dich-ho-chi-minh-lich-su-26-4-30-4-1975.html",
+      "documentRef": null,
+      "sourceType": "article",
+      "citation": "Minh Vượng (tổng hợp) — Bảo tàng Lịch sử quốc gia. Chiến dịch Hồ Chí Minh lịch sử (26/4-30/4/1975). 2013-04-24. Truy cập 2026-10-26.",
+      "accessedAt": "2026-10-26",
+      "independenceKey": "baotanglichsu.vn",
+      "scopeNote": "Đoạn Bộ chỉ huy tháng 4/1975, kế hoạch 5 hướng và tiến công 26–30/4. Không dùng các giờ chiếm Dinh, ngày Thiệu từ chức hoặc ngày các đảo được giải phóng vì chưa đối chiếu thêm.",
+      "checkedStatus": "checked",
+      "checkedAt": "2026-10-26T08:52:19.063Z",
+      "decision": "accepted",
+      "decisionReason": "Đã mở và đọc phần nội dung tương ứng; chỉ chấp nhận trong phạm vi ghi ở scopeNote."
+    },
+    {
+      "id": "src-research-kim-dong",
+      "existingSourceId": null,
+      "title": "Bằng khen của Tổng bộ Việt Minh truy tặng anh Kim Đồng – Người đội trưởng đầu tiên của Đội TNTP HCM.",
+      "authorOrg": "Bảo tàng Lịch sử quốc gia",
+      "publisher": "Bảo tàng Lịch sử quốc gia",
+      "publishedYear": 2013,
+      "publishedOn": "2013-05-16",
+      "url": "https://baotanglichsu.vn/vi/Articles/1002/14283/bang-khen-cua-tong-bo-viet-minh-truy-tang-anh-kim-djong-nguoi-djoi-truong-djau-tien-cua-djoi-tntp-hcm.html",
+      "documentRef": null,
+      "sourceType": "article",
+      "citation": "Bảo tàng Lịch sử quốc gia. Bằng khen của Tổng bộ Việt Minh truy tặng anh Kim Đồng – Người đội trưởng đầu tiên của Đội TNTP HCM.. 2013-05-16. Truy cập 2026-10-26.",
+      "accessedAt": "2026-10-26",
+      "independenceKey": "baotanglichsu.vn",
+      "scopeNote": "Đoạn đầu Nông Văn Dền, đội Nà Mạ năm 1941; mô tả bằng truy tặng 1944. Không dùng đoạn gặp Bác cuối tháng giêng 1941 khi chưa đối chiếu niên biểu. Ảnh mộ hiện nay không đủ điều kiện ảnh đại diện lịch sử.",
+      "checkedStatus": "checked",
+      "checkedAt": "2026-10-26T08:45:18.165Z",
+      "decision": "accepted",
+      "decisionReason": "Đã mở và đọc phần nội dung tương ứng; chỉ chấp nhận trong phạm vi ghi ở scopeNote."
+    },
+    {
+      "id": "src-research-kim-dong-province",
+      "existingSourceId": null,
+      "title": "Tiểu sử sơ lược 5 đội viên đầu tiên của Đội TNTP Hồ Chí Minh.",
+      "authorOrg": "Ban Tuyên giáo Tỉnh Đoàn Cao Bằng (tổng hợp)",
+      "publisher": "Ban Tuyên giáo Tỉnh Đoàn Cao Bằng (tổng hợp)",
+      "publishedYear": null,
+      "publishedOn": null,
+      "url": "https://tinhdoan.caobang.gov.vn/index.php/hoat-dong-doi/tieu-su-so-luoc-5-doi-vien-dau-tien-cua-doi-tntp-ho-chi-minh-1615.html",
+      "documentRef": null,
+      "sourceType": "article",
+      "citation": "Ban Tuyên giáo Tỉnh Đoàn Cao Bằng (tổng hợp). Tiểu sử sơ lược 5 đội viên đầu tiên của Đội TNTP Hồ Chí Minh.. Không xác định ngày xuất bản trong lần đọc. Truy cập 2026-10-26.",
+      "accessedAt": "2026-10-26",
+      "independenceKey": "tinhdoan.caobang.gov.vn",
+      "scopeNote": "Mục 1, Nông Văn Dền–Kim Đồng: quê Nà Mạ, Nùng, 1929; đội trưởng 1941, bảo vệ cán bộ và hy sinh năm 1943. Chỉ nghiên cứu Kim Đồng trong mục này; các đội viên còn lại không tự thêm vào roster. Không dùng tháng gặp Hồ Chí Minh do hai bài khác nhau.",
+      "checkedStatus": "checked",
+      "checkedAt": "2026-10-26T08:52:19.063Z",
+      "decision": "accepted",
+      "decisionReason": "Đã mở và đọc phần nội dung tương ứng; chỉ chấp nhận trong phạm vi ghi ở scopeNote."
+    },
+    {
+      "id": "src-research-kim-dong-team",
+      "existingSourceId": null,
+      "title": "15/5/1941: Thành lập Đội Thiếu niên Tiền phong Hồ Chí Minh",
+      "authorOrg": "Lê Khiêm (tổng hợp) — Bảo tàng Lịch sử quốc gia",
+      "publisher": "Lê Khiêm (tổng hợp) — Bảo tàng Lịch sử quốc gia",
+      "publishedYear": 2014,
+      "publishedOn": "2014-05-14",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/16339/15-5-1941-thanh-lap-djoi-thieu-nien-tien-phong-ho-chi-minh.html",
+      "documentRef": null,
+      "sourceType": "article",
+      "citation": "Lê Khiêm (tổng hợp) — Bảo tàng Lịch sử quốc gia. 15/5/1941: Thành lập Đội Thiếu niên Tiền phong Hồ Chí Minh. 2014-05-14. Truy cập 2026-10-26.",
+      "accessedAt": "2026-10-26",
+      "independenceKey": "baotanglichsu.vn",
+      "scopeNote": "Đoạn Nà Mạ 15/5/1941, 5 đội viên đầu tiên và nhiệm vụ liên lạc/bảo vệ của thiếu nhi. Bài dẫn Dương Trung Quốc, Việt Nam những sự kiện lịch sử 1919–1945 (Giáo dục, 2000), tr.330–331; chưa trực tiếp mở sách.",
+      "checkedStatus": "checked",
+      "checkedAt": "2026-10-26T08:52:19.063Z",
+      "decision": "accepted",
+      "decisionReason": "Đã mở và đọc phần nội dung tương ứng; chỉ chấp nhận trong phạm vi ghi ở scopeNote."
+    },
+    {
+      "id": "src-research-van-tien-dung",
+      "existingSourceId": null,
+      "title": "Kỷ niệm 105 năm Ngày sinh Đại tướng Văn Tiến Dũng: Vị Đại tướng Anh hùng",
+      "authorOrg": "Bảo tàng Lịch sử quốc gia (đăng lại Báo Quân đội nhân dân)",
+      "publisher": "Bảo tàng Lịch sử quốc gia (đăng lại Báo Quân đội nhân dân)",
+      "publishedYear": 2022,
+      "publishedOn": "2022-05-04",
+      "url": "https://baotanglichsu.vn/vi/Articles/3098/73084/ky-niem-105-nam-ngay-sinh-djai-tuong-van-tien-dung-vi-djai-tuong-anh-hung.html",
+      "documentRef": null,
+      "sourceType": "article",
+      "citation": "Bảo tàng Lịch sử quốc gia (đăng lại Báo Quân đội nhân dân). Kỷ niệm 105 năm Ngày sinh Đại tướng Văn Tiến Dũng: Vị Đại tướng Anh hùng. 2022-05-04. Truy cập 2026-10-26.",
+      "accessedAt": "2026-10-26",
+      "independenceKey": "baotanglichsu.vn",
+      "scopeNote": "Đoạn Cổ Nhuế và hoạt động công nhân Hà Nội năm 1934; phần vai trò chỉ huy các chiến dịch. Tách ảnh/claim chuyện ở lần kiểm tra riêng; không tự thêm danh hiệu Anh hùng LLVTND từ cách gọi trong tiêu đề.",
+      "checkedStatus": "checked",
+      "checkedAt": "2026-10-26T08:45:18.165Z",
+      "decision": "accepted",
+      "decisionReason": "Đã mở và đọc phần nội dung tương ứng; chỉ chấp nhận trong phạm vi ghi ở scopeNote."
+    },
+    {
+      "id": "src-research-van-tien-dung-2017",
+      "existingSourceId": null,
+      "title": "100 năm ngày sinh Đại tướng Văn Tiến Dũng (2/5/1917-2/5/2017): Vị tướng chính trị - quân sự song toàn",
+      "authorOrg": "Bảo tàng Lịch sử quốc gia; bài dẫn nguồn Tiền Phong",
+      "publisher": "Bảo tàng Lịch sử quốc gia; bài dẫn nguồn Tiền Phong",
+      "publishedYear": 2017,
+      "publishedOn": "2017-04-25",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/19898/100-nam-ngay-sinh-djai-tuong-van-tien-dung-2-5-1917-2-5-2017-vi-tuong-chinh-tri-quan-su-song-toan.html",
+      "documentRef": null,
+      "sourceType": "article",
+      "citation": "Bảo tàng Lịch sử quốc gia; bài dẫn nguồn Tiền Phong. 100 năm ngày sinh Đại tướng Văn Tiến Dũng (2/5/1917-2/5/2017): Vị tướng chính trị - quân sự song toàn. 2017-04-25. Truy cập 2026-10-26.",
+      "accessedAt": "2026-10-26",
+      "independenceKey": "baotanglichsu.vn",
+      "scopeNote": "Mục Nhà chỉ huy tham mưu chiến lược tài năng, vai trò Tư lệnh Chiến dịch Hồ Chí Minh; chú thích ảnh đầu tháng 3/1975. Đã tải và xem ảnh gốc 480×286; không định danh người thứ hai hay xác định địa điểm chụp từ vẻ ngoài.",
+      "checkedStatus": "checked",
+      "checkedAt": "2026-10-26T08:52:19.063Z",
+      "decision": "accepted",
+      "decisionReason": "Đã mở và đọc phần nội dung tương ứng; chỉ chấp nhận trong phạm vi ghi ở scopeNote."
+    }
+  ],
+  "sourceFingerprints": [
+    {
+      "id": "src-research-hcm-campaign-1975",
+      "databaseId": "9bd86ca5-8298-57a0-8f87-5139528a6f3b",
+      "recordSha256": "c9c4d73484268fd241663b271e2e088f76bce20bc35bb232991f6d97479654de",
+      "originalPageSha256": "4a5f325e8bf36ea84b78fa0be61f22c1e558020e8c73e2f6c90c2558b200f2aa"
+    },
+    {
+      "id": "src-research-kim-dong",
+      "databaseId": "4fcb4ee9-be27-5dad-9b98-1ae8fd088d3b",
+      "recordSha256": "eda8e1d23c197bbd5d60f4a417b6106656ca87e5cd548dbf213e990f1b926df3",
+      "originalPageSha256": "420b729f95df1bb34173b5e029ed99fe85c79cbe35566127327c7445d1b39b7a"
+    },
+    {
+      "id": "src-research-kim-dong-province",
+      "databaseId": "82324bac-d375-5581-b3f7-1e957fdc239b",
+      "recordSha256": "5c6e3403d118813a675ef21869542703ee76701fd06bd8943ad0327d2f6807ab",
+      "originalPageSha256": "ade020e742afcf430efa3e8774e29549092adc542df89cffa74c6279848ff799"
+    },
+    {
+      "id": "src-research-kim-dong-team",
+      "databaseId": "964abd24-dc65-5243-a496-a77b4b897759",
+      "recordSha256": "41f911ad9ecd1d10b26fda866d8ef3848cc01d0206e274299eb7785bec8e130c",
+      "originalPageSha256": "1143151a27fe3c7d472f44bec592217bdb12cf32f1401683fd6ed6c424ad1fc8"
+    },
+    {
+      "id": "src-research-van-tien-dung",
+      "databaseId": "6d6ce116-e8ff-51d7-9164-61fb87eed18f",
+      "recordSha256": "aa51566243ec7b22d0054e073286d5ed593c8a5f47dbef12a3118b93e95417c3",
+      "originalPageSha256": "8ec980d2bb531f93e95609d4f5bcf32eee2a3966de6d5df12e98d6a11812cd18"
+    },
+    {
+      "id": "src-research-van-tien-dung-2017",
+      "databaseId": "25fdc599-bec0-5577-867b-44db445bb056",
+      "recordSha256": "07dde1a1aeba6a9c38c7c31ea908ecaaee718d393af2cef7796948a28eb89681",
+      "originalPageSha256": "ab24a34439a4dc6cd129e7b095a069990bbefa766f02bb038d066265f834ad60"
+    }
+  ],
+  "mediaFingerprints": [
+    {
+      "id": "media-research-kim-dong-certificate-1944",
+      "databaseId": "038bfb3c-2bab-5dcb-9be2-7a4ee79d4a9c",
+      "sha256": "a95f0542b17ee3d68e3630aa98ef0bc9006f16da87a23cd7256ff5a64899ad4b"
+    },
+    {
+      "id": "media-research-van-tien-dung-1975",
+      "databaseId": "d823562e-6a2c-5866-bcd6-d1055c24ad7f",
+      "sha256": "2dc066412153ed1d81d4db4b5506ed1b1d53611c2325273e2f320cf442bb283e"
+    }
+  ],
+  "snapshotHash": "4110c2782371654e0f74621036fb680b995aebe1c1ba1795dddd67ed0d43cbc8"
+}

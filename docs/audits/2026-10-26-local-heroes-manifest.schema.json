@@ -1,0 +1,2998 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/contracts/local-heroes/LH-1.0.0-draft.1",
+  "title": "Local revolutionary figures research package contract",
+  "description": "Phase 00 documentation contract LH-1.0.0-draft.1, owner-approved on 2026-10-26; Phase 01 remains unstarted for the owner to invoke with another model. This is not historical content, an importer or approval of actual candidate names/roster. Cross-document, semantic evidence, normalization, hash and release rules are defined by the companion contract.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/manifest"
+    },
+    {
+      "$ref": "#/$defs/localitiesDocument"
+    },
+    {
+      "$ref": "#/$defs/sourcesDocument"
+    },
+    {
+      "$ref": "#/$defs/claimsDocument"
+    },
+    {
+      "$ref": "#/$defs/mediaDocument"
+    },
+    {
+      "$ref": "#/$defs/peopleDocument"
+    },
+    {
+      "$ref": "#/$defs/storiesDocument"
+    },
+    {
+      "$ref": "#/$defs/relationsDocument"
+    },
+    {
+      "$ref": "#/$defs/rosterDocument"
+    },
+    {
+      "$ref": "#/$defs/coverageDocument"
+    }
+  ],
+  "$defs": {
+    "locality": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "enum": [
+            "01",
+            "04",
+            "08",
+            "11",
+            "12",
+            "14",
+            "15",
+            "19",
+            "20",
+            "22",
+            "24",
+            "25",
+            "31",
+            "33",
+            "37",
+            "38",
+            "40",
+            "42",
+            "44",
+            "46",
+            "48",
+            "51",
+            "52",
+            "56",
+            "66",
+            "68",
+            "75",
+            "79",
+            "80",
+            "82",
+            "86",
+            "91",
+            "92",
+            "96"
+          ]
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 160
+        },
+        "officialName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "referenceFramework": {
+          "const": "VN-34-2025"
+        }
+      },
+      "required": [
+        "code",
+        "slug",
+        "officialName",
+        "referenceFramework"
+      ],
+      "additionalProperties": false,
+      "oneOf": [
+        {
+          "properties": {
+            "code": {
+              "const": "01"
+            },
+            "slug": {
+              "const": "ha-noi"
+            },
+            "officialName": {
+              "const": "Thành phố Hà Nội"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "04"
+            },
+            "slug": {
+              "const": "cao-bang"
+            },
+            "officialName": {
+              "const": "Tỉnh Cao Bằng"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "08"
+            },
+            "slug": {
+              "const": "tuyen-quang"
+            },
+            "officialName": {
+              "const": "Tỉnh Tuyên Quang"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "11"
+            },
+            "slug": {
+              "const": "dien-bien"
+            },
+            "officialName": {
+              "const": "Tỉnh Điện Biên"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "12"
+            },
+            "slug": {
+              "const": "lai-chau"
+            },
+            "officialName": {
+              "const": "Tỉnh Lai Châu"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "14"
+            },
+            "slug": {
+              "const": "son-la"
+            },
+            "officialName": {
+              "const": "Tỉnh Sơn La"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "15"
+            },
+            "slug": {
+              "const": "lao-cai"
+            },
+            "officialName": {
+              "const": "Tỉnh Lào Cai"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "19"
+            },
+            "slug": {
+              "const": "thai-nguyen"
+            },
+            "officialName": {
+              "const": "Tỉnh Thái Nguyên"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "20"
+            },
+            "slug": {
+              "const": "lang-son"
+            },
+            "officialName": {
+              "const": "Tỉnh Lạng Sơn"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "22"
+            },
+            "slug": {
+              "const": "quang-ninh"
+            },
+            "officialName": {
+              "const": "Tỉnh Quảng Ninh"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "24"
+            },
+            "slug": {
+              "const": "bac-ninh"
+            },
+            "officialName": {
+              "const": "Tỉnh Bắc Ninh"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "25"
+            },
+            "slug": {
+              "const": "phu-tho"
+            },
+            "officialName": {
+              "const": "Tỉnh Phú Thọ"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "31"
+            },
+            "slug": {
+              "const": "hai-phong"
+            },
+            "officialName": {
+              "const": "Thành phố Hải Phòng"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "33"
+            },
+            "slug": {
+              "const": "hung-yen"
+            },
+            "officialName": {
+              "const": "Tỉnh Hưng Yên"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "37"
+            },
+            "slug": {
+              "const": "ninh-binh"
+            },
+            "officialName": {
+              "const": "Tỉnh Ninh Bình"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "38"
+            },
+            "slug": {
+              "const": "thanh-hoa"
+            },
+            "officialName": {
+              "const": "Tỉnh Thanh Hóa"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "40"
+            },
+            "slug": {
+              "const": "nghe-an"
+            },
+            "officialName": {
+              "const": "Tỉnh Nghệ An"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "42"
+            },
+            "slug": {
+              "const": "ha-tinh"
+            },
+            "officialName": {
+              "const": "Tỉnh Hà Tĩnh"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "44"
+            },
+            "slug": {
+              "const": "quang-tri"
+            },
+            "officialName": {
+              "const": "Tỉnh Quảng Trị"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "46"
+            },
+            "slug": {
+              "const": "hue"
+            },
+            "officialName": {
+              "const": "Thành phố Huế"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "48"
+            },
+            "slug": {
+              "const": "da-nang"
+            },
+            "officialName": {
+              "const": "Thành phố Đà Nẵng"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "51"
+            },
+            "slug": {
+              "const": "quang-ngai"
+            },
+            "officialName": {
+              "const": "Tỉnh Quảng Ngãi"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "52"
+            },
+            "slug": {
+              "const": "gia-lai"
+            },
+            "officialName": {
+              "const": "Tỉnh Gia Lai"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "56"
+            },
+            "slug": {
+              "const": "khanh-hoa"
+            },
+            "officialName": {
+              "const": "Tỉnh Khánh Hòa"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "66"
+            },
+            "slug": {
+              "const": "dak-lak"
+            },
+            "officialName": {
+              "const": "Tỉnh Đắk Lắk"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "68"
+            },
+            "slug": {
+              "const": "lam-dong"
+            },
+            "officialName": {
+              "const": "Tỉnh Lâm Đồng"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "75"
+            },
+            "slug": {
+              "const": "dong-nai"
+            },
+            "officialName": {
+              "const": "Tỉnh Đồng Nai"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "79"
+            },
+            "slug": {
+              "const": "ho-chi-minh"
+            },
+            "officialName": {
+              "const": "Thành phố Hồ Chí Minh"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "80"
+            },
+            "slug": {
+              "const": "tay-ninh"
+            },
+            "officialName": {
+              "const": "Tỉnh Tây Ninh"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "82"
+            },
+            "slug": {
+              "const": "dong-thap"
+            },
+            "officialName": {
+              "const": "Tỉnh Đồng Tháp"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "86"
+            },
+            "slug": {
+              "const": "vinh-long"
+            },
+            "officialName": {
+              "const": "Tỉnh Vĩnh Long"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "91"
+            },
+            "slug": {
+              "const": "an-giang"
+            },
+            "officialName": {
+              "const": "Tỉnh An Giang"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "92"
+            },
+            "slug": {
+              "const": "can-tho"
+            },
+            "officialName": {
+              "const": "Thành phố Cần Thơ"
+            }
+          }
+        },
+        {
+          "properties": {
+            "code": {
+              "const": "96"
+            },
+            "slug": {
+              "const": "ca-mau"
+            },
+            "officialName": {
+              "const": "Tỉnh Cà Mau"
+            }
+          }
+        }
+      ]
+    },
+    "sourceRef": {
+      "type": "object",
+      "properties": {
+        "sourceId": {
+          "type": "string",
+          "pattern": "^src-[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 160
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "scopeNote": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        }
+      },
+      "required": [
+        "sourceId",
+        "locator",
+        "scopeNote"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^src-[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 160
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "authorOrg": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "publisher": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "publishedYear": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2200
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "publishedOn": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://[^\\s]+$",
+              "maxLength": 2048
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "documentRef": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sourceType": {
+          "type": "string",
+          "enum": [
+            "book",
+            "article",
+            "official",
+            "web",
+            "archive",
+            "other"
+          ]
+        },
+        "citation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "accessedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "independenceKey": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "scopeNote": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "checkedStatus": {
+          "type": "string",
+          "enum": [
+            "lead",
+            "checked",
+            "unreachable"
+          ]
+        },
+        "checkedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "decision": {
+          "type": "string",
+          "enum": [
+            "accepted",
+            "held",
+            "excluded"
+          ]
+        },
+        "decisionReason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "existingSourceId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "authorOrg",
+        "publisher",
+        "publishedYear",
+        "publishedOn",
+        "url",
+        "documentRef",
+        "sourceType",
+        "citation",
+        "accessedAt",
+        "independenceKey",
+        "scopeNote",
+        "checkedStatus",
+        "checkedAt",
+        "decision",
+        "decisionReason",
+        "existingSourceId"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "decision": {
+                "const": "accepted"
+              }
+            },
+            "required": [
+              "decision"
+            ]
+          },
+          "then": {
+            "properties": {
+              "checkedStatus": {
+                "const": "checked"
+              },
+              "checkedAt": {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "Z$"
+              },
+              "accessedAt": {
+                "type": "string",
+                "format": "date"
+              }
+            },
+            "allOf": [
+              {
+                "anyOf": [
+                  {
+                    "properties": {
+                      "authorOrg": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 300
+                      }
+                    }
+                  },
+                  {
+                    "properties": {
+                      "publisher": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 300
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "anyOf": [
+                  {
+                    "properties": {
+                      "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "pattern": "^https://[^\\s]+$",
+                        "maxLength": 2048
+                      }
+                    }
+                  },
+                  {
+                    "properties": {
+                      "documentRef": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 2000
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "claim": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^clm-[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 160
+        },
+        "subjectKind": {
+          "type": "string",
+          "enum": [
+            "person",
+            "story",
+            "relation",
+            "media"
+          ]
+        },
+        "subjectKey": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_-]*(?::[a-z0-9_-]+)*$",
+          "maxLength": 160
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 6000
+        },
+        "certainty": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "approximate",
+            "disputed",
+            "editorial"
+          ]
+        },
+        "uncertaintyNote": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourceRef"
+          },
+          "minItems": 0,
+          "maxItems": 20
+        },
+        "decision": {
+          "type": "string",
+          "enum": [
+            "accepted",
+            "held",
+            "excluded"
+          ]
+        },
+        "decisionReason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "checkedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "subjectKind",
+        "subjectKey",
+        "key",
+        "text",
+        "certainty",
+        "uncertaintyNote",
+        "sourceRefs",
+        "decision",
+        "decisionReason",
+        "checkedAt"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "decision": {
+                "const": "accepted"
+              }
+            },
+            "required": [
+              "decision"
+            ]
+          },
+          "then": {
+            "properties": {
+              "sourceRefs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/sourceRef"
+                },
+                "minItems": 1,
+                "maxItems": 20
+              },
+              "checkedAt": {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "Z$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "certainty": {
+                "enum": [
+                  "approximate",
+                  "disputed"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "uncertaintyNote": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "certainty": {
+                "const": "disputed"
+              },
+              "decision": {
+                "const": "accepted"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "sourceRefs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/sourceRef"
+                },
+                "minItems": 2,
+                "maxItems": 20
+              }
+            }
+          }
+        }
+      ]
+    },
+    "media": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^media-[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 160
+        },
+        "personKey": {
+          "type": "string",
+          "pattern": "^(figure:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|new:[a-z0-9]+(?:-[a-z0-9]+)*)$",
+          "maxLength": 200
+        },
+        "sourcePageUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://[^\\s]+$",
+              "maxLength": 2048
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "fileUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://[^\\s]+$",
+              "maxLength": 2048
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "localPath": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^public/images/[a-zA-Z0-9/_-]+\\.(webp|jpg|jpeg|png)$",
+              "maxLength": 400
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "caption": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "altText": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "creator": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "institution": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "width": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "height": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "bytes": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2147483647
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "depictionKind": {
+          "type": "string",
+          "enum": [
+            "portrait",
+            "historical_context"
+          ]
+        },
+        "era": {
+          "type": "string",
+          "enum": [
+            "historical",
+            "illustration",
+            "today"
+          ]
+        },
+        "yearTaken": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2200
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "isReenactment": {
+          "type": "boolean"
+        },
+        "isColorized": {
+          "type": "boolean"
+        },
+        "license": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "licenseUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://[^\\s]+$",
+              "maxLength": 2048
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "usageBasis": {
+          "type": "string",
+          "enum": [
+            "open_license",
+            "public_domain",
+            "permission",
+            "coursework_reference",
+            "unknown"
+          ]
+        },
+        "usageNote": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "identityClaimId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^clm-[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "maxLength": 160
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "usageClaimId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^clm-[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "maxLength": 160
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "checkedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "decision": {
+          "type": "string",
+          "enum": [
+            "accepted",
+            "held",
+            "excluded"
+          ]
+        },
+        "decisionReason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "holdReasons": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "minItems": 0,
+          "maxItems": 30
+        },
+        "existingMediaId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "personKey",
+        "sourcePageUrl",
+        "fileUrl",
+        "localPath",
+        "caption",
+        "altText",
+        "creator",
+        "institution",
+        "width",
+        "height",
+        "bytes",
+        "sha256",
+        "depictionKind",
+        "era",
+        "yearTaken",
+        "isReenactment",
+        "isColorized",
+        "license",
+        "licenseUrl",
+        "usageBasis",
+        "usageNote",
+        "identityClaimId",
+        "usageClaimId",
+        "checkedAt",
+        "decision",
+        "decisionReason",
+        "holdReasons",
+        "existingMediaId"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "decision": {
+                "const": "accepted"
+              }
+            },
+            "required": [
+              "decision"
+            ]
+          },
+          "then": {
+            "properties": {
+              "sourcePageUrl": {
+                "type": "string",
+                "format": "uri",
+                "pattern": "^https://[^\\s]+$",
+                "maxLength": 2048
+              },
+              "caption": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "altText": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 50000
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 50000
+              },
+              "era": {
+                "type": "string",
+                "enum": [
+                  "historical",
+                  "illustration"
+                ]
+              },
+              "identityClaimId": {
+                "type": "string",
+                "pattern": "^clm-[a-z0-9]+(?:-[a-z0-9]+)*$",
+                "maxLength": 160
+              },
+              "checkedAt": {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "Z$"
+              },
+              "usageBasis": {
+                "type": "string",
+                "enum": [
+                  "open_license",
+                  "public_domain",
+                  "permission",
+                  "coursework_reference"
+                ]
+              },
+              "holdReasons": {
+                "maxItems": 0
+              }
+            },
+            "anyOf": [
+              {
+                "properties": {
+                  "fileUrl": {
+                    "type": "string",
+                    "format": "uri",
+                    "pattern": "^https://[^\\s]+$",
+                    "maxLength": 2048
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "localPath": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "decision": {
+                "const": "accepted"
+              },
+              "usageBasis": {
+                "enum": [
+                  "open_license",
+                  "public_domain",
+                  "permission"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "usageClaimId": {
+                "type": "string",
+                "pattern": "^clm-[a-z0-9]+(?:-[a-z0-9]+)*$",
+                "maxLength": 160
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "decision": {
+                "const": "accepted"
+              },
+              "usageBasis": {
+                "const": "coursework_reference"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "usageNote": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "decision": {
+                "const": "accepted"
+              },
+              "depictionKind": {
+                "const": "portrait"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "era": {
+                "const": "historical"
+              },
+              "isReenactment": {
+                "const": false
+              },
+              "isColorized": {
+                "const": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "decision": {
+                "const": "held"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "holdReasons": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2000
+                },
+                "minItems": 1,
+                "maxItems": 30
+              }
+            }
+          }
+        }
+      ]
+    },
+    "person": {
+      "type": "object",
+      "properties": {
+        "personKey": {
+          "type": "string",
+          "pattern": "^(figure:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|new:[a-z0-9]+(?:-[a-z0-9]+)*)$",
+          "maxLength": 200
+        },
+        "existingFigureId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 160
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "minItems": 0,
+          "maxItems": 20,
+          "uniqueItems": true
+        },
+        "birthYear": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2200
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "deathYear": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2200
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "biography": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 20000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "contributionSummary": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 600
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "contributionStartYear": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2200
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "contributionEndYear": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2200
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "claimIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^clm-[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "maxLength": 160
+          },
+          "minItems": 0,
+          "maxItems": 10000,
+          "uniqueItems": true
+        },
+        "mainStoryId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^story-[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "maxLength": 160
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "representativeMediaId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^media-[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "maxLength": 160
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "existingIdentityChecked": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "personKey",
+        "existingFigureId",
+        "slug",
+        "name",
+        "aliases",
+        "birthYear",
+        "deathYear",
+        "biography",
+        "contributionSummary",
+        "contributionStartYear",
+        "contributionEndYear",
+        "claimIds",
+        "mainStoryId",
+        "representativeMediaId",
+        "existingIdentityChecked"
+      ],
+      "additionalProperties": false
+    },
+    "story": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^story-[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 160
+        },
+        "personKey": {
+          "type": "string",
+          "pattern": "^(figure:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|new:[a-z0-9]+(?:-[a-z0-9]+)*)$",
+          "maxLength": 200
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 160
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 600
+        },
+        "body": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 20000
+        },
+        "sortOrder": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "isPrimary": {
+          "type": "boolean"
+        },
+        "claimIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^clm-[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "maxLength": 160
+          },
+          "minItems": 0,
+          "maxItems": 10000,
+          "uniqueItems": true
+        },
+        "decision": {
+          "type": "string",
+          "enum": [
+            "accepted",
+            "held",
+            "excluded"
+          ]
+        },
+        "decisionReason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        }
+      },
+      "required": [
+        "id",
+        "personKey",
+        "slug",
+        "title",
+        "summary",
+        "body",
+        "sortOrder",
+        "isPrimary",
+        "claimIds",
+        "decision",
+        "decisionReason"
+      ],
+      "additionalProperties": false
+    },
+    "relation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^rel-[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 160
+        },
+        "personKey": {
+          "type": "string",
+          "pattern": "^(figure:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|new:[a-z0-9]+(?:-[a-z0-9]+)*)$",
+          "maxLength": 200
+        },
+        "localityCode": {
+          "type": "string",
+          "enum": [
+            "01",
+            "04",
+            "08",
+            "11",
+            "12",
+            "14",
+            "15",
+            "19",
+            "20",
+            "22",
+            "24",
+            "25",
+            "31",
+            "33",
+            "37",
+            "38",
+            "40",
+            "42",
+            "44",
+            "46",
+            "48",
+            "51",
+            "52",
+            "56",
+            "66",
+            "68",
+            "75",
+            "79",
+            "80",
+            "82",
+            "86",
+            "91",
+            "92",
+            "96"
+          ]
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "birthplace",
+            "home_origin",
+            "activity",
+            "commemoration"
+          ]
+        },
+        "historicalPlaceLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "claimId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^clm-[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "maxLength": 160
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "certainty": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "approximate",
+            "disputed",
+            "editorial"
+          ]
+        },
+        "uncertaintyNote": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "decision": {
+          "type": "string",
+          "enum": [
+            "accepted",
+            "held",
+            "excluded"
+          ]
+        },
+        "decisionReason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        }
+      },
+      "required": [
+        "id",
+        "personKey",
+        "localityCode",
+        "kind",
+        "historicalPlaceLabel",
+        "explanation",
+        "claimId",
+        "certainty",
+        "uncertaintyNote",
+        "decision",
+        "decisionReason"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "decision": {
+                "const": "accepted"
+              }
+            },
+            "required": [
+              "decision"
+            ]
+          },
+          "then": {
+            "properties": {
+              "claimId": {
+                "type": "string",
+                "pattern": "^clm-[a-z0-9]+(?:-[a-z0-9]+)*$",
+                "maxLength": 160
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "certainty": {
+                "enum": [
+                  "approximate",
+                  "disputed"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "uncertaintyNote": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              }
+            }
+          }
+        }
+      ]
+    },
+    "rosterEntry": {
+      "type": "object",
+      "properties": {
+        "personKey": {
+          "type": "string",
+          "pattern": "^(figure:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|new:[a-z0-9]+(?:-[a-z0-9]+)*)$",
+          "maxLength": 200
+        },
+        "nominationOrigin": {
+          "type": "string",
+          "enum": [
+            "existing",
+            "discovery_pass_1",
+            "discovery_pass_2",
+            "owner"
+          ]
+        },
+        "nominatedLocalityCodes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "01",
+              "04",
+              "08",
+              "11",
+              "12",
+              "14",
+              "15",
+              "19",
+              "20",
+              "22",
+              "24",
+              "25",
+              "31",
+              "33",
+              "37",
+              "38",
+              "40",
+              "42",
+              "44",
+              "46",
+              "48",
+              "51",
+              "52",
+              "56",
+              "66",
+              "68",
+              "75",
+              "79",
+              "80",
+              "82",
+              "86",
+              "91",
+              "92",
+              "96"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 34,
+          "uniqueItems": true
+        },
+        "nominationSourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^src-[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "maxLength": 160
+          },
+          "minItems": 0,
+          "maxItems": 10000,
+          "uniqueItems": true
+        },
+        "decision": {
+          "type": "string",
+          "enum": [
+            "accepted",
+            "held",
+            "excluded"
+          ]
+        },
+        "decisionReason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "readiness": {
+          "type": "string",
+          "enum": [
+            "needs_evidence",
+            "complete"
+          ]
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "minItems": 0,
+          "maxItems": 30
+        }
+      },
+      "required": [
+        "personKey",
+        "nominationOrigin",
+        "nominatedLocalityCodes",
+        "nominationSourceIds",
+        "decision",
+        "decisionReason",
+        "readiness",
+        "gaps"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "readiness": {
+                "const": "complete"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "decision": {
+                "const": "accepted"
+              },
+              "gaps": {
+                "maxItems": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "decision": {
+                "const": "held"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "gaps": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2000
+                },
+                "minItems": 1,
+                "maxItems": 30
+              }
+            }
+          }
+        }
+      ]
+    },
+    "coverageEntry": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "enum": [
+            "01",
+            "04",
+            "08",
+            "11",
+            "12",
+            "14",
+            "15",
+            "19",
+            "20",
+            "22",
+            "24",
+            "25",
+            "31",
+            "33",
+            "37",
+            "38",
+            "40",
+            "42",
+            "44",
+            "46",
+            "48",
+            "51",
+            "52",
+            "56",
+            "66",
+            "68",
+            "75",
+            "79",
+            "80",
+            "82",
+            "86",
+            "91",
+            "92",
+            "96"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "not_started",
+            "researching",
+            "ready_for_review",
+            "represented",
+            "blocked"
+          ]
+        },
+        "candidatePersonKeys": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(figure:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|new:[a-z0-9]+(?:-[a-z0-9]+)*)$",
+            "maxLength": 200
+          },
+          "minItems": 0,
+          "maxItems": 10000,
+          "uniqueItems": true
+        },
+        "acceptedPersonKeys": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(figure:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|new:[a-z0-9]+(?:-[a-z0-9]+)*)$",
+            "maxLength": 200
+          },
+          "minItems": 0,
+          "maxItems": 10000,
+          "uniqueItems": true
+        },
+        "completePersonKeys": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(figure:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|new:[a-z0-9]+(?:-[a-z0-9]+)*)$",
+            "maxLength": 200
+          },
+          "minItems": 0,
+          "maxItems": 10000,
+          "uniqueItems": true
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "minItems": 0,
+          "maxItems": 30
+        }
+      },
+      "required": [
+        "code",
+        "status",
+        "candidatePersonKeys",
+        "acceptedPersonKeys",
+        "completePersonKeys",
+        "gaps"
+      ],
+      "additionalProperties": false
+    },
+    "publicSnapshot": {
+      "type": "object",
+      "properties": {
+        "observedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        "manifestHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "representedLocalities": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 34
+        },
+        "eligiblePeople": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2147483647
+        },
+        "byLocality": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "enum": [
+                  "01",
+                  "04",
+                  "08",
+                  "11",
+                  "12",
+                  "14",
+                  "15",
+                  "19",
+                  "20",
+                  "22",
+                  "24",
+                  "25",
+                  "31",
+                  "33",
+                  "37",
+                  "38",
+                  "40",
+                  "42",
+                  "44",
+                  "46",
+                  "48",
+                  "51",
+                  "52",
+                  "56",
+                  "66",
+                  "68",
+                  "75",
+                  "79",
+                  "80",
+                  "82",
+                  "86",
+                  "91",
+                  "92",
+                  "96"
+                ]
+              },
+              "eligiblePeople": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2147483647
+              }
+            },
+            "required": [
+              "code",
+              "eligiblePeople"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 34,
+          "maxItems": 34
+        },
+        "evidenceRef": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      },
+      "required": [
+        "observedAt",
+        "manifestHash",
+        "representedLocalities",
+        "eligiblePeople",
+        "byLocality",
+        "evidenceRef"
+      ],
+      "additionalProperties": false
+    },
+    "ownerApproval": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "approved"
+          ]
+        },
+        "manifestHash": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "approvedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidenceRef": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "manifestHash",
+        "approvedAt",
+        "evidenceRef"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "approved"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "manifestHash": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "approvedAt": {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "Z$"
+              },
+              "evidenceRef": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "pending"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "manifestHash": {
+                "type": "null"
+              },
+              "approvedAt": {
+                "type": "null"
+              },
+              "evidenceRef": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "manifest": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "manifest"
+        },
+        "catalogId": {
+          "const": "national-v1"
+        },
+        "contractId": {
+          "const": "LH-1.0.0-draft.1"
+        },
+        "schemaFile": {
+          "const": "docs/audits/2026-10-26-local-heroes-manifest.schema.json"
+        },
+        "schemaSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        "previousManifestHash": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "referenceFramework": {
+          "const": "VN-34-2025"
+        },
+        "researchFromYear": {
+          "const": 1858
+        },
+        "researchToYear": {
+          "const": 1975
+        },
+        "selectionPolicy": {
+          "const": "two-pass-v1"
+        },
+        "coverageDenominator": {
+          "const": 34
+        },
+        "rosterFrozen": {
+          "type": "boolean"
+        },
+        "rosterFrozenAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "localitySource": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "const": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf"
+            },
+            "accessedAt": {
+              "type": "string",
+              "format": "date"
+            },
+            "locator": {
+              "const": "Appendix I, PDF pages 4-5"
+            },
+            "sha256": {
+              "const": "2fd391335947affbfb86fa2b9438f0fdca90694e80887e205266542c3236aea1"
+            }
+          },
+          "required": [
+            "url",
+            "accessedAt",
+            "locator",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "files": {
+          "type": "array",
+          "minItems": 9,
+          "maxItems": 9,
+          "uniqueItems": true,
+          "prefixItems": [
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "const": "claims.json"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "name",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "const": "coverage.json"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "name",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "const": "localities.json"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "name",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "const": "media.json"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "name",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "const": "people.json"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "name",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "const": "relations.json"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "name",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "const": "roster.json"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "name",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "const": "sources.json"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "name",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "const": "stories.json"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "name",
+                "sha256"
+              ],
+              "additionalProperties": false
+            }
+          ],
+          "items": false
+        },
+        "manifestHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "ownerApproval": {
+          "$ref": "#/$defs/ownerApproval"
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "catalogId",
+        "contractId",
+        "schemaFile",
+        "schemaSha256",
+        "version",
+        "createdAt",
+        "previousManifestHash",
+        "referenceFramework",
+        "researchFromYear",
+        "researchToYear",
+        "selectionPolicy",
+        "coverageDenominator",
+        "rosterFrozen",
+        "rosterFrozenAt",
+        "localitySource",
+        "files",
+        "manifestHash",
+        "ownerApproval"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "rosterFrozen": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "rosterFrozenAt": {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "Z$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "rosterFrozen": {
+                "const": false
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "rosterFrozenAt": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "localitiesDocument": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "localities"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/locality"
+          },
+          "minItems": 34,
+          "maxItems": 34
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "sourcesDocument": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "sources"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "minItems": 0,
+          "maxItems": 10000
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "claimsDocument": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "claims"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/claim"
+          },
+          "minItems": 0,
+          "maxItems": 10000
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "mediaDocument": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "media"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/media"
+          },
+          "minItems": 0,
+          "maxItems": 10000
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "peopleDocument": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "people"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/person"
+          },
+          "minItems": 0,
+          "maxItems": 10000
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "storiesDocument": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "stories"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/story"
+          },
+          "minItems": 0,
+          "maxItems": 10000
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "relationsDocument": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "relations"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relation"
+          },
+          "minItems": 0,
+          "maxItems": 10000
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "rosterDocument": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "roster"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rosterEntry"
+          },
+          "minItems": 0,
+          "maxItems": 10000
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "records"
+      ],
+      "additionalProperties": false
+    },
+    "coverageDocument": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "coverage"
+        },
+        "stage": {
+          "const": "prepared"
+        },
+        "records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/coverageEntry"
+          },
+          "minItems": 34,
+          "maxItems": 34
+        },
+        "publicSnapshot": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/publicSnapshot"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "kind",
+        "stage",
+        "records",
+        "publicSnapshot"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

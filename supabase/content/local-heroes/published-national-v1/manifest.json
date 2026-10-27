@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "kind": "manifest",
+  "catalogId": "national-v1",
+  "contractId": "LH-1.0.0-draft.1",
+  "schemaFile": "docs/audits/2026-10-26-local-heroes-manifest.schema.json",
+  "schemaSha256": "a3b90d16f23fa2a368cbb358e0725da63f3c39983ea4dbad457b1a286a8a23a0",
+  "version": 19,
+  "createdAt": "2026-10-27T11:20:58.491Z",
+  "previousManifestHash": "06080db323af8f89364355323cd585824f3772963e96316dd8ae72aa0fc54416",
+  "referenceFramework": "VN-34-2025",
+  "researchFromYear": 1858,
+  "researchToYear": 1975,
+  "selectionPolicy": "two-pass-v1",
+  "coverageDenominator": 34,
+  "rosterFrozen": true,
+  "rosterFrozenAt": "2026-10-26T09:15:17.447Z",
+  "localitySource": {
+    "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf",
+    "accessedAt": "2026-10-26",
+    "locator": "Appendix I, PDF pages 4-5",
+    "sha256": "2fd391335947affbfb86fa2b9438f0fdca90694e80887e205266542c3236aea1"
+  },
+  "files": [
+    {
+      "name": "claims.json",
+      "sha256": "2cc2f491fdd58a34405a82b5e4bf493a2245b4e756b62ee7cb39e5289bd33f6c"
+    },
+    {
+      "name": "coverage.json",
+      "sha256": "5fb41461c81c5e073ea75cee52abe5a5a0cc6e1bacc6d96d1366b52f46b1d2a6"
+    },
+    {
+      "name": "localities.json",
+      "sha256": "47ea7e2757240bfc0c1f57fc68c6f4045f463505c591a7d757666ad17c311846"
+    },
+    {
+      "name": "media.json",
+      "sha256": "ddd4533fe183c5049db7130a9357db9113052aa8eb54cf0ac23202b6a35d87d4"
+    },
+    {
+      "name": "people.json",
+      "sha256": "8f6a287375e85e52ce1e40fd5461d7795a315bc68c2b81722d25d9d436e93ffc"
+    },
+    {
+      "name": "relations.json",
+      "sha256": "4f87fe49bb8200da18598c9bce117ddf3e473b5b4f463813cf6bcb1080362187"
+    },
+    {
+      "name": "roster.json",
+      "sha256": "0ba67c741c4505722090b8357ecda5abb98ea976b1f7bc6b3c5be7652910ed46"
+    },
+    {
+      "name": "sources.json",
+      "sha256": "8bd5017eba374f772d30526ecad836adb1d1c6b0839a09f04a73d7cf3eb8d309"
+    },
+    {
+      "name": "stories.json",
+      "sha256": "ec27b1cf0378caeb8316954ed3a9e6cf71347cfe1c4c05068e0129ae075e7e20"
+    }
+  ],
+  "manifestHash": "eece5e9012d40371947fc93687f10478325942e54ef9a19ceabf5edb5db1f9f0",
+  "ownerApproval": {
+    "status": "approved",
+    "manifestHash": "eece5e9012d40371947fc93687f10478325942e54ef9a19ceabf5edb5db1f9f0",
+    "approvedAt": "2026-10-27T11:20:58.491Z",
+    "evidenceRef": "docs/audits/2026-10-27-local-heroes-live-release-authorization.md"
+  }
+}

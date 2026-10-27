@@ -21,6 +21,7 @@ export type JourneyPopupAnchor = JourneyArrival & {
   offset: ScreenPoint;
 };
 export type EventMapProps = {
+  readingMode?: "events" | "people";
   events: readonly ExplorerEvent[]; allEvents: readonly ExplorerEvent[]; view: MapView | null;
   selectedEvent: string | null; focusRequest: { slug: string; nonce: number } | null;
   journeyStop: JourneyStop | null; cameraRequest: GlobeCameraRequest | null;

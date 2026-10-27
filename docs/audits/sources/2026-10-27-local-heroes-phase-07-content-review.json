@@ -1,0 +1,4450 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-heroes-phase-07-acceptance",
+  "reviewKind": "one-agent-self-review",
+  "reviewedAt": "2026-10-27",
+  "inputManifestVersion": 17,
+  "inputManifestHash": "84d8a8a5833ec66382aa4e96b50cfdfd9495e15fc1c524f2205c4279866e8dfb",
+  "inputFiles": [
+    {
+      "name": "claims.json",
+      "sha256": "80388e48170b881286475575979a0dee7d622baeab78f7baaa1083744f099d21"
+    },
+    {
+      "name": "coverage.json",
+      "sha256": "4b5f0e264da2c0bfa4950a6fd43d22a4765a66506cb1932be0221b6195801bce"
+    },
+    {
+      "name": "localities.json",
+      "sha256": "47ea7e2757240bfc0c1f57fc68c6f4045f463505c591a7d757666ad17c311846"
+    },
+    {
+      "name": "media.json",
+      "sha256": "a211ddb0167c6c1419d1b09f5495686793706401d8278b4ee20903aade313c84"
+    },
+    {
+      "name": "people.json",
+      "sha256": "3bec7fa3ccda0858694e801e641ae19af022dd71c17a228ad4ab8059ebb8dccd"
+    },
+    {
+      "name": "relations.json",
+      "sha256": "80170c53841aa3db34b2b63001b8b2a69d4db974fcf1fe2df342ebe61c27a9fe"
+    },
+    {
+      "name": "roster.json",
+      "sha256": "76c1cc98f3ddd9e55887d97956cf78b8b9f4586281537fde36fb703f4b4d089d"
+    },
+    {
+      "name": "sources.json",
+      "sha256": "7c3146886c9e3d46b957199017f3e6f6e1786b8601553a4e21af11616b476e77"
+    },
+    {
+      "name": "stories.json",
+      "sha256": "e1bff603f9598e953ac82a81269713730be74accf814c86fa2161cb0355db1c4"
+    },
+    {
+      "name": "manifest.json",
+      "sha256": "59fce5332fc8746cfe792ac62cc9462dd35c6d18683c4a6469bfb7a994548878"
+    }
+  ],
+  "originalManifestPreserved": true,
+  "nationalReleaseReady": false,
+  "ownerApproval": {
+    "status": "pending",
+    "manifestHash": null,
+    "approvedAt": null,
+    "evidenceRef": null
+  },
+  "counts": {
+    "nominees": 53,
+    "acceptedPeople": 35,
+    "heldPeople": 18,
+    "inheritedCompletePeople": 22,
+    "inheritedPreparedLocalities": 21,
+    "reviewCompletePeople": 2,
+    "reviewPreparedLocalities": 2,
+    "acceptedMedia": 6,
+    "heldMedia": 26,
+    "admittedStories": 2
+  },
+  "limitations": [
+    "All 35 selected people remain mandatory. No roster item is removed or downgraded.",
+    "Network response/title/visual checks do not certify all 305 accepted historical claims. Twenty inherited accepted narratives remain held from import because full semantic acceptance is missing or contradicted.",
+    "Six image files could not be decoded/fetched. HTTP 200 and an unchanged hash do not prove image identity.",
+    "Original manifest v17 is immutable input; this acceptance overlay is binding for the local artifact and supersedes inherited completion/media assertions for release decisions.",
+    "No remote readiness/publication or teacher/historian certification is claimed."
+  ],
+  "admittedClaimIds": [
+    "clm-research-kim-dong-aliases",
+    "clm-research-kim-dong-biography",
+    "clm-research-kim-dong-birth-year",
+    "clm-research-kim-dong-certificate-1944-identity",
+    "clm-research-kim-dong-contribution",
+    "clm-research-kim-dong-death-year",
+    "clm-research-kim-dong-identity",
+    "clm-research-kim-dong-locality-04-activity",
+    "clm-research-kim-dong-na-ma-certificate",
+    "clm-research-kim-dong-na-ma-learning",
+    "clm-research-kim-dong-na-ma-origins",
+    "clm-research-kim-dong-na-ma-protection",
+    "clm-research-kim-dong-na-ma-team",
+    "clm-research-kim-dong-period",
+    "clm-research-van-tien-dung-1975-campaign-context",
+    "clm-research-van-tien-dung-1975-command-method",
+    "clm-research-van-tien-dung-1975-identity",
+    "clm-research-van-tien-dung-1975-learning",
+    "clm-research-van-tien-dung-1975-origins",
+    "clm-research-van-tien-dung-1975-photo-evidence",
+    "clm-research-van-tien-dung-aliases",
+    "clm-research-van-tien-dung-biography",
+    "clm-research-van-tien-dung-contribution",
+    "clm-research-van-tien-dung-identity",
+    "clm-research-van-tien-dung-locality-01-birthplace",
+    "clm-research-van-tien-dung-period"
+  ],
+  "sourceChecks": [
+    {
+      "id": "src-angiang-ton-duc-thang",
+      "inheritedDecision": "held",
+      "url": "https://angiang.gov.vn/vi-vn/tin-tuc/chu-tich-ton-duc-thang-cuoc-doi-va-su-nghiep-cach-mang-ve-vang",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-baochinhphu-hoang-van-thu",
+      "inheritedDecision": "excluded",
+      "url": "https://baochinhphu.vn/ky-niem-110-nam-ngay-sinh-dong-chi-hoang-van-thu-25-10-1909-25-10-2019-102263435.htm",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-baotanglichsu-be-van-dan",
+      "inheritedDecision": "held",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/16281/anh-hung-be-van-dan-lay-than-minh-lam-gia-sung.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-baotanglichsu-dinh-nup",
+      "inheritedDecision": "held",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/70124/anh-hung-nup-ngon-co-dau-chong-phap-cua-dong-bao-tay-nguyen.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-baotanglichsu-kim-dong",
+      "inheritedDecision": "excluded",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/16382/anh-hung-liet-si-kim-dong-1929-1943.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-baotanglichsu-ngo-gia-tu",
+      "inheritedDecision": "held",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/15642/dong-chi-ngo-gia-tu-nguoi-chien-si-cong-san-kien-trung-bat-khuat.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-baotanglichsu-nguyen-duc-canh",
+      "inheritedDecision": "held",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/14890/dong-chi-nguyen-duc-canh-tam-guong-kien-trung-cua-giai-cap-cong-nhan.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-baotanglichsu-nguyen-thi-minh-khai",
+      "inheritedDecision": "held",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/16789/dong-chi-nguyen-thi-minh-khai-tam-guong-nu-chien-si-cong-san-kien-trung.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-baotanglichsu-to-vinh-dien",
+      "inheritedDecision": "held",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/15890/anh-hung-liet-si-to-vinh-dien-1924-1954.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-baotanglichsu-tran-can",
+      "inheritedDecision": "held",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/15887/anh-hung-tran-can-nguoi-cam-la-co-quyet-chien-quyet-thang-tren-doi-him-lam.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-baotanglichsu-van-tien-dung",
+      "inheritedDecision": "held",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/14892/dai-tuong-van-tien-dung-vi-tuong-tai-ba-cua-quan-doi-nhan-dan-viet-nam.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-chinhphu-decision-19-2025",
+      "inheritedDecision": "accepted",
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf",
+      "bytes": 2631808,
+      "sha256": "2fd391335947affbfb86fa2b9438f0fdca90694e80887e205266542c3236aea1",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-dangcongsan-ngo-gia-tu",
+      "inheritedDecision": "held",
+      "url": "https://dangcongsan.vn/tu-lieu-van-kien/nhan-vat-lich-su/dong-chi-ngo-gia-tu-nha-lanh-dao-tien-boi-tieu-bieu-cua-dang-568912.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-gialai-dinh-nup",
+      "inheritedDecision": "held",
+      "url": "https://gialai.gov.vn/tin-tuc/ky-niem-110-nam-ngay-sinh-anh-hung-nup-02-5-1914-02-5-2024.12034.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-haiphong-nguyen-duc-canh",
+      "inheritedDecision": "held",
+      "url": "https://haiphong.gov.vn/tin-tuc-su-kien/dong-chi-nguyen-duc-canh-vi-lanh-tu-kiet-xuat-cua-phong-trao-cong-nhan-hai-phong-71829.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-ha-huy-tap",
+      "inheritedDecision": "held",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/19165/tam-guong-cong-san-cao-quy-cua-co-tong-bi-thu-ha-huy-tap-1906-1941.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-ho-chi-minh-bio",
+      "inheritedDecision": "held",
+      "url": "https://hochiminh.vn/cuoc-doi-su-nghiep/tieu-su-ho-chi-minh/tieu-su-chu-tich-ho-chi-minh-1890-1969-9?categoryId=102000008",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-ho-chi-minh-lao-cai",
+      "inheritedDecision": "held",
+      "url": "https://baolaocai.vn/cac-su-kien-chu-tich-ho-chi-minh-voi-tinh-lao-cai-1945-1969-post275245.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-le-binh",
+      "inheritedDecision": "held",
+      "url": "https://congan.cantho.gov.vn/hoat-dong-cua-cong-an-thanh-pho/80-nam-vang-mai-chien-cong-tran-le-binh-1945-2025-4336.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-luong-van-tri",
+      "inheritedDecision": "held",
+      "url": "https://sovhtt.langson.gov.vn/en/tin-tuc-su-kien/linh-vuc-van-hoa/dong-chi-luong-van-tri-voi-cuoc-khoi-nghia-bac-son.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-nay-der",
+      "inheritedDecision": "held",
+      "url": "https://baochinhphu.vn/nay-der-nguoi-thay-giao-sang-lap-bo-chu-viet-dau-tien-cua-dan-toc-jrai-10249084.htm",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-nguyen-chanh",
+      "inheritedDecision": "held",
+      "url": "https://baogialai.com.vn/tu-lenh-nguyen-chanh-va-anh-hung-nup-qua-loi-ke-cua-trung-tuong-nguyen-duong-post73179.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-nguyen-thi-dinh",
+      "inheritedDecision": "held",
+      "url": "https://baotanglichsu.vn/VI/Articles/3091/75280/nu-tuong-nguyen-thi-djinh-tam-guong-sang-ngoi-hinh-anh-cao-djep-cua-phu-nu-viet-nam.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-nguyen-van-cu",
+      "inheritedDecision": "held",
+      "url": "https://baoquangninh.vn/tong-bi-thu-nguyen-van-cu-voi-phong-trao-cach-mang-khu-mo-post3194158.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-nguyen-van-linh",
+      "inheritedDecision": "held",
+      "url": "https://baocantho.com.vn/tong-bi-thu-nguyen-van-linh-nguoi-cong-san-mau-muc-sang-tao-a36342.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-nguyen-van-troi-home",
+      "inheritedDecision": "held",
+      "url": "https://thptnguyenvantroidn.edu.vn/tieu-su-anh-hung-liet-sy-nguyen-van-troi-gioi_thieu.XFnpk637q.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-no-trang-long",
+      "inheritedDecision": "held",
+      "url": "https://dulich.daknong.gov.vn/vi/place/details/tuong-dai-no-trang-long-30",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-phan-ngoc-hien",
+      "inheritedDecision": "held",
+      "url": "https://dulichtpcamau.camau.gov.vn/vi/khoinghiahonkhoai",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-to-hieu-hai-phong",
+      "inheritedDecision": "held",
+      "url": "https://www.haiphong.gov.vn/danh-nhan/to-hieu-1912-1944-622063",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-truong-chinh",
+      "inheritedDecision": "held",
+      "url": "https://baotanglichsu.vn/VI/Articles/3098/14901/tong-bi-thu-truong-chinh-nha-lanh-djao-kiet-xuat-cua-cach-mang-viet-nam.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-lead-vo-nguyen-giap",
+      "inheritedDecision": "held",
+      "url": "https://baotanglichsu.vn/vi/Articles/3091/72343/dje-cuong-tuyen-truyen-ky-niem-110-nam-ngay-sinh-djai-tuong-vo-nguyen-giap.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-nhandan-hoang-van-thu",
+      "inheritedDecision": "held",
+      "url": "https://nhandan.vn/dong-chi-hoang-van-thu-nguoi-con-uu-tu-cua-que-huong-lang-son-post374829.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-qdnd-to-vinh-dien",
+      "inheritedDecision": "held",
+      "url": "https://qdnd.vn/quoc-phong-an-ninh/nghe-thuat-quan-su-viet-nam/to-vinh-dien-tam-guong-anh-hung-lay-than-minh-chen-phao-766291",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-qdnd-tran-can",
+      "inheritedDecision": "held",
+      "url": "https://qdnd.vn/quoc-phong-an-ninh/nghe-thuat-quan-su-viet-nam/nguoi-cam-co-tren-cu-diem-him-lam-768129",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-qdnd-van-tien-dung",
+      "inheritedDecision": "held",
+      "url": "https://qdnd.vn/tu-lieu-ho-so/nhan-vat-lich-su/dai-tuong-van-tien-dung-nha-chien-luoc-quan-su-xuat-sac-693120",
+      "accessedAt": "2026-10-27",
+      "httpStatus": null,
+      "finalUrl": null,
+      "bytes": null,
+      "sha256": null,
+      "error": null,
+      "scopeDecision": "retain_inherited_hold_or_exclusion"
+    },
+    {
+      "id": "src-research-be-van-dan",
+      "inheritedDecision": "accepted",
+      "url": "https://nvsk.vnanet.vn/be-van-dan-6884.vna",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://nvsk.vnanet.vn/be-van-dan-6884.vna",
+      "bytes": 44267,
+      "sha256": "61b8d773fbd2ab793c978bf02a587d7e109f748855c0e68bd5af6eda1a99d039",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-bong-van-dia",
+      "inheritedDecision": "accepted",
+      "url": "https://baohaiquanvietnam.vn/tin-tuc/cac-ca-nhan-doan-tau-khong-so-duoc-phong-tang-danh-hieu-anh-hung-llv",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baohaiquanvietnam.vn/tin-tuc/cac-ca-nhan-doan-tau-khong-so-duoc-phong-tang-danh-hieu-anh-hung-llv",
+      "bytes": 361308,
+      "sha256": "1b763e5a90733d0dae84da126066077d392f0563be04b499d4488d22239a585d",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-chau-van-liem",
+      "inheritedDecision": "accepted",
+      "url": "https://btgdv.cantho.gov.vn/vi/news/tai-lieu-tuyen-truyen/de-cuong-tuyen-truyen-ky-niem-120-nam-ngay-sinh-dong-chi-chau-van-liem-29-6-1902-29-6-2022-201.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://btgdv.cantho.gov.vn/vi/news/tai-lieu-tuyen-truyen/de-cuong-tuyen-truyen-ky-niem-120-nam-ngay-sinh-dong-chi-chau-van-liem-29-6-1902-29-6-2022-201.html",
+      "bytes": 81112,
+      "sha256": "cceffc3b06ddfcc245557b667e0032bb1bfe4f97f51931fbe859e5bf0ecbeec2",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-dinh-nup",
+      "inheritedDecision": "accepted",
+      "url": "https://baogialai.com.vn/ve-lang-khang-chien-stor-an-tuong-sau-sac-post212181.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baogialai.com.vn/ve-lang-khang-chien-stor-an-tuong-sau-sac-post212181.html",
+      "bytes": 196039,
+      "sha256": "38e827b910de50454407384a01cf0156e9ab808b2d61b36fdc67b02de5323941",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-doi-can",
+      "inheritedDecision": "accepted",
+      "url": "https://thainguyen.gov.vn/di-tich-danh-lam-thang-canh/den-doi-can-297035",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://thainguyen.gov.vn/di-tich-danh-lam-thang-canh/den-doi-can-297035",
+      "bytes": 111241,
+      "sha256": "b62e91f76830e34c9e65f1a005b5d0045997e4732b36cebce265640d93078661",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-doi-can-exhibition",
+      "inheritedDecision": "accepted",
+      "url": "https://phandinhphung.thainguyen.gov.vn/chi-tiet-tin-tuc/khai-mac-trien-lam-105-nam-khoi-nghia-thai-nguyen-28310.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://phandinhphung.thainguyen.gov.vn/chi-tiet-tin-tuc/khai-mac-trien-lam-105-nam-khoi-nghia-thai-nguyen-28310.html",
+      "bytes": 52831,
+      "sha256": "3a5a59db35634141be39b02d7838735b5ba474e3ecb29c760874b821ab297c55",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-hcm-campaign-1975",
+      "inheritedDecision": "accepted",
+      "url": "https://baotanglichsu.vn/vi/Articles/2002/67989/chien-dich-ho-chi-minh-lich-su-26-4-30-4-1975.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/2002/67989/chien-dich-ho-chi-minh-lich-su-26-4-30-4-1975.html",
+      "bytes": 78790,
+      "sha256": "4a5f325e8bf36ea84b78fa0be61f22c1e558020e8c73e2f6c90c2558b200f2aa",
+      "error": null,
+      "scopeDecision": "scoped_for_admitted_sample"
+    },
+    {
+      "id": "src-research-hcm-city-mapping",
+      "inheritedDecision": "accepted",
+      "url": "https://congbao.hochiminhcity.gov.vn/tin-tuc-tong-hop/Danh-muc-cac-tuyen-duong-uu-tien-tren-dia-ban-Thanh-pho-",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://congbao.hochiminhcity.gov.vn/tin-tuc-tong-hop/Danh-muc-cac-tuyen-duong-uu-tien-tren-dia-ban-Thanh-pho-",
+      "bytes": 215940,
+      "sha256": "499bb797f243ba405d8837ed35f2e1e38bb52cf781d053979cb9efaae9074bec",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-hoang-le-kha",
+      "inheritedDecision": "accepted",
+      "url": "https://baotanglichsu.vn/vi/Articles/1002/15110/ve-mot-ky-vat-cua-anh-hung-liet-si-hoang-le-kha.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/1002/15110/ve-mot-ky-vat-cua-anh-hung-liet-si-hoang-le-kha.html",
+      "bytes": 77135,
+      "sha256": "09c1d61fc905b0b7542b27a46c7038902683c811afcf433a0136866108e3d87a",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-hoang-truong-minh",
+      "inheritedDecision": "accepted",
+      "url": "https://baolaocai.vn/viet-len-nhung-trang-su-ve-vang-hao-hung-post225788.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baolaocai.vn/viet-len-nhung-trang-su-ve-vang-hao-hung-post225788.html",
+      "bytes": 174147,
+      "sha256": "b704c9c5e8cc66edc94215ddcc9067d50f5e0be5ffba03262f76a094a18ce598",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-hoang-van-thu",
+      "inheritedDecision": "accepted",
+      "url": "https://vanphongdbqhvahdnd.langson.gov.vn/bai-viet/chi-bo-2-sinh-hoat-chuyen-de-ve-nguon-tai-di-tich-nha-luu-niem-dong-chi-hoang-van-thu",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://vanphongdbqhvahdnd.langson.gov.vn/bai-viet/chi-bo-2-sinh-hoat-chuyen-de-ve-nguon-tai-di-tich-nha-luu-niem-dong-chi-hoang-van-thu",
+      "bytes": 76147,
+      "sha256": "d196692c57f0e57421d4b8bb53ea79be034e957ced5ebe3615be7d69bd8821b3",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-huynh-van-nghe",
+      "inheritedDecision": "accepted",
+      "url": "https://hvhnt.dongnai.gov.vn/pages/newsdetail.aspx?CatId=76&NewsId=2012",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://hvhnt.dongnai.gov.vn/pages/newsdetail.aspx?CatId=76&NewsId=2012",
+      "bytes": 151148,
+      "sha256": "dc93a9653c9a22e730cdc33df45c38ed7df07c7edb9b7893aa21c4d3f03c887c",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-huynh-van-nghe-mapping",
+      "inheritedDecision": "accepted",
+      "url": "https://thuvien.dongnai.gov.vn/baiviet2015/lichsu/Lists/Posts/Post.aspx?ID=360&List=cdfc9a3b-6347-440d-8f7b-bde142430bbb",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://thuvien.dongnai.gov.vn/baiviet2015/lichsu/Lists/Posts/Post.aspx?ID=360&List=cdfc9a3b-6347-440d-8f7b-bde142430bbb",
+      "bytes": 46999,
+      "sha256": "89f4154192265198e9ba14a8e67b7046fb2ebf8b3c1dae3f7af991a4ec2f42ba",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-kim-dong",
+      "inheritedDecision": "accepted",
+      "url": "https://baotanglichsu.vn/vi/Articles/1002/14283/bang-khen-cua-tong-bo-viet-minh-truy-tang-anh-kim-djong-nguoi-djoi-truong-djau-tien-cua-djoi-tntp-hcm.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/1002/14283/bang-khen-cua-tong-bo-viet-minh-truy-tang-anh-kim-djong-nguoi-djoi-truong-djau-tien-cua-djoi-tntp-hcm.html",
+      "bytes": 64459,
+      "sha256": "420b729f95df1bb34173b5e029ed99fe85c79cbe35566127327c7445d1b39b7a",
+      "error": null,
+      "scopeDecision": "scoped_for_admitted_sample"
+    },
+    {
+      "id": "src-research-kim-dong-province",
+      "inheritedDecision": "accepted",
+      "url": "https://tinhdoan.caobang.gov.vn/index.php/hoat-dong-doi/tieu-su-so-luoc-5-doi-vien-dau-tien-cua-doi-tntp-ho-chi-minh-1615.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://tinhdoan.caobang.gov.vn/index.php/hoat-dong-doi/tieu-su-so-luoc-5-doi-vien-dau-tien-cua-doi-tntp-ho-chi-minh-1615.html",
+      "bytes": 57135,
+      "sha256": "ade020e742afcf430efa3e8774e29549092adc542df89cffa74c6279848ff799",
+      "error": null,
+      "scopeDecision": "scoped_for_admitted_sample"
+    },
+    {
+      "id": "src-research-kim-dong-team",
+      "inheritedDecision": "accepted",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/16339/15-5-1941-thanh-lap-djoi-thieu-nien-tien-phong-ho-chi-minh.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/16339/15-5-1941-thanh-lap-djoi-thieu-nien-tien-phong-ho-chi-minh.html",
+      "bytes": 87451,
+      "sha256": "1143151a27fe3c7d472f44bec592217bdb12cf32f1401683fd6ed6c424ad1fc8",
+      "error": null,
+      "scopeDecision": "scoped_for_admitted_sample"
+    },
+    {
+      "id": "src-research-lai-chau-mapping",
+      "inheritedDecision": "accepted",
+      "url": "https://truongchinhtri.laichau.gov.vn/khoa-hoc-thong-tin-tu-lieu/su-ra-doi-cua-ban-can-su-lai-chau-buoc-ngoat-lich-su-cach-mang-1887.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://truongchinhtri.laichau.gov.vn/khoa-hoc-thong-tin-tu-lieu/su-ra-doi-cua-ban-can-su-lai-chau-buoc-ngoat-lich-su-cach-mang-1887.html",
+      "bytes": 85075,
+      "sha256": "ece230d1ad866a5c3c06020350645bf129dfa58020741b16ecdc2d3324215c9a",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-le-duan",
+      "inheritedDecision": "accepted",
+      "url": "https://vinhlinh.quangtri.gov.vn/chi-tiet/-/view-article/1/1647698202167/1657013201443",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://vinhlinh.quangtri.gov.vn/chi-tiet/-/view-article/1/1647698202167/1657013201443",
+      "bytes": 111872,
+      "sha256": "e44c4cfa281ffcfa54dbb989c3286fc90cb9199b6f5e2db9f4cf6f9b4dbe22a6",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-le-thi-pha",
+      "inheritedDecision": "accepted",
+      "url": "https://www.nguoiduatin.vn/ky-uc-ve-nu-anh-hung-huyen-thoai-tren-vung-dat-blao-204240830224501507.htm",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://www.nguoiduatin.vn/ky-uc-ve-nu-anh-hung-huyen-thoai-tren-vung-dat-blao-204240830224501507.htm",
+      "bytes": 120066,
+      "sha256": "f723e5929d93544cb56f2e62058007d05cd23a274521c67221b57577f03d51fd",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-le-thi-pha-locality",
+      "inheritedDecision": "accepted",
+      "url": "https://baolamdong.vn/chuyen-ke-ve-chien-truong-b-lao-oanh-liet-270344.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 403,
+      "finalUrl": "https://baolamdong.vn/chuyen-ke-ve-chien-truong-b-lao-oanh-liet-270344.html",
+      "bytes": 284,
+      "sha256": "5d905aa3daffbd922ec56fa9afd2b70abcb11c953f73213df7a6f08d619c3253",
+      "error": null,
+      "scopeDecision": "held_current_reachability_or_content_failure"
+    },
+    {
+      "id": "src-research-lo-van-gia",
+      "inheritedDecision": "accepted",
+      "url": "https://baosonla.vn/vi/bai-viet/lo-van-gia--nguoi-thanh-nien-nhiet-huyet-cach-mang-38535",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baosonla.vn/vi/bai-viet/lo-van-gia--nguoi-thanh-nien-nhiet-huyet-cach-mang-38535",
+      "bytes": 134140,
+      "sha256": "3eae3c022e33b5b6a26f971558a9a3fde9a048d59d2086c6bda197316a436fe9",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-luong-van-tuy",
+      "inheritedDecision": "accepted",
+      "url": "https://baoninhbinh.org.vn/dong-chi-bi-thu-tinh-uy-dang-huong-tai-tuong-dai-anh-hung/d20120202044800000.htm",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 500,
+      "finalUrl": "https://baoninhbinh.org.vn/dong-chi-bi-thu-tinh-uy-dang-huong-tai-tuong-dai-anh-hung/d20120202044800000.htm",
+      "bytes": 119627,
+      "sha256": "383e9d57f71fea90c1278a533e132fa1f21704ebf129787872639593b8f30974",
+      "error": null,
+      "scopeDecision": "held_current_reachability_or_content_failure"
+    },
+    {
+      "id": "src-research-modern-provinces-2025",
+      "inheritedDecision": "accepted",
+      "url": "https://xaydungchinhsach.chinhphu.vn/chi-tiet-34-don-vi-hanh-chinh-cap-tinh-tu-12-6-2025-119250612141845533.htm",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://xaydungchinhsach.chinhphu.vn/chi-tiet-34-don-vi-hanh-chinh-cap-tinh-tu-12-6-2025-119250612141845533.htm",
+      "bytes": 554681,
+      "sha256": "ac4f187d71b26c1f20b633da339f4bae0a1a9504a08b1057d9827860ccc81887",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-ngo-gia-tu",
+      "inheritedDecision": "accepted",
+      "url": "https://baotanglichsu.vn/VI/Articles/3091/69154/djong-chi-ngo-gia-tu-nguoi-cong-san-kien-trung.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baotanglichsu.vn/VI/Articles/3091/69154/djong-chi-ngo-gia-tu-nguoi-cong-san-kien-trung.html",
+      "bytes": 83312,
+      "sha256": "ba5146213eb18195b2933184e0143434a10bfc9764d4095195353f9e3d8d993f",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-nguyen-chi-dieu-home",
+      "inheritedDecision": "accepted",
+      "url": "https://svhttdl.hue.gov.vn/tin-trong-tinh/dang-hoa-dang-huong-ky-niem-115-nam-nam-sinh-dong-chi-nguyen-chi-dieu-1908-2023.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://svhttdl.hue.gov.vn/tin-trong-tinh/dang-hoa-dang-huong-ky-niem-115-nam-nam-sinh-dong-chi-nguyen-chi-dieu-1908-2023.html",
+      "bytes": 96410,
+      "sha256": "688f8bf0b2cc08635c254506ce96ec3a967958b7c4ba1c830ffc0bff901a4069",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-nguyen-chi-dieu-period",
+      "inheritedDecision": "accepted",
+      "url": "https://baotanglichsu.vn/vi/Articles/3098/14687/djong-chi-phan-djang-luu-voi-bao-chi-trung-ky-thoi-ky-mat-tran-dan-chu.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3098/14687/djong-chi-phan-djang-luu-voi-bao-chi-trung-ky-thoi-ky-mat-tran-dan-chu.html",
+      "bytes": 85743,
+      "sha256": "01b03d81f026707bed1b42852ee8ae3752f9daf154bb248e1addb0c9cd23240c",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-nguyen-duc-canh",
+      "inheritedDecision": "accepted",
+      "url": "https://haiphong.gov.vn/tin-tuc-su-kien/Dong-chi-Nguyen-Duc-Canh---nguoi-chien-si-cach-mang-kien-trung-37421",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://haiphong.gov.vn/tin-tuc-su-kien/Dong-chi-Nguyen-Duc-Canh---nguoi-chien-si-cach-mang-kien-trung-37421",
+      "bytes": 133235,
+      "sha256": "6719d8fc5bb8a6e72637c92d58b873686e01fc2bf1ab198d269222a1f216624e",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-nguyen-thai-hoc",
+      "inheritedDecision": "accepted",
+      "url": "https://buonho.daklak.gov.vn/nguyen-thai-hoc-1904-1930-5655.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://buonho.daklak.gov.vn/nguyen-thai-hoc-1904-1930-5655.html",
+      "bytes": 62366,
+      "sha256": "04af7fdace2fad8f504bde2cc8401159e483aed98d2495d551c0b686567984e1",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-nguyen-thi-minh-khai",
+      "inheritedDecision": "accepted",
+      "url": "https://baotanglichsu.vn/VI/Articles/3099/13811/ky-niem-103-nam-ngay-quoc-te-phu-nu-8-3-1910-8-3-2013-guong-hy-sinh-cua-chi-nguyen-thi-minh-khai.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baotanglichsu.vn/VI/Articles/3099/13811/ky-niem-103-nam-ngay-quoc-te-phu-nu-8-3-1910-8-3-2013-guong-hy-sinh-cua-chi-nguyen-thi-minh-khai.html",
+      "bytes": 62480,
+      "sha256": "cf44a1f5849d7c9b5c14b548d7bdad873345224dac38a587625421d00147c231",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-nguyen-van-troi",
+      "inheritedDecision": "accepted",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/12706/liet-si-nguyen-van-troi-nguoi-thanh-nien-qua-cam-ky-niem-48-nam-ngay-anh-nguyen-van-troi-hy-sinh-ngay-15-10-1964-15-10-2012.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/12706/liet-si-nguyen-van-troi-nguoi-thanh-nien-qua-cam-ky-niem-48-nam-ngay-anh-nguyen-van-troi-hy-sinh-ngay-15-10-1964-15-10-2012.html",
+      "bytes": 65998,
+      "sha256": "7faa70f2026153b356ea26d838135e9428a559dacae384fbe960b92bc006bf5a",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-pham-hung",
+      "inheritedDecision": "accepted",
+      "url": "https://baotanglichsu.vn/VI/Articles/3091/73185/pham-hung-nguoi-hoc-tro-xuat-sac-cua-chu-tich-ho-chi-minh.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baotanglichsu.vn/VI/Articles/3091/73185/pham-hung-nguoi-hoc-tro-xuat-sac-cua-chu-tich-ho-chi-minh.html",
+      "bytes": 78805,
+      "sha256": "492727018dec52060b286fb9448821a69ff9136ac321a06b0ccbe70ce4e309d8",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-pham-van-dong",
+      "inheritedDecision": "accepted",
+      "url": "https://dakbla.quangngai.gov.vn/tin-tuc/ky-niem-120-nam-ngay-sinh-dong-chi-pham-van-dong-01-3-1906-01-3-2026-.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://dakbla.quangngai.gov.vn/tin-tuc/ky-niem-120-nam-ngay-sinh-dong-chi-pham-van-dong-01-3-1906-01-3-2026-.html",
+      "bytes": 220032,
+      "sha256": "5cc0cddd48805ca6996864bcbe5b964e7a9e7737b31e8cce152c9486547bac9c",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-ta-xuan-thu",
+      "inheritedDecision": "accepted",
+      "url": "https://en.nhandan.vn/birthplace-of-august-revolutions-victory-post148189.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://en.nhandan.vn/birthplace-of-august-revolutions-victory-post148189.html",
+      "bytes": 78004,
+      "sha256": "f2a9f338f02e2fbad29812a9d1c2462d353dc904f6ac54f4c70c0123be2e3089",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-thai-phien",
+      "inheritedDecision": "accepted",
+      "url": "https://mattran.danang.gov.vn/chi-tiet-tin/group/76/nid/7704/de-cuong-tuyen-truyen-ky-niem-55-nam-danh-xung-quang-nam-1471--2-21",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://mattran.danang.gov.vn/chi-tiet-tin/group/76/nid/7704/de-cuong-tuyen-truyen-ky-niem-55-nam-danh-xung-quang-nam-1471--2-21",
+      "bytes": 269681,
+      "sha256": "1eed4a5534dc53b45ca4bb9a248f0c15c2139fd76db0e1d45a20fe14496ba2b7",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-to-hieu",
+      "inheritedDecision": "accepted",
+      "url": "https://baotanglichsu.vn/vi/Articles/3091/72923/ky-niem-110-nam-ngay-sinh-nguoi-cong-san-kien-trung-to-hieu.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3091/72923/ky-niem-110-nam-ngay-sinh-nguoi-cong-san-kien-trung-to-hieu.html",
+      "bytes": 83138,
+      "sha256": "2db2a1d89426e8b66ae96df70d7bef6c6ce9bdae14220dba1f01d83f42556791",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-to-vinh-dien",
+      "inheritedDecision": "accepted",
+      "url": "https://baotanglichsu.vn/VI/Articles/3098/14209/nhung-anh-hung-tai-chien-dich-djien-bien-phu-anh-hung-to-vinh-dien-1924-1953.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baotanglichsu.vn/VI/Articles/3098/14209/nhung-anh-hung-tai-chien-dich-djien-bien-phu-anh-hung-to-vinh-dien-1924-1953.html",
+      "bytes": 63863,
+      "sha256": "fc4b3efcdc3f14e475613bf91411080d5b5c5e5266b68065014e6b3bf4aef3d8",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-ton-duc-thang",
+      "inheritedDecision": "accepted",
+      "url": "https://rachgia.angiang.gov.vn/dau-an-cuoc-doi-hoat-dong-cach-mang-cua-chu-tich-ton-duc-thang",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://rachgia.angiang.gov.vn/dau-an-cuoc-doi-hoat-dong-cach-mang-cua-chu-tich-ton-duc-thang",
+      "bytes": 69749,
+      "sha256": "b38493f7ef7cfe4c620f4b9e98c00900b3355f37cd71f4108489dc8f95eec607",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-tran-can",
+      "inheritedDecision": "accepted",
+      "url": "https://nvsk.vnanet.vn/tran-can-6845.vna",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://nvsk.vnanet.vn/tran-can-6845.vna",
+      "bytes": 45516,
+      "sha256": "ea919864dbd9c74d5e05ec4d3b0cc7b0f6fef35f0f0350a020178157672f69f1",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-tran-phu",
+      "inheritedDecision": "accepted",
+      "url": "https://baotanglichsu.vn/VI/Articles/3098/19407/tran-phu-tong-bi-thu-djau-tien-cua-djang.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baotanglichsu.vn/VI/Articles/3098/19407/tran-phu-tong-bi-thu-djau-tien-cua-djang.html",
+      "bytes": 90500,
+      "sha256": "750cd1d723337a67ce30ef7010949f2e4c4b05dd24773da8c6109ed516eb838a",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-tran-quoc-manh",
+      "inheritedDecision": "accepted",
+      "url": "https://dulich.laichau.gov.vn/vi/blog/details/ban-luot-dau-son-lich-su-1337",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://dulich.laichau.gov.vn/vi/blog/details/ban-luot-dau-son-lich-su-1337",
+      "bytes": 71784,
+      "sha256": "f64b2aa6adbbd4f9ce844e6c87713ea09d16066b332d5017a5fc2079a828e82c",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-tran-thi-nhuong",
+      "inheritedDecision": "accepted",
+      "url": "https://baodongthap.vn/nhung-ngay-thang-tam-lich-su-o-tinh-dong-thap-a124714.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baodongthap.vn/nhung-ngay-thang-tam-lich-su-o-tinh-dong-thap-a124714.html",
+      "bytes": 367536,
+      "sha256": "2bd740970e4fed8c76a37402ca2132f2754f8d9d73fbf38e3e1459a438d6cb1d",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-van-tien-dung",
+      "inheritedDecision": "accepted",
+      "url": "https://baotanglichsu.vn/vi/Articles/3098/73084/ky-niem-105-nam-ngay-sinh-djai-tuong-van-tien-dung-vi-djai-tuong-anh-hung.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3098/73084/ky-niem-105-nam-ngay-sinh-djai-tuong-van-tien-dung-vi-djai-tuong-anh-hung.html",
+      "bytes": 100573,
+      "sha256": "8ec980d2bb531f93e95609d4f5bcf32eee2a3966de6d5df12e98d6a11812cd18",
+      "error": null,
+      "scopeDecision": "scoped_for_admitted_sample"
+    },
+    {
+      "id": "src-research-van-tien-dung-2017",
+      "inheritedDecision": "accepted",
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/19898/100-nam-ngay-sinh-djai-tuong-van-tien-dung-2-5-1917-2-5-2017-vi-tuong-chinh-tri-quan-su-song-toan.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/19898/100-nam-ngay-sinh-djai-tuong-van-tien-dung-2-5-1917-2-5-2017-vi-tuong-chinh-tri-quan-su-song-toan.html",
+      "bytes": 78121,
+      "sha256": "ab24a34439a4dc6cd129e7b095a069990bbefa766f02bb038d066265f834ad60",
+      "error": null,
+      "scopeDecision": "scoped_for_admitted_sample"
+    },
+    {
+      "id": "src-research-vo-van-ky",
+      "inheritedDecision": "accepted",
+      "url": "https://namnhatrang.khanhhoa.gov.vn/vi/tin-noi-bat/ky-niem-81-nam-ngay-nha-trang-khanh-hoa-khang-chien-23-10-1945-23-10-2026-sang-mai-trang-su-hao-hung",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://namnhatrang.khanhhoa.gov.vn/vi/tin-noi-bat/ky-niem-81-nam-ngay-nha-trang-khanh-hoa-khang-chien-23-10-1945-23-10-2026-sang-mai-trang-su-hao-hung",
+      "bytes": 155638,
+      "sha256": "02531809b16c3f9613d92cd4725b44644de7f6b2c6e58bd1f230ae4312d08e40",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-vu-van-hieu",
+      "inheritedDecision": "accepted",
+      "url": "https://baoquangninh.vn/cong-trinh-tuong-dai-dong-chi-vu-van-hieu-la-su-tri-an-va-long-biet-on-sau-sac-cua-dang-bo-chinh-quyen-va-nhan-dan-tinh-quang-ninh-2322105.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://baoquangninh.vn/cong-trinh-tuong-dai-dong-chi-vu-van-hieu-la-su-tri-an-va-long-biet-on-sau-sac-cua-dang-bo-chinh-quyen-va-nhan-dan-tinh-quang-ninh-2322105.html",
+      "bytes": 83665,
+      "sha256": "c4a3572b9ce6002a5955130778027caf3fcf562fd6d42744efc081db9b57a698",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    },
+    {
+      "id": "src-research-y-bloc-eban",
+      "inheritedDecision": "accepted",
+      "url": "https://vhttdl.daklak.gov.vn/dak-lak-co-tuyen-duong-mang-ten-vi-tuong-dau-tien-cua-tay-nguyen-13629.html",
+      "accessedAt": "2026-10-27",
+      "httpStatus": 200,
+      "finalUrl": "https://vhttdl.daklak.gov.vn/dak-lak-co-tuyen-duong-mang-ten-vi-tuong-dau-tien-cua-tay-nguyen-13629.html",
+      "bytes": 62470,
+      "sha256": "2b099b49955405eb5daa7dd0dd6f69b5e710f76ae46db614f39d37f39a812a6e",
+      "error": null,
+      "scopeDecision": "page_reopened_national_claim_acceptance_pending"
+    }
+  ],
+  "imageChecks": [
+    {
+      "id": "media-dinh-nup-portrait",
+      "personKey": "new:dinh-nup",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/3097/70124/anh-hung-nup-ngon-co-dau-chong-phap-cua-dong-bao-tay-nguyen.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/2020/05/Articles/70124/anh-hung-nup.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": null,
+      "hashMatches": null,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-hoang-van-thu-portrait",
+      "personKey": "new:hoang-van-thu",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+      "originalPage": "https://baochinhphu.vn/ky-niem-110-nam-ngay-sinh-dong-chi-hoang-van-thu-25-10-1909-25-10-2019-102263435.htm",
+      "fileUrl": "https://media.chinhphu.vn/images/hoang-van-thu-chan-dung.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": null,
+      "hashMatches": null,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-kim-dong-context",
+      "personKey": "new:kim-dong",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/3097/16382/anh-hung-liet-si-kim-dong-1929-1943.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/2021/05/Articles/16382/pac-bo-cao-bang-di-tich-lich-su.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": null,
+      "hashMatches": null,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-ngo-gia-tu-portrait",
+      "personKey": "new:ngo-gia-tu",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+      "originalPage": "https://dangcongsan.vn/tu-lieu-van-kien/nhan-vat-lich-su/dong-chi-ngo-gia-tu-nha-lanh-dao-tien-boi-tieu-bieu-cua-dang-568912.html",
+      "fileUrl": "https://dangcongsan.vn/DATA/0/2020/12/ngo_gia_tu-09_37_03_689.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": null,
+      "hashMatches": null,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-nguyen-duc-canh-portrait",
+      "personKey": "new:nguyen-duc-canh",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+      "originalPage": "https://haiphong.gov.vn/tin-tuc-su-kien/dong-chi-nguyen-duc-canh-vi-lanh-tu-kiet-xuat-cua-phong-trao-cong-nhan-hai-phong-71829.html",
+      "fileUrl": "https://haiphong.gov.vn/Uploads/Images/2022/07/nguyen-duc-canh-chan-dung.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": null,
+      "hashMatches": null,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-nguyen-thi-minh-khai-portrait",
+      "personKey": "new:nguyen-thi-minh-khai",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/3097/16789/dong-chi-nguyen-thi-minh-khai-tam-guong-nu-chien-si-cong-san-kien-trung.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/2020/09/Articles/16789/nguyen-thi-minh-khai.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": null,
+      "hashMatches": null,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-be-van-dan-nvsk",
+      "personKey": "new:be-van-dan",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "The downloaded 300x401 primary profile image is a portrait, not the claimed contextual infographic. Correct depiction/caption/identity evidence and measure its configured thumbnail before acceptance.",
+      "originalPage": "https://nvsk.vnanet.vn/be-van-dan-6884.vna",
+      "fileUrl": "https://imgprofile.vnanet.vn/media/graphic/profile/2024/05/04/01042024-th-51.jpeg",
+      "linkedFromOriginalPage": true,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 300,
+      "height": 401,
+      "bytes": 145938,
+      "sha256": "8361ab4bdb37b85c7d409aa3d03fdcbe01f9c42e24ccc97428a6f01c321a824a",
+      "storedSha256": "8361ab4bdb37b85c7d409aa3d03fdcbe01f9c42e24ccc97428a6f01c321a824a",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-doi-can-exhibition-105",
+      "personKey": "new:doi-can",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Visual inspection shows contemporary visitors at a 2022 exhibition. This is present-day commemoration and does not qualify as a historical representative image.",
+      "originalPage": "https://phandinhphung.thainguyen.gov.vn/chi-tiet-tin-tuc/khai-mac-trien-lam-105-nam-khoi-nghia-thai-nguyen-28310.html",
+      "fileUrl": "https://phandinhphung.thainguyen.gov.vn/UserFiles/image/2(13404).jpg",
+      "linkedFromOriginalPage": true,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 1000,
+      "height": 667,
+      "bytes": 438120,
+      "sha256": "e5cd036df0766ecec4023181b5d8f71fe101e1dab567a86c060a5001f5e9420c",
+      "storedSha256": "e5cd036df0766ecec4023181b5d8f71fe101e1dab567a86c060a5001f5e9420c",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-hoang-le-kha-context",
+      "personKey": "new:hoang-le-kha",
+      "inheritedDecision": "accepted",
+      "decision": "accepted",
+      "reason": "Original page, linked image, actual bytes/dimensions/hash and depicted context inspected. Coursework reference only; no open license or broader publication/upload permission is asserted.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/1002/15110/ve-mot-ky-vat-cua-anh-hung-liet-si-hoang-le-kha.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/Uploaded/image/DATA%20HUONG/Mot%20ky%20vat%20cua%20anh%20hung%20liet%20si%20Hoang%20Le%20Kha/1.jpg",
+      "linkedFromOriginalPage": true,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 480,
+      "height": 377,
+      "bytes": 127269,
+      "sha256": "4a06b4b2b3aa0ee1fb643a2f29332f2efc8155ff57f46ebcf6b173e4587587bb",
+      "storedSha256": "4a06b4b2b3aa0ee1fb643a2f29332f2efc8155ff57f46ebcf6b173e4587587bb",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-huynh-van-nghe-portrait",
+      "personKey": "new:huynh-van-nghe",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Visual inspection shows a speaker at a 2018 staff conference, not an authenticated portrait of Huynh Van Nghe. A URL appearing elsewhere on the same page does not prove identity.",
+      "originalPage": "https://hvhnt.dongnai.gov.vn/pages/newsdetail.aspx?CatId=76&NewsId=2012",
+      "fileUrl": "https://hvhnt.dongnai.gov.vn/TinTucHinhAnh/dongnai/1839.4.jpg",
+      "linkedFromOriginalPage": true,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 500,
+      "height": 364,
+      "bytes": 92622,
+      "sha256": "70e485170b4c2c3b33b91ca595f7b8ee12d25d3c1f96f5c505c9fa67b3184f11",
+      "storedSha256": "70e485170b4c2c3b33b91ca595f7b8ee12d25d3c1f96f5c505c9fa67b3184f11",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-kim-dong-certificate-1944",
+      "personKey": "new:kim-dong",
+      "inheritedDecision": "accepted",
+      "decision": "accepted",
+      "reason": "Original page, linked image, actual bytes/dimensions/hash and depicted context inspected. Coursework reference only; no open license or broader publication/upload permission is asserted.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/1002/14283/bang-khen-cua-tong-bo-viet-minh-truy-tang-anh-kim-djong-nguoi-djoi-truong-djau-tien-cua-djoi-tntp-hcm.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/Uploaded/image/Kim-dong-2.jpg",
+      "linkedFromOriginalPage": true,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 480,
+      "height": 322,
+      "bytes": 28810,
+      "sha256": "a95f0542b17ee3d68e3630aa98ef0bc9006f16da87a23cd7256ff5a64899ad4b",
+      "storedSha256": "a95f0542b17ee3d68e3630aa98ef0bc9006f16da87a23cd7256ff5a64899ad4b",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-le-duan-vinh-linh",
+      "personKey": "figure:dff00764-7ef6-4b82-981e-9f66f080d653",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original image page returns 404; file response cannot be decoded as an image. No current original image evidence.",
+      "originalPage": "https://vinhlinh.quangtri.gov.vn/vi/news/gioi-thieu/tong-bi-thu-le-duan-voi-que-huong-vinh-linh-quang-tri-142.html",
+      "fileUrl": "https://vinhlinh.quangtri.gov.vn/uploads/news/2021_04/le-duan.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": "593a008258dbdeb3b04544f6300d180285313a4bae84c56205a7b37d904628cc",
+      "hashMatches": null,
+      "error": "Input buffer contains unsupported image format",
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-le-thi-pha-portrait",
+      "personKey": "new:le-thi-pha",
+      "inheritedDecision": "accepted",
+      "decision": "accepted",
+      "reason": "Original page, linked image, actual bytes/dimensions/hash and depicted context inspected. Coursework reference only; no open license or broader publication/upload permission is asserted.",
+      "originalPage": "https://www.nguoiduatin.vn/ky-uc-ve-nu-anh-hung-huyen-thoai-tren-vung-dat-blao-204240830224501507.htm",
+      "fileUrl": "https://nguoiduatin.mediacdn.vn/thumb_w/640/84137818385850368/2024/8/30/anh-1-le-thi-pha-1725028915427902300767.jpg",
+      "linkedFromOriginalPage": true,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 640,
+      "height": 973,
+      "bytes": 205186,
+      "sha256": "b2834822d72cc15f22fe258161de10047ab99723578d2ca6f3c0510b4f5bf7c7",
+      "storedSha256": "b2834822d72cc15f22fe258161de10047ab99723578d2ca6f3c0510b4f5bf7c7",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-lo-van-gia-memorial",
+      "personKey": "new:lo-van-gia",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Visual inspection shows a contemporary memorial building. Historical era is misclassified; a present-day monument cannot satisfy the representative-image gate.",
+      "originalPage": "https://baosonla.vn/vi/bai-viet/lo-van-gia--nguoi-thanh-nien-nhiet-huyet-cach-mang-38535",
+      "fileUrl": "https://media.baosonla.org.vn/Uploads/Image2021/iudmsk4w.JPG",
+      "linkedFromOriginalPage": true,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 550,
+      "height": 367,
+      "bytes": 332295,
+      "sha256": "366e2f281e08907349a67c59572c673e9d07107f2a9d007df943f2778625bd45",
+      "storedSha256": "366e2f281e08907349a67c59572c673e9d07107f2a9d007df943f2778625bd45",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-ngo-gia-tu-btls",
+      "personKey": "new:ngo-gia-tu",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "File response is not a decodable image; the recorded image page actually concerns ancient Vietnamese monarchs. Wrong-page/identity evidence is held.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/3097/14206/dong-chi-ngo-gia-tu-nguoi-chien-si-cong-san-loi-lac-mot-tam-guong-sang-ngoi-ve-dao-duc-cach-mang.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/2016/11/Articles/14206/dongchinhogiatu_1.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": "7c19b1bd2d1a67208e17ac89782e7044b89b3e87af4bc48ec0b3e8e262700f1a",
+      "hashMatches": null,
+      "error": "Input buffer contains unsupported image format",
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-nguyen-chi-dieu-hue",
+      "personKey": "new:nguyen-chi-dieu",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original image page and file cannot be fetched. Reopen a correct original and inspect its actual bytes before acceptance.",
+      "originalPage": "https://svhtt.thuathienhue.gov.vn/?gd=1&cn=11&tc=2938",
+      "fileUrl": "https://svhtt.thuathienhue.gov.vn/UploadFiles/TinTuc/2021/4/27/dong-chi-nguyen-chi-dieu.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": "e9abc3b050847751ad41e38b7b266d0ac05db7b50ef8a09b50adab59daae1554",
+      "hashMatches": null,
+      "error": "fetch failed",
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-nguyen-duc-canh-memorial",
+      "personKey": "new:nguyen-duc-canh",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original page is a soft 404. Downloaded image is the national emblem, 640x360 / 24220 bytes, different from the stored hash and 640x427 dimensions. It is not the claimed temple/context image.",
+      "originalPage": "https://haiphong.gov.vn/di-tich-lich-su-van-hoa/Den-tho-dong-chi-Nguyen-Duc-Canh-37421",
+      "fileUrl": "https://haiphong.gov.vn/upload/haiphong/product/IMG_6283-6372.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 640,
+      "height": 360,
+      "bytes": 24220,
+      "sha256": "9ac618edba88559daf526b26536e4789e003cd6401964fb0e5a6d21a93389a5e",
+      "storedSha256": "088a5e83dfedf1be446fc70f41ef7540324a4c96121007b7acda19723fd27383",
+      "hashMatches": false,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-nguyen-thi-minh-khai-btls",
+      "personKey": "new:nguyen-thi-minh-khai",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "File response is not a decodable image; the recorded original page is about Egyptian mummies in Singapore. Wrong-page/identity evidence is held.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/3097/14188/nguyen-thi-minh-khai-nguoi-nu-chien-sy-cong-san-kien-cuong-bat-khuat.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/2016/11/Articles/14188/nguyenthiminhkhai_1.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": "0a852d7d273386f27a248a00912227da79691ba290996cafa00ba40734a17c55",
+      "hashMatches": null,
+      "error": "Input buffer contains unsupported image format",
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-nguyen-van-troi-portrait",
+      "personKey": "new:nguyen-van-troi",
+      "inheritedDecision": "accepted",
+      "decision": "accepted",
+      "reason": "Original page, linked image, actual bytes/dimensions/hash and depicted context inspected. Coursework reference only; no open license or broader publication/upload permission is asserted.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/3097/12706/liet-si-nguyen-van-troi-nguoi-thanh-nien-qua-cam-ky-niem-48-nam-ngay-anh-nguyen-van-troi-hy-sinh-ngay-15-10-1964-15-10-2012.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/Uploaded/image/Anh-troi.gif",
+      "linkedFromOriginalPage": true,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 394,
+      "height": 480,
+      "bytes": 149029,
+      "sha256": "a8c4eb322016801d6e44b45fc3584d6a7eedfe31d7ada8247d6d9ed27b03815e",
+      "storedSha256": "a8c4eb322016801d6e44b45fc3584d6a7eedfe31d7ada8247d6d9ed27b03815e",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-ta-xuan-thu-na-nua",
+      "personKey": "new:ta-xuan-thu",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Visual inspection shows a contemporary delegation at Na Nua Shack. The source caption does not turn these visitors into a 1945 archival scene; historical era is false.",
+      "originalPage": "https://en.nhandan.vn/birthplace-of-august-revolutions-victory-post148189.html",
+      "fileUrl": "https://en-cdn.nhandan.vn/images/9SpcNLRMBwAcxLVVI7-WBgiInd4oGvgwH2xyqnNPbOrvW-9RJWMEmQKZqPIqZvcXx6c-S5KQtcK4J1cUHCmXx8gMwreaIDrOFY7KK308tts/1-111-1-1110-7231-4803-7455-3030.jpg.avif",
+      "linkedFromOriginalPage": true,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 800,
+      "height": 450,
+      "bytes": 98716,
+      "sha256": "74b77286cc14ab27eabcfe914dfd839024904a155f01cea1ebb1c65c0a131b7c",
+      "storedSha256": "74b77286cc14ab27eabcfe914dfd839024904a155f01cea1ebb1c65c0a131b7c",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-to-hieu-memorial-ceremony",
+      "personKey": "new:to-hieu",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Visual inspection shows masked visitors at a modern memorial exhibition. The stored caption claims a cemetery ceremony; it is not qualifying historical imagery.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/3091/72923/ky-niem-110-nam-ngay-sinh-nguoi-cong-san-kien-trung-to-hieu.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/2022/03/News/Tieng%20Viet/3.3.2022/Ky%20niem%20110%20nam%20ngay%20sinh%20To%20Hieu/1.jpg",
+      "linkedFromOriginalPage": true,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 620,
+      "height": 411,
+      "bytes": 96320,
+      "sha256": "7c48ac1dac1c09ef89ead76f51e8aa7da7ec5af0872300ff49494e3ecde64630",
+      "storedSha256": "7c48ac1dac1c09ef89ead76f51e8aa7da7ec5af0872300ff49494e3ecde64630",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-to-vinh-dien-btls",
+      "personKey": "new:to-vinh-dien",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Recorded original article is reachable but the file URL cannot be decoded as an image and is absent from that page. Original bytes are unverified.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/3097/14209/to-vinh-dien-nguoi-anh-hung-lay-than-minh-chen-phao-o-dien-bien-phu.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/2016/11/Articles/14209/tovinhdien_1.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": "56b32dc576e9e443a29465ea05fb2f906fdd5af640a7c6dc787bddf0741607ed",
+      "hashMatches": null,
+      "error": "Input buffer contains unsupported image format",
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-tran-can-nvsk",
+      "personKey": "new:tran-can",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "The downloaded 300x411 primary profile image is a portrait, not the claimed contextual infographic. Correct depiction/caption/identity evidence and measure its configured thumbnail before acceptance.",
+      "originalPage": "https://nvsk.vnanet.vn/tran-can-6845.vna",
+      "fileUrl": "https://imgprofile.vnanet.vn/media/graphic/profile/2024/03/19/tran-can-anh-hung-llvtnd.png",
+      "linkedFromOriginalPage": true,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 300,
+      "height": 411,
+      "bytes": 267688,
+      "sha256": "abc9c1db1b1ca0bd1750e5b0ad71f974e6cab5a8a6f66799e33aac115cc9e3ad",
+      "storedSha256": "abc9c1db1b1ca0bd1750e5b0ad71f974e6cab5a8a6f66799e33aac115cc9e3ad",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-tran-phu-btls",
+      "personKey": "new:tran-phu",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "File response is not a decodable image; the recorded image page actually concerns monkey fossils in Panama. Wrong-page/identity evidence is held.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/3097/14207/tran-phu-tong-bi-thu-dau-tien-cua-dang-nguoi-hoc-tro-xuat-sac-cua-chu-tich-ho-chi-minh-nguoi-con-uu-tu-cua-dang-va-dan-toc.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/2016/11/Articles/14207/tranphu_1.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": "48a37d8a6b6734156d4efeb0b0eb7f8a515ef990ead48929c096075b9e711c0b",
+      "hashMatches": null,
+      "error": "Input buffer contains unsupported image format",
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-tran-quoc-manh-ban-luot",
+      "personKey": "new:tran-quoc-manh",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Visual inspection shows a contemporary memorial stele at Ban Luot. Historical era is misclassified; a present-day monument cannot satisfy the representative-image gate.",
+      "originalPage": "https://dulich.laichau.gov.vn/vi/blog/details/ban-luot-dau-son-lich-su-1337",
+      "fileUrl": "https://dulich.laichau.gov.vn/DataFiles/2026/07/Blog/20260706-145039-laOYicHf.webp",
+      "linkedFromOriginalPage": true,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 743,
+      "height": 492,
+      "bytes": 32162,
+      "sha256": "dd22e3b38ebe0c9c4ee4fb375d01411d372e740effca2826d5f1fe0140241c6a",
+      "storedSha256": "dd22e3b38ebe0c9c4ee4fb375d01411d372e740effca2826d5f1fe0140241c6a",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-van-tien-dung-1975",
+      "personKey": "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+      "inheritedDecision": "accepted",
+      "decision": "accepted",
+      "reason": "Original page, linked image, actual bytes/dimensions/hash and depicted context inspected. Coursework reference only; no open license or broader publication/upload permission is asserted.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/3097/19898/100-nam-ngay-sinh-djai-tuong-van-tien-dung-2-5-1917-2-5-2017-vi-tuong-chinh-tri-quan-su-song-toan.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/Uploaded/image/data%20Hung/thang%204%20nam%202017/vi%20tuong%20chinh%20tri/1.jpg",
+      "linkedFromOriginalPage": true,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 480,
+      "height": 286,
+      "bytes": 36148,
+      "sha256": "2dc066412153ed1d81d4db4b5506ed1b1d53611c2325273e2f320cf442bb283e",
+      "storedSha256": "2dc066412153ed1d81d4db4b5506ed1b1d53611c2325273e2f320cf442bb283e",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-vu-van-hieu-monument",
+      "personKey": "new:vu-van-hieu",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Visual inspection shows a contemporary monument. Historical era is misclassified; a present-day monument cannot satisfy the representative-image gate.",
+      "originalPage": "https://baoquangninh.vn/cong-trinh-tuong-dai-dong-chi-vu-van-hieu-la-su-tri-an-va-long-biet-on-sau-sac-cua-dang-bo-chinh-quyen-va-nhan-dan-tinh-quang-ninh-2322105.html",
+      "fileUrl": "https://assets.baoquangninh.vn/images/OlyUTCBq9YKfKAvTlrypR2vl4xQh9Dppvkod5M-qfT-O54_uc8nijtFFUYy_SAI89tPAwz3ZW15DVfJjgFTlsAuQNgesCzd34DYlOoPR_uE/images1359419_images889396_aa.jpg.avif",
+      "linkedFromOriginalPage": false,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 800,
+      "height": 531,
+      "bytes": 67474,
+      "sha256": "451ebd931d52d81bf13bb5594d8953d06b16aae853c21c78b65835f01eaecb52",
+      "storedSha256": "451ebd931d52d81bf13bb5594d8953d06b16aae853c21c78b65835f01eaecb52",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-research-y-bloc-eban-portrait",
+      "personKey": "new:y-bloc-eban",
+      "inheritedDecision": "accepted",
+      "decision": "accepted",
+      "reason": "Original page, linked image, actual bytes/dimensions/hash and depicted context inspected. Coursework reference only; no open license or broader publication/upload permission is asserted.",
+      "originalPage": "https://vhttdl.daklak.gov.vn/dak-lak-co-tuyen-duong-mang-ten-vi-tuong-dau-tien-cua-tay-nguyen-13629.html",
+      "fileUrl": "https://vhttdl.daklak.gov.vn/CMS/Content/n%C4%83m2024/thang8/thuy1.jpg",
+      "linkedFromOriginalPage": true,
+      "visualInspected": true,
+      "httpStatus": 200,
+      "width": 1280,
+      "height": 991,
+      "bytes": 142456,
+      "sha256": "11aee9329e85e27ae520decb2492621880ba7a10b1dd4dc8d063b5788a8b66a2",
+      "storedSha256": "11aee9329e85e27ae520decb2492621880ba7a10b1dd4dc8d063b5788a8b66a2",
+      "hashMatches": true,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-to-vinh-dien-portrait",
+      "personKey": "new:to-vinh-dien",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/3097/15890/anh-hung-liet-si-to-vinh-dien-1924-1954.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/2019/05/Articles/15890/to-vinh-dien.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": null,
+      "hashMatches": null,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-ton-duc-thang-portrait",
+      "personKey": "new:ton-duc-thang",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+      "originalPage": "https://angiang.gov.vn/vi-vn/tin-tuc/chu-tich-ton-duc-thang-cuoc-doi-va-su-nghiep-cach-mang-ve-vang",
+      "fileUrl": "https://angiang.gov.vn/Uploads/Images/2023/08/bac-ton-chan-dung.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": null,
+      "hashMatches": null,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-tran-can-portrait",
+      "personKey": "new:tran-can",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/3097/15887/anh-hung-tran-can-nguoi-cam-la-co-quyet-chien-quyet-thang-tren-doi-him-lam.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/2019/05/Articles/15887/tran-can.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": null,
+      "hashMatches": null,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    },
+    {
+      "id": "media-van-tien-dung-portrait",
+      "personKey": "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+      "originalPage": "https://baotanglichsu.vn/vi/Articles/3097/14892/dai-tuong-van-tien-dung-vi-tuong-tai-ba-cua-quan-doi-nhan-dan-viet-nam.html",
+      "fileUrl": "https://baotanglichsu.vn/DataFiles/2017/05/Articles/14892/dai-tuong-van-tien-dung.jpg",
+      "linkedFromOriginalPage": false,
+      "visualInspected": false,
+      "httpStatus": null,
+      "width": null,
+      "height": null,
+      "bytes": null,
+      "sha256": null,
+      "storedSha256": null,
+      "hashMatches": null,
+      "error": null,
+      "usageBasis": "coursework_reference",
+      "broaderPublicationAuthorized": false
+    }
+  ],
+  "storyChecks": [
+    {
+      "id": "story-dinh-nup-main",
+      "personKey": "new:dinh-nup",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+      "bodySha256": "dabc5cafc9b3e819c2f00857254f202f48c0aa8d12ebfd5fee1afa400ef05d4c",
+      "claimIds": [
+        "clm-dinh-nup-contribution",
+        "clm-dinh-nup-identity",
+        "clm-dinh-nup-locality-52-activity",
+        "clm-dinh-nup-locality-52-birthplace",
+        "clm-dinh-nup-period"
+      ]
+    },
+    {
+      "id": "story-hoang-van-thu-main",
+      "personKey": "new:hoang-van-thu",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+      "bodySha256": "2254750c2940f14b9aa5bde41035b5c6c8ecfc0b2575e08a3be7c3abe0f280c5",
+      "claimIds": [
+        "clm-hoang-van-thu-contribution",
+        "clm-hoang-van-thu-identity",
+        "clm-hoang-van-thu-locality-20-activity",
+        "clm-hoang-van-thu-locality-20-birthplace",
+        "clm-hoang-van-thu-period"
+      ]
+    },
+    {
+      "id": "story-kim-dong-main",
+      "personKey": "new:kim-dong",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+      "bodySha256": "694ba0b40331b8521d064805b3265df3a0c7f7caa2f7b20c7e2da45fcc926837",
+      "claimIds": [
+        "clm-kim-dong-contribution",
+        "clm-kim-dong-identity",
+        "clm-kim-dong-locality-04-activity",
+        "clm-kim-dong-locality-04-birthplace",
+        "clm-kim-dong-period"
+      ]
+    },
+    {
+      "id": "story-ngo-gia-tu-main",
+      "personKey": "new:ngo-gia-tu",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+      "bodySha256": "359c1191d6cd82af08806175c7cde78165f4cd9889ee45147f77673b021814b2",
+      "claimIds": [
+        "clm-ngo-gia-tu-contribution",
+        "clm-ngo-gia-tu-identity",
+        "clm-ngo-gia-tu-locality-24-activity",
+        "clm-ngo-gia-tu-locality-24-birthplace",
+        "clm-ngo-gia-tu-period"
+      ]
+    },
+    {
+      "id": "story-nguyen-duc-canh-main",
+      "personKey": "new:nguyen-duc-canh",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+      "bodySha256": "60f258c149420b0d09fd23f29c3c224d18d3fdbf09bd7b3f3641f2798c6bbe31",
+      "claimIds": [
+        "clm-nguyen-duc-canh-contribution",
+        "clm-nguyen-duc-canh-identity",
+        "clm-nguyen-duc-canh-locality-31-activity",
+        "clm-nguyen-duc-canh-period"
+      ]
+    },
+    {
+      "id": "story-nguyen-thi-minh-khai-main",
+      "personKey": "new:nguyen-thi-minh-khai",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+      "bodySha256": "680defc04081f0848eb398f428db72925f7803b791cda2e3e2ec48a80560b74a",
+      "claimIds": [
+        "clm-nguyen-thi-minh-khai-contribution",
+        "clm-nguyen-thi-minh-khai-identity",
+        "clm-nguyen-thi-minh-khai-locality-40-activity",
+        "clm-nguyen-thi-minh-khai-locality-40-birthplace",
+        "clm-nguyen-thi-minh-khai-period"
+      ]
+    },
+    {
+      "id": "story-research-be-van-dan-muong-pon",
+      "personKey": "new:be-van-dan",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "The narrative adds artillery/air cover and a wounded-gunner/dead-assistant sequence beyond the cited profile, whose gunner sequence differs. Image depiction is also incorrect. Hold the narrative pending precise reconciliation.",
+      "bodySha256": "153e1a3bc47d0beb39558002c7014f806bf57367f1034805a2dc3208b6a8bade",
+      "claimIds": [
+        "clm-research-be-van-dan-story-gun-mount-action",
+        "clm-research-be-van-dan-story-learning",
+        "clm-research-be-van-dan-story-muong-pon-context",
+        "clm-research-be-van-dan-story-origins",
+        "clm-research-be-van-dan-story-photo-evidence"
+      ]
+    },
+    {
+      "id": "story-research-doi-can-khoi-nghia-thai-nguyen",
+      "personKey": "new:doi-can",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "The story and its origins claim say linh kho do, while the cited provincial article explicitly says linh kho xanh. The short monument article does not substantiate the added inner thoughts and detailed attack scenes.",
+      "bodySha256": "287e76260f3d6c6e0930059d289f3bad8fdb5871e4e5195f7cc1571776730892",
+      "claimIds": [
+        "clm-research-doi-can-story-alliance-with-luong-ngoc-quyen",
+        "clm-research-doi-can-story-learning",
+        "clm-research-doi-can-story-origins",
+        "clm-research-doi-can-story-photo-evidence",
+        "clm-research-doi-can-story-uprising-actions"
+      ]
+    },
+    {
+      "id": "story-research-hoang-le-kha",
+      "personKey": "new:hoang-le-kha",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "The story says Ha Phong but the cited museum article says Hoa Phong. The precise Tam Hap/Trang Lon execution location is not established by that cited article. Correct and recheck every paragraph before admission.",
+      "bodySha256": "4d921e04c04b604aa9c6a21964d51774d9e44bd366aa1ac00c7aad7e9585496f",
+      "claimIds": [
+        "clm-research-hoang-le-kha-story-legacy",
+        "clm-research-hoang-le-kha-story-origins",
+        "clm-research-hoang-le-kha-story-resistance-leadership",
+        "clm-research-hoang-le-kha-story-sacrifice",
+        "clm-research-hoang-le-kha-story-underground-struggle"
+      ]
+    },
+    {
+      "id": "story-research-huynh-van-nghe",
+      "personKey": "new:huynh-van-nghe",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "A false portrait is used and the 350–700-word narrative, exact poetry quotation, personal motivations and formal honors require scoped paragraph-level reconciliation. No complete accepted profile is claimed.",
+      "bodySha256": "98453e962d71030e8fd8d619bbbae68d64fefa94ef00b89005747eb74c368245",
+      "claimIds": [
+        "clm-research-huynh-van-nghe-story-la-nga-battle",
+        "clm-research-huynh-van-nghe-story-legacy",
+        "clm-research-huynh-van-nghe-story-origins",
+        "clm-research-huynh-van-nghe-story-warrior-poet",
+        "clm-research-huynh-van-nghe-story-zone-d"
+      ]
+    },
+    {
+      "id": "story-research-kim-dong-na-ma",
+      "personKey": "new:kim-dong",
+      "inheritedDecision": "accepted",
+      "decision": "accepted",
+      "reason": "Narrative and its owned claims reconciled to reopened scoped sources; editorial learning paragraph identified separately.",
+      "bodySha256": "3e9572890e0bca7b8ab7325fce49006be959f54b190a9e64e985ce42b92e36be",
+      "claimIds": [
+        "clm-research-kim-dong-na-ma-certificate",
+        "clm-research-kim-dong-na-ma-learning",
+        "clm-research-kim-dong-na-ma-origins",
+        "clm-research-kim-dong-na-ma-protection",
+        "clm-research-kim-dong-na-ma-team"
+      ]
+    },
+    {
+      "id": "story-research-le-duan-primary",
+      "personKey": "figure:dff00764-7ef6-4b82-981e-9f66f080d653",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+      "bodySha256": "43212b4a78b0d2a88a4385480f888568251933bd77ea1966fb1e1d6eaf8eccbd",
+      "claimIds": [
+        "clm-research-le-duan-story-imprisonment-struggle",
+        "clm-research-le-duan-story-learning",
+        "clm-research-le-duan-story-origins",
+        "clm-research-le-duan-story-photo-evidence",
+        "clm-research-le-duan-story-southern-revolution"
+      ]
+    },
+    {
+      "id": "story-research-le-thi-pha",
+      "personKey": "new:le-thi-pha",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original portrait and main interview were inspected, including 1968/1971/1972 and 1978. The second source returns 403; paragraph 2 adds detailed training/transport/road-20 battle assertions requiring their own support. Not admitted as a fully reconciled narrative.",
+      "bodySha256": "af65d55ecf7303e651bed701809d98ecd9e30d964ae19e73bb36f92809597ac1",
+      "claimIds": [
+        "clm-research-le-thi-pha-story-artillery-b83",
+        "clm-research-le-thi-pha-story-legacy",
+        "clm-research-le-thi-pha-story-mass-work",
+        "clm-research-le-thi-pha-story-origins",
+        "clm-research-le-thi-pha-story-sacrifice"
+      ]
+    },
+    {
+      "id": "story-research-lo-van-gia-vuot-nguc-1943",
+      "personKey": "new:lo-van-gia",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+      "bodySha256": "686a7b61ce8e8999aac3d71cc95a7f29ffe813c9acc8e93f0e4c9bc6a26f49f8",
+      "claimIds": [
+        "clm-research-lo-van-gia-story-escape-lead-1943",
+        "clm-research-lo-van-gia-story-escape-plan",
+        "clm-research-lo-van-gia-story-learning",
+        "clm-research-lo-van-gia-story-origins",
+        "clm-research-lo-van-gia-story-photo-evidence"
+      ]
+    },
+    {
+      "id": "story-research-ngo-gia-tu-primary",
+      "personKey": "new:ngo-gia-tu",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+      "bodySha256": "037dbebc14cbacc0f9548bcf9f20190aca2c4ff334819013b845560f43a8807f",
+      "claimIds": [
+        "clm-research-ngo-gia-tu-story-learning",
+        "clm-research-ngo-gia-tu-story-origins",
+        "clm-research-ngo-gia-tu-story-party-leadership",
+        "clm-research-ngo-gia-tu-story-photo-evidence",
+        "clm-research-ngo-gia-tu-story-proletarianization"
+      ]
+    },
+    {
+      "id": "story-research-nguyen-chi-dieu-primary",
+      "personKey": "new:nguyen-chi-dieu",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+      "bodySha256": "9dad6d89df39101588ddd1e3b3041b5dda10a92f9f69103d33f622747815ce76",
+      "claimIds": [
+        "clm-research-nguyen-chi-dieu-story-democratic-front",
+        "clm-research-nguyen-chi-dieu-story-learning",
+        "clm-research-nguyen-chi-dieu-story-origins",
+        "clm-research-nguyen-chi-dieu-story-party-activities",
+        "clm-research-nguyen-chi-dieu-story-photo-evidence"
+      ]
+    },
+    {
+      "id": "story-research-nguyen-duc-canh-primary",
+      "personKey": "new:nguyen-duc-canh",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+      "bodySha256": "a08764941c282de048b9b22bee165e1bf2fa33b85b854a265fc2eed6f61b082a",
+      "claimIds": [
+        "clm-research-nguyen-duc-canh-story-learning",
+        "clm-research-nguyen-duc-canh-story-origins",
+        "clm-research-nguyen-duc-canh-story-party-secretary",
+        "clm-research-nguyen-duc-canh-story-photo-evidence",
+        "clm-research-nguyen-duc-canh-story-trade-union"
+      ]
+    },
+    {
+      "id": "story-research-nguyen-thi-minh-khai-primary",
+      "personKey": "new:nguyen-thi-minh-khai",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+      "bodySha256": "e8eb9e958cc7bc0efc3d2b99ff63433409bfb7d8f09cbd603056b5b05b5d8543",
+      "claimIds": [
+        "clm-research-nguyen-thi-minh-khai-story-comintern",
+        "clm-research-nguyen-thi-minh-khai-story-learning",
+        "clm-research-nguyen-thi-minh-khai-story-origins",
+        "clm-research-nguyen-thi-minh-khai-story-photo-evidence",
+        "clm-research-nguyen-thi-minh-khai-story-saigon-secretary"
+      ]
+    },
+    {
+      "id": "story-research-nguyen-van-troi",
+      "personKey": "new:nguyen-van-troi",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+      "bodySha256": "15303cba1a10ccd8b10b1a4528cc07074f5a2350979c0c919b6f4ab5fb9be9c1",
+      "claimIds": [
+        "clm-research-nguyen-van-troi-story-bridge-mission",
+        "clm-research-nguyen-van-troi-story-execution-ground",
+        "clm-research-nguyen-van-troi-story-legacy",
+        "clm-research-nguyen-van-troi-story-origins",
+        "clm-research-nguyen-van-troi-story-unyielding-spirit"
+      ]
+    },
+    {
+      "id": "story-research-ta-xuan-thu-thanh-la",
+      "personKey": "new:ta-xuan-thu",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Historical claims and the modern photo/caption must be reconciled separately. The current photo cannot substantiate a 1945 scene; the full narrative is not admitted.",
+      "bodySha256": "3a90a763598dae90393acb9bb32e7ec84bca9680547fa10c0249cd024748c7b4",
+      "claimIds": [
+        "clm-research-ta-xuan-thu-story-learning",
+        "clm-research-ta-xuan-thu-story-origins",
+        "clm-research-ta-xuan-thu-story-photo-evidence",
+        "clm-research-ta-xuan-thu-story-thanh-la-uprising",
+        "clm-research-ta-xuan-thu-story-tu-do-district"
+      ]
+    },
+    {
+      "id": "story-research-to-hieu-nha-tu-son-la",
+      "personKey": "new:to-hieu",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+      "bodySha256": "2a3b0f267748dcc039559f28445450660f696078fe6120d6968c3f452752e215",
+      "claimIds": [
+        "clm-research-to-hieu-story-learning",
+        "clm-research-to-hieu-story-origins",
+        "clm-research-to-hieu-story-photo-evidence",
+        "clm-research-to-hieu-story-school-in-prison",
+        "clm-research-to-hieu-story-son-la-secretary"
+      ]
+    },
+    {
+      "id": "story-research-to-vinh-dien-primary",
+      "personKey": "new:to-vinh-dien",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "The museum title says 1924–1953 while its event chronology and TTXVN corroboration concern 1 February 1954. The narrative needs explicit scoped chronology reconciliation; do not infer an exact death year from a title.",
+      "bodySha256": "c125ead61b74579fbbcf758542c905556bf62f0f099bbf90b8532e8bd78f117a",
+      "claimIds": [
+        "clm-research-to-vinh-dien-story-learning",
+        "clm-research-to-vinh-dien-story-origins",
+        "clm-research-to-vinh-dien-story-photo-evidence",
+        "clm-research-to-vinh-dien-story-pulling-artillery",
+        "clm-research-to-vinh-dien-story-sacrifice"
+      ]
+    },
+    {
+      "id": "story-research-tran-can-dien-bien-phu",
+      "personKey": "new:tran-can",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+      "bodySha256": "119efba3ad55e12d8cba3976cb591156787e4625a9fd1dd9d92f75f3a710207f",
+      "claimIds": [
+        "clm-research-tran-can-story-him-lam-battle",
+        "clm-research-tran-can-story-learning",
+        "clm-research-tran-can-story-origins",
+        "clm-research-tran-can-story-photo-evidence",
+        "clm-research-tran-can-story-point-507-defense"
+      ]
+    },
+    {
+      "id": "story-research-tran-phu-primary",
+      "personKey": "new:tran-phu",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+      "bodySha256": "02824c4e6579b31a1b40dbbf06772b259a784cad8a83cdf830547b02e86d8126",
+      "claimIds": [
+        "clm-research-tran-phu-story-general-secretary",
+        "clm-research-tran-phu-story-learning",
+        "clm-research-tran-phu-story-origins",
+        "clm-research-tran-phu-story-photo-evidence",
+        "clm-research-tran-phu-story-political-thesis"
+      ]
+    },
+    {
+      "id": "story-research-tran-quoc-manh-ban-luot",
+      "personKey": "new:tran-quoc-manh",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+      "bodySha256": "41e6141c6dda8a821842e6aa371f1bc75f026f46b17eaa6f03049e7db935d6c1",
+      "claimIds": [
+        "clm-research-tran-quoc-manh-story-ban-luot-meeting",
+        "clm-research-tran-quoc-manh-story-learning",
+        "clm-research-tran-quoc-manh-story-origins",
+        "clm-research-tran-quoc-manh-story-party-building",
+        "clm-research-tran-quoc-manh-story-photo-evidence"
+      ]
+    },
+    {
+      "id": "story-research-van-tien-dung-1975",
+      "personKey": "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+      "inheritedDecision": "accepted",
+      "decision": "accepted",
+      "reason": "Narrative and its owned claims reconciled to reopened scoped sources; editorial learning paragraph identified separately.",
+      "bodySha256": "5ed99f8b37bd2473fdfdc219373e8bc9f4e77c1dabf46666e4f3ef8e72ef7bc7",
+      "claimIds": [
+        "clm-research-van-tien-dung-1975-campaign-context",
+        "clm-research-van-tien-dung-1975-command-method",
+        "clm-research-van-tien-dung-1975-learning",
+        "clm-research-van-tien-dung-1975-origins",
+        "clm-research-van-tien-dung-1975-photo-evidence"
+      ]
+    },
+    {
+      "id": "story-research-vu-van-hieu-vung-mo",
+      "personKey": "new:vu-van-hieu",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+      "bodySha256": "c5eab0365e41983f58b236250404e09a7acfb627227579c262cad5a601b2fcf9",
+      "claimIds": [
+        "clm-research-vu-van-hieu-story-learning",
+        "clm-research-vu-van-hieu-story-mining-movement",
+        "clm-research-vu-van-hieu-story-origins",
+        "clm-research-vu-van-hieu-story-party-secretary-1930",
+        "clm-research-vu-van-hieu-story-photo-evidence"
+      ]
+    },
+    {
+      "id": "story-research-y-bloc-eban",
+      "personKey": "new:y-bloc-eban",
+      "inheritedDecision": "accepted",
+      "decision": "held",
+      "reason": "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+      "bodySha256": "148fc580c169018a6e75754a0c5ec5a35b5fa01c8d86d9f793ffe479655e087f",
+      "claimIds": [
+        "clm-research-y-bloc-eban-story-legacy",
+        "clm-research-y-bloc-eban-story-origins",
+        "clm-research-y-bloc-eban-story-resistance",
+        "clm-research-y-bloc-eban-story-service",
+        "clm-research-y-bloc-eban-story-uprising"
+      ]
+    },
+    {
+      "id": "story-to-vinh-dien-main",
+      "personKey": "new:to-vinh-dien",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+      "bodySha256": "e18e88647dfdc6e7096fd8ab4f09cedf1587000e2de36ebe38e84f5e483bb8dd",
+      "claimIds": [
+        "clm-to-vinh-dien-contribution",
+        "clm-to-vinh-dien-identity",
+        "clm-to-vinh-dien-locality-38-activity",
+        "clm-to-vinh-dien-locality-38-birthplace",
+        "clm-to-vinh-dien-period"
+      ]
+    },
+    {
+      "id": "story-ton-duc-thang-main",
+      "personKey": "new:ton-duc-thang",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+      "bodySha256": "1cf11b2c890532d74125025431f87219a424944afb7473857f75ee0bbf2a25cf",
+      "claimIds": [
+        "clm-ton-duc-thang-contribution",
+        "clm-ton-duc-thang-identity",
+        "clm-ton-duc-thang-locality-91-activity",
+        "clm-ton-duc-thang-locality-91-birthplace",
+        "clm-ton-duc-thang-period"
+      ]
+    },
+    {
+      "id": "story-tran-can-main",
+      "personKey": "new:tran-can",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+      "bodySha256": "91b9ed507cb1d8e6a6bc43ca32c3d11d09dbac1e572e7a06b1577a00425a272c",
+      "claimIds": [
+        "clm-tran-can-contribution",
+        "clm-tran-can-identity",
+        "clm-tran-can-locality-11-activity",
+        "clm-tran-can-period"
+      ]
+    },
+    {
+      "id": "story-van-tien-dung-main",
+      "personKey": "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+      "inheritedDecision": "held",
+      "decision": "held",
+      "reason": "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+      "bodySha256": "950f0a55cac5788d5b64d3c1adab36d6488d1f16478c55a5ddb126cec915d287",
+      "claimIds": [
+        "clm-van-tien-dung-contribution",
+        "clm-van-tien-dung-identity",
+        "clm-van-tien-dung-locality-01-activity",
+        "clm-van-tien-dung-locality-01-birthplace",
+        "clm-van-tien-dung-period"
+      ]
+    }
+  ],
+  "people": [
+    {
+      "personKey": "figure:016a56fa-2a90-4bf4-ae8f-6975f0486282",
+      "name": "Lê Đức Thọ",
+      "slug": "le-duc-tho",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Chưa đối chiếu nguồn lịch sử độc lập cho đề cử identity hiện hữu"
+      ]
+    },
+    {
+      "personKey": "figure:01e2955b-8989-4765-95b8-f1f4a0685168",
+      "name": "Trường Chinh",
+      "slug": "truong-chinh",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "37"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Chưa đối chiếu nguồn lịch sử độc lập cho đề cử identity hiện hữu"
+      ]
+    },
+    {
+      "personKey": "figure:2bd5b2d6-9ab1-48b3-bf6e-f53a76484e4b",
+      "name": "Nguyễn Văn Linh",
+      "slug": "nguyen-van-linh",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "33"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Chưa đối chiếu nguồn lịch sử độc lập cho đề cử identity hiện hữu"
+      ]
+    },
+    {
+      "personKey": "figure:2ee65d28-bade-48b1-8658-9c2c0d55009b",
+      "name": "Nguyễn Thị Bình",
+      "slug": "nguyen-thi-binh",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Chưa đối chiếu nguồn lịch sử độc lập cho đề cử identity hiện hữu"
+      ]
+    },
+    {
+      "personKey": "figure:757037f8-03a7-4a97-919e-00fc98236801",
+      "name": "Hồ Chí Minh",
+      "slug": "ho-chi-minh",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "15",
+        "40"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Chưa đối chiếu nguồn lịch sử độc lập cho đề cử identity hiện hữu"
+      ]
+    },
+    {
+      "personKey": "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+      "name": "Văn Tiến Dũng",
+      "slug": "van-tien-dung",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "complete_for_local_rehearsal",
+      "draftImport": "reviewed_graph",
+      "nominatedLocalityCodes": [
+        "01",
+        "24"
+      ],
+      "qualifyingLocalityCodes": [
+        "01"
+      ],
+      "storyId": "story-research-van-tien-dung-1975",
+      "storyDecision": "accepted",
+      "mediaId": "media-research-van-tien-dung-1975",
+      "mediaDecision": "accepted",
+      "blockers": []
+    },
+    {
+      "personKey": "figure:c6eb511d-898f-4fab-8875-42ddd0700cd4",
+      "name": "Phạm Văn Đồng",
+      "slug": "pham-van-dong",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "51"
+      ],
+      "qualifyingLocalityCodes": [
+        "51"
+      ],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Nguồn dakbla.quangngai.gov.vn có tư liệu bài viết nhưng không cung cấp chân dung lịch sử hoặc ảnh bối cảnh của nhân vật; giữ trạng thái chờ tư liệu ảnh kiểm chứng.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "figure:d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+      "name": "Võ Nguyên Giáp",
+      "slug": "vo-nguyen-giap",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "08",
+        "11",
+        "44",
+        "46"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Chưa đối chiếu nguồn lịch sử độc lập cho đề cử identity hiện hữu"
+      ]
+    },
+    {
+      "personKey": "figure:dff00764-7ef6-4b82-981e-9f66f080d653",
+      "name": "Lê Duẩn",
+      "slug": "le-duan",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "44"
+      ],
+      "qualifyingLocalityCodes": [
+        "44"
+      ],
+      "storyId": "story-research-le-duan-primary",
+      "storyDecision": "held",
+      "mediaId": "media-research-le-duan-vinh-linh",
+      "mediaDecision": "held",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Original image page returns 404; file response cannot be decoded as an image. No current original image evidence.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:be-van-dan",
+      "name": "Bế Văn Đàn",
+      "slug": "be-van-dan",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "04",
+        "11"
+      ],
+      "qualifyingLocalityCodes": [
+        "04",
+        "11"
+      ],
+      "storyId": "story-research-be-van-dan-muong-pon",
+      "storyDecision": "held",
+      "mediaId": "media-research-be-van-dan-nvsk",
+      "mediaDecision": "held",
+      "blockers": [
+        "The narrative adds artillery/air cover and a wounded-gunner/dead-assistant sequence beyond the cited profile, whose gunner sequence differs. Image depiction is also incorrect. Hold the narrative pending precise reconciliation.",
+        "The downloaded 300x401 primary profile image is a portrait, not the claimed contextual infographic. Correct depiction/caption/identity evidence and measure its configured thumbnail before acceptance.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:bong-van-dia",
+      "name": "Bông Văn Dĩa",
+      "slug": "bong-van-dia",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "96"
+      ],
+      "qualifyingLocalityCodes": [
+        "96"
+      ],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:chau-van-liem",
+      "name": "Châu Văn Liêm",
+      "slug": "chau-van-liem",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "80",
+        "91",
+        "92"
+      ],
+      "qualifyingLocalityCodes": [
+        "92"
+      ],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:dinh-nup",
+      "name": "Đinh Núp",
+      "slug": "dinh-nup",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "52"
+      ],
+      "qualifyingLocalityCodes": [
+        "52"
+      ],
+      "storyId": "story-dinh-nup-main",
+      "storyDecision": "held",
+      "mediaId": "media-dinh-nup-portrait",
+      "mediaDecision": "held",
+      "blockers": [
+        "Nguồn baogialai.com.vn phản ánh chuyến về nguồn năm 2019, các hình ảnh đính kèm là đoàn đại biểu hiện đại, không có ảnh chân dung lịch sử hoặc tư liệu bối cảnh 1858–1975; giữ trạng thái chờ tư liệu ảnh kiểm chứng.",
+        "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+        "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:doi-can",
+      "name": "Đội Cấn",
+      "slug": "doi-can",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "19",
+        "25"
+      ],
+      "qualifyingLocalityCodes": [
+        "19"
+      ],
+      "storyId": "story-research-doi-can-khoi-nghia-thai-nguyen",
+      "storyDecision": "held",
+      "mediaId": "media-research-doi-can-exhibition-105",
+      "mediaDecision": "held",
+      "blockers": [
+        "The story and its origins claim say linh kho do, while the cited provincial article explicitly says linh kho xanh. The short monument article does not substantiate the added inner thoughts and detailed attack scenes.",
+        "Visual inspection shows contemporary visitors at a 2022 exhibition. This is present-day commemoration and does not qualify as a historical representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:ha-huy-tap",
+      "name": "Hà Huy Tập",
+      "slug": "ha-huy-tap",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "42"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:hoang-le-kha",
+      "name": "Hoàng Lê Kha",
+      "slug": "hoang-le-kha",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "38",
+        "79",
+        "80"
+      ],
+      "qualifyingLocalityCodes": [
+        "80"
+      ],
+      "storyId": "story-research-hoang-le-kha",
+      "storyDecision": "held",
+      "mediaId": "media-research-hoang-le-kha-context",
+      "mediaDecision": "accepted",
+      "blockers": [
+        "The story says Ha Phong but the cited museum article says Hoa Phong. The precise Tam Hap/Trang Lon execution location is not established by that cited article. Correct and recheck every paragraph before admission.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:hoang-minh-chanh",
+      "name": "Hoàng Minh Chánh",
+      "slug": "hoang-minh-chanh",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "75"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:hoang-truong-minh",
+      "name": "Hoàng Trường Minh",
+      "slug": "hoang-truong-minh",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "15"
+      ],
+      "qualifyingLocalityCodes": [
+        "15"
+      ],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh chân dung hoặc ảnh tư liệu bối cảnh trực tiếp về đồng chí Hoàng Trường Minh; ảnh bài báo gốc là đồng chí Vũ Văn Thụ; link cdn ảnh bài báo trả về 404.",
+        "Chưa đủ chứng cứ độc lập về nhân thân để công bố câu chuyện hoàn chỉnh.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:hoang-van-thu",
+      "name": "Hoàng Văn Thụ",
+      "slug": "hoang-van-thu",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "20"
+      ],
+      "qualifyingLocalityCodes": [
+        "20"
+      ],
+      "storyId": "story-hoang-van-thu-main",
+      "storyDecision": "held",
+      "mediaId": "media-hoang-van-thu-portrait",
+      "mediaDecision": "held",
+      "blockers": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage; link ảnh kế thừa baochinhphu trả về 404",
+        "Nguồn có một câu bất hợp niên biểu về kết nạp năm 1928; không dùng câu đó. Cần nguồn thứ hai đối chiếu trước khi biên soạn câu chuyện chi tiết.",
+        "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+        "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:huynh-van-nghe",
+      "name": "Huỳnh Văn Nghệ",
+      "slug": "huynh-van-nghe",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "75"
+      ],
+      "qualifyingLocalityCodes": [
+        "75"
+      ],
+      "storyId": "story-research-huynh-van-nghe",
+      "storyDecision": "held",
+      "mediaId": "media-research-huynh-van-nghe-portrait",
+      "mediaDecision": "held",
+      "blockers": [
+        "A false portrait is used and the 350–700-word narrative, exact poetry quotation, personal motivations and formal honors require scoped paragraph-level reconciliation. No complete accepted profile is claimed.",
+        "Visual inspection shows a speaker at a 2018 staff conference, not an authenticated portrait of Huynh Van Nghe. A URL appearing elsewhere on the same page does not prove identity.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:kim-dong",
+      "name": "Kim Đồng",
+      "slug": "kim-dong",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "complete_for_local_rehearsal",
+      "draftImport": "reviewed_graph",
+      "nominatedLocalityCodes": [
+        "04"
+      ],
+      "qualifyingLocalityCodes": [
+        "04"
+      ],
+      "storyId": "story-research-kim-dong-na-ma",
+      "storyDecision": "accepted",
+      "mediaId": "media-research-kim-dong-certificate-1944",
+      "mediaDecision": "accepted",
+      "blockers": []
+    },
+    {
+      "personKey": "new:le-binh",
+      "name": "Lê Bình",
+      "slug": "le-binh",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "92"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:le-thi-pha",
+      "name": "Lê Thị Pha",
+      "slug": "le-thi-pha",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "68"
+      ],
+      "qualifyingLocalityCodes": [
+        "68"
+      ],
+      "storyId": "story-research-le-thi-pha",
+      "storyDecision": "held",
+      "mediaId": "media-research-le-thi-pha-portrait",
+      "mediaDecision": "accepted",
+      "blockers": [
+        "Original portrait and main interview were inspected, including 1968/1971/1972 and 1978. The second source returns 403; paragraph 2 adds detailed training/transport/road-20 battle assertions requiring their own support. Not admitted as a fully reconciled narrative.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:lo-van-gia",
+      "name": "Lò Văn Giá",
+      "slug": "lo-van-gia",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "14"
+      ],
+      "qualifyingLocalityCodes": [
+        "14"
+      ],
+      "storyId": "story-research-lo-van-gia-vuot-nguc-1943",
+      "storyDecision": "held",
+      "mediaId": "media-research-lo-van-gia-memorial",
+      "mediaDecision": "held",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Visual inspection shows a contemporary memorial building. Historical era is misclassified; a present-day monument cannot satisfy the representative-image gate.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:luong-ngoc-quyen",
+      "name": "Lương Ngọc Quyến",
+      "slug": "luong-ngoc-quyen",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "19"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:luong-van-tri",
+      "name": "Lương Văn Tri",
+      "slug": "luong-van-tri",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "20"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:luong-van-tuy",
+      "name": "Lương Văn Tụy",
+      "slug": "luong-van-tuy",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "37"
+      ],
+      "qualifyingLocalityCodes": [
+        "37"
+      ],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Ảnh đính kèm trong bài viết gốc Báo Ninh Bình trả về HTTP 404 do máy chủ báo đã thanh lọc tệp tải lên năm 2012; thiếu ảnh tư liệu bối cảnh hoặc chân dung được kiểm chứng trực tiếp.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:nay-der",
+      "name": "Nay Đer",
+      "slug": "nay-der",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "52"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:ngo-gia-tu",
+      "name": "Ngô Gia Tự",
+      "slug": "ngo-gia-tu",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "24"
+      ],
+      "qualifyingLocalityCodes": [
+        "24"
+      ],
+      "storyId": "story-research-ngo-gia-tu-primary",
+      "storyDecision": "held",
+      "mediaId": "media-research-ngo-gia-tu-btls",
+      "mediaDecision": "held",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "File response is not a decodable image; the recorded image page actually concerns ancient Vietnamese monarchs. Wrong-page/identity evidence is held.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:nguyen-chanh",
+      "name": "Nguyễn Chánh",
+      "slug": "nguyen-chanh",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "51"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:nguyen-chi-dieu",
+      "name": "Nguyễn Chí Diểu",
+      "slug": "nguyen-chi-dieu",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "46"
+      ],
+      "qualifyingLocalityCodes": [
+        "46"
+      ],
+      "storyId": "story-research-nguyen-chi-dieu-primary",
+      "storyDecision": "held",
+      "mediaId": "media-research-nguyen-chi-dieu-hue",
+      "mediaDecision": "held",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Original image page and file cannot be fetched. Reopen a correct original and inspect its actual bytes before acceptance.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:nguyen-duc-canh",
+      "name": "Nguyễn Đức Cảnh",
+      "slug": "nguyen-duc-canh",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "31"
+      ],
+      "qualifyingLocalityCodes": [
+        "31"
+      ],
+      "storyId": "story-research-nguyen-duc-canh-primary",
+      "storyDecision": "held",
+      "mediaId": "media-research-nguyen-duc-canh-memorial",
+      "mediaDecision": "held",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Original page is a soft 404. Downloaded image is the national emblem, 640x360 / 24220 bytes, different from the stored hash and 640x427 dimensions. It is not the claimed temple/context image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:nguyen-luong-bang",
+      "name": "Nguyễn Lương Bằng",
+      "slug": "nguyen-luong-bang",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "14"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:nguyen-thai-hoc",
+      "name": "Nguyễn Thái Học",
+      "slug": "nguyen-thai-hoc",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "25"
+      ],
+      "qualifyingLocalityCodes": [
+        "25"
+      ],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Văn bản nguồn trên trang Cổng thông tin thị xã Buôn Hồ quá ngắn (130 từ), không đủ dữ kiện độc lập để biên soạn câu chuyện 350 từ có trích dẫn mà không suy diễn; trang nguồn không có ảnh chân dung hay ảnh bối cảnh.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:nguyen-thi-dinh",
+      "name": "Nguyễn Thị Định",
+      "slug": "nguyen-thi-dinh",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "86"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:nguyen-thi-minh-khai",
+      "name": "Nguyễn Thị Minh Khai",
+      "slug": "nguyen-thi-minh-khai",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "40"
+      ],
+      "qualifyingLocalityCodes": [
+        "40"
+      ],
+      "storyId": "story-research-nguyen-thi-minh-khai-primary",
+      "storyDecision": "held",
+      "mediaId": "media-research-nguyen-thi-minh-khai-btls",
+      "mediaDecision": "held",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "File response is not a decodable image; the recorded original page is about Egyptian mummies in Singapore. Wrong-page/identity evidence is held.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:nguyen-van-cu",
+      "name": "Nguyễn Văn Cừ",
+      "slug": "nguyen-van-cu",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "22"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:nguyen-van-troi",
+      "name": "Nguyễn Văn Trỗi",
+      "slug": "nguyen-van-troi",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "48",
+        "79"
+      ],
+      "qualifyingLocalityCodes": [
+        "79"
+      ],
+      "storyId": "story-research-nguyen-van-troi",
+      "storyDecision": "held",
+      "mediaId": "media-research-nguyen-van-troi-portrait",
+      "mediaDecision": "accepted",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:no-trang-long",
+      "name": "N’Trang Lơng",
+      "slug": "no-trang-long",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "68"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:pham-hung",
+      "name": "Phạm Hùng",
+      "slug": "pham-hung",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "82",
+        "86"
+      ],
+      "qualifyingLocalityCodes": [
+        "86"
+      ],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Nguồn baotanglichsu.vn phản ánh hội thảo kỷ niệm 110 năm ngày sinh nhưng các ảnh đính kèm là quang cảnh và đại biểu hội thảo năm 2022, không có chân dung lịch sử hoặc tư liệu thời kỳ 1858–1975; giữ trạng thái chờ tư liệu ảnh kiểm chứng.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:phan-ngoc-hien",
+      "name": "Phan Ngọc Hiển",
+      "slug": "phan-ngoc-hien",
+      "rosterDecision": "held",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "retained_held",
+      "draftImport": "excluded",
+      "nominatedLocalityCodes": [
+        "96"
+      ],
+      "qualifyingLocalityCodes": [],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:ta-xuan-thu",
+      "name": "Tạ Xuân Thu",
+      "slug": "ta-xuan-thu",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "08"
+      ],
+      "qualifyingLocalityCodes": [
+        "08"
+      ],
+      "storyId": "story-research-ta-xuan-thu-thanh-la",
+      "storyDecision": "held",
+      "mediaId": "media-research-ta-xuan-thu-na-nua",
+      "mediaDecision": "held",
+      "blockers": [
+        "Historical claims and the modern photo/caption must be reconciled separately. The current photo cannot substantiate a 1945 scene; the full narrative is not admitted.",
+        "Visual inspection shows a contemporary delegation at Na Nua Shack. The source caption does not turn these visitors into a 1945 archival scene; historical era is false.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:thai-phien",
+      "name": "Thái Phiên",
+      "slug": "thai-phien",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "48"
+      ],
+      "qualifyingLocalityCodes": [
+        "48"
+      ],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Văn bản nguồn trên trang Mặt trận Đà Nẵng chỉ liệt kê tên trong danh sách chí sĩ khởi nghĩa năm 1916; thiếu hồ sơ tiểu sử chi tiết để xác lập câu chuyện độc lập; thiếu ảnh chân dung hoặc tư liệu bối cảnh.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:to-hieu",
+      "name": "Tô Hiệu",
+      "slug": "to-hieu",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "14",
+        "31",
+        "33"
+      ],
+      "qualifyingLocalityCodes": [
+        "14",
+        "33"
+      ],
+      "storyId": "story-research-to-hieu-nha-tu-son-la",
+      "storyDecision": "held",
+      "mediaId": "media-research-to-hieu-memorial-ceremony",
+      "mediaDecision": "held",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Visual inspection shows masked visitors at a modern memorial exhibition. The stored caption claims a cemetery ceremony; it is not qualifying historical imagery.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:to-vinh-dien",
+      "name": "Tô Vĩnh Diện",
+      "slug": "to-vinh-dien",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "38"
+      ],
+      "qualifyingLocalityCodes": [
+        "38"
+      ],
+      "storyId": "story-research-to-vinh-dien-primary",
+      "storyDecision": "held",
+      "mediaId": "media-research-to-vinh-dien-btls",
+      "mediaDecision": "held",
+      "blockers": [
+        "The museum title says 1924–1953 while its event chronology and TTXVN corroboration concern 1 February 1954. The narrative needs explicit scoped chronology reconciliation; do not infer an exact death year from a title.",
+        "Recorded original article is reachable but the file URL cannot be decoded as an image and is absent from that page. Original bytes are unverified.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:ton-duc-thang",
+      "name": "Tôn Đức Thắng",
+      "slug": "ton-duc-thang",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "91"
+      ],
+      "qualifyingLocalityCodes": [
+        "91"
+      ],
+      "storyId": "story-ton-duc-thang-main",
+      "storyDecision": "held",
+      "mediaId": "media-ton-duc-thang-portrait",
+      "mediaDecision": "held",
+      "blockers": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Không đưa chi tiết Biển Đen, ngày thành lập Công hội hoặc nhận định về Ba Son vào chuyện nếu chưa có đối chiếu theo từng claim.",
+        "Bản thảo kế thừa chưa được kiểm chứng claim/đoạn văn; không tính là câu chuyện hoàn chỉnh. Bản cũ được lưu trong baseline.",
+        "URL/nhân dạng/kích thước/usage kế thừa chưa được kiểm tra bằng ảnh gốc.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:tran-can",
+      "name": "Trần Can",
+      "slug": "tran-can",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "11"
+      ],
+      "qualifyingLocalityCodes": [
+        "11"
+      ],
+      "storyId": "story-research-tran-can-dien-bien-phu",
+      "storyDecision": "held",
+      "mediaId": "media-research-tran-can-nvsk",
+      "mediaDecision": "held",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "The downloaded 300x411 primary profile image is a portrait, not the claimed contextual infographic. Correct depiction/caption/identity evidence and measure its configured thumbnail before acceptance.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:tran-phu",
+      "name": "Trần Phú",
+      "slug": "tran-phu",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "42",
+        "66"
+      ],
+      "qualifyingLocalityCodes": [
+        "42"
+      ],
+      "storyId": "story-research-tran-phu-primary",
+      "storyDecision": "held",
+      "mediaId": "media-research-tran-phu-btls",
+      "mediaDecision": "held",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "File response is not a decodable image; the recorded image page actually concerns monkey fossils in Panama. Wrong-page/identity evidence is held.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:tran-quoc-manh",
+      "name": "Trần Quốc Mạnh",
+      "slug": "tran-quoc-manh",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "12"
+      ],
+      "qualifyingLocalityCodes": [
+        "12"
+      ],
+      "storyId": "story-research-tran-quoc-manh-ban-luot",
+      "storyDecision": "held",
+      "mediaId": "media-research-tran-quoc-manh-ban-luot",
+      "mediaDecision": "held",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Visual inspection shows a contemporary memorial stele at Ban Luot. Historical era is misclassified; a present-day monument cannot satisfy the representative-image gate.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:tran-thi-nhuong",
+      "name": "Trần Thị Nhượng",
+      "slug": "tran-thi-nhuong",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "82"
+      ],
+      "qualifyingLocalityCodes": [
+        "82"
+      ],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Nguồn baodongthap.vn phản ánh khởi nghĩa Sa Đéc tháng 8/1945 nhưng hình ảnh bài viết là di tích Đình Tân Trào và cơ sở khác, không có ảnh trực tiếp của đồng chí Trần Thị Nhượng; giữ trạng thái chờ tư liệu ảnh kiểm chứng.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:vo-van-ky",
+      "name": "Võ Văn Ký",
+      "slug": "vo-van-ky",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "needs_evidence",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "56"
+      ],
+      "qualifyingLocalityCodes": [
+        "56"
+      ],
+      "storyId": null,
+      "storyDecision": "missing",
+      "mediaId": null,
+      "mediaDecision": "missing",
+      "blockers": [
+        "Nguồn namnhatrang.khanhhoa.gov.vn phản ánh diễn biến trận chiến đấu ga Nha Trang ngày 23/10/1945 nhưng bài viết không có hình ảnh; giữ trạng thái chờ tư liệu ảnh kiểm chứng.",
+        "No accepted main story.",
+        "No accepted representative image.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:vu-van-hieu",
+      "name": "Vũ Văn Hiếu",
+      "slug": "vu-van-hieu",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "22"
+      ],
+      "qualifyingLocalityCodes": [
+        "22"
+      ],
+      "storyId": "story-research-vu-van-hieu-vung-mo",
+      "storyDecision": "held",
+      "mediaId": "media-research-vu-van-hieu-monument",
+      "mediaDecision": "held",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Visual inspection shows a contemporary monument. Historical era is misclassified; a present-day monument cannot satisfy the representative-image gate.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    },
+    {
+      "personKey": "new:y-bloc-eban",
+      "name": "Y Blốk Êban",
+      "slug": "y-bloc-eban",
+      "rosterDecision": "accepted",
+      "inheritedReadiness": "complete",
+      "acceptance": "blocked",
+      "draftImport": "identity_shell_only",
+      "nominatedLocalityCodes": [
+        "56",
+        "66"
+      ],
+      "qualifyingLocalityCodes": [
+        "66"
+      ],
+      "storyId": "story-research-y-bloc-eban",
+      "storyDecision": "held",
+      "mediaId": "media-research-y-bloc-eban-portrait",
+      "mediaDecision": "accepted",
+      "blockers": [
+        "Original cited pages were reopened, but complete paragraph-by-paragraph semantic/quotation/honor reconciliation is not established in this acceptance run. Held from the import until that evidence exists.",
+        "Complete national claim/optional date/alias/honor acceptance remains unproved."
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "code": "01",
+      "slug": "ha-noi",
+      "name": "Thành phố Hà Nội",
+      "acceptedPersonKeys": [
+        "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a"
+      ],
+      "completePersonKeys": [
+        "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a"
+      ],
+      "state": "ready_for_review",
+      "publicSnapshot": null
+    },
+    {
+      "code": "04",
+      "slug": "cao-bang",
+      "name": "Tỉnh Cao Bằng",
+      "acceptedPersonKeys": [
+        "new:be-van-dan",
+        "new:kim-dong"
+      ],
+      "completePersonKeys": [
+        "new:kim-dong"
+      ],
+      "state": "ready_for_review",
+      "publicSnapshot": null
+    },
+    {
+      "code": "08",
+      "slug": "tuyen-quang",
+      "name": "Tỉnh Tuyên Quang",
+      "acceptedPersonKeys": [
+        "new:ta-xuan-thu"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "11",
+      "slug": "dien-bien",
+      "name": "Tỉnh Điện Biên",
+      "acceptedPersonKeys": [
+        "new:be-van-dan",
+        "new:tran-can"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "12",
+      "slug": "lai-chau",
+      "name": "Tỉnh Lai Châu",
+      "acceptedPersonKeys": [
+        "new:tran-quoc-manh"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "14",
+      "slug": "son-la",
+      "name": "Tỉnh Sơn La",
+      "acceptedPersonKeys": [
+        "new:lo-van-gia",
+        "new:to-hieu"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "15",
+      "slug": "lao-cai",
+      "name": "Tỉnh Lào Cai",
+      "acceptedPersonKeys": [
+        "new:hoang-truong-minh"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "19",
+      "slug": "thai-nguyen",
+      "name": "Tỉnh Thái Nguyên",
+      "acceptedPersonKeys": [
+        "new:doi-can"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "20",
+      "slug": "lang-son",
+      "name": "Tỉnh Lạng Sơn",
+      "acceptedPersonKeys": [
+        "new:hoang-van-thu"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "22",
+      "slug": "quang-ninh",
+      "name": "Tỉnh Quảng Ninh",
+      "acceptedPersonKeys": [
+        "new:vu-van-hieu"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "24",
+      "slug": "bac-ninh",
+      "name": "Tỉnh Bắc Ninh",
+      "acceptedPersonKeys": [
+        "new:ngo-gia-tu"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "25",
+      "slug": "phu-tho",
+      "name": "Tỉnh Phú Thọ",
+      "acceptedPersonKeys": [
+        "new:nguyen-thai-hoc"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "31",
+      "slug": "hai-phong",
+      "name": "Thành phố Hải Phòng",
+      "acceptedPersonKeys": [
+        "new:nguyen-duc-canh"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "33",
+      "slug": "hung-yen",
+      "name": "Tỉnh Hưng Yên",
+      "acceptedPersonKeys": [
+        "new:to-hieu"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "37",
+      "slug": "ninh-binh",
+      "name": "Tỉnh Ninh Bình",
+      "acceptedPersonKeys": [
+        "new:luong-van-tuy"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "38",
+      "slug": "thanh-hoa",
+      "name": "Tỉnh Thanh Hóa",
+      "acceptedPersonKeys": [
+        "new:to-vinh-dien"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "40",
+      "slug": "nghe-an",
+      "name": "Tỉnh Nghệ An",
+      "acceptedPersonKeys": [
+        "new:nguyen-thi-minh-khai"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "42",
+      "slug": "ha-tinh",
+      "name": "Tỉnh Hà Tĩnh",
+      "acceptedPersonKeys": [
+        "new:tran-phu"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "44",
+      "slug": "quang-tri",
+      "name": "Tỉnh Quảng Trị",
+      "acceptedPersonKeys": [
+        "figure:dff00764-7ef6-4b82-981e-9f66f080d653"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "46",
+      "slug": "hue",
+      "name": "Thành phố Huế",
+      "acceptedPersonKeys": [
+        "new:nguyen-chi-dieu"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "48",
+      "slug": "da-nang",
+      "name": "Thành phố Đà Nẵng",
+      "acceptedPersonKeys": [
+        "new:thai-phien"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "51",
+      "slug": "quang-ngai",
+      "name": "Tỉnh Quảng Ngãi",
+      "acceptedPersonKeys": [
+        "figure:c6eb511d-898f-4fab-8875-42ddd0700cd4"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "52",
+      "slug": "gia-lai",
+      "name": "Tỉnh Gia Lai",
+      "acceptedPersonKeys": [
+        "new:dinh-nup"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "56",
+      "slug": "khanh-hoa",
+      "name": "Tỉnh Khánh Hòa",
+      "acceptedPersonKeys": [
+        "new:vo-van-ky"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "66",
+      "slug": "dak-lak",
+      "name": "Tỉnh Đắk Lắk",
+      "acceptedPersonKeys": [
+        "new:y-bloc-eban"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "68",
+      "slug": "lam-dong",
+      "name": "Tỉnh Lâm Đồng",
+      "acceptedPersonKeys": [
+        "new:le-thi-pha"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "75",
+      "slug": "dong-nai",
+      "name": "Tỉnh Đồng Nai",
+      "acceptedPersonKeys": [
+        "new:huynh-van-nghe"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "79",
+      "slug": "ho-chi-minh",
+      "name": "Thành phố Hồ Chí Minh",
+      "acceptedPersonKeys": [
+        "new:nguyen-van-troi"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "80",
+      "slug": "tay-ninh",
+      "name": "Tỉnh Tây Ninh",
+      "acceptedPersonKeys": [
+        "new:hoang-le-kha"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "82",
+      "slug": "dong-thap",
+      "name": "Tỉnh Đồng Tháp",
+      "acceptedPersonKeys": [
+        "new:tran-thi-nhuong"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "86",
+      "slug": "vinh-long",
+      "name": "Tỉnh Vĩnh Long",
+      "acceptedPersonKeys": [
+        "new:pham-hung"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "91",
+      "slug": "an-giang",
+      "name": "Tỉnh An Giang",
+      "acceptedPersonKeys": [
+        "new:ton-duc-thang"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "92",
+      "slug": "can-tho",
+      "name": "Thành phố Cần Thơ",
+      "acceptedPersonKeys": [
+        "new:chau-van-liem"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    },
+    {
+      "code": "96",
+      "slug": "ca-mau",
+      "name": "Tỉnh Cà Mau",
+      "acceptedPersonKeys": [
+        "new:bong-van-dia"
+      ],
+      "completePersonKeys": [],
+      "state": "blocked",
+      "publicSnapshot": null
+    }
+  ],
+  "originalPageProbes": [
+    {
+      "url": "https://baodongthap.vn/nhung-ngay-thang-tam-lich-su-o-tinh-dong-thap-a124714.html",
+      "sourceIds": [
+        "src-research-tran-thi-nhuong"
+      ],
+      "status": 200,
+      "finalUrl": "https://baodongthap.vn/nhung-ngay-thang-tam-lich-su-o-tinh-dong-thap-a124714.html",
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 367536,
+      "sha256": "2bd740970e4fed8c76a37402ca2132f2754f8d9d73fbf38e3e1459a438d6cb1d"
+    },
+    {
+      "url": "https://baogialai.com.vn/ve-lang-khang-chien-stor-an-tuong-sau-sac-post212181.html",
+      "sourceIds": [
+        "src-research-dinh-nup"
+      ],
+      "status": 200,
+      "finalUrl": "https://baogialai.com.vn/ve-lang-khang-chien-stor-an-tuong-sau-sac-post212181.html",
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 196039,
+      "sha256": "38e827b910de50454407384a01cf0156e9ab808b2d61b36fdc67b02de5323941"
+    },
+    {
+      "url": "https://baohaiquanvietnam.vn/tin-tuc/cac-ca-nhan-doan-tau-khong-so-duoc-phong-tang-danh-hieu-anh-hung-llv",
+      "sourceIds": [
+        "src-research-bong-van-dia"
+      ],
+      "status": 200,
+      "finalUrl": "https://baohaiquanvietnam.vn/tin-tuc/cac-ca-nhan-doan-tau-khong-so-duoc-phong-tang-danh-hieu-anh-hung-llv",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 361308,
+      "sha256": "1b763e5a90733d0dae84da126066077d392f0563be04b499d4488d22239a585d"
+    },
+    {
+      "url": "https://baolamdong.vn/chuyen-ke-ve-chien-truong-b-lao-oanh-liet-270344.html",
+      "sourceIds": [
+        "src-research-le-thi-pha-locality"
+      ],
+      "status": 403,
+      "finalUrl": "https://baolamdong.vn/chuyen-ke-ve-chien-truong-b-lao-oanh-liet-270344.html",
+      "contentType": "text/html",
+      "bytes": 284,
+      "sha256": "5d905aa3daffbd922ec56fa9afd2b70abcb11c953f73213df7a6f08d619c3253"
+    },
+    {
+      "url": "https://baolaocai.vn/viet-len-nhung-trang-su-ve-vang-hao-hung-post225788.html",
+      "sourceIds": [
+        "src-research-hoang-truong-minh"
+      ],
+      "status": 200,
+      "finalUrl": "https://baolaocai.vn/viet-len-nhung-trang-su-ve-vang-hao-hung-post225788.html",
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 174147,
+      "sha256": "b704c9c5e8cc66edc94215ddcc9067d50f5e0be5ffba03262f76a094a18ce598"
+    },
+    {
+      "url": "https://baoninhbinh.org.vn/dong-chi-bi-thu-tinh-uy-dang-huong-tai-tuong-dai-anh-hung/d20120202044800000.htm",
+      "sourceIds": [
+        "src-research-luong-van-tuy"
+      ],
+      "status": 500,
+      "finalUrl": "https://baoninhbinh.org.vn/dong-chi-bi-thu-tinh-uy-dang-huong-tai-tuong-dai-anh-hung/d20120202044800000.htm",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 119627,
+      "sha256": "383e9d57f71fea90c1278a533e132fa1f21704ebf129787872639593b8f30974"
+    },
+    {
+      "url": "https://baoquangninh.vn/cong-trinh-tuong-dai-dong-chi-vu-van-hieu-la-su-tri-an-va-long-biet-on-sau-sac-cua-dang-bo-chinh-quyen-va-nhan-dan-tinh-quang-ninh-2322105.html",
+      "sourceIds": [
+        "src-research-vu-van-hieu"
+      ],
+      "status": 200,
+      "finalUrl": "https://baoquangninh.vn/cong-trinh-tuong-dai-dong-chi-vu-van-hieu-la-su-tri-an-va-long-biet-on-sau-sac-cua-dang-bo-chinh-quyen-va-nhan-dan-tinh-quang-ninh-2322105.html",
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 83665,
+      "sha256": "c4a3572b9ce6002a5955130778027caf3fcf562fd6d42744efc081db9b57a698"
+    },
+    {
+      "url": "https://baosonla.vn/vi/bai-viet/lo-van-gia--nguoi-thanh-nien-nhiet-huyet-cach-mang-38535",
+      "sourceIds": [
+        "src-research-lo-van-gia"
+      ],
+      "status": 200,
+      "finalUrl": "https://baosonla.vn/vi/bai-viet/lo-van-gia--nguoi-thanh-nien-nhiet-huyet-cach-mang-38535",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 134140,
+      "sha256": "3eae3c022e33b5b6a26f971558a9a3fde9a048d59d2086c6bda197316a436fe9"
+    },
+    {
+      "url": "https://baotanglichsu.vn/vi/Articles/1002/14283/bang-khen-cua-tong-bo-viet-minh-truy-tang-anh-kim-djong-nguoi-djoi-truong-djau-tien-cua-djoi-tntp-hcm.html",
+      "sourceIds": [
+        "src-research-kim-dong"
+      ],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/1002/14283/bang-khen-cua-tong-bo-viet-minh-truy-tang-anh-kim-djong-nguoi-djoi-truong-djau-tien-cua-djoi-tntp-hcm.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 64459,
+      "sha256": "420b729f95df1bb34173b5e029ed99fe85c79cbe35566127327c7445d1b39b7a"
+    },
+    {
+      "url": "https://baotanglichsu.vn/vi/Articles/1002/15110/ve-mot-ky-vat-cua-anh-hung-liet-si-hoang-le-kha.html",
+      "sourceIds": [
+        "src-research-hoang-le-kha"
+      ],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/1002/15110/ve-mot-ky-vat-cua-anh-hung-liet-si-hoang-le-kha.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 77135,
+      "sha256": "09c1d61fc905b0b7542b27a46c7038902683c811afcf433a0136866108e3d87a"
+    },
+    {
+      "url": "https://baotanglichsu.vn/vi/Articles/2002/67989/chien-dich-ho-chi-minh-lich-su-26-4-30-4-1975.html",
+      "sourceIds": [
+        "src-research-hcm-campaign-1975"
+      ],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/2002/67989/chien-dich-ho-chi-minh-lich-su-26-4-30-4-1975.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 78790,
+      "sha256": "4a5f325e8bf36ea84b78fa0be61f22c1e558020e8c73e2f6c90c2558b200f2aa"
+    },
+    {
+      "url": "https://baotanglichsu.vn/VI/Articles/3091/69154/djong-chi-ngo-gia-tu-nguoi-cong-san-kien-trung.html",
+      "sourceIds": [
+        "src-research-ngo-gia-tu"
+      ],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/VI/Articles/3091/69154/djong-chi-ngo-gia-tu-nguoi-cong-san-kien-trung.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 83312,
+      "sha256": "ba5146213eb18195b2933184e0143434a10bfc9764d4095195353f9e3d8d993f"
+    },
+    {
+      "url": "https://baotanglichsu.vn/vi/Articles/3091/72923/ky-niem-110-nam-ngay-sinh-nguoi-cong-san-kien-trung-to-hieu.html",
+      "sourceIds": [
+        "src-research-to-hieu"
+      ],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3091/72923/ky-niem-110-nam-ngay-sinh-nguoi-cong-san-kien-trung-to-hieu.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 83138,
+      "sha256": "2db2a1d89426e8b66ae96df70d7bef6c6ce9bdae14220dba1f01d83f42556791"
+    },
+    {
+      "url": "https://baotanglichsu.vn/VI/Articles/3091/73185/pham-hung-nguoi-hoc-tro-xuat-sac-cua-chu-tich-ho-chi-minh.html",
+      "sourceIds": [
+        "src-research-pham-hung"
+      ],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/VI/Articles/3091/73185/pham-hung-nguoi-hoc-tro-xuat-sac-cua-chu-tich-ho-chi-minh.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 78805,
+      "sha256": "492727018dec52060b286fb9448821a69ff9136ac321a06b0ccbe70ce4e309d8"
+    },
+    {
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/12706/liet-si-nguyen-van-troi-nguoi-thanh-nien-qua-cam-ky-niem-48-nam-ngay-anh-nguyen-van-troi-hy-sinh-ngay-15-10-1964-15-10-2012.html",
+      "sourceIds": [
+        "src-research-nguyen-van-troi"
+      ],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/12706/liet-si-nguyen-van-troi-nguoi-thanh-nien-qua-cam-ky-niem-48-nam-ngay-anh-nguyen-van-troi-hy-sinh-ngay-15-10-1964-15-10-2012.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 65998,
+      "sha256": "7faa70f2026153b356ea26d838135e9428a559dacae384fbe960b92bc006bf5a"
+    },
+    {
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/14188/nguyen-thi-minh-khai-nguoi-nu-chien-sy-cong-san-kien-cuong-bat-khuat.html",
+      "sourceIds": [],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/14188/nguyen-thi-minh-khai-nguoi-nu-chien-sy-cong-san-kien-cuong-bat-khuat.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 78165,
+      "sha256": "758b404457705d3a56fb330eea0622fc77bfdf8670d8b72c680213124ab1883c"
+    },
+    {
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/14206/dong-chi-ngo-gia-tu-nguoi-chien-si-cong-san-loi-lac-mot-tam-guong-sang-ngoi-ve-dao-duc-cach-mang.html",
+      "sourceIds": [],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/14206/dong-chi-ngo-gia-tu-nguoi-chien-si-cong-san-loi-lac-mot-tam-guong-sang-ngoi-ve-dao-duc-cach-mang.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 48645,
+      "sha256": "66132270119f2d783a48599b61bdf29c6d45ac912a64b6adfadd4b1b094cd778"
+    },
+    {
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/14207/tran-phu-tong-bi-thu-dau-tien-cua-dang-nguoi-hoc-tro-xuat-sac-cua-chu-tich-ho-chi-minh-nguoi-con-uu-tu-cua-dang-va-dan-toc.html",
+      "sourceIds": [],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/14207/tran-phu-tong-bi-thu-dau-tien-cua-dang-nguoi-hoc-tro-xuat-sac-cua-chu-tich-ho-chi-minh-nguoi-con-uu-tu-cua-dang-va-dan-toc.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 49406,
+      "sha256": "917f4220dd2945ecde65183ec87ade668f38cbcaf5effcf3094b5acbb8166082"
+    },
+    {
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/14209/to-vinh-dien-nguoi-anh-hung-lay-than-minh-chen-phao-o-dien-bien-phu.html",
+      "sourceIds": [],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/14209/to-vinh-dien-nguoi-anh-hung-lay-than-minh-chen-phao-o-dien-bien-phu.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 63724,
+      "sha256": "4750f22f81bbe89707823860c6853209f10bf2b4339c2b92e82471e5ba45584e"
+    },
+    {
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/16339/15-5-1941-thanh-lap-djoi-thieu-nien-tien-phong-ho-chi-minh.html",
+      "sourceIds": [
+        "src-research-kim-dong-team"
+      ],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/16339/15-5-1941-thanh-lap-djoi-thieu-nien-tien-phong-ho-chi-minh.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 87451,
+      "sha256": "1143151a27fe3c7d472f44bec592217bdb12cf32f1401683fd6ed6c424ad1fc8"
+    },
+    {
+      "url": "https://baotanglichsu.vn/vi/Articles/3097/19898/100-nam-ngay-sinh-djai-tuong-van-tien-dung-2-5-1917-2-5-2017-vi-tuong-chinh-tri-quan-su-song-toan.html",
+      "sourceIds": [
+        "src-research-van-tien-dung-2017"
+      ],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/19898/100-nam-ngay-sinh-djai-tuong-van-tien-dung-2-5-1917-2-5-2017-vi-tuong-chinh-tri-quan-su-song-toan.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 78121,
+      "sha256": "ab24a34439a4dc6cd129e7b095a069990bbefa766f02bb038d066265f834ad60"
+    },
+    {
+      "url": "https://baotanglichsu.vn/VI/Articles/3098/14209/nhung-anh-hung-tai-chien-dich-djien-bien-phu-anh-hung-to-vinh-dien-1924-1953.html",
+      "sourceIds": [
+        "src-research-to-vinh-dien"
+      ],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/VI/Articles/3098/14209/nhung-anh-hung-tai-chien-dich-djien-bien-phu-anh-hung-to-vinh-dien-1924-1953.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 63863,
+      "sha256": "fc4b3efcdc3f14e475613bf91411080d5b5c5e5266b68065014e6b3bf4aef3d8"
+    },
+    {
+      "url": "https://baotanglichsu.vn/vi/Articles/3098/14687/djong-chi-phan-djang-luu-voi-bao-chi-trung-ky-thoi-ky-mat-tran-dan-chu.html",
+      "sourceIds": [
+        "src-research-nguyen-chi-dieu-period"
+      ],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3098/14687/djong-chi-phan-djang-luu-voi-bao-chi-trung-ky-thoi-ky-mat-tran-dan-chu.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 85743,
+      "sha256": "01b03d81f026707bed1b42852ee8ae3752f9daf154bb248e1addb0c9cd23240c"
+    },
+    {
+      "url": "https://baotanglichsu.vn/VI/Articles/3098/19407/tran-phu-tong-bi-thu-djau-tien-cua-djang.html",
+      "sourceIds": [
+        "src-research-tran-phu"
+      ],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/VI/Articles/3098/19407/tran-phu-tong-bi-thu-djau-tien-cua-djang.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 90500,
+      "sha256": "750cd1d723337a67ce30ef7010949f2e4c4b05dd24773da8c6109ed516eb838a"
+    },
+    {
+      "url": "https://baotanglichsu.vn/vi/Articles/3098/73084/ky-niem-105-nam-ngay-sinh-djai-tuong-van-tien-dung-vi-djai-tuong-anh-hung.html",
+      "sourceIds": [
+        "src-research-van-tien-dung"
+      ],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/vi/Articles/3098/73084/ky-niem-105-nam-ngay-sinh-djai-tuong-van-tien-dung-vi-djai-tuong-anh-hung.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 100573,
+      "sha256": "8ec980d2bb531f93e95609d4f5bcf32eee2a3966de6d5df12e98d6a11812cd18"
+    },
+    {
+      "url": "https://baotanglichsu.vn/VI/Articles/3099/13811/ky-niem-103-nam-ngay-quoc-te-phu-nu-8-3-1910-8-3-2013-guong-hy-sinh-cua-chi-nguyen-thi-minh-khai.html",
+      "sourceIds": [
+        "src-research-nguyen-thi-minh-khai"
+      ],
+      "status": 200,
+      "finalUrl": "https://baotanglichsu.vn/VI/Articles/3099/13811/ky-niem-103-nam-ngay-quoc-te-phu-nu-8-3-1910-8-3-2013-guong-hy-sinh-cua-chi-nguyen-thi-minh-khai.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 62480,
+      "sha256": "cf44a1f5849d7c9b5c14b548d7bdad873345224dac38a587625421d00147c231"
+    },
+    {
+      "url": "https://btgdv.cantho.gov.vn/vi/news/tai-lieu-tuyen-truyen/de-cuong-tuyen-truyen-ky-niem-120-nam-ngay-sinh-dong-chi-chau-van-liem-29-6-1902-29-6-2022-201.html",
+      "sourceIds": [
+        "src-research-chau-van-liem"
+      ],
+      "status": 200,
+      "finalUrl": "https://btgdv.cantho.gov.vn/vi/news/tai-lieu-tuyen-truyen/de-cuong-tuyen-truyen-ky-niem-120-nam-ngay-sinh-dong-chi-chau-van-liem-29-6-1902-29-6-2022-201.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 81112,
+      "sha256": "cceffc3b06ddfcc245557b667e0032bb1bfe4f97f51931fbe859e5bf0ecbeec2"
+    },
+    {
+      "url": "https://buonho.daklak.gov.vn/nguyen-thai-hoc-1904-1930-5655.html",
+      "sourceIds": [
+        "src-research-nguyen-thai-hoc"
+      ],
+      "status": 200,
+      "finalUrl": "https://buonho.daklak.gov.vn/nguyen-thai-hoc-1904-1930-5655.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 62366,
+      "sha256": "04af7fdace2fad8f504bde2cc8401159e483aed98d2495d551c0b686567984e1"
+    },
+    {
+      "url": "https://congbao.hochiminhcity.gov.vn/tin-tuc-tong-hop/Danh-muc-cac-tuyen-duong-uu-tien-tren-dia-ban-Thanh-pho-",
+      "sourceIds": [
+        "src-research-hcm-city-mapping"
+      ],
+      "status": 200,
+      "finalUrl": "https://congbao.hochiminhcity.gov.vn/tin-tuc-tong-hop/Danh-muc-cac-tuyen-duong-uu-tien-tren-dia-ban-Thanh-pho-",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 215940,
+      "sha256": "499bb797f243ba405d8837ed35f2e1e38bb52cf781d053979cb9efaae9074bec"
+    },
+    {
+      "url": "https://dakbla.quangngai.gov.vn/tin-tuc/ky-niem-120-nam-ngay-sinh-dong-chi-pham-van-dong-01-3-1906-01-3-2026-.html",
+      "sourceIds": [
+        "src-research-pham-van-dong"
+      ],
+      "status": 200,
+      "finalUrl": "https://dakbla.quangngai.gov.vn/tin-tuc/ky-niem-120-nam-ngay-sinh-dong-chi-pham-van-dong-01-3-1906-01-3-2026-.html",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 220032,
+      "sha256": "5cc0cddd48805ca6996864bcbe5b964e7a9e7737b31e8cce152c9486547bac9c"
+    },
+    {
+      "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf",
+      "sourceIds": [
+        "src-chinhphu-decision-19-2025"
+      ],
+      "status": 200,
+      "finalUrl": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf",
+      "contentType": "application/pdf",
+      "bytes": 2631808,
+      "sha256": "2fd391335947affbfb86fa2b9438f0fdca90694e80887e205266542c3236aea1"
+    },
+    {
+      "url": "https://dulich.laichau.gov.vn/vi/blog/details/ban-luot-dau-son-lich-su-1337",
+      "sourceIds": [
+        "src-research-tran-quoc-manh"
+      ],
+      "status": 200,
+      "finalUrl": "https://dulich.laichau.gov.vn/vi/blog/details/ban-luot-dau-son-lich-su-1337",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 71784,
+      "sha256": "f64b2aa6adbbd4f9ce844e6c87713ea09d16066b332d5017a5fc2079a828e82c"
+    },
+    {
+      "url": "https://en.nhandan.vn/birthplace-of-august-revolutions-victory-post148189.html",
+      "sourceIds": [
+        "src-research-ta-xuan-thu"
+      ],
+      "status": 200,
+      "finalUrl": "https://en.nhandan.vn/birthplace-of-august-revolutions-victory-post148189.html",
+      "contentType": "text/html;charset=utf-8",
+      "bytes": 78004,
+      "sha256": "f2a9f338f02e2fbad29812a9d1c2462d353dc904f6ac54f4c70c0123be2e3089"
+    },
+    {
+      "url": "https://haiphong.gov.vn/di-tich-lich-su-van-hoa/Den-tho-dong-chi-Nguyen-Duc-Canh-37421",
+      "sourceIds": [],
+      "status": 200,
+      "finalUrl": "https://haiphong.gov.vn/Errors/404/40x.html?aspxerrorpath=/default.aspx",
+      "contentType": "text/html",
+      "bytes": 9453,
+      "sha256": "d41413e11d34bd88fcabfc21b7ab56aceca63732bde10edb044c05c3f3931165"
+    },
+    {
+      "url": "https://haiphong.gov.vn/tin-tuc-su-kien/Dong-chi-Nguyen-Duc-Canh---nguoi-chien-si-cach-mang-kien-trung-37421",
+      "sourceIds": [
+        "src-research-nguyen-duc-canh"
+      ],
+      "status": 200,
+      "finalUrl": "https://haiphong.gov.vn/tin-tuc-su-kien/Dong-chi-Nguyen-Duc-Canh---nguoi-chien-si-cach-mang-kien-trung-37421",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 133235,
+      "sha256": "6719d8fc5bb8a6e72637c92d58b873686e01fc2bf1ab198d269222a1f216624e"
+    },
+    {
+      "url": "https://hvhnt.dongnai.gov.vn/pages/newsdetail.aspx?CatId=76&NewsId=2012",
+      "sourceIds": [
+        "src-research-huynh-van-nghe"
+      ],
+      "status": 200,
+      "finalUrl": "https://hvhnt.dongnai.gov.vn/pages/newsdetail.aspx?CatId=76&NewsId=2012",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 151148,
+      "sha256": "dc93a9653c9a22e730cdc33df45c38ed7df07c7edb9b7893aa21c4d3f03c887c"
+    },
+    {
+      "url": "https://mattran.danang.gov.vn/chi-tiet-tin/group/76/nid/7704/de-cuong-tuyen-truyen-ky-niem-55-nam-danh-xung-quang-nam-1471--2-21",
+      "sourceIds": [
+        "src-research-thai-phien"
+      ],
+      "status": 200,
+      "finalUrl": "https://mattran.danang.gov.vn/chi-tiet-tin/group/76/nid/7704/de-cuong-tuyen-truyen-ky-niem-55-nam-danh-xung-quang-nam-1471--2-21",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 269681,
+      "sha256": "1eed4a5534dc53b45ca4bb9a248f0c15c2139fd76db0e1d45a20fe14496ba2b7"
+    },
+    {
+      "url": "https://namnhatrang.khanhhoa.gov.vn/vi/tin-noi-bat/ky-niem-81-nam-ngay-nha-trang-khanh-hoa-khang-chien-23-10-1945-23-10-2026-sang-mai-trang-su-hao-hung",
+      "sourceIds": [
+        "src-research-vo-van-ky"
+      ],
+      "status": 200,
+      "finalUrl": "https://namnhatrang.khanhhoa.gov.vn/vi/tin-noi-bat/ky-niem-81-nam-ngay-nha-trang-khanh-hoa-khang-chien-23-10-1945-23-10-2026-sang-mai-trang-su-hao-hung",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 155638,
+      "sha256": "02531809b16c3f9613d92cd4725b44644de7f6b2c6e58bd1f230ae4312d08e40"
+    },
+    {
+      "url": "https://nvsk.vnanet.vn/be-van-dan-6884.vna",
+      "sourceIds": [
+        "src-research-be-van-dan"
+      ],
+      "status": 200,
+      "finalUrl": "https://nvsk.vnanet.vn/be-van-dan-6884.vna",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 44267,
+      "sha256": "61b8d773fbd2ab793c978bf02a587d7e109f748855c0e68bd5af6eda1a99d039"
+    },
+    {
+      "url": "https://nvsk.vnanet.vn/tran-can-6845.vna",
+      "sourceIds": [
+        "src-research-tran-can"
+      ],
+      "status": 200,
+      "finalUrl": "https://nvsk.vnanet.vn/tran-can-6845.vna",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 45516,
+      "sha256": "ea919864dbd9c74d5e05ec4d3b0cc7b0f6fef35f0f0350a020178157672f69f1"
+    },
+    {
+      "url": "https://phandinhphung.thainguyen.gov.vn/chi-tiet-tin-tuc/khai-mac-trien-lam-105-nam-khoi-nghia-thai-nguyen-28310.html",
+      "sourceIds": [
+        "src-research-doi-can-exhibition"
+      ],
+      "status": 200,
+      "finalUrl": "https://phandinhphung.thainguyen.gov.vn/chi-tiet-tin-tuc/khai-mac-trien-lam-105-nam-khoi-nghia-thai-nguyen-28310.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 52831,
+      "sha256": "3a5a59db35634141be39b02d7838735b5ba474e3ecb29c760874b821ab297c55"
+    },
+    {
+      "url": "https://rachgia.angiang.gov.vn/dau-an-cuoc-doi-hoat-dong-cach-mang-cua-chu-tich-ton-duc-thang",
+      "sourceIds": [
+        "src-research-ton-duc-thang"
+      ],
+      "status": 200,
+      "finalUrl": "https://rachgia.angiang.gov.vn/dau-an-cuoc-doi-hoat-dong-cach-mang-cua-chu-tich-ton-duc-thang",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 69749,
+      "sha256": "b38493f7ef7cfe4c620f4b9e98c00900b3355f37cd71f4108489dc8f95eec607"
+    },
+    {
+      "url": "https://svhtt.thuathienhue.gov.vn/?gd=1&cn=11&tc=2938",
+      "sourceIds": [],
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://svhttdl.hue.gov.vn/tin-trong-tinh/dang-hoa-dang-huong-ky-niem-115-nam-nam-sinh-dong-chi-nguyen-chi-dieu-1908-2023.html",
+      "sourceIds": [
+        "src-research-nguyen-chi-dieu-home"
+      ],
+      "status": 200,
+      "finalUrl": "https://svhttdl.hue.gov.vn/tin-trong-tinh/dang-hoa-dang-huong-ky-niem-115-nam-nam-sinh-dong-chi-nguyen-chi-dieu-1908-2023.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 96410,
+      "sha256": "688f8bf0b2cc08635c254506ce96ec3a967958b7c4ba1c830ffc0bff901a4069"
+    },
+    {
+      "url": "https://thainguyen.gov.vn/di-tich-danh-lam-thang-canh/den-doi-can-297035",
+      "sourceIds": [
+        "src-research-doi-can"
+      ],
+      "status": 200,
+      "finalUrl": "https://thainguyen.gov.vn/di-tich-danh-lam-thang-canh/den-doi-can-297035",
+      "contentType": "text/html",
+      "bytes": 111241,
+      "sha256": "b62e91f76830e34c9e65f1a005b5d0045997e4732b36cebce265640d93078661"
+    },
+    {
+      "url": "https://thuvien.dongnai.gov.vn/baiviet2015/lichsu/Lists/Posts/Post.aspx?ID=360&List=cdfc9a3b-6347-440d-8f7b-bde142430bbb",
+      "sourceIds": [
+        "src-research-huynh-van-nghe-mapping"
+      ],
+      "status": 200,
+      "finalUrl": "https://thuvien.dongnai.gov.vn/baiviet2015/lichsu/Lists/Posts/Post.aspx?ID=360&List=cdfc9a3b-6347-440d-8f7b-bde142430bbb",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 46999,
+      "sha256": "89f4154192265198e9ba14a8e67b7046fb2ebf8b3c1dae3f7af991a4ec2f42ba"
+    },
+    {
+      "url": "https://tinhdoan.caobang.gov.vn/index.php/hoat-dong-doi/tieu-su-so-luoc-5-doi-vien-dau-tien-cua-doi-tntp-ho-chi-minh-1615.html",
+      "sourceIds": [
+        "src-research-kim-dong-province"
+      ],
+      "status": 200,
+      "finalUrl": "https://tinhdoan.caobang.gov.vn/index.php/hoat-dong-doi/tieu-su-so-luoc-5-doi-vien-dau-tien-cua-doi-tntp-ho-chi-minh-1615.html",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 57135,
+      "sha256": "ade020e742afcf430efa3e8774e29549092adc542df89cffa74c6279848ff799"
+    },
+    {
+      "url": "https://truongchinhtri.laichau.gov.vn/khoa-hoc-thong-tin-tu-lieu/su-ra-doi-cua-ban-can-su-lai-chau-buoc-ngoat-lich-su-cach-mang-1887.html",
+      "sourceIds": [
+        "src-research-lai-chau-mapping"
+      ],
+      "status": 200,
+      "finalUrl": "https://truongchinhtri.laichau.gov.vn/khoa-hoc-thong-tin-tu-lieu/su-ra-doi-cua-ban-can-su-lai-chau-buoc-ngoat-lich-su-cach-mang-1887.html",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 85075,
+      "sha256": "ece230d1ad866a5c3c06020350645bf129dfa58020741b16ecdc2d3324215c9a"
+    },
+    {
+      "url": "https://vanphongdbqhvahdnd.langson.gov.vn/bai-viet/chi-bo-2-sinh-hoat-chuyen-de-ve-nguon-tai-di-tich-nha-luu-niem-dong-chi-hoang-van-thu",
+      "sourceIds": [
+        "src-research-hoang-van-thu"
+      ],
+      "status": 200,
+      "finalUrl": "https://vanphongdbqhvahdnd.langson.gov.vn/bai-viet/chi-bo-2-sinh-hoat-chuyen-de-ve-nguon-tai-di-tich-nha-luu-niem-dong-chi-hoang-van-thu",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 76147,
+      "sha256": "d196692c57f0e57421d4b8bb53ea79be034e957ced5ebe3615be7d69bd8821b3"
+    },
+    {
+      "url": "https://vhttdl.daklak.gov.vn/dak-lak-co-tuyen-duong-mang-ten-vi-tuong-dau-tien-cua-tay-nguyen-13629.html",
+      "sourceIds": [
+        "src-research-y-bloc-eban"
+      ],
+      "status": 200,
+      "finalUrl": "https://vhttdl.daklak.gov.vn/dak-lak-co-tuyen-duong-mang-ten-vi-tuong-dau-tien-cua-tay-nguyen-13629.html",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 62470,
+      "sha256": "2b099b49955405eb5daa7dd0dd6f69b5e710f76ae46db614f39d37f39a812a6e"
+    },
+    {
+      "url": "https://vinhlinh.quangtri.gov.vn/chi-tiet/-/view-article/1/1647698202167/1657013201443",
+      "sourceIds": [
+        "src-research-le-duan"
+      ],
+      "status": 200,
+      "finalUrl": "https://vinhlinh.quangtri.gov.vn/chi-tiet/-/view-article/1/1647698202167/1657013201443",
+      "contentType": "text/html;charset=UTF-8",
+      "bytes": 111872,
+      "sha256": "e44c4cfa281ffcfa54dbb989c3286fc90cb9199b6f5e2db9f4cf6f9b4dbe22a6"
+    },
+    {
+      "url": "https://vinhlinh.quangtri.gov.vn/vi/news/gioi-thieu/tong-bi-thu-le-duan-voi-que-huong-vinh-linh-quang-tri-142.html",
+      "sourceIds": [],
+      "status": 404,
+      "finalUrl": "https://vinhlinh.quangtri.gov.vn/vi/news/gioi-thieu/tong-bi-thu-le-duan-voi-que-huong-vinh-linh-quang-tri-142.html",
+      "contentType": "text/html;charset=UTF-8",
+      "bytes": 34586,
+      "sha256": "b1434407618aaba7e8608a5514764d7501e845c3c563cf180d3f48f0df2f9d60"
+    },
+    {
+      "url": "https://www.nguoiduatin.vn/ky-uc-ve-nu-anh-hung-huyen-thoai-tren-vung-dat-blao-204240830224501507.htm",
+      "sourceIds": [
+        "src-research-le-thi-pha"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.nguoiduatin.vn/ky-uc-ve-nu-anh-hung-huyen-thoai-tren-vung-dat-blao-204240830224501507.htm",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 120066,
+      "sha256": "f723e5929d93544cb56f2e62058007d05cd23a274521c67221b57577f03d51fd"
+    },
+    {
+      "url": "https://xaydungchinhsach.chinhphu.vn/chi-tiet-34-don-vi-hanh-chinh-cap-tinh-tu-12-6-2025-119250612141845533.htm",
+      "sourceIds": [
+        "src-research-modern-provinces-2025"
+      ],
+      "status": 200,
+      "finalUrl": "https://xaydungchinhsach.chinhphu.vn/chi-tiet-34-don-vi-hanh-chinh-cap-tinh-tu-12-6-2025-119250612141845533.htm",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 554681,
+      "sha256": "ac4f187d71b26c1f20b633da339f4bae0a1a9504a08b1057d9827860ccc81887"
+    }
+  ],
+  "lineageGap": {
+    "v17PreviousManifestHash": "6f153fa135969a202b672b57286e202ac8526496c2eada4dd155a343af75de4a",
+    "v16HandoffHash": "89b6a8aa36b2f152114e36a84d363fe67b46ebd82065a85aee34a98f1bb8d2c7",
+    "matches": false,
+    "note": "Recover and reconcile the exact prior manifest snapshots; do not invent a lineage repair."
+  }
+}

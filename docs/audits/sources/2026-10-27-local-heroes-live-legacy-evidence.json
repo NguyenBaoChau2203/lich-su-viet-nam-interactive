@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-heroes-live-legacy-enrollment-evidence",
+  "reviewKind": "single-agent-self-review",
+  "reviewedAt": "2026-10-27T09:35:19.517Z",
+  "projectRef": "ueolfjujjybutyuyfxha",
+  "inputSnapshotHash": "bc6bdbf6f6fcd6c4259987b9b010514109b5fdffe044c50f0fa52329a5c74a53",
+  "baselineSha256": "f61ea0f1d5736af962e0b056a17a91b4331a9afada8167ff0136946b4f0381d5",
+  "sourceRecords": [
+    {
+      "id": "7368ee04-50ce-5b4c-9a0e-2e57ffd2e5c2",
+      "url": "https://baotanglichsu.vn/fr/Articles/3271/19864/la-bibliographie-sur-le-camarade-le-duan-conservee-au-mnhv.html",
+      "title": "La bibliographie sur le camarade Le Duan conservée au MNHV",
+      "author_org": "Bảo tàng Lịch sử quốc gia – Phương Thảo; Nguyễn Thúy (dịch)",
+      "publisher": "Bảo tàng Lịch sử quốc gia",
+      "published_year": 2017,
+      "source_type": "article",
+      "citation": "Phương Thảo; Nguyễn Thúy (dịch). La bibliographie sur le camarade Le Duan conservée au MNHV. 10/4/2017. Truy cập 27/10/2026.",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "636b5c12-819a-574d-a825-895f3eb9c4cf",
+      "url": "https://baotanglichsu.vn/VI/Articles/3091/55748/noi-hop-va-quyet-djinh-cuoc-tong-tien-cong-va-noi-day-tet-mau-than-1968.html",
+      "title": "Nơi họp và quyết định cuộc Tổng tiến công và nổi dậy Tết Mậu Thân 1968",
+      "author_org": "Bảo tàng Lịch sử quốc gia",
+      "publisher": "Bảo tàng Lịch sử quốc gia",
+      "published_year": 2018,
+      "source_type": "article",
+      "citation": "Bảo tàng Lịch sử quốc gia. Nơi họp và quyết định cuộc Tổng tiến công và nổi dậy Tết Mậu Thân 1968. 2/3/2018. Dẫn Văn kiện Đảng Toàn tập, tập 29, tr. 1–2, 23, 63. Truy cập 27/10/2026.",
+      "accessed_at": "2026-10-27"
+    },
+    {
+      "id": "08e2a230-0767-51e6-be78-8739a6e3f414",
+      "url": "https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/book/sach-chinh-tri/tong-tien-cong-va-noi-day-mau-than-1968-gia-tri-lich-su-1",
+      "title": "Tổng tiến công và nổi dậy Mậu Thân 1968 - Giá trị lịch sử",
+      "author_org": "Tập thể các nhà khoa học Viện Lịch sử Đảng, Học viện Chính trị quốc gia Hồ Chí Minh",
+      "publisher": "Nhà xuất bản Chính trị quốc gia – Sự thật",
+      "published_year": 2014,
+      "source_type": "book",
+      "citation": "Tổng tiến công và nổi dậy Mậu Thân 1968 - Giá trị lịch sử. Nxb Chính trị quốc gia – Sự thật, tháng 12/2014. Bản giới thiệu và trích nội dung tại Tư liệu – Văn kiện Đảng. Truy cập 27/10/2026.",
+      "accessed_at": "2026-10-27"
+    }
+  ],
+  "sourceChecks": [
+    {
+      "sourceId": "6d6ce116-e8ff-51d7-9164-61fb87eed18f",
+      "url": "https://baotanglichsu.vn/vi/Articles/3098/73084/ky-niem-105-nam-ngay-sinh-djai-tuong-van-tien-dung-vi-djai-tuong-anh-hung.html",
+      "httpStatus": 200,
+      "sha256": "8ec980d2bb531f93e95609d4f5bcf32eee2a3966de6d5df12e98d6a11812cd18",
+      "accessedAt": "2026-10-27",
+      "capture": ".task-reports/local-heroes-remediation/pages/fc0aee19bf532601.html",
+      "decision": "accepted",
+      "priorAcceptance": "2026-10-27 remediation; same original scoped source"
+    },
+    {
+      "sourceId": "e1610a48-bc32-5db3-b4a6-8f729b9f3473",
+      "url": "https://dakbla.quangngai.gov.vn/tin-tuc/ky-niem-120-nam-ngay-sinh-dong-chi-pham-van-dong-01-3-1906-01-3-2026-.html",
+      "httpStatus": 200,
+      "sha256": "1b43e51d54820590e7e7a81b4763098bf65c41fc1f06092fa4962618222c82d2",
+      "accessedAt": "2026-10-27",
+      "capture": ".task-reports/local-heroes-live-release-20261027/legacy-source-3.html",
+      "decision": "accepted"
+    },
+    {
+      "sourceId": "636b5c12-819a-574d-a825-895f3eb9c4cf",
+      "url": "https://baotanglichsu.vn/VI/Articles/3091/55748/noi-hop-va-quyet-djinh-cuoc-tong-tien-cong-va-noi-day-tet-mau-than-1968.html",
+      "httpStatus": 200,
+      "sha256": "bad66d4ec02fb3bf8f574c06080d10bff418bfacea63bc187ea72bab1e245a23",
+      "accessedAt": "2026-10-27",
+      "capture": ".task-reports/local-heroes-live-release-20261027/legacy-extra-0.html",
+      "decision": "accepted"
+    },
+    {
+      "sourceId": "08e2a230-0767-51e6-be78-8739a6e3f414",
+      "url": "https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/book/sach-chinh-tri/tong-tien-cong-va-noi-day-mau-than-1968-gia-tri-lich-su-1",
+      "httpStatus": 200,
+      "sha256": "d2013aa28a391ff4917f19069ecb7f3bef1e042a0b61be6b797ec4651deaa7fa",
+      "accessedAt": "2026-10-27",
+      "capture": ".task-reports/local-heroes-live-release-20261027/legacy-extra-1.html",
+      "decision": "accepted"
+    },
+    {
+      "sourceId": "7368ee04-50ce-5b4c-9a0e-2e57ffd2e5c2",
+      "url": "https://baotanglichsu.vn/fr/Articles/3271/19864/la-bibliographie-sur-le-camarade-le-duan-conservee-au-mnhv.html",
+      "httpStatus": 200,
+      "sha256": "58966958ccb8911a4c00ea93e8494e3564acab3b054101f28b54994c8d24f9bd",
+      "accessedAt": "2026-10-27",
+      "capture": ".task-reports/local-heroes-live-release-20261027/legacy-source-2.html",
+      "decision": "accepted"
+    }
+  ],
+  "entries": [
+    {
+      "figureId": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+      "slug": "van-tien-dung",
+      "preservedLegacy": {
+        "biography": "Đại tướng, Tổng Tham mưu trưởng Quân đội nhân dân Việt Nam, Tư lệnh Chiến dịch Hồ Chí Minh năm 1975.",
+        "birth_year": 1917,
+        "death_year": 2002,
+        "id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "name": "Văn Tiến Dũng",
+        "other_names": null,
+        "portrait_url": null,
+        "review_note": null,
+        "slug": "van-tien-dung",
+        "workflow_status": "published"
+      },
+      "claims": [
+        {
+          "field": "biography",
+          "claimText": "Đại tướng, Tổng Tham mưu trưởng Quân đội nhân dân Việt Nam, Tư lệnh Chiến dịch Hồ Chí Minh năm 1975.",
+          "certainty": "verified",
+          "decision": "accepted",
+          "refs": [
+            {
+              "sourceId": "6d6ce116-e8ff-51d7-9164-61fb87eed18f",
+              "locator": "Các mục Người chiến sĩ cách mạng kiên trung và Vị tướng cầm quân xuất sắc: Đại tướng, Tổng Tham mưu trưởng và Tư lệnh Chiến dịch Hồ Chí Minh (4/1975).",
+              "scopeNote": "Chỉ hỗ trợ trường tiểu sử/năm sinh/mất hiện hữu được bảo toàn; không tạo danh hiệu, lời nói hay diễn biến mới."
+            }
+          ]
+        },
+        {
+          "field": "birth_year",
+          "claimText": "1917",
+          "certainty": "verified",
+          "decision": "accepted",
+          "refs": [
+            {
+              "sourceId": "6d6ce116-e8ff-51d7-9164-61fb87eed18f",
+              "locator": "Đoạn Đại tướng Văn Tiến Dũng (bí danh Lê Hoài) sinh ngày 2-5-1917.",
+              "scopeNote": "Chỉ hỗ trợ trường tiểu sử/năm sinh/mất hiện hữu được bảo toàn; không tạo danh hiệu, lời nói hay diễn biến mới."
+            }
+          ]
+        },
+        {
+          "field": "death_year",
+          "claimText": "2002",
+          "certainty": "verified",
+          "decision": "accepted",
+          "refs": [
+            {
+              "sourceId": "6d6ce116-e8ff-51d7-9164-61fb87eed18f",
+              "locator": "Đoạn cuối: Ngày 17-3-2002, Đại tướng Văn Tiến Dũng đã ra đi ở tuổi 85.",
+              "scopeNote": "Chỉ hỗ trợ trường tiểu sử/năm sinh/mất hiện hữu được bảo toàn; không tạo danh hiệu, lời nói hay diễn biến mới."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "figureId": "c6eb511d-898f-4fab-8875-42ddd0700cd4",
+      "slug": "pham-van-dong",
+      "preservedLegacy": {
+        "biography": "Nhà cách mạng, Thủ tướng Chính phủ Việt Nam Dân chủ Cộng hòa, Trưởng đoàn đại biểu Việt Nam Dân chủ Cộng hòa tại Hội nghị Genève năm 1954.",
+        "birth_year": 1906,
+        "death_year": 2000,
+        "id": "c6eb511d-898f-4fab-8875-42ddd0700cd4",
+        "name": "Phạm Văn Đồng",
+        "other_names": null,
+        "portrait_url": null,
+        "review_note": null,
+        "slug": "pham-van-dong",
+        "workflow_status": "published"
+      },
+      "claims": [
+        {
+          "field": "biography",
+          "claimText": "Nhà cách mạng, Thủ tướng Chính phủ Việt Nam Dân chủ Cộng hòa, Trưởng đoàn đại biểu Việt Nam Dân chủ Cộng hòa tại Hội nghị Genève năm 1954.",
+          "certainty": "verified",
+          "decision": "accepted",
+          "refs": [
+            {
+              "sourceId": "e1610a48-bc32-5db3-b4a6-8f729b9f3473",
+              "locator": "Các đoạn Từ năm 1955 đến năm 1987 và Trưởng phái đoàn Chính phủ Việt Nam tại Hội nghị Giơ-ne-vơ về Đông Dương (1954).",
+              "scopeNote": "Chỉ hỗ trợ trường tiểu sử/năm sinh/mất hiện hữu được bảo toàn; không tạo danh hiệu, lời nói hay diễn biến mới."
+            }
+          ]
+        },
+        {
+          "field": "birth_year",
+          "claimText": "1906",
+          "certainty": "verified",
+          "decision": "accepted",
+          "refs": [
+            {
+              "sourceId": "e1610a48-bc32-5db3-b4a6-8f729b9f3473",
+              "locator": "Mục I. Đồng chí Phạm Văn Đồng sinh ngày 01/3/1906.",
+              "scopeNote": "Chỉ hỗ trợ trường tiểu sử/năm sinh/mất hiện hữu được bảo toàn; không tạo danh hiệu, lời nói hay diễn biến mới."
+            }
+          ]
+        },
+        {
+          "field": "death_year",
+          "claimText": "2000",
+          "certainty": "verified",
+          "decision": "accepted",
+          "refs": [
+            {
+              "sourceId": "e1610a48-bc32-5db3-b4a6-8f729b9f3473",
+              "locator": "Đoạn Đồng chí Phạm Văn Đồng từ trần ngày 29/4/2000.",
+              "scopeNote": "Chỉ hỗ trợ trường tiểu sử/năm sinh/mất hiện hữu được bảo toàn; không tạo danh hiệu, lời nói hay diễn biến mới."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "figureId": "dff00764-7ef6-4b82-981e-9f66f080d653",
+      "slug": "le-duan",
+      "preservedLegacy": {
+        "biography": "Bí thư thứ nhất Ban Chấp hành Trung ương Đảng Lao động Việt Nam, có vai trò quan trọng trong việc hoạch định chủ trương Tổng tiến công và nổi dậy Tết Mậu Thân 1968.",
+        "birth_year": 1907,
+        "death_year": 1986,
+        "id": "dff00764-7ef6-4b82-981e-9f66f080d653",
+        "name": "Lê Duẩn",
+        "other_names": null,
+        "portrait_url": null,
+        "review_note": null,
+        "slug": "le-duan",
+        "workflow_status": "published"
+      },
+      "claims": [
+        {
+          "field": "biography",
+          "claimText": "Bí thư thứ nhất Ban Chấp hành Trung ương Đảng Lao động Việt Nam, có vai trò quan trọng trong việc hoạch định chủ trương Tổng tiến công và nổi dậy Tết Mậu Thân 1968.",
+          "certainty": "verified",
+          "decision": "accepted",
+          "refs": [
+            {
+              "sourceId": "636b5c12-819a-574d-a825-895f3eb9c4cf",
+              "locator": "Các đoạn Hội nghị Bộ Chính trị tháng 10/1967, ý kiến Bí thư thứ nhất Lê Duẩn và phát biểu tại Hội nghị Trung ương lần thứ 14 tháng 1/1968; dẫn Văn kiện Đảng Toàn tập tập 29.",
+              "scopeNote": "Chỉ hỗ trợ trường tiểu sử/năm sinh/mất hiện hữu được bảo toàn; không tạo danh hiệu, lời nói hay diễn biến mới."
+            },
+            {
+              "sourceId": "08e2a230-0767-51e6-be78-8739a6e3f414",
+              "locator": "Phần xây dựng kế hoạch chiến lược 1967–1968: Lê Duẩn báo cáo toàn bộ Kế hoạch và quán xuyến việc thảo luận.",
+              "scopeNote": "Chỉ hỗ trợ trường tiểu sử/năm sinh/mất hiện hữu được bảo toàn; không tạo danh hiệu, lời nói hay diễn biến mới."
+            }
+          ]
+        },
+        {
+          "field": "birth_year",
+          "claimText": "1907",
+          "certainty": "verified",
+          "decision": "accepted",
+          "refs": [
+            {
+              "sourceId": "7368ee04-50ce-5b4c-9a0e-2e57ffd2e5c2",
+              "locator": "Đoạn mở đầu và chú thích ảnh: Le Duan (1907–1986).",
+              "scopeNote": "Chỉ hỗ trợ trường tiểu sử/năm sinh/mất hiện hữu được bảo toàn; không tạo danh hiệu, lời nói hay diễn biến mới."
+            }
+          ]
+        },
+        {
+          "field": "death_year",
+          "claimText": "1986",
+          "certainty": "verified",
+          "decision": "accepted",
+          "refs": [
+            {
+              "sourceId": "7368ee04-50ce-5b4c-9a0e-2e57ffd2e5c2",
+              "locator": "Đoạn mở đầu và chú thích ảnh: Le Duan (1907–1986).",
+              "scopeNote": "Chỉ hỗ trợ trường tiểu sử/năm sinh/mất hiện hữu được bảo toàn; không tạo danh hiệu, lời nói hay diễn biến mới."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "note": "The exact three pre-existing canonical rows remain unchanged in their legacy fields. This evidence scopes their already displayed biography/life dates; it does not alter the frozen 35-person roster, the 35 main stories or representative images. No independent certification claimed. QDND redirect-loop pages were not admitted."
+}

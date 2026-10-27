@@ -3,6 +3,7 @@ import { normalizeYearRange } from "@/lib/explorer/timeline-years";
 import { formatMapView, parseMapView } from "@/lib/explorer/map-view";
 import { parseJourneySelection } from "@/lib/explorer/journey";
 import { JOURNEY_REGISTRY, type JourneyRegistry } from "@/lib/explorer/journeys/registry";
+import { LOCAL_HERO_KEYS, normalizeLocalHeroReturnHref } from "@/lib/local-heroes/state";
 
 export const CAMERA_BOUNDS = {
   minPolar: 0.25,
@@ -118,11 +119,21 @@ export function buildEventDetailHref(slug: string, state: ExplorerState): string
 }
 
 export function getExplorerReturnHref(value: unknown, fallbackSlug: string, registry: JourneyRegistry = JOURNEY_REGISTRY): string {
+  if (typeof value === "string") {
+    try {
+      const params = new URL(value, "http://explorer.local").searchParams;
+      if (LOCAL_HERO_KEYS.some((key) => params.has(key))) return normalizeLocalHeroReturnHref(value, SLUG_PATTERN.test(fallbackSlug) ? `/?su-kien=${fallbackSlug}` : "/", registry);
+    } catch { /* The legacy parser below retains its established fallback. */ }
+  }
+  return getLegacyExplorerReturnHref(value, fallbackSlug, registry);
+}
+
+export function getLegacyExplorerReturnHref(value: unknown, fallbackSlug: string, registry: JourneyRegistry = JOURNEY_REGISTRY, maximumLength = 240): string {
   const safeFallback = SLUG_PATTERN.test(fallbackSlug)
     ? `/?su-kien=${fallbackSlug}`
     : "/";
 
-  if (typeof value !== "string" || value.length === 0 || value.length > 240) {
+  if (typeof value !== "string" || value.length === 0 || value.length > maximumLength) {
     return safeFallback;
   }
 

@@ -1,0 +1,841 @@
+{
+  "schemaVersion": 1,
+  "kind": "roster",
+  "records": [
+    {
+      "personKey": "figure:016a56fa-2a90-4bf4-ae8f-6975f0486282",
+      "nominationOrigin": "existing",
+      "nominatedLocalityCodes": [],
+      "nominationSourceIds": [],
+      "decision": "held",
+      "decisionReason": "Identity đã có trong snapshot đọc-only; cần nguồn ngoài về điều kiện thời kỳ, đóng góp và địa phương trước khi chọn.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Chưa đối chiếu nguồn lịch sử độc lập cho đề cử identity hiện hữu"
+      ]
+    },
+    {
+      "personKey": "figure:01e2955b-8989-4765-95b8-f1f4a0685168",
+      "nominationOrigin": "existing",
+      "nominatedLocalityCodes": [
+        "37"
+      ],
+      "nominationSourceIds": [
+        "src-lead-truong-chinh",
+        "src-research-modern-provinces-2025"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Đầu mối Hành Thiện, Nam Định, đối chiếu vào Ninh Bình mới; chưa tạo claim.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Chưa đối chiếu nguồn lịch sử độc lập cho đề cử identity hiện hữu"
+      ]
+    },
+    {
+      "personKey": "figure:2bd5b2d6-9ab1-48b3-bf6e-f53a76484e4b",
+      "nominationOrigin": "existing",
+      "nominatedLocalityCodes": [
+        "33"
+      ],
+      "nominationSourceIds": [
+        "src-lead-nguyen-van-linh"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Cần đọc toàn văn, tách quê Hưng Yên với nơi hoạt động Cần Thơ; không lấy tên báo xuất bản làm bằng chứng quan hệ.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Chưa đối chiếu nguồn lịch sử độc lập cho đề cử identity hiện hữu"
+      ]
+    },
+    {
+      "personKey": "figure:2ee65d28-bade-48b1-8658-9c2c0d55009b",
+      "nominationOrigin": "existing",
+      "nominatedLocalityCodes": [],
+      "nominationSourceIds": [],
+      "decision": "held",
+      "decisionReason": "Identity đã có trong snapshot đọc-only; cần nguồn ngoài về điều kiện thời kỳ, đóng góp và địa phương trước khi chọn.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Chưa đối chiếu nguồn lịch sử độc lập cho đề cử identity hiện hữu"
+      ]
+    },
+    {
+      "personKey": "figure:757037f8-03a7-4a97-919e-00fc98236801",
+      "nominationOrigin": "existing",
+      "nominatedLocalityCodes": [
+        "15",
+        "40"
+      ],
+      "nominationSourceIds": [
+        "src-lead-ho-chi-minh-bio",
+        "src-lead-ho-chi-minh-lao-cai"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Đối chiếu trực tiếp bản gốc về chuyến thăm Lào Cai và quê Nghệ An trước khi tạo quan hệ.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Chưa đối chiếu nguồn lịch sử độc lập cho đề cử identity hiện hữu"
+      ]
+    },
+    {
+      "personKey": "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+      "nominationOrigin": "existing",
+      "nominatedLocalityCodes": [
+        "01",
+        "24"
+      ],
+      "nominationSourceIds": [
+        "src-research-hcm-campaign-1975",
+        "src-research-van-tien-dung",
+        "src-research-van-tien-dung-2017"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "figure:c6eb511d-898f-4fab-8875-42ddd0700cd4",
+      "nominationOrigin": "existing",
+      "nominatedLocalityCodes": [
+        "51"
+      ],
+      "nominationSourceIds": [
+        "src-research-pham-van-dong"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "figure:d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+      "nominationOrigin": "existing",
+      "nominatedLocalityCodes": [
+        "08",
+        "11",
+        "44",
+        "46"
+      ],
+      "nominationSourceIds": [
+        "src-lead-vo-nguyen-giap",
+        "src-research-ta-xuan-thu"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Tuyên Quang: bài Nhân Dân đã đọc nêu chuyến khảo sát Tân Trào 1945. Điện Biên/Quảng Trị/Huế: thêm đầu mối đề cương; cần triển khai claim riêng. Không coi chức vụ chỉ huy chung là bằng chứng có mặt ở mọi tỉnh.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Chưa đối chiếu nguồn lịch sử độc lập cho đề cử identity hiện hữu"
+      ]
+    },
+    {
+      "personKey": "figure:dff00764-7ef6-4b82-981e-9f66f080d653",
+      "nominationOrigin": "existing",
+      "nominatedLocalityCodes": [
+        "44"
+      ],
+      "nominationSourceIds": [
+        "src-research-le-duan"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:be-van-dan",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "04",
+        "11"
+      ],
+      "nominationSourceIds": [
+        "src-research-be-van-dan"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:bong-van-dia",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "96"
+      ],
+      "nominationSourceIds": [
+        "src-research-bong-van-dia"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:chau-van-liem",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "80",
+        "91",
+        "92"
+      ],
+      "nominationSourceIds": [
+        "src-research-chau-van-liem",
+        "src-research-modern-provinces-2025"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:dinh-nup",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "52"
+      ],
+      "nominationSourceIds": [
+        "src-research-dinh-nup"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:doi-can",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "19",
+        "25"
+      ],
+      "nominationSourceIds": [
+        "src-research-doi-can",
+        "src-research-doi-can-exhibition",
+        "src-research-modern-provinces-2025"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:ha-huy-tap",
+      "nominationOrigin": "discovery_pass_2",
+      "nominatedLocalityCodes": [
+        "42"
+      ],
+      "nominationSourceIds": [
+        "src-lead-ha-huy-tap"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Đầu mối quê Hà Tĩnh; chưa có đủ claim riêng để chọn thêm người vào phạm vi phát hành.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:hoang-le-kha",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "38",
+        "79",
+        "80"
+      ],
+      "nominationSourceIds": [
+        "src-research-hoang-le-kha"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:hoang-minh-chanh",
+      "nominationOrigin": "discovery_pass_2",
+      "nominatedLocalityCodes": [
+        "75"
+      ],
+      "nominationSourceIds": [
+        "src-research-huynh-van-nghe-mapping"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Thư viện Đồng Nai đã đọc nêu chỉ huy Chi đội 10 trong trận La Ngà 1948. Cần định danh riêng và phân biệt tên gần giống; chưa tự gộp Hoàng Minh Chính/Hoàng Minh Đạo.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:hoang-truong-minh",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "15"
+      ],
+      "nominationSourceIds": [
+        "src-research-hoang-truong-minh"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:hoang-van-thu",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "20"
+      ],
+      "nominationSourceIds": [
+        "src-research-hoang-van-thu"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:huynh-van-nghe",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "75"
+      ],
+      "nominationSourceIds": [
+        "src-research-huynh-van-nghe",
+        "src-research-huynh-van-nghe-mapping"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:kim-dong",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "04"
+      ],
+      "nominationSourceIds": [
+        "src-research-kim-dong",
+        "src-research-kim-dong-province",
+        "src-research-kim-dong-team"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:le-binh",
+      "nominationOrigin": "discovery_pass_2",
+      "nominatedLocalityCodes": [
+        "92"
+      ],
+      "nominationSourceIds": [
+        "src-lead-le-binh"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Đầu mối có đoạn lịch sử về chiến đấu Cái Răng; không suy từ tên chợ hay phường. Chưa tạo claim hoặc chọn vào phạm vi phát hành.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:le-thi-pha",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "68"
+      ],
+      "nominationSourceIds": [
+        "src-research-le-thi-pha",
+        "src-research-le-thi-pha-locality"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:lo-van-gia",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "14"
+      ],
+      "nominationSourceIds": [
+        "src-research-lo-van-gia"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:luong-ngoc-quyen",
+      "nominationOrigin": "discovery_pass_2",
+      "nominatedLocalityCodes": [
+        "19"
+      ],
+      "nominationSourceIds": [
+        "src-research-doi-can",
+        "src-research-doi-can-exhibition"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Hai bài đã đọc nêu cùng Đội Cấn lãnh đạo khởi nghĩa 1917; cần hồ sơ riêng và đối chiếu nhân thân.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:luong-van-tri",
+      "nominationOrigin": "discovery_pass_2",
+      "nominatedLocalityCodes": [
+        "20"
+      ],
+      "nominationSourceIds": [
+        "src-lead-luong-van-tri"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Lượt 2 chỉ ghi đầu mối, không chép ngày sinh hoặc tước hiệu vào dữ liệu.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:luong-van-tuy",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "37"
+      ],
+      "nominationSourceIds": [
+        "src-research-luong-van-tuy"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:nay-der",
+      "nominationOrigin": "discovery_pass_2",
+      "nominatedLocalityCodes": [
+        "52"
+      ],
+      "nominationSourceIds": [
+        "src-lead-nay-der"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Cần làm rõ thời kỳ và đóng góp cách mạng, tránh đồng nhất danh nhân giáo dục với phạm vi được duyệt.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:ngo-gia-tu",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "24"
+      ],
+      "nominationSourceIds": [
+        "src-research-ngo-gia-tu"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:nguyen-chanh",
+      "nominationOrigin": "discovery_pass_2",
+      "nominatedLocalityCodes": [
+        "51"
+      ],
+      "nominationSourceIds": [
+        "src-lead-nguyen-chanh"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Cần hồ sơ riêng, kiểm chứng nhân thân và quê Quảng Ngãi trước khi nhận thêm vào phạm vi phát hành.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:nguyen-chi-dieu",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "46"
+      ],
+      "nominationSourceIds": [
+        "src-research-nguyen-chi-dieu-home",
+        "src-research-nguyen-chi-dieu-period"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:nguyen-duc-canh",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "31"
+      ],
+      "nominationSourceIds": [
+        "src-research-nguyen-duc-canh"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:nguyen-luong-bang",
+      "nominationOrigin": "discovery_pass_2",
+      "nominatedLocalityCodes": [
+        "14"
+      ],
+      "nominationSourceIds": [
+        "src-research-lo-van-gia"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Bài Sơn La đã đọc nêu tên trong bốn người được Lò Văn Giá dẫn vượt ngục. Đây là đầu mối định danh và hoạt động; hồ sơ riêng chưa nghiên cứu.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:nguyen-thai-hoc",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "25"
+      ],
+      "nominationSourceIds": [
+        "src-research-nguyen-thai-hoc"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:nguyen-thi-dinh",
+      "nominationOrigin": "discovery_pass_2",
+      "nominatedLocalityCodes": [
+        "86"
+      ],
+      "nominationSourceIds": [
+        "src-lead-nguyen-thi-dinh",
+        "src-research-modern-provinces-2025"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Cần đọc toàn văn và tạo hồ sơ riêng; đề cử quê Bến Tre thuộc Vĩnh Long mới.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:nguyen-thi-minh-khai",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "40"
+      ],
+      "nominationSourceIds": [
+        "src-research-nguyen-thi-minh-khai"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:nguyen-van-cu",
+      "nominationOrigin": "discovery_pass_2",
+      "nominatedLocalityCodes": [
+        "22"
+      ],
+      "nominationSourceIds": [
+        "src-lead-nguyen-van-cu"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Cần mở toàn văn, kiểm chứng thời kỳ và quan hệ Vàng Danh/Mạo Khê.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:nguyen-van-troi",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "48",
+        "79"
+      ],
+      "nominationSourceIds": [
+        "src-lead-nguyen-van-troi-home",
+        "src-research-hcm-city-mapping",
+        "src-research-modern-provinces-2025",
+        "src-research-nguyen-van-troi"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:no-trang-long",
+      "nominationOrigin": "discovery_pass_2",
+      "nominatedLocalityCodes": [
+        "68"
+      ],
+      "nominationSourceIds": [
+        "src-lead-no-trang-long",
+        "src-research-modern-provinces-2025"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Tên có nhiều cách phiên âm; chưa nhận alias, năm sinh/mất hoặc phạm vi hoạt động khi chưa đối chiếu.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:pham-hung",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "82",
+        "86"
+      ],
+      "nominationSourceIds": [
+        "src-research-modern-provinces-2025",
+        "src-research-pham-hung",
+        "src-research-tran-thi-nhuong"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:phan-ngoc-hien",
+      "nominationOrigin": "discovery_pass_2",
+      "nominatedLocalityCodes": [
+        "96"
+      ],
+      "nominationSourceIds": [
+        "src-lead-phan-ngoc-hien"
+      ],
+      "decision": "held",
+      "decisionReason": "Giữ đề cử để xem xét, chưa nhận làm nội dung local hero: nguồn đề cử chưa được triển khai thành đủ claim có locator về điều kiện/quan hệ. Identity gốc nếu có đã đối chiếu snapshot, không tạo bản sao. Cần hồ sơ riêng và kiểm chứng đóng góp/quan hệ Hòn Khoai; chưa tự thêm đồng đội khác được bài nêu tên.",
+      "readiness": "needs_evidence",
+      "gaps": [
+        "Cần đối chiếu tên/bí danh và đóng góp trong thời kỳ 1858–1975",
+        "Cần claim quan hệ địa phương và căn cứ ánh xạ địa danh hiện nay",
+        "Cần câu chuyện chính và ảnh lịch sử đủ điều kiện"
+      ]
+    },
+    {
+      "personKey": "new:ta-xuan-thu",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "08"
+      ],
+      "nominationSourceIds": [
+        "src-research-ta-xuan-thu"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:thai-phien",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "48"
+      ],
+      "nominationSourceIds": [
+        "src-research-thai-phien"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:to-hieu",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "14",
+        "31",
+        "33"
+      ],
+      "nominationSourceIds": [
+        "src-lead-to-hieu-hai-phong",
+        "src-research-to-hieu"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:to-vinh-dien",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "38"
+      ],
+      "nominationSourceIds": [
+        "src-research-to-vinh-dien"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:ton-duc-thang",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "91"
+      ],
+      "nominationSourceIds": [
+        "src-research-ton-duc-thang"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:tran-can",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "11"
+      ],
+      "nominationSourceIds": [
+        "src-research-tran-can"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:tran-phu",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "42",
+        "66"
+      ],
+      "nominationSourceIds": [
+        "src-research-modern-provinces-2025",
+        "src-research-tran-phu"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:tran-quoc-manh",
+      "nominationOrigin": "discovery_pass_2",
+      "nominatedLocalityCodes": [
+        "12"
+      ],
+      "nominationSourceIds": [
+        "src-research-lai-chau-mapping",
+        "src-research-tran-quoc-manh"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:tran-thi-nhuong",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "82"
+      ],
+      "nominationSourceIds": [
+        "src-research-tran-thi-nhuong"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:vo-van-ky",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "56"
+      ],
+      "nominationSourceIds": [
+        "src-research-vo-van-ky"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:vu-van-hieu",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "22"
+      ],
+      "nominationSourceIds": [
+        "src-research-vu-van-hieu"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn; hồ sơ đủ bằng chứng nghiên cứu, câu chuyện và ảnh bối cảnh trong phạm vi coursework sau self-review. Complete là trạng thái nghiên cứu chờ chủ dự án duyệt, không phải đã xuất bản hoặc được chứng nhận bởi sử gia.",
+      "readiness": "complete",
+      "gaps": []
+    },
+    {
+      "personKey": "new:y-bloc-eban",
+      "nominationOrigin": "discovery_pass_1",
+      "nominatedLocalityCodes": [
+        "56",
+        "66"
+      ],
+      "nominationSourceIds": [
+        "src-research-y-bloc-eban"
+      ],
+      "decision": "accepted",
+      "decisionReason": "Đề xuất chọn vào phạm vi hữu hạn: đã có nguồn về đóng góp trong 1858–1975 và quan hệ địa phương đủ điều kiện. Chưa phải phê duyệt tên của chủ dự án hoặc hồ sơ hoàn chỉnh.",
+      "readiness": "complete",
+      "gaps": []
+    }
+  ]
+}

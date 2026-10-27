@@ -13,6 +13,7 @@ import { requireRole } from "@/lib/auth";
 import { isUuid } from "@/lib/queries/admin-content";
 import { reviewPaths } from "@/lib/queries/review";
 import { getEventQuizForReview, getReviewTarget } from "@/lib/queries/review-preview";
+import { getLocalHeroAdminGraph } from "@/lib/queries/local-heroes-admin";
 
 export const metadata: Metadata = { title: "Duyệt nội dung" };
 
@@ -34,6 +35,7 @@ export default async function ReviewItemPage({ params }: Props) {
     segment === "su-kien" ? getEventQuizForReview(id) : Promise.resolve(null),
   ]);
   if (!target) notFound();
+  const catalog = target.detail.kind === "nhan-vat" && target.detail.figure.isLocalHero ? await getLocalHeroAdminGraph(id) : null;
 
   const actions = availableReviewActions(staff.role, target.status);
   const sources = target.detail.kind === "su-kien" ? target.detail.event.sources : null;
@@ -82,6 +84,7 @@ export default async function ReviewItemPage({ params }: Props) {
               checklist={REVIEW_CHECKLISTS[segment]}
               notes={target.notes}
               sources={sources}
+              catalogRevision={catalog?.revision}
             />
           </div>
         </aside>

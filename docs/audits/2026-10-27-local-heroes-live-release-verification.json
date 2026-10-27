@@ -1,0 +1,445 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-heroes-authorized-system-release-verification",
+  "recordedAt": "2026-10-27T11:36:32.763Z",
+  "oneAgent": true,
+  "reviewType": "self-review",
+  "branch": "feat/local-revolutionary-heroes",
+  "head": "6a38f582515102c03ccc7ac806ae6d3f1becbbb0",
+  "projectRef": "ueolfjujjybutyuyfxha",
+  "releaseHash": "0dcfc960010153a91fd3501c0004ed2b9c84138ab9ce45d356555d167c3ba43d",
+  "publishedManifestHash": "eece5e9012d40371947fc93687f10478325942e54ef9a19ceabf5edb5db1f9f0",
+  "rehearsal": {
+    "cases": 9,
+    "passed": true,
+    "actualRemotePublicSchemaAndHistoricalSeed": true,
+    "authDataCopied": false,
+    "publishSha256": "98081843e08f589b6b7ebc39e3e3f4b06e7a5ff18fff54694c9e269d7851f69e",
+    "rollbackSha256": "0f438056638c84d889083427361e443e39db1aaec8faa9ab4baba8e13a5109e2",
+    "evidenceSha256": "e2acd2912e21be245ef7216c21d7f53c6c53e6b09a2682c6305d862313ee9253"
+  },
+  "sqlRoleTests": {
+    "assertions": 296,
+    "files": 2,
+    "target": "actual remote-schema disposable mirror",
+    "log": ".task-reports/local-heroes-live-release-20261027/remote-baseline-sql-tests-final.log"
+  },
+  "fullGate": {
+    "recordedAt": "2026-10-27T11:16:20.504Z",
+    "command": "pnpm verify",
+    "exitCode": 0,
+    "unitTests": 1189,
+    "unitFiles": 106,
+    "scriptTests": 26,
+    "historyTests": 42,
+    "lintWarnings": 0,
+    "logSha256": "6d5261862bd9b6306e5d1a41c03d10f649f672817cc5582fed289569e1f30f18"
+  },
+  "smoke": {
+    "buildExitCode": 0,
+    "testExitCode": 0,
+    "passed": 8,
+    "ordinaryBuildRestoredExitCode": 0,
+    "buildLogSha256": "8aa33bd52ecb78057924b9804ddb6a7275ae699f128c040d936d9e82b3239992",
+    "testLogSha256": "ae2a2f6a7e526a979b8822acb3f0ec8af266f56a24025f7a3bbbbc5c16e933ed",
+    "ordinaryBuildLogSha256": "bf12a6d0d3c65e8e91c06fd263197da6a3d26c08b4be4707e6250a22ff48fdd2"
+  },
+  "externalSteps": [
+    {
+      "recordedAt": "2026-10-27T11:16:31.664Z",
+      "projectRef": "ueolfjujjybutyuyfxha",
+      "command": "supabase migration repair 20261027000000 --status applied --linked --workdir supabase/releases/local-heroes-20261027",
+      "exitCode": 0,
+      "releaseHash": "0dcfc960010153a91fd3501c0004ed2b9c84138ab9ce45d356555d167c3ba43d",
+      "logSha256": "0a2f1ac2b1738316d2a06a624d36c37d4d0f94fc3f3999ddbf6a2fe7dc5d2c34"
+    },
+    {
+      "recordedAt": "2026-10-27T11:16:48.034Z",
+      "projectRef": "ueolfjujjybutyuyfxha",
+      "command": "supabase db push --dry-run --linked --workdir supabase/releases/local-heroes-20261027",
+      "exitCode": 0,
+      "releaseHash": "0dcfc960010153a91fd3501c0004ed2b9c84138ab9ce45d356555d167c3ba43d",
+      "logSha256": "4b5b5ad8f05084afb865c3fd6686a9d1c1bb4db92419e7eda327d4ea4e498e16"
+    },
+    {
+      "recordedAt": "2026-10-27T11:17:32.269Z",
+      "projectRef": "ueolfjujjybutyuyfxha",
+      "command": "supabase db push --linked --workdir supabase/releases/local-heroes-20261027 --yes",
+      "exitCode": 0,
+      "releaseHash": "0dcfc960010153a91fd3501c0004ed2b9c84138ab9ce45d356555d167c3ba43d",
+      "logSha256": "c36bdfdc08da0009fda27bf823fa69131ff7fb3180bd032e6f00af01d0259bae"
+    },
+    {
+      "recordedAt": "2026-10-27T11:18:25.718Z",
+      "projectRef": "ueolfjujjybutyuyfxha",
+      "command": "supabase db query --linked --file supabase/content/local-heroes/live-release-20261027-v5/publish.sql --output json",
+      "exitCode": 0,
+      "releaseHash": "0dcfc960010153a91fd3501c0004ed2b9c84138ab9ce45d356555d167c3ba43d",
+      "logSha256": "ac493aa5ce7dd87e1c3cb32253e74f8afa806e88a64baba7e1198cb762748f9b"
+    }
+  ],
+  "publication": {
+    "schemaVersion": 1,
+    "kind": "local-heroes-system-publication-observation",
+    "observedAt": "2026-10-27T11:19:32.343Z",
+    "projectRef": "ueolfjujjybutyuyfxha",
+    "releaseHash": "0dcfc960010153a91fd3501c0004ed2b9c84138ab9ce45d356555d167c3ba43d",
+    "inputManifestHash": "06080db323af8f89364355323cd585824f3772963e96316dd8ae72aa0fc54416",
+    "inputSnapshotHash": "bc6bdbf6f6fcd6c4259987b9b010514109b5fdffe044c50f0fa52329a5c74a53",
+    "publishSha256": "98081843e08f589b6b7ebc39e3e3f4b06e7a5ff18fff54694c9e269d7851f69e",
+    "counts": {
+      "event_links": 17,
+      "events": 46,
+      "figures": 41,
+      "media": 66,
+      "people": 35,
+      "sources": 106,
+      "stories": 35
+    },
+    "publicPeople": 35,
+    "representedLocalities": 34,
+    "byLocality": [
+      {
+        "code": "01",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "04",
+        "eligiblePeople": 2
+      },
+      {
+        "code": "08",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "11",
+        "eligiblePeople": 2
+      },
+      {
+        "code": "12",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "14",
+        "eligiblePeople": 2
+      },
+      {
+        "code": "15",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "19",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "20",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "22",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "24",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "25",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "31",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "33",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "37",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "38",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "40",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "42",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "44",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "46",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "48",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "51",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "52",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "56",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "66",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "68",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "75",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "79",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "80",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "82",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "86",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "91",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "92",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "96",
+        "eligiblePeople": 1
+      }
+    ],
+    "legacyBaseFieldsPreserved": true,
+    "unrelatedEventLinkMediaFingerprintsPreserved": true,
+    "all35AnonymousProfilesComplete": true,
+    "sixFeatureTablesRlsEnabled": true,
+    "canonicalLegacyEventsVisible": true,
+    "sourceResults": {
+      "ownerSha256": "fdf49cf6cebb9cedff6b130ff52b81fcbd4bb3319c6929811d69a0a4ce088eca",
+      "publicSha256": "01e268635a80a2fd0ff54d339e1426c345c4ded486c61f92cb99a63a1d9090ff"
+    }
+  },
+  "realBrowser": {
+    "status": "passed;140-profile/136-locality flow before the final wording-only change, final build rechecked separately",
+    "command": "node .task-reports/local-heroes-live-release-20261027/observe-live-browser.mjs",
+    "exitCode": 0,
+    "evidence": "output/playwright/local-heroes-live-release/results.json",
+    "evidenceSha256": "56e9e3112e58a5652a442a3be6ba5ebc41dd861219fc8415693a47e23b0ba99b",
+    "viewports": 4,
+    "profiles": 140,
+    "localitySelections": 136,
+    "diagnostics": 0,
+    "blockedWrites": 0,
+    "mockedRequests": 0,
+    "keyboardFocus": true,
+    "reducedMotion": true,
+    "aliasReloadExactReturnBackForward": true,
+    "noJsDetail": true,
+    "wcagAaViolations": 0,
+    "sourceAndGalleryImagesDecoded": true,
+    "buildId": "eMwDzuyMfSpnW1h0aYvOi"
+  },
+  "localServer": {
+    "url": "http://127.0.0.1:3000",
+    "session": 99288,
+    "ordinaryConfiguredBuild": true,
+    "visibleBrowserOpened": true,
+    "openedWith": "Playwright Interactive / installed Edge explicit executable",
+    "keptRunningForOwner": true,
+    "finalBuildId": "wOkfmI4t62a6TsntfdikL",
+    "pid": 24136,
+    "finalVisibleOpen": "Successful Playwright Interactive headed Edge goto after final build; last opening returned visible=true and expected URL.",
+    "lastHealth": {
+      "checkedAt": "2026-10-27T11:41:46.544Z",
+      "httpStatus": 200,
+      "publicPeople": 35,
+      "representedLocalities": 34
+    }
+  },
+  "limitations": [
+    "Earlier v16 bytes remain unavailable; v18 exact parent v17 is preserved.",
+    "Current browser/admin regression evidence is distinguished from earlier isolated fixtures and disposable Auth flows.",
+    "No remote mutating tests, Auth fixtures, asset upload, Git publication or Vercel deployment.",
+    "Supabase CLI pg-delta catalog-cache warning retained; actual migration presence independently queried."
+  ],
+  "advisors": {
+    "command": "supabase db advisors --linked --type all --level info --fail-on error --output json",
+    "exitCode": 1,
+    "before": 89,
+    "after": 98,
+    "newErrors": 0,
+    "existingError": "public.donation_wall security_definer_view",
+    "evidence": "docs/audits/sources/2026-10-27-local-heroes-live-advisors.json"
+  },
+  "finalCopyCorrection": {
+    "reason": "Visual inspection found the old pending-release disclaimer after successful publication. Replaced by factual observed coverage text only.",
+    "implementation": "components/explorer/LocalHeroesPanel.tsx",
+    "verification": "PASS: full pnpm verify after copy change, four final-build viewport DOM/axe/screenshots, native no-JS and forced no-WebGL catalogs."
+  },
+  "finalFullGate": {
+    "command": "pnpm verify",
+    "exitCode": 0,
+    "unitTests": 1189,
+    "unitFiles": 106,
+    "scriptTests": 26,
+    "historyTests": 42,
+    "lintWarnings": 0,
+    "buildId": "wOkfmI4t62a6TsntfdikL",
+    "log": ".task-reports/local-heroes-live-release-20261027/verify-ui-final.log",
+    "logSha256": "c2f0d5a504893bc7b1646b00ae34c9357c00a4dac39ab18e9b5e8afdc610aff0"
+  },
+  "finalBrowser": {
+    "command": "node .task-reports/local-heroes-live-release-20261027/observe-final-copy.mjs",
+    "exitCode": 0,
+    "evidence": "output/playwright/local-heroes-live-release/final-build-results.json",
+    "evidenceSha256": "e0286c2c142610dea928ce7c842a2b1644c7fc7759e2c8166fa6c7f0ea9605a9",
+    "results": [
+      {
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "publicPeople": 35,
+        "firstPage": 12,
+        "localityOptions": 35,
+        "finalCoverageCopy": true,
+        "keyboardFocus": true,
+        "reducedMotion": true,
+        "thumbnailDecoded": true,
+        "noOverflow": true,
+        "wcagAaViolations": 0,
+        "noJsCatalog": true,
+        "noWebGlCatalog": true
+      },
+      {
+        "viewport": {
+          "width": 1366,
+          "height": 768
+        },
+        "publicPeople": 35,
+        "firstPage": 12,
+        "localityOptions": 35,
+        "finalCoverageCopy": true,
+        "keyboardFocus": true,
+        "reducedMotion": true,
+        "thumbnailDecoded": true,
+        "noOverflow": true,
+        "wcagAaViolations": 0,
+        "noJsCatalog": true,
+        "noWebGlCatalog": true
+      },
+      {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "publicPeople": 35,
+        "firstPage": 12,
+        "localityOptions": 35,
+        "finalCoverageCopy": true,
+        "keyboardFocus": true,
+        "reducedMotion": true,
+        "thumbnailDecoded": true,
+        "noOverflow": true,
+        "wcagAaViolations": 0,
+        "noJsCatalog": true,
+        "noWebGlCatalog": true
+      },
+      {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "publicPeople": 35,
+        "firstPage": 12,
+        "localityOptions": 35,
+        "finalCoverageCopy": true,
+        "keyboardFocus": true,
+        "reducedMotion": true,
+        "thumbnailDecoded": true,
+        "noOverflow": true,
+        "wcagAaViolations": 0,
+        "noJsCatalog": true,
+        "noWebGlCatalog": true
+      }
+    ],
+    "diagnostics": [],
+    "blockedWrites": [],
+    "buildId": "wOkfmI4t62a6TsntfdikL"
+  },
+  "legacySourcePreservation": {
+    "checkedAt": "2026-10-27T11:37:03.379Z",
+    "unchangedSources": 30,
+    "resultSha256": "a32585e9ba0b50fe98551ad982dde629e4267b341b89ec90ed2c1d817377824e"
+  },
+  "finalLocalReport": "D:/lich-su-viet-nam-interactive/.task-reports/2026-10-27-1840-local-heroes-supabase-release.md",
+  "changedSourceFiles": [
+    {
+      "file": "scripts/content/prepare-local-heroes-live-release.mjs",
+      "sha256": "96bfddc33b4a382e603d0fa37f063370f692bf8be4b3e8545ec6a4f0c63ae000"
+    },
+    {
+      "file": "scripts/content/local-heroes-live-release-sql.mjs",
+      "sha256": "7fad6d3fba99ba1684795f8bb3a165340b70f7679fe9e57e132c9f62b77fcfc2"
+    },
+    {
+      "file": "scripts/content/sync-docs.mjs",
+      "sha256": "3fce32dbcb46c9360a6d04f049dc58b760ebc8973ddb564e5a56bc35370df6ad"
+    },
+    {
+      "file": "components/explorer/LocalHeroesPanel.tsx",
+      "sha256": "7f390270e5d278f289427cae8fb00242762b7ddef03129acc31c624dd1b286fb"
+    },
+    {
+      "file": "tests/unit/local-heroes-live-release.test.ts",
+      "sha256": "67d3daffbfc229ca14cb1e7e6303ca26cf2a6de88218d1fc503db3426f9209dd"
+    }
+  ],
+  "sourceAndArtifactSelfReview": "Completed directly by the one main agent; no independent reviewer or certification.",
+  "boundary": {
+    "supabaseFeaturePublished": true,
+    "assetsUploaded": false,
+    "authUsersImported": false,
+    "remoteMutatingTests": false,
+    "gitStaged": false,
+    "gitCommitted": false,
+    "gitPushed": false,
+    "prCreated": false,
+    "frontendDeployed": false,
+    "ownerFinalManualAcceptance": "pending owner test"
+  },
+  "finalGitChecks": {
+    "diffCheckExit": 0,
+    "statusExit": 0,
+    "stagedFiles": 0,
+    "branch": "feat/local-revolutionary-heroes",
+    "head": "6a38f582515102c03ccc7ac806ae6d3f1becbbb0"
+  }
+}

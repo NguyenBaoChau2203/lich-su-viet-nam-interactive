@@ -24,6 +24,7 @@ import {
 } from "@/lib/admin/content-kinds";
 import { evaluateReadiness } from "@/lib/admin/readiness";
 import { requireRole, type Staff } from "@/lib/auth";
+import { getLocalHeroAdminGraph } from "@/lib/queries/local-heroes-admin";
 import {
   getEventForEdit,
   getFigureForEdit,
@@ -37,6 +38,7 @@ import {
   listSources,
 } from "@/lib/queries/admin-content";
 import { workflowStatusLabels, type WorkflowStatus } from "@/lib/utils/labels";
+import type { LocalHeroAdminGraph } from "@/lib/local-heroes/admin-types";
 
 type Props = {
   params: Promise<{ loai: string; id: string }>;
@@ -180,12 +182,13 @@ async function EditWorkflowContent({
           canSubmit={canSubmitForReview(staff.role, status)}
           blocking={checklist.blocking}
           warnings={checklist.warnings}
+          catalog={record.catalogGraph ?? undefined}
         />
       </div>
 
       {staff.role === "system_admin" && (
         <div className="max-w-3xl">
-          <AdminContentPanel kind={kind} id={id} status={status} title={title} />
+          <AdminContentPanel kind={kind} id={id} status={status} title={title} catalogRevision={record.catalogGraph?.revision} />
         </div>
       )}
     </div>
@@ -202,6 +205,7 @@ async function EditWorkflowContent({
     form: React.ReactNode;
     media?: React.ReactNode;
     quiz?: React.ReactNode;
+    catalogGraph?: LocalHeroAdminGraph | null;
   } | null> {
     const isReadOnly = (current: WorkflowStatus) => !canEditContent(staff.role, current);
 
@@ -219,11 +223,22 @@ async function EditWorkflowContent({
     if (recordKind === "nhan-vat") {
       const [figure, options] = await Promise.all([getFigureForEdit(recordId), getFormOptions()]);
       if (!figure) return null;
+      const catalogGraph = figure.is_local_hero ? await getLocalHeroAdminGraph(recordId) : null;
       return {
         status: figure.workflow_status,
         title: figure.name,
         reviewNote: figure.review_note,
-        form: <FigureForm id={recordId} initial={figure} readOnly={isReadOnly(figure.workflow_status)} />,
+        form: (
+          <FigureForm
+            id={recordId}
+            initial={figure}
+            readOnly={isReadOnly(figure.workflow_status)}
+            catalogGraph={catalogGraph}
+            sources={options.sources}
+            media={sortMedia(figure.media_assets)}
+          />
+        ),
+        catalogGraph,
         media: (
           <MediaManager
             owner={{ kind: "nhan-vat", id: recordId }}

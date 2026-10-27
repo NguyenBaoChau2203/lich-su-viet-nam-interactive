@@ -13,6 +13,7 @@ import { createClient } from "@/lib/supabase/server";
 import type { DbErrorLike } from "@/lib/utils/db-errors";
 import type { WorkflowStatus } from "@/lib/utils/labels";
 import { MEDIA_STORAGE_FOLDERS, type MediaOwnerKind } from "@/lib/validation/content";
+import { localHeroActionState, tryLocalHeroWorkflow } from "@/lib/local-heroes/legacy-workflow";
 
 // Quản trị nội dung (UC14) — CHỈ quản trị viên; chạy bằng phiên của admin nên RLS `admin_all` áp dụng.
 // Ưu tiên ẨN hơn xóa cứng; xóa cứng bị khóa ngoại chặn nếu còn được nơi khác dùng.
@@ -78,6 +79,11 @@ async function changeStatus(formData: FormData, action: "restore_draft" | "hide"
   await requireRole(["system_admin"]);
   const target = readTarget(formData);
   if ("error" in target) return target.error;
+
+  if (target.kind === "nhan-vat") {
+    const catalog = await tryLocalHeroWorkflow(target.id, action, null, target.values.expected_revision === undefined ? undefined : { expectedRevision: target.values.expected_revision });
+    if (catalog) return catalog.ok ? { status: "success", message: doneMessage, values: target.values } : localHeroActionState(catalog, target.values);
+  }
 
   const supabase = await createClient();
   const { data, error } = await setStatus(supabase, target.kind, target.id, adminContentTargets[action]);

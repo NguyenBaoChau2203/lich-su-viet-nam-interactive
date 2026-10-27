@@ -1,0 +1,1006 @@
+{
+  "schemaVersion": 1,
+  "phase": "07-remediation",
+  "recordedAt": "2026-10-27T07:25:18.547Z",
+  "reviewKind": "single-agent-self-review",
+  "branch": "feat/local-revolutionary-heroes",
+  "head": "6a38f582515102c03ccc7ac806ae6d3f1becbbb0",
+  "nationalReleaseReady": false,
+  "localContentAccepted": true,
+  "counts": {
+    "nominees": 53,
+    "selected": 35,
+    "completePeople": 35,
+    "completeLocalities": 34,
+    "acceptedStories": 35,
+    "heldStories": 30,
+    "acceptedImages": 35,
+    "heldImages": 24,
+    "admittedClaims": 368,
+    "admittedSources": 73
+  },
+  "inputManifestHash": "06080db323af8f89364355323cd585824f3772963e96316dd8ae72aa0fc54416",
+  "inputParent": "84d8a8a5833ec66382aa4e96b50cfdfd9495e15fc1c524f2205c4279866e8dfb",
+  "acceptanceSha256": "a3b9a521007c8a86dc2316094b3ee18f5b44ab8418e2f15e4ef63736d01c6790",
+  "artifact": {
+    "schemaVersion": 1,
+    "snapshotHash": "bc6bdbf6f6fcd6c4259987b9b010514109b5fdffe044c50f0fa52329a5c74a53",
+    "inputManifestHash": "06080db323af8f89364355323cd585824f3772963e96316dd8ae72aa0fc54416",
+    "acceptanceSha256": "a3b9a521007c8a86dc2316094b3ee18f5b44ab8418e2f15e4ef63736d01c6790",
+    "files": [
+      {
+        "name": "draft-import.sql",
+        "sha256": "ecaf88179e77c337a9fd47a90f15c85a9e917369dfbd9f6c661614c56ecf85c1"
+      },
+      {
+        "name": "local-promotion-rehearsal.sql",
+        "sha256": "9e6dee529e18bb6bb94ac42541a74c718e7a2b1be5683f20e15f859cb7ae745a"
+      },
+      {
+        "name": "rollback.sql",
+        "sha256": "a74a128f18bd4ae886ee589ac2d7be8ea8f3e37919c9f19f35ab993bcca2cafe"
+      },
+      {
+        "name": "snapshot.json",
+        "sha256": "09c27257b4670ef0abf8663f920fe4ba35c3c2bb4758e8e7ca4d7ca3e40b02ae"
+      }
+    ]
+  },
+  "commands": [
+    {
+      "command": "node scripts/content/check-local-heroes.mjs",
+      "exitCode": 0,
+      "result": "valid research; v18; 35/35 complete selected people and 34/34 represented localities; releaseReady=false",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/content-check.log",
+      "logSha256": "ae30c5449c59b9709a5c62b231d8382bba57ae93ac49d8813e34686561666c9a",
+      "logWrittenAt": "2026-10-27T06:45:42.563Z"
+    },
+    {
+      "command": "node scripts/content/check-local-heroes.mjs --mode release",
+      "exitCode": 2,
+      "result": "valid input, releaseReady=false; 34 COVERAGE ready_for_review/publicSnapshot-null states plus matching-hash APPROVAL gate",
+      "classification": "blocked-as-designed",
+      "log": ".task-reports/local-heroes-remediation/release-gate.log",
+      "logSha256": "98d1da2887a635f19e8f51d71933283a764a88f66c84a6ecb248e0e2898260e9",
+      "logWrittenAt": "2026-10-27T06:48:49.656Z"
+    },
+    {
+      "command": "pnpm exec vitest run tests/unit/local-heroes-state.test.ts tests/unit/local-heroes-query.test.ts tests/unit/local-heroes-content.test.ts tests/unit/local-heroes-admin.test.ts tests/unit/local-heroes-detail.test.ts",
+      "exitCode": 0,
+      "result": "5 files / 93 tests",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/required-unit.log",
+      "logSha256": "d0c2216c50e48a8a98e0dc0cbc753dd905cf708dc1723cb5f4fe6e95429a55b5",
+      "logWrittenAt": "2026-10-27T06:45:48.542Z"
+    },
+    {
+      "command": "pnpm exec vitest run tests/unit/local-heroes-remediation-content.test.ts",
+      "exitCode": 1,
+      "result": "red before remediation: expected 35 complete people, observed 22",
+      "classification": "red-before-fix",
+      "log": ".task-reports/local-heroes-remediation/content-red.log",
+      "logSha256": "390d8ec9442bf9677d950df94ab3dba19dfe5e1834c4960743b63a3dd684665f",
+      "logWrittenAt": "2026-10-27T06:11:47.224Z"
+    },
+    {
+      "command": "pnpm exec vitest run tests/unit/local-heroes-remediation-content.test.ts",
+      "exitCode": 0,
+      "result": "1 test; preserved 53 roster decisions, exact v17 parent, complete 35/34, pending approval",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/content-green.log",
+      "logSha256": "83cb5bf268951410d114f3ac621a1b54f283c3e86911b57ca42561134139c43d",
+      "logWrittenAt": "2026-10-27T06:15:33.289Z"
+    },
+    {
+      "command": "pnpm exec vitest run tests/unit/local-heroes-remediation-artifact.test.ts tests/unit/local-heroes-image-patterns.test.ts",
+      "exitCode": 1,
+      "result": "red before generator/asset patterns: new input/overlay/origins not admitted",
+      "classification": "red-before-fix",
+      "log": ".task-reports/local-heroes-remediation/artifact-images-red.log",
+      "logSha256": "ddf843bbd001aa7ab7bf883a74b6754ee34e97ff2b2b9ef2fa34d1881e61537c",
+      "logWrittenAt": "2026-10-27T06:19:10.533Z"
+    },
+    {
+      "command": "pnpm exec vitest run tests/unit/local-heroes-remediation-artifact.test.ts tests/unit/local-heroes-image-patterns.test.ts tests/unit/local-heroes-release-artifact.test.ts tests/unit/local-heroes-content.test.ts tests/unit/local-heroes-remediation-content.test.ts",
+      "exitCode": 0,
+      "result": "5 files / 39 tests; complete artifact, prior exact-byte reproduction and invalid-evidence refusal",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/artifact-images-green.log",
+      "logSha256": "d5dc0bcc9931cf399264cae6fe7f6caebad77889ea332d239cde959096941e9a",
+      "logWrittenAt": "2026-10-27T06:21:17.953Z"
+    },
+    {
+      "command": "pnpm exec vitest run tests/unit/local-heroes-remediation-artifact.test.ts",
+      "exitCode": 0,
+      "result": "5 tests / 2.13s after native Buffer.equals exact-byte comparison; no assertion weakened",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/artifact-byte-equality-green.log",
+      "logSha256": "7b698c9f6e43cc97244867b59ea5b10c66bb15b76eee11db98c5cc8fe3bd3b90",
+      "logWrittenAt": "2026-10-27T06:51:20.554Z"
+    },
+    {
+      "command": "node scripts/content/prepare-local-heroes-release.mjs",
+      "exitCode": 0,
+      "result": "deterministic 35 drafts / 35 reviewed graphs / 34 localities, default rollback",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/prepare-release.log",
+      "logSha256": "e2f07d7ed0a7d19d43ba6b6ccdc34ac129284df6d8151cf6ff981606e4b60baa",
+      "logWrittenAt": "2026-10-27T06:21:59.693Z"
+    },
+    {
+      "command": "supabase test db --local --workdir .task-reports/local-heroes-phase-02-work/db",
+      "exitCode": 0,
+      "result": "2 files / 296 actual PostgreSQL assertions; explicitly scoped safe equivalent of supabase test db",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/db-tests.log",
+      "logSha256": "9f8b05503d2b52c5d6acab38ff2633cd95894e9e8af073d3751a1952a0ff6059",
+      "logWrittenAt": "2026-10-27T06:22:49.073Z"
+    },
+    {
+      "command": "node tests/rls/local-heroes-concurrency.mjs --target .task-reports/local-heroes-disposable-db.json",
+      "exitCode": 0,
+      "result": "2 lock-observed races; dedicated snapshot cleanup",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/concurrency.log",
+      "logSha256": "dfeee2f3bd9950cf3fb960e75a7402d24526313070720db16ef79055edd3c3e9",
+      "logWrittenAt": "2026-10-27T06:23:43.934Z"
+    },
+    {
+      "command": "node tests/rls/local-heroes-import-rehearsal.mjs --target .task-reports/local-heroes-disposable-db.json",
+      "exitCode": 0,
+      "result": "6 import/rerun/conflict/promotion cases; all 35 locally promoted; every transaction restores baseline",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/import-rehearsal.log",
+      "logSha256": "0dbbf8168dd58b1c3cb967ed4d06562b95e63a66713ee2ee66f8035bd7374a33",
+      "logWrittenAt": "2026-10-27T06:23:54.770Z"
+    },
+    {
+      "command": "node scripts/agent/local-heroes-e2e.mjs build",
+      "exitCode": 1,
+      "result": "initial strict TypeScript failure in newly added test typing; corrected with explicit package type, assertions retained",
+      "classification": "failed-before-fix",
+      "log": ".task-reports/local-heroes-remediation/public-build.log",
+      "logSha256": "1419176127f622dee2c50365f3b39ce2cebbda246f5cf75effdc8479d8f521c7",
+      "logWrittenAt": "2026-10-27T06:27:51.333Z"
+    },
+    {
+      "command": "node scripts/agent/local-heroes-e2e.mjs build",
+      "exitCode": 0,
+      "result": "isolated public production build",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/public-build-2.log",
+      "logSha256": "d6857feaeecdc5c3048dd210e76eba749385309d3df5bbab93d5fbcc1c1f7a63",
+      "logWrittenAt": "2026-10-27T06:30:47.199Z"
+    },
+    {
+      "command": "node scripts/agent/local-heroes-admin-e2e.mjs build",
+      "exitCode": 0,
+      "result": "guarded disposable Auth/DB production build",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/admin-build.log",
+      "logSha256": "bfc4d0421a8f0381f205df082b3529e074bf8610fbc6ad9960afc0c42e9048eb",
+      "logWrittenAt": "2026-10-27T06:37:04.319Z"
+    },
+    {
+      "command": "pnpm exec playwright test --config playwright.local-heroes.config.ts",
+      "exitCode": 0,
+      "result": "72 passed = 18 x 4 desktops; synthetic read-only public fixture",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/public-e2e.log",
+      "logSha256": "02161ef26611c35c694ee5ebd19039a8323072d280bed193ca42522a701983ab",
+      "logWrittenAt": "2026-10-27T06:50:29.995Z"
+    },
+    {
+      "command": "pnpm exec playwright test --config playwright.local-heroes-regression.config.ts",
+      "exitCode": 0,
+      "result": "10 selected read-only globe/journey/timeline/history regressions",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/regression-e2e.log",
+      "logSha256": "72f5f4c8f30a6571b46dda6833a6594cc87a917afd7fe8e8758f2c1e1f585c59",
+      "logWrittenAt": "2026-10-27T06:52:28.960Z"
+    },
+    {
+      "command": "pnpm exec playwright test --config playwright.local-heroes-admin.config.ts",
+      "exitCode": 0,
+      "result": "8 passed; actual disposable Auth/PostgREST, eight roles and four desktop editor forms",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/admin-e2e.log",
+      "logSha256": "e325d13d6801d9eba1707e8baf3d96da4e0d317d2291ce6b42a6111642e95436",
+      "logWrittenAt": "2026-10-27T06:54:34.003Z"
+    },
+    {
+      "command": "node scripts/agent/local-heroes-national-rehearsal.mjs --target .task-reports/local-heroes-disposable-db.json",
+      "exitCode": 0,
+      "result": "4 viewports; actual 35-profile data, 34 locality selections each, 140 profile checks; no route mocks; automatic guarded reset",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/national-browser.log",
+      "logSha256": "a20f06803d672720866b75b1ce9a4e53dd1e0f20bc71f0a14604f5196ceea730",
+      "logWrittenAt": "2026-10-27T06:43:40.565Z"
+    },
+    {
+      "command": "node .task-reports/local-heroes-remediation/probe-original-images.mjs",
+      "exitCode": 1,
+      "result": "default Node trust store accepts 34/35, one chain error; this was not a 35/35 pass",
+      "classification": "diagnostic-failure-recorded",
+      "log": ".task-reports/local-heroes-remediation/original-images-default.log",
+      "logSha256": "1aed1483617254edc8dfa1adc6d4ac3f6e9c240df5ae31e347635291ac8ce546",
+      "logWrittenAt": "2026-10-27T06:23:36.983Z"
+    },
+    {
+      "command": "node --use-system-ca .task-reports/local-heroes-remediation/probe-original-images.mjs",
+      "exitCode": 0,
+      "result": "35/35 originals; exact accepted hashes/dimensions; TLS certificate checks retained",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/original-images-system-ca.log",
+      "logSha256": "e1f35bcc7eefc6ed50bb27733e9aa97b54efff4beadf3f60d3d8dd620e651f97",
+      "logWrittenAt": "2026-10-27T06:23:38.751Z"
+    },
+    {
+      "command": "node .task-reports/local-heroes-remediation/image-performance.mjs",
+      "exitCode": 0,
+      "result": "70/70 real optimizer transports, 35 originals x DPR1/2; no image mocks",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/image-performance.log",
+      "logSha256": "4a8e73f6e6d203eea6e703436e3d1f69bfaf93da81947b267d1797cdefd97650",
+      "logWrittenAt": "2026-10-27T06:32:48.800Z"
+    },
+    {
+      "command": "node scripts/agent/local-heroes-performance.mjs final",
+      "exitCode": 0,
+      "result": "measured shape budgets true, but original baseline whole-fixture hash differs; comparison explicitly qualified",
+      "classification": "qualified-comparison",
+      "log": ".task-reports/local-heroes-remediation/performance-final.log",
+      "logSha256": "f24ae2d8df913ef363b0f445f212ef99a8cb51b13199bb371ef108e8952184ab",
+      "logWrittenAt": "2026-10-27T06:55:55.558Z"
+    },
+    {
+      "command": "node .task-reports/local-heroes-remediation/prepare-performance-control.mjs",
+      "exitCode": 1,
+      "result": "initial control pnpm command attempted an automatic install, refused module removal without TTY; no dependency added; switched to existing Node/Next binaries",
+      "classification": "failed-control-setup",
+      "log": ".task-reports/local-heroes-remediation/performance-control-prepare.log",
+      "logSha256": "380cc34135154611f288ee8e0f475dd4e06d1e034f4ef6f8d21c63db336fb5a7",
+      "logWrittenAt": "2026-10-27T07:02:43.456Z"
+    },
+    {
+      "command": "node node_modules/next/dist/bin/next build .task-reports/local-heroes-remediation/performance-control/src",
+      "exitCode": -1,
+      "result": "first direct control attempt interrupted; rerun uses exact control CWD and explicit isolated environment",
+      "classification": "interrupted-control-setup",
+      "log": ".task-reports/local-heroes-remediation/performance-control/build-2.log",
+      "logSha256": "80439ed77aea9cccf8a95cd9557e078116de8f7e8fa1d7cf6f7dbc9c0c048e53",
+      "logWrittenAt": "2026-10-27T07:04:08.727Z"
+    },
+    {
+      "command": "node .task-reports/local-heroes-remediation/build-performance-control.mjs",
+      "exitCode": 1,
+      "result": "240s cold control timeout after successful compilation; retained cache and diagnostics",
+      "classification": "failed-control-setup",
+      "log": ".task-reports/local-heroes-remediation/performance-control-build-retry.log",
+      "logSha256": "c15c99247ce92934cae913f104e3896e82aa0568050f00804bc4f44c9a1385af",
+      "logWrittenAt": "2026-10-27T07:10:24.896Z"
+    },
+    {
+      "command": "node .task-reports/local-heroes-remediation/build-performance-control-cached.mjs",
+      "exitCode": 0,
+      "result": "pre-feature HEAD archive production build using existing installed toolchain; no install",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/performance-control-build-cached.log",
+      "logSha256": "72a3deea3ea3dc1ff0742957edb61a16edeec3943aa011de433c1746e023aa56",
+      "logWrittenAt": "2026-10-27T07:13:43.366Z"
+    },
+    {
+      "command": "node .task-reports/local-heroes-remediation/performance-control/measure-before.mjs baseline",
+      "exitCode": 0,
+      "result": "supplementary control capture only; original historical baseline untouched; 857611 gzip bytes",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/performance-control-before.log",
+      "logSha256": "9834b420afe6af7cba458d4124c365e3eda958f6a46fa3223abcbec1c69cbf86",
+      "logWrittenAt": "2026-10-27T07:14:17.870Z"
+    },
+    {
+      "command": "node scripts/agent/local-heroes-performance.mjs final",
+      "exitCode": 0,
+      "result": "paired after capture with same current fixture and same hardware/browser; 863243 gzip bytes",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/performance-control-after.log",
+      "logSha256": "369b100cc5c2ec5081fe4ad88f1dfae99e54ec039db451453a066367514970c8",
+      "logWrittenAt": "2026-10-27T07:15:14.436Z"
+    },
+    {
+      "command": "node .task-reports/local-heroes-remediation/compare-performance-control.mjs",
+      "exitCode": 0,
+      "result": "same fixture/hardware/browser assertions; 5632 byte delta <35840; historical baseline exact SHA unchanged",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/performance-comparison-check.log",
+      "logSha256": "e4d392c5f0e0029e9acdeee87ab282cf719cafcfbed029ac7f44b9339d7014f5",
+      "logWrittenAt": "2026-10-27T07:24:49.419Z"
+    },
+    {
+      "command": "pnpm verify",
+      "exitCode": 1,
+      "result": "1183 passed / 1 new artifact test timed out at 15s while deep-comparing ~2MB Buffers; fixed using native exact Buffer.equals",
+      "classification": "failed-before-fix",
+      "log": ".task-reports/local-heroes-remediation/verify.log",
+      "logSha256": "9be2c9a947afbf6de0cd4577807a8ea563789e353073c84243810198f96eaa40",
+      "logWrittenAt": "2026-10-27T06:50:30.497Z"
+    },
+    {
+      "command": "pnpm agent:sync",
+      "exitCode": 0,
+      "result": "833 supported source files / no pending; Markdown/JSON/SQL and ignored reports checked directly",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/agent-sync-final.log",
+      "logSha256": "c28471b3fa4237d4c2e143da61fa21c7d162eba91b7b3c18a07e10c0a0bcd154",
+      "logWrittenAt": "2026-10-27T06:51:41.306Z"
+    },
+    {
+      "command": "pnpm verify",
+      "exitCode": 0,
+      "result": "agent checks; 42 history tests; lint 0 errors/3 prior unused warnings; strict typecheck; 1184 tests/105 files; 26 script tests; production build",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/verify-2.log",
+      "logSha256": "994e56951df102b056db36004ff240a8099fa92697342a7be7f2688d78d57012",
+      "logWrittenAt": "2026-10-27T06:53:44.336Z"
+    },
+    {
+      "command": "pnpm build:smoke",
+      "exitCode": 0,
+      "result": "credential-free controlled smoke build",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/smoke-build.log",
+      "logSha256": "655ba5fed17d267af6c6251b657985c526d3e800b2884d2d7236f7159c4a0a02",
+      "logWrittenAt": "2026-10-27T06:56:37.968Z"
+    },
+    {
+      "command": "pnpm test:e2e:smoke",
+      "exitCode": 0,
+      "result": "8 passed on four desktops; after smoke build, loopback only; E2E_BASE_URL absent; Edge",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/smoke-e2e.log",
+      "logSha256": "3b3ad8a53a1feb7b79c4d6925d259c5048d6757b05739bce2210c9f9730d7542",
+      "logWrittenAt": "2026-10-27T06:57:08.582Z"
+    },
+    {
+      "command": "pnpm build",
+      "exitCode": 0,
+      "result": "ordinary configured build restored after smoke; 103 static pages",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/ordinary-build-restore.log",
+      "logSha256": "e175061854a7dbe174fdc4c2fbdfde6703f47c5a1d6f57542747947668ab65f2",
+      "logWrittenAt": "2026-10-27T06:57:35.672Z"
+    },
+    {
+      "command": "node scripts/content/prepare-local-heroes-release.mjs",
+      "exitCode": 0,
+      "result": "final idempotent rerun keeps snapshot bc6bdbf6f6fcd6c4259987b9b010514109b5fdffe044c50f0fa52329a5c74a53",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/prepare-release-final.log",
+      "logSha256": "e2f07d7ed0a7d19d43ba6b6ccdc34ac129284df6d8151cf6ff981606e4b60baa",
+      "logWrittenAt": "2026-10-27T07:18:45.397Z"
+    },
+    {
+      "command": "pnpm agent:status",
+      "exitCode": 0,
+      "result": "833 supported sources; no pending changes; config .mts absent from graph read directly",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/agent-status.log",
+      "logSha256": "8c434dab7ac7798c33a46419f3bfb245bedaecbdaee043b7dfac88b8feae21d8",
+      "logWrittenAt": "2026-10-27T07:13:12.348Z"
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0,
+      "result": "no whitespace error; retained Git CRLF conversion notices",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/diff-check.log",
+      "logSha256": "3290d4fe05f29bf577515bd89a9f80e57e9f21ab7d7ca42d727552c1fd2e8f04",
+      "logWrittenAt": "2026-10-27T07:23:05.197Z"
+    },
+    {
+      "command": "git status --short",
+      "exitCode": 0,
+      "result": "34 tracked modified files; pre-existing owner/untracked work retained; no staged files",
+      "classification": "pass",
+      "log": ".task-reports/local-heroes-remediation/git-status-final.log",
+      "logSha256": "5b839d0794c61f7e303e2c96aae38519b56ab9b8302e21d38fb7f831f5317bcf",
+      "logWrittenAt": "2026-10-27T07:24:49.506Z"
+    }
+  ],
+  "publicStats": {
+    "startTime": "2026-10-27T06:45:44.411Z",
+    "duration": 285582.827,
+    "expected": 72,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "adminStats": {
+    "startTime": "2026-10-27T06:53:49.160Z",
+    "duration": 44840.189000000006,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "regressionStats": {
+    "startTime": "2026-10-27T06:51:37.388Z",
+    "duration": 51570.380000000005,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "actualNationalBrowser": {
+    "recordedAt": "2026-10-27T06:43:40.553Z",
+    "snapshotHash": "bc6bdbf6f6fcd6c4259987b9b010514109b5fdffe044c50f0fa52329a5c74a53",
+    "seedSha256": "d23dae0ad3f259a4239ed00947de501c0a222d67fd8f7b91c32c9eefad0b76a2",
+    "target": {
+      "project": "local-heroes-phase02-disposable",
+      "host": "127.0.0.1"
+    },
+    "buildId": "IkLcJ3sTB8gughiKc9JYJ",
+    "browser": "156.0.4314.42",
+    "results": [
+      {
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "actualDatabase": true,
+        "mockedRequests": 0,
+        "publishedPeople": 35,
+        "localitySelections": 34,
+        "distinctPaginatedPeople": 35,
+        "alias": "Nong Van Den",
+        "reloadReturnBackForward": true,
+        "profiles": 35,
+        "noJsStory": true,
+        "wcagAaViolations": 0
+      },
+      {
+        "viewport": {
+          "width": 1366,
+          "height": 768
+        },
+        "actualDatabase": true,
+        "mockedRequests": 0,
+        "publishedPeople": 35,
+        "localitySelections": 34,
+        "distinctPaginatedPeople": 35,
+        "alias": "Nong Van Den",
+        "reloadReturnBackForward": true,
+        "profiles": 35,
+        "noJsStory": true,
+        "wcagAaViolations": 0
+      },
+      {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "actualDatabase": true,
+        "mockedRequests": 0,
+        "publishedPeople": 35,
+        "localitySelections": 34,
+        "distinctPaginatedPeople": 35,
+        "alias": "Nong Van Den",
+        "reloadReturnBackForward": true,
+        "profiles": 35,
+        "noJsStory": true,
+        "wcagAaViolations": 0
+      },
+      {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "actualDatabase": true,
+        "mockedRequests": 0,
+        "publishedPeople": 35,
+        "localitySelections": 34,
+        "distinctPaginatedPeople": 35,
+        "alias": "Nong Van Den",
+        "reloadReturnBackForward": true,
+        "profiles": 35,
+        "noJsStory": true,
+        "wcagAaViolations": 0
+      }
+    ],
+    "diagnostics": [],
+    "failure": null,
+    "cleanupRestoredBaseline": true,
+    "nationalReleaseReady": false
+  },
+  "roles": {
+    "target": "disposable-loopback-only",
+    "roles": [
+      {
+        "role": "anon",
+        "draftRows": 0,
+        "protectedMutationDenied": true,
+        "ownerSpoofDenied": true,
+        "sourceEditDenied": true
+      },
+      {
+        "role": "learner",
+        "draftRows": 0,
+        "protectedMutationDenied": true,
+        "ownerSpoofDenied": true,
+        "sourceEditDenied": true
+      },
+      {
+        "role": "editor",
+        "draftRows": 2,
+        "protectedMutationDenied": true,
+        "ownerSpoofDenied": true,
+        "sourceEditDenied": true
+      },
+      {
+        "role": "reviewer",
+        "draftRows": 2,
+        "protectedMutationDenied": true,
+        "ownerSpoofDenied": true,
+        "sourceEditDenied": true
+      },
+      {
+        "role": "admin",
+        "draftRows": 2,
+        "protectedMutationDenied": true,
+        "ownerSpoofDenied": true,
+        "sourceEditDenied": true
+      },
+      {
+        "role": "locked-editor",
+        "draftRows": 0,
+        "protectedMutationDenied": true,
+        "ownerSpoofDenied": true,
+        "sourceEditDenied": true
+      },
+      {
+        "role": "locked-reviewer",
+        "draftRows": 0,
+        "protectedMutationDenied": true,
+        "ownerSpoofDenied": true,
+        "sourceEditDenied": true
+      },
+      {
+        "role": "locked-admin",
+        "draftRows": 0,
+        "protectedMutationDenied": true,
+        "ownerSpoofDenied": true,
+        "sourceEditDenied": true
+      }
+    ],
+    "localPromotionWithdrawnToDraft": true
+  },
+  "originalMediaDelivery": {
+    "tests": 70,
+    "passed": true,
+    "maxBytes": 27394,
+    "widths": [
+      128,
+      256
+    ],
+    "buildId": "lifVsgnSeBHnwseFf4LRN",
+    "diagnostics": []
+  },
+  "performance": {
+    "hardware": {
+      "platform": "win32",
+      "cpu": "11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz",
+      "memoryGiB": 16,
+      "browserVersion": "156.0.4314.42",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x00009A68) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "originalBaselineBuild": "GpatSke11U7x7bSAPzlgO",
+    "finalBuild": "lifVsgnSeBHnwseFf4LRN",
+    "originalBaselineSha256": "86adc2ec0dbaea1342e439b4d477dc9111a08d45acb3920424ef3d668015a2b6",
+    "originalFixtureHash": "45e17723bc2665f0558eebc0a4d7d57f6281c203eb8dc0a606c23a2631c076e0",
+    "currentFixtureHash": "e985dfba253194f7984c8fa1b72506dd51a483c6d64329a7ce8d2d8decd5f524",
+    "exactOriginalFixtureMatch": false,
+    "originalComparisonQualified": true,
+    "baselineGzip": 857634,
+    "currentGzip": 863243,
+    "deltaGzip": 5609,
+    "currentShapeBudgetPassed": true,
+    "defaultIdle": {
+      "intervalsMs": [],
+      "renderMs": [],
+      "syncedGpu": false
+    },
+    "openIdle": {
+      "intervalsMs": [],
+      "renderMs": [],
+      "syncedGpu": false
+    },
+    "control": {
+      "schemaVersion": 1,
+      "kind": "supplementary-controlled-pre-feature-head-comparison",
+      "recordedAt": "2026-10-27T07:24:49.406Z",
+      "passed": true,
+      "beforeHead": "6a38f582515102c03ccc7ac806ae6d3f1becbbb0",
+      "beforeBuildId": "TnQv20q_qwpYDP6qFtq-8",
+      "afterBuildId": "lifVsgnSeBHnwseFf4LRN",
+      "beforeGzipBytes": 857611,
+      "afterGzipBytes": 863243,
+      "deltaGzipBytes": 5632,
+      "budgetBytes": 35840,
+      "fixtureSha256": "e985dfba253194f7984c8fa1b72506dd51a483c6d64329a7ce8d2d8decd5f524",
+      "hardware": {
+        "platform": "win32",
+        "cpu": "11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz",
+        "memoryGiB": 16,
+        "browserVersion": "156.0.4314.42",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        }
+      },
+      "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x00009A68) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "currentShapeBudgetsPassed": true,
+      "originalBaselinePreserved": true,
+      "originalPreImplementationCapture": false,
+      "originalHistoricalComparisonQualified": true,
+      "note": "Pre-feature Git HEAD was independently built locally and compared with current code using the same current fixture and installed toolchain. This does not recreate or replace the original historical capture; config adaptation only resolves the existing installed dependencies from a shared Turbopack root. No remote or owner checkout mutation.",
+      "provenance": {
+        "kind": "supplementary-controlled-head-comparison",
+        "preparedAt": "2026-10-27T07:02:40.416Z",
+        "head": "6a38f582515102c03ccc7ac806ae6d3f1becbbb0",
+        "archiveSha256": "01b2164d2e3ba2d78d01ddf29bdd52221e863494e18c389ba1f48ee368f69ba4",
+        "originalConfigSha256": "98121194138861018185d30427fcd998e643e62abed0c1a27c29f12e01e46f78",
+        "adaptedConfigSha256": "57a7f8f0c8b643e9c1bf5d7cd1293390118e5f4032746231dddfcf4b7fb751fa",
+        "adaptation": "Only set Turbopack root to the common ancestor so the existing installed node_modules junction resolves; no feature code or env files copied into the control.",
+        "fixtureSha256": "e985dfba253194f7984c8fa1b72506dd51a483c6d64329a7ce8d2d8decd5f524",
+        "originalBaselinePreserved": true,
+        "originalPreImplementationCapture": false
+      },
+      "evidence": [
+        {
+          "path": "output/playwright/local-heroes/performance-control-baseline.json",
+          "sha256": "8e1285e3008816b69485883081d0d9d2b5da1aa4645d16a6c3dfd2829c659c8b"
+        },
+        {
+          "path": "output/playwright/local-heroes/performance-control-final.json",
+          "sha256": "9ff075338a582072bcfa91879aa61bfd6aa1056a7694fb3039e8666772e81cba"
+        },
+        {
+          "path": ".task-reports/local-heroes-remediation/performance-control/provenance.json",
+          "sha256": "8bb4553abf65a981d81412c6412723536cedd5415507248a7ddbcb64c2067adc"
+        },
+        {
+          "path": ".task-reports/local-heroes-remediation/performance-control/build-4.log",
+          "sha256": "dab04f1091534a2f6560638e4f928d0e2c57e0485e7ccb6a4ca03addc3a8aefd"
+        },
+        {
+          "path": ".task-reports/local-heroes-remediation/performance-control-before.log",
+          "sha256": "9834b420afe6af7cba458d4124c365e3eda958f6a46fa3223abcbec1c69cbf86"
+        },
+        {
+          "path": ".task-reports/local-heroes-remediation/performance-control-after.log",
+          "sha256": "369b100cc5c2ec5081fe4ad88f1dfae99e54ec039db451453a066367514970c8"
+        }
+      ]
+    }
+  },
+  "diagnosticFileCount": 80,
+  "diagnosticGroups": [
+    {
+      "kind": "requestfailed",
+      "path": "/",
+      "message": "net::ERR_ABORTED",
+      "count": 86
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/ho-chieu",
+      "message": "net::ERR_ABORTED",
+      "count": 40
+    },
+    {
+      "kind": "intentional-broken-image",
+      "path": "/_next/image",
+      "status": 503,
+      "count": 67
+    },
+    {
+      "kind": "console-error",
+      "message": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "count": 75
+    },
+    {
+      "kind": "intentional-broken-image",
+      "path": "/local-heroes/broken.png",
+      "status": 503,
+      "count": 4
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/dang-nhap",
+      "message": "net::ERR_ABORTED",
+      "count": 19
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/tra-cuu",
+      "message": "net::ERR_ABORTED",
+      "count": 32
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/dong-thoi-gian",
+      "message": "net::ERR_ABORTED",
+      "count": 6
+    },
+    {
+      "kind": "console-error",
+      "message": "THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.",
+      "count": 4
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/api/local-heroes",
+      "message": "net::ERR_ABORTED",
+      "count": 2
+    },
+    {
+      "kind": "http-error",
+      "path": "/api/local-heroes",
+      "status": 503,
+      "count": 4
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/quan-tri",
+      "message": "net::ERR_ABORTED",
+      "count": 32
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/no-evidence.jpg",
+      "message": "net::ERR_NAME_NOT_RESOLVED",
+      "count": 10
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/quan-tri/bai-sgk",
+      "message": "net::ERR_ABORTED",
+      "count": 28
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/quan-tri/de-luyen-thi",
+      "message": "net::ERR_ABORTED",
+      "count": 20
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/quan-tri/ngan-hang-cau-hoi",
+      "message": "net::ERR_ABORTED",
+      "count": 23
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/quan-tri/noi-dung/nhan-vat/moi",
+      "message": "net::ERR_ABORTED",
+      "count": 4
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/quan-tri/noi-dung/nhan-vat/cc000000-0000-4000-8000-000000000001",
+      "message": "net::ERR_ABORTED",
+      "count": 5
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/quan-tri/noi-dung/nhan-vat/cc000000-0000-4000-8000-000000000002",
+      "message": "net::ERR_ABORTED",
+      "count": 4
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/quan-tri/noi-dung/nhan-vat/cc000000-0000-4000-8000-000000000003",
+      "message": "net::ERR_ABORTED",
+      "count": 4
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/quan-tri/noi-dung",
+      "message": "net::ERR_ABORTED",
+      "count": 11
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/synthetic.jpg",
+      "message": "net::ERR_NAME_NOT_RESOLVED",
+      "count": 11
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/quan-tri/kiem-duyet",
+      "message": "net::ERR_ABORTED",
+      "count": 19
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/quan-tri/noi-dung/nhan-vat",
+      "message": "net::ERR_ABORTED",
+      "count": 11
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/quan-tri/kiem-duyet/nhan-vat/cc000000-0000-4000-8000-000000000001",
+      "message": "net::ERR_ABORTED",
+      "count": 1
+    },
+    {
+      "kind": "requestfailed",
+      "path": "/private.jpg",
+      "message": "net::ERR_NAME_NOT_RESOLVED",
+      "count": 7
+    }
+  ],
+  "lineageGap": {
+    "historical": {
+      "v17PreviousManifestHash": "6f153fa135969a202b672b57286e202ac8526496c2eada4dd155a343af75de4a",
+      "v16HandoffHash": "89b6a8aa36b2f152114e36a84d363fe67b46ebd82065a85aee34a98f1bb8d2c7",
+      "matches": false,
+      "note": "Recover and reconcile the exact prior manifest snapshots; do not invent a lineage repair."
+    },
+    "currentParent": {
+      "version": 17,
+      "manifestHash": "84d8a8a5833ec66382aa4e96b50cfdfd9495e15fc1c524f2205c4279866e8dfb",
+      "preservedAt": "supabase/content/local-heroes/snapshots/v17"
+    },
+    "resolution": "New reviewed package links exactly to preserved v17. No claim that the unavailable v16 byte snapshots were reconstructed."
+  },
+  "remainingGates": [
+    "Exact v18 hash approval remains pending; prior v14 roster approval remains valid for that roster.",
+    "All 34 coverage records remain ready_for_review and publicSnapshot null; no live public count is asserted.",
+    "Intended remote lacks feature schema and migration ledger; three selected published/event-linked canonical identities require a separately approved additive enrollment plan, not overwrite.",
+    "No external schema/content/storage write, upload, publication, commit, push, PR, merge or deploy is authorized or executed.",
+    "Unavailable historical v16 byte snapshots remain an explicitly recorded provenance gap."
+  ],
+  "evidence": [
+    {
+      "path": "docs/audits/sources/2026-10-27-local-heroes-remediation-content-review.json",
+      "sha256": "a3b9a521007c8a86dc2316094b3ee18f5b44ab8418e2f15e4ef63736d01c6790",
+      "bytes": 270148
+    },
+    {
+      "path": "supabase/content/local-heroes/release-phase-07-remediation/snapshot.json",
+      "sha256": "09c27257b4670ef0abf8663f920fe4ba35c3c2bb4758e8e7ca4d7ca3e40b02ae",
+      "bytes": 820230
+    },
+    {
+      "path": "supabase/content/local-heroes/release-phase-07-remediation/artifact-hashes.json",
+      "sha256": "0f52a1e3f011d3e57b8e1a29aae7f9061960b72248cb4bd2315f25192540d3ee",
+      "bytes": 835
+    },
+    {
+      "path": "docs/audits/sources/2026-10-27-local-heroes-remediation-remote-preflight.json",
+      "sha256": "2e993af7abedf9617f42827a6fa4d6712b2e447a00e9249779f406ff34330c9e",
+      "bytes": 16905
+    },
+    {
+      "path": "output/playwright/local-heroes-national/results.json",
+      "sha256": "7b1be8ae0ab143b2225b741aa81b266f1a135fd731e0d6c31d0a2a9318c9d831",
+      "bytes": 2054
+    },
+    {
+      "path": "output/playwright/local-heroes/remediation-original-media-performance.json",
+      "sha256": "882005621b2f821d860ba2fea2fe3ffd38100a8a5939c6445791443c560b4119",
+      "bytes": 78148
+    },
+    {
+      "path": "output/playwright/local-heroes/performance-baseline.json",
+      "sha256": "86adc2ec0dbaea1342e439b4d477dc9111a08d45acb3920424ef3d668015a2b6",
+      "bytes": 10076
+    },
+    {
+      "path": "output/playwright/local-heroes/performance-final.json",
+      "sha256": "9ff075338a582072bcfa91879aa61bfd6aa1056a7694fb3039e8666772e81cba",
+      "bytes": 16100
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/raw-role-matrix.json",
+      "sha256": "99fd9e09d1cb954e6f1d364e1185131d66895a3a07ae65e8eeb68315f0e83df0",
+      "bytes": 1412
+    },
+    {
+      "path": ".task-reports/local-heroes-remediation/admin-cleanup-result.json",
+      "sha256": "699bbac84516be7437027b8a2afbf3835a7531d331e8fc7f87ffb88eac4c54f0",
+      "bytes": 201
+    },
+    {
+      "path": "output/playwright/local-heroes-national/catalog-1280x720.png",
+      "sha256": "375b614088846c0ed3c5e7c2086424d542b57feeee5e696df2ae010ef42063e8",
+      "bytes": 114066
+    },
+    {
+      "path": "output/playwright/local-heroes-national/catalog-1366x768.png",
+      "sha256": "4c1b35fabe2682e2b0c27729d5ce3dc106b4cdb9e2a104b7743bcdc942a2f065",
+      "bytes": 115871
+    },
+    {
+      "path": "output/playwright/local-heroes-national/catalog-1440x900.png",
+      "sha256": "2418919c6edfb652a044770c17f0b8a8dc9382d4f647caa80355718a18522d58",
+      "bytes": 120757
+    },
+    {
+      "path": "output/playwright/local-heroes-national/catalog-1920x1080.png",
+      "sha256": "791d6ab1b9eee90a10e795db73cda2d4aae6d8098a2fdc216fdad81b1988676c",
+      "bytes": 135310
+    },
+    {
+      "path": "output/playwright/local-heroes-national/detail-1280x720.png",
+      "sha256": "260bc8fd3d2052bc68389d2cb02aa7bb2f9d216c8d4d5ac936a9e179b9578318",
+      "bytes": 679105
+    },
+    {
+      "path": "output/playwright/local-heroes-national/detail-1366x768.png",
+      "sha256": "088a1eaad0f052dfd077dfb2816f833d83fac1e2b05ecfab94efdcac41dc615c",
+      "bytes": 680124
+    },
+    {
+      "path": "output/playwright/local-heroes-national/detail-1440x900.png",
+      "sha256": "55d66050213574edcb34b9d702ff6e5aa8d0a0d2703f0a56a5755b15d1aa4ae8",
+      "bytes": 682092
+    },
+    {
+      "path": "output/playwright/local-heroes-national/detail-1920x1080.png",
+      "sha256": "f0190cfaf7208ffe3ad56393450938778c5a8657f2290f8fb112fcf584efbddd",
+      "bytes": 694740
+    },
+    {
+      "path": "output/playwright/local-heroes-national/detail-contact.png",
+      "sha256": "e8d706669a79da909a229b5bd41efafaafeb17f2af210136f5518fe56189d27b",
+      "bytes": 362792
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/editor-1280x720.png",
+      "sha256": "b96eb2513e4354b35ae1aabb5e27b320c7aaba72ece4faa23a51d05c7659a46e",
+      "bytes": 70037
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/editor-1366x768.png",
+      "sha256": "7ce89ae0e6a94c9a0f1eaae389069d14de67809ba5410dc6dcd18c749ad62329",
+      "bytes": 73672
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/editor-1440x900.png",
+      "sha256": "60d66b5066fc249de955c04bd925d37105a9e249347c0616100fbd9f9d913e7d",
+      "bytes": 91730
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/editor-1920x1080.png",
+      "sha256": "3b0ad22db173d7af7e2d10b340dcce191cde095125fd99aa35d5086ff6875889",
+      "bytes": 124589
+    },
+    {
+      "path": ".task-reports/local-heroes-remediation/disposable-file-parity.json",
+      "sha256": "9f28665960d0f6ec91a6dfc881db483299dd04fd34cef32f6f4f6b87256a0725",
+      "bytes": 7917
+    },
+    {
+      "path": ".task-reports/local-heroes-remediation/final-git-integrity.json",
+      "sha256": "e647b3022cf3fb9c783117d20fc7d62278d3e09fcb926a98bae67d6d13636a0f",
+      "bytes": 247
+    },
+    {
+      "path": ".task-reports/local-heroes-remediation/reviewed-source-files.json",
+      "sha256": "97e67c04dfcaf4cb74ef53e5d9c7b0e6ffdca968775c16f3dc222621d162b720",
+      "bytes": 22327
+    },
+    {
+      "path": ".task-reports/local-heroes-remediation/performance-comparison.json",
+      "sha256": "d929c658bcf17141f2e65cb792eca57b43bcee7a8cf9edc805a948e106499c21",
+      "bytes": 3274
+    }
+  ]
+}

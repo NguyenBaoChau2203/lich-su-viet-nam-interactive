@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,7 +23,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     }
   },
   "include": [
@@ -28,7 +34,17 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "**/*.mts",
+    ".next-local-heroes-admin/types/**/*.ts",
+    ".next-local-heroes-admin/dev/types/**/*.ts",
+    ".next-local-heroes/types/**/*.ts",
+    ".next-local-heroes/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "output", "outputs", ".codex-tmp", ".task-reports"]
+  "exclude": [
+    "node_modules",
+    "output",
+    "outputs",
+    ".codex-tmp",
+    ".task-reports"
+  ]
 }

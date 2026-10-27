@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 1,
+  "kind": "read-only-public-content-before-image",
+  "projectRef": "ueolfjujjybutyuyfxha",
+  "observedAt": "2026-10-27T09:09:07.32943+00:00",
+  "figures": [
+    {
+      "biography": "Cố vấn đặc biệt của đoàn đại biểu Việt Nam Dân chủ Cộng hòa, trực tiếp đàm phán và ký tắt Hiệp định Paris năm 1973.",
+      "birth_year": 1911,
+      "death_year": 1990,
+      "id": "016a56fa-2a90-4bf4-ae8f-6975f0486282",
+      "name": "Lê Đức Thọ",
+      "other_names": null,
+      "portrait_url": null,
+      "review_note": null,
+      "slug": "le-duc-tho",
+      "workflow_status": "published"
+    },
+    {
+      "biography": "Tổng Bí thư Đảng Cộng sản Việt Nam giai đoạn chuẩn bị Đại hội VI, có vai trò quan trọng trong việc thúc đẩy đổi mới tư duy trước Đại hội VI (12/1986).",
+      "birth_year": 1907,
+      "death_year": 1988,
+      "id": "01e2955b-8989-4765-95b8-f1f4a0685168",
+      "name": "Trường Chinh",
+      "other_names": null,
+      "portrait_url": null,
+      "review_note": null,
+      "slug": "truong-chinh",
+      "workflow_status": "published"
+    },
+    {
+      "biography": "Tổng Bí thư Ban Chấp hành Trung ương Đảng Cộng sản Việt Nam được bầu tại Đại hội VI (12/1986), người khởi xướng đường lối Đổi mới.",
+      "birth_year": 1915,
+      "death_year": 1998,
+      "id": "2bd5b2d6-9ab1-48b3-bf6e-f53a76484e4b",
+      "name": "Nguyễn Văn Linh",
+      "other_names": null,
+      "portrait_url": null,
+      "review_note": null,
+      "slug": "nguyen-van-linh",
+      "workflow_status": "published"
+    },
+    {
+      "biography": "Trưởng đoàn đại biểu Chính phủ Cách mạng lâm thời Cộng hòa miền Nam Việt Nam, người đại diện ký Hiệp định Paris năm 1973.",
+      "birth_year": 1927,
+      "death_year": null,
+      "id": "2ee65d28-bade-48b1-8658-9c2c0d55009b",
+      "name": "Nguyễn Thị Bình",
+      "other_names": null,
+      "portrait_url": null,
+      "review_note": null,
+      "slug": "nguyen-thi-binh",
+      "workflow_status": "published"
+    },
+    {
+      "biography": "Lãnh tụ của Đảng Cộng sản Việt Nam và nhân dân Việt Nam, Chủ tịch nước Việt Nam Dân chủ Cộng hòa, người đọc bản Tuyên ngôn Độc lập ngày 2/9/1945.",
+      "birth_year": 1890,
+      "death_year": 1969,
+      "id": "757037f8-03a7-4a97-919e-00fc98236801",
+      "name": "Hồ Chí Minh",
+      "other_names": "Nguyễn Sinh Cung, Nguyễn Tất Thành, Nguyễn Ái Quốc",
+      "portrait_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ho_Chi_Minh_1946.jpg",
+      "review_note": null,
+      "slug": "ho-chi-minh",
+      "workflow_status": "published"
+    },
+    {
+      "biography": "Đại tướng, Tổng Tham mưu trưởng Quân đội nhân dân Việt Nam, Tư lệnh Chiến dịch Hồ Chí Minh năm 1975.",
+      "birth_year": 1917,
+      "death_year": 2002,
+      "id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+      "name": "Văn Tiến Dũng",
+      "other_names": null,
+      "portrait_url": null,
+      "review_note": null,
+      "slug": "van-tien-dung",
+      "workflow_status": "published"
+    },
+    {
+      "biography": "Nhà cách mạng, Thủ tướng Chính phủ Việt Nam Dân chủ Cộng hòa, Trưởng đoàn đại biểu Việt Nam Dân chủ Cộng hòa tại Hội nghị Genève năm 1954.",
+      "birth_year": 1906,
+      "death_year": 2000,
+      "id": "c6eb511d-898f-4fab-8875-42ddd0700cd4",
+      "name": "Phạm Văn Đồng",
+      "other_names": null,
+      "portrait_url": null,
+      "review_note": null,
+      "slug": "pham-van-dong",
+      "workflow_status": "published"
+    },
+    {
+      "biography": "Đại tướng đầu tiên của Quân đội nhân dân Việt Nam, Tổng Tư lệnh, người trực tiếp chỉ huy Chiến dịch Điện Biên Phủ năm 1954.",
+      "birth_year": 1911,
+      "death_year": 2013,
+      "id": "d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+      "name": "Võ Nguyên Giáp",
+      "other_names": null,
+      "portrait_url": null,
+      "review_note": null,
+      "slug": "vo-nguyen-giap",
+      "workflow_status": "published"
+    },
+    {
+      "biography": "Bí thư thứ nhất Ban Chấp hành Trung ương Đảng Lao động Việt Nam, có vai trò quan trọng trong việc hoạch định chủ trương Tổng tiến công và nổi dậy Tết Mậu Thân 1968.",
+      "birth_year": 1907,
+      "death_year": 1986,
+      "id": "dff00764-7ef6-4b82-981e-9f66f080d653",
+      "name": "Lê Duẩn",
+      "other_names": null,
+      "portrait_url": null,
+      "review_note": null,
+      "slug": "le-duan",
+      "workflow_status": "published"
+    }
+  ],
+  "figureMedia": [
+    {
+      "alt_text": "Chân dung ông Phạm Văn Đồng, ảnh đen trắng",
+      "caption": "Thủ tướng Phạm Văn Đồng năm 1972.",
+      "era": "historical",
+      "event_id": null,
+      "figure_id": "c6eb511d-898f-4fab-8875-42ddd0700cd4",
+      "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/figures/pham-van-dong/pham-van-dong-1972-1200.webp",
+      "focal_point": null,
+      "height": 1748,
+      "id": "0ff15f7d-d276-4f74-be24-ed957ad4e98a",
+      "is_colorized": false,
+      "is_cover": true,
+      "is_reenactment": false,
+      "license": "CC BY-SA 3.0 nl",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/nl/deed.en",
+      "location_id": null,
+      "media_type": "image",
+      "pair_id": null,
+      "photographer": "Lưu trữ Quốc gia Hà Lan (Anefo)",
+      "sort_order": 1,
+      "source_id": null,
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Ph%E1%BA%A1m_V%C4%83n_%C4%90%E1%BB%93ng_1972.jpg",
+      "width": 1258,
+      "year_taken": 1972
+    },
+    {
+      "alt_text": "Chân dung ông Lê Duẩn",
+      "caption": "Tổng Bí thư Lê Duẩn năm 1978 (Lưu trữ Quốc gia Romania).",
+      "era": "historical",
+      "event_id": null,
+      "figure_id": "dff00764-7ef6-4b82-981e-9f66f080d653",
+      "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/figures/le-duan/le-duan-1978-1200.webp",
+      "focal_point": null,
+      "height": 331,
+      "id": "58fee0ad-5bad-490a-9d2f-6b70834d708c",
+      "is_colorized": false,
+      "is_cover": true,
+      "is_reenactment": false,
+      "license": "Attribution",
+      "license_url": null,
+      "location_id": null,
+      "media_type": "image",
+      "pair_id": null,
+      "photographer": "Lưu trữ Quốc gia Romania",
+      "sort_order": 1,
+      "source_id": null,
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Le_Duan.png",
+      "width": 298,
+      "year_taken": 1978
+    },
+    {
+      "alt_text": "Chân dung ông Nguyễn Văn Linh",
+      "caption": "Ông Nguyễn Văn Linh năm 1984.",
+      "era": "historical",
+      "event_id": null,
+      "figure_id": "2bd5b2d6-9ab1-48b3-bf6e-f53a76484e4b",
+      "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/figures/nguyen-van-linh/nguyen-van-linh-1984-1200.webp",
+      "focal_point": null,
+      "height": 1509,
+      "id": "90f377e2-02a4-4381-9f2c-27d5f16aa64f",
+      "is_colorized": false,
+      "is_cover": true,
+      "is_reenactment": false,
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "location_id": null,
+      "media_type": "image",
+      "pair_id": null,
+      "photographer": "CalCoWSpiBudSu",
+      "sort_order": 1,
+      "source_id": null,
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:T%C3%A1m_L%C3%AA_Thanh_v%C3%A0_Nguy%E1%BB%85n_V%C4%83n_Linh_(cropped)_(2).jpg",
+      "width": 1153,
+      "year_taken": 1984
+    },
+    {
+      "alt_text": "Đại tướng Võ Nguyên Giáp lúc tuổi cao, mặc quân phục trắng gắn huân chương, đang nói chuyện",
+      "caption": "Đại tướng Võ Nguyên Giáp năm 2008.",
+      "era": "historical",
+      "event_id": null,
+      "figure_id": "d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+      "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/figures/vo-nguyen-giap/vo-nguyen-giap-2008-1200.webp",
+      "focal_point": null,
+      "height": 2222,
+      "id": "c02c2eaf-e19f-487b-a610-c542e560236d",
+      "is_colorized": false,
+      "is_cover": true,
+      "is_reenactment": false,
+      "license": "CC BY 3.0 br",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/br/deed.en",
+      "location_id": null,
+      "media_type": "image",
+      "pair_id": null,
+      "photographer": "Ricardo Stuckert (PR/ABr/Brazil)",
+      "sort_order": 1,
+      "source_id": null,
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Vo_Nguyen_Giap_2008.jpg",
+      "width": 2000,
+      "year_taken": 2008
+    },
+    {
+      "alt_text": "Chân dung bà Nguyễn Thị Bình tuổi cao, tóc bạc, quàng khăn, đứng trước một băng rôn",
+      "caption": "Bà Nguyễn Thị Bình năm 2008 (ảnh của Văn phòng Tổng thống Ấn Độ).",
+      "era": "historical",
+      "event_id": null,
+      "figure_id": "2ee65d28-bade-48b1-8658-9c2c0d55009b",
+      "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/figures/nguyen-thi-binh/nguyen-thi-binh-1200.webp",
+      "focal_point": null,
+      "height": 274,
+      "id": "c02dd7a8-9bda-44e8-9af0-f11efb847886",
+      "is_colorized": false,
+      "is_cover": true,
+      "is_reenactment": false,
+      "license": "GODL-India",
+      "license_url": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "location_id": null,
+      "media_type": "image",
+      "pair_id": null,
+      "photographer": "President's Secretariat",
+      "sort_order": 1,
+      "source_id": null,
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Nguyen_Thi_Binh.jpg",
+      "width": 206,
+      "year_taken": 2008
+    },
+    {
+      "alt_text": "Chân dung ông Trường Chinh",
+      "caption": "Ông Trường Chinh năm 1978 (Lưu trữ Quốc gia Romania).",
+      "era": "historical",
+      "event_id": null,
+      "figure_id": "01e2955b-8989-4765-95b8-f1f4a0685168",
+      "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/figures/truong-chinh/truong-chinh-1978-1200.webp",
+      "focal_point": null,
+      "height": 347,
+      "id": "c36132ee-6025-4337-9695-0eba85a23554",
+      "is_colorized": false,
+      "is_cover": true,
+      "is_reenactment": false,
+      "license": "Attribution",
+      "license_url": null,
+      "location_id": null,
+      "media_type": "image",
+      "pair_id": null,
+      "photographer": "Lưu trữ Quốc gia Romania",
+      "sort_order": 1,
+      "source_id": null,
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Truong_Chinh,_Le_Duan,_Nicolae_og_Elena_Ceausescu_(cropped)(b).jpg",
+      "width": 262,
+      "year_taken": 1978
+    }
+  ],
+  "eventLinks": [
+    {
+      "event_id": "03e6aee7-4f59-4d97-b0a6-6b10e0eca598",
+      "figure_id": "757037f8-03a7-4a97-919e-00fc98236801",
+      "relationship": "Người kí tên Nguyễn Ái Quốc và gửi bản yêu sách",
+      "sort_order": 1
+    },
+    {
+      "event_id": "05e8d369-3591-4b8c-8055-2587ebcc0479",
+      "figure_id": "757037f8-03a7-4a97-919e-00fc98236801",
+      "relationship": "Người ra Lời kêu gọi toàn quốc kháng chiến",
+      "sort_order": 1
+    },
+    {
+      "event_id": "12da456d-ecff-4000-8d27-605eb14462d2",
+      "figure_id": "757037f8-03a7-4a97-919e-00fc98236801",
+      "relationship": "Nhân vật chính của sự kiện (tên gọi lúc bấy giờ: Nguyễn Ái Quốc)",
+      "sort_order": 1
+    },
+    {
+      "event_id": "6235b37b-de82-409a-b64b-a5b24a061f69",
+      "figure_id": "757037f8-03a7-4a97-919e-00fc98236801",
+      "relationship": "Lãnh tụ, chỉ đạo chung phong trào Tổng khởi nghĩa",
+      "sort_order": 1
+    },
+    {
+      "event_id": "65ee8534-43e2-47cc-b578-ce597c97d5c7",
+      "figure_id": "c6eb511d-898f-4fab-8875-42ddd0700cd4",
+      "relationship": "Trưởng đoàn đại biểu Việt Nam Dân chủ Cộng hòa tại hội nghị",
+      "sort_order": 1
+    },
+    {
+      "event_id": "7fc20b03-cc91-4c4c-a2d2-cee1edb3dce4",
+      "figure_id": "01e2955b-8989-4765-95b8-f1f4a0685168",
+      "relationship": "Tổng Bí thư giai đoạn chuẩn bị Đại hội, thúc đẩy đổi mới tư duy",
+      "sort_order": 2
+    },
+    {
+      "event_id": "7fc20b03-cc91-4c4c-a2d2-cee1edb3dce4",
+      "figure_id": "2bd5b2d6-9ab1-48b3-bf6e-f53a76484e4b",
+      "relationship": "Được bầu làm Tổng Bí thư tại Đại hội, người khởi xướng Đổi mới",
+      "sort_order": 1
+    },
+    {
+      "event_id": "9bf56d2d-56f0-4e35-9dcb-629a4401b671",
+      "figure_id": "016a56fa-2a90-4bf4-ae8f-6975f0486282",
+      "relationship": "Cố vấn đặc biệt, trực tiếp đàm phán",
+      "sort_order": 1
+    },
+    {
+      "event_id": "9bf56d2d-56f0-4e35-9dcb-629a4401b671",
+      "figure_id": "2ee65d28-bade-48b1-8658-9c2c0d55009b",
+      "relationship": "Trưởng đoàn đại biểu Chính phủ Cách mạng lâm thời Cộng hòa miền Nam Việt Nam, đại diện ký hiệp định",
+      "sort_order": 2
+    },
+    {
+      "event_id": "aa42e2a0-da5f-42e4-a917-fcfca70953a1",
+      "figure_id": "dff00764-7ef6-4b82-981e-9f66f080d653",
+      "relationship": "Có vai trò quan trọng trong việc hoạch định chủ trương tổng tiến công",
+      "sort_order": 1
+    },
+    {
+      "event_id": "b2cb567f-4dbd-4a0d-9eb9-820c5f422a03",
+      "figure_id": "757037f8-03a7-4a97-919e-00fc98236801",
+      "relationship": "Người được UNESCO tôn vinh",
+      "sort_order": 1
+    },
+    {
+      "event_id": "b746e01f-19fa-4084-be5c-50680a287d1f",
+      "figure_id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+      "relationship": "Tư lệnh Chiến dịch Hồ Chí Minh",
+      "sort_order": 1
+    },
+    {
+      "event_id": "bbd49d2e-f4d2-4d87-ab48-f3e664ebeda2",
+      "figure_id": "757037f8-03a7-4a97-919e-00fc98236801",
+      "relationship": "Nhân vật chính của sự kiện (tên gọi thời trẻ: Nguyễn Tất Thành)",
+      "sort_order": 1
+    },
+    {
+      "event_id": "c0012c5d-4480-4ea8-9c74-8a7d4696a9e1",
+      "figure_id": "757037f8-03a7-4a97-919e-00fc98236801",
+      "relationship": "Người soạn thảo và đọc bản Tuyên ngôn Độc lập",
+      "sort_order": 1
+    },
+    {
+      "event_id": "e036ff58-c734-40bb-891b-18c9a743398b",
+      "figure_id": "757037f8-03a7-4a97-919e-00fc98236801",
+      "relationship": "Chủ tịch nước, người chỉ đạo chiến lược chung",
+      "sort_order": 1
+    },
+    {
+      "event_id": "e036ff58-c734-40bb-891b-18c9a743398b",
+      "figure_id": "d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+      "relationship": "Tổng Tư lệnh, trực tiếp chỉ huy chiến dịch",
+      "sort_order": 2
+    },
+    {
+      "event_id": "f526eb1f-a3b3-4be9-b83c-c8444127155a",
+      "figure_id": "757037f8-03a7-4a97-919e-00fc98236801",
+      "relationship": "Người thay mặt Chính phủ ký Hiệp định",
+      "sort_order": 1
+    }
+  ],
+  "counts": {
+    "event_links": 17,
+    "events": 46,
+    "figures": 9,
+    "media": 31,
+    "sources": 30
+  },
+  "unrelatedFingerprints": {
+    "event_figures": "7a1158fca451890e87b8b820b2e2c320",
+    "events": "04f3227aca3ac4cfffe9e70d5d8ee977",
+    "media": "ea9a2810087feceeb76443aee7cf51bf"
+  }
+}

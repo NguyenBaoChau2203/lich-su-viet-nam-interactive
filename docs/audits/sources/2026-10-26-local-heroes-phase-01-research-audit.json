@@ -1,0 +1,2034 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-26T09:36:08.278Z",
+  "contractId": "LH-1.0.0-draft.1",
+  "manifestVersion": 14,
+  "manifestHash": "893156e86b5e2e350698d05b05ddc0f93804ab174b5f043f0d2d62210c036305",
+  "ownerApproval": "approved",
+  "baseCommit": "6a38f582515102c03ccc7ac806ae6d3f1becbbb0",
+  "scope": "Phase 01 read-only research and local draft artifacts; no schema/app/import/publication change.",
+  "identitySnapshot": {
+    "projectRef": "ueolfjujjybutyuyfxha",
+    "projectName": "lichsu_12",
+    "capturedFileMtime": "2026-10-26T08:03:31.002Z",
+    "query": "SELECT id, slug, name, other_names, workflow_status FROM public.historical_figures ORDER BY slug;",
+    "verification": "Read-only CLI snapshot. Connector discovery did not contain the task project, so no unrelated connector database was queried.",
+    "rows": [
+      {
+        "id": "757037f8-03a7-4a97-919e-00fc98236801",
+        "name": "Hồ Chí Minh",
+        "other_names": "Nguyễn Sinh Cung, Nguyễn Tất Thành, Nguyễn Ái Quốc",
+        "slug": "ho-chi-minh",
+        "workflow_status": "published"
+      },
+      {
+        "id": "dff00764-7ef6-4b82-981e-9f66f080d653",
+        "name": "Lê Duẩn",
+        "other_names": null,
+        "slug": "le-duan",
+        "workflow_status": "published"
+      },
+      {
+        "id": "016a56fa-2a90-4bf4-ae8f-6975f0486282",
+        "name": "Lê Đức Thọ",
+        "other_names": null,
+        "slug": "le-duc-tho",
+        "workflow_status": "published"
+      },
+      {
+        "id": "2ee65d28-bade-48b1-8658-9c2c0d55009b",
+        "name": "Nguyễn Thị Bình",
+        "other_names": null,
+        "slug": "nguyen-thi-binh",
+        "workflow_status": "published"
+      },
+      {
+        "id": "2bd5b2d6-9ab1-48b3-bf6e-f53a76484e4b",
+        "name": "Nguyễn Văn Linh",
+        "other_names": null,
+        "slug": "nguyen-van-linh",
+        "workflow_status": "published"
+      },
+      {
+        "id": "c6eb511d-898f-4fab-8875-42ddd0700cd4",
+        "name": "Phạm Văn Đồng",
+        "other_names": null,
+        "slug": "pham-van-dong",
+        "workflow_status": "published"
+      },
+      {
+        "id": "01e2955b-8989-4765-95b8-f1f4a0685168",
+        "name": "Trường Chinh",
+        "other_names": null,
+        "slug": "truong-chinh",
+        "workflow_status": "published"
+      },
+      {
+        "id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "name": "Văn Tiến Dũng",
+        "other_names": null,
+        "slug": "van-tien-dung",
+        "workflow_status": "published"
+      },
+      {
+        "id": "d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+        "name": "Võ Nguyên Giáp",
+        "other_names": null,
+        "slug": "vo-nguyen-giap",
+        "workflow_status": "published"
+      }
+    ]
+  },
+  "inheritedBaseline": {
+    "shapeReferenceHashIssueCount": 180,
+    "declaredManifestHash": "d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9",
+    "computedManifestHash": "286a072d0127010745d16bc881428ada0e808a573a875c13c5b6c737cc57189c",
+    "hashesAreHistoricalEvidenceOnly": true
+  },
+  "repairCheckpoint": {
+    "at": "2026-10-26T08:11:59.359Z",
+    "phase": "input-repair",
+    "canonicalIdentityCount": 9,
+    "keyMap": {
+      "new:ho-chi-minh": "figure:757037f8-03a7-4a97-919e-00fc98236801",
+      "new:le-duan": "figure:dff00764-7ef6-4b82-981e-9f66f080d653",
+      "new:le-duc-tho": "figure:016a56fa-2a90-4bf4-ae8f-6975f0486282",
+      "new:nguyen-thi-binh": "figure:2ee65d28-bade-48b1-8658-9c2c0d55009b",
+      "new:nguyen-van-linh": "figure:2bd5b2d6-9ab1-48b3-bf6e-f53a76484e4b",
+      "new:pham-van-dong": "figure:c6eb511d-898f-4fab-8875-42ddd0700cd4",
+      "new:truong-chinh": "figure:01e2955b-8989-4765-95b8-f1f4a0685168",
+      "new:van-tien-dung": "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+      "new:vo-nguyen-giap": "figure:d2df1c0a-e5e3-4e03-865a-44bc9f020595"
+    },
+    "previousDeclaredManifestHash": "d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9",
+    "previousComputedManifestHash": "286a072d0127010745d16bc881428ada0e808a573a875c13c5b6c737cc57189c",
+    "currentManifestHash": "8f478d8066ea41e0ac8d6e507691ddfcf536cf74d6f15105df91514dee65e97b",
+    "selectedPeopleRetained": 10,
+    "completePeople": 0,
+    "rosterPeople": 40
+  },
+  "versionChain": [
+    {
+      "at": "2026-10-26T08:31:03.477Z",
+      "label": "batch-01-northern-unrepresented",
+      "people": [
+        "ta-xuan-thu",
+        "be-van-dan",
+        "tran-quoc-manh",
+        "lo-van-gia",
+        "hoang-truong-minh",
+        "doi-can",
+        "vu-van-hieu",
+        "nguyen-thai-hoc",
+        "to-hieu",
+        "luong-van-tuy"
+      ],
+      "version": 3,
+      "previousManifestHash": "8f478d8066ea41e0ac8d6e507691ddfcf536cf74d6f15105df91514dee65e97b",
+      "manifestHash": "6a36f46dd3004b63491610b56162a64a9e047574f994a3ebe55ee1abe6c1fba5",
+      "selected": 20,
+      "complete": 0,
+      "sourcedLocalities": 11
+    },
+    {
+      "at": "2026-10-26T08:31:21.496Z",
+      "label": "batch-01-id-syntax-correction",
+      "people": [],
+      "version": 4,
+      "previousManifestHash": "6a36f46dd3004b63491610b56162a64a9e047574f994a3ebe55ee1abe6c1fba5",
+      "manifestHash": "4bd708285888be13a13cfcece460dc90000ac6cc422cd8e109b61bf39549d8c1",
+      "selected": 20,
+      "complete": 0,
+      "sourcedLocalities": 11
+    },
+    {
+      "at": "2026-10-26T08:37:11.884Z",
+      "label": "batch-02-central-and-highlands",
+      "people": [
+        "tran-phu",
+        "le-duan",
+        "nguyen-chi-dieu",
+        "thai-phien",
+        "pham-van-dong",
+        "vo-van-ky",
+        "y-bloc-eban",
+        "le-thi-pha",
+        "huynh-van-nghe",
+        "hoang-le-kha"
+      ],
+      "version": 5,
+      "previousManifestHash": "4bd708285888be13a13cfcece460dc90000ac6cc422cd8e109b61bf39549d8c1",
+      "manifestHash": "658116e8ae0462849aadec371468ee636385a5a96b7f92c7b6ad74680f7c0f02",
+      "selected": 30,
+      "complete": 0,
+      "sourcedLocalities": 21
+    },
+    {
+      "at": "2026-10-26T08:40:30.601Z",
+      "label": "batch-03-southern-unrepresented",
+      "people": [
+        "nguyen-van-troi",
+        "tran-thi-nhuong",
+        "pham-hung",
+        "chau-van-liem",
+        "bong-van-dia"
+      ],
+      "version": 6,
+      "previousManifestHash": "658116e8ae0462849aadec371468ee636385a5a96b7f92c7b6ad74680f7c0f02",
+      "manifestHash": "21546c8fe64b57e667b1c195d54565fce61c0d46482ec4979ded35a436619ea9",
+      "selected": 35,
+      "complete": 0,
+      "sourcedLocalities": 26
+    },
+    {
+      "at": "2026-10-26T08:45:18.165Z",
+      "label": "batch-04-inherited-selected-revalidation",
+      "people": [
+        "van-tien-dung",
+        "kim-dong",
+        "tran-can",
+        "hoang-van-thu",
+        "ngo-gia-tu",
+        "nguyen-duc-canh",
+        "to-vinh-dien",
+        "nguyen-thi-minh-khai",
+        "dinh-nup",
+        "ton-duc-thang"
+      ],
+      "version": 7,
+      "previousManifestHash": "21546c8fe64b57e667b1c195d54565fce61c0d46482ec4979ded35a436619ea9",
+      "manifestHash": "806576d210f39a6232214797e2b2400a53b8573ca539bf4ccd680deecd508f27",
+      "selected": 35,
+      "complete": 0,
+      "sourcedLocalities": 34
+    },
+    {
+      "at": "2026-10-26T08:52:19.063Z",
+      "label": "batch-05-two-complete-research-samples",
+      "people": [
+        "van-tien-dung",
+        "kim-dong"
+      ],
+      "version": 8,
+      "previousManifestHash": "806576d210f39a6232214797e2b2400a53b8573ca539bf4ccd680deecd508f27",
+      "manifestHash": "f48c832eab2782703559bd5294366b4e79d0462aa6a51eee052fb74b59477fed",
+      "selected": 35,
+      "complete": 2,
+      "sourcedLocalities": 34
+    },
+    {
+      "at": "2026-10-26T09:02:00.280Z",
+      "label": "batch-06-pass-two-northern-leads",
+      "people": [
+        "vo-nguyen-giap",
+        "ho-chi-minh",
+        "nguyen-luong-bang",
+        "luong-ngoc-quyen",
+        "luong-van-tri",
+        "nguyen-van-cu",
+        "to-hieu",
+        "nguyen-van-linh",
+        "truong-chinh",
+        "ha-huy-tap"
+      ],
+      "version": 9,
+      "previousManifestHash": "f48c832eab2782703559bd5294366b4e79d0462aa6a51eee052fb74b59477fed",
+      "manifestHash": "206cb23541b14811d33492ec6822fa1d4dcd1fe3161321f3dce4e59dee3293ac",
+      "selected": 35,
+      "complete": 2,
+      "sourcedLocalities": 34
+    },
+    {
+      "at": "2026-10-26T09:03:02.008Z",
+      "label": "batch-07-pass-two-central-leads",
+      "people": [
+        "van-tien-dung",
+        "doi-can",
+        "hoang-le-kha",
+        "nguyen-van-troi",
+        "nguyen-chanh",
+        "nay-der",
+        "y-bloc-eban",
+        "tran-phu",
+        "no-trang-long",
+        "hoang-minh-chanh"
+      ],
+      "version": 10,
+      "previousManifestHash": "206cb23541b14811d33492ec6822fa1d4dcd1fe3161321f3dce4e59dee3293ac",
+      "manifestHash": "9bfe6fe699e7a14dc59c15d1c9247e9056cc3b46a593986306832abca58b69f9",
+      "selected": 35,
+      "complete": 2,
+      "sourcedLocalities": 34
+    },
+    {
+      "at": "2026-10-26T09:03:02.990Z",
+      "label": "batch-08-pass-two-southern-leads",
+      "people": [
+        "hoang-le-kha",
+        "chau-van-liem",
+        "pham-hung",
+        "nguyen-thi-dinh",
+        "phan-ngoc-hien"
+      ],
+      "version": 11,
+      "previousManifestHash": "9bfe6fe699e7a14dc59c15d1c9247e9056cc3b46a593986306832abca58b69f9",
+      "manifestHash": "4a185312bb91fe61d4b72d26c437f8f1eb5ef54c405cb0023d26ff99cabbe12d",
+      "selected": 35,
+      "complete": 2,
+      "sourcedLocalities": 34
+    },
+    {
+      "at": "2026-10-26T09:09:44.809Z",
+      "label": "batch-09-second-pass-locality-self-review",
+      "people": [
+        "nguyen-van-linh",
+        "le-binh"
+      ],
+      "version": 12,
+      "previousManifestHash": "4a185312bb91fe61d4b72d26c437f8f1eb5ef54c405cb0023d26ff99cabbe12d",
+      "manifestHash": "0996df0de40c89767c324640afe952ef7d208a0a593bac3c68bce2739af56d19",
+      "selected": 35,
+      "complete": 2,
+      "sourcedLocalities": 34
+    },
+    {
+      "at": "2026-10-26T09:13:15.307Z",
+      "label": "final-self-review-and-roster-freeze",
+      "people": [],
+      "version": 13,
+      "previousManifestHash": "0996df0de40c89767c324640afe952ef7d208a0a593bac3c68bce2739af56d19",
+      "manifestHash": "a8e2f0d3c8dd1608dcefcf6b213e044760f2d907e2c9c06299d2641b5dae0fda",
+      "selected": 35,
+      "complete": 2,
+      "sourcedLocalities": 34
+    },
+    {
+      "at": "2026-10-26T09:15:17.446Z",
+      "label": "inherited-relation-owner-repair",
+      "people": [],
+      "correctedClaims": 18,
+      "version": 14,
+      "previousManifestHash": "a8e2f0d3c8dd1608dcefcf6b213e044760f2d907e2c9c06299d2641b5dae0fda",
+      "manifestHash": "893156e86b5e2e350698d05b05ddc0f93804ab174b5f043f0d2d62210c036305"
+    }
+  ],
+  "counts": {
+    "nominees": 53,
+    "selected": 35,
+    "complete": 2,
+    "held": 18,
+    "qualifiedLocalities": 34,
+    "completeLocalities": 2
+  },
+  "secondPass": [
+    {
+      "code": "08",
+      "personKey": "figure:d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+      "sourceIds": [
+        "src-research-ta-xuan-thu",
+        "src-lead-vo-nguyen-giap"
+      ],
+      "note": "Tuyên Quang: bài Nhân Dân đã đọc nêu chuyến khảo sát Tân Trào 1945. Điện Biên/Quảng Trị/Huế: thêm đầu mối đề cương; cần triển khai claim riêng. Không coi chức vụ chỉ huy chung là bằng chứng có mặt ở mọi tỉnh.",
+      "at": "2026-10-26T09:02:00.280Z",
+      "decision": "held"
+    },
+    {
+      "code": "11",
+      "personKey": "figure:d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+      "sourceIds": [
+        "src-research-ta-xuan-thu",
+        "src-lead-vo-nguyen-giap"
+      ],
+      "note": "Tuyên Quang: bài Nhân Dân đã đọc nêu chuyến khảo sát Tân Trào 1945. Điện Biên/Quảng Trị/Huế: thêm đầu mối đề cương; cần triển khai claim riêng. Không coi chức vụ chỉ huy chung là bằng chứng có mặt ở mọi tỉnh.",
+      "at": "2026-10-26T09:02:00.280Z",
+      "decision": "held"
+    },
+    {
+      "code": "12",
+      "personKey": "new:tran-quoc-manh",
+      "sourceIds": [
+        "src-research-tran-quoc-manh",
+        "src-research-lai-chau-mapping"
+      ],
+      "note": "Bổ sung ở batch 01 để thay quan hệ Lai Châu sai của Bế Văn Đàn. Đã có claim được kiểm chứng; thiếu câu chuyện và ảnh.",
+      "at": "2026-10-26T09:03:02.992Z",
+      "decision": "accepted"
+    },
+    {
+      "code": "14",
+      "personKey": "new:nguyen-luong-bang",
+      "sourceIds": [
+        "src-research-lo-van-gia"
+      ],
+      "note": "Bài Sơn La đã đọc nêu tên trong bốn người được Lò Văn Giá dẫn vượt ngục. Đây là đầu mối định danh và hoạt động; hồ sơ riêng chưa nghiên cứu.",
+      "at": "2026-10-26T09:02:00.280Z",
+      "decision": "held"
+    },
+    {
+      "code": "15",
+      "personKey": "figure:757037f8-03a7-4a97-919e-00fc98236801",
+      "sourceIds": [
+        "src-lead-ho-chi-minh-bio",
+        "src-lead-ho-chi-minh-lao-cai"
+      ],
+      "note": "Đối chiếu trực tiếp bản gốc về chuyến thăm Lào Cai và quê Nghệ An trước khi tạo quan hệ.",
+      "at": "2026-10-26T09:02:00.280Z",
+      "decision": "held"
+    },
+    {
+      "code": "19",
+      "personKey": "new:luong-ngoc-quyen",
+      "sourceIds": [
+        "src-research-doi-can",
+        "src-research-doi-can-exhibition"
+      ],
+      "note": "Hai bài đã đọc nêu cùng Đội Cấn lãnh đạo khởi nghĩa 1917; cần hồ sơ riêng và đối chiếu nhân thân.",
+      "at": "2026-10-26T09:02:00.280Z",
+      "decision": "held"
+    },
+    {
+      "code": "20",
+      "personKey": "new:luong-van-tri",
+      "sourceIds": [
+        "src-lead-luong-van-tri"
+      ],
+      "note": "Lượt 2 chỉ ghi đầu mối, không chép ngày sinh hoặc tước hiệu vào dữ liệu.",
+      "at": "2026-10-26T09:02:00.280Z",
+      "decision": "held"
+    },
+    {
+      "code": "22",
+      "personKey": "new:nguyen-van-cu",
+      "sourceIds": [
+        "src-lead-nguyen-van-cu"
+      ],
+      "note": "Cần mở toàn văn, kiểm chứng thời kỳ và quan hệ Vàng Danh/Mạo Khê.",
+      "at": "2026-10-26T09:02:00.280Z",
+      "decision": "held"
+    },
+    {
+      "code": "24",
+      "personKey": "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+      "sourceIds": [
+        "src-research-van-tien-dung"
+      ],
+      "note": "Đề cử thêm Bắc Ninh từ đoạn nhiệm vụ Bí thư Đảng bộ tháng 1/1944; chưa có claim quan hệ mới nên chưa tính là complete ở Bắc Ninh.",
+      "at": "2026-10-26T09:03:02.008Z",
+      "decision": "accepted"
+    },
+    {
+      "code": "25",
+      "personKey": "new:doi-can",
+      "sourceIds": [
+        "src-research-doi-can",
+        "src-research-modern-provinces-2025"
+      ],
+      "note": "Đề cử quê Vĩnh Tường, Vĩnh Yên được nguồn đối chiếu sang Phú Thọ. Tên thật/năm sinh còn khác nhau, chưa tạo quan hệ mới.",
+      "at": "2026-10-26T09:03:02.008Z",
+      "decision": "accepted"
+    },
+    {
+      "code": "31",
+      "personKey": "new:to-hieu",
+      "sourceIds": [
+        "src-lead-to-hieu-hai-phong"
+      ],
+      "note": "Đề cử thêm cho Hải Phòng; chưa có claim quan hệ mới nên không làm tăng độ phủ đủ điều kiện.",
+      "at": "2026-10-26T09:02:00.280Z",
+      "decision": "accepted"
+    },
+    {
+      "code": "33",
+      "personKey": "figure:2bd5b2d6-9ab1-48b3-bf6e-f53a76484e4b",
+      "sourceIds": [
+        "src-lead-nguyen-van-linh"
+      ],
+      "note": "Cần đọc toàn văn, tách quê Hưng Yên với nơi hoạt động Cần Thơ; không lấy tên báo xuất bản làm bằng chứng quan hệ.",
+      "at": "2026-10-26T09:02:00.280Z",
+      "decision": "held"
+    },
+    {
+      "code": "37",
+      "personKey": "figure:01e2955b-8989-4765-95b8-f1f4a0685168",
+      "sourceIds": [
+        "src-lead-truong-chinh",
+        "src-research-modern-provinces-2025"
+      ],
+      "note": "Đầu mối Hành Thiện, Nam Định, đối chiếu vào Ninh Bình mới; chưa tạo claim.",
+      "at": "2026-10-26T09:02:00.280Z",
+      "decision": "held"
+    },
+    {
+      "code": "38",
+      "personKey": "new:hoang-le-kha",
+      "sourceIds": [
+        "src-research-hoang-le-kha"
+      ],
+      "note": "Đề cử thêm cấp tỉnh Thanh Hóa theo đoạn tiểu sử; chưa chấp nhận địa chỉ xã vì nguồn có phản ánh nhầm.",
+      "at": "2026-10-26T09:03:02.008Z",
+      "decision": "accepted"
+    },
+    {
+      "code": "40",
+      "personKey": "figure:757037f8-03a7-4a97-919e-00fc98236801",
+      "sourceIds": [
+        "src-lead-ho-chi-minh-bio",
+        "src-lead-ho-chi-minh-lao-cai"
+      ],
+      "note": "Đối chiếu trực tiếp bản gốc về chuyến thăm Lào Cai và quê Nghệ An trước khi tạo quan hệ.",
+      "at": "2026-10-26T09:02:00.280Z",
+      "decision": "held"
+    },
+    {
+      "code": "42",
+      "personKey": "new:ha-huy-tap",
+      "sourceIds": [
+        "src-lead-ha-huy-tap"
+      ],
+      "note": "Đầu mối quê Hà Tĩnh; chưa có đủ claim riêng để chọn thêm người vào phạm vi phát hành.",
+      "at": "2026-10-26T09:02:00.280Z",
+      "decision": "held"
+    },
+    {
+      "code": "44",
+      "personKey": "figure:d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+      "sourceIds": [
+        "src-research-ta-xuan-thu",
+        "src-lead-vo-nguyen-giap"
+      ],
+      "note": "Tuyên Quang: bài Nhân Dân đã đọc nêu chuyến khảo sát Tân Trào 1945. Điện Biên/Quảng Trị/Huế: thêm đầu mối đề cương; cần triển khai claim riêng. Không coi chức vụ chỉ huy chung là bằng chứng có mặt ở mọi tỉnh.",
+      "at": "2026-10-26T09:02:00.280Z",
+      "decision": "held"
+    },
+    {
+      "code": "46",
+      "personKey": "figure:d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+      "sourceIds": [
+        "src-research-ta-xuan-thu",
+        "src-lead-vo-nguyen-giap"
+      ],
+      "note": "Tuyên Quang: bài Nhân Dân đã đọc nêu chuyến khảo sát Tân Trào 1945. Điện Biên/Quảng Trị/Huế: thêm đầu mối đề cương; cần triển khai claim riêng. Không coi chức vụ chỉ huy chung là bằng chứng có mặt ở mọi tỉnh.",
+      "at": "2026-10-26T09:02:00.280Z",
+      "decision": "held"
+    },
+    {
+      "code": "48",
+      "personKey": "new:nguyen-van-troi",
+      "sourceIds": [
+        "src-lead-nguyen-van-troi-home",
+        "src-research-modern-provinces-2025"
+      ],
+      "note": "Đầu mối Thanh Quýt, Quảng Nam sang Đà Nẵng mới; cần đọc và tạo claim quê quán riêng.",
+      "at": "2026-10-26T09:03:02.008Z",
+      "decision": "accepted"
+    },
+    {
+      "code": "51",
+      "personKey": "new:nguyen-chanh",
+      "sourceIds": [
+        "src-lead-nguyen-chanh"
+      ],
+      "note": "Cần hồ sơ riêng, kiểm chứng nhân thân và quê Quảng Ngãi trước khi nhận thêm vào phạm vi phát hành.",
+      "at": "2026-10-26T09:03:02.008Z",
+      "decision": "held"
+    },
+    {
+      "code": "52",
+      "personKey": "new:nay-der",
+      "sourceIds": [
+        "src-lead-nay-der"
+      ],
+      "note": "Cần làm rõ thời kỳ và đóng góp cách mạng, tránh đồng nhất danh nhân giáo dục với phạm vi được duyệt.",
+      "at": "2026-10-26T09:03:02.008Z",
+      "decision": "held"
+    },
+    {
+      "code": "56",
+      "personKey": "new:y-bloc-eban",
+      "sourceIds": [
+        "src-research-y-bloc-eban"
+      ],
+      "note": "Đoạn nguồn đã đọc nêu đội vũ trang địch hậu phía Bắc Khánh Hòa tháng 11/1946; cần claim/ánh xạ riêng, không tăng độ phủ từ đề cử.",
+      "at": "2026-10-26T09:03:02.008Z",
+      "decision": "accepted"
+    },
+    {
+      "code": "66",
+      "personKey": "new:tran-phu",
+      "sourceIds": [
+        "src-research-tran-phu",
+        "src-research-modern-provinces-2025"
+      ],
+      "note": "Đầu mối nơi sinh An Thổ, Phú Yên sang tỉnh Đắk Lắk mới; tách với nguyên quán Hà Tĩnh đang được chấp nhận.",
+      "at": "2026-10-26T09:03:02.008Z",
+      "decision": "accepted"
+    },
+    {
+      "code": "68",
+      "personKey": "new:no-trang-long",
+      "sourceIds": [
+        "src-lead-no-trang-long",
+        "src-research-modern-provinces-2025"
+      ],
+      "note": "Tên có nhiều cách phiên âm; chưa nhận alias, năm sinh/mất hoặc phạm vi hoạt động khi chưa đối chiếu.",
+      "at": "2026-10-26T09:03:02.008Z",
+      "decision": "held"
+    },
+    {
+      "code": "75",
+      "personKey": "new:hoang-minh-chanh",
+      "sourceIds": [
+        "src-research-huynh-van-nghe-mapping"
+      ],
+      "note": "Thư viện Đồng Nai đã đọc nêu chỉ huy Chi đội 10 trong trận La Ngà 1948. Cần định danh riêng và phân biệt tên gần giống; chưa tự gộp Hoàng Minh Chính/Hoàng Minh Đạo.",
+      "at": "2026-10-26T09:03:02.008Z",
+      "decision": "held"
+    },
+    {
+      "code": "79",
+      "personKey": "new:hoang-le-kha",
+      "sourceIds": [
+        "src-research-hoang-le-kha"
+      ],
+      "note": "Đoạn đã đọc về hoạt động tại Sài Gòn 1940/1945 và Gia Định; chưa tạo quan hệ mới cho TP Hồ Chí Minh.",
+      "at": "2026-10-26T09:03:02.990Z",
+      "decision": "accepted"
+    },
+    {
+      "code": "80",
+      "personKey": "new:chau-van-liem",
+      "sourceIds": [
+        "src-research-chau-van-liem",
+        "src-research-modern-provinces-2025"
+      ],
+      "note": "Đề cương là đầu mối Đức Hòa/Long An sang Tây Ninh và hoạt động dạy học/Thanh niên tại Long Xuyên sang An Giang; mỗi quan hệ mới cần claim riêng.",
+      "at": "2026-10-26T09:03:02.990Z",
+      "decision": "accepted"
+    },
+    {
+      "code": "82",
+      "personKey": "new:pham-hung",
+      "sourceIds": [
+        "src-research-pham-hung",
+        "src-research-tran-thi-nhuong",
+        "src-research-modern-provinces-2025"
+      ],
+      "note": "Đầu mối Bí thư Mỹ Tho 1931, đối chiếu Mỹ Tho/Tiền Giang sang Đồng Tháp; chưa chấp nhận thêm quan hệ từ đề cử.",
+      "at": "2026-10-26T09:03:02.990Z",
+      "decision": "accepted"
+    },
+    {
+      "code": "86",
+      "personKey": "new:nguyen-thi-dinh",
+      "sourceIds": [
+        "src-lead-nguyen-thi-dinh",
+        "src-research-modern-provinces-2025"
+      ],
+      "note": "Cần đọc toàn văn và tạo hồ sơ riêng; đề cử quê Bến Tre thuộc Vĩnh Long mới.",
+      "at": "2026-10-26T09:03:02.990Z",
+      "decision": "held"
+    },
+    {
+      "code": "91",
+      "personKey": "new:chau-van-liem",
+      "sourceIds": [
+        "src-research-chau-van-liem",
+        "src-research-modern-provinces-2025"
+      ],
+      "note": "Đề cương là đầu mối Đức Hòa/Long An sang Tây Ninh và hoạt động dạy học/Thanh niên tại Long Xuyên sang An Giang; mỗi quan hệ mới cần claim riêng.",
+      "at": "2026-10-26T09:03:02.990Z",
+      "decision": "accepted"
+    },
+    {
+      "code": "92",
+      "personKey": "new:le-binh",
+      "sourceIds": [
+        "src-lead-le-binh"
+      ],
+      "note": "Đầu mối có đoạn lịch sử về chiến đấu Cái Răng; không suy từ tên chợ hay phường. Chưa tạo claim hoặc chọn vào phạm vi phát hành.",
+      "at": "2026-10-26T09:09:44.809Z",
+      "decision": "held"
+    },
+    {
+      "code": "96",
+      "personKey": "new:phan-ngoc-hien",
+      "sourceIds": [
+        "src-lead-phan-ngoc-hien"
+      ],
+      "note": "Cần hồ sơ riêng và kiểm chứng đóng góp/quan hệ Hòn Khoai; chưa tự thêm đồng đội khác được bài nêu tên.",
+      "at": "2026-10-26T09:03:02.990Z",
+      "decision": "held"
+    }
+  ],
+  "phase06Queue": [
+    {
+      "personKey": "new:ta-xuan-thu",
+      "name": "Tạ Xuân Thu",
+      "priorityCode": "08",
+      "qualifyingCodes": [
+        "08"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Không dùng nơi sinh Tuyên Quang do bản kế thừa gán sai; năm sinh/mất để trống cho tới khi đối chiếu."
+      ],
+      "batch": 1
+    },
+    {
+      "personKey": "new:be-van-dan",
+      "name": "Bế Văn Đàn",
+      "priorityCode": "11",
+      "qualifyingCodes": [
+        "04",
+        "11"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Ngày hy sinh có cách ghi khác nhau trong các nguồn; chưa đưa ngày/năm mất vào trường dữ liệu."
+      ],
+      "batch": 1
+    },
+    {
+      "personKey": "new:tran-can",
+      "name": "Trần Can",
+      "priorityCode": "11",
+      "qualifyingCodes": [
+        "11"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 1
+    },
+    {
+      "personKey": "new:tran-quoc-manh",
+      "name": "Trần Quốc Mạnh",
+      "priorityCode": "12",
+      "qualifyingCodes": [
+        "12"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 1
+    },
+    {
+      "personKey": "new:lo-van-gia",
+      "name": "Lò Văn Giá",
+      "priorityCode": "14",
+      "qualifyingCodes": [
+        "14"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 1
+    },
+    {
+      "personKey": "new:to-hieu",
+      "name": "Tô Hiệu",
+      "priorityCode": "14",
+      "qualifyingCodes": [
+        "14",
+        "33"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 1
+    },
+    {
+      "personKey": "new:hoang-truong-minh",
+      "name": "Hoàng Trường Minh",
+      "priorityCode": "15",
+      "qualifyingCodes": [
+        "15"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 1
+    },
+    {
+      "personKey": "new:doi-can",
+      "name": "Đội Cấn",
+      "priorityCode": "19",
+      "qualifyingCodes": [
+        "19"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Tên thật và năm sinh khác nhau giữa các hồ sơ; aliases/birthYear/deathYear để trống, không lấy năm kế thừa làm chuẩn."
+      ],
+      "batch": 1
+    },
+    {
+      "personKey": "new:hoang-van-thu",
+      "name": "Hoàng Văn Thụ",
+      "priorityCode": "20",
+      "qualifyingCodes": [
+        "20"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Nguồn có một câu bất hợp niên biểu về kết nạp năm 1928; không dùng câu đó. Cần nguồn thứ hai trước câu chuyện chi tiết."
+      ],
+      "batch": 1
+    },
+    {
+      "personKey": "new:vu-van-hieu",
+      "name": "Vũ Văn Hiếu",
+      "priorityCode": "22",
+      "qualifyingCodes": [
+        "22"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Chưa dùng năm sinh/mất hoặc tuổi vì bài có phép tính tuổi không thống nhất."
+      ],
+      "batch": 1
+    },
+    {
+      "personKey": "new:ngo-gia-tu",
+      "name": "Ngô Gia Tự",
+      "priorityCode": "24",
+      "qualifyingCodes": [
+        "24"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 2
+    },
+    {
+      "personKey": "new:nguyen-thai-hoc",
+      "name": "Nguyễn Thái Học",
+      "priorityCode": "25",
+      "qualifyingCodes": [
+        "25"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Năm sinh có nhiều cách ghi; giữ birthYear=null và cần đối chiếu hồ sơ học thuật/nhân thân trước khi hiển thị."
+      ],
+      "batch": 2
+    },
+    {
+      "personKey": "new:nguyen-duc-canh",
+      "name": "Nguyễn Đức Cảnh",
+      "priorityCode": "31",
+      "qualifyingCodes": [
+        "31"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 2
+    },
+    {
+      "personKey": "new:luong-van-tuy",
+      "name": "Lương Văn Tụy",
+      "priorityCode": "37",
+      "qualifyingCodes": [
+        "37"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Lần tải bằng Node trả HTTP 500 nhưng có toàn văn; web-reader đã đọc được. Cần kiểm tra lại độ ổn định hoặc thêm nguồn khác trước phát hành."
+      ],
+      "batch": 2
+    },
+    {
+      "personKey": "new:to-vinh-dien",
+      "name": "Tô Vĩnh Diện",
+      "priorityCode": "38",
+      "qualifyingCodes": [
+        "38"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Tiêu đề bảo tàng ghi 1953, hồ sơ khác ghi 1954 cho năm mất; deathYear=null, cần đối chiếu. Không sửa thành Triệu Sơn hiện tại nếu chưa ghi căn cứ đổi địa giới."
+      ],
+      "batch": 2
+    },
+    {
+      "personKey": "new:nguyen-thi-minh-khai",
+      "name": "Nguyễn Thị Minh Khai",
+      "priorityCode": "40",
+      "qualifyingCodes": [
+        "40"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Bổ sung hồ sơ lưu trữ hoặc cơ quan nghiên cứu về tiểu sử; bài hiện tại có các liên kết Wikipedia trong phần biên niên. Không tính hai bản đăng lại cùng nội dung là hai nguồn độc lập."
+      ],
+      "batch": 2
+    },
+    {
+      "personKey": "new:tran-phu",
+      "name": "Trần Phú",
+      "priorityCode": "42",
+      "qualifyingCodes": [
+        "42"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 2
+    },
+    {
+      "personKey": "figure:dff00764-7ef6-4b82-981e-9f66f080d653",
+      "name": "Lê Duẩn",
+      "priorityCode": "44",
+      "qualifyingCodes": [
+        "44"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 2
+    },
+    {
+      "personKey": "new:nguyen-chi-dieu",
+      "name": "Nguyễn Chí Diểu",
+      "priorityCode": "46",
+      "qualifyingCodes": [
+        "46"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Khoảng hoạt động 1936–1939 là approximate theo bối cảnh phong trào; cần hồ sơ biên niên riêng để chốt khoảng chính xác."
+      ],
+      "batch": 2
+    },
+    {
+      "personKey": "new:thai-phien",
+      "name": "Thái Phiên",
+      "priorityCode": "48",
+      "qualifyingCodes": [
+        "48"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Cần thêm hồ sơ trực tiếp, ổn định về Nghi An và vai trò cụ thể để biên soạn câu chuyện; nguồn hiện tại chỉ hỗ trợ tóm tắt ở cấp vùng."
+      ],
+      "batch": 2
+    },
+    {
+      "personKey": "figure:c6eb511d-898f-4fab-8875-42ddd0700cd4",
+      "name": "Phạm Văn Đồng",
+      "priorityCode": "51",
+      "qualifyingCodes": [
+        "51"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 3
+    },
+    {
+      "personKey": "new:dinh-nup",
+      "name": "Đinh Núp",
+      "priorityCode": "52",
+      "qualifyingCodes": [
+        "52"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 3
+    },
+    {
+      "personKey": "new:vo-van-ky",
+      "name": "Võ Văn Ký",
+      "priorityCode": "56",
+      "qualifyingCodes": [
+        "56"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 3
+    },
+    {
+      "personKey": "new:y-bloc-eban",
+      "name": "Y Blốk Êban",
+      "priorityCode": "66",
+      "qualifyingCodes": [
+        "66"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Cần đối chiếu ngày cụ thể trong tháng 8/1945 bằng hai nguồn gốc độc lập; không suy thành ngày giải phóng toàn tỉnh."
+      ],
+      "batch": 3
+    },
+    {
+      "personKey": "new:le-thi-pha",
+      "name": "Lê Thị Pha",
+      "priorityCode": "68",
+      "qualifyingCodes": [
+        "68"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Ngày thành lập B83 khác nhau giữa các bài; chưa dùng ngày cụ thể. Năm sinh/mất bản kế thừa không được coi là đã xác minh."
+      ],
+      "batch": 3
+    },
+    {
+      "personKey": "new:huynh-van-nghe",
+      "name": "Huỳnh Văn Nghệ",
+      "priorityCode": "75",
+      "qualifyingCodes": [
+        "75"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Không gán quê Tân Tịch/Bình Dương vào tỉnh Đồng Nai hiện nay. Câu chuyện cần phân biệt chỉ huy khảo sát với chỉ huy trận đánh La Ngà."
+      ],
+      "batch": 3
+    },
+    {
+      "personKey": "new:nguyen-van-troi",
+      "name": "Nguyễn Văn Trỗi",
+      "priorityCode": "79",
+      "qualifyingCodes": [
+        "79"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 3
+    },
+    {
+      "personKey": "new:hoang-le-kha",
+      "name": "Hoàng Lê Kha",
+      "priorityCode": "80",
+      "qualifyingCodes": [
+        "80"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Loại bỏ tên Bùi Văn Tùng bị bản kế thừa gán nhầm; không dùng kết luận về luật 10/59 hoặc người bị máy chém cuối cùng nếu chưa có nguồn đối chiếu."
+      ],
+      "batch": 3
+    },
+    {
+      "personKey": "new:tran-thi-nhuong",
+      "name": "Trần Thị Nhượng",
+      "priorityCode": "82",
+      "qualifyingCodes": [
+        "82"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Nguồn bảo tàng trực tiếp trả lỗi proxy; đã thay bằng bài Báo Đồng Tháp. Ngày sinh/năm sinh để trống, cần đối chiếu nếu bổ sung."
+      ],
+      "batch": 3
+    },
+    {
+      "personKey": "new:pham-hung",
+      "name": "Phạm Hùng",
+      "priorityCode": "86",
+      "qualifyingCodes": [
+        "86"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 3
+    },
+    {
+      "personKey": "new:ton-duc-thang",
+      "name": "Tôn Đức Thắng",
+      "priorityCode": "91",
+      "qualifyingCodes": [
+        "91"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage",
+        "Không đưa chi tiết Biển Đen, ngày thành lập Công hội hoặc nhận định về Ba Son vào chuyện nếu chưa có đối chiếu theo từng claim."
+      ],
+      "batch": 4
+    },
+    {
+      "personKey": "new:chau-van-liem",
+      "name": "Châu Văn Liêm",
+      "priorityCode": "92",
+      "qualifyingCodes": [
+        "92"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 4
+    },
+    {
+      "personKey": "new:bong-van-dia",
+      "name": "Bông Văn Dĩa",
+      "priorityCode": "96",
+      "qualifyingCodes": [
+        "96"
+      ],
+      "gaps": [
+        "Cần câu chuyện chính 350–700 từ có claim riêng và citation từng đoạn",
+        "Cần ảnh lịch sử/ảnh bối cảnh đã kiểm tra bản gốc và usage"
+      ],
+      "batch": 4
+    }
+  ],
+  "legacySourceTransport": {
+    "checkedAt": "2026-10-26T08:05:42.858Z",
+    "results": [
+      {
+        "id": "src-angiang-ton-duc-thang",
+        "url": "https://angiang.gov.vn/vi-vn/tin-tuc/chu-tich-ton-duc-thang-cuoc-doi-va-su-nghiep-cach-mang-ve-vang",
+        "status": null,
+        "error": "TypeError: fetch failed"
+      },
+      {
+        "id": "src-baochinhphu-hoang-van-thu",
+        "url": "https://baochinhphu.vn/ky-niem-110-nam-ngay-sinh-dong-chi-hoang-van-thu-25-10-1909-25-10-2019-102263435.htm",
+        "finalUrl": "https://baochinhphu.vn/canh-bao-viec-su-dung-thuoc-nam-cho-tre-de-chua-benh-102263435.htm",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Cảnh báo việc sử dụng thuốc nam cho trẻ để chữa bệnh",
+        "bytes": 334525,
+        "sha256": "ba180fd10d6aa1a1b783ac6e534dcd883bf2f7ad9ad4a23a9dd81d1775675ee8"
+      },
+      {
+        "id": "src-baotanglichsu-be-van-dan",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/16281/anh-hung-be-van-dan-lay-than-minh-lam-gia-sung.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/16281/anh-hung-be-van-dan-lay-than-minh-lam-gia-sung.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Bảo tàng Lịch sử Quốc gia",
+        "bytes": 21193,
+        "sha256": "952c070fcb5ceed600c3aa36c8ce6bed7069cf41404c94d8271bfdacc5de9a0f"
+      },
+      {
+        "id": "src-baotanglichsu-dinh-nup",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/70124/anh-hung-nup-ngon-co-dau-chong-phap-cua-dong-bao-tay-nguyen.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/70124/anh-hung-nup-ngon-co-dau-chong-phap-cua-dong-bao-tay-nguyen.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Bảo tàng Lịch sử Quốc gia",
+        "bytes": 21232,
+        "sha256": "4ed26a47ab9239bdfa150a55cbf74a384fac1c0701563021bb274f1164812da7"
+      },
+      {
+        "id": "src-baotanglichsu-kim-dong",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/16382/anh-hung-liet-si-kim-dong-1929-1943.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/16382/anh-hung-liet-si-kim-dong-1929-1943.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "19/5/1941: Thành lập Mặt trận Việt Minh",
+        "bytes": 91195,
+        "sha256": "8eed5acd675ae964b4c59d07b7f3b0b1f05a9c703442896c4d8b084d2c72490e"
+      },
+      {
+        "id": "src-baotanglichsu-ngo-gia-tu",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/15642/dong-chi-ngo-gia-tu-nguoi-chien-si-cong-san-kien-trung-bat-khuat.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/15642/dong-chi-ngo-gia-tu-nguoi-chien-si-cong-san-kien-trung-bat-khuat.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Bảo tàng Lịch sử Quốc gia",
+        "bytes": 21247,
+        "sha256": "682115de20f451449f45610bb5c25e1392585cdd170198b4ccd0ce5a0fa5714e"
+      },
+      {
+        "id": "src-baotanglichsu-nguyen-duc-canh",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/14890/dong-chi-nguyen-duc-canh-tam-guong-kien-trung-cua-giai-cap-cong-nhan.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/14890/dong-chi-nguyen-duc-canh-tam-guong-kien-trung-cua-giai-cap-cong-nhan.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Bảo tàng Lịch sử Quốc gia",
+        "bytes": 21259,
+        "sha256": "7e14f13336ac6b12143f6228605f42c877cc9bfc32dda606c4397f5db65d0cde"
+      },
+      {
+        "id": "src-baotanglichsu-nguyen-thi-minh-khai",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/16789/dong-chi-nguyen-thi-minh-khai-tam-guong-nu-chien-si-cong-san-kien-trung.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/16789/dong-chi-nguyen-thi-minh-khai-tam-guong-nu-chien-si-cong-san-kien-trung.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Thăm khu lưu niệm đồng chí Nguyễn Đức Cảnh",
+        "bytes": 87856,
+        "sha256": "38f99e72308b11584174ee86547c48ff1553651579696a4300ab0ac5e12b05aa"
+      },
+      {
+        "id": "src-baotanglichsu-to-vinh-dien",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/15890/anh-hung-liet-si-to-vinh-dien-1924-1954.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/15890/anh-hung-liet-si-to-vinh-dien-1924-1954.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Trưng bày hiện vật, tư liệu về cuộc Khởi nghĩa Yên Thế",
+        "bytes": 63346,
+        "sha256": "e15376c422821a5bb596dcbf49ef30e264ac286287897396ec6f92cfd9843655"
+      },
+      {
+        "id": "src-baotanglichsu-tran-can",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/15887/anh-hung-tran-can-nguoi-cam-la-co-quyet-chien-quyet-thang-tren-doi-him-lam.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/15887/anh-hung-tran-can-nguoi-cam-la-co-quyet-chien-quyet-thang-tren-doi-him-lam.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Phát hiện một ngôi mộ của quan lại triều đại Tutankhamun",
+        "bytes": 48249,
+        "sha256": "50c4db6f4f7975ead1f6b2e0d1bec8c1a54c7b7e62a838ac02352e331e8c61ab"
+      },
+      {
+        "id": "src-baotanglichsu-van-tien-dung",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/14892/dai-tuong-van-tien-dung-vi-tuong-tai-ba-cua-quan-doi-nhan-dan-viet-nam.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/14892/dai-tuong-van-tien-dung-vi-tuong-tai-ba-cua-quan-doi-nhan-dan-viet-nam.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Bảo tàng Lịch sử Quốc gia",
+        "bytes": 21265,
+        "sha256": "19100c1e077f6f424e184f7e62973bf97eff52080477f86f13ce1ba5d0738421"
+      },
+      {
+        "id": "src-chinhphu-decision-19-2025",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf",
+        "finalUrl": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf",
+        "status": 200,
+        "contentType": "application/pdf",
+        "title": null,
+        "bytes": 2631808,
+        "sha256": "2fd391335947affbfb86fa2b9438f0fdca90694e80887e205266542c3236aea1"
+      },
+      {
+        "id": "src-dangcongsan-ngo-gia-tu",
+        "url": "https://dangcongsan.vn/tu-lieu-van-kien/nhan-vat-lich-su/dong-chi-ngo-gia-tu-nha-lanh-dao-tien-boi-tieu-bieu-cua-dang-568912.html",
+        "status": null,
+        "error": "TypeError: fetch failed"
+      },
+      {
+        "id": "src-gialai-dinh-nup",
+        "url": "https://gialai.gov.vn/tin-tuc/ky-niem-110-nam-ngay-sinh-anh-hung-nup-02-5-1914-02-5-2024.12034.html",
+        "finalUrl": "https://gialai.gov.vn/",
+        "status": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "title": "Cổng thông tin điện tử tỉnh Gia Lai",
+        "bytes": 345544,
+        "sha256": "242135e3647a02ddb76325a852ac0fb6780c23f161628997c810e7135253639a"
+      },
+      {
+        "id": "src-haiphong-nguyen-duc-canh",
+        "url": "https://haiphong.gov.vn/tin-tuc-su-kien/dong-chi-nguyen-duc-canh-vi-lanh-tu-kiet-xuat-cua-phong-trao-cong-nhan-hai-phong-71829.html",
+        "finalUrl": "https://haiphong.gov.vn/tin-tuc-su-kien/dong-chi-nguyen-duc-canh-vi-lanh-tu-kiet-xuat-cua-phong-trao-cong-nhan-hai-phong-71829.html",
+        "status": 404,
+        "contentType": "text/html",
+        "title": "404 - File or directory not found.",
+        "bytes": 1245,
+        "sha256": "dc1d54dab6ec8c00f70137927504e4f222c8395f10760b6beecfcfa94e08249f"
+      },
+      {
+        "id": "src-nhandan-hoang-van-thu",
+        "url": "https://nhandan.vn/dong-chi-hoang-van-thu-nguoi-con-uu-tu-cua-que-huong-lang-son-post374829.html",
+        "finalUrl": "https://nhandan.vn/dong-chi-hoang-van-thu-nguoi-con-uu-tu-cua-que-huong-lang-son-post374829.html",
+        "status": 200,
+        "contentType": "text/html;charset=utf-8",
+        "title": "EU chưa quyết định gia hạn Brexit thêm ba tháng",
+        "bytes": 81970,
+        "sha256": "db61ee8dfdefe2674fc89f01891c3cb8b985af38e2c06799fcb44bfb5d74a47e"
+      },
+      {
+        "id": "src-qdnd-to-vinh-dien",
+        "url": "https://qdnd.vn/quoc-phong-an-ninh/nghe-thuat-quan-su-viet-nam/to-vinh-dien-tam-guong-anh-hung-lay-than-minh-chen-phao-766291",
+        "status": null,
+        "error": "TypeError: fetch failed"
+      },
+      {
+        "id": "src-qdnd-tran-can",
+        "url": "https://qdnd.vn/quoc-phong-an-ninh/nghe-thuat-quan-su-viet-nam/nguoi-cam-co-tren-cu-diem-him-lam-768129",
+        "status": null,
+        "error": "TypeError: fetch failed"
+      },
+      {
+        "id": "src-qdnd-van-tien-dung",
+        "url": "https://qdnd.vn/tu-lieu-ho-so/nhan-vat-lich-su/dai-tuong-van-tien-dung-nha-chien-luoc-quan-su-xuat-sac-693120",
+        "status": null,
+        "error": "TypeError: fetch failed"
+      }
+    ]
+  },
+  "acceptedSourceTransport": {
+    "checkedAt": "2026-10-26T09:10:43.565Z",
+    "method": "Credential-free Node HTTPS GET with default TLS verification. HTTP success is transport evidence only; it does not certify historical content. A separate web-reader may succeed where this client fails.",
+    "records": [
+      {
+        "id": "src-chinhphu-decision-19-2025",
+        "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf",
+        "finalUrl": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf",
+        "status": 200,
+        "contentType": "application/pdf",
+        "title": null,
+        "bytes": 2631808,
+        "sha256": "2fd391335947affbfb86fa2b9438f0fdca90694e80887e205266542c3236aea1"
+      },
+      {
+        "id": "src-research-be-van-dan",
+        "url": "https://nvsk.vnanet.vn/be-van-dan-6884.vna",
+        "finalUrl": "https://nvsk.vnanet.vn/be-van-dan-6884.vna",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Bế Văn Đàn",
+        "bytes": 44260,
+        "sha256": "8b859fe690b9f445e7b25dab12231069650db43c95237dc4a458f5ce3b5aabfb"
+      },
+      {
+        "id": "src-research-bong-van-dia",
+        "url": "https://baohaiquanvietnam.vn/tin-tuc/cac-ca-nhan-doan-tau-khong-so-duoc-phong-tang-danh-hieu-anh-hung-llv",
+        "finalUrl": "https://baohaiquanvietnam.vn/tin-tuc/cac-ca-nhan-doan-tau-khong-so-duoc-phong-tang-danh-hieu-anh-hung-llv",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Các cá nhân Đoàn tàu “Không số” được phong tặng danh hiệu Anh hùng LLVTND",
+        "bytes": 361402,
+        "sha256": "9e57da4ba51c9976ede85a18e8422d9561beb0ca3f90f2ccbd7f97649d79d15c"
+      },
+      {
+        "id": "src-research-chau-van-liem",
+        "url": "https://btgdv.cantho.gov.vn/vi/news/tai-lieu-tuyen-truyen/de-cuong-tuyen-truyen-ky-niem-120-nam-ngay-sinh-dong-chi-chau-van-liem-29-6-1902-29-6-2022-201.html",
+        "finalUrl": "https://btgdv.cantho.gov.vn/vi/news/tai-lieu-tuyen-truyen/de-cuong-tuyen-truyen-ky-niem-120-nam-ngay-sinh-dong-chi-chau-van-liem-29-6-1902-29-6-2022-201.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Đề cương tuyên truyền kỷ niệm 120 năm Ngày sinh đồng chí Châu Văn Liêm &#40;29&#x002F;6&#x002F;1902 - 29&#x002F;6&#x002F;2022&#41;",
+        "bytes": 80959,
+        "sha256": "8e3cf6066e3836a6c98b23c503b19156e5b1d1cd25af4a09579afaf969f56033"
+      },
+      {
+        "id": "src-research-dinh-nup",
+        "url": "https://baogialai.com.vn/ve-lang-khang-chien-stor-an-tuong-sau-sac-post212181.html",
+        "finalUrl": "https://baogialai.com.vn/ve-lang-khang-chien-stor-an-tuong-sau-sac-post212181.html",
+        "status": 200,
+        "contentType": "text/html;charset=utf-8",
+        "title": "Về Làng kháng chiến Stơr: Ấn tượng sâu sắc",
+        "bytes": 196039,
+        "sha256": "38e827b910de50454407384a01cf0156e9ab808b2d61b36fdc67b02de5323941"
+      },
+      {
+        "id": "src-research-doi-can",
+        "url": "https://thainguyen.gov.vn/di-tich-danh-lam-thang-canh/den-doi-can-297035",
+        "finalUrl": "https://thainguyen.gov.vn/di-tich-danh-lam-thang-canh/den-doi-can-297035",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Đền Đội Cấn",
+        "bytes": 109315,
+        "sha256": "5cadd62063c1c5aa33d76415fedb2c3fc23a12dc5eb279fb25e9f4e81598b054"
+      },
+      {
+        "id": "src-research-doi-can-exhibition",
+        "url": "https://phandinhphung.thainguyen.gov.vn/chi-tiet-tin-tuc/khai-mac-trien-lam-105-nam-khoi-nghia-thai-nguyen-28310.html",
+        "finalUrl": "https://phandinhphung.thainguyen.gov.vn/chi-tiet-tin-tuc/khai-mac-trien-lam-105-nam-khoi-nghia-thai-nguyen-28310.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Khai mạc Triển l&#227;m 105 năm khởi nghĩa Th&#225;i Nguy&#234;n",
+        "bytes": 52923,
+        "sha256": "f0d16357da0164431d0f364ae9ead73dfc33b2b533ae27879d752c77502214f8"
+      },
+      {
+        "id": "src-research-hcm-campaign-1975",
+        "url": "https://baotanglichsu.vn/vi/Articles/2002/67989/chien-dich-ho-chi-minh-lich-su-26-4-30-4-1975.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/2002/67989/chien-dich-ho-chi-minh-lich-su-26-4-30-4-1975.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Chiến dịch Hồ Chí Minh lịch sử (26/4-30/4/1975)",
+        "bytes": 78793,
+        "sha256": "cc9dd05b5f0903fddbd2e481dd89490b42fc0f23419daeaa613a7d5d347ce59d"
+      },
+      {
+        "id": "src-research-hcm-city-mapping",
+        "url": "https://congbao.hochiminhcity.gov.vn/tin-tuc-tong-hop/Danh-muc-cac-tuyen-duong-uu-tien-tren-dia-ban-Thanh-pho-",
+        "finalUrl": "https://congbao.hochiminhcity.gov.vn/tin-tuc-tong-hop/Danh-muc-cac-tuyen-duong-uu-tien-tren-dia-ban-Thanh-pho-",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "C&#244;ng B&#225;o - Th&#224;nh phố Hồ Ch&#237; Minh - Danh mục c&#225;c tuyến đường ưu ti&#234;n tr&#234;n địa b&#224;n Th&#224;nh phố",
+        "bytes": 215941,
+        "sha256": "e1f70d5b4d09330d95ac1f5fc3c95b2c8989386d3a1626dc804a0b8174c80d1e"
+      },
+      {
+        "id": "src-research-hoang-le-kha",
+        "url": "https://baotanglichsu.vn/vi/Articles/1002/15110/ve-mot-ky-vat-cua-anh-hung-liet-si-hoang-le-kha.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/1002/15110/ve-mot-ky-vat-cua-anh-hung-liet-si-hoang-le-kha.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Về một kỷ vật của Anh hùng liệt sĩ Hoàng Lê Kha",
+        "bytes": 77138,
+        "sha256": "08a48bb054c4cd7a097cb70aa2aa2f6e8d2ed86c5a8732f9ef7028da47a4db6f"
+      },
+      {
+        "id": "src-research-hoang-truong-minh",
+        "url": "https://baolaocai.vn/viet-len-nhung-trang-su-ve-vang-hao-hung-post225788.html",
+        "finalUrl": "https://baolaocai.vn/viet-len-nhung-trang-su-ve-vang-hao-hung-post225788.html",
+        "status": 200,
+        "contentType": "text/html;charset=utf-8",
+        "title": "Viết lên những trang sử vẻ vang, hào hùng",
+        "bytes": 178313,
+        "sha256": "01372784bdadf61ec8947b5170c4c0568826b16734673a3f5d1893c97d848167"
+      },
+      {
+        "id": "src-research-hoang-van-thu",
+        "url": "https://vanphongdbqhvahdnd.langson.gov.vn/bai-viet/chi-bo-2-sinh-hoat-chuyen-de-ve-nguon-tai-di-tich-nha-luu-niem-dong-chi-hoang-van-thu",
+        "finalUrl": "https://vanphongdbqhvahdnd.langson.gov.vn/bai-viet/chi-bo-2-sinh-hoat-chuyen-de-ve-nguon-tai-di-tich-nha-luu-niem-dong-chi-hoang-van-thu",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Chi b&#x1ED9; 2 sinh ho&#x1EA1;t chuy&#xEA;n &#x111;&#x1EC1; v&#x1EC1; ngu&#x1ED3;n t&#x1EA1;i di t&#xED;ch Nh&#xE0; l&#x1B0;u ni&#x1EC7;m &#x111;&#x1ED3;ng ch&#xED; Ho&#xE0;ng V&#x103;n Th&#x1EE5; - Trang thông tin điện tử Văn phòng ĐBQH và HĐND tỉnh Lạng Sơn",
+        "bytes": 76147,
+        "sha256": "d196692c57f0e57421d4b8bb53ea79be034e957ced5ebe3615be7d69bd8821b3"
+      },
+      {
+        "id": "src-research-huynh-van-nghe",
+        "url": "https://hvhnt.dongnai.gov.vn/pages/newsdetail.aspx?CatId=76&NewsId=2012",
+        "finalUrl": "https://hvhnt.dongnai.gov.vn/pages/newsdetail.aspx?CatId=76&NewsId=2012",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Hội Văn học Nghệ thuật thành phố Đồng Nai",
+        "bytes": 151148,
+        "sha256": "10b15ae7c88610eb26a92a0aeae251f47c51c4357590e44ebf78c6fdabf8522e"
+      },
+      {
+        "id": "src-research-huynh-van-nghe-mapping",
+        "url": "https://thuvien.dongnai.gov.vn/baiviet2015/lichsu/Lists/Posts/Post.aspx?ID=360&List=cdfc9a3b-6347-440d-8f7b-bde142430bbb",
+        "finalUrl": "https://thuvien.dongnai.gov.vn/baiviet2015/lichsu/Lists/Posts/Post.aspx?ID=360&List=cdfc9a3b-6347-440d-8f7b-bde142430bbb",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Kỷ niệm 75 năm Ngày Chiến thắng La Ngà (01/03/1948 – 01/03/2023) - Ngược dòng lịch sử",
+        "bytes": 46999,
+        "sha256": "516aae4a0a56411d57a4076fdf856b03036d13feec55925ab5a3495a4505f251"
+      },
+      {
+        "id": "src-research-kim-dong",
+        "url": "https://baotanglichsu.vn/vi/Articles/1002/14283/bang-khen-cua-tong-bo-viet-minh-truy-tang-anh-kim-djong-nguoi-djoi-truong-djau-tien-cua-djoi-tntp-hcm.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/1002/14283/bang-khen-cua-tong-bo-viet-minh-truy-tang-anh-kim-djong-nguoi-djoi-truong-djau-tien-cua-djoi-tntp-hcm.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Bằng khen của Tổng bộ Việt Minh truy tặng anh Kim Đồng – Người đội trưởng đầu tiên của Đội TNTP HCM.",
+        "bytes": 64462,
+        "sha256": "fab84eb015f9e7e5f45be8a3f7c5cfd67cfbf21fd6b985f6135503ab4efa5352"
+      },
+      {
+        "id": "src-research-kim-dong-province",
+        "url": "https://tinhdoan.caobang.gov.vn/index.php/hoat-dong-doi/tieu-su-so-luoc-5-doi-vien-dau-tien-cua-doi-tntp-ho-chi-minh-1615.html",
+        "finalUrl": "https://tinhdoan.caobang.gov.vn/index.php/hoat-dong-doi/tieu-su-so-luoc-5-doi-vien-dau-tien-cua-doi-tntp-ho-chi-minh-1615.html",
+        "status": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "title": "Tiểu sử sơ lược 5 đội viên đầu tiên của Đội TNTP Hồ Chí Minh.",
+        "bytes": 57135,
+        "sha256": "9a9b75d4770f6bd263f96ec59e52f61918c70ecc78f9ccc08b3b13c928de93f5"
+      },
+      {
+        "id": "src-research-kim-dong-team",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/16339/15-5-1941-thanh-lap-djoi-thieu-nien-tien-phong-ho-chi-minh.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/16339/15-5-1941-thanh-lap-djoi-thieu-nien-tien-phong-ho-chi-minh.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "15/5/1941: Thành lập Đội Thiếu niên Tiền phong Hồ Chí Minh",
+        "bytes": 87454,
+        "sha256": "e196e46e31f66675eb40b8ff7eb59b7a0cc983eb9808c4eec61e492c596204fd"
+      },
+      {
+        "id": "src-research-lai-chau-mapping",
+        "url": "https://truongchinhtri.laichau.gov.vn/khoa-hoc-thong-tin-tu-lieu/su-ra-doi-cua-ban-can-su-lai-chau-buoc-ngoat-lich-su-cach-mang-1887.html",
+        "finalUrl": "https://truongchinhtri.laichau.gov.vn/khoa-hoc-thong-tin-tu-lieu/su-ra-doi-cua-ban-can-su-lai-chau-buoc-ngoat-lich-su-cach-mang-1887.html",
+        "status": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "title": "SỰ RA ĐỜI CỦA BAN CÁN SỰ LAI CHÂU&#x3A; BƯỚC NGOẶT LỊCH SỬ CÁCH MẠNG",
+        "bytes": 85735,
+        "sha256": "b3596a1b3330a6e4085c6df32a51af86ea546a3af3e4c800c69c8850f1bdfd36"
+      },
+      {
+        "id": "src-research-le-duan",
+        "url": "https://vinhlinh.quangtri.gov.vn/chi-tiet/-/view-article/1/1647698202167/1657013201443",
+        "finalUrl": "https://vinhlinh.quangtri.gov.vn/chi-tiet/-/view-article/1/1647698202167/1657013201443",
+        "status": 200,
+        "contentType": "text/html;charset=UTF-8",
+        "title": "Chi tiết - Xã Vĩnh Linh - Cổng thông tin",
+        "bytes": 111867,
+        "sha256": "65de10d1702649757803b39a098614a7100976bc9cb101864cb358e0252aa142"
+      },
+      {
+        "id": "src-research-le-thi-pha",
+        "url": "https://www.nguoiduatin.vn/ky-uc-ve-nu-anh-hung-huyen-thoai-tren-vung-dat-blao-204240830224501507.htm",
+        "finalUrl": "https://www.nguoiduatin.vn/ky-uc-ve-nu-anh-hung-huyen-thoai-tren-vung-dat-blao-204240830224501507.htm",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Ký ức về nữ anh hùng huyền thoại trên vùng đất B&#039;Lao",
+        "bytes": 120066,
+        "sha256": "f723e5929d93544cb56f2e62058007d05cd23a274521c67221b57577f03d51fd"
+      },
+      {
+        "id": "src-research-le-thi-pha-locality",
+        "url": "https://baolamdong.vn/chuyen-ke-ve-chien-truong-b-lao-oanh-liet-270344.html",
+        "finalUrl": "https://baolamdong.vn/chuyen-ke-ve-chien-truong-b-lao-oanh-liet-270344.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Chuyện kể về chiến trường B'Lao oanh liệt",
+        "bytes": 89295,
+        "sha256": "0598b66ec751693f4918b90046998f835aa7df3f0dc6836b75d6f0f6ac71e2d4"
+      },
+      {
+        "id": "src-research-lo-van-gia",
+        "url": "https://baosonla.vn/vi/bai-viet/lo-van-gia--nguoi-thanh-nien-nhiet-huyet-cach-mang-38535",
+        "finalUrl": "https://baosonla.vn/vi/bai-viet/lo-van-gia--nguoi-thanh-nien-nhiet-huyet-cach-mang-38535",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Lò Văn Giá - người thanh niên nhiệt huyết cách mạng",
+        "bytes": 133389,
+        "sha256": "713c7fb375c20d9e561a7a71c44d171e6ab144f7a9f1be0122eaa656385e1f20"
+      },
+      {
+        "id": "src-research-luong-van-tuy",
+        "url": "https://baoninhbinh.org.vn/dong-chi-bi-thu-tinh-uy-dang-huong-tai-tuong-dai-anh-hung/d20120202044800000.htm",
+        "finalUrl": "https://baoninhbinh.org.vn/dong-chi-bi-thu-tinh-uy-dang-huong-tai-tuong-dai-anh-hung/d20120202044800000.htm",
+        "status": 500,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Báo Ninh Bình điện tử",
+        "bytes": 119428,
+        "sha256": "f6132ad2b6007ff01f0c3add5e99ac773c04df27c566f18b6ea80bc9511904a5"
+      },
+      {
+        "id": "src-research-modern-provinces-2025",
+        "url": "https://xaydungchinhsach.chinhphu.vn/chi-tiet-34-don-vi-hanh-chinh-cap-tinh-tu-12-6-2025-119250612141845533.htm",
+        "finalUrl": "https://xaydungchinhsach.chinhphu.vn/chi-tiet-34-don-vi-hanh-chinh-cap-tinh-tu-12-6-2025-119250612141845533.htm",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Chi tiết 34 ĐƠN VỊ HÀNH CHÍNH CẤP TỈNH",
+        "bytes": 556317,
+        "sha256": "7d9a8d739b6950747ea78c6833dcb7749610be1cc2bb1d7e414066003b003cd4"
+      },
+      {
+        "id": "src-research-ngo-gia-tu",
+        "url": "https://baotanglichsu.vn/VI/Articles/3091/69154/djong-chi-ngo-gia-tu-nguoi-cong-san-kien-trung.html",
+        "finalUrl": "https://baotanglichsu.vn/VI/Articles/3091/69154/djong-chi-ngo-gia-tu-nguoi-cong-san-kien-trung.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Đồng chí Ngô Gia Tự - Người Cộng sản kiên trung",
+        "bytes": 83315,
+        "sha256": "ebb6ea7aa0194cd57d10aa5d04f2cb98a49f67b0967b2b68b9cb3e32f35518cf"
+      },
+      {
+        "id": "src-research-nguyen-chi-dieu-home",
+        "url": "https://svhttdl.hue.gov.vn/tin-trong-tinh/dang-hoa-dang-huong-ky-niem-115-nam-nam-sinh-dong-chi-nguyen-chi-dieu-1908-2023.html",
+        "finalUrl": "https://svhttdl.hue.gov.vn/tin-trong-tinh/dang-hoa-dang-huong-ky-niem-115-nam-nam-sinh-dong-chi-nguyen-chi-dieu-1908-2023.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "D&#xE2;ng hoa, d&#xE2;ng h&#x1B0;&#x1A1;ng k&#x1EF7; ni&#x1EC7;m 115 n&#x103;m n&#x103;m sinh &#x111;&#x1ED3;ng ch&#xED; Nguy&#x1EC5;n Ch&#xED; Di&#x1EC3;u (1908-2023)",
+        "bytes": 96410,
+        "sha256": "34be2926b56516b8bbe453adc64a06e254387ba9b77c442a9ffc257707100e90"
+      },
+      {
+        "id": "src-research-nguyen-chi-dieu-period",
+        "url": "https://baotanglichsu.vn/vi/Articles/3098/14687/djong-chi-phan-djang-luu-voi-bao-chi-trung-ky-thoi-ky-mat-tran-dan-chu.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3098/14687/djong-chi-phan-djang-luu-voi-bao-chi-trung-ky-thoi-ky-mat-tran-dan-chu.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Đồng chí Phan Đăng Lưu với báo chí Trung kỳ thời kỳ mặt trận Dân chủ.",
+        "bytes": 85746,
+        "sha256": "77463b4b94941a526b1b6cc21f100b5cf68a573f519474bd83729b159595f5ae"
+      },
+      {
+        "id": "src-research-nguyen-duc-canh",
+        "url": "https://haiphong.gov.vn/tin-tuc-su-kien/Dong-chi-Nguyen-Duc-Canh---nguoi-chien-si-cach-mang-kien-trung-37421",
+        "finalUrl": "https://haiphong.gov.vn/tin-tuc-su-kien/Dong-chi-Nguyen-Duc-Canh---nguoi-chien-si-cach-mang-kien-trung-37421",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Đồng chí Nguyễn Đức Cảnh - người chiến sĩ cách mạng kiên trung",
+        "bytes": 132723,
+        "sha256": "f2a1308993731ad9919e66e05bcb8817c1e0a9c3d3bddfec29159989f6b6d687"
+      },
+      {
+        "id": "src-research-nguyen-thai-hoc",
+        "url": "https://buonho.daklak.gov.vn/nguyen-thai-hoc-1904-1930-5655.html",
+        "finalUrl": "https://buonho.daklak.gov.vn/nguyen-thai-hoc-1904-1930-5655.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "NGUY&#x1EC4;N TH&#xC1;I H&#x1ECC;C:(1904 - 1930)",
+        "bytes": 62367,
+        "sha256": "cf8425dc45230a03b74fd1f7d2ec8c7fb683ca961bfe219d9e749cb0b308c91a"
+      },
+      {
+        "id": "src-research-nguyen-thi-minh-khai",
+        "url": "https://baotanglichsu.vn/VI/Articles/3099/13811/ky-niem-103-nam-ngay-quoc-te-phu-nu-8-3-1910-8-3-2013-guong-hy-sinh-cua-chi-nguyen-thi-minh-khai.html",
+        "finalUrl": "https://baotanglichsu.vn/VI/Articles/3099/13811/ky-niem-103-nam-ngay-quoc-te-phu-nu-8-3-1910-8-3-2013-guong-hy-sinh-cua-chi-nguyen-thi-minh-khai.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Kỷ niệm 103 năm ngày Quốc tế Phụ nữ (8/3/1910-8/3/2013). Gương hy sinh của chị Nguyễn Thị Minh Khai",
+        "bytes": 62483,
+        "sha256": "11bf74f3d48c197949d5a653b17f494b0ec30a96c2db121dbcf142d38052d086"
+      },
+      {
+        "id": "src-research-nguyen-van-troi",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/12706/liet-si-nguyen-van-troi-nguoi-thanh-nien-qua-cam-ky-niem-48-nam-ngay-anh-nguyen-van-troi-hy-sinh-ngay-15-10-1964-15-10-2012.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/12706/liet-si-nguyen-van-troi-nguoi-thanh-nien-qua-cam-ky-niem-48-nam-ngay-anh-nguyen-van-troi-hy-sinh-ngay-15-10-1964-15-10-2012.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Liệt sĩ Nguyễn Văn Trỗi - Người thanh niên quả cảm (Kỷ niệm 48 năm ngày anh Nguyễn Văn Trỗi hy sinh, ngày 15/10/1964-15/10/2012)",
+        "bytes": 66001,
+        "sha256": "f81c074679987f142f56898790272d97bd520c0192801f65aef7fb2402e8a04a"
+      },
+      {
+        "id": "src-research-pham-hung",
+        "url": "https://baotanglichsu.vn/VI/Articles/3091/73185/pham-hung-nguoi-hoc-tro-xuat-sac-cua-chu-tich-ho-chi-minh.html",
+        "finalUrl": "https://baotanglichsu.vn/VI/Articles/3091/73185/pham-hung-nguoi-hoc-tro-xuat-sac-cua-chu-tich-ho-chi-minh.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Phạm Hùng, người học trò xuất sắc của Chủ tịch Hồ Chí Minh",
+        "bytes": 78808,
+        "sha256": "8eb889be798e4b74ac59835ebc9531e099675ead3786701922065635985c114e"
+      },
+      {
+        "id": "src-research-pham-van-dong",
+        "url": "https://dakbla.quangngai.gov.vn/tin-tuc/ky-niem-120-nam-ngay-sinh-dong-chi-pham-van-dong-01-3-1906-01-3-2026-.html",
+        "finalUrl": "https://dakbla.quangngai.gov.vn/tin-tuc/ky-niem-120-nam-ngay-sinh-dong-chi-pham-van-dong-01-3-1906-01-3-2026-.html",
+        "status": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "title": "Kỷ niệm 120 năm Ngày sinh đồng chí Phạm Văn Đồng (01/3/1906 - 01/3/2026)",
+        "bytes": 220033,
+        "sha256": "0b1f8464ab6ddd0a98931f7f5cbd2836904af75cb97d434a5fdda6c63d8372d8"
+      },
+      {
+        "id": "src-research-ta-xuan-thu",
+        "url": "https://en.nhandan.vn/birthplace-of-august-revolutions-victory-post148189.html",
+        "finalUrl": "https://en.nhandan.vn/birthplace-of-august-revolutions-victory-post148189.html",
+        "status": 200,
+        "contentType": "text/html;charset=utf-8",
+        "title": "Birthplace of August Revolution's victory",
+        "bytes": 79060,
+        "sha256": "52de665c90a591a67838bff79fb70b943552c96ce3e3dd2c47db9f92a8d51612"
+      },
+      {
+        "id": "src-research-thai-phien",
+        "url": "https://mattran.danang.gov.vn/chi-tiet-tin/group/76/nid/7704/de-cuong-tuyen-truyen-ky-niem-55-nam-danh-xung-quang-nam-1471--2-21",
+        "finalUrl": "https://mattran.danang.gov.vn/chi-tiet-tin/group/76/nid/7704/de-cuong-tuyen-truyen-ky-niem-55-nam-danh-xung-quang-nam-1471--2-21",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Đề cương tuyên truyền Kỷ niệm 550 năm Danh xưng Quảng Nam (1471 - 2021)",
+        "bytes": 265675,
+        "sha256": "43ca4ac06375cc87fd2c2dd1a192f63932e0759d98cbf562b7d45f2acf5064af"
+      },
+      {
+        "id": "src-research-to-hieu",
+        "url": "https://baotanglichsu.vn/vi/Articles/3091/72923/ky-niem-110-nam-ngay-sinh-nguoi-cong-san-kien-trung-to-hieu.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3091/72923/ky-niem-110-nam-ngay-sinh-nguoi-cong-san-kien-trung-to-hieu.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Kỷ niệm 110 năm ngày sinh người cộng sản kiên trung Tô Hiệu",
+        "bytes": 83141,
+        "sha256": "8092bb333010be92308d743f6330e5cd3d0cfc0f1492b479ba987488ff912db1"
+      },
+      {
+        "id": "src-research-to-vinh-dien",
+        "url": "https://baotanglichsu.vn/VI/Articles/3098/14209/nhung-anh-hung-tai-chien-dich-djien-bien-phu-anh-hung-to-vinh-dien-1924-1953.html",
+        "finalUrl": "https://baotanglichsu.vn/VI/Articles/3098/14209/nhung-anh-hung-tai-chien-dich-djien-bien-phu-anh-hung-to-vinh-dien-1924-1953.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Những Anh hùng tại chiến dịch Điện Biên Phủ- Anh hùng Tô Vĩnh Diện (1924 – 1953).",
+        "bytes": 63866,
+        "sha256": "d4f8c121fb2182368761050569fdef9e9f975e95daae45ea8ed317568a248589"
+      },
+      {
+        "id": "src-research-ton-duc-thang",
+        "url": "https://rachgia.angiang.gov.vn/dau-an-cuoc-doi-hoat-dong-cach-mang-cua-chu-tich-ton-duc-thang",
+        "finalUrl": "https://rachgia.angiang.gov.vn/dau-an-cuoc-doi-hoat-dong-cach-mang-cua-chu-tich-ton-duc-thang",
+        "status": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "title": "DẤU ẤN CUỘC ĐỜI HOẠT ĐỘNG CÁCH MẠNG CỦA CHỦ TỊCH TÔN ĐỨC THẮNG | Ủy ban nhân dân Phường Rạch Giá",
+        "bytes": 69749,
+        "sha256": "4695f28f76a0385c53aa43ef207d56242dac200136d090967b0dd5fa739e3870"
+      },
+      {
+        "id": "src-research-tran-can",
+        "url": "https://nvsk.vnanet.vn/tran-can-6845.vna",
+        "finalUrl": "https://nvsk.vnanet.vn/tran-can-6845.vna",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Trần Can",
+        "bytes": 45523,
+        "sha256": "97c945d426c885f1dd557635098e22814f96ac0fca94eb026a40ee1a58bfffc9"
+      },
+      {
+        "id": "src-research-tran-phu",
+        "url": "https://baotanglichsu.vn/VI/Articles/3098/19407/tran-phu-tong-bi-thu-djau-tien-cua-djang.html",
+        "finalUrl": "https://baotanglichsu.vn/VI/Articles/3098/19407/tran-phu-tong-bi-thu-djau-tien-cua-djang.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Trần Phú - Tổng bí thư đầu tiên của Đảng",
+        "bytes": 90503,
+        "sha256": "f43608e86c2e7acfbdf22d4e86e56906dbf9789181262e5438328671a6af11fb"
+      },
+      {
+        "id": "src-research-tran-quoc-manh",
+        "url": "https://dulich.laichau.gov.vn/vi/blog/details/ban-luot-dau-son-lich-su-1337",
+        "finalUrl": "https://dulich.laichau.gov.vn/vi/blog/details/ban-luot-dau-son-lich-su-1337",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "BẢN LƯỚT: DẤU SON LỊCH SỬ",
+        "bytes": 71769,
+        "sha256": "461d1009f62c1361b22add736cb8d550b38e937c4bd6120167e2176de1fb5338"
+      },
+      {
+        "id": "src-research-tran-thi-nhuong",
+        "url": "https://baodongthap.vn/nhung-ngay-thang-tam-lich-su-o-tinh-dong-thap-a124714.html",
+        "finalUrl": "https://baodongthap.vn/nhung-ngay-thang-tam-lich-su-o-tinh-dong-thap-a124714.html",
+        "status": 200,
+        "contentType": "text/html;charset=utf-8",
+        "title": "KỶ NIỆM 80 NĂM CÁCH MẠNG THÁNG TÁM THÀNH CÔNG (19-8-1945 - 19-8-2025): Những ngày Tháng Tám lịch sử ở tỉnh Đồng Tháp",
+        "bytes": 367536,
+        "sha256": "2bd740970e4fed8c76a37402ca2132f2754f8d9d73fbf38e3e1459a438d6cb1d"
+      },
+      {
+        "id": "src-research-van-tien-dung",
+        "url": "https://baotanglichsu.vn/vi/Articles/3098/73084/ky-niem-105-nam-ngay-sinh-djai-tuong-van-tien-dung-vi-djai-tuong-anh-hung.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3098/73084/ky-niem-105-nam-ngay-sinh-djai-tuong-van-tien-dung-vi-djai-tuong-anh-hung.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Kỷ niệm 105 năm Ngày sinh Đại tướng Văn Tiến Dũng: Vị Đại tướng Anh hùng",
+        "bytes": 100576,
+        "sha256": "0d8a42fe9bab494af17def1dc6039949755efbdcdb8c763d6c7d92d79565673d"
+      },
+      {
+        "id": "src-research-van-tien-dung-2017",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/19898/100-nam-ngay-sinh-djai-tuong-van-tien-dung-2-5-1917-2-5-2017-vi-tuong-chinh-tri-quan-su-song-toan.html",
+        "finalUrl": "https://baotanglichsu.vn/vi/Articles/3097/19898/100-nam-ngay-sinh-djai-tuong-van-tien-dung-2-5-1917-2-5-2017-vi-tuong-chinh-tri-quan-su-song-toan.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "100 năm ngày sinh Đại tướng Văn Tiến Dũng (2/5/1917-2/5/2017): Vị tướng chính trị - quân sự song toàn",
+        "bytes": 78124,
+        "sha256": "d6c92701afaf461cea88c3293a1db2dc9006f6d3c29a1fbfee54787078049bc7"
+      },
+      {
+        "id": "src-research-vo-van-ky",
+        "url": "https://namnhatrang.khanhhoa.gov.vn/vi/tin-noi-bat/ky-niem-81-nam-ngay-nha-trang-khanh-hoa-khang-chien-23-10-1945-23-10-2026-sang-mai-trang-su-hao-hung",
+        "finalUrl": "https://namnhatrang.khanhhoa.gov.vn/vi/tin-noi-bat/ky-niem-81-nam-ngay-nha-trang-khanh-hoa-khang-chien-23-10-1945-23-10-2026-sang-mai-trang-su-hao-hung",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "Kỷ niệm 81 năm ngày Nha Trang - Khánh Hòa kháng chiến (23-10-1945 - 23-10-2026): Sáng mãi trang sử hào hùng",
+        "bytes": 155457,
+        "sha256": "701f5e752d40d7d9c39cac7be16672dee95806124a71a489297d982c5083aab6"
+      },
+      {
+        "id": "src-research-vu-van-hieu",
+        "url": "https://baoquangninh.vn/cong-trinh-tuong-dai-dong-chi-vu-van-hieu-la-su-tri-an-va-long-biet-on-sau-sac-cua-dang-bo-chinh-quyen-va-nhan-dan-tinh-quang-ninh-2322105.html",
+        "finalUrl": "https://baoquangninh.vn/cong-trinh-tuong-dai-dong-chi-vu-van-hieu-la-su-tri-an-va-long-biet-on-sau-sac-cua-dang-bo-chinh-quyen-va-nhan-dan-tinh-quang-ninh-2322105.html",
+        "status": 200,
+        "contentType": "text/html;charset=utf-8",
+        "title": "Công trình tượng đài đồng chí Vũ Văn Hiếu là sự tri ân và lòng biết ơn sâu sắc của Đảng bộ, chính quyền và nhân dân tỉnh Quảng Ninh",
+        "bytes": 84059,
+        "sha256": "8ec79f18343348efd0cf737a1a20a7596a34cee95d939204056e099338d66530"
+      },
+      {
+        "id": "src-research-y-bloc-eban",
+        "url": "https://vhttdl.daklak.gov.vn/dak-lak-co-tuyen-duong-mang-ten-vi-tuong-dau-tien-cua-tay-nguyen-13629.html",
+        "finalUrl": "https://vhttdl.daklak.gov.vn/dak-lak-co-tuyen-duong-mang-ten-vi-tuong-dau-tien-cua-tay-nguyen-13629.html",
+        "status": 200,
+        "contentType": "text/html; charset=utf-8",
+        "title": "&#x110;&#x1EAF;k L&#x1EAF;k c&#xF3; tuy&#x1EBF;n &#x111;&#x1B0;&#x1EDD;ng mang t&#xEA;n v&#x1ECB; t&#x1B0;&#x1EDB;ng &#x111;&#x1EA7;u ti&#xEA;n c&#x1EE7;a T&#xE2;y Nguy&#xEA;n",
+        "bytes": 62471,
+        "sha256": "5c6fb1f9ce253f417dd2e177ba4d86c2a4cd82eb54f1fd9ffe0161b52dca2334"
+      }
+    ]
+  },
+  "inspectedImages": {
+    "checkedAt": "2026-10-26T08:46:38.499Z",
+    "records": [
+      {
+        "name": "kim-dong-bang-1944.jpg",
+        "width": 480,
+        "height": 322,
+        "bytes": 28810,
+        "sha256": "a95f0542b17ee3d68e3630aa98ef0bc9006f16da87a23cd7256ff5a64899ad4b"
+      },
+      {
+        "name": "van-tien-dung-1975.jpg",
+        "width": 480,
+        "height": 286,
+        "bytes": 36148,
+        "sha256": "2dc066412153ed1d81d4db4b5506ed1b1d53611c2325273e2f320cf442bb283e"
+      }
+    ]
+  },
+  "offlineSchemaValidation": {
+    "checkedAt": "2026-10-26T09:29:53.806Z",
+    "engine": "Task-only validator for the keywords used by the frozen schema; not a general Draft 2020-12 certification",
+    "passed": true,
+    "counts": {
+      "localities": 34,
+      "sources": 81,
+      "claims": 213,
+      "media": 12,
+      "people": 53,
+      "stories": 12,
+      "relations": 46,
+      "roster": 53,
+      "coverage": 34,
+      "manifest": null
+    },
+    "issueCount": 0,
+    "issues": []
+  },
+  "semanticValidation": {
+    "checkedAt": "2026-10-26T09:29:53.866Z",
+    "passed": true,
+    "assertions": 1539,
+    "negativeCases": [
+      {
+        "case": "accepted relation pointing at held claim",
+        "rejected": true
+      },
+      {
+        "case": "unknown story citation marker",
+        "rejected": true
+      },
+      {
+        "case": "false complete image",
+        "rejected": true
+      },
+      {
+        "case": "inflated coverage",
+        "rejected": true
+      },
+      {
+        "case": "missing alias provenance",
+        "rejected": true
+      }
+    ],
+    "secondPassLocalities": 32,
+    "canonicalSnapshot": 9,
+    "counts": {
+      "nominees": 53,
+      "selected": 35,
+      "complete": 2,
+      "held": 18,
+      "qualifiedLocalities": 34,
+      "readyForOwnerReviewLocalities": 2,
+      "publiclyRepresented": 0
+    },
+    "storyWords": [
+      {
+        "id": "story-research-kim-dong-na-ma",
+        "words": 408
+      },
+      {
+        "id": "story-research-van-tien-dung-1975",
+        "words": 417
+      }
+    ],
+    "issueCount": 0,
+    "issues": []
+  },
+  "limits": [
+    "This is one-agent self-review, not independent historical certification.",
+    "HTTP status does not verify historical content.",
+    "Source leads remain held until their relevant full texts and locators are read.",
+    "No original publication or asset-usage permission beyond the documented coursework scope is asserted.",
+    "The feature validator, schema, UI, RLS and imports belong to later phases and were not implemented here."
+  ],
+  "handoffArtifactValidation": {
+    "checkedAt": "2026-10-26T09:35:37.563Z",
+    "passed": true,
+    "filesChecked": 22,
+    "localLinksChecked": 390,
+    "manifestVersion": 14,
+    "manifestHash": "893156e86b5e2e350698d05b05ddc0f93804ab174b5f043f0d2d62210c036305",
+    "schemaHash": "a3b90d16f23fa2a368cbb358e0725da63f3c39983ea4dbad457b1a286a8a23a0",
+    "productValidatorPresent": false,
+    "branch": "feat/local-revolutionary-heroes",
+    "head": "6a38f582515102c03ccc7ac806ae6d3f1becbbb0",
+    "trackedChanges": [
+      "docs/agent/CURRENT-STATE.md"
+    ],
+    "staged": false,
+    "reportIgnored": true,
+    "changedFromBaseline": [
+      "supabase/content/local-heroes/national-v1/claims.json",
+      "supabase/content/local-heroes/national-v1/coverage.json",
+      "supabase/content/local-heroes/national-v1/localities.json",
+      "supabase/content/local-heroes/national-v1/manifest.json",
+      "supabase/content/local-heroes/national-v1/media.json",
+      "supabase/content/local-heroes/national-v1/people.json",
+      "supabase/content/local-heroes/national-v1/relations.json",
+      "supabase/content/local-heroes/national-v1/roster.json",
+      "supabase/content/local-heroes/national-v1/sources.json",
+      "supabase/content/local-heroes/national-v1/stories.json",
+      "docs/content/local-heroes/claims.md",
+      "docs/content/local-heroes/coverage.md",
+      "docs/content/local-heroes/media.md",
+      "docs/content/local-heroes/roster.md",
+      "docs/content/local-heroes/sources.md",
+      "docs/audits/2026-10-26-local-heroes-phase-01-handoff.md"
+    ],
+    "issueCount": 0,
+    "issues": []
+  },
+  "finalRepositoryGate": {
+    "checkedAt": "2026-10-26T09:36:08.275Z",
+    "observedExitCodes": "Successful exit codes observed from each executed command and the final PTY completion; summaries cross-checked against saved full logs.",
+    "commands": [
+      {
+        "command": "pnpm history:data:check",
+        "exitCode": 0,
+        "outcome": "42 tests / two files passed",
+        "localLog": ".task-reports/local-heroes-phase-01-resume-work/final-history-data-check.log",
+        "logSha256": "74cc039c053e551cb220e54d80cb3a5ad973e5dd685077d7dd68b000ec33d1e6",
+        "logLastWrittenAt": "2026-10-26T09:29:55.726Z"
+      },
+      {
+        "command": "pnpm verify",
+        "exitCode": 0,
+        "outcome": "Agent/history/lint/strict types passed; 1046 tests / 83 files and 26 script tests passed; 102-page production build passed",
+        "localLog": ".task-reports/local-heroes-phase-01-resume-work/final-pnpm-verify.log",
+        "logSha256": "3b2545bb9da25e77ccfe8d12160a46f8a324c3dd27e753beed053c0cac1b4699",
+        "logLastWrittenAt": "2026-10-26T09:31:15.668Z"
+      },
+      {
+        "command": "pnpm agent:status",
+        "exitCode": 0,
+        "outcome": "762 supported source files complete; no pending changes; documents/live DB excluded",
+        "localLog": ".task-reports/local-heroes-phase-01-resume-work/final-agent-status.log",
+        "logSha256": "075e1129e6dfb668e57825a3ec276636d34568a6044b1b3828893b4aa4b80dc9",
+        "logLastWrittenAt": "2026-10-26T09:29:55.160Z"
+      },
+      {
+        "command": "git diff --check",
+        "exitCode": 0,
+        "outcome": "No whitespace errors in tracked diff"
+      }
+    ],
+    "notExecuted": [
+      "browser E2E",
+      "actual database RLS tests",
+      "unimplemented Phase 02 product validator"
+    ],
+    "selfReview": "One main agent; not independent historical/teacher certification.",
+    "localReport": ".task-reports/2026-10-26-1624-local-heroes-phase-01.md"
+  },
+  "ownerApprovalRecord": {
+    "status": "approved",
+    "manifestHash": "893156e86b5e2e350698d05b05ddc0f93804ab174b5f043f0d2d62210c036305",
+    "approvedAt": "2026-10-26T09:38:57Z",
+    "evidenceRef": "docs/audits/2026-10-26-local-heroes-phase-01-approval.md",
+    "ownerMessage": "Duyệt ạ và giờ tôi có thể mở chat mới để qua phase 2 được chưa ạ ?",
+    "scope": "Actual v14 candidate names/selection decisions/hash approved for Phase 02 input. Existing incompleteness/held states remain; no historical certification, publication, remote writes or implementation in this follow-up."
+  },
+  "ownerApprovalVerification": {
+    "checkedAt": "2026-10-26T09:47:46.089Z",
+    "scope": "Approval metadata and new-chat handoff only; component content/version/hash unchanged.",
+    "metadataAndHashCheck": {
+      "checkedAt": "2026-10-26T09:47:45.183Z",
+      "passed": true,
+      "manifestVersion": 14,
+      "manifestHash": "893156e86b5e2e350698d05b05ddc0f93804ab174b5f043f0d2d62210c036305",
+      "ownerApproval": {
+        "status": "approved",
+        "manifestHash": "893156e86b5e2e350698d05b05ddc0f93804ab174b5f043f0d2d62210c036305",
+        "approvedAt": "2026-10-26T09:38:57Z",
+        "evidenceRef": "docs/audits/2026-10-26-local-heroes-phase-01-approval.md"
+      },
+      "contentFilesUnchanged": 9,
+      "schemaUnchanged": true,
+      "records": {
+        "nominees": 53,
+        "selected": 35,
+        "complete": 2,
+        "selectedIncomplete": 33,
+        "held": 18
+      },
+      "filesChecked": 25,
+      "localLinksChecked": 404,
+      "stagedFiles": 0,
+      "reportIgnored": true,
+      "issueCount": 0
+    },
+    "offlineSchemaCheck": {
+      "checkedAt": "2026-10-26T09:45:13.741Z",
+      "engine": "Task-only validator for the keywords used by the frozen schema; not a general Draft 2020-12 certification",
+      "passed": true,
+      "counts": {
+        "localities": 34,
+        "sources": 81,
+        "claims": 213,
+        "media": 12,
+        "people": 53,
+        "stories": 12,
+        "relations": 46,
+        "roster": 53,
+        "coverage": 34,
+        "manifest": null
+      },
+      "issueCount": 0,
+      "issues": []
+    },
+    "fullRepositoryGate": {
+      "command": "pnpm verify",
+      "observedExitCode": 0,
+      "agentHistoryLintTypecheck": "passed",
+      "historyTests": 42,
+      "unitComponentTests": 1046,
+      "unitComponentFiles": 83,
+      "scriptTests": 26,
+      "productionPages": 102
+    },
+    "codegraph": {
+      "command": "pnpm agent:status",
+      "observedExitCode": 0,
+      "supportedSourceFiles": 785,
+      "pendingChanges": false
+    },
+    "gitDiffCheck": {
+      "command": "git diff --check",
+      "observedExitCode": 0
+    },
+    "logs": [
+      {
+        "path": ".task-reports/local-heroes-phase-01-approval-work/pnpm-verify.log",
+        "sha256": "c4b88950f37eed9f3f64cf94b29aca8ae9b9c306eeb3bb6811450858eb38ec42",
+        "lastWrittenAt": "2026-10-26T09:46:12.109Z"
+      },
+      {
+        "path": ".task-reports/local-heroes-phase-01-approval-work/agent-status.log",
+        "sha256": "c9be2ab6097b62b91454cda96d8ca86e75f45749011c210f0028f5b4e91a2fda",
+        "lastWrittenAt": "2026-10-26T09:46:46.839Z"
+      }
+    ],
+    "localReport": ".task-reports/2026-10-26-1641-local-heroes-phase-01-approval.md",
+    "notExecuted": [
+      "Phase 02 implementation",
+      "browser E2E",
+      "actual RLS/database tests",
+      "remote mutations"
+    ]
+  }
+}

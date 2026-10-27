@@ -6,6 +6,7 @@ import type { MediaStats, ReadinessSnapshot } from "@/lib/admin/readiness";
 import { createClient } from "@/lib/supabase/server";
 import type { WorkflowStatus } from "@/lib/utils/labels";
 import { matchesTokens, toTokens } from "@/lib/utils/search";
+import { getLocalHeroAdminGraph } from "@/lib/queries/local-heroes-admin";
 
 // Mọi truy vấn ở đây chạy bằng PHIÊN CỦA NHÂN SỰ (không phải anon) nên RLS "staff_read_all"
 // cho thấy cả bản nháp/chờ duyệt. Trang gọi phải đã qua requireRole().
@@ -137,7 +138,7 @@ export async function getFigureForEdit(id: string) {
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("historical_figures")
-    .select(`id, name, slug, other_names, birth_year, death_year, biography, portrait_url, workflow_status, review_note,
+    .select(`id, name, slug, other_names, birth_year, death_year, biography, portrait_url, workflow_status, review_note, is_local_hero,
        media_assets(${ADMIN_MEDIA_FIELDS})`)
     .eq("id", id)
     .maybeSingle();
@@ -296,6 +297,10 @@ export async function getReadinessSnapshot(
 
   if (kind === "nhan-vat") {
     const figure = await getFigureForEdit(id);
+    if (figure?.is_local_hero) {
+      const graph = await getLocalHeroAdminGraph(id);
+      return graph ? { status: graph.workflow, snapshot: { kind, biography: figure.biography, localHero: graph.readiness } } : null;
+    }
     return figure
       ? {
           status: figure.workflow_status,

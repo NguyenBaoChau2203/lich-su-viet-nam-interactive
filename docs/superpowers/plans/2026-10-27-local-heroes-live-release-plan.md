@@ -1,0 +1,40 @@
+# National figures — authorized Supabase release and final local test
+
+**Mission:** Resolve the remaining release integration blockers, publish the reviewed national figures to the system Supabase project, and open the local website for the owner's final test.
+
+**Authority:** The latest owner instruction explicitly requests fixing the remaining issues, publishing to the system Supabase and opening the local web. It supersedes the previous local-only stop for these operations. It follows presentation of v18 manifest `06080db323af8f89364355323cd585824f3772963e96316dd8ae72aa0fc54416`, draft snapshot `bc6bdbf6f6fcd6c4259987b9b010514109b5fdffe044c50f0fa52329a5c74a53` and the concrete target `lichsu_12 / ueolfjujjybutyuyfxha`. Do not infer authorization for Git staging/commit/push/PR/merge, Vercel deployment, another project, account changes or unrelated work.
+
+**Execution:** One main agent performs research, implementation, self-review and verification inline. Use Supabase/model-supabase-history, writing-plans/executing-plans, TDD and verification skills with no delegation, AI subprocess, branch switch or worktree reset. Preserve all owner/unrelated Word/PDF/env/node.cmd files and existing work.
+
+## Sources of truth and verified entry
+
+Read AGENTS/latest owner instruction, CURRENT-STATE/DESKTOP-UI-SCOPE, approved national figures design/plan/contract and Phase00–07 handoffs, current remediation audit, prompt standard/template, actual code/SQL/tests and v18 acceptance ledger. Use CodeGraph first for supported source; targeted reads for Markdown/JSON/SQL/omitted or unsupported content. Index entry:833 files/no pending. Branch `feat/local-revolutionary-heroes`, HEAD `6a38f582515102c03ccc7ac806ae6d3f1becbbb0`, 34 tracked modified files and existing untracked work, no staged files.
+
+Fresh read-only intended-target inventory: PostgreSQL17.6, 30 public tables/50 application functions/94 policies, no feature schema or migration ledger; 9 published canonical figures, 46 events, 17 event links, 30 sources, 31 media (6 figure-owned). Canonical Văn Tiến Dũng/Phạm Văn Đồng/Lê Duẩn retain existing UUID/slug, publication, biography/life dates and event/media ownership. Exact source/claims, schema/policy/function definitions and hashes are captured locally without Auth/user data. The connected MCP exposes other projects, so use authenticated CLI against the verified linked ref only. Do not print credentials or connection strings.
+
+## Scope, design and constraints
+
+- Preserve all34 canonical localities and all35 selected complete graphs; keep18 held nominees outside release. Preserve canonical identities and all existing event links/media. Never weaken the original disposable draft import conflict refusal.
+- Capture a schema baseline and exact affected-content before image before external mutation. Adopt only the feature migration on that inspected baseline; do not replay the repository's old migrations or mark unproved historical migrations applied. Keep an explicit target-specific release track and rollback data/schema plan.
+- Build a separate release enrollment artifact for the three exact known canonical rows, with before-image fingerprints and explicit approved legacy links. Keep their legacy fields/media unchanged; directly verify/add scoped citations for any preserved displayed biography/life dates. Reject changed identities, unknown child links, conflicting source fingerprints and unexpected target state atomically.
+- Rehearse baseline restoration, feature adoption, all35 imports/publication, rerun, conflicts, unrelated-data preservation and rollback on a new explicitly disposable local target before live execution. No remote test fixtures or fake Auth/staff users.
+- Keep the approved content graph/snapshots immutable. Record owner release authorization and any sourced legacy enrollment additions separately; update current manifest approval/public observation metadata truthfully after actual publication, with hashes and versioned evidence. Never claim approval of content not covered by the actual instruction.
+- Use current Supabase docs/changelog and installed Next.js guides before relevant implementation. No dependency installation or TLS bypass. Assets may remain reviewed HTTPS source URLs under the recorded coursework scope; no unsupported license assertion or unnecessary storage upload.
+- Apply the minimal authorized schema and content transaction to the exact target only after successful local rehearsal. Serialize the release, use lock/statement timeouts and rollback on any discrepancy. Post-release reads verify public35/34, source/story/image visibility, exact canonical preservation and unchanged unrelated data.
+- Start the ordinary local web on an available loopback port using the system Supabase, perform read-only real-target learner/browser checks at all four desktop viewports, and open a visible browser for the owner. Do not run mutating browser tests against remote.
+
+## Work items
+
+- [x] **1. Ground and capture.** Verify branch/index/target/current artifacts and docs; save safe schema/content baseline, scope hashes, existing objects, advisory state, source evidence and rollback prerequisites. Record authorization for the already presented v18/target.
+- [x] **2. Implement guarded enrollment with red-to-green proof.** Add a distinct release preparer/runner and focused tests for exact canonical preservation, known legacy media, citation completeness, conflict/rerun behavior and rollback; preserve draft-only tooling. Prepare concrete SQL/manifest/source fingerprints and adoption track.
+- [x] **3. Rehearse the actual baseline.** Restore schema and public historical seed into a new descriptor-labelled disposable local instance; run adoption/enrollment/publication/rerun/conflict/rollback and representative RLS/invariant assertions. No user or Auth data copied from remote.
+- [x] **4. Verify and execute authorized release.** Run narrow/fresh full verification, inspect complete SQL/source diff, confirm backups/preconditions and exact artifact hashes, then apply only the approved feature and release transaction. Retain actual exit/status and observation evidence; if an external tool cannot safely execute, report the exact block and continue independent local work.
+- [x] **5. Verify final local experience and hand off.** Query anonymous public35/34 and canonical/unrelated-data invariants; validate actual local-server/full-real-target learner journeys, keyboard/focus/reduced motion and original images without writes. Open the local website visibly and leave its owned server running. Update readiness/CURRENT-STATE/Vietnamese handoff and create an ignored Asia/Bangkok task report. Check Git diff/status, source/hash integrity and CodeGraph status.
+
+## Verification and stop
+
+Focused release tests must fail before implementation and pass without weakened assertions. Existing required content/93-unit/296-SQL/public72/admin8/globe10/smoke8 gates remain evidence boundaries; rerun checks affected by actual changes, plus fresh `pnpm verify`, `git diff --check` and `git status --short`. Real remote verification is read-only and distinct from disposable mutations. Preserve the original performance baseline and qualify its old fixture mismatch; the supplementary same-fixture control remains separately labelled.
+
+Deliver the target-specific concrete release artifact/backup hashes/rollback path, actual remote publication observation and remaining risks, final local URL/browser status and Vietnamese owner handoff with absolute ignored report link. The historical unavailable v16 bytes remain an explicit provenance limitation; do not fabricate a repair. Stop after the requested Supabase publication and local final-test handoff; no other service deployment or Git publication.
+
+Final checkpoint: actual authorized Supabase publication35/34, final ordinary build wOkfmI4t62a6TsntfdikL, both real-data and final-copy/fallback browser checks pass; loopback server and visible Edge left for owner. See docs/audits/2026-10-27-local-heroes-live-release-handoff.md for exact evidence and explicit existing advisories/limits.

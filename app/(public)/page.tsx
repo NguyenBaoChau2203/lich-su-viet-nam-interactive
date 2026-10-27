@@ -4,6 +4,9 @@ import { getExplorerLimits } from "@/lib/explorer/filters";
 import type { ExplorerEvent } from "@/lib/explorer/types";
 import { parseMapExplorerState } from "@/lib/explorer/map-state";
 import { getExplorerEvents } from "@/lib/queries/explorer";
+import { parseLocalHeroState } from "@/lib/local-heroes/state";
+import { loadLocalHeroPage } from "@/lib/local-heroes/load";
+import type { LocalHeroLoadState } from "@/lib/local-heroes/types";
 
 type SearchParamsRecord = Record<string, string | string[] | undefined>;
 
@@ -26,6 +29,9 @@ export default async function HomePage({
 }) {
   const resolvedParams = searchParams ? await searchParams : {};
   const urlSearchParams = toUrlSearchParams(resolvedParams);
+  const initialPeople = parseLocalHeroState(urlSearchParams);
+  // Start only the requested bounded page. Default event mode makes no people query.
+  const peopleRequest = initialPeople.mode === "people" ? loadLocalHeroPage(initialPeople.filters) : null;
 
   // Explicit test-only error simulation when ?__test_db_error=1 is passed in local/E2E tests
   const simulateDbError =
@@ -51,6 +57,10 @@ export default async function HomePage({
 
   const limits = getExplorerLimits(events);
   const initialState = parseMapExplorerState(urlSearchParams, limits ?? { minYear: 1911, maxYear: 1941, eventSlugs: [] });
+  const peopleResponse = await peopleRequest;
+  const initialPeopleLoad: LocalHeroLoadState = peopleResponse ? peopleResponse.ok ? { status: "ready", data: peopleResponse.data }
+    : { status: "error", filters: initialPeople.filters, error: peopleResponse.error } : { status: "idle" };
+  if (peopleResponse?.ok) initialPeople.filters = peopleResponse.data.filters;
 
   return (
     <HistoryExplorer
@@ -58,6 +68,8 @@ export default async function HomePage({
       limits={limits}
       initialState={initialState}
       dataError={dataError}
+      initialPeople={initialPeople}
+      initialPeopleLoad={initialPeopleLoad}
     />
   );
 }
