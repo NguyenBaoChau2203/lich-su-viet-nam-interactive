@@ -16,7 +16,9 @@ import type {
 } from "@/lib/heritage/types";
 
 const root = process.cwd();
-const sha = (content: string | Buffer) => createHash("sha256").update(content).digest("hex");
+const normalizeLf = (content: string | Buffer) =>
+  typeof content === "string" ? content.replace(/\r\n/g, "\n") : content.toString("utf8").replace(/\r\n/g, "\n");
+const sha = (content: string | Buffer) => createHash("sha256").update(normalizeLf(content)).digest("hex");
 
 describe("Heritage Sites Schema and Migration (Phase 3)", () => {
   const rootMigrationPath = path.join(root, "supabase/migrations/20261101000000_heritage_sites.sql");

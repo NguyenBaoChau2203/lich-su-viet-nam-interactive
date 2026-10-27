@@ -25,7 +25,9 @@
 
 # Preserve audited local-hero SQL hashes on Windows and Linux checkouts.
 /supabase/content/local-heroes/**/*.sql text eol=lf
+/supabase/content/heritage-sites/**/*.sql text eol=lf
 /supabase/migrations/20261031000001_local_hero_catalog.sql text eol=lf
+/supabase/migrations/20261101000000_heritage_sites.sql text eol=lf
 /supabase/releases/local-heroes-20261027/supabase/migrations/*.sql text eol=lf
 # The captured dump has mixed newlines inside function bodies and a pinned byte hash.
 # Keep its source formatting rather than rewriting the adopted historical snapshot.
