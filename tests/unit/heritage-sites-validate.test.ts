@@ -2,15 +2,28 @@ import { describe, it, expect } from "vitest";
 import { validateHeritagePackage, KNOWN_EXISTING_SLUGS, ALLOWED_LESSON_SLUGS } from "../../scripts/content/heritage-sites-validate.mjs";
 
 describe("heritage sites package validator", () => {
-  it("validates the v1 research package with 34/34 represented localities and 0 errors", () => {
+  it("validates the v1 package in research mode with 34/34 represented localities and 0 errors", () => {
     const res = validateHeritagePackage("supabase/content/heritage-sites/v1", "research");
     expect(res.valid).toBe(true);
     expect(res.issues).toHaveLength(0);
     expect(res.summary).not.toBeNull();
     expect(res.summary?.grade12Represented).toBe(34);
+    expect(res.summary?.extendedRepresented).toBe(30);
     expect(res.summary?.totalSites).toBe(64);
-    expect(res.summary?.heldSites).toBe(64);
-    expect(res.summary?.acceptedSites).toBe(0);
+    expect(res.summary?.acceptedSites).toBe(64);
+    expect(res.summary?.heldSites).toBe(0);
+  });
+
+  it("validates the v1 package in release mode with 34/34 represented localities and full release criteria", () => {
+    const rel = validateHeritagePackage("supabase/content/heritage-sites/v1", "release");
+    expect(rel.valid).toBe(true);
+    expect(rel.issues).toHaveLength(0);
+    expect(rel.summary).not.toBeNull();
+    expect(rel.summary?.grade12Represented).toBe(34);
+    expect(rel.summary?.extendedRepresented).toBe(30);
+    expect(rel.summary?.totalSites).toBe(64);
+    expect(rel.summary?.acceptedSites).toBe(64);
+    expect(rel.summary?.heldSites).toBe(0);
   });
 
   it("known existing slugs contains published seed locations", () => {
