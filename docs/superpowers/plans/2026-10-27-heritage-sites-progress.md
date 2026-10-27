@@ -93,3 +93,40 @@ Confirmed all facts from Section 2 of implementation plan:
   - All 64 sites are in `held` status pending owner approval of the candidate roster (`roster.md`).
 - Next allowed Phase: Phase 2 — Full content authoring (requires owner approval of Phase 1 roster first).
 
+---
+
+## Phase 2 — Full content authoring — 2026-10-27 21:45 (Asia/Saigon)
+- Branch/HEAD: `feat/heritage-sites-by-locality` @ `7a0eea1`
+- Skills used: `research-history-sources`, `design-history-story`
+- Owner approval: Approved verbatim ("ok tôi đồng ý làm phase 2 đi", manifest sha256 `68b6d05f...`), documented in `docs/audits/2026-10-27-heritage-roster-approval.md`.
+- Commits in Phase 2:
+  - `bc82443 docs: add heritage content batch A` (Batch A: 13 sites across 8 localities)
+  - `b5297a6 docs: add heritage content batch B` (Batch B: 14 sites across 7 localities)
+  - `1f4fdd2 docs: add heritage content batch C` (Batch C: 17 sites across 9 localities)
+  - `7a0eea1 docs: add heritage content batch D` (Batch D: 20 sites across 10 localities)
+- Changed files:
+  - `supabase/content/heritage-sites/v1/sites.json` (64 sites accepted with full narratives, coordinates, media, videos)
+  - `supabase/content/heritage-sites/v1/manifest.json` (updated hashes)
+  - `supabase/content/heritage-sites/v1/roster.md` (regenerated, 64 accepted)
+  - `supabase/content/heritage-sites/v1/ledger.md` (regenerated with claim/media/video evidence)
+  - `tests/unit/heritage-sites-validate.test.ts` (updated to test 64 accepted sites and release mode)
+  - `docs/audits/2026-10-27-heritage-roster-approval.md` (new)
+  - `.task-reports/2026-10-27-2145-heritage-phase-2.md` (new, ignored)
+- Commands and results:
+  - `node scripts/content/heritage-sites-validate.mjs --package supabase/content/heritage-sites/v1 --mode release`:
+    - 34/34 localities represented with Grade 12 accepted sites.
+    - 30 localities with extended accepted sites.
+    - 64 accepted, 0 held, 0 rejected. 66 cited sources.
+    - 0 validation errors (100% SUCCESS).
+  - `pnpm exec vitest run tests/unit/heritage-sites-validate.test.ts`: 4 passed.
+  - `pnpm verify`:
+    - `agent:check`: Valid.
+    - `history:data:check`: 42 passed.
+    - `eslint`: 0 errors, 0 warnings.
+    - `typecheck`: 0 errors.
+    - `test`: 80 test files, 1045 unit & agent tests passed.
+    - `build`: 109 static pages generated successfully (exit code 0).
+- Open issues / held items: None. 100% of sites accepted.
+- Next allowed Phase: Phase 3 — Database migration, RLS and DB tests.
+
+
