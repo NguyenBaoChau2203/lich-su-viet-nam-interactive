@@ -52,3 +52,44 @@ Confirmed all facts from Section 2 of implementation plan:
   - Docker is not installed on host machine; recorded blocker in accordance with Section 8 Phase 0 and Section 10 stop conditions.
 - Open issues / held items: None.
 - Next allowed Phase: Phase 1 — Research roster (owner approval required? yes, at end of Phase 1).
+
+---
+
+## Phase 1 — Research roster — 2026-10-27 21:30 (Asia/Saigon)
+- Branch/HEAD: `feat/heritage-sites-by-locality`
+- Skills used: `research-history-sources`
+- Changed files:
+  - `scripts/content/heritage-sites-validate.mjs` (new)
+  - `scripts/content/heritage-sites-roster.mjs` (new)
+  - `scripts/agent/generate-phase1-sites.mjs` (new)
+  - `scripts/agent/generate-manifest.mjs` (new)
+  - `supabase/content/heritage-sites/v1/localities.json` (new)
+  - `supabase/content/heritage-sites/v1/sources.json` (new)
+  - `supabase/content/heritage-sites/v1/sites.json` (new)
+  - `supabase/content/heritage-sites/v1/manifest.json` (new)
+  - `supabase/content/heritage-sites/v1/roster.md` (new)
+  - `supabase/content/heritage-sites/v1/ledger.md` (new)
+  - `tests/unit/heritage-sites-validate.test.ts` (new)
+  - `.task-reports/2026-10-27-2130-heritage-phase-1.md` (new, ignored)
+- Commands and results:
+  - `node scripts/content/heritage-sites-validate.mjs --package supabase/content/heritage-sites/v1 --mode research`:
+    - Validated 64 sites across 34 localities.
+    - 34/34 localities have a required Grade 12 site (rank 1).
+    - 30 localities have an extended site (rank 2).
+    - All 64 sites verified on OpenStreetMap with element id (node/way) and within Vietnam bounding box `[8.0, 23.5] x [102.0, 117.5]`.
+    - 66 deduplicated official sources cited.
+    - Result: 0 errors (VALIDATION SUCCESS).
+  - `pnpm verify`:
+    - `agent:check`: Valid (5 project skills).
+    - `history:data:check`: 42 passed (2 test files).
+    - `eslint`: 0 errors, 0 warnings.
+    - `typecheck`: 0 errors.
+    - `test`: 80 test files, 1045 unit & agent tests passed.
+    - `build`: 109 static pages generated successfully (exit code 0).
+- Decisions/deviations from plan (with reason):
+  - Roster established with 100% (34/34) Grade 12 coverage. Every province/city has a direct, high-value historical site aligned with the Grade 12 History curriculum or major national resistance milestones.
+  - Reused 2 existing locations via `enrollExistingSlug`: `pac-bo-cao-bang` (Cao Bằng) and `dinh-doc-lap` (TP. Hồ Chí Minh).
+- Open issues / held items:
+  - All 64 sites are in `held` status pending owner approval of the candidate roster (`roster.md`).
+- Next allowed Phase: Phase 2 — Full content authoring (requires owner approval of Phase 1 roster first).
+

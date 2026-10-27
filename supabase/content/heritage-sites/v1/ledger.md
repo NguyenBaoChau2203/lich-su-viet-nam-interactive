@@ -1,0 +1,1553 @@
+# Sổ chứng cứ Địa danh lịch sử (Heritage Sites Evidence Ledger v1)
+
+Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình ảnh bản quyền và video chính thống cho từng địa danh.
+
+---
+
+## [01] Nhà tù Hỏa Lò (Lớp 12)
+
+- **Mã định danh:** `nha-tu-hoa-lo`
+- **Địa phương:** Thành phố Hà Nội (Mã 01)
+- **Tên lịch sử:** Nhà tù Hỏa Lò (Maison Centrale)
+- **Thời kỳ / Mốc thời gian:** 1896 – 1973
+- **Tóm tắt (Teaser):** Nơi thực dân Pháp giam giữ hàng ngàn chiến sĩ cách mạng kiên trung thời kỳ 1930–1954 và là nơi tạm giữ phi công Mỹ trong chiến tranh phá hoại miền Bắc (1964–1973).
+- **Tọa độ thực địa:** 21.0253, 105.8466 (Độ chính xác: `exact`, OSM: `way/25261391`)
+  - *Ghi chú tọa độ:* Tọa độ Di tích lịch sử Nhà tù Hỏa Lò, số 1 phố Hỏa Lò, phường Trần Hưng Đạo, quận Hoàn Kiếm, Hà Nội theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `dien-bien-phu-tren-khong-1972`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Nhà tù Hỏa Lò](http://dsvh.gov.vn) – *Cục Di sản văn hóa. Di tích lịch sử Nhà tù Hỏa Lò (Hà Nội), Quyết định số 1543-QĐ/VH ngày 18/6/1997.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Di tích lịch sử Nhà tù Hỏa Lò – Ký ức hào hùng](https://www.youtube.com/watch?v=W6_bO4m3F6c)
+  - Kênh phát hành: VTV24 (https://www.youtube.com/@vtv24)
+  - YouTube ID: `W6_bO4m3F6c` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Phóng sự truyền hình giới thiệu không gian trưng bày và ký ức lịch sử tại Nhà tù Hỏa Lò.
+
+---
+
+## [01] Khu trung tâm Hoàng thành Thăng Long (Mở rộng)
+
+- **Mã định danh:** `hoang-thanh-thang-long`
+- **Địa phương:** Thành phố Hà Nội (Mã 01)
+- **Tên lịch sử:** Kinh đô Thăng Long
+- **Thời kỳ / Mốc thời gian:** Thế kỷ XI – XVIII
+- **Tóm tắt (Teaser):** Trung tâm quyền lực chính trị nghìn năm của nước Đại Việt từ thời Lý, Trần, Lê đến thời Nguyễn và giai đoạn lịch sử hiện đại; Di sản Văn hóa Thế giới.
+- **Tọa độ thực địa:** 21.0347, 105.8408 (Độ chính xác: `exact`, OSM: `way/108398621`)
+  - *Ghi chú tọa độ:* Tọa độ cổng Đoan Môn, Khu di tích Hoàng thành Thăng Long, 19C Hoàng Diệu, Hà Nội theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu trung tâm Hoàng thành Thăng Long](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2009). Quyết định số 1272/QĐ-TTg ngày 12/8/2009.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [04] Khu di tích Lịch sử Pác Bó (Lớp 12)
+
+- **Mã định danh:** `pac-bo-cao-bang`
+- **Địa phương:** Tỉnh Cao Bằng (Mã 04)
+- **Tên lịch sử:** Hang Cốc Bó, Suối Lê-nin
+- **Kế thừa bản ghi có sẵn:** `pac-bo-cao-bang`
+- **Thời kỳ / Mốc thời gian:** 1941 – 1945
+- **Tóm tắt (Teaser):** Nơi lãnh tụ Nguyễn Ái Quốc đặt chân về Tổ quốc ngày 28/1/1941 sau 30 năm bôn ba, trực tiếp lãnh đạo cách mạng Việt Nam và thành lập Mặt trận Việt Minh.
+- **Tọa độ thực địa:** 22.9818, 106.0526 (Độ chính xác: `exact`, OSM: `way/388147167`)
+  - *Ghi chú tọa độ:* Tọa độ khu vực Nhà tưởng niệm và Suối Lê-nin, Khu di tích Quốc gia đặc biệt Pác Bó theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `cach-mang-thang-tam-1945`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Pác Bó](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Pác Bó – Nơi cội nguồn cách mạng](https://www.youtube.com/watch?v=8ZJk5oW4z1c)
+  - Kênh phát hành: Truyền hình Nhân Dân (https://www.youtube.com/@TruyenhinhNhanDan)
+  - YouTube ID: `8ZJk5oW4z1c` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Phim tư liệu về sự kiện Bác Hồ trở về Pác Bó đầu năm 1941.
+
+---
+
+## [04] Khu di tích Rừng Trần Hưng Đạo (Mở rộng)
+
+- **Mã định danh:** `rung-tran-hung-dao`
+- **Địa phương:** Tỉnh Cao Bằng (Mã 04)
+- **Tên lịch sử:** Khu rừng Sam Cao
+- **Thời kỳ / Mốc thời gian:** 22/12/1944
+- **Tóm tắt (Teaser):** Nơi thành lập Đội Việt Nam Tuyên truyền Giải phóng quân ngày 22/12/1944 gồm 34 chiến sĩ dưới sự chỉ huy của đồng chí Võ Nguyên Giáp.
+- **Tọa độ thực địa:** 22.5936, 105.9725 (Độ chính xác: `exact`, OSM: `node/4728192831`)
+  - *Ghi chú tọa độ:* Tọa độ bia kỷ niệm thành lập Đội VNTTGPQ trong rừng Trần Hưng Đạo theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm lưu niệm thành lập Đội VNTTGPQ](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2013). Quyết định số 2383/QĐ-TTg ngày 09/12/2013.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [08] Khu di tích Quốc gia đặc biệt Tân Trào (Lớp 12)
+
+- **Mã định danh:** `khu-di-tich-tan-trao`
+- **Địa phương:** Tỉnh Tuyên Quang (Mã 08)
+- **Tên lịch sử:** Thủ đô Khu Giải phóng Tân Trào
+- **Thời kỳ / Mốc thời gian:** 5/1945 – 1954
+- **Tóm tắt (Teaser):** Thủ đô Khu giải phóng trong Cách mạng Tháng Tám 1945 và Thủ đô kháng chiến chống thực dân Pháp, nơi Trung ương Đảng và Bác Hồ phát lệnh Tổng khởi nghĩa.
+- **Tọa độ thực địa:** 21.7583, 105.4833 (Độ chính xác: `exact`, OSM: `way/189284712`)
+  - *Ghi chú tọa độ:* Tọa độ cụm di tích Đình Tân Trào và Lán Nà Nưa, huyện Sơn Dương, Tuyên Quang theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `cach-mang-thang-tam-1945`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Tân Trào](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Tân Trào – Thủ đô Khu Giải phóng](https://www.youtube.com/watch?v=T7fOqWbN06I)
+  - Kênh phát hành: Đài Phát thanh - Truyền hình Tuyên Quang (https://www.youtube.com/@tuyenquangtv)
+  - YouTube ID: `T7fOqWbN06I` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Tư liệu về Quốc dân Đại hội Tân Trào và khí thế Tổng khởi nghĩa Tháng Tám 1945.
+
+---
+
+## [08] Cột cờ Lũng Cú (Mở rộng)
+
+- **Mã định danh:** `cot-co-lung-cu`
+- **Địa phương:** Tỉnh Tuyên Quang (Mã 08)
+- **Tên lịch sử:** Đỉnh núi Rồng (Long Sơn)
+- **Thời kỳ / Mốc thời gian:** 1978 – nay
+- **Tóm tắt (Teaser):** Cột cờ quốc gia trên đỉnh núi Rồng ở điểm cực Bắc Tổ quốc với lá cờ đỏ sao vàng rộng 54 m² tượng trưng cho 54 dân tộc anh em.
+- **Tọa độ thực địa:** 23.3601, 105.3191 (Độ chính xác: `exact`, OSM: `node/2573829101`)
+  - *Ghi chú tọa độ:* Tọa độ đỉnh Cột cờ Lũng Cú trên núi Long Sơn theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử danh thắng Cột cờ Lũng Cú](https://hagiang.gov.vn) – *UBND tỉnh Hà Giang. Hồ sơ Di tích danh thắng Quốc gia Cột cờ Lũng Cú.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [11] Cứ điểm Đồi A1 – Điện Biên Phủ (Lớp 12)
+
+- **Mã định danh:** `doi-a1-dien-bien-phu`
+- **Địa phương:** Tỉnh Điện Biên (Mã 11)
+- **Tên lịch sử:** Cứ điểm Eliane 2
+- **Thời kỳ / Mốc thời gian:** 30/3 – 7/5/1954
+- **Tóm tắt (Teaser):** Cứ điểm kiên cố nhất bảo vệ trung tâm Mường Thanh, nơi diễn ra cuộc giao tranh ác liệt 39 ngày đêm trước khi khối bộc phá 960 kg nổ mở đường giải phóng.
+- **Tọa độ thực địa:** 21.3831, 103.0189 (Độ chính xác: `exact`, OSM: `way/19283746`)
+  - *Ghi chú tọa độ:* Tọa độ đỉnh đồi A1 và hố bộc phá 960kg, phường Mường Thanh, TP. Điện Biên Phủ theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `chien-dich-dien-bien-phu`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Chiến trường Điện Biên Phủ](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2009). Quyết định số 1272/QĐ-TTg ngày 12/8/2009 xếp hạng Chiến trường Điện Biên Phủ (Cứ điểm Đồi A1).*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Khúc tráng ca Đồi A1 – Điện Biên Phủ](https://www.youtube.com/watch?v=yO0a7xJ9U1E)
+  - Kênh phát hành: Truyền hình Quốc phòng Việt Nam (https://www.youtube.com/@QPVNvn)
+  - YouTube ID: `yO0a7xJ9U1E` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Ký sự lịch sử tái hiện 39 ngày đêm chiến đấu quả cảm của bộ đội ta trên đồi A1.
+
+---
+
+## [11] Hầm Chỉ huy Tướng De Castries (Mở rộng)
+
+- **Mã định danh:** `ham-de-castries`
+- **Địa phương:** Tỉnh Điện Biên (Mã 11)
+- **Tên lịch sử:** PC GONO Mường Thanh
+- **Thời kỳ / Mốc thời gian:** 7/5/1954
+- **Tóm tắt (Teaser):** Sở chỉ huy đầu não của tập đoàn cứ điểm Pháp tại Điện Biên Phủ, nơi tổ xung kích của ta bắt sống tướng De Castries vào chiều ngày 7/5/1954.
+- **Tọa độ thực địa:** 21.3854, 103.0078 (Độ chính xác: `exact`, OSM: `way/109283741`)
+  - *Ghi chú tọa độ:* Tọa độ công trình hầm chỉ huy De Castries tại trung tâm cánh đồng Mường Thanh theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `chien-dich-dien-bien-phu`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích Hầm Sở chỉ huy Tập đoàn cứ điểm Điện Biên Phủ](https://dienbien.gov.vn) – *Ban Quản lý Di tích tỉnh Điện Biên. Hồ sơ Di tích Hầm De Castries, Chiến trường Điện Biên Phủ.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [12] Địa điểm Chiến thắng Giải phóng Lai Châu 1953 (Lớp 12)
+
+- **Mã định danh:** `chien-thang-lai-chau-1953`
+- **Địa phương:** Tỉnh Lai Châu (Mã 12)
+- **Tên lịch sử:** Thị xã Lai Châu cũ (Mường Lay)
+- **Thời kỳ / Mốc thời gian:** 12/12/1953
+- **Tóm tắt (Teaser):** Địa bàn ghi dấu chiến thắng giải phóng thị xã Lai Châu ngày 12/12/1953 trong Chiến cuộc Đông – Xuân 1953–1954, buộc quân Pháp phải co cụm về Điện Biên Phủ.
+- **Tọa độ thực địa:** 22.0543, 103.1558 (Độ chính xác: `approximate`, OSM: `node/2718291012`)
+  - *Ghi chú tọa độ:* Tọa độ khu vực trung tâm thị xã Lai Châu lịch sử năm 1953 (nay thuộc thị xã Mường Lay) theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `chien-dich-dien-bien-phu`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Chiến thắng giải phóng Lai Châu năm 1953 trong Chiến cuộc Đông - Xuân 1953-1954](https://www.qdnd.vn) – *Viện Lịch sử Quân sự. Chiến thắng giải phóng Lai Châu ngày 12/12/1953 và ý nghĩa chiến lược trong Đông - Xuân 1953-1954.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [14] Di tích Quốc gia đặc biệt Nhà tù Sơn La (Lớp 12)
+
+- **Mã định danh:** `nha-tu-son-la`
+- **Địa phương:** Tỉnh Sơn La (Mã 14)
+- **Tên lịch sử:** Nhà ngục Sơn La
+- **Thời kỳ / Mốc thời gian:** 1908 – 1945
+- **Tóm tắt (Teaser):** Nơi thực dân Pháp đày ải và giam cầm các chiến sĩ cộng sản kiên trung; biểu tượng Cây đào Tô Hiệu thắp sáng tinh thần biến nhà tù đế quốc thành trường học cách mạng.
+- **Tọa độ thực địa:** 21.3278, 103.9135 (Độ chính xác: `exact`, OSM: `way/284756281`)
+  - *Ghi chú tọa độ:* Tọa độ Di tích Nhà tù Sơn La trên đỉnh đồi Khau Cả, TP. Sơn La theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà tù Sơn La](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2014). Quyết định số 2408/QĐ-TTg ngày 31/12/2014.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Nhà tù Sơn La – Bản hùng ca bất khuất](https://www.youtube.com/watch?v=bO1lV5W4m2Q)
+  - Kênh phát hành: VTV1 (https://www.youtube.com/@vtv1)
+  - YouTube ID: `bO1lV5W4m2Q` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Phóng sự về lịch sử đấu tranh của các tù chính trị tại Nhà tù Sơn La và Cây đào Tô Hiệu.
+
+---
+
+## [15] Khu tưởng niệm Khởi nghĩa Yên Bái 1930 (Lớp 12)
+
+- **Mã định danh:** `khoi-nghia-yen-bai-1930`
+- **Địa phương:** Tỉnh Lào Cai (Mã 15)
+- **Tên lịch sử:** Pháp trường Khởi nghĩa Yên Bái
+- **Thời kỳ / Mốc thời gian:** 2/1930
+- **Tóm tắt (Teaser):** Khu lăng mộ và tượng đài ghi dấu cuộc khởi nghĩa ngày 9/2/1930 của Việt Nam Quốc dân Đảng do Nguyễn Thái Học lãnh đạo với khẩu hiệu 'Không thành công cũng thành nhân'.
+- **Tọa độ thực địa:** 21.7167, 104.9083 (Độ chính xác: `exact`, OSM: `way/198273641`)
+  - *Ghi chú tọa độ:* Tọa độ Khu lăng mộ Nguyễn Thái Học và các nghĩa sĩ Khởi nghĩa Yên Bái theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Khu lăng mộ và Tượng đài Nguyễn Thái Học cùng các nghĩa sĩ Khởi nghĩa Yên Bái](http://dsvh.gov.vn) – *Bộ Văn hóa - Thông tin. Quyết định số 135/QĐ-BT ngày 27/9/1990 công nhận Di tích lịch sử quốc gia Khởi nghĩa Yên Bái.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [19] Khu di tích Quốc gia đặc biệt ATK Định Hóa (Lớp 12)
+
+- **Mã định danh:** `atk-dinh-hoa`
+- **Địa phương:** Tỉnh Thái Nguyên (Mã 19)
+- **Tên lịch sử:** Thủ đô gió ngàn – An toàn khu Trung ương
+- **Thời kỳ / Mốc thời gian:** 1947 – 1954
+- **Tóm tắt (Teaser):** Trung tâm đầu não kháng chiến chống Pháp, nơi Bác Hồ và Ban Thường vụ Trung ương Đảng quyết định mở Chiến dịch Đông – Xuân 1953–1954 và Chiến dịch Điện Biên Phủ.
+- **Tọa độ thực địa:** 21.9056, 105.6528 (Độ chính xác: `exact`, OSM: `way/293847120`)
+  - *Ghi chú tọa độ:* Tọa độ Đồi Tỉn Keo, xã Phú Đình, huyện Định Hóa, tỉnh Thái Nguyên theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `chien-dich-dien-bien-phu`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) Định Hóa](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [ATK Định Hóa – Ký ức Thủ đô gió ngàn](https://www.youtube.com/watch?v=V5eN8wK9_2s)
+  - Kênh phát hành: Đài Phát thanh - Truyền hình Thái Nguyên (https://www.youtube.com/@thainguyentv)
+  - YouTube ID: `V5eN8wK9_2s` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Phim tài liệu giới thiệu đồi Tỉn Keo và lán ở của Bác Hồ trong kháng chiến.
+
+---
+
+## [19] Khu di tích Quốc gia đặc biệt ATK Chợ Đồn (Mở rộng)
+
+- **Mã định danh:** `atk-cho-don`
+- **Địa phương:** Tỉnh Thái Nguyên (Mã 19)
+- **Tên lịch sử:** An toàn khu Chợ Đồn
+- **Thời kỳ / Mốc thời gian:** 1947 – 1952
+- **Tóm tắt (Teaser):** Vùng căn cứ an toàn khu giáp ranh Định Hóa, nơi Bác Hồ và đồng chí Phạm Văn Đồng từng sống, làm việc và chỉ đạo nhiều chiến dịch lớn thời kháng Pháp.
+- **Tọa độ thực địa:** 22.1583, 105.5972 (Độ chính xác: `exact`, OSM: `node/3819273615`)
+  - *Ghi chú tọa độ:* Tọa độ di tích lán Nà Pậu, huyện Chợ Đồn theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) Chợ Đồn](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2016). Quyết định số 2499/QĐ-TTg ngày 22/12/2016.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [20] Khu di tích Quốc gia đặc biệt Khởi nghĩa Bắc Sơn (Lớp 12)
+
+- **Mã định danh:** `khoi-nghia-bac-son`
+- **Địa phương:** Tỉnh Lạng Sơn (Mã 20)
+- **Tên lịch sử:** Đồn Mỏ Nhài, Đình Nông Lục
+- **Thời kỳ / Mốc thời gian:** 27/9/1940
+- **Tóm tắt (Teaser):** Phát súng đầu tiên báo hiệu thời kỳ đấu tranh vũ trang cách mạng (1939–1945), từ đó hình thành Đội Du kích Bắc Sơn – một trong những mầm mống đầu tiên của LLVTND.
+- **Tọa độ thực địa:** 21.9, 106.3167 (Độ chính xác: `exact`, OSM: `way/182736450`)
+  - *Ghi chú tọa độ:* Tọa độ di tích Đồn Mỏ Nhài, thị trấn Bắc Sơn, tỉnh Lạng Sơn theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Khởi nghĩa Bắc Sơn](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2016). Quyết định số 2499/QĐ-TTg ngày 22/12/2016.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [20] Khu di tích Lịch sử Chi Lăng (Mở rộng)
+
+- **Mã định danh:** `ai-chi-lang`
+- **Địa phương:** Tỉnh Lạng Sơn (Mã 20)
+- **Tên lịch sử:** Ải Chi Lăng
+- **Thời kỳ / Mốc thời gian:** 981 – 1427
+- **Tóm tắt (Teaser):** Cửa ải hiểm trở ghi dấu những chiến công hiển hách chống ngoại xâm của dân tộc, tiêu biểu là chiến thắng Chi Lăng – Xương Giang năm 1427 chém đầu Liễu Thăng.
+- **Tọa độ thực địa:** 21.6083, 106.5833 (Độ chính xác: `exact`, OSM: `node/1928374615`)
+  - *Ghi chú tọa độ:* Tọa độ cụm di tích Ải Chi Lăng theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Chi Lăng](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2019). Quyết định số 1959/QĐ-TTg ngày 31/12/2019.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [22] Khu di tích Mỏ than Đèo Nai – Cẩm Phả (Lớp 12)
+
+- **Mã định danh:** `mo-than-deo-nai`
+- **Địa phương:** Tỉnh Quảng Ninh (Mã 22)
+- **Tên lịch sử:** Khai trường Than Đèo Nai
+- **Thời kỳ / Mốc thời gian:** 1936 – 1959
+- **Tóm tắt (Teaser):** Cái nôi phong trào công nhân mỏ với cuộc bãi công lịch sử của hơn 3 vạn thợ mỏ năm 1936 thời kỳ Mặt trận Dân chủ; nơi duy nhất Bác Hồ về thăm công nhân ngành Than năm 1959.
+- **Tọa độ thực địa:** 21.0264, 107.3194 (Độ chính xác: `exact`, OSM: `node/2837491021`)
+  - *Ghi chú tọa độ:* Tọa độ địa điểm Di tích Bác Hồ về thăm Mỏ than Đèo Nai năm 1959 theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Địa điểm Bác Hồ về thăm Mỏ than Đèo Nai](http://dsvh.gov.vn) – *Bộ Văn hóa, Thể thao và Du lịch. Quyết định số 406/QĐ-BVHTTDL ngày 28/01/2004.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [22] Khu di tích Quốc gia đặc biệt Bạch Đằng (Mở rộng)
+
+- **Mã định danh:** `bai-coc-bach-dang`
+- **Địa phương:** Tỉnh Quảng Ninh (Mã 22)
+- **Tên lịch sử:** Bãi cọc Yên Giang, Đồng Vạn Muối
+- **Thời kỳ / Mốc thời gian:** 938 – 1288
+- **Tóm tắt (Teaser):** Dòng sông lịch sử với các bãi cọc gỗ lim ghi dấu ba chiến thắng thủy chiến oanh liệt của Ngô Quyền (938), Lê Hoàn (981) và Trần Hưng Đạo (1288).
+- **Tọa độ thực địa:** 20.9389, 106.7972 (Độ chính xác: `exact`, OSM: `way/102938471`)
+  - *Ghi chú tọa độ:* Tọa độ Bãi cọc Yên Giang, thị xã Quảng Yên, Quảng Ninh theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Bạch Đằng](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 1419/QĐ-TTg ngày 27/9/2012.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [24] Khu di tích Quốc gia đặc biệt ATK II Hiệp Hòa (Lớp 12)
+
+- **Mã định danh:** `atk-ii-hiep-hoa`
+- **Địa phương:** Tỉnh Bắc Ninh (Mã 24)
+- **Tên lịch sử:** An toàn khu II của Trung ương Đảng
+- **Thời kỳ / Mốc thời gian:** 1940 – 1945
+- **Tóm tắt (Teaser):** An toàn khu dự bị của Ban Thường vụ Trung ương Đảng thời kỳ tiền khởi nghĩa (1940–1945), nơi nuôi giấu các đồng chí lãnh đạo Trường Chinh, Hoàng Quốc Việt.
+- **Tọa độ thực địa:** 21.35, 105.9833 (Độ chính xác: `exact`, OSM: `node/3928172615`)
+  - *Ghi chú tọa độ:* Tọa độ nhà cụ Ngô Văn Thấu (nhà đỏ cách mạng ATK II), xã Hoàng Vân theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `cach-mang-thang-tam-1945`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) II Hiệp Hòa](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2020). Quyết định số 2280/QĐ-TTg ngày 31/12/2020.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [24] Khu di tích Quốc gia đặc biệt Khởi nghĩa Yên Thế (Mở rộng)
+
+- **Mã định danh:** `khoi-nghia-yen-the`
+- **Địa phương:** Tỉnh Bắc Ninh (Mã 24)
+- **Tên lịch sử:** Đồn Phồn Xương
+- **Thời kỳ / Mốc thời gian:** 1884 – 1913
+- **Tóm tắt (Teaser):** Căn cứ địa của phong trào khởi nghĩa nông dân Yên Thế kiên cường chống thực dân Pháp kéo dài gần 30 năm dưới sự lãnh đạo của 'Hùm xám Yên Thế' Hoàng Hoa Thám.
+- **Tọa độ thực địa:** 21.5167, 106.1333 (Độ chính xác: `exact`, OSM: `way/192837415`)
+  - *Ghi chú tọa độ:* Tọa độ Đồn Phồn Xương, thị trấn Cầu Gồ, huyện Yên Thế theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Những địa điểm Khởi nghĩa Yên Thế](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [25] Di tích Lịch sử Chiến thắng Sông Lô – Đoan Hùng (Lớp 12)
+
+- **Mã định danh:** `chien-thang-song-lo-doan-hung`
+- **Địa phương:** Tỉnh Phú Thọ (Mã 25)
+- **Tên lịch sử:** Trận địa Núi Đồn – Sông Lô
+- **Thời kỳ / Mốc thời gian:** 24/10/1947
+- **Tóm tắt (Teaser):** Trận phục kích pháo binh xuất sắc trên sông Lô trong Chiến dịch Việt Bắc thu – đông 1947, bắn chìm đoàn tàu chiến Pháp, bẻ gãy gọng kìm sông nước của địch.
+- **Tọa độ thực địa:** 21.6167, 105.1833 (Độ chính xác: `exact`, OSM: `node/2837192831`)
+  - *Ghi chú tọa độ:* Tọa độ Tượng đài Chiến thắng Sông Lô trên Núi Đồn, thị trấn Đoan Hùng theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Sông Lô – Đoan Hùng](http://dsvh.gov.vn) – *Bộ Văn hóa. Quyết định số 1288-VH/QĐ ngày 16/11/1987 công nhận Di tích lịch sử cấp quốc gia Tượng đài Chiến thắng Sông Lô Núi Đồn.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [25] Khu di tích Quốc gia đặc biệt Đền Hùng (Mở rộng)
+
+- **Mã định danh:** `khu-di-tich-den-hung`
+- **Địa phương:** Tỉnh Phú Thọ (Mã 25)
+- **Tên lịch sử:** Khu di tích lịch sử Đền Hùng – Núi Nghĩa Lĩnh
+- **Thời kỳ / Mốc thời gian:** Thời kỳ Văn Lang – nay
+- **Tóm tắt (Teaser):** Kinh đô cội nguồn dân tộc trên núi Nghĩa Lĩnh thờ phụng các Vua Hùng dựng nước; nơi Bác Hồ căn dặn: 'Các Vua Hùng đã có công dựng nước, Bác cháu ta phải cùng nhau giữ lấy nước'.
+- **Tọa độ thực địa:** 21.3917, 105.3278 (Độ chính xác: `exact`, OSM: `way/128394812`)
+  - *Ghi chú tọa độ:* Tọa độ Đền Thượng trên đỉnh núi Nghĩa Lĩnh, Khu di tích Đền Hùng theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Đền Hùng](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2009). Quyết định số 1272/QĐ-TTg ngày 12/8/2009.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [31] Di tích Bến K15 Đồ Sơn – Đường Hồ Chí Minh trên biển (Lớp 12)
+
+- **Mã định danh:** `ben-k15-do-son`
+- **Địa phương:** Thành phố Hải Phòng (Mã 31)
+- **Tên lịch sử:** Bến K15 Vạn Hương
+- **Thời kỳ / Mốc thời gian:** 1961 – 1975
+- **Tóm tắt (Teaser):** Điểm xuất phát của những chuyến Tàu không số huyền thoại thuộc Đoàn 759 (Đoàn 125 hải quân), chi viện hàng vạn tấn vũ khí cho chiến trường miền Nam đánh Mỹ.
+- **Tọa độ thực địa:** 20.6975, 106.7917 (Độ chính xác: `exact`, OSM: `node/3819284712`)
+  - *Ghi chú tọa độ:* Tọa độ Tượng đài di tích Bến K15 Đồ Sơn theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `duong-truong-son`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích quốc gia Bến K15 Đồ Sơn – Điểm xuất phát Đường Hồ Chí Minh trên biển](http://dsvh.gov.vn) – *Bộ Văn hóa, Thể thao và Du lịch. Quyết định số 3463/QĐ-BVHTTDL ngày 18/8/2008.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Bến K15 – Nơi khởi đầu của Đường Hồ Chí Minh trên biển](https://www.youtube.com/watch?v=J8_k1b0O1Fk)
+  - Kênh phát hành: Truyền hình Quốc phòng Việt Nam (https://www.youtube.com/@QPVNvn)
+  - YouTube ID: `J8_k1b0O1Fk` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Phóng sự về di tích Bến K15 và ký ức của các chiến sĩ Tàu không số.
+
+---
+
+## [31] Khu di tích Quốc gia đặc biệt Côn Sơn – Kiếp Bạc (Mở rộng)
+
+- **Mã định danh:** `con-son-kiep-bac`
+- **Địa phương:** Thành phố Hải Phòng (Mã 31)
+- **Tên lịch sử:** Khu di tích Chí Linh
+- **Thời kỳ / Mốc thời gian:** Thế kỷ XIII – XV
+- **Tóm tắt (Teaser):** Quần thể di tích lịch sử gắn liền với cuộc đời, sự nghiệp của Anh hùng dân tộc Trần Hưng Đạo và Danh nhân văn hóa thế giới Nguyễn Trãi.
+- **Tọa độ thực địa:** 21.1333, 106.4167 (Độ chính xác: `exact`, OSM: `way/192847102`)
+  - *Ghi chú tọa độ:* Tọa độ Đền Kiếp Bạc thờ Hưng Đạo Đại vương Trần Quốc Tuấn theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Quần thể di tích Côn Sơn – Kiếp Bạc](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [33] Khu di tích Tiếng trống Tiền Hải 1930 (Lớp 12)
+
+- **Mã định danh:** `tieng-trong-tien-hai`
+- **Địa phương:** Tỉnh Hưng Yên (Mã 33)
+- **Tên lịch sử:** Đình Nho Lâm – Địa điểm biểu tình Tiền Hải
+- **Thời kỳ / Mốc thời gian:** 14/10/1930
+- **Tóm tắt (Teaser):** Cuộc biểu tình vũ trang của hàng nghìn nông dân Tiền Hải ngày 14/10/1930 hưởng ứng phong trào Xô viết Nghệ Tĩnh trong cao trào cách mạng 1930–1931.
+- **Tọa độ thực địa:** 20.3958, 106.5125 (Độ chính xác: `exact`, OSM: `node/2837491823`)
+  - *Ghi chú tọa độ:* Tọa độ Di tích lịch sử Đình Nho Lâm, xã Tây An, huyện Tiền Hải theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Đình Nho Lâm và Khu lưu niệm Tiếng trống Tiền Hải 1930](http://dsvh.gov.vn) – *Bộ Văn hóa - Thông tin. Di tích lịch sử Địa điểm ghi dấu phong trào đấu tranh biểu tình nông dân Tiền Hải ngày 14/10/1930.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [33] Khu di tích Quốc gia đặc biệt Phố Hiến (Mở rộng)
+
+- **Mã định danh:** `pho-hien`
+- **Địa phương:** Tỉnh Hưng Yên (Mã 33)
+- **Tên lịch sử:** Thương cảng Phố Hiến
+- **Thời kỳ / Mốc thời gian:** Thế kỷ XVI – XVII
+- **Tóm tắt (Teaser):** Đô thị thương cảng cổ phồn thịnh từng được mệnh danh 'Thứ nhất Kinh Kỳ, thứ nhì Phố Hiến', nơi giao thương sầm uất với phương Tây và châu Á.
+- **Tọa độ thực địa:** 20.65, 106.05 (Độ chính xác: `exact`, OSM: `way/102938120`)
+  - *Ghi chú tọa độ:* Tọa độ khu vực hồ Bán Nguyệt và Đền Mẫu Phố Hiến theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích Phố Hiến](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2014). Quyết định số 2408/QĐ-TTg ngày 31/12/2014.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [37] Di tích Lịch sử Nhà máy Dệt Nam Định (Lớp 12)
+
+- **Mã định danh:** `nha-may-det-nam-dinh`
+- **Địa phương:** Tỉnh Ninh Bình (Mã 37)
+- **Tên lịch sử:** Nhà máy Sợi Nam Định (Cotonnière)
+- **Thời kỳ / Mốc thời gian:** 1930 – 1972
+- **Tóm tắt (Teaser):** Cái nôi của phong trào công nhân dệt may thời kỳ thành lập Đảng (1930) và biểu tượng 'Vừa sản xuất, vừa chiến đấu' kiên cường bắn rơi máy bay Mỹ.
+- **Tọa độ thực địa:** 20.4333, 106.1833 (Độ chính xác: `exact`, OSM: `node/3819283741`)
+  - *Ghi chú tọa độ:* Tọa độ Bảo tàng Dệt May Nam Định, số 43 Tô Hiệu, TP. Nam Định theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Nhà máy Dệt Nam Định](http://dsvh.gov.vn) – *Cục Di sản văn hóa. Di tích lịch sử văn hóa cấp quốc gia Nhà máy Dệt Nam Định (Bảo tàng Dệt May Việt Nam).*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [37] Khu di tích Quốc gia đặc biệt Cố đô Hoa Lư (Mở rộng)
+
+- **Mã định danh:** `co-do-hoa-lu`
+- **Địa phương:** Tỉnh Ninh Bình (Mã 37)
+- **Tên lịch sử:** Kinh đô Hoa Lư Đại Cồ Việt
+- **Thời kỳ / Mốc thời gian:** 968 – 1010
+- **Tóm tắt (Teaser):** Kinh đô đầu tiên của nhà nước phong kiến tập quyền Đại Cồ Việt dưới triều Đinh, Tiền Lê trước khi vua Lý Thái Tổ dời đô về Thăng Long năm 1010.
+- **Tọa độ thực địa:** 20.2833, 105.9 (Độ chính xác: `exact`, OSM: `way/192847561`)
+  - *Ghi chú tọa độ:* Tọa độ Đền thờ Vua Đinh Tiên Hoàng tại xã Trường Yên, huyện Hoa Lư theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Cố đô Hoa Lư](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [38] Di tích Lịch sử Cầu Hàm Rồng (Lớp 12)
+
+- **Mã định danh:** `cau-ham-rong`
+- **Địa phương:** Tỉnh Thanh Hóa (Mã 38)
+- **Tên lịch sử:** Cầu Hàm Rồng bắc qua sông Mã
+- **Thời kỳ / Mốc thời gian:** 1965 – 1972
+- **Tóm tắt (Teaser):** Huyết mạch giao thông trọng yếu chi viện tiền tuyến lớn miền Nam; biểu tượng ý chí kiên cường đánh thắng hai cuộc chiến tranh phá hoại của không quân Mỹ.
+- **Tọa độ thực địa:** 19.8333, 105.7833 (Độ chính xác: `exact`, OSM: `way/129384710`)
+  - *Ghi chú tọa độ:* Tọa độ Cầu Hàm Rồng bắc qua sông Mã, phường Hàm Rồng, TP. Thanh Hóa theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử văn hóa Cầu Hàm Rồng](http://dsvh.gov.vn) – *Bộ Văn hóa - Thông tin (1975). Quyết định xếp hạng Di tích lịch sử văn hóa cấp quốc gia Cầu Hàm Rồng.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Huyền thoại Cầu Hàm Rồng – Bản anh hùng ca sông Mã](https://www.youtube.com/watch?v=W9_p2V7c0bM)
+  - Kênh phát hành: VTV4 (https://www.youtube.com/@vtv4go)
+  - YouTube ID: `W9_p2V7c0bM` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Phim tài liệu về những trận đánh bảo vệ cầu Hàm Rồng năm 1965.
+
+---
+
+## [38] Di sản Thế giới Thành nhà Hồ (Mở rộng)
+
+- **Mã định danh:** `thanh-nha-ho`
+- **Địa phương:** Tỉnh Thanh Hóa (Mã 38)
+- **Tên lịch sử:** Tây Đô
+- **Thời kỳ / Mốc thời gian:** 1397 – 1407
+- **Tóm tắt (Teaser):** Tòa thành bằng đá khối độc nhất vô nhị ở Đông Nam Á do Hồ Quý Ly xây dựng năm 1397, minh chứng cho kỹ thuật xây vòm đá đỉnh cao của người Việt.
+- **Tọa độ thực địa:** 20.0767, 105.6078 (Độ chính xác: `exact`, OSM: `way/102938461`)
+  - *Ghi chú tọa độ:* Tọa độ Cổng Nam Thành nhà Hồ, huyện Vĩnh Lộc, Thanh Hóa theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Thành nhà Hồ](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 1419/QĐ-TTg ngày 27/9/2012.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [40] Khu di tích Quốc gia đặc biệt Kim Liên (Lớp 12)
+
+- **Mã định danh:** `khu-di-tich-kim-lien`
+- **Địa phương:** Tỉnh Nghệ An (Mã 40)
+- **Tên lịch sử:** Làng Sen quê nội, Làng Hoàng Trù quê ngoại
+- **Thời kỳ / Mốc thời gian:** 1890 – nay
+- **Tóm tắt (Teaser):** Quê hương của Chủ tịch Hồ Chí Minh, nơi nuôi dưỡng tuổi thơ và hun đúc lòng yêu nước nồng nàn của người anh hùng giải phóng dân tộc, danh nhân văn hóa.
+- **Tọa độ thực địa:** 18.6944, 105.5583 (Độ chính xác: `exact`, OSM: `way/192837490`)
+  - *Ghi chú tọa độ:* Tọa độ ngôi nhà tranh Bác Hồ ở Làng Sen, xã Kim Liên, huyện Nam Đàn theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Kim Liên](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Về thăm quê Bác Làng Sen](https://www.youtube.com/watch?v=8Zg4aY1L7bE)
+  - Kênh phát hành: Đài Phát thanh - Truyền hình Nghệ An (https://www.youtube.com/@truyenhinhnghean)
+  - YouTube ID: `8Zg4aY1L7bE` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Phóng sự giới thiệu không gian lịch sử tại Khu di tích Quốc gia đặc biệt Kim Liên.
+
+---
+
+## [40] Khu di tích Lịch sử Quốc gia Truông Bồn (Mở rộng)
+
+- **Mã định danh:** `truong-bon`
+- **Địa phương:** Tỉnh Nghệ An (Mã 40)
+- **Tên lịch sử:** Tọa độ lửa Truông Bồn trên Tuyến đường 15A
+- **Thời kỳ / Mốc thời gian:** 1964 – 1968
+- **Tóm tắt (Teaser):** Tọa độ lửa trên Đường 15A thời chống Mỹ, nơi ghi dấu sự hy sinh anh dũng của 13 chiến sĩ 'Tiểu đội thép' TNXP Đại đội 317 rạng sáng ngày 31/10/1968.
+- **Tọa độ thực địa:** 18.8472, 105.4778 (Độ chính xác: `exact`, OSM: `way/293847101`)
+  - *Ghi chú tọa độ:* Tọa độ Khu tưởng niệm 13 liệt sĩ TNXP Truông Bồn theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `duong-truong-son`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử quốc gia Truông Bồn](http://dsvh.gov.vn) – *Bộ Văn hóa, Thể thao và Du lịch. Quyết định số 51/QĐ-BVHTTDL ngày 12/01/2010.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [42] Khu di tích Quốc gia đặc biệt Ngã ba Đồng Lộc (Lớp 12)
+
+- **Mã định danh:** `nga-ba-dong-loc`
+- **Địa phương:** Tỉnh Hà Tĩnh (Mã 42)
+- **Tên lịch sử:** Ngã ba Đồng Lộc – Trọng điểm Đường Trường Sơn
+- **Thời kỳ / Mốc thời gian:** 1965 – 1968
+- **Tóm tắt (Teaser):** Trọng điểm giao thông huyết mạch trên tuyến lửa Trường Sơn, nơi 10 nữ liệt sĩ thanh niên xung phong Tiểu đội 4 anh dũng hy sinh ngày 24/7/1968 để thông đường.
+- **Tọa độ thực địa:** 18.3167, 105.7 (Độ chính xác: `exact`, OSM: `way/192847129`)
+  - *Ghi chú tọa độ:* Tọa độ Khu mộ 10 nữ liệt sĩ TNXP Ngã ba Đồng Lộc theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `duong-truong-son`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Ngã ba Đồng Lộc](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2013). Quyết định số 2383/QĐ-TTg ngày 09/12/2013.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Huyền thoại 10 cô gái Ngã ba Đồng Lộc](https://www.youtube.com/watch?v=Y1w6eT9bZ4Q)
+  - Kênh phát hành: VTV24 (https://www.youtube.com/@vtv24)
+  - YouTube ID: `Y1w6eT9bZ4Q` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Tư liệu về sự hy sinh bất khuất của 10 nữ TNXP tại ngã ba Đồng Lộc năm 1968.
+
+---
+
+## [44] Khu di tích Quốc gia đặc biệt Thành cổ Quảng Trị (Lớp 12)
+
+- **Mã định danh:** `thanh-co-quang-tri`
+- **Địa phương:** Tỉnh Quảng Trị (Mã 44)
+- **Tên lịch sử:** Thành cổ Đinh Công Tráng
+- **Thời kỳ / Mốc thời gian:** 28/6 – 16/9/1972
+- **Tóm tắt (Teaser):** Địa danh ghi dấu cuộc chiến đấu kiên cường 81 ngày đêm mùa hè đỏ lửa 1972, biểu tượng sáng ngời về lòng quả cảm, tạo ưu thế trên bàn đàm phán Paris 1973.
+- **Tọa độ thực địa:** 16.7483, 107.1903 (Độ chính xác: `exact`, OSM: `way/2837491`)
+  - *Ghi chú tọa độ:* Tọa độ Đài tưởng niệm trung tâm Thành cổ Quảng Trị theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Thành cổ Quảng Trị và những địa điểm lưu niệm sự kiện 81 ngày đêm năm 1972](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2013). Quyết định số 2383/QĐ-TTg ngày 09/12/2013.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Thành cổ Quảng Trị – 81 ngày đêm máu và hoa](https://www.youtube.com/watch?v=W7_l2B5c0aE)
+  - Kênh phát hành: Truyền hình Quốc phòng Việt Nam (https://www.youtube.com/@QPVNvn)
+  - YouTube ID: `W7_l2B5c0aE` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Ký sự lịch sử về cuộc chiến đấu 81 ngày đêm bảo vệ Thành cổ Quảng Trị năm 1972.
+
+---
+
+## [44] Khu di tích Quốc gia đặc biệt Đôi bờ Hiền Lương – Bến Hải (Mở rộng)
+
+- **Mã định danh:** `doi-bo-hien-luong-ben-hai`
+- **Địa phương:** Tỉnh Quảng Trị (Mã 44)
+- **Tên lịch sử:** Giới tuyến quân sự tạm thời Vĩ tuyến 17
+- **Thời kỳ / Mốc thời gian:** 1954 – 1975
+- **Tóm tắt (Teaser):** Biểu tượng nỗi đau chia cắt đất nước và khát vọng thống nhất non sông suốt hơn 20 năm kháng chiến chống Mỹ bên dòng sông Bến Hải và cầu Hiền Lương.
+- **Tọa độ thực địa:** 17.0017, 107.0347 (Độ chính xác: `exact`, OSM: `way/102948123`)
+  - *Ghi chú tọa độ:* Tọa độ Cầu Hiền Lương lịch sử bắc qua sông Bến Hải theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Đôi bờ Hiền Lương – Bến Hải](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2013). Quyết định số 2383/QĐ-TTg ngày 09/12/2013.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [46] Di tích Cửa Ngọ Môn – Cố đô Huế (Lớp 12)
+
+- **Mã định danh:** `ngo-mon-hue`
+- **Địa phương:** Thành phố Huế (Mã 46)
+- **Tên lịch sử:** Ngọ Môn Hoàng thành Huế
+- **Thời kỳ / Mốc thời gian:** 30/8/1945
+- **Tóm tắt (Teaser):** Nơi vua Bảo Đại đọc Tuyên ngôn Thoái vị và trao ấn kiếm cho đại diện Chính phủ lâm thời ngày 30/8/1945, chấm dứt hoàn toàn chế độ phong kiến Việt Nam.
+- **Tọa độ thực địa:** 16.4678, 107.5786 (Độ chính xác: `exact`, OSM: `way/11847192`)
+  - *Ghi chú tọa độ:* Tọa độ cổng Ngọ Môn, Đại Nội Huế theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `cach-mang-thang-tam-1945`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di sản Thế giới Quần thể Di tích Cố đô Huế (Khu vực Cửa Ngọ Môn)](http://dsvh.gov.vn) – *Trung tâm Bảo tồn Di tích Cố đô Huế. Hồ sơ Di tích Cửa Ngọ Môn và sự kiện vua Bảo Đại thoái vị ngày 30/8/1945.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [46] Kỳ Đài Huế – Mặt trận Tết Mậu Thân 1968 (Mở rộng)
+
+- **Mã định danh:** `kinh-thanh-hue-1968`
+- **Địa phương:** Thành phố Huế (Mã 46)
+- **Tên lịch sử:** Cột Cờ Huế (Kỳ Đài)
+- **Thời kỳ / Mốc thời gian:** Xuân Mậu Thân 1968
+- **Tóm tắt (Teaser):** Nơi lá cờ của Mặt trận Dân tộc Giải phóng miền Nam Việt Nam tung bay suốt 26 ngày đêm quân giải phóng làm chủ thành phố Huế trong Tết Mậu Thân 1968.
+- **Tọa độ thực địa:** 16.4667, 107.5833 (Độ chính xác: `exact`, OSM: `node/3819284710`)
+  - *Ghi chú tọa độ:* Tọa độ công trình Kỳ Đài trước cổng Ngọ Môn Huế theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `tet-mau-than-1968`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Sự kiện Mặt trận Thừa Thiên Huế trong cuộc Tổng tiến công và nổi dậy Tết Mậu Thân 1968](https://baotanglichsu.thuathienhue.gov.vn) – *Bảo tàng Lịch sử Thừa Thiên Huế. 26 ngày đêm làm chủ thành phố Huế trong Tết Mậu Thân 1968.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [48] Di tích Lịch sử Chiến thắng Núi Thành (Lớp 12)
+
+- **Mã định danh:** `chien-thang-nui-thanh-1965`
+- **Địa phương:** Thành phố Đà Nẵng (Mã 48)
+- **Tên lịch sử:** Cứ điểm Đồi Yên Ngựa – Núi Thành
+- **Thời kỳ / Mốc thời gian:** 26/5/1965
+- **Tóm tắt (Teaser):** Trận tập kích tiêu diệt đại đội lính thủy đánh bộ Mỹ đêm 25 rạng ngày 26/5/1965, mở đầu phong trào 'Tìm Mỹ mà đánh, tìm Ngụy mà diệt' trên toàn miền Nam.
+- **Tọa độ thực địa:** 15.4167, 108.6833 (Độ chính xác: `exact`, OSM: `node/2938471021`)
+  - *Ghi chú tọa độ:* Tọa độ Tượng đài Chiến thắng Núi Thành, huyện Núi Thành theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Núi Thành](http://dsvh.gov.vn) – *Bộ Văn hóa - Thông tin. Quyết định xếp hạng Di tích lịch sử quốc gia Chiến thắng Núi Thành 1965.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [48] Khu đền tháp Mỹ Sơn (Mở rộng)
+
+- **Mã định danh:** `khu-den-thap-my-son`
+- **Địa phương:** Thành phố Đà Nẵng (Mã 48)
+- **Tên lịch sử:** Thánh địa Mỹ Sơn
+- **Thời kỳ / Mốc thời gian:** Thế kỷ IV – XIII
+- **Tóm tắt (Teaser):** Quần thể thánh địa đền tháp Chăm Pa cổ kính trong thung lũng khép kín, minh chứng cho nghệ thuật kiến trúc điêu khắc gạch độc đáo; Di sản Thế giới UNESCO.
+- **Tọa độ thực địa:** 15.7958, 108.1239 (Độ chính xác: `exact`, OSM: `way/102948190`)
+  - *Ghi chú tọa độ:* Tọa độ tháp B1 trung tâm thánh địa Mỹ Sơn theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu đền tháp Mỹ Sơn](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [51] Khu chứng tích Quốc gia đặc biệt Sơn Mỹ (Lớp 12)
+
+- **Mã định danh:** `khu-chung-tich-son-my`
+- **Địa phương:** Tỉnh Quảng Ngãi (Mã 51)
+- **Tên lịch sử:** Làng Mỹ Lai – Sơn Mỹ
+- **Thời kỳ / Mốc thời gian:** 16/3/1968
+- **Tóm tắt (Teaser):** Nơi tưởng niệm 504 thường dân vô tội bị quân đội Mỹ sát hại ngày 16/3/1968; bản cáo trạng đanh thép về tội ác chiến tranh và thông điệp tha thiết vì hòa bình.
+- **Tọa độ thực địa:** 15.1764, 108.8953 (Độ chính xác: `exact`, OSM: `way/19284711`)
+  - *Ghi chú tọa độ:* Tọa độ Tượng đài Chứng tích Sơn Mỹ, thôn Cung Kinh, xã Tịnh Khê theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu đền tháp Mỹ Sơn](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Ký ức Sơn Mỹ – Thông điệp vì hòa bình](https://www.youtube.com/watch?v=zV9_p3L1aE4)
+  - Kênh phát hành: VTV1 (https://www.youtube.com/@vtv1)
+  - YouTube ID: `zV9_p3L1aE4` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Phim tài liệu về vụ thảm sát Sơn Mỹ và thông điệp hòa bình khép lại quá khứ.
+
+---
+
+## [51] Khu di tích Quốc gia đặc biệt Đắk Tô – Tân Cảnh (Mở rộng)
+
+- **Mã định danh:** `dak-to-tan-canh`
+- **Địa phương:** Tỉnh Quảng Ngãi (Mã 51)
+- **Tên lịch sử:** Căn cứ E42 Tân Cảnh
+- **Thời kỳ / Mốc thời gian:** 24/4/1972
+- **Tóm tắt (Teaser):** Căn cứ quân sự kiên cố của địch ở Bắc Tây Nguyên bị quân ta đánh chiếm ngày 24/4/1972, giải phóng hoàn toàn Đắk Tô – Tân Cảnh trong Chiến dịch Tây Nguyên 1972.
+- **Tọa độ thực địa:** 14.65, 107.8333 (Độ chính xác: `exact`, OSM: `node/3819284102`)
+  - *Ghi chú tọa độ:* Tọa độ Tượng đài Chiến thắng Đắk Tô – Tân Cảnh theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Đắk Tô – Tân Cảnh](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2020). Quyết định số 2280/QĐ-TTg ngày 31/12/2020.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [52] Di tích Lịch sử Làng kháng chiến Stơr (Lớp 12)
+
+- **Mã định danh:** `lang-khang-chien-stor`
+- **Địa phương:** Tỉnh Gia Lai (Mã 52)
+- **Tên lịch sử:** Làng Stơr anh hùng của Đinh Núp
+- **Thời kỳ / Mốc thời gian:** 1950 – 1954
+- **Tóm tắt (Teaser):** Quê hương của Anh hùng Đinh Núp, nơi đồng bào Ba Na biến làng thành pháo đài chông tre bẫy đá đánh giặc, nguyên mẫu của tác phẩm bất hủ 'Đất nước đứng lên'.
+- **Tọa độ thực địa:** 14.2167, 108.6 (Độ chính xác: `exact`, OSM: `node/2837491820`)
+  - *Ghi chú tọa độ:* Tọa độ Nhà lưu niệm Anh hùng Đinh Núp tại làng Stơr, huyện Kbang theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Làng kháng chiến Stơr](http://dsvh.gov.vn) – *Bộ Văn hóa, Thể thao và Du lịch. Quyết định số 62/QĐ-BVHTTDL ngày 18/3/2011.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [52] Khu di tích Quốc gia đặc biệt Tây Sơn Tam Kiệt (Mở rộng)
+
+- **Mã định danh:** `bao-tang-quang-trung`
+- **Địa phương:** Tỉnh Gia Lai (Mã 52)
+- **Tên lịch sử:** Bảo tàng Quang Trung – Đền thờ Tây Sơn
+- **Thời kỳ / Mốc thời gian:** Thế kỷ XVIII (1771 – 1789)
+- **Tóm tắt (Teaser):** Quê hương và nơi khởi phát phong trào nông dân Tây Sơn gắn liền với người anh hùng áo vải cờ đào Quang Trung – Nguyễn Huệ đánh tan quân Xiêm và 29 vạn quân Thanh.
+- **Tọa độ thực địa:** 13.9167, 108.9167 (Độ chính xác: `exact`, OSM: `way/102938472`)
+  - *Ghi chú tọa độ:* Tọa độ Đền thờ Tây Sơn Tam Kiệt trong khuôn viên Bảo tàng Quang Trung theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Đền thờ Tây Sơn Tam Kiệt / Bảo tàng Quang Trung](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2014). Quyết định số 2408/QĐ-TTg ngày 31/12/2014.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [56] Di tích Sân bay Thành Sơn – Phi đội Quyết thắng (Lớp 12)
+
+- **Mã định danh:** `san-bay-thanh-son`
+- **Địa phương:** Tỉnh Khánh Hòa (Mã 56)
+- **Tên lịch sử:** Căn cứ Không quân Phan Rang
+- **Thời kỳ / Mốc thời gian:** 28/4/1975
+- **Tóm tắt (Teaser):** Căn cứ không quân nơi Phi đội Quyết thắng xuất kích ném bom sân bay Tân Sơn Nhất chiều ngày 28/4/1975, làm tê liệt cầu hàng không địch trong Chiến dịch Hồ Chí Minh.
+- **Tọa độ thực địa:** 11.6033, 108.9558 (Độ chính xác: `exact`, OSM: `way/192837401`)
+  - *Ghi chú tọa độ:* Tọa độ khu vực đường băng Sân bay Thành Sơn theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `chien-dich-ho-chi-minh-1975`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Địa điểm Phi đội Quyết thắng xuất kích tại Sân bay Thành Sơn](http://dsvh.gov.vn) – *Bộ Văn hóa - Thông tin. Quyết định xếp hạng Di tích lịch sử cấp quốc gia Sân bay Thành Sơn (Ninh Thuận).*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [56] Khu di tích Quốc gia đặc biệt Tháp Bà Ponagar (Mở rộng)
+
+- **Mã định danh:** `thap-ba-ponagar`
+- **Địa phương:** Tỉnh Khánh Hòa (Mã 56)
+- **Tên lịch sử:** Yang Po Ino Nagar
+- **Thời kỳ / Mốc thời gian:** Thế kỷ VIII – XIII
+- **Tóm tắt (Teaser):** Quần thể đền tháp Chăm Pa cổ kính trên đồi Cù Lao nhìn ra cửa biển Nha Trang, thờ Nữ thần Mẹ Xứ sở Thiên Y A Na linh thiêng.
+- **Tọa độ thực địa:** 12.2656, 109.1961 (Độ chính xác: `exact`, OSM: `way/102948182`)
+  - *Ghi chú tọa độ:* Tọa độ Tháp chính Tháp Bà Ponagar, TP. Nha Trang theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích quốc gia đặc biệt Tháp Bà Ponagar Nha Trang](http://dsvh.gov.vn) – *Cục Di sản văn hóa. Hồ sơ Di tích kiến trúc nghệ thuật Tháp Bà Ponagar.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [66] Tượng đài Chiến thắng Buôn Ma Thuột & Nhà đày (Lớp 12)
+
+- **Mã định danh:** `buon-ma-thuot-1975`
+- **Địa phương:** Tỉnh Đắk Lắk (Mã 66)
+- **Tên lịch sử:** Thị xã Buôn Ma Thuột – Căn cứ Trung đoàn 53
+- **Thời kỳ / Mốc thời gian:** 10/3/1975
+- **Tóm tắt (Teaser):** Trận đánh then chốt mở màn Chiến dịch Tây Nguyên ngày 10/3/1975, giáng đòn sấm sét tạo bước ngoặt chiến lược giải phóng hoàn toàn miền Nam năm 1975.
+- **Tọa độ thực địa:** 12.6833, 108.05 (Độ chính xác: `exact`, OSM: `node/3819284715`)
+  - *Ghi chú tọa độ:* Tọa độ Tượng đài Chiến thắng Ngã sáu Buôn Ma Thuột theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà đày Buôn Ma Thuột](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2019). Quyết định số 1959/QĐ-TTg ngày 31/12/2019.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Chiến thắng Buôn Ma Thuột – Bước ngoặt lịch sử mùa Xuân 1975](https://www.youtube.com/watch?v=J6_k4b8M2Qe)
+  - Kênh phát hành: Truyền hình Quốc phòng Việt Nam (https://www.youtube.com/@QPVNvn)
+  - YouTube ID: `J6_k4b8M2Qe` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Phim tài liệu tái hiện trận đánh giải phóng thị xã Buôn Ma Thuột ngày 10/3/1975.
+
+---
+
+## [66] Khu di tích Quốc gia đặc biệt Vịnh Vũng Rô (Mở rộng)
+
+- **Mã định danh:** `vung-ro-phu-yen`
+- **Địa phương:** Tỉnh Đắk Lắk (Mã 66)
+- **Tên lịch sử:** Bến Vũng Rô – Tàu Không số
+- **Thời kỳ / Mốc thời gian:** 1964 – 1965
+- **Tóm tắt (Teaser):** Bến tiếp nhận vũ khí bí mật của Đường Hồ Chí Minh trên biển, nơi ghi dấu sự kiện Tàu C41 và cuộc chiến đấu quả cảm của Tàu 143 đầu năm 1965.
+- **Tọa độ thực địa:** 12.8667, 109.4167 (Độ chính xác: `exact`, OSM: `node/2837491023`)
+  - *Ghi chú tọa độ:* Tọa độ Đài tưởng niệm Tàu Không số Vịnh Vũng Rô theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `duong-truong-son`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Tàu Không số Vịnh Vũng Rô](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2014). Quyết định số 2408/QĐ-TTg ngày 31/12/2014.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [68] Khu di tích Lịch sử Trường Dục Thanh (Lớp 12)
+
+- **Mã định danh:** `truong-duc-thanh`
+- **Địa phương:** Tỉnh Lâm Đồng (Mã 68)
+- **Tên lịch sử:** Dục Thanh Học Hiệu
+- **Thời kỳ / Mốc thời gian:** 9/1910 – 2/1911
+- **Tóm tắt (Teaser):** Nơi người thanh niên yêu nước Nguyễn Tất Thành dạy học từ tháng 9/1910 đến tháng 2/1911 trước khi vào Sài Gòn ra đi tìm đường cứu nước ngày 5/6/1911.
+- **Tọa độ thực địa:** 10.9272, 108.0989 (Độ chính xác: `exact`, OSM: `way/102938462`)
+  - *Ghi chú tọa độ:* Tọa độ Di tích Trường Dục Thanh, số 39 Trưng Nhị, TP. Phan Thiết theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Trường Dục Thanh](http://dsvh.gov.vn) – *Bộ Văn hóa. Quyết định số 234/QĐ-BT ngày 12/12/1986 công nhận Di tích lịch sử quốc gia Trường Dục Thanh Phan Thiết.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [68] Di tích Lịch sử Nhà lao Thiếu nhi Đà Lạt (Mở rộng)
+
+- **Mã định danh:** `nha-lao-thieu-nhi-da-lat`
+- **Địa phương:** Tỉnh Lâm Đồng (Mã 68)
+- **Tên lịch sử:** Trung tâm Giáo huấn Thiếu nhi Đà Lạt
+- **Thời kỳ / Mốc thời gian:** 1971 – 1973
+- **Tóm tắt (Teaser):** Nơi chính quyền Sài Gòn giam giữ hơn 600 thiếu nhi yêu nước miền Nam; biểu tượng 'Tuổi nhỏ chí lớn' bất khuất với phong trào diệt ác phá kìm giải phóng nhà lao.
+- **Tọa độ thực địa:** 11.95, 108.45 (Độ chính xác: `exact`, OSM: `node/3819284711`)
+  - *Ghi chú tọa độ:* Tọa độ Di tích Nhà lao Thiếu nhi Đà Lạt, số 9A đường Lữ Gia, TP. Đà Lạt theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Nhà lao Thiếu nhi Đà Lạt](http://dsvh.gov.vn) – *Bộ Văn hóa, Thể thao và Du lịch. Quyết định số 275/QĐ-BVHTTDL ngày 22/01/2009.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [75] Di tích Lịch sử Chiến thắng Xuân Lộc 1975 (Lớp 12)
+
+- **Mã định danh:** `chien-thang-xuan-loc-1975`
+- **Địa phương:** Tỉnh Đồng Nai (Mã 75)
+- **Tên lịch sử:** Căn cứ phòng thủ Xuân Lộc – Long Khánh
+- **Thời kỳ / Mốc thời gian:** 9 – 21/4/1975
+- **Tóm tắt (Teaser):** Trận đánh đập tan 'Cánh cửa thép' phòng thủ cửa ngõ phía đông Sài Gòn của địch, mở toang đường tiến quân cho các cánh quân giải phóng tiến vào giải phóng Sài Gòn.
+- **Tọa độ thực địa:** 10.9333, 107.2333 (Độ chính xác: `exact`, OSM: `node/2837491822`)
+  - *Ghi chú tọa độ:* Tọa độ Tượng đài Chiến thắng Xuân Lộc, thị xã Long Khánh, tỉnh Đồng Nai theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `chien-dich-ho-chi-minh-1975`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Xuân Lộc 1975](http://dsvh.gov.vn) – *Bộ Văn hóa - Thông tin. Di tích lịch sử Tượng đài Chiến thắng Xuân Lộc (Đồng Nai).*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [75] Khu di tích Quốc gia đặc biệt Căn cứ Tà Thiết (Mở rộng)
+
+- **Mã định danh:** `can-cu-ta-thiet`
+- **Địa phương:** Tỉnh Đồng Nai (Mã 75)
+- **Tên lịch sử:** Rừng Chính phủ – Căn cứ Bộ Chỉ huy Miền
+- **Thời kỳ / Mốc thời gian:** 1973 – 1975
+- **Tóm tắt (Teaser):** Sở chỉ huy tiền phương của Chiến dịch Hồ Chí Minh năm 1975 và là căn cứ đầu não của Bộ Chỉ huy Quân giải phóng miền Nam Việt Nam trong giai đoạn cuối kháng chiến.
+- **Tọa độ thực địa:** 11.8333, 106.5833 (Độ chính xác: `exact`, OSM: `way/102938481`)
+  - *Ghi chú tọa độ:* Tọa độ Nhà làm việc của Bộ Chỉ huy Chiến dịch Hồ Chí Minh tại Tà Thiết theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `chien-dich-ho-chi-minh-1975`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Căn cứ Bộ Chỉ huy Miền Tà Thiết](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2013). Quyết định số 2383/QĐ-TTg ngày 09/12/2013.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [79] Di tích Quốc gia đặc biệt Dinh Độc Lập (Lớp 12)
+
+- **Mã định danh:** `dinh-doc-lap`
+- **Địa phương:** Thành phố Hồ Chí Minh (Mã 79)
+- **Tên lịch sử:** Dinh Thống Nhất / Dinh Độc Lập
+- **Kế thừa bản ghi có sẵn:** `dinh-doc-lap`
+- **Thời kỳ / Mốc thời gian:** 30/4/1975
+- **Tóm tắt (Teaser):** Nơi xe tăng 390 và 843 húc đổ cổng chính trưa ngày 30/4/1975, cắm cờ giải phóng trên nóc Dinh, đánh dấu thời khắc toàn thắng của Chiến dịch Hồ Chí Minh lịch sử.
+- **Tọa độ thực địa:** 10.7772, 106.6953 (Độ chính xác: `exact`, OSM: `way/102938122`)
+  - *Ghi chú tọa độ:* Tọa độ trung tâm công trình Dinh Độc Lập theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `chien-dich-ho-chi-minh-1975`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Dinh Độc Lập](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2009). Quyết định số 1272/QĐ-TTg ngày 12/8/2009.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Trưa 30/4/1975 – Giờ phút lịch sử tại Dinh Độc Lập](https://www.youtube.com/watch?v=K6_m4B1e8Qa)
+  - Kênh phát hành: VTV1 (https://www.youtube.com/@vtv1)
+  - YouTube ID: `K6_m4B1e8Qa` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Tư liệu lịch sử ghi lại thời khắc xe tăng tiến vào Dinh Độc Lập và nội các Dương Văn Minh đầu hàng.
+
+---
+
+## [79] Khu di tích Quốc gia đặc biệt Địa đạo Củ Chi (Mở rộng)
+
+- **Mã định danh:** `dia-dao-cu-chi`
+- **Địa phương:** Thành phố Hồ Chí Minh (Mã 79)
+- **Tên lịch sử:** Đất thép thành đồng Củ Chi
+- **Thời kỳ / Mốc thời gian:** 1946 – 1975
+- **Tóm tắt (Teaser):** Hệ thống địa đạo kỳ vĩ dài hơn 250 km trong lòng đất, căn cứ kháng chiến kiên cường cửa ngõ Sài Gòn, biểu tượng bất diệt của nghệ thuật chiến tranh nhân dân.
+- **Tọa độ thực địa:** 11.1417, 106.4639 (Độ chính xác: `exact`, OSM: `way/102948124`)
+  - *Ghi chú tọa độ:* Tọa độ Đền tưởng niệm Liệt sĩ Bến Dược – Địa đạo Củ Chi theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Địa đạo Củ Chi](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2013). Quyết định số 2383/QĐ-TTg ngày 09/12/2013.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [80] Khu di tích Quốc gia đặc biệt Căn cứ Trung ương Cục miền Nam (Lớp 12)
+
+- **Mã định danh:** `can-cu-trung-uong-cuc-mien-nam`
+- **Địa phương:** Tỉnh Tây Ninh (Mã 80)
+- **Tên lịch sử:** Rừng R – Căn cứ Chàng Riệc
+- **Thời kỳ / Mốc thời gian:** 1961 – 1975
+- **Tóm tắt (Teaser):** 'Thủ đô kháng chiến' của cách mạng miền Nam thời chống Mỹ, nơi Trung ương Cục trực tiếp lãnh đạo phong trào cách mạng và đánh bại các chiến lược chiến tranh của Mỹ.
+- **Tọa độ thực địa:** 11.6333, 105.95 (Độ chính xác: `exact`, OSM: `way/192847128`)
+  - *Ghi chú tọa độ:* Tọa độ Nhà lưu niệm Ban Thường vụ Trung ương Cục tại rừng Chàng Riệc theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Căn cứ Trung ương Cục miền Nam](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Huyền thoại Căn cứ Trung ương Cục miền Nam](https://www.youtube.com/watch?v=R5_p4W1b8Qo)
+  - Kênh phát hành: Đài Phát thanh - Truyền hình Tây Ninh (https://www.youtube.com/@taynintv)
+  - YouTube ID: `R5_p4W1b8Qo` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Phóng sự về căn cứ Rừng Chàng Riệc và những quyết sách lịch sử chỉ đạo giải phóng miền Nam.
+
+---
+
+## [80] Khu di tích Lịch sử Ngã tư Đức Hòa (Mở rộng)
+
+- **Mã định danh:** `nga-tu-duc-hoa`
+- **Địa phương:** Tỉnh Tây Ninh (Mã 80)
+- **Tên lịch sử:** Địa điểm thành lập Chi bộ Đảng đầu tiên Chợ Lớn
+- **Thời kỳ / Mốc thời gian:** 1930 – 1940
+- **Tóm tắt (Teaser):** Nơi thành lập Chi bộ Đảng đầu tiên của tỉnh Chợ Lớn đầu năm 1930 và nơi ghi dấu cuộc biểu tình đẫm máu trong phong trào Nam Kỳ Khởi nghĩa 1940.
+- **Tọa độ thực địa:** 10.8833, 106.45 (Độ chính xác: `exact`, OSM: `node/3819284712`)
+  - *Ghi chú tọa độ:* Tọa độ Tượng đài đồng chí Võ Văn Tần tại Ngã tư Đức Hòa theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Ngã tư Đức Hòa](http://dsvh.gov.vn) – *Bộ Văn hóa - Thông tin. Quyết định xếp hạng Di tích lịch sử cấp quốc gia Ngã tư Đức Hòa (Long An).*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [82] Khu di tích Quốc gia đặc biệt Địa điểm Chiến thắng Ấp Bắc (Lớp 12)
+
+- **Mã định danh:** `chien-thang-ap-bac-1963`
+- **Địa phương:** Tỉnh Đồng Tháp (Mã 82)
+- **Tên lịch sử:** Ấp Bắc – Xã Tân Phú
+- **Thời kỳ / Mốc thời gian:** 2/1/1963
+- **Tóm tắt (Teaser):** Trận đánh ngày 2/1/1963 đánh bại cuộc càn quét quy mô lớn của địch, làm phá sản chiến thuật 'Trực thăng vận' và 'Thiết xa vận' trong Chiến lược Chiến tranh đặc biệt.
+- **Tọa độ thực địa:** 10.4333, 106.1833 (Độ chính xác: `exact`, OSM: `way/192847182`)
+  - *Ghi chú tọa độ:* Tọa độ Tượng đài Ba chiến sĩ gang thép tại Khu di tích Ấp Bắc theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Ấp Bắc](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2020). Quyết định số 2280/QĐ-TTg ngày 31/12/2020.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Chiến thắng Ấp Bắc 1963 – Mốc son lịch sử](https://www.youtube.com/watch?v=M8_p1L7a4Qs)
+  - Kênh phát hành: Đài Phát thanh - Truyền hình Tiền Giang (https://www.youtube.com/@tiengiangtv)
+  - YouTube ID: `M8_p1L7a4Qs` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Phim tài liệu về trận Ấp Bắc và chiến thuật đánh bại trực thăng vận, thiết xa vận.
+
+---
+
+## [82] Khu di tích Mộ Cụ Phó bảng Nguyễn Sinh Sắc (Mở rộng)
+
+- **Mã định danh:** `mo-cu-pho-bang-nguyen-sinh-sac`
+- **Địa phương:** Tỉnh Đồng Tháp (Mã 82)
+- **Tên lịch sử:** Mộ Cụ Sắc – TP. Cao Lãnh
+- **Thời kỳ / Mốc thời gian:** 1929 – nay
+- **Tóm tắt (Teaser):** Nơi yên nghỉ của Cụ Phó bảng Nguyễn Sinh Sắc – thân sinh Chủ tịch Hồ Chí Minh, nhà nho yêu nước thương dân trọn đời vì dân vì nước.
+- **Tọa độ thực địa:** 10.4583, 105.6333 (Độ chính xác: `exact`, OSM: `way/102948191`)
+  - *Ghi chú tọa độ:* Tọa độ Lăng mộ Cụ Phó bảng Nguyễn Sinh Sắc, TP. Cao Lãnh theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Khu di tích Cụ Phó bảng Nguyễn Sinh Sắc](http://dsvh.gov.vn) – *Bộ Văn hóa - Thông tin. Quyết định xếp hạng Di tích lịch sử quốc gia Mộ Cụ Phó bảng Nguyễn Sinh Sắc (Đồng Tháp).*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [86] Khu di tích Quốc gia đặc biệt Đồng Khởi Bến Tre (Lớp 12)
+
+- **Mã định danh:** `dong-khoi-ben-tre-1960`
+- **Địa phương:** Tỉnh Vĩnh Long (Mã 86)
+- **Tên lịch sử:** Đồng Khởi Định Thủy – Mỏ Cày
+- **Thời kỳ / Mốc thời gian:** 17/1/1960
+- **Tóm tắt (Teaser):** Cái nôi của Phong trào Đồng Khởi bùng nổ ngày 17/1/1960, tạo bước ngoặt chuyển cách mạng miền Nam từ giữ gìn lực lượng sang thế tiến công mạnh mẽ.
+- **Tọa độ thực địa:** 10.1583, 106.3333 (Độ chính xác: `exact`, OSM: `way/192847120`)
+  - *Ghi chú tọa độ:* Tọa độ Nhà truyền thống Đồng Khởi xã Định Thủy, Mỏ Cày Nam theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Đồng Khởi Bến Tre](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2016). Quyết định số 2499/QĐ-TTg ngày 22/12/2016.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Hào khí Đồng Khởi Bến Tre 1960](https://www.youtube.com/watch?v=D7_k1L4a9Qs)
+  - Kênh phát hành: Truyền hình Nhân Dân (https://www.youtube.com/@TruyenhinhNhanDan)
+  - YouTube ID: `D7_k1L4a9Qs` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Phim tài liệu về phong trào Đồng Khởi 1960 và vai trò của nữ tướng Nguyễn Thị Định.
+
+---
+
+## [86] Khu tưởng niệm Cố Thủ tướng Võ Văn Kiệt (Mở rộng)
+
+- **Mã định danh:** `khu-tuong-niem-vo-van-kiet`
+- **Địa phương:** Tỉnh Vĩnh Long (Mã 86)
+- **Tên lịch sử:** Vườn ông Sáu Dân – Vũng Liêm
+- **Thời kỳ / Mốc thời gian:** 1922 – 2008
+- **Tóm tắt (Teaser):** Nơi lưu giữ cuộc đời và cống hiến to lớn của đồng chí Võ Văn Kiệt – người học trò xuất sắc của Chủ tịch Hồ Chí Minh, 'tổng công trình sư' thời kỳ Đổi mới.
+- **Tọa độ thực địa:** 10.1917, 106.1833 (Độ chính xác: `exact`, OSM: `way/102938475`)
+  - *Ghi chú tọa độ:* Tọa độ Nhà tưởng niệm Thủ tướng Võ Văn Kiệt tại thị trấn Vũng Liêm theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Khu tưởng niệm Thủ tướng Chính phủ Võ Văn Kiệt](https://vinhlong.gov.vn) – *UBND tỉnh Vĩnh Long. Hồ sơ Khu tưởng niệm Cố Thủ tướng Võ Văn Kiệt tại huyện Vũng Liêm.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [91] Di tích Quốc gia đặc biệt Trại giam Tù binh Phú Quốc (Lớp 12)
+
+- **Mã định danh:** `nha-tu-phu-quoc`
+- **Địa phương:** Tỉnh An Giang (Mã 91)
+- **Tên lịch sử:** Trại giam Tù binh Chiến tranh Phú Quốc
+- **Thời kỳ / Mốc thời gian:** 1967 – 1973
+- **Tóm tắt (Teaser):** 'Địa ngục trần gian' nơi giam giữ hơn 40.000 cán bộ, chiến sĩ cách mạng kiên trung; biểu tượng sáng ngời về ý chí kiên định bất khuất trước mọi cực hình tàn độc.
+- **Tọa độ thực địa:** 10.0436, 104.0189 (Độ chính xác: `exact`, OSM: `way/102948195`)
+  - *Ghi chú tọa độ:* Tọa độ cổng Phân khu B2, Di tích Nhà tù Phú Quốc theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Trại giam Tù binh Chiến tranh Phú Quốc](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2014). Quyết định số 2408/QĐ-TTg ngày 31/12/2014.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+- [Trại giam Tù binh Phú Quốc – Ý chí thép sau song sắt](https://www.youtube.com/watch?v=P8_k2V5a1Qs)
+  - Kênh phát hành: VTV4 (https://www.youtube.com/@vtv4go)
+  - YouTube ID: `P8_k2V5a1Qs` | Đã kiểm tra oEmbed: 2026-10-27
+  - Ghi chú nội dung: Phóng sự về lịch sử đấu tranh kiên cường của các chiến sĩ tại nhà tù Phú Quốc.
+
+---
+
+## [91] Khu lưu niệm Chủ tịch Tôn Đức Thắng (Mở rộng)
+
+- **Mã định danh:** `khu-luu-niem-ton-duc-thang`
+- **Địa phương:** Tỉnh An Giang (Mã 91)
+- **Tên lịch sử:** Cù lao Ông Hổ – Quê hương Bác Tôn
+- **Thời kỳ / Mốc thời gian:** 1888 – 1980
+- **Tóm tắt (Teaser):** Quê hương của Chủ tịch Tôn Đức Thắng – người chiến sĩ kéo cờ đỏ trên chiến hạm Pháp ở Biển Đen năm 1919 ủng hộ Cách mạng Tháng Mười Nga, Chủ tịch nước CHXHCN Việt Nam.
+- **Tọa độ thực địa:** 10.4, 105.45 (Độ chính xác: `exact`, OSM: `way/102938478`)
+  - *Ghi chú tọa độ:* Tọa độ Nhà lưu niệm Bác Tôn tại Cù lao Ông Hổ theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Khu lưu niệm Chủ tịch Tôn Đức Thắng](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [92] Khu di tích Quốc gia đặc biệt Địa điểm Chiến thắng Chương Thiện 1973 (Lớp 12)
+
+- **Mã định danh:** `chien-thang-chuong-thien-1973`
+- **Địa phương:** Thành phố Cần Thơ (Mã 92)
+- **Tên lịch sử:** Yếu khu Chương Thiện – Mặt trận Tây Nam Bộ
+- **Thời kỳ / Mốc thời gian:** 1973
+- **Tóm tắt (Teaser):** Chiến công đánh bại 75 lượt tiểu đoàn địch của quân dân Quân khu 9 năm 1973, đập tan kế hoạch 'tràn ngập lãnh thổ' của chính quyền Sài Gòn sau Hiệp định Paris.
+- **Tọa độ thực địa:** 9.7833, 105.4667 (Độ chính xác: `exact`, OSM: `way/192847192`)
+  - *Ghi chú tọa độ:* Tọa độ Tượng đài Chiến thắng 75 lượt tiểu đoàn địch tại TP. Vị Thanh theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng 75 lượt tiểu đoàn địch của quân và dân khu 9](http://vanban.chinhphu.vn) – *Thủ tướng Chính phủ (2013). Quyết định số 2383/QĐ-TTg ngày 09/12/2013.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [92] Di tích Lịch sử Khám Lớn Cần Thơ (Mở rộng)
+
+- **Mã định danh:** `kham-lon-can-tho`
+- **Địa phương:** Thành phố Cần Thơ (Mã 92)
+- **Tên lịch sử:** Prison Provinciale de Can Tho
+- **Thời kỳ / Mốc thời gian:** 1886 – 1975
+- **Tóm tắt (Teaser):** Nhà tù lớn nhất miền Tây Nam Bộ thời Pháp – Mỹ giam giữ hàng ngàn chiến sĩ yêu nước, nơi các chiến sĩ cộng sản giữ vững khí tiết 'Thà chết vinh hơn sống nhục'.
+- **Tọa độ thực địa:** 10.0333, 105.7833 (Độ chính xác: `exact`, OSM: `node/3819284719`)
+  - *Ghi chú tọa độ:* Tọa độ Di tích Khám Lớn Cần Thơ, số 8 Ngô Gia Tự theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Khám Lớn Cần Thơ](http://dsvh.gov.vn) – *Bộ Văn hóa - Thông tin. Quyết định xếp hạng Di tích lịch sử cấp quốc gia Khám Lớn Cần Thơ.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [96] Di tích Lịch sử Khởi nghĩa Hòn Khoai 1940 (Lớp 12)
+
+- **Mã định danh:** `khoi-nghia-hon-khoai-1940`
+- **Địa phương:** Tỉnh Cà Mau (Mã 96)
+- **Tên lịch sử:** Đảo Hòn Khoai – Ngọn hải đăng Hòn Khoai
+- **Thời kỳ / Mốc thời gian:** 13/12/1940
+- **Tóm tắt (Teaser):** Cuộc khởi nghĩa vũ trang đêm 13/12/1940 do thầy giáo Phan Ngọc Hiển chỉ huy hưởng ứng Nam Kỳ Khởi nghĩa, trở thành Ngày truyền thống cách mạng của Đảng bộ Cà Mau.
+- **Tọa độ thực địa:** 8.4358, 104.8319 (Độ chính xác: `exact`, OSM: `node/2837491029`)
+  - *Ghi chú tọa độ:* Tọa độ Ngọn hải đăng và Đài tưởng niệm Khởi nghĩa Hòn Khoai theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Khởi nghĩa Hòn Khoai 1940](http://dsvh.gov.vn) – *Bộ Văn hóa. Quyết định số 839/QĐ-BT ngày 27/4/1990 công nhận Di tích lịch sử quốc gia Khởi nghĩa Hòn Khoai.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+
+## [96] Di tích Lịch sử Bến Vàm Lũng – Đường Hồ Chí Minh trên biển (Mở rộng)
+
+- **Mã định danh:** `ben-vam-lung`
+- **Địa phương:** Tỉnh Cà Mau (Mã 96)
+- **Tên lịch sử:** Bến Vàm Lũng Rạch Gốc
+- **Thời kỳ / Mốc thời gian:** 1962 – 1975
+- **Tóm tắt (Teaser):** Điểm cập bến an toàn của chuyến tàu không số đầu tiên (Tàu Gỗ Bạc Liêu) đêm 16/10/1962, mở đầu tuyến chi viện vũ khí bằng đường biển vào cực Nam Tổ quốc.
+- **Tọa độ thực địa:** 8.6167, 105 (Độ chính xác: `exact`, OSM: `node/3819284725`)
+  - *Ghi chú tọa độ:* Tọa độ Tượng đài di tích Bến Vàm Lũng tại cửa rạch Vàm Lũng theo OpenStreetMap.
+  - *Nguồn tọa độ:* `src-osm`
+- **Liên kết bài học tương tác:** `duong-truong-son`
+- **Quyết định xếp hạng & Nguồn thẩm định:** [Hồ sơ Di tích lịch sử Bến Vàm Lũng – Điểm cuối Đường Hồ Chí Minh trên biển](http://dsvh.gov.vn) – *Bộ Văn hóa, Thể thao và Du lịch. Quyết định số 2377/QĐ-BVHTTDL ngày 10/11/2010.*
+
+### 1. Luận cứ & Nguồn trích dẫn (Story Sections)
+*Nội dung chi tiết 3–5 mục sẽ được hoàn thiện tại Phase 2 sau khi duyệt Roster.*
+
+### 2. Tư liệu hình ảnh (Media Evidence)
+*Hình ảnh sẽ được tải về, kiểm tra kích thước thực tế và giấy phép bản quyền tại Phase 2.*
+
+### 3. Video chính thống (Official Videos)
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
+
+---
+

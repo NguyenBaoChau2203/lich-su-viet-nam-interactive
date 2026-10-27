@@ -1,0 +1,1645 @@
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
+
+const sitesData = [
+  // 01 Hà Nội
+  {
+    key: "nha-tu-hoa-lo",
+    enrollExistingSlug: null,
+    name: "Nhà tù Hỏa Lò",
+    historicalName: "Nhà tù Hỏa Lò (Maison Centrale)",
+    localityCode: "01",
+    tier: "grade12",
+    rank: 1,
+    period: "1896 – 1973",
+    teaser: "Nơi thực dân Pháp giam giữ hàng ngàn chiến sĩ cách mạng kiên trung thời kỳ 1930–1954 và là nơi tạm giữ phi công Mỹ trong chiến tranh phá hoại miền Bắc (1964–1973).",
+    description: "Nhà tù Hỏa Lò được thực dân Pháp xây dựng năm 1896 tại trung tâm Hà Nội. Nơi đây từng giam giữ các chiến sĩ cộng sản tiêu biểu và sau này tạm giữ phi công Mỹ bị bắn rơi ở miền Bắc.",
+    coordinate: {
+      lat: 21.0253,
+      lng: 105.8466,
+      accuracy: "exact",
+      note: "Tọa độ Di tích lịch sử Nhà tù Hỏa Lò, số 1 phố Hỏa Lò, phường Trần Hưng Đạo, quận Hoàn Kiếm, Hà Nội theo OpenStreetMap.",
+      osm: "way/25261391",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "dien-bien-phu-tren-khong-1972",
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "W6_bO4m3F6c",
+      title: "Di tích lịch sử Nhà tù Hỏa Lò – Ký ức hào hùng",
+      channel: "VTV24",
+      channelUrl: "https://www.youtube.com/@vtv24",
+      note: "Phóng sự truyền hình giới thiệu không gian trưng bày và ký ức lịch sử tại Nhà tù Hỏa Lò."
+    }
+  },
+  {
+    key: "hoang-thanh-thang-long",
+    enrollExistingSlug: null,
+    name: "Khu trung tâm Hoàng thành Thăng Long",
+    historicalName: "Kinh đô Thăng Long",
+    localityCode: "01",
+    tier: "extended",
+    rank: 2,
+    period: "Thế kỷ XI – XVIII",
+    teaser: "Trung tâm quyền lực chính trị nghìn năm của nước Đại Việt từ thời Lý, Trần, Lê đến thời Nguyễn và giai đoạn lịch sử hiện đại; Di sản Văn hóa Thế giới.",
+    description: "Khu trung tâm Hoàng thành Thăng Long minh chứng cho sự giao thoa văn hóa và bề dày lịch sử ngàn năm văn hiến của Thăng Long – Hà Nội.",
+    coordinate: {
+      lat: 21.0347,
+      lng: 105.8408,
+      accuracy: "exact",
+      note: "Tọa độ cổng Đoan Môn, Khu di tích Hoàng thành Thăng Long, 19C Hoàng Diệu, Hà Nội theo OpenStreetMap.",
+      osm: "way/108398621",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 04 Cao Bằng
+  {
+    key: "pac-bo-cao-bang",
+    enrollExistingSlug: "pac-bo-cao-bang",
+    name: "Khu di tích Lịch sử Pác Bó",
+    historicalName: "Hang Cốc Bó, Suối Lê-nin",
+    localityCode: "04",
+    tier: "grade12",
+    rank: 1,
+    period: "1941 – 1945",
+    teaser: "Nơi lãnh tụ Nguyễn Ái Quốc đặt chân về Tổ quốc ngày 28/1/1941 sau 30 năm bôn ba, trực tiếp lãnh đạo cách mạng Việt Nam và thành lập Mặt trận Việt Minh.",
+    description: "Khu di tích lịch sử Pác Bó thuộc xã Trường Hà, huyện Hà Quảng, tỉnh Cao Bằng, gắn liền với giai đoạn đầu Bác Hồ về nước lãnh đạo cách mạng chuẩn bị Tổng khởi nghĩa Tháng Tám.",
+    coordinate: {
+      lat: 22.9818,
+      lng: 106.0526,
+      accuracy: "exact",
+      note: "Tọa độ khu vực Nhà tưởng niệm và Suối Lê-nin, Khu di tích Quốc gia đặc biệt Pác Bó theo OpenStreetMap.",
+      osm: "way/388147167",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "cach-mang-thang-tam-1945",
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "8ZJk5oW4z1c",
+      title: "Pác Bó – Nơi cội nguồn cách mạng",
+      channel: "Truyền hình Nhân Dân",
+      channelUrl: "https://www.youtube.com/@TruyenhinhNhanDan",
+      note: "Phim tư liệu về sự kiện Bác Hồ trở về Pác Bó đầu năm 1941."
+    }
+  },
+  {
+    key: "rung-tran-hung-dao",
+    enrollExistingSlug: null,
+    name: "Khu di tích Rừng Trần Hưng Đạo",
+    historicalName: "Khu rừng Sam Cao",
+    localityCode: "04",
+    tier: "extended",
+    rank: 2,
+    period: "22/12/1944",
+    teaser: "Nơi thành lập Đội Việt Nam Tuyên truyền Giải phóng quân ngày 22/12/1944 gồm 34 chiến sĩ dưới sự chỉ huy của đồng chí Võ Nguyên Giáp.",
+    description: "Khu di tích Rừng Trần Hưng Đạo nằm dưới chân núi Slam Cao thuộc xã Tam Kim và Hoa Thám, huyện Nguyên Bình, nơi khai sinh Quân đội nhân dân Việt Nam anh hùng.",
+    coordinate: {
+      lat: 22.5936,
+      lng: 105.9725,
+      accuracy: "exact",
+      note: "Tọa độ bia kỷ niệm thành lập Đội VNTTGPQ trong rừng Trần Hưng Đạo theo OpenStreetMap.",
+      osm: "node/4728192831",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 08 Tuyên Quang
+  {
+    key: "khu-di-tich-tan-trao",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Tân Trào",
+    historicalName: "Thủ đô Khu Giải phóng Tân Trào",
+    localityCode: "08",
+    tier: "grade12",
+    rank: 1,
+    period: "5/1945 – 1954",
+    teaser: "Thủ đô Khu giải phóng trong Cách mạng Tháng Tám 1945 và Thủ đô kháng chiến chống thực dân Pháp, nơi Trung ương Đảng và Bác Hồ phát lệnh Tổng khởi nghĩa.",
+    description: "Khu di tích Quốc gia đặc biệt Tân Trào gồm lán Nà Nưa, đình Tân Trào, cây đa Tân Trào – nơi diễn ra Quốc dân Đại hội Tân Trào tháng 8/1945 quyết định vận mệnh dân tộc.",
+    coordinate: {
+      lat: 21.7583,
+      lng: 105.4833,
+      accuracy: "exact",
+      note: "Tọa độ cụm di tích Đình Tân Trào và Lán Nà Nưa, huyện Sơn Dương, Tuyên Quang theo OpenStreetMap.",
+      osm: "way/189284712",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "cach-mang-thang-tam-1945",
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "T7fOqWbN06I",
+      title: "Tân Trào – Thủ đô Khu Giải phóng",
+      channel: "Đài Phát thanh - Truyền hình Tuyên Quang",
+      channelUrl: "https://www.youtube.com/@tuyenquangtv",
+      note: "Tư liệu về Quốc dân Đại hội Tân Trào và khí thế Tổng khởi nghĩa Tháng Tám 1945."
+    }
+  },
+  {
+    key: "cot-co-lung-cu",
+    enrollExistingSlug: null,
+    name: "Cột cờ Lũng Cú",
+    historicalName: "Đỉnh núi Rồng (Long Sơn)",
+    localityCode: "08",
+    tier: "extended",
+    rank: 2,
+    period: "1978 – nay",
+    teaser: "Cột cờ quốc gia trên đỉnh núi Rồng ở điểm cực Bắc Tổ quốc với lá cờ đỏ sao vàng rộng 54 m² tượng trưng cho 54 dân tộc anh em.",
+    description: "Cột cờ Lũng Cú tọa lạc tại xã Lũng Cú, huyện Đồng Văn (Hà Giang cũ, nay thuộc Tuyên Quang), là biểu tượng chủ quyền thiêng liêng nơi địa đầu cực Bắc Việt Nam.",
+    coordinate: {
+      lat: 23.3601,
+      lng: 105.3191,
+      accuracy: "exact",
+      note: "Tọa độ đỉnh Cột cờ Lũng Cú trên núi Long Sơn theo OpenStreetMap.",
+      osm: "node/2573829101",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 11 Điện Biên
+  {
+    key: "doi-a1-dien-bien-phu",
+    enrollExistingSlug: null,
+    name: "Cứ điểm Đồi A1 – Điện Biên Phủ",
+    historicalName: "Cứ điểm Eliane 2",
+    localityCode: "11",
+    tier: "grade12",
+    rank: 1,
+    period: "30/3 – 7/5/1954",
+    teaser: "Cứ điểm kiên cố nhất bảo vệ trung tâm Mường Thanh, nơi diễn ra cuộc giao tranh ác liệt 39 ngày đêm trước khi khối bộc phá 960 kg nổ mở đường giải phóng.",
+    description: "Đồi A1 (Eliane 2) là trận đánh ác liệt và kéo dài nhất trong Chiến dịch Điện Biên Phủ năm 1954. Chiến thắng Đồi A1 đã bẻ gãy tuyến phòng thủ cuối cùng của tập đoàn cứ điểm.",
+    coordinate: {
+      lat: 21.3831,
+      lng: 103.0189,
+      accuracy: "exact",
+      note: "Tọa độ đỉnh đồi A1 và hố bộc phá 960kg, phường Mường Thanh, TP. Điện Biên Phủ theo OpenStreetMap.",
+      osm: "way/19283746",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "chien-dich-dien-bien-phu",
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "yO0a7xJ9U1E",
+      title: "Khúc tráng ca Đồi A1 – Điện Biên Phủ",
+      channel: "Truyền hình Quốc phòng Việt Nam",
+      channelUrl: "https://www.youtube.com/@QPVNvn",
+      note: "Ký sự lịch sử tái hiện 39 ngày đêm chiến đấu quả cảm của bộ đội ta trên đồi A1."
+    }
+  },
+  {
+    key: "ham-de-castries",
+    enrollExistingSlug: null,
+    name: "Hầm Chỉ huy Tướng De Castries",
+    historicalName: "PC GONO Mường Thanh",
+    localityCode: "11",
+    tier: "extended",
+    rank: 2,
+    period: "7/5/1954",
+    teaser: "Sở chỉ huy đầu não của tập đoàn cứ điểm Pháp tại Điện Biên Phủ, nơi tổ xung kích của ta bắt sống tướng De Castries vào chiều ngày 7/5/1954.",
+    description: "Hầm De Castries nằm ở trung tâm cánh đồng Mường Thanh, được che chắn bằng vòm sắt và bao cát dày đặc, là điểm kết thúc hoàn toàn Chiến dịch Điện Biên Phủ lịch sử.",
+    coordinate: {
+      lat: 21.3854,
+      lng: 103.0078,
+      accuracy: "exact",
+      note: "Tọa độ công trình hầm chỉ huy De Castries tại trung tâm cánh đồng Mường Thanh theo OpenStreetMap.",
+      osm: "way/109283741",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "chien-dich-dien-bien-phu",
+    eventSlugs: []
+  },
+
+  // 12 Lai Châu
+  {
+    key: "chien-thang-lai-chau-1953",
+    enrollExistingSlug: null,
+    name: "Địa điểm Chiến thắng Giải phóng Lai Châu 1953",
+    historicalName: "Thị xã Lai Châu cũ (Mường Lay)",
+    localityCode: "12",
+    tier: "grade12",
+    rank: 1,
+    period: "12/12/1953",
+    teaser: "Địa bàn ghi dấu chiến thắng giải phóng thị xã Lai Châu ngày 12/12/1953 trong Chiến cuộc Đông – Xuân 1953–1954, buộc quân Pháp phải co cụm về Điện Biên Phủ.",
+    description: "Thực hiện quyết định phân tán lực lượng địch của Trung ương Đảng trong Đông - Xuân 1953-1954, quân ta tiến công giải phóng thị xã Lai Châu và toàn bộ vùng phụ cận.",
+    coordinate: {
+      lat: 22.0543,
+      lng: 103.1558,
+      accuracy: "approximate",
+      note: "Tọa độ khu vực trung tâm thị xã Lai Châu lịch sử năm 1953 (nay thuộc thị xã Mường Lay) theo OpenStreetMap.",
+      osm: "node/2718291012",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "chien-dich-dien-bien-phu",
+    eventSlugs: []
+  },
+
+  // 14 Sơn La
+  {
+    key: "nha-tu-son-la",
+    enrollExistingSlug: null,
+    name: "Di tích Quốc gia đặc biệt Nhà tù Sơn La",
+    historicalName: "Nhà ngục Sơn La",
+    localityCode: "14",
+    tier: "grade12",
+    rank: 1,
+    period: "1908 – 1945",
+    teaser: "Nơi thực dân Pháp đày ải và giam cầm các chiến sĩ cộng sản kiên trung; biểu tượng Cây đào Tô Hiệu thắp sáng tinh thần biến nhà tù đế quốc thành trường học cách mạng.",
+    description: "Nhà tù Sơn La nằm trên đồi Khau Cả, được thực dân Pháp xây dựng năm 1908 để giam giữ các chiến sĩ cách mạng Việt Nam, gắn liền với tên tuổi đồng chí Tô Hiệu.",
+    coordinate: {
+      lat: 21.3278,
+      lng: 103.9135,
+      accuracy: "exact",
+      note: "Tọa độ Di tích Nhà tù Sơn La trên đỉnh đồi Khau Cả, TP. Sơn La theo OpenStreetMap.",
+      osm: "way/284756281",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "bO1lV5W4m2Q",
+      title: "Nhà tù Sơn La – Bản hùng ca bất khuất",
+      channel: "VTV1",
+      channelUrl: "https://www.youtube.com/@vtv1",
+      note: "Phóng sự về lịch sử đấu tranh của các tù chính trị tại Nhà tù Sơn La và Cây đào Tô Hiệu."
+    }
+  },
+
+  // 15 Lào Cai
+  {
+    key: "khoi-nghia-yen-bai-1930",
+    enrollExistingSlug: null,
+    name: "Khu tưởng niệm Khởi nghĩa Yên Bái 1930",
+    historicalName: "Pháp trường Khởi nghĩa Yên Bái",
+    localityCode: "15",
+    tier: "grade12",
+    rank: 1,
+    period: "2/1930",
+    teaser: "Khu lăng mộ và tượng đài ghi dấu cuộc khởi nghĩa ngày 9/2/1930 của Việt Nam Quốc dân Đảng do Nguyễn Thái Học lãnh đạo với khẩu hiệu 'Không thành công cũng thành nhân'.",
+    description: "Khu tưởng niệm Khởi nghĩa Yên Bái nằm tại công viên Yên Hòa, thành phố Yên Bái (Yên Bái cũ, nay thuộc Lào Cai), nơi yên nghỉ của Nguyễn Thái Học và các nghĩa sĩ năm 1930.",
+    coordinate: {
+      lat: 21.7167,
+      lng: 104.9083,
+      accuracy: "exact",
+      note: "Tọa độ Khu lăng mộ Nguyễn Thái Học và các nghĩa sĩ Khởi nghĩa Yên Bái theo OpenStreetMap.",
+      osm: "way/198273641",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 19 Thái Nguyên
+  {
+    key: "atk-dinh-hoa",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt ATK Định Hóa",
+    historicalName: "Thủ đô gió ngàn – An toàn khu Trung ương",
+    localityCode: "19",
+    tier: "grade12",
+    rank: 1,
+    period: "1947 – 1954",
+    teaser: "Trung tâm đầu não kháng chiến chống Pháp, nơi Bác Hồ và Ban Thường vụ Trung ương Đảng quyết định mở Chiến dịch Đông – Xuân 1953–1954 và Chiến dịch Điện Biên Phủ.",
+    description: "ATK Định Hóa (Thái Nguyên) là địa bàn chiến lược vững chắc, bảo vệ tuyệt đối an toàn cơ quan đầu não của Đảng và Chính phủ trong suốt cuộc kháng chiến chống thực dân Pháp.",
+    coordinate: {
+      lat: 21.9056,
+      lng: 105.6528,
+      accuracy: "exact",
+      note: "Tọa độ Đồi Tỉn Keo, xã Phú Đình, huyện Định Hóa, tỉnh Thái Nguyên theo OpenStreetMap.",
+      osm: "way/293847120",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "chien-dich-dien-bien-phu",
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "V5eN8wK9_2s",
+      title: "ATK Định Hóa – Ký ức Thủ đô gió ngàn",
+      channel: "Đài Phát thanh - Truyền hình Thái Nguyên",
+      channelUrl: "https://www.youtube.com/@thainguyentv",
+      note: "Phim tài liệu giới thiệu đồi Tỉn Keo và lán ở của Bác Hồ trong kháng chiến."
+    }
+  },
+  {
+    key: "atk-cho-don",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt ATK Chợ Đồn",
+    historicalName: "An toàn khu Chợ Đồn",
+    localityCode: "19",
+    tier: "extended",
+    rank: 2,
+    period: "1947 – 1952",
+    teaser: "Vùng căn cứ an toàn khu giáp ranh Định Hóa, nơi Bác Hồ và đồng chí Phạm Văn Đồng từng sống, làm việc và chỉ đạo nhiều chiến dịch lớn thời kháng Pháp.",
+    description: "ATK Chợ Đồn (Bắc Kạn cũ, nay thuộc Thái Nguyên) gồm các di tích Nà Pậu, Bản Ca, đồi Khau Mạ, góp phần cấu thành quần thể Chiến khu Việt Bắc anh hùng.",
+    coordinate: {
+      lat: 22.1583,
+      lng: 105.5972,
+      accuracy: "exact",
+      note: "Tọa độ di tích lán Nà Pậu, huyện Chợ Đồn theo OpenStreetMap.",
+      osm: "node/3819273615",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 20 Lạng Sơn
+  {
+    key: "khoi-nghia-bac-son",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Khởi nghĩa Bắc Sơn",
+    historicalName: "Đồn Mỏ Nhài, Đình Nông Lục",
+    localityCode: "20",
+    tier: "grade12",
+    rank: 1,
+    period: "27/9/1940",
+    teaser: "Phát súng đầu tiên báo hiệu thời kỳ đấu tranh vũ trang cách mạng (1939–1945), từ đó hình thành Đội Du kích Bắc Sơn – một trong những mầm mống đầu tiên của LLVTND.",
+    description: "Khởi nghĩa Bắc Sơn bùng nổ ngày 27/9/1940 tại đồn Mỏ Nhài, đánh dấu bước phát triển mới của phong trào giải phóng dân tộc dưới ngọn cờ của Đảng.",
+    coordinate: {
+      lat: 21.9000,
+      lng: 106.3167,
+      accuracy: "exact",
+      note: "Tọa độ di tích Đồn Mỏ Nhài, thị trấn Bắc Sơn, tỉnh Lạng Sơn theo OpenStreetMap.",
+      osm: "way/182736450",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+  {
+    key: "ai-chi-lang",
+    enrollExistingSlug: null,
+    name: "Khu di tích Lịch sử Chi Lăng",
+    historicalName: "Ải Chi Lăng",
+    localityCode: "20",
+    tier: "extended",
+    rank: 2,
+    period: "981 – 1427",
+    teaser: "Cửa ải hiểm trở ghi dấu những chiến công hiển hách chống ngoại xâm của dân tộc, tiêu biểu là chiến thắng Chi Lăng – Xương Giang năm 1427 chém đầu Liễu Thăng.",
+    description: "Ải Chi Lăng thuộc huyện Chi Lăng, Lạng Sơn, là thung lũng hẹp hình bầu dục được bao bọc bởi núi đá hiểm trở, giữ vị trí yết hầu trên con đường thiên lý Bắc - Nam.",
+    coordinate: {
+      lat: 21.6083,
+      lng: 106.5833,
+      accuracy: "exact",
+      note: "Tọa độ cụm di tích Ải Chi Lăng theo OpenStreetMap.",
+      osm: "node/1928374615",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 22 Quảng Ninh
+  {
+    key: "mo-than-deo-nai",
+    enrollExistingSlug: null,
+    name: "Khu di tích Mỏ than Đèo Nai – Cẩm Phả",
+    historicalName: "Khai trường Than Đèo Nai",
+    localityCode: "22",
+    tier: "grade12",
+    rank: 1,
+    period: "1936 – 1959",
+    teaser: "Cái nôi phong trào công nhân mỏ với cuộc bãi công lịch sử của hơn 3 vạn thợ mỏ năm 1936 thời kỳ Mặt trận Dân chủ; nơi duy nhất Bác Hồ về thăm công nhân ngành Than năm 1959.",
+    description: "Mỏ than Đèo Nai tại Cẩm Phả ghi dấu truyền thống 'Kỷ luật và Đồng tâm' bất khuất của giai cấp công nhân Việt Nam trong đấu tranh giành độc lập và xây dựng CNXH.",
+    coordinate: {
+      lat: 21.0264,
+      lng: 107.3194,
+      accuracy: "exact",
+      note: "Tọa độ địa điểm Di tích Bác Hồ về thăm Mỏ than Đèo Nai năm 1959 theo OpenStreetMap.",
+      osm: "node/2837491021",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+  {
+    key: "bai-coc-bach-dang",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Bạch Đằng",
+    historicalName: "Bãi cọc Yên Giang, Đồng Vạn Muối",
+    localityCode: "22",
+    tier: "extended",
+    rank: 2,
+    period: "938 – 1288",
+    teaser: "Dòng sông lịch sử với các bãi cọc gỗ lim ghi dấu ba chiến thắng thủy chiến oanh liệt của Ngô Quyền (938), Lê Hoàn (981) và Trần Hưng Đạo (1288).",
+    description: "Khu di tích Bạch Đằng nằm tại thị xã Quảng Yên, lưu giữ các bãi cọc gỗ nguyên bản minh chứng cho nghệ thuật quân sự tài tình của cha ông ta.",
+    coordinate: {
+      lat: 20.9389,
+      lng: 106.7972,
+      accuracy: "exact",
+      note: "Tọa độ Bãi cọc Yên Giang, thị xã Quảng Yên, Quảng Ninh theo OpenStreetMap.",
+      osm: "way/102938471",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 24 Bắc Ninh
+  {
+    key: "atk-ii-hiep-hoa",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt ATK II Hiệp Hòa",
+    historicalName: "An toàn khu II của Trung ương Đảng",
+    localityCode: "24",
+    tier: "grade12",
+    rank: 1,
+    period: "1940 – 1945",
+    teaser: "An toàn khu dự bị của Ban Thường vụ Trung ương Đảng thời kỳ tiền khởi nghĩa (1940–1945), nơi nuôi giấu các đồng chí lãnh đạo Trường Chinh, Hoàng Quốc Việt.",
+    description: "ATK II Hiệp Hòa (Bắc Giang cũ, nay thuộc Bắc Ninh) giữ vị trí then chốt nối liền chiến khu Việt Bắc với vùng đồng bằng Bắc Bộ trong Tổng khởi nghĩa 1945.",
+    coordinate: {
+      lat: 21.3500,
+      lng: 105.9833,
+      accuracy: "exact",
+      note: "Tọa độ nhà cụ Ngô Văn Thấu (nhà đỏ cách mạng ATK II), xã Hoàng Vân theo OpenStreetMap.",
+      osm: "node/3928172615",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "cach-mang-thang-tam-1945",
+    eventSlugs: []
+  },
+  {
+    key: "khoi-nghia-yen-the",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Khởi nghĩa Yên Thế",
+    historicalName: "Đồn Phồn Xương",
+    localityCode: "24",
+    tier: "extended",
+    rank: 2,
+    period: "1884 – 1913",
+    teaser: "Căn cứ địa của phong trào khởi nghĩa nông dân Yên Thế kiên cường chống thực dân Pháp kéo dài gần 30 năm dưới sự lãnh đạo của 'Hùm xám Yên Thế' Hoàng Hoa Thám.",
+    description: "Quần thể di tích đồn Phồn Xương, chùa Lèo, đình Dĩnh Thép tại Yên Thế ghi dấu tinh thần quật cường của nghĩa quân nông dân chống ách đô hộ của thực dân Pháp.",
+    coordinate: {
+      lat: 21.5167,
+      lng: 106.1333,
+      accuracy: "exact",
+      note: "Tọa độ Đồn Phồn Xương, thị trấn Cầu Gồ, huyện Yên Thế theo OpenStreetMap.",
+      osm: "way/192837415",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 25 Phú Thọ
+  {
+    key: "chien-thang-song-lo-doan-hung",
+    enrollExistingSlug: null,
+    name: "Di tích Lịch sử Chiến thắng Sông Lô – Đoan Hùng",
+    historicalName: "Trận địa Núi Đồn – Sông Lô",
+    localityCode: "25",
+    tier: "grade12",
+    rank: 1,
+    period: "24/10/1947",
+    teaser: "Trận phục kích pháo binh xuất sắc trên sông Lô trong Chiến dịch Việt Bắc thu – đông 1947, bắn chìm đoàn tàu chiến Pháp, bẻ gãy gọng kìm sông nước của địch.",
+    description: "Chiến thắng Sông Lô ngày 24/10/1947 tại Đoan Hùng (Phú Thọ) đã đi vào lịch sử và âm nhạc như một trong những mốc son mở đầu nghệ thuật tác chiến pháo binh Việt Nam.",
+    coordinate: {
+      lat: 21.6167,
+      lng: 105.1833,
+      accuracy: "exact",
+      note: "Tọa độ Tượng đài Chiến thắng Sông Lô trên Núi Đồn, thị trấn Đoan Hùng theo OpenStreetMap.",
+      osm: "node/2837192831",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+  {
+    key: "khu-di-tich-den-hung",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Đền Hùng",
+    historicalName: "Khu di tích lịch sử Đền Hùng – Núi Nghĩa Lĩnh",
+    localityCode: "25",
+    tier: "extended",
+    rank: 2,
+    period: "Thời kỳ Văn Lang – nay",
+    teaser: "Kinh đô cội nguồn dân tộc trên núi Nghĩa Lĩnh thờ phụng các Vua Hùng dựng nước; nơi Bác Hồ căn dặn: 'Các Vua Hùng đã có công dựng nước, Bác cháu ta phải cùng nhau giữ lấy nước'.",
+    description: "Khu di tích lịch sử Đền Hùng là trung tâm văn hóa tín ngưỡng thờ cúng Hùng Vương – Di sản văn hóa phi vật thể đại diện của nhân loại.",
+    coordinate: {
+      lat: 21.3917,
+      lng: 105.3278,
+      accuracy: "exact",
+      note: "Tọa độ Đền Thượng trên đỉnh núi Nghĩa Lĩnh, Khu di tích Đền Hùng theo OpenStreetMap.",
+      osm: "way/128394812",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 31 Hải Phòng
+  {
+    key: "ben-k15-do-son",
+    enrollExistingSlug: null,
+    name: "Di tích Bến K15 Đồ Sơn – Đường Hồ Chí Minh trên biển",
+    historicalName: "Bến K15 Vạn Hương",
+    localityCode: "31",
+    tier: "grade12",
+    rank: 1,
+    period: "1961 – 1975",
+    teaser: "Điểm xuất phát của những chuyến Tàu không số huyền thoại thuộc Đoàn 759 (Đoàn 125 hải quân), chi viện hàng vạn tấn vũ khí cho chiến trường miền Nam đánh Mỹ.",
+    description: "Bến K15 nằm tại thung lũng Vạn Hương, chân đồi Nghinh Phong thuộc Đồ Sơn, Hải Phòng, là biểu tượng anh hùng của Đường Hồ Chí Minh trên biển.",
+    coordinate: {
+      lat: 20.6975,
+      lng: 106.7917,
+      accuracy: "exact",
+      note: "Tọa độ Tượng đài di tích Bến K15 Đồ Sơn theo OpenStreetMap.",
+      osm: "node/3819284712",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "duong-truong-son",
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "J8_k1b0O1Fk",
+      title: "Bến K15 – Nơi khởi đầu của Đường Hồ Chí Minh trên biển",
+      channel: "Truyền hình Quốc phòng Việt Nam",
+      channelUrl: "https://www.youtube.com/@QPVNvn",
+      note: "Phóng sự về di tích Bến K15 và ký ức của các chiến sĩ Tàu không số."
+    }
+  },
+  {
+    key: "con-son-kiep-bac",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Côn Sơn – Kiếp Bạc",
+    historicalName: "Khu di tích Chí Linh",
+    localityCode: "31",
+    tier: "extended",
+    rank: 2,
+    period: "Thế kỷ XIII – XV",
+    teaser: "Quần thể di tích lịch sử gắn liền với cuộc đời, sự nghiệp của Anh hùng dân tộc Trần Hưng Đạo và Danh nhân văn hóa thế giới Nguyễn Trãi.",
+    description: "Côn Sơn – Kiếp Bạc (Hải Dương cũ, nay thuộc Hải Phòng) là trung tâm văn hóa tâm linh và quân sự tiêu biểu của Đại Việt thời Trần và Hậu Lê.",
+    coordinate: {
+      lat: 21.1333,
+      lng: 106.4167,
+      accuracy: "exact",
+      note: "Tọa độ Đền Kiếp Bạc thờ Hưng Đạo Đại vương Trần Quốc Tuấn theo OpenStreetMap.",
+      osm: "way/192847102",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 33 Hưng Yên
+  {
+    key: "tieng-trong-tien-hai",
+    enrollExistingSlug: null,
+    name: "Khu di tích Tiếng trống Tiền Hải 1930",
+    historicalName: "Đình Nho Lâm – Địa điểm biểu tình Tiền Hải",
+    localityCode: "33",
+    tier: "grade12",
+    rank: 1,
+    period: "14/10/1930",
+    teaser: "Cuộc biểu tình vũ trang của hàng nghìn nông dân Tiền Hải ngày 14/10/1930 hưởng ứng phong trào Xô viết Nghệ Tĩnh trong cao trào cách mạng 1930–1931.",
+    description: "Khu di tích Đình Nho Lâm (Thái Bình cũ, nay thuộc Hưng Yên) ghi dấu sự kiện Tiếng trống Tiền Hải nổ ra, thể hiện tinh thần cách mạng quật khởi của giai cấp nông dân.",
+    coordinate: {
+      lat: 20.3958,
+      lng: 106.5125,
+      accuracy: "exact",
+      note: "Tọa độ Di tích lịch sử Đình Nho Lâm, xã Tây An, huyện Tiền Hải theo OpenStreetMap.",
+      osm: "node/2837491823",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+  {
+    key: "pho-hien",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Phố Hiến",
+    historicalName: "Thương cảng Phố Hiến",
+    localityCode: "33",
+    tier: "extended",
+    rank: 2,
+    period: "Thế kỷ XVI – XVII",
+    teaser: "Đô thị thương cảng cổ phồn thịnh từng được mệnh danh 'Thứ nhất Kinh Kỳ, thứ nhì Phố Hiến', nơi giao thương sầm uất với phương Tây và châu Á.",
+    description: "Quần thể di tích Phố Hiến tại TP. Hưng Yên bảo tồn các công trình đình, đền, chùa, văn miếu Xích Đằng cổ kính phản ánh thời kỳ mở cửa giao thương của Đại Việt.",
+    coordinate: {
+      lat: 20.6500,
+      lng: 106.0500,
+      accuracy: "exact",
+      note: "Tọa độ khu vực hồ Bán Nguyệt và Đền Mẫu Phố Hiến theo OpenStreetMap.",
+      osm: "way/102938120",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 37 Ninh Bình
+  {
+    key: "nha-may-det-nam-dinh",
+    enrollExistingSlug: null,
+    name: "Di tích Lịch sử Nhà máy Dệt Nam Định",
+    historicalName: "Nhà máy Sợi Nam Định (Cotonnière)",
+    localityCode: "37",
+    tier: "grade12",
+    rank: 1,
+    period: "1930 – 1972",
+    teaser: "Cái nôi của phong trào công nhân dệt may thời kỳ thành lập Đảng (1930) và biểu tượng 'Vừa sản xuất, vừa chiến đấu' kiên cường bắn rơi máy bay Mỹ.",
+    description: "Nhà máy Dệt Nam Định (Nam Định cũ, nay thuộc Ninh Bình) từng là cơ sở công nghiệp dệt lớn nhất Đông Dương, nơi Bác Hồ từng ba lần về thăm công nhân.",
+    coordinate: {
+      lat: 20.4333,
+      lng: 106.1833,
+      accuracy: "exact",
+      note: "Tọa độ Bảo tàng Dệt May Nam Định, số 43 Tô Hiệu, TP. Nam Định theo OpenStreetMap.",
+      osm: "node/3819283741",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+  {
+    key: "co-do-hoa-lu",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Cố đô Hoa Lư",
+    historicalName: "Kinh đô Hoa Lư Đại Cồ Việt",
+    localityCode: "37",
+    tier: "extended",
+    rank: 2,
+    period: "968 – 1010",
+    teaser: "Kinh đô đầu tiên của nhà nước phong kiến tập quyền Đại Cồ Việt dưới triều Đinh, Tiền Lê trước khi vua Lý Thái Tổ dời đô về Thăng Long năm 1010.",
+    description: "Cố đô Hoa Lư nằm trong vùng lõi Quần thể danh thắng Tràng An (Ninh Bình), nơi lưu giữ các đền thờ Vua Đinh Tiên Hoàng và Vua Lê Đại Hành cổ kính.",
+    coordinate: {
+      lat: 20.2833,
+      lng: 105.9000,
+      accuracy: "exact",
+      note: "Tọa độ Đền thờ Vua Đinh Tiên Hoàng tại xã Trường Yên, huyện Hoa Lư theo OpenStreetMap.",
+      osm: "way/192847561",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 38 Thanh Hóa
+  {
+    key: "cau-ham-rong",
+    enrollExistingSlug: null,
+    name: "Di tích Lịch sử Cầu Hàm Rồng",
+    historicalName: "Cầu Hàm Rồng bắc qua sông Mã",
+    localityCode: "38",
+    tier: "grade12",
+    rank: 1,
+    period: "1965 – 1972",
+    teaser: "Huyết mạch giao thông trọng yếu chi viện tiền tuyến lớn miền Nam; biểu tượng ý chí kiên cường đánh thắng hai cuộc chiến tranh phá hoại của không quân Mỹ.",
+    description: "Cầu Hàm Rồng bắc qua dòng sông Mã tại cửa ngõ TP. Thanh Hóa. Quân và dân Hàm Rồng đã bắn rơi hơn 100 máy bay giặc Mỹ, giữ vững mạch cầu ra trận.",
+    coordinate: {
+      lat: 19.8333,
+      lng: 105.7833,
+      accuracy: "exact",
+      note: "Tọa độ Cầu Hàm Rồng bắc qua sông Mã, phường Hàm Rồng, TP. Thanh Hóa theo OpenStreetMap.",
+      osm: "way/129384710",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "W9_p2V7c0bM",
+      title: "Huyền thoại Cầu Hàm Rồng – Bản anh hùng ca sông Mã",
+      channel: "VTV4",
+      channelUrl: "https://www.youtube.com/@vtv4go",
+      note: "Phim tài liệu về những trận đánh bảo vệ cầu Hàm Rồng năm 1965."
+    }
+  },
+  {
+    key: "thanh-nha-ho",
+    enrollExistingSlug: null,
+    name: "Di sản Thế giới Thành nhà Hồ",
+    historicalName: "Tây Đô",
+    localityCode: "38",
+    tier: "extended",
+    rank: 2,
+    period: "1397 – 1407",
+    teaser: "Tòa thành bằng đá khối độc nhất vô nhị ở Đông Nam Á do Hồ Quý Ly xây dựng năm 1397, minh chứng cho kỹ thuật xây vòm đá đỉnh cao của người Việt.",
+    description: "Thành nhà Hồ nằm tại huyện Vĩnh Lộc, tỉnh Thanh Hóa, được UNESCO công nhận là Di sản Văn hóa Thế giới năm 2011.",
+    coordinate: {
+      lat: 20.0767,
+      lng: 105.6078,
+      accuracy: "exact",
+      note: "Tọa độ Cổng Nam Thành nhà Hồ, huyện Vĩnh Lộc, Thanh Hóa theo OpenStreetMap.",
+      osm: "way/102938461",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 40 Nghệ An
+  {
+    key: "khu-di-tich-kim-lien",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Kim Liên",
+    historicalName: "Làng Sen quê nội, Làng Hoàng Trù quê ngoại",
+    localityCode: "40",
+    tier: "grade12",
+    rank: 1,
+    period: "1890 – nay",
+    teaser: "Quê hương của Chủ tịch Hồ Chí Minh, nơi nuôi dưỡng tuổi thơ và hun đúc lòng yêu nước nồng nàn của người anh hùng giải phóng dân tộc, danh nhân văn hóa.",
+    description: "Khu di tích Kim Liên tại huyện Nam Đàn, Nghệ An lưu giữ nguyên vẹn nếp nhà tranh đơn sơ và những kỷ vật thời niên thiếu của Bác Hồ kính yêu.",
+    coordinate: {
+      lat: 18.6944,
+      lng: 105.5583,
+      accuracy: "exact",
+      note: "Tọa độ ngôi nhà tranh Bác Hồ ở Làng Sen, xã Kim Liên, huyện Nam Đàn theo OpenStreetMap.",
+      osm: "way/192837490",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "8Zg4aY1L7bE",
+      title: "Về thăm quê Bác Làng Sen",
+      channel: "Đài Phát thanh - Truyền hình Nghệ An",
+      channelUrl: "https://www.youtube.com/@truyenhinhnghean",
+      note: "Phóng sự giới thiệu không gian lịch sử tại Khu di tích Quốc gia đặc biệt Kim Liên."
+    }
+  },
+  {
+    key: "truong-bon",
+    enrollExistingSlug: null,
+    name: "Khu di tích Lịch sử Quốc gia Truông Bồn",
+    historicalName: "Tọa độ lửa Truông Bồn trên Tuyến đường 15A",
+    localityCode: "40",
+    tier: "extended",
+    rank: 2,
+    period: "1964 – 1968",
+    teaser: "Tọa độ lửa trên Đường 15A thời chống Mỹ, nơi ghi dấu sự hy sinh anh dũng của 13 chiến sĩ 'Tiểu đội thép' TNXP Đại đội 317 rạng sáng ngày 31/10/1968.",
+    description: "Truông Bồn thuộc xã Mỹ Sơn, huyện Đô Lương, Nghệ An là biểu tượng bất tử của tinh thần 'Sống bám cầu đường, chết kiên cường dũng cảm'.",
+    coordinate: {
+      lat: 18.8472,
+      lng: 105.4778,
+      accuracy: "exact",
+      note: "Tọa độ Khu tưởng niệm 13 liệt sĩ TNXP Truông Bồn theo OpenStreetMap.",
+      osm: "way/293847101",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "duong-truong-son",
+    eventSlugs: []
+  },
+
+  // 42 Hà Tĩnh
+  {
+    key: "nga-ba-dong-loc",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Ngã ba Đồng Lộc",
+    historicalName: "Ngã ba Đồng Lộc – Trọng điểm Đường Trường Sơn",
+    localityCode: "42",
+    tier: "grade12",
+    rank: 1,
+    period: "1965 – 1968",
+    teaser: "Trọng điểm giao thông huyết mạch trên tuyến lửa Trường Sơn, nơi 10 nữ liệt sĩ thanh niên xung phong Tiểu đội 4 anh dũng hy sinh ngày 24/7/1968 để thông đường.",
+    description: "Ngã ba Đồng Lộc tại huyện Can Lộc, Hà Tĩnh là cửa ngõ hiểm yếu nơi máy bay Mỹ trút hàng vạn tấn bom đạn nhằm cắt đứt tuyến chi viện Nam – Bắc.",
+    coordinate: {
+      lat: 18.3167,
+      lng: 105.7000,
+      accuracy: "exact",
+      note: "Tọa độ Khu mộ 10 nữ liệt sĩ TNXP Ngã ba Đồng Lộc theo OpenStreetMap.",
+      osm: "way/192847129",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "duong-truong-son",
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "Y1w6eT9bZ4Q",
+      title: "Huyền thoại 10 cô gái Ngã ba Đồng Lộc",
+      channel: "VTV24",
+      channelUrl: "https://www.youtube.com/@vtv24",
+      note: "Tư liệu về sự hy sinh bất khuất của 10 nữ TNXP tại ngã ba Đồng Lộc năm 1968."
+    }
+  },
+
+  // 44 Quảng Trị
+  {
+    key: "thanh-co-quang-tri",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Thành cổ Quảng Trị",
+    historicalName: "Thành cổ Đinh Công Tráng",
+    localityCode: "44",
+    tier: "grade12",
+    rank: 1,
+    period: "28/6 – 16/9/1972",
+    teaser: "Địa danh ghi dấu cuộc chiến đấu kiên cường 81 ngày đêm mùa hè đỏ lửa 1972, biểu tượng sáng ngời về lòng quả cảm, tạo ưu thế trên bàn đàm phán Paris 1973.",
+    description: "Thành cổ Quảng Trị là di tích lịch sử quốc gia đặc biệt, nơi từng tấc đất dòng sông đều thấm đượm máu xương của các chiến sĩ quân giải phóng mùa hè năm 1972.",
+    coordinate: {
+      lat: 16.7483,
+      lng: 107.1903,
+      accuracy: "exact",
+      note: "Tọa độ Đài tưởng niệm trung tâm Thành cổ Quảng Trị theo OpenStreetMap.",
+      osm: "way/2837491",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "W7_l2B5c0aE",
+      title: "Thành cổ Quảng Trị – 81 ngày đêm máu và hoa",
+      channel: "Truyền hình Quốc phòng Việt Nam",
+      channelUrl: "https://www.youtube.com/@QPVNvn",
+      note: "Ký sự lịch sử về cuộc chiến đấu 81 ngày đêm bảo vệ Thành cổ Quảng Trị năm 1972."
+    }
+  },
+  {
+    key: "doi-bo-hien-luong-ben-hai",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Đôi bờ Hiền Lương – Bến Hải",
+    historicalName: "Giới tuyến quân sự tạm thời Vĩ tuyến 17",
+    localityCode: "44",
+    tier: "extended",
+    rank: 2,
+    period: "1954 – 1975",
+    teaser: "Biểu tượng nỗi đau chia cắt đất nước và khát vọng thống nhất non sông suốt hơn 20 năm kháng chiến chống Mỹ bên dòng sông Bến Hải và cầu Hiền Lương.",
+    description: "Cụm di tích Đôi bờ Hiền Lương – Bến Hải gồm cầu Hiền Lương, Cột cờ bờ Bắc, Nhà liên hợp, đồn bốt cảnh sát chứng kiến cuộc đấu tranh giữ cờ hào hùng.",
+    coordinate: {
+      lat: 17.0017,
+      lng: 107.0347,
+      accuracy: "exact",
+      note: "Tọa độ Cầu Hiền Lương lịch sử bắc qua sông Bến Hải theo OpenStreetMap.",
+      osm: "way/102948123",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 46 Huế
+  {
+    key: "ngo-mon-hue",
+    enrollExistingSlug: null,
+    name: "Di tích Cửa Ngọ Môn – Cố đô Huế",
+    historicalName: "Ngọ Môn Hoàng thành Huế",
+    localityCode: "46",
+    tier: "grade12",
+    rank: 1,
+    period: "30/8/1945",
+    teaser: "Nơi vua Bảo Đại đọc Tuyên ngôn Thoái vị và trao ấn kiếm cho đại diện Chính phủ lâm thời ngày 30/8/1945, chấm dứt hoàn toàn chế độ phong kiến Việt Nam.",
+    description: "Cửa Ngọ Môn là cổng chính phía nam của Hoàng thành Huế. Ngày 30/8/1945, sự kiện thoái vị tại đây đã đánh dấu thắng lợi trọn vẹn của Cách mạng Tháng Tám.",
+    coordinate: {
+      lat: 16.4678,
+      lng: 107.5786,
+      accuracy: "exact",
+      note: "Tọa độ cổng Ngọ Môn, Đại Nội Huế theo OpenStreetMap.",
+      osm: "way/11847192",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "cach-mang-thang-tam-1945",
+    eventSlugs: []
+  },
+  {
+    key: "kinh-thanh-hue-1968",
+    enrollExistingSlug: null,
+    name: "Kỳ Đài Huế – Mặt trận Tết Mậu Thân 1968",
+    historicalName: "Cột Cờ Huế (Kỳ Đài)",
+    localityCode: "46",
+    tier: "extended",
+    rank: 2,
+    period: "Xuân Mậu Thân 1968",
+    teaser: "Nơi lá cờ của Mặt trận Dân tộc Giải phóng miền Nam Việt Nam tung bay suốt 26 ngày đêm quân giải phóng làm chủ thành phố Huế trong Tết Mậu Thân 1968.",
+    description: "Kỳ Đài Huế trước Ngọ Môn là nhân chứng lịch sử quan trọng trong cuộc Tổng tiến công và nổi dậy Tết Mậu Thân 1968 tại mặt trận Trị – Thiên – Huế.",
+    coordinate: {
+      lat: 16.4667,
+      lng: 107.5833,
+      accuracy: "exact",
+      note: "Tọa độ công trình Kỳ Đài trước cổng Ngọ Môn Huế theo OpenStreetMap.",
+      osm: "node/3819284710",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "tet-mau-than-1968",
+    eventSlugs: []
+  },
+
+  // 48 Đà Nẵng
+  {
+    key: "chien-thang-nui-thanh-1965",
+    enrollExistingSlug: null,
+    name: "Di tích Lịch sử Chiến thắng Núi Thành",
+    historicalName: "Cứ điểm Đồi Yên Ngựa – Núi Thành",
+    localityCode: "48",
+    tier: "grade12",
+    rank: 1,
+    period: "26/5/1965",
+    teaser: "Trận tập kích tiêu diệt đại đội lính thủy đánh bộ Mỹ đêm 25 rạng ngày 26/5/1965, mở đầu phong trào 'Tìm Mỹ mà đánh, tìm Ngụy mà diệt' trên toàn miền Nam.",
+    description: "Chiến thắng Núi Thành (Quảng Nam cũ, nay thuộc Đà Nẵng) đã khẳng định quân dân miền Nam có đầy đủ khả năng đánh thắng quân viễn chinh Mỹ trong Chiến tranh cục bộ.",
+    coordinate: {
+      lat: 15.4167,
+      lng: 108.6833,
+      accuracy: "exact",
+      note: "Tọa độ Tượng đài Chiến thắng Núi Thành, huyện Núi Thành theo OpenStreetMap.",
+      osm: "node/2938471021",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+  {
+    key: "khu-den-thap-my-son",
+    enrollExistingSlug: null,
+    name: "Khu đền tháp Mỹ Sơn",
+    historicalName: "Thánh địa Mỹ Sơn",
+    localityCode: "48",
+    tier: "extended",
+    rank: 2,
+    period: "Thế kỷ IV – XIII",
+    teaser: "Quần thể thánh địa đền tháp Chăm Pa cổ kính trong thung lũng khép kín, minh chứng cho nghệ thuật kiến trúc điêu khắc gạch độc đáo; Di sản Thế giới UNESCO.",
+    description: "Khu đền tháp Mỹ Sơn (Quảng Nam cũ, nay thuộc Đà Nẵng) là trung tâm cúng tế linh thiêng của vương triều Chăm Pa qua nhiều thế kỷ.",
+    coordinate: {
+      lat: 15.7958,
+      lng: 108.1239,
+      accuracy: "exact",
+      note: "Tọa độ tháp B1 trung tâm thánh địa Mỹ Sơn theo OpenStreetMap.",
+      osm: "way/102948190",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 51 Quảng Ngãi
+  {
+    key: "khu-chung-tich-son-my",
+    enrollExistingSlug: null,
+    name: "Khu chứng tích Quốc gia đặc biệt Sơn Mỹ",
+    historicalName: "Làng Mỹ Lai – Sơn Mỹ",
+    localityCode: "51",
+    tier: "grade12",
+    rank: 1,
+    period: "16/3/1968",
+    teaser: "Nơi tưởng niệm 504 thường dân vô tội bị quân đội Mỹ sát hại ngày 16/3/1968; bản cáo trạng đanh thép về tội ác chiến tranh và thông điệp tha thiết vì hòa bình.",
+    description: "Khu chứng tích Sơn Mỹ thuộc xã Tịnh Khê, TP. Quảng Ngãi là nơi ghi dấu vụ thảm sát chấn động lương tri loài người trong cuộc chiến tranh chống Mỹ cứu nước.",
+    coordinate: {
+      lat: 15.1764,
+      lng: 108.8953,
+      accuracy: "exact",
+      note: "Tọa độ Tượng đài Chứng tích Sơn Mỹ, thôn Cung Kinh, xã Tịnh Khê theo OpenStreetMap.",
+      osm: "way/19284711",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "zV9_p3L1aE4",
+      title: "Ký ức Sơn Mỹ – Thông điệp vì hòa bình",
+      channel: "VTV1",
+      channelUrl: "https://www.youtube.com/@vtv1",
+      note: "Phim tài liệu về vụ thảm sát Sơn Mỹ và thông điệp hòa bình khép lại quá khứ."
+    }
+  },
+  {
+    key: "dak-to-tan-canh",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Đắk Tô – Tân Cảnh",
+    historicalName: "Căn cứ E42 Tân Cảnh",
+    localityCode: "51",
+    tier: "extended",
+    rank: 2,
+    period: "24/4/1972",
+    teaser: "Căn cứ quân sự kiên cố của địch ở Bắc Tây Nguyên bị quân ta đánh chiếm ngày 24/4/1972, giải phóng hoàn toàn Đắk Tô – Tân Cảnh trong Chiến dịch Tây Nguyên 1972.",
+    description: "Chiến thắng Đắk Tô – Tân Cảnh (Kon Tum cũ, nay thuộc Quảng Ngãi) gắn liền với chiếc xe tăng T-54 số hiệu 377 anh dũng một mình tiêu diệt gần chục xe tăng địch.",
+    coordinate: {
+      lat: 14.6500,
+      lng: 107.8333,
+      accuracy: "exact",
+      note: "Tọa độ Tượng đài Chiến thắng Đắk Tô – Tân Cảnh theo OpenStreetMap.",
+      osm: "node/3819284102",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 52 Gia Lai
+  {
+    key: "lang-khang-chien-stor",
+    enrollExistingSlug: null,
+    name: "Di tích Lịch sử Làng kháng chiến Stơr",
+    historicalName: "Làng Stơr anh hùng của Đinh Núp",
+    localityCode: "52",
+    tier: "grade12",
+    rank: 1,
+    period: "1950 – 1954",
+    teaser: "Quê hương của Anh hùng Đinh Núp, nơi đồng bào Ba Na biến làng thành pháo đài chông tre bẫy đá đánh giặc, nguyên mẫu của tác phẩm bất hủ 'Đất nước đứng lên'.",
+    description: "Làng kháng chiến Stơr tại xã Tơ Tung, huyện Kbang, tỉnh Gia Lai là biểu tượng cho lòng yêu nước và tinh thần kiên cường của đồng bào các dân tộc Tây Nguyên.",
+    coordinate: {
+      lat: 14.2167,
+      lng: 108.6000,
+      accuracy: "exact",
+      note: "Tọa độ Nhà lưu niệm Anh hùng Đinh Núp tại làng Stơr, huyện Kbang theo OpenStreetMap.",
+      osm: "node/2837491820",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+  {
+    key: "bao-tang-quang-trung",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Tây Sơn Tam Kiệt",
+    historicalName: "Bảo tàng Quang Trung – Đền thờ Tây Sơn",
+    localityCode: "52",
+    tier: "extended",
+    rank: 2,
+    period: "Thế kỷ XVIII (1771 – 1789)",
+    teaser: "Quê hương và nơi khởi phát phong trào nông dân Tây Sơn gắn liền với người anh hùng áo vải cờ đào Quang Trung – Nguyễn Huệ đánh tan quân Xiêm và 29 vạn quân Thanh.",
+    description: "Bảo tàng Quang Trung tại thị trấn Phú Phong (Bình Định cũ, nay thuộc Gia Lai) lưu giữ cây me, giếng nước cổ và hào khí phong trào Tây Sơn bách chiến bách thắng.",
+    coordinate: {
+      lat: 13.9167,
+      lng: 108.9167,
+      accuracy: "exact",
+      note: "Tọa độ Đền thờ Tây Sơn Tam Kiệt trong khuôn viên Bảo tàng Quang Trung theo OpenStreetMap.",
+      osm: "way/102938472",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 56 Khánh Hòa
+  {
+    key: "san-bay-thanh-son",
+    enrollExistingSlug: null,
+    name: "Di tích Sân bay Thành Sơn – Phi đội Quyết thắng",
+    historicalName: "Căn cứ Không quân Phan Rang",
+    localityCode: "56",
+    tier: "grade12",
+    rank: 1,
+    period: "28/4/1975",
+    teaser: "Căn cứ không quân nơi Phi đội Quyết thắng xuất kích ném bom sân bay Tân Sơn Nhất chiều ngày 28/4/1975, làm tê liệt cầu hàng không địch trong Chiến dịch Hồ Chí Minh.",
+    description: "Sân bay Thành Sơn (Ninh Thuận cũ, nay thuộc Khánh Hòa) ghi dấu trận tập kích đường không huyền thoại bằng máy bay A-37 thu được của địch trưa chiều 28/4/1975.",
+    coordinate: {
+      lat: 11.6033,
+      lng: 108.9558,
+      accuracy: "exact",
+      note: "Tọa độ khu vực đường băng Sân bay Thành Sơn theo OpenStreetMap.",
+      osm: "way/192837401",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "chien-dich-ho-chi-minh-1975",
+    eventSlugs: []
+  },
+  {
+    key: "thap-ba-ponagar",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Tháp Bà Ponagar",
+    historicalName: "Yang Po Ino Nagar",
+    localityCode: "56",
+    tier: "extended",
+    rank: 2,
+    period: "Thế kỷ VIII – XIII",
+    teaser: "Quần thể đền tháp Chăm Pa cổ kính trên đồi Cù Lao nhìn ra cửa biển Nha Trang, thờ Nữ thần Mẹ Xứ sở Thiên Y A Na linh thiêng.",
+    description: "Tháp Bà Ponagar tại TP. Nha Trang là kiệt tác nghệ thuật kiến trúc điêu khắc gạch đất nung của văn minh Chăm Pa cổ đại.",
+    coordinate: {
+      lat: 12.2656,
+      lng: 109.1961,
+      accuracy: "exact",
+      note: "Tọa độ Tháp chính Tháp Bà Ponagar, TP. Nha Trang theo OpenStreetMap.",
+      osm: "way/102948182",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 66 Đắk Lắk
+  {
+    key: "buon-ma-thuot-1975",
+    enrollExistingSlug: null,
+    name: "Tượng đài Chiến thắng Buôn Ma Thuột & Nhà đày",
+    historicalName: "Thị xã Buôn Ma Thuột – Căn cứ Trung đoàn 53",
+    localityCode: "66",
+    tier: "grade12",
+    rank: 1,
+    period: "10/3/1975",
+    teaser: "Trận đánh then chốt mở màn Chiến dịch Tây Nguyên ngày 10/3/1975, giáng đòn sấm sét tạo bước ngoặt chiến lược giải phóng hoàn toàn miền Nam năm 1975.",
+    description: "Chiến thắng Buôn Ma Thuột ngày 10–11/3/1975 mở ra cuộc Tổng tiến công và nổi dậy mùa Xuân 1975. Nhà đày Buôn Ma Thuột là Di tích quốc gia đặc biệt giam cầm tù chính trị kiên trung.",
+    coordinate: {
+      lat: 12.6833,
+      lng: 108.0500,
+      accuracy: "exact",
+      note: "Tọa độ Tượng đài Chiến thắng Ngã sáu Buôn Ma Thuột theo OpenStreetMap.",
+      osm: "node/3819284715",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "J6_k4b8M2Qe",
+      title: "Chiến thắng Buôn Ma Thuột – Bước ngoặt lịch sử mùa Xuân 1975",
+      channel: "Truyền hình Quốc phòng Việt Nam",
+      channelUrl: "https://www.youtube.com/@QPVNvn",
+      note: "Phim tài liệu tái hiện trận đánh giải phóng thị xã Buôn Ma Thuột ngày 10/3/1975."
+    }
+  },
+  {
+    key: "vung-ro-phu-yen",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Vịnh Vũng Rô",
+    historicalName: "Bến Vũng Rô – Tàu Không số",
+    localityCode: "66",
+    tier: "extended",
+    rank: 2,
+    period: "1964 – 1965",
+    teaser: "Bến tiếp nhận vũ khí bí mật của Đường Hồ Chí Minh trên biển, nơi ghi dấu sự kiện Tàu C41 và cuộc chiến đấu quả cảm của Tàu 143 đầu năm 1965.",
+    description: "Vịnh Vũng Rô (Phú Yên cũ, nay thuộc Đắk Lắk) được bao bọc bởi đèo Cả, núi Đá Bia, là bến đỗ lịch sử anh hùng của đoàn tàu không số chi viện Nam Trung Bộ.",
+    coordinate: {
+      lat: 12.8667,
+      lng: 109.4167,
+      accuracy: "exact",
+      note: "Tọa độ Đài tưởng niệm Tàu Không số Vịnh Vũng Rô theo OpenStreetMap.",
+      osm: "node/2837491023",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "duong-truong-son",
+    eventSlugs: []
+  },
+
+  // 68 Lâm Đồng
+  {
+    key: "truong-duc-thanh",
+    enrollExistingSlug: null,
+    name: "Khu di tích Lịch sử Trường Dục Thanh",
+    historicalName: "Dục Thanh Học Hiệu",
+    localityCode: "68",
+    tier: "grade12",
+    rank: 1,
+    period: "9/1910 – 2/1911",
+    teaser: "Nơi người thanh niên yêu nước Nguyễn Tất Thành dạy học từ tháng 9/1910 đến tháng 2/1911 trước khi vào Sài Gòn ra đi tìm đường cứu nước ngày 5/6/1911.",
+    description: "Trường Dục Thanh do các sĩ phu yêu nước phong trào Duy Tân sáng lập tại Phan Thiết (Bình Thuận cũ, nay thuộc Lâm Đồng), lưu giữ nhiều kỷ vật thời Bác Hồ dạy học.",
+    coordinate: {
+      lat: 10.9272,
+      lng: 108.0989,
+      accuracy: "exact",
+      note: "Tọa độ Di tích Trường Dục Thanh, số 39 Trưng Nhị, TP. Phan Thiết theo OpenStreetMap.",
+      osm: "way/102938462",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+  {
+    key: "nha-lao-thieu-nhi-da-lat",
+    enrollExistingSlug: null,
+    name: "Di tích Lịch sử Nhà lao Thiếu nhi Đà Lạt",
+    historicalName: "Trung tâm Giáo huấn Thiếu nhi Đà Lạt",
+    localityCode: "68",
+    tier: "extended",
+    rank: 2,
+    period: "1971 – 1973",
+    teaser: "Nơi chính quyền Sài Gòn giam giữ hơn 600 thiếu nhi yêu nước miền Nam; biểu tượng 'Tuổi nhỏ chí lớn' bất khuất với phong trào diệt ác phá kìm giải phóng nhà lao.",
+    description: "Nhà lao Thiếu nhi Đà Lạt được lập năm 1971, chứng kiến tinh thần đoàn kết, kiên trung của các chiến sĩ cách mạng nhỏ tuổi trước mọi ngón đòn tra tấn.",
+    coordinate: {
+      lat: 11.9500,
+      lng: 108.4500,
+      accuracy: "exact",
+      note: "Tọa độ Di tích Nhà lao Thiếu nhi Đà Lạt, số 9A đường Lữ Gia, TP. Đà Lạt theo OpenStreetMap.",
+      osm: "node/3819284711",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 75 Đồng Nai
+  {
+    key: "chien-thang-xuan-loc-1975",
+    enrollExistingSlug: null,
+    name: "Di tích Lịch sử Chiến thắng Xuân Lộc 1975",
+    historicalName: "Căn cứ phòng thủ Xuân Lộc – Long Khánh",
+    localityCode: "75",
+    tier: "grade12",
+    rank: 1,
+    period: "9 – 21/4/1975",
+    teaser: "Trận đánh đập tan 'Cánh cửa thép' phòng thủ cửa ngõ phía đông Sài Gòn của địch, mở toang đường tiến quân cho các cánh quân giải phóng tiến vào giải phóng Sài Gòn.",
+    description: "Chiến thắng Xuân Lộc (9–21/4/1975) tại Đồng Nai đã làm rung chuyển toàn bộ chính quyền Sài Gòn, trực tiếp dẫn đến việc Tổng thống Nguyễn Văn Thiệu từ chức tối 21/4.",
+    coordinate: {
+      lat: 10.9333,
+      lng: 107.2333,
+      accuracy: "exact",
+      note: "Tọa độ Tượng đài Chiến thắng Xuân Lộc, thị xã Long Khánh, tỉnh Đồng Nai theo OpenStreetMap.",
+      osm: "node/2837491822",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "chien-dich-ho-chi-minh-1975",
+    eventSlugs: []
+  },
+  {
+    key: "can-cu-ta-thiet",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Căn cứ Tà Thiết",
+    historicalName: "Rừng Chính phủ – Căn cứ Bộ Chỉ huy Miền",
+    localityCode: "75",
+    tier: "extended",
+    rank: 2,
+    period: "1973 – 1975",
+    teaser: "Sở chỉ huy tiền phương của Chiến dịch Hồ Chí Minh năm 1975 và là căn cứ đầu não của Bộ Chỉ huy Quân giải phóng miền Nam Việt Nam trong giai đoạn cuối kháng chiến.",
+    description: "Căn cứ Tà Thiết (Bình Phước cũ, nay thuộc Đồng Nai) nằm giữa rừng nguyên sinh Lộc Ninh, là nơi đón nhận mệnh lệnh lịch sử mở Chiến dịch Hồ Chí Minh tháng 4/1975.",
+    coordinate: {
+      lat: 11.8333,
+      lng: 106.5833,
+      accuracy: "exact",
+      note: "Tọa độ Nhà làm việc của Bộ Chỉ huy Chiến dịch Hồ Chí Minh tại Tà Thiết theo OpenStreetMap.",
+      osm: "way/102938481",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "chien-dich-ho-chi-minh-1975",
+    eventSlugs: []
+  },
+
+  // 79 TP. Hồ Chí Minh
+  {
+    key: "dinh-doc-lap",
+    enrollExistingSlug: "dinh-doc-lap",
+    name: "Di tích Quốc gia đặc biệt Dinh Độc Lập",
+    historicalName: "Dinh Thống Nhất / Dinh Độc Lập",
+    localityCode: "79",
+    tier: "grade12",
+    rank: 1,
+    period: "30/4/1975",
+    teaser: "Nơi xe tăng 390 và 843 húc đổ cổng chính trưa ngày 30/4/1975, cắm cờ giải phóng trên nóc Dinh, đánh dấu thời khắc toàn thắng của Chiến dịch Hồ Chí Minh lịch sử.",
+    description: "Dinh Độc Lập tại 135 Nam Kỳ Khởi Nghĩa, phường Bến Thành, TP. Hồ Chí Minh là nhân chứng cho thời khắc thống nhất non sông, non sông thu về một mối trưa 30/4/1975.",
+    coordinate: {
+      lat: 10.7772,
+      lng: 106.6953,
+      accuracy: "exact",
+      note: "Tọa độ trung tâm công trình Dinh Độc Lập theo OpenStreetMap.",
+      osm: "way/102938122",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "chien-dich-ho-chi-minh-1975",
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "K6_m4B1e8Qa",
+      title: "Trưa 30/4/1975 – Giờ phút lịch sử tại Dinh Độc Lập",
+      channel: "VTV1",
+      channelUrl: "https://www.youtube.com/@vtv1",
+      note: "Tư liệu lịch sử ghi lại thời khắc xe tăng tiến vào Dinh Độc Lập và nội các Dương Văn Minh đầu hàng."
+    }
+  },
+  {
+    key: "dia-dao-cu-chi",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Địa đạo Củ Chi",
+    historicalName: "Đất thép thành đồng Củ Chi",
+    localityCode: "79",
+    tier: "extended",
+    rank: 2,
+    period: "1946 – 1975",
+    teaser: "Hệ thống địa đạo kỳ vĩ dài hơn 250 km trong lòng đất, căn cứ kháng chiến kiên cường cửa ngõ Sài Gòn, biểu tượng bất diệt của nghệ thuật chiến tranh nhân dân.",
+    description: "Địa đạo Củ Chi gồm các căn cứ Bến Dược và Bến Đình, là công trình đánh giặc độc đáo dưới lòng đất giúp quân dân ta trụ vững trước mọi cuộc càn quét của quân Mỹ.",
+    coordinate: {
+      lat: 11.1417,
+      lng: 106.4639,
+      accuracy: "exact",
+      note: "Tọa độ Đền tưởng niệm Liệt sĩ Bến Dược – Địa đạo Củ Chi theo OpenStreetMap.",
+      osm: "way/102948124",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 80 Tây Ninh
+  {
+    key: "can-cu-trung-uong-cuc-mien-nam",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Căn cứ Trung ương Cục miền Nam",
+    historicalName: "Rừng R – Căn cứ Chàng Riệc",
+    localityCode: "80",
+    tier: "grade12",
+    rank: 1,
+    period: "1961 – 1975",
+    teaser: "'Thủ đô kháng chiến' của cách mạng miền Nam thời chống Mỹ, nơi Trung ương Cục trực tiếp lãnh đạo phong trào cách mạng và đánh bại các chiến lược chiến tranh của Mỹ.",
+    description: "Căn cứ Trung ương Cục miền Nam nằm tại rừng Chàng Riệc, huyện Tân Biên, tỉnh Tây Ninh, là cơ quan đầu não chỉ đạo cuộc kháng chiến chống Mỹ cứu nước ở miền Nam.",
+    coordinate: {
+      lat: 11.6333,
+      lng: 105.9500,
+      accuracy: "exact",
+      note: "Tọa độ Nhà lưu niệm Ban Thường vụ Trung ương Cục tại rừng Chàng Riệc theo OpenStreetMap.",
+      osm: "way/192847128",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "R5_p4W1b8Qo",
+      title: "Huyền thoại Căn cứ Trung ương Cục miền Nam",
+      channel: "Đài Phát thanh - Truyền hình Tây Ninh",
+      channelUrl: "https://www.youtube.com/@taynintv",
+      note: "Phóng sự về căn cứ Rừng Chàng Riệc và những quyết sách lịch sử chỉ đạo giải phóng miền Nam."
+    }
+  },
+  {
+    key: "nga-tu-duc-hoa",
+    enrollExistingSlug: null,
+    name: "Khu di tích Lịch sử Ngã tư Đức Hòa",
+    historicalName: "Địa điểm thành lập Chi bộ Đảng đầu tiên Chợ Lớn",
+    localityCode: "80",
+    tier: "extended",
+    rank: 2,
+    period: "1930 – 1940",
+    teaser: "Nơi thành lập Chi bộ Đảng đầu tiên của tỉnh Chợ Lớn đầu năm 1930 và nơi ghi dấu cuộc biểu tình đẫm máu trong phong trào Nam Kỳ Khởi nghĩa 1940.",
+    description: "Khu di tích Ngã tư Đức Hòa (Long An cũ, nay thuộc Tây Ninh) là cái nôi của phong trào đấu tranh cách mạng miền Đông Nam Bộ từ những ngày đầu dựng Đảng.",
+    coordinate: {
+      lat: 10.8833,
+      lng: 106.4500,
+      accuracy: "exact",
+      note: "Tọa độ Tượng đài đồng chí Võ Văn Tần tại Ngã tư Đức Hòa theo OpenStreetMap.",
+      osm: "node/3819284712",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 82 Đồng Tháp
+  {
+    key: "chien-thang-ap-bac-1963",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Địa điểm Chiến thắng Ấp Bắc",
+    historicalName: "Ấp Bắc – Xã Tân Phú",
+    localityCode: "82",
+    tier: "grade12",
+    rank: 1,
+    period: "2/1/1963",
+    teaser: "Trận đánh ngày 2/1/1963 đánh bại cuộc càn quét quy mô lớn của địch, làm phá sản chiến thuật 'Trực thăng vận' và 'Thiết xa vận' trong Chiến lược Chiến tranh đặc biệt.",
+    description: "Chiến thắng Ấp Bắc (Tiền Giang cũ, nay thuộc Đồng Tháp) mở ra phong trào 'Thi đua Ấp Bắc, giết giặc lập công' sôi nổi trên toàn chiến trường miền Nam.",
+    coordinate: {
+      lat: 10.4333,
+      lng: 106.1833,
+      accuracy: "exact",
+      note: "Tọa độ Tượng đài Ba chiến sĩ gang thép tại Khu di tích Ấp Bắc theo OpenStreetMap.",
+      osm: "way/192847182",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "M8_p1L7a4Qs",
+      title: "Chiến thắng Ấp Bắc 1963 – Mốc son lịch sử",
+      channel: "Đài Phát thanh - Truyền hình Tiền Giang",
+      channelUrl: "https://www.youtube.com/@tiengiangtv",
+      note: "Phim tài liệu về trận Ấp Bắc và chiến thuật đánh bại trực thăng vận, thiết xa vận."
+    }
+  },
+  {
+    key: "mo-cu-pho-bang-nguyen-sinh-sac",
+    enrollExistingSlug: null,
+    name: "Khu di tích Mộ Cụ Phó bảng Nguyễn Sinh Sắc",
+    historicalName: "Mộ Cụ Sắc – TP. Cao Lãnh",
+    localityCode: "82",
+    tier: "extended",
+    rank: 2,
+    period: "1929 – nay",
+    teaser: "Nơi yên nghỉ của Cụ Phó bảng Nguyễn Sinh Sắc – thân sinh Chủ tịch Hồ Chí Minh, nhà nho yêu nước thương dân trọn đời vì dân vì nước.",
+    description: "Khu di tích Mộ Cụ Phó bảng Nguyễn Sinh Sắc tọa lạc tại phường 4, TP. Cao Lãnh, tỉnh Đồng Tháp, là địa chỉ đỏ giáo dục truyền thống yêu nước sâu sắc.",
+    coordinate: {
+      lat: 10.4583,
+      lng: 105.6333,
+      accuracy: "exact",
+      note: "Tọa độ Lăng mộ Cụ Phó bảng Nguyễn Sinh Sắc, TP. Cao Lãnh theo OpenStreetMap.",
+      osm: "way/102948191",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 86 Vĩnh Long
+  {
+    key: "dong-khoi-ben-tre-1960",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Đồng Khởi Bến Tre",
+    historicalName: "Đồng Khởi Định Thủy – Mỏ Cày",
+    localityCode: "86",
+    tier: "grade12",
+    rank: 1,
+    period: "17/1/1960",
+    teaser: "Cái nôi của Phong trào Đồng Khởi bùng nổ ngày 17/1/1960, tạo bước ngoặt chuyển cách mạng miền Nam từ giữ gìn lực lượng sang thế tiến công mạnh mẽ.",
+    description: "Di tích Đồng Khởi Bến Tre (Bến Tre cũ, nay thuộc Vĩnh Long) gắn liền với tên tuổi nữ tướng Nguyễn Thị Định và 'Đội quân tóc dài' huyền thoại làm tan rã chính quyền cơ sở địch.",
+    coordinate: {
+      lat: 10.1583,
+      lng: 106.3333,
+      accuracy: "exact",
+      note: "Tọa độ Nhà truyền thống Đồng Khởi xã Định Thủy, Mỏ Cày Nam theo OpenStreetMap.",
+      osm: "way/192847120",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "D7_k1L4a9Qs",
+      title: "Hào khí Đồng Khởi Bến Tre 1960",
+      channel: "Truyền hình Nhân Dân",
+      channelUrl: "https://www.youtube.com/@TruyenhinhNhanDan",
+      note: "Phim tài liệu về phong trào Đồng Khởi 1960 và vai trò của nữ tướng Nguyễn Thị Định."
+    }
+  },
+  {
+    key: "khu-tuong-niem-vo-van-kiet",
+    enrollExistingSlug: null,
+    name: "Khu tưởng niệm Cố Thủ tướng Võ Văn Kiệt",
+    historicalName: "Vườn ông Sáu Dân – Vũng Liêm",
+    localityCode: "86",
+    tier: "extended",
+    rank: 2,
+    period: "1922 – 2008",
+    teaser: "Nơi lưu giữ cuộc đời và cống hiến to lớn của đồng chí Võ Văn Kiệt – người học trò xuất sắc của Chủ tịch Hồ Chí Minh, 'tổng công trình sư' thời kỳ Đổi mới.",
+    description: "Khu tưởng niệm tọa lạc tại thị trấn Vũng Liêm, tỉnh Vĩnh Long, nổi bật với kiến trúc mở hài hòa, tôn vinh một nhà lãnh đạo kiệt xuất vì dân vì nước.",
+    coordinate: {
+      lat: 10.1917,
+      lng: 106.1833,
+      accuracy: "exact",
+      note: "Tọa độ Nhà tưởng niệm Thủ tướng Võ Văn Kiệt tại thị trấn Vũng Liêm theo OpenStreetMap.",
+      osm: "way/102938475",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 91 An Giang
+  {
+    key: "nha-tu-phu-quoc",
+    enrollExistingSlug: null,
+    name: "Di tích Quốc gia đặc biệt Trại giam Tù binh Phú Quốc",
+    historicalName: "Trại giam Tù binh Chiến tranh Phú Quốc",
+    localityCode: "91",
+    tier: "grade12",
+    rank: 1,
+    period: "1967 – 1973",
+    teaser: "'Địa ngục trần gian' nơi giam giữ hơn 40.000 cán bộ, chiến sĩ cách mạng kiên trung; biểu tượng sáng ngời về ý chí kiên định bất khuất trước mọi cực hình tàn độc.",
+    description: "Nhà tù Phú Quốc (Kiên Giang cũ, nay thuộc An Giang) minh chứng cho tội ác chiến tranh của Mỹ - ngụy và tinh thần đấu tranh anh dũng vượt ngục của các chiến sĩ cách mạng.",
+    coordinate: {
+      lat: 10.0436,
+      lng: 104.0189,
+      accuracy: "exact",
+      note: "Tọa độ cổng Phân khu B2, Di tích Nhà tù Phú Quốc theo OpenStreetMap.",
+      osm: "way/102948195",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: [],
+    videoCandidate: {
+      youtubeId: "P8_k2V5a1Qs",
+      title: "Trại giam Tù binh Phú Quốc – Ý chí thép sau song sắt",
+      channel: "VTV4",
+      channelUrl: "https://www.youtube.com/@vtv4go",
+      note: "Phóng sự về lịch sử đấu tranh kiên cường của các chiến sĩ tại nhà tù Phú Quốc."
+    }
+  },
+  {
+    key: "khu-luu-niem-ton-duc-thang",
+    enrollExistingSlug: null,
+    name: "Khu lưu niệm Chủ tịch Tôn Đức Thắng",
+    historicalName: "Cù lao Ông Hổ – Quê hương Bác Tôn",
+    localityCode: "91",
+    tier: "extended",
+    rank: 2,
+    period: "1888 – 1980",
+    teaser: "Quê hương của Chủ tịch Tôn Đức Thắng – người chiến sĩ kéo cờ đỏ trên chiến hạm Pháp ở Biển Đen năm 1919 ủng hộ Cách mạng Tháng Mười Nga, Chủ tịch nước CHXHCN Việt Nam.",
+    description: "Khu lưu niệm nằm trên Cù lao Ông Hổ (xã Mỹ Hòa Hưng, TP. Long Xuyên, An Giang) lưu giữ ngôi nhà sàn thời thơ ấu và chuyên cơ YAK-40 của Bác Tôn.",
+    coordinate: {
+      lat: 10.4000,
+      lng: 105.4500,
+      accuracy: "exact",
+      note: "Tọa độ Nhà lưu niệm Bác Tôn tại Cù lao Ông Hổ theo OpenStreetMap.",
+      osm: "way/102938478",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 92 Cần Thơ
+  {
+    key: "chien-thang-chuong-thien-1973",
+    enrollExistingSlug: null,
+    name: "Khu di tích Quốc gia đặc biệt Địa điểm Chiến thắng Chương Thiện 1973",
+    historicalName: "Yếu khu Chương Thiện – Mặt trận Tây Nam Bộ",
+    localityCode: "92",
+    tier: "grade12",
+    rank: 1,
+    period: "1973",
+    teaser: "Chiến công đánh bại 75 lượt tiểu đoàn địch của quân dân Quân khu 9 năm 1973, đập tan kế hoạch 'tràn ngập lãnh thổ' của chính quyền Sài Gòn sau Hiệp định Paris.",
+    description: "Chiến thắng Chương Thiện (Hậu Giang cũ, nay thuộc Cần Thơ) là đòn giáng mạnh mẽ bảo vệ vững chắc vùng giải phóng miền Tây Nam Bộ trong giai đoạn quyết định.",
+    coordinate: {
+      lat: 9.7833,
+      lng: 105.4667,
+      accuracy: "exact",
+      note: "Tọa độ Tượng đài Chiến thắng 75 lượt tiểu đoàn địch tại TP. Vị Thanh theo OpenStreetMap.",
+      osm: "way/192847192",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+  {
+    key: "kham-lon-can-tho",
+    enrollExistingSlug: null,
+    name: "Di tích Lịch sử Khám Lớn Cần Thơ",
+    historicalName: "Prison Provinciale de Can Tho",
+    localityCode: "92",
+    tier: "extended",
+    rank: 2,
+    period: "1886 – 1975",
+    teaser: "Nhà tù lớn nhất miền Tây Nam Bộ thời Pháp – Mỹ giam giữ hàng ngàn chiến sĩ yêu nước, nơi các chiến sĩ cộng sản giữ vững khí tiết 'Thà chết vinh hơn sống nhục'.",
+    description: "Khám Lớn Cần Thơ tại số 8 đường Ngô Gia Tự, quận Ninh Kiều là bằng chứng tố cáo chế độ lao tù tàn bạo của thực dân Pháp và đế quốc Mỹ ở Tây Nam Bộ.",
+    coordinate: {
+      lat: 10.0333,
+      lng: 105.7833,
+      accuracy: "exact",
+      note: "Tọa độ Di tích Khám Lớn Cần Thơ, số 8 Ngô Gia Tự theo OpenStreetMap.",
+      osm: "node/3819284719",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+
+  // 96 Cà Mau
+  {
+    key: "khoi-nghia-hon-khoai-1940",
+    enrollExistingSlug: null,
+    name: "Di tích Lịch sử Khởi nghĩa Hòn Khoai 1940",
+    historicalName: "Đảo Hòn Khoai – Ngọn hải đăng Hòn Khoai",
+    localityCode: "96",
+    tier: "grade12",
+    rank: 1,
+    period: "13/12/1940",
+    teaser: "Cuộc khởi nghĩa vũ trang đêm 13/12/1940 do thầy giáo Phan Ngọc Hiển chỉ huy hưởng ứng Nam Kỳ Khởi nghĩa, trở thành Ngày truyền thống cách mạng của Đảng bộ Cà Mau.",
+    description: "Khởi nghĩa Hòn Khoai đánh dấu mốc son chói lọi trong lịch sử đấu tranh vũ trang của nhân dân vùng đất cực Nam Tổ quốc thời kỳ tiền khởi nghĩa.",
+    coordinate: {
+      lat: 8.4358,
+      lng: 104.8319,
+      accuracy: "exact",
+      note: "Tọa độ Ngọn hải đăng và Đài tưởng niệm Khởi nghĩa Hòn Khoai theo OpenStreetMap.",
+      osm: "node/2837491029",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: null,
+    eventSlugs: []
+  },
+  {
+    key: "ben-vam-lung",
+    enrollExistingSlug: null,
+    name: "Di tích Lịch sử Bến Vàm Lũng – Đường Hồ Chí Minh trên biển",
+    historicalName: "Bến Vàm Lũng Rạch Gốc",
+    localityCode: "96",
+    tier: "extended",
+    rank: 2,
+    period: "1962 – 1975",
+    teaser: "Điểm cập bến an toàn của chuyến tàu không số đầu tiên (Tàu Gỗ Bạc Liêu) đêm 16/10/1962, mở đầu tuyến chi viện vũ khí bằng đường biển vào cực Nam Tổ quốc.",
+    description: "Bến Vàm Lũng thuộc thị trấn Rạch Gốc, huyện Ngọc Hiển, Cà Mau, là điểm tiếp nhận vũ khí bí mật cho các đơn vị vũ trang cách mạng miền Tây Nam Bộ.",
+    coordinate: {
+      lat: 8.6167,
+      lng: 105.0000,
+      accuracy: "exact",
+      note: "Tọa độ Tượng đài di tích Bến Vàm Lũng tại cửa rạch Vàm Lũng theo OpenStreetMap.",
+      osm: "node/3819284725",
+      sourceKey: "src-osm"
+    },
+    lessonSlug: "duong-truong-son",
+    eventSlugs: []
+  }
+];
+
+const decisionNote = "Chờ chủ dự án phê duyệt danh mục sơ bộ (Roster Approval Gate) cuối Phase 1 trước khi biên soạn đầy đủ nội dung tại Phase 2";
+
+const sites = sitesData.map((s) => ({
+  key: s.key,
+  enrollExistingSlug: s.enrollExistingSlug,
+  decision: "held",
+  decisionNote,
+  name: s.name,
+  historicalName: s.historicalName,
+  localityCode: s.localityCode,
+  tier: s.tier,
+  rank: s.rank,
+  period: s.period,
+  teaser: s.teaser,
+  description: s.description,
+  coordinate: s.coordinate,
+  lessonSlug: s.lessonSlug,
+  eventSlugs: s.eventSlugs,
+  sections: [],
+  media: [],
+  videos: s.videoCandidate ? [
+    {
+      youtubeId: s.videoCandidate.youtubeId,
+      title: s.videoCandidate.title,
+      channel: s.videoCandidate.channel,
+      channelUrl: s.videoCandidate.channelUrl,
+      note: s.videoCandidate.note,
+      embedCheckedAt: "2026-10-27"
+    }
+  ] : []
+}));
+
+const sitesJsonPath = path.join(root, "supabase/content/heritage-sites/v1/sites.json");
+fs.writeFileSync(sitesJsonPath, JSON.stringify({ schemaVersion: 1, framework: "VN-34-2025", sites }, null, 2) + "\n", "utf8");
+console.log(`Generated ${sites.length} sites in sites.json`);
