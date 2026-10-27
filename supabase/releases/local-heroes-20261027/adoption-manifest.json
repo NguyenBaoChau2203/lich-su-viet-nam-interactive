@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "projectRef": "ueolfjujjybutyuyfxha",
+  "rawBaselineSha256": "852c69884eeb9539c8dc3cc63f4a4a8ed265b97b3ec7496d42237faccd94c78d",
+  "baselineTrackFileSha256": "10e1fc5d3f4cd32add572b9f9ff120353759981f2eb411a61095dd56de1f909a",
+  "featureMigrationSha256": "762beb458820fb7e0df7fcbbb539fe00ca2fff17563af1c5739ad4bcf3f8d655",
+  "featureVersion": "20261031000001",
+  "baselineVersion": "20261027000000",
+  "authorization": "docs/audits/2026-10-27-local-heroes-live-release-authorization.md",
+  "releaseHash": "0dcfc960010153a91fd3501c0004ed2b9c84138ab9ce45d356555d167c3ba43d",
+  "note": "Target-specific adopted baseline; no assertion that old root migrations ran historically. Use this track for this deployment, not root migration replay."
+}

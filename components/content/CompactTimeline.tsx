@@ -4,11 +4,13 @@ import { SafeImage } from "@/components/ui/SafeImage";
 import type { RelatedEvent } from "@/lib/queries/events";
 import { responsiveImage } from "@/lib/utils/text";
 import { groupEventsByYear } from "@/lib/utils/timeline";
+import { getExplorerReturnHref } from "@/lib/explorer/url";
 
 type CompactTimelineProps = {
   events: (RelatedEvent & { note?: string | null })[];
   /** Nhãn cho trình đọc màn hình, ví dụ "Sự kiện của chủ đề". */
   label: string;
+  explorerReturnHref?: string;
 };
 
 /**
@@ -16,7 +18,7 @@ type CompactTimelineProps = {
  * nhân vật, địa điểm. Bản đầy đủ có lọc/nhảy nhanh nằm ở /dong-thoi-gian.
  * Sự kiện đã được sắp theo thời gian từ query.
  */
-export function CompactTimeline({ events, label }: CompactTimelineProps) {
+export function CompactTimeline({ events, label, explorerReturnHref }: CompactTimelineProps) {
   const groups = groupEventsByYear(events);
 
   return (
@@ -35,7 +37,7 @@ export function CompactTimeline({ events, label }: CompactTimelineProps) {
             {group.events.map((event) => (
               <li key={event.slug}>
                 <Link
-                  href={`/su-kien/${event.slug}`}
+                  href={explorerReturnHref ? `/su-kien/${encodeURIComponent(event.slug)}?kham-pha=${encodeURIComponent(getExplorerReturnHref(explorerReturnHref, event.slug))}` : `/su-kien/${event.slug}`}
                   className="group flex gap-3 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
                 >
                   {event.cover && (

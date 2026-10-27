@@ -3,12 +3,15 @@ import { sameJourneyArrival, type JourneyArrival } from "@/lib/explorer/journey"
 import { JOURNEY_REGISTRY, type JourneyRegistry } from "@/lib/explorer/journeys/registry";
 import type { MapExplorerState } from "@/lib/explorer/map-state";
 import type { MapView } from "@/lib/explorer/map-view";
+import { parseLocalHeroState, type LocalHeroRuntimeAction, type LocalHeroRuntimeState, type LocalHeroUrlState } from "@/lib/local-heroes/state";
+import { normalizeLocalHeroFilters } from "@/lib/local-heroes/normalize";
 
 export const JOURNEY_DWELL_MS = 2000;
 
 export type ExplorerRuntime = {
   state: MapExplorerState;
   exploration: MapExplorerState | null;
+  people: LocalHeroRuntimeState;
   cameraRequest: GlobeCameraRequest | null;
   settledArrival: JourneyArrival | null;
   requestNonce: number;
@@ -20,6 +23,7 @@ export type ExplorerRuntime = {
 };
 
 export type ExplorerAction =
+  | LocalHeroRuntimeAction
   | { type: "choose-journey"; id: string }
   | { type: "seek"; stopId: string }
   | { type: "arrive" | "dwell"; arrival: JourneyArrival }
@@ -28,7 +32,7 @@ export type ExplorerAction =
   | { type: "reading"; active: boolean }
   | { type: "visibility"; hidden: boolean }
   | { type: "motion"; reduced: boolean }
-  | { type: "restore"; state: MapExplorerState }
+  | { type: "restore"; state: MapExplorerState; people?: LocalHeroUrlState }
   | { type: "select-event"; slug: string }
   | { type: "view"; view: MapView; arrival?: JourneyArrival }
   | { type: "period"; from: number; to: number; eventSlugs: readonly string[] };
@@ -39,10 +43,11 @@ function requestFor(state: MapExplorerState, nonce: number, registry: JourneyReg
   return stop && journey ? { journeyId: journey.id, stopId: stop.id, nonce, view: stop.view, ...(instant ? { instant: true } : {}) } : null;
 }
 
-export function createExplorerRuntime(state: MapExplorerState, registry: JourneyRegistry = JOURNEY_REGISTRY): ExplorerRuntime {
-  return { state, exploration: null, cameraRequest: requestFor(state, 0, registry, true),
+export function createExplorerRuntime(state: MapExplorerState, registry: JourneyRegistry = JOURNEY_REGISTRY, discovery: LocalHeroUrlState = parseLocalHeroState(new URLSearchParams())): ExplorerRuntime {
+  const people: LocalHeroRuntimeState = { discovery: { mode: discovery.mode, filters: normalizeLocalHeroFilters(discovery.filters) }, suspended: discovery.mode === "people" ? { state: structuredClone(state), exploration: null } : null };
+  return { state, people, exploration: null, cameraRequest: discovery.mode === "people" ? null : requestFor(state, 0, registry, true),
     settledArrival: null, requestNonce: 0, restoreRequest: 0,
-    focusRequest: !state.journey && state.selectedEvent && !state.view ? { slug: state.selectedEvent, nonce: 0 } : null,
+    focusRequest: discovery.mode !== "people" && !state.journey && state.selectedEvent && !state.view ? { slug: state.selectedEvent, nonce: 0 } : null,
     popupOpen: false, readerDismissed: false, playing: false, readerActive: false, hidden: false, reducedMotion: false, departing: false };
 }
 
@@ -54,11 +59,31 @@ function currentArrival(runtime: ExplorerRuntime, arrival: JourneyArrival): bool
 /** Pure transitions only. HistoryExplorer remains the sole runtime and timer owner. */
 export function reduceExplorerRuntime(runtime: ExplorerRuntime, action: ExplorerAction, registry: JourneyRegistry = JOURNEY_REGISTRY): ExplorerRuntime {
   if (runtime.departing && action.type !== "restore") return runtime;
+  if (runtime.people.discovery.mode === "people" && ["choose-journey", "seek", "play", "arrive", "dwell", "reading", "open-reader", "select-event", "period", "close-event", "view", "exit"].includes(action.type)) return runtime;
   const nonce = runtime.requestNonce + 1;
   const journey = runtime.state.journey && registry.getJourneyById(runtime.state.journey.id);
   const requestStop = (state: MapExplorerState, playing = false): ExplorerRuntime => ({ ...runtime, state,
     cameraRequest: requestFor(state, nonce, registry), settledArrival: null, requestNonce: nonce, playing, popupOpen: false, readerDismissed: false, readerActive: false });
   switch (action.type) {
+    case "people-enter":
+      return runtime.people.discovery.mode === "people" ? runtime : { ...runtime,
+        state: structuredClone(runtime.state), exploration: structuredClone(runtime.exploration),
+        people: { discovery: { ...runtime.people.discovery, mode: "people" }, suspended: structuredClone({ state: runtime.state, exploration: runtime.exploration }) },
+        playing: false, readerActive: false, popupOpen: false, readerDismissed: true, cameraRequest: null, settledArrival: null, focusRequest: null, requestNonce: nonce };
+    case "people-change": {
+      const previous = runtime.people.discovery.filters, filters = normalizeLocalHeroFilters(action.filters);
+      if (filters.localityCode !== previous.localityCode || filters.query !== previous.query) filters.page = 1;
+      return { ...runtime, people: { ...runtime.people, discovery: { ...runtime.people.discovery, filters } } };
+    }
+    case "people-exit": {
+      const suspended = runtime.people.suspended;
+      if (!suspended) return runtime;
+      const state = structuredClone(suspended.state), cameraRequest = requestFor(state, nonce, registry, true);
+      return { ...runtime, state, exploration: structuredClone(suspended.exploration),
+        people: { discovery: { ...runtime.people.discovery, mode: "events" }, suspended: null },
+        playing: false, readerActive: false, popupOpen: false, readerDismissed: true, focusRequest: null,
+        cameraRequest: cameraRequest && { ...cameraRequest, view: state.view ?? cameraRequest.view }, settledArrival: null, requestNonce: nonce, restoreRequest: runtime.restoreRequest + 1 };
+    }
     case "choose-journey": {
       const selected = registry.getJourneyById(action.id);
       if (!selected) return runtime;
@@ -92,12 +117,15 @@ export function reduceExplorerRuntime(runtime: ExplorerRuntime, action: Explorer
     case "reading": return { ...runtime, readerActive: action.active, playing: runtime.playing && !action.active };
     case "visibility": return { ...runtime, hidden: action.hidden, playing: runtime.playing && !action.hidden };
     case "motion": return { ...runtime, reducedMotion: action.reduced, playing: runtime.playing && !action.reduced };
-    case "restore":
-      return { ...runtime, state: action.state, playing: false, readerActive: false, departing: false, popupOpen: false, readerDismissed: false,
-        exploration: action.state.journey ? (runtime.state.journey ? runtime.exploration : runtime.state) : null,
-        cameraRequest: requestFor(action.state, nonce, registry, true), settledArrival: null,
+    case "restore": {
+      const exploration = action.state.journey ? (runtime.state.journey ? runtime.exploration : runtime.state) : null;
+      const restored = createExplorerRuntime(action.state, registry, action.people);
+      if (restored.people.suspended) restored.people.suspended.exploration = structuredClone(exploration);
+      return { ...runtime, ...restored, hidden: runtime.hidden, reducedMotion: runtime.reducedMotion, exploration,
         requestNonce: nonce, restoreRequest: runtime.restoreRequest + 1,
-        focusRequest: !action.state.journey && !action.state.view && action.state.selectedEvent ? { slug: action.state.selectedEvent, nonce } : runtime.focusRequest };
+        focusRequest: restored.focusRequest && { ...restored.focusRequest, nonce },
+        cameraRequest: restored.cameraRequest && { ...restored.cameraRequest, nonce } };
+    }
     case "exit":
       return { ...runtime, state: runtime.exploration ?? { ...runtime.state, journey: undefined, journeyNotice: undefined, view: null },
         exploration: null, playing: false, readerActive: false, cameraRequest: null, settledArrival: null, popupOpen: false,

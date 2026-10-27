@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-heroes-system-publication-observation",
+  "observedAt": "2026-10-27T11:19:32.343Z",
+  "projectRef": "ueolfjujjybutyuyfxha",
+  "releaseHash": "0dcfc960010153a91fd3501c0004ed2b9c84138ab9ce45d356555d167c3ba43d",
+  "inputManifestHash": "06080db323af8f89364355323cd585824f3772963e96316dd8ae72aa0fc54416",
+  "inputSnapshotHash": "bc6bdbf6f6fcd6c4259987b9b010514109b5fdffe044c50f0fa52329a5c74a53",
+  "publishSha256": "98081843e08f589b6b7ebc39e3e3f4b06e7a5ff18fff54694c9e269d7851f69e",
+  "counts": {
+    "event_links": 17,
+    "events": 46,
+    "figures": 41,
+    "media": 66,
+    "people": 35,
+    "sources": 106,
+    "stories": 35
+  },
+  "publicPeople": 35,
+  "representedLocalities": 34,
+  "byLocality": [
+    {
+      "code": "01",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "04",
+      "eligiblePeople": 2
+    },
+    {
+      "code": "08",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "11",
+      "eligiblePeople": 2
+    },
+    {
+      "code": "12",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "14",
+      "eligiblePeople": 2
+    },
+    {
+      "code": "15",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "19",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "20",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "22",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "24",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "25",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "31",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "33",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "37",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "38",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "40",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "42",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "44",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "46",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "48",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "51",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "52",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "56",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "66",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "68",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "75",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "79",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "80",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "82",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "86",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "91",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "92",
+      "eligiblePeople": 1
+    },
+    {
+      "code": "96",
+      "eligiblePeople": 1
+    }
+  ],
+  "legacyBaseFieldsPreserved": true,
+  "unrelatedEventLinkMediaFingerprintsPreserved": true,
+  "all35AnonymousProfilesComplete": true,
+  "sixFeatureTablesRlsEnabled": true,
+  "canonicalLegacyEventsVisible": true,
+  "sourceResults": {
+    "ownerSha256": "fdf49cf6cebb9cedff6b130ff52b81fcbd4bb3319c6929811d69a0a4ce088eca",
+    "publicSha256": "01e268635a80a2fd0ff54d339e1426c345c4ded486c61f92cb99a63a1d9090ff"
+  }
+}

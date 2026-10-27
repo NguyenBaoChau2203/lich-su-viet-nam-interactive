@@ -19,6 +19,7 @@ import { reviewPaths } from "@/lib/queries/review";
 import { createClient } from "@/lib/supabase/server";
 import type { DbErrorLike } from "@/lib/utils/db-errors";
 import { workflowStatusLabels, type WorkflowStatus } from "@/lib/utils/labels";
+import { localHeroActionState, tryLocalHeroWorkflow } from "@/lib/local-heroes/legacy-workflow";
 
 // Kiểm duyệt (UC10–UC12). Chạy bằng PHIÊN của người duyệt → RLS `reviewer_update_status` là chốt chặn cuối
 // (reviewer chỉ đổi được trạng thái; không tạo/sửa nội dung). requireRole() chỉ để chặn sớm.
@@ -85,6 +86,14 @@ async function runReview(action: ReviewAction, formData: FormData): Promise<Acti
       };
     }
     reason = parsed.data;
+  }
+
+  if (kind === "nhan-vat") {
+    const catalog = await tryLocalHeroWorkflow(id, action, reason, values.expected_revision === undefined ? undefined : { expectedRevision: values.expected_revision });
+    if (catalog) {
+      if (!catalog.ok) return localHeroActionState(catalog, values);
+      redirect(`${reviewPaths.queue}?thong-bao=${NOTICE[action]}`);
+    }
   }
 
   const { from, to } = REVIEW_TRANSITIONS[action];

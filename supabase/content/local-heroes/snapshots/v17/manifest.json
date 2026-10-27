@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "kind": "manifest",
+  "catalogId": "national-v1",
+  "contractId": "LH-1.0.0-draft.1",
+  "schemaFile": "docs/audits/2026-10-26-local-heroes-manifest.schema.json",
+  "schemaSha256": "a3b90d16f23fa2a368cbb358e0725da63f3c39983ea4dbad457b1a286a8a23a0",
+  "version": 17,
+  "createdAt": "2026-10-26T09:15:17.447Z",
+  "previousManifestHash": "6f153fa135969a202b672b57286e202ac8526496c2eada4dd155a343af75de4a",
+  "referenceFramework": "VN-34-2025",
+  "researchFromYear": 1858,
+  "researchToYear": 1975,
+  "selectionPolicy": "two-pass-v1",
+  "coverageDenominator": 34,
+  "rosterFrozen": true,
+  "rosterFrozenAt": "2026-10-26T09:15:17.447Z",
+  "localitySource": {
+    "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf",
+    "accessedAt": "2026-10-26",
+    "locator": "Appendix I, PDF pages 4-5",
+    "sha256": "2fd391335947affbfb86fa2b9438f0fdca90694e80887e205266542c3236aea1"
+  },
+  "files": [
+    {
+      "name": "claims.json",
+      "sha256": "80388e48170b881286475575979a0dee7d622baeab78f7baaa1083744f099d21"
+    },
+    {
+      "name": "coverage.json",
+      "sha256": "4b5f0e264da2c0bfa4950a6fd43d22a4765a66506cb1932be0221b6195801bce"
+    },
+    {
+      "name": "localities.json",
+      "sha256": "47ea7e2757240bfc0c1f57fc68c6f4045f463505c591a7d757666ad17c311846"
+    },
+    {
+      "name": "media.json",
+      "sha256": "a211ddb0167c6c1419d1b09f5495686793706401d8278b4ee20903aade313c84"
+    },
+    {
+      "name": "people.json",
+      "sha256": "3bec7fa3ccda0858694e801e641ae19af022dd71c17a228ad4ab8059ebb8dccd"
+    },
+    {
+      "name": "relations.json",
+      "sha256": "80170c53841aa3db34b2b63001b8b2a69d4db974fcf1fe2df342ebe61c27a9fe"
+    },
+    {
+      "name": "roster.json",
+      "sha256": "76c1cc98f3ddd9e55887d97956cf78b8b9f4586281537fde36fb703f4b4d089d"
+    },
+    {
+      "name": "sources.json",
+      "sha256": "7c3146886c9e3d46b957199017f3e6f6e1786b8601553a4e21af11616b476e77"
+    },
+    {
+      "name": "stories.json",
+      "sha256": "e1bff603f9598e953ac82a81269713730be74accf814c86fa2161cb0355db1c4"
+    }
+  ],
+  "manifestHash": "84d8a8a5833ec66382aa4e96b50cfdfd9495e15fc1c524f2205c4279866e8dfb",
+  "ownerApproval": {
+    "status": "pending",
+    "manifestHash": null,
+    "approvedAt": null,
+    "evidenceRef": null
+  }
+}

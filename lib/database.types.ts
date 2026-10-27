@@ -17,7 +17,20 @@ export type Json =
   | { [key: string]: Json | undefined }
   | Json[]
 
+import type { Database as LocalHeroGeneratedDatabase } from "@/lib/local-heroes/database.generated";
+
+// Keep the established legacy API refinements; add only the generated catalog slice.
+// Postgres functions accept SQL NULL arguments, which the generator does not infer.
 export type Database = {
+  public: Omit<LegacyDatabase["public"], "Tables" | "Functions"> & {
+    Tables: Omit<LegacyDatabase["public"]["Tables"], keyof LocalHeroGeneratedDatabase["public"]["Tables"]> & LocalHeroGeneratedDatabase["public"]["Tables"];
+    Functions: LegacyDatabase["public"]["Functions"] & Omit<LocalHeroGeneratedDatabase["public"]["Functions"], "local_hero_page"> & {
+      local_hero_page: { Args: { p_locality_code: string | null; p_query: string | null; p_page: number | null }; Returns: Json };
+    };
+  };
+};
+
+type LegacyDatabase = {
   public: {
     Tables: {
       staff_profiles: {

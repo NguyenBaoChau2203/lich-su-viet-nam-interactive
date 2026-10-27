@@ -4,6 +4,7 @@
 //  - warnings: khuyến nghị, không chặn nhưng nên xử lý
 
 import type { ContentKind } from "@/lib/admin/content-kinds";
+import type { LocalHeroReadiness } from "@/lib/local-heroes/admin-types";
 import { countWords, missingStandardSections } from "@/lib/utils/rich-text";
 
 export type ReadinessResult = {
@@ -28,7 +29,7 @@ type CommonChecks = {
 export type ReadinessSnapshot = CommonChecks &
   (
   | { kind: "chu-de"; description: string | null }
-  | { kind: "nhan-vat"; biography: string | null }
+  | { kind: "nhan-vat"; biography: string | null; localHero?: LocalHeroReadiness }
   | {
       kind: "dia-diem";
       latitude: number | null;
@@ -56,6 +57,9 @@ export function containsInternalNote(text: string | null | undefined): boolean {
 }
 
 export function evaluateReadiness(snapshot: ReadinessSnapshot): ReadinessResult {
+  if (snapshot.kind === "nhan-vat" && snapshot.localHero) {
+    return { blocking: snapshot.localHero.blocking.map((i) => i.message), warnings: snapshot.localHero.warnings.map((i) => i.message) };
+  }
   const blocking: string[] = [];
   const warnings: string[] = [];
 

@@ -12,6 +12,43 @@
 .home-atlas-modes { display: flex; align-self: stretch; gap: 32px; }
 .home-atlas-modes button { position: relative; border-bottom: 2px solid transparent; padding: 0 2px; color: var(--muted-foreground); font-family: var(--font-serif), Georgia, serif; font-size: 15px; }
 .home-atlas-modes button[aria-pressed="true"] { border-bottom-color: var(--accent); color: var(--foreground); }
+.home-atlas-people-entry { display: flex; align-items: center; border-bottom: 2px solid transparent; color: var(--muted-foreground); font-family: var(--font-serif), Georgia, serif; font-size: 14px; white-space: nowrap; }
+.home-atlas-people-entry[aria-expanded="true"] { border-bottom-color: var(--accent); color: var(--foreground); }
+.home-history-map .home-atlas-modes { gap: 24px; }
+.home-history-map a:focus-visible, .home-history-map button:focus-visible, .local-heroes-panel :focus-visible { outline: 2px solid #f5d99b; outline-offset: 3px; }
+.local-heroes-panel { position: absolute; z-index: 30; top: 82px; right: var(--atlas-panel-edge); bottom: 24px; display: flex; flex-direction: column; width: min(560px, calc(100% - 64px)); min-height: 0; border: 1px solid #a38b60; border-radius: 3px; background: #0b1421f7; color: var(--foreground); box-shadow: 0 14px 38px #0005; }
+.local-heroes-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; padding: 18px 20px 14px; border-bottom: 1px solid var(--border); }
+.local-heroes-eyebrow { margin-bottom: 6px; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; font-size: 10px; }
+.local-heroes-top h2 { max-width: 360px; font-family: var(--font-serif), Georgia, serif; font-size: 23px; line-height: 1.3; font-weight: 500; }
+.local-heroes-close { display: flex; gap: 8px; align-items: center; min-height: 32px; color: var(--accent); font-size: 12px; white-space: nowrap; }
+.local-heroes-close span { font-size: 22px; }
+.local-heroes-filters { display: flex; flex-direction: column; gap: 10px; padding: 12px 20px; border-bottom: 1px solid var(--border); }
+.local-heroes-field { display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 5px; font-size: 12px; }
+.local-heroes-field label { color: #d5dce4; }
+.local-heroes-field select, .local-heroes-field input { width: 100%; min-width: 0; height: 36px; padding: 6px 10px; border: 1px solid #68798a; border-radius: 2px; background: #101e2e; color: #f2eadc; font-size: 13px; }
+.local-heroes-search { display: flex; align-items: flex-end; gap: 10px; }
+.local-heroes-search button { height: 36px; padding: 0 17px; border: 1px solid var(--accent); border-radius: 2px; color: var(--accent); font-size: 13px; }
+.local-heroes-results { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 14px 20px; scrollbar-width: thin; scrollbar-color: #a88a53 #101e2e; }
+.local-heroes-count { font-size: 13px; color: var(--accent); }
+.local-heroes-coverage { margin-top: 7px; margin-bottom: 16px; color: var(--muted-foreground); font-size: 11px; line-height: 1.6; }
+.local-hero-list > li { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 14px; padding: 16px 0; border-top: 1px solid var(--border); }
+.local-hero-thumbnail { position: relative; align-self: start; width: 96px; min-height: 64px; background: #1c2b3a; }
+.local-hero-thumbnail img { display: block; width: 96px; height: 64px; object-fit: contain; }
+.local-hero-thumbnail > span:not(.local-hero-image-label) { display: flex; align-items: center; min-height: 64px; padding: 7px; color: #d5dce4; font-size: 10px; line-height: 1.4; }
+.local-hero-image-label { display: block; padding: 4px; font-size: 9px; line-height: 1.4; color: #d5dce4; }
+.local-hero-copy { min-width: 0; overflow-wrap: anywhere; }
+.local-hero-copy h3 { font-family: var(--font-serif), Georgia, serif; font-size: 18px; line-height: 1.3; }
+.local-hero-copy > p { margin-top: 7px; font-size: 12px; line-height: 1.65; }
+.local-hero-copy > .local-hero-life, .local-hero-copy > .local-hero-source { font-size: 10px; color: var(--muted-foreground); }
+.local-hero-associations { margin-top: 8px; color: #d5dce4; font-size: 11px; line-height: 1.6; }
+.local-hero-copy > a, .local-heroes-message > a { display: inline-block; margin-top: 8px; color: var(--accent); font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+.local-heroes-message { padding: 16px 0; font-size: 13px; line-height: 1.7; }
+.local-heroes-pagination { display: flex; flex-shrink: 0; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px; padding: 9px 20px; border-top: 1px solid var(--border); font-size: 12px; }
+.local-heroes-pagination > span { margin-right: auto; color: var(--muted-foreground); }
+.local-heroes-pagination a { display: grid; place-items: center; min-width: 30px; height: 30px; border: 1px solid var(--border); }
+.local-heroes-pagination a[aria-current="page"] { background: var(--accent); color: var(--accent-foreground); }
+.is-people .globe-attribution { right: auto; left: var(--atlas-edge); max-width: min(300px, 35%); }
+@media (max-width: 767px) { .local-heroes-panel { top: 120px; bottom: 16px; left: 16px; right: 16px; width: auto; } .home-atlas-people-entry { font-size: 11px; } }
 .home-atlas-links { display: flex; align-items: center; gap: 20px; margin-left: auto; font-size: 12px; }
 .home-atlas-links > a, .home-atlas-secondary > summary { display: flex; align-items: center; gap: 8px; min-height: 36px; color: var(--muted-foreground); }
 .home-atlas-secondary { position: relative; }
@@ -67,6 +104,10 @@
 .home-history-map:has(> .home-map-notice) .home-map-tile-error { top: 176px; }
 .home-map-tile-error button { display: block; margin-top: 8px; font-weight: 700; color: var(--accent); text-decoration: underline; }
 .home-map-loading { position: absolute; inset: 0; display: grid; place-content: center; padding: 50px 330px; color: #c6d0db; font-size: 14px; text-align: center; pointer-events: none; }
+.is-people .home-map-loading { display: none; }
+@media (min-width: 1024px) {
+  .home-history-map.is-people .home-map-notice, .home-history-map.is-people .home-map-tile-error { top: 360px; left: var(--atlas-edge); right: calc(560px + var(--atlas-panel-edge) + 24px); max-height: calc(100% - 400px); overflow-y: auto; }
+}
 .home-map-tools { position: absolute; z-index: 24; bottom: 36px; right: var(--atlas-panel-edge); display: flex; gap: 6px; }
 .home-history-map:has(.home-map-event-card) .home-map-tools { right: calc(var(--atlas-panel-edge) + var(--atlas-panel-width) + 24px); bottom: calc(var(--atlas-rail-space) + 24px); }
 .home-map-tools button { display: flex; align-items: center; justify-content: center; gap: 7px; min-width: 36px; height: 36px; padding: 0 10px; border: 1px solid var(--border-strong); background: #0c1724ed; color: var(--foreground); font-size: 11px; }

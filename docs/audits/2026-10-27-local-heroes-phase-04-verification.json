@@ -1,0 +1,527 @@
+{
+  "schemaVersion": 1,
+  "phase": "04",
+  "status": "passed-internal-homepage-integration",
+  "nationalReleaseReady": false,
+  "recordedAt": "2026-10-26T17:47:58.261Z",
+  "timezone": "Asia/Bangkok",
+  "workspaceLocalStamp": "2026-10-27-0047",
+  "reviewType": "self-review",
+  "singleMainAgent": true,
+  "branch": "feat/local-revolutionary-heroes",
+  "head": "6a38f582515102c03ccc7ac806ae6d3f1becbbb0",
+  "contractId": "LH-1.0.0-draft.1",
+  "ownerAuthorization": "Cho phép sửa/nghiệm thu Phase 03 rồi tiếp tục Phase 04",
+  "localReport": "D:/lich-su-viet-nam-interactive/.task-reports/2026-10-27-0047-local-heroes-phase-04.md",
+  "content": {
+    "schemaVersion": 1,
+    "mode": "research",
+    "valid": true,
+    "releaseReady": false,
+    "manifestVersion": 14,
+    "manifestHash": "893156e86b5e2e350698d05b05ddc0f93804ab174b5f043f0d2d62210c036305",
+    "acceptedPeople": 35,
+    "completeAcceptedPeople": 2,
+    "representedLocalities": 2,
+    "totalLocalities": 34,
+    "issues": []
+  },
+  "gates": [
+    {
+      "command": "pnpm exec vitest run tests/unit/local-heroes-state.test.ts tests/unit/local-heroes-query.test.ts",
+      "exitCode": 0,
+      "files": 2,
+      "tests": 37,
+      "evidence": ".task-reports/local-heroes-phase-04-preflight/focused-final.log"
+    },
+    {
+      "command": "node scripts/content/check-local-heroes.mjs",
+      "exitCode": 0,
+      "scope": "offline research validation; releaseReady=false",
+      "evidence": ".task-reports/local-heroes-phase-04-preflight/content-final.json"
+    },
+    {
+      "command": "pnpm verify",
+      "exitCode": 0,
+      "historyTests": 42,
+      "unitFiles": 99,
+      "unitTests": 1161,
+      "scriptTests": 26,
+      "includes": [
+        "agent checks",
+        "history checks",
+        "lint",
+        "strict types",
+        "unit tests",
+        "script tests",
+        "normal configured production build"
+      ],
+      "normalBuildId": "wYEnH5uY45jRbSkITdqV-",
+      "evidence": ".task-reports/local-heroes-phase-04-preflight/verify-final.log"
+    },
+    {
+      "command": "node scripts/agent/local-heroes-e2e.mjs build",
+      "exitCode": 0,
+      "scope": "isolated synthetic public environment"
+    },
+    {
+      "command": "pnpm exec playwright test --config playwright.local-heroes.config.ts",
+      "exitCode": 0,
+      "tests": 52,
+      "viewports": [
+        "1280x720",
+        "1366x768",
+        "1440x900",
+        "1920x1080"
+      ],
+      "scope": "read-only synthetic fixture; not DB/RLS evidence"
+    },
+    {
+      "command": "pnpm exec playwright test --config playwright.local-heroes.config.ts -g 'keyboard focus, scrolling, contrast and reduced motion'",
+      "exitCode": 0,
+      "tests": 4,
+      "scope": "stricter full WCAG A/AA axe check after 52-case run, no production code changes"
+    },
+    {
+      "command": "pnpm exec playwright test --config playwright.local-heroes-regression.config.ts",
+      "exitCode": 0,
+      "tests": 10,
+      "scope": "source-inspected selected read-only legacy desktop cases"
+    },
+    {
+      "command": "pnpm build:smoke",
+      "exitCode": 0,
+      "order": 1
+    },
+    {
+      "command": "pnpm test:e2e:smoke",
+      "exitCode": 0,
+      "tests": 8,
+      "order": 2,
+      "browser": "msedge",
+      "normalBuildRestoredAfterward": true
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    },
+    {
+      "command": "supabase test db --local D:/lich-su-viet-nam-interactive/supabase/tests/local_heroes.sql --workdir .task-reports/local-heroes-phase-02-work/db",
+      "exitCode": 0,
+      "assertions": 288,
+      "scope": "real disposable PostgreSQL roles/RLS/invariants/queries"
+    },
+    {
+      "command": "node tests/rls/local-heroes-concurrency.mjs --target .task-reports/local-heroes-disposable-db.json",
+      "exitCode": 0,
+      "cases": [
+        "publish_vs_source_edit",
+        "two_last_links"
+      ],
+      "scope": "two real sessions; second invariant case intentionally DB-owner sessions"
+    },
+    {
+      "command": "node scripts/agent/local-heroes-admin-e2e.mjs build",
+      "exitCode": 0
+    },
+    {
+      "command": "pnpm exec playwright test --config playwright.local-heroes-admin.config.ts",
+      "exitCode": 0,
+      "tests": 7,
+      "scope": "real disposable Auth/PostgREST/RLS/UI; includes public Next GET -> anon RPC -> DB"
+    },
+    {
+      "command": "pnpm agent:sync",
+      "exitCode": 0,
+      "supportedFiles": 821,
+      "pendingChanges": 0
+    }
+  ],
+  "fixtureResults": {
+    "feature": {
+      "startTime": "2026-10-26T17:31:32.079Z",
+      "duration": 188354.12,
+      "expected": 52,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "accessibility": {
+      "startTime": "2026-10-26T17:42:54.007Z",
+      "duration": 28730.576999999997,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "legacy": {
+      "startTime": "2026-10-26T17:35:00.670Z",
+      "duration": 68006.743,
+      "expected": 10,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "admin": {
+      "startTime": "2026-10-26T16:43:21.803Z",
+      "duration": 52476.41,
+      "expected": 7,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "accessibility": [
+    {
+      "viewport": "1280x720",
+      "tags": [
+        "wcag2a",
+        "wcag2aa",
+        "wcag21aa"
+      ],
+      "violations": 0,
+      "passedRules": 24
+    },
+    {
+      "viewport": "1366x768",
+      "tags": [
+        "wcag2a",
+        "wcag2aa",
+        "wcag21aa"
+      ],
+      "violations": 0,
+      "passedRules": 24
+    },
+    {
+      "viewport": "1440x900",
+      "tags": [
+        "wcag2a",
+        "wcag2aa",
+        "wcag21aa"
+      ],
+      "violations": 0,
+      "passedRules": 24
+    },
+    {
+      "viewport": "1920x1080",
+      "tags": [
+        "wcag2a",
+        "wcag2aa",
+        "wcag21aa"
+      ],
+      "violations": 0,
+      "passedRules": 24
+    }
+  ],
+  "performance": {
+    "baselineBuildId": "GpatSke11U7x7bSAPzlgO",
+    "finalBuildId": "7Djb499IJtayC8OYecvPg",
+    "fixtureHash": "45e17723bc2665f0558eebc0a4d7d57f6281c203eb8dc0a606c23a2631c076e0",
+    "sameFixture": true,
+    "hardware": {
+      "platform": "win32",
+      "cpu": "11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz",
+      "memoryGiB": 16,
+      "browserVersion": "156.0.4314.42",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    "dpr": 1,
+    "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x00009A68) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "initialScripts": 23,
+    "baselineGzipBytes": 857634,
+    "finalGzipBytes": 863243,
+    "incrementalGzipBytes": 5609,
+    "budgetGzipBytes": 35840,
+    "defaultPeopleRequests": 0,
+    "defaultThumbnailRequests": 0,
+    "openPageRequests": 1,
+    "openRows": 12,
+    "openProfileRequests": 0,
+    "openGeometryRequests": 0,
+    "thumbnailCount": 12,
+    "maxThumbnailRequestedWidth": 128,
+    "maxSyntheticThumbnailBytes": 401,
+    "defaultIdle": {
+      "intervalsMs": [],
+      "renderMs": [],
+      "syncedGpu": false
+    },
+    "openIdle": {
+      "intervalsMs": [],
+      "renderMs": [],
+      "syncedGpu": false
+    },
+    "budgetsPassed": true,
+    "limitations": [
+      "synthetic thumbnail delivery only; real national images unmeasured",
+      "DPR 1 measured; DPR 2 candidate support only",
+      "baseline idle capture absent; final idle/disposal checked separately",
+      "no synchronized GPU timing or FPS claim"
+    ]
+  },
+  "disposableCleanup": {
+    "project": "local-heroes-phase02-disposable",
+    "resetExitCode": 0,
+    "counts": {
+      "authUsers": 0,
+      "syntheticFigures": 0,
+      "localityRegistry": 34
+    },
+    "warning": "Supabase CLI 2.111.0 pg-delta/Zod catalog diagnostic during reset; independently checked zero synthetic users/figures afterward"
+  },
+  "remaining": [
+    "Phase 05 detailed story/citation/gallery/profile acceptance",
+    "Phase 06 missing sourced content and real-image delivery",
+    "Phase 07 all-34 national release audit",
+    "live remote readiness and separately authorized schema-before-code rollout"
+  ],
+  "externalWrites": false,
+  "committed": false,
+  "pushed": false,
+  "published": false,
+  "evidenceArtifacts": [
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/focused-final.log",
+      "bytes": 202,
+      "sha256": "ffc697d30c1f5f8c7390667197ea9e28b0ada62d96d79ff66a4b32e756015bba"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/content-final.json",
+      "bytes": 281,
+      "sha256": "733a93e9e7e8db502f0b37bb06bc7ddd35529fa9c5a587f457e455dc710ca1be"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/verify-final.log",
+      "bytes": 8152,
+      "sha256": "7e3940a3dc77a5ee7bf780803c474cccee3d65b848b535f02090d8737804aec3"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/public-feature-build.log",
+      "bytes": 4568,
+      "sha256": "b4fe9ac7a6ff8aad86c6c7e3bb7f0ef3c8e03eb8c714ded73606afd6dd74aaa4"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/home-browser-four-desktops.log",
+      "bytes": 10452,
+      "sha256": "0b7333bbe26975668ae4b6025e73e8891bfb81e069c9735cd0ca375b11863d3f"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/accessibility-final.log",
+      "bytes": 1622,
+      "sha256": "21010a204ee65cf5c89554e3d3ac6c2b1ad201a3e80ca80c01dd49e8722147a4"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/network-hydration-four-desktops.log",
+      "bytes": 1719,
+      "sha256": "dcf219be7c64add286eeba6418ff3f324b73e5e9c41298541ce321bfb3d42700"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/performance-final.log",
+      "bytes": 700,
+      "sha256": "3e8bb84e90ed44bfcc83b17f1bfe69b3b87a1e43cf06a00246abe5f704c76cda"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/legacy-regressions.log",
+      "bytes": 2163,
+      "sha256": "a12808c4ad3cddf818fdd1f6027d0a38e2bd311b00a2556afe57442bdb75c263"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/smoke-final-build.log",
+      "bytes": 4600,
+      "sha256": "172477db0d65e554ea8c0bf515306d1052e7ea33f92827f9910ab9389d6847d4"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/smoke-final-browser.log",
+      "bytes": 1530,
+      "sha256": "11930025b5ab5ab13c10df855868a11fa4893904f29d50400bf173cf2e54bb66"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/admin-final-build.log",
+      "bytes": 4564,
+      "sha256": "8bda246dee389119a1eff61ce14877f11e70ea40d0b894cf8e6d9605b4d88b10"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/admin-final-browser.log",
+      "bytes": 1278,
+      "sha256": "d9d12de2e4e9171f1c7e594132cb9ff6cb5c6b403066610b6bca7ef76f3a2efd"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/db-roles.log",
+      "bytes": 359,
+      "sha256": "3fa4302f07530ac0128efa4daeccf39c2f0136835c56da53d94a92bc686b4da2"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/db-races.log",
+      "bytes": 738,
+      "sha256": "dfeee2f3bd9950cf3fb960e75a7402d24526313070720db16ef79055edd3c3e9"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/disposable-cleanup.log",
+      "bytes": 6357,
+      "sha256": "a72dc8743b475bb7bf1a3e9af180b2bb9109b14218c7ffb3809019b64cd7b08e"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/disposable-cleanup-counts.json",
+      "bytes": 67,
+      "sha256": "d9b2b6e569ace4719b744f6dc83c502f5684f50608b608fda5a40e0f3d15eef8"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/codegraph-final.log",
+      "bytes": 172,
+      "sha256": "5a8cb556a22287c09fe9453a879bfd5e960a87f4462d49377dc2a1127f93c45d"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/diff-final.log",
+      "bytes": 2016,
+      "sha256": "c044b52f49631be26c9a206aedda3d51d589a04c6e6508d2520c9a1d4a25abe1"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/fallback-overlap-red.log",
+      "bytes": 4156,
+      "sha256": "e498da26d58234811a6a1bc71d829e48666a4cbb2924e2700387e37ffef40983"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-04-preflight/artifact-crosscheck.log",
+      "bytes": 833,
+      "sha256": "592bbc9f62fb0001ff3caaa6f9959a8e2dee8be85f9c020421df3569f1dcf350"
+    },
+    {
+      "path": "output/playwright/local-heroes/results-four-desktops.json",
+      "bytes": 100075,
+      "sha256": "aab6b6367ed8ade381189087fa5c4bfd08576114a130965133e7f5bb13d386db"
+    },
+    {
+      "path": "output/playwright/local-heroes/results-accessibility.json",
+      "bytes": 11804,
+      "sha256": "6226902126b6b7d2efaed04c5409dd5ab00d98fc8da4d05dfd43428acc99b524"
+    },
+    {
+      "path": "output/playwright/local-heroes/results-network-hydration.json",
+      "bytes": 13521,
+      "sha256": "11a881334ceb4492439c5895425868279b904340ca7d24665612bd069e660a95"
+    },
+    {
+      "path": "output/playwright/local-heroes/regressions.json",
+      "bytes": 14037,
+      "sha256": "a3ae1e441bf69e42011466c010ac6542f052b69d2c98b5058180e905e2d20844"
+    },
+    {
+      "path": "output/playwright/local-heroes/performance-baseline.json",
+      "bytes": 10076,
+      "sha256": "86adc2ec0dbaea1342e439b4d477dc9111a08d45acb3920424ef3d668015a2b6"
+    },
+    {
+      "path": "output/playwright/local-heroes/performance-final.json",
+      "bytes": 16100,
+      "sha256": "6eae9e11755605ec32b7d1db60932d3b6718c0574065a8095cd6517a5467aa98"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/results.json",
+      "bytes": 20220,
+      "sha256": "189be3eb5bc64c56c9192196dd267302cf3c4a0506437a60493e8b32052d9072"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/people-1280x720.png",
+      "bytes": 400628,
+      "sha256": "6d2b14185f359b030015f921dce446ec25cd2cedc69b77f628cc18834e6101ed"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-js-1280x720.png",
+      "bytes": 116049,
+      "sha256": "d84fa2fe7c19d02457317ec50ffcaffda21857be473c323428ffe9d9fd906da8"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-webgl-1280x720.png",
+      "bytes": 113913,
+      "sha256": "d9adeb59d059a8b578657eb385b6fd7bb8ef59ab96062f285c1e9388648bc4be"
+    },
+    {
+      "path": "output/playwright/local-heroes/accessibility/1280x720.json",
+      "bytes": 660,
+      "sha256": "a7c4936aa82af29174402d2b7749891d0d5894c3c971028e9b3d53b16920b429"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/editor-1280x720.png",
+      "bytes": 64740,
+      "sha256": "cadbe6c5c4686ca66e6449e62c885cbe58d2c9b39822bd420211d47040121001"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/people-1366x768.png",
+      "bytes": 459350,
+      "sha256": "41938b47f29cbb32d6f133112fc596daaeed572742dc9daf69754acfbb8a03c5"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-js-1366x768.png",
+      "bytes": 125000,
+      "sha256": "5f21c572dec92c2017c85cdebde481df6093b82236376920ba9433dae059410e"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-webgl-1366x768.png",
+      "bytes": 116024,
+      "sha256": "6dc5d28edd91af1755dd1234301e5dc8b5293b8b244ec23449549ff5a4900793"
+    },
+    {
+      "path": "output/playwright/local-heroes/accessibility/1366x768.json",
+      "bytes": 660,
+      "sha256": "a7c4936aa82af29174402d2b7749891d0d5894c3c971028e9b3d53b16920b429"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/editor-1366x768.png",
+      "bytes": 68210,
+      "sha256": "a78277a0df58fd0a71738a746bafaa0dbead107de0c8f052f4a86bce6450a8eb"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/people-1440x900.png",
+      "bytes": 553112,
+      "sha256": "8ef4f46bfdb120edc8b8afe58760e425dea6f1af20b729106367ccdf98d3deb5"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-js-1440x900.png",
+      "bytes": 132956,
+      "sha256": "6760d306fb59168faed0ad7995fee1f15ce84c5649e0e4d6241b21f7d398a423"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-webgl-1440x900.png",
+      "bytes": 121421,
+      "sha256": "c5661b290c4777618a117188101596e530da2dd98058f992c901a3c86aba893b"
+    },
+    {
+      "path": "output/playwright/local-heroes/accessibility/1440x900.json",
+      "bytes": 660,
+      "sha256": "a7c4936aa82af29174402d2b7749891d0d5894c3c971028e9b3d53b16920b429"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/editor-1440x900.png",
+      "bytes": 85778,
+      "sha256": "af70e095aea068c73dbf785ae24c777dc16f13ff7be89dad83edc4570b3a0348"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/people-1920x1080.png",
+      "bytes": 859705,
+      "sha256": "d5a6bae13b21d37657d9511ce3fcae5b5c2ddad3f63ea04701f16a83d78090b0"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-js-1920x1080.png",
+      "bytes": 147370,
+      "sha256": "9cf99c23bcffeb77d7c3c73085984b8ec492f6cae2c96397b6ee4be21fd2f8b2"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-webgl-1920x1080.png",
+      "bytes": 136821,
+      "sha256": "bc65a0472d7727af95ebf71c662265e7bf5dd9d1f1d835e67867955403b25b51"
+    },
+    {
+      "path": "output/playwright/local-heroes/accessibility/1920x1080.json",
+      "bytes": 660,
+      "sha256": "a7c4936aa82af29174402d2b7749891d0d5894c3c971028e9b3d53b16920b429"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/editor-1920x1080.png",
+      "bytes": 110574,
+      "sha256": "01fcf5873933c93ba3527405a46b7d34923e616a88d09405b87b134b6b883dd8"
+    }
+  ]
+}

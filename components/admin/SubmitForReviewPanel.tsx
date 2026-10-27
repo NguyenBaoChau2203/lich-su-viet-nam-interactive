@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { submitForReviewAction } from "@/lib/actions/content";
 import { initialActionState } from "@/lib/actions/state";
 import type { ContentKind } from "@/lib/admin/content-kinds";
+import type { LocalHeroAdminGraph } from "@/lib/local-heroes/admin-types";
 
 type SubmitForReviewPanelProps = {
   kind: ContentKind;
@@ -15,13 +16,14 @@ type SubmitForReviewPanelProps = {
   canSubmit: boolean;
   blocking: string[];
   warnings: string[];
+  catalog?: Pick<LocalHeroAdminGraph, "revision" | "stories">;
 };
 
 /**
  * Khung "Gửi kiểm duyệt" (UC09): hiện checklist (bắt buộc / khuyến nghị) tính từ dữ liệu ĐÃ LƯU;
  * nút gửi bị khóa khi còn mục bắt buộc. Server kiểm tra lại toàn bộ khi gửi.
  */
-export function SubmitForReviewPanel({ kind, id, canSubmit, blocking, warnings }: SubmitForReviewPanelProps) {
+export function SubmitForReviewPanel({ kind, id, canSubmit, blocking, warnings, catalog }: SubmitForReviewPanelProps) {
   const [state, formAction, pending] = useActionState(submitForReviewAction, initialActionState);
   const ready = blocking.length === 0;
 
@@ -73,6 +75,16 @@ export function SubmitForReviewPanel({ kind, id, canSubmit, blocking, warnings }
         >
           <input type="hidden" name="kind" value={kind} />
           <input type="hidden" name="id" value={id} />
+          {catalog && <>
+            <input type="hidden" name="expected_revision" value={catalog.revision} />
+            <fieldset className="flex flex-col gap-2">
+              <legend className="font-medium">Câu chuyện gửi cùng hồ sơ</legend>
+              {catalog.stories.filter((s) => s.workflow === "draft" || s.workflow === "needs_revision").map((s) => <label key={s.id} className="flex items-center gap-2 text-sm">
+                <input type="checkbox" name="story_ids" value={s.id} defaultChecked={s.isPrimary} />
+                {s.title}{s.isPrimary ? " (câu chuyện chính)" : ""}
+              </label>)}
+            </fieldset>
+          </>}
           <FormMessage state={state} />
           <div>
             <Button type="submit" disabled={pending || !ready}>

@@ -31,7 +31,7 @@ export function SourceList({ sources }: SourceListProps) {
   return (
     <ul className="flex flex-col gap-3">
       {sources.map((source) => (
-        <li key={source.id} className="rounded-card border border-border bg-surface p-4">
+        <li key={source.id} id={`nguon-${source.id}`} className="scroll-mt-6 rounded-card border border-border bg-surface p-4">
           <div className="mb-1 flex flex-wrap items-center gap-2">
             <Badge variant="outline">{sourceTypeLabels[source.sourceType]}</Badge>
             <span className="font-serif font-semibold text-surface-foreground">

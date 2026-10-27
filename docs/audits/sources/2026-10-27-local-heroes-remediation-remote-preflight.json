@@ -1,0 +1,350 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-heroes-read-only-remote-preflight",
+  "reviewKind": "single_agent_self_review",
+  "capturedFileAt": "2026-10-27T04:22:03.534Z",
+  "project": {
+    "ref": "ueolfjujjybutyuyfxha",
+    "name": "lichsu_12",
+    "region": "ap-northeast-1"
+  },
+  "transport": "authenticated Supabase CLI; BEGIN READ ONLY / SELECT / COMMIT; no schema/content/storage mutation",
+  "querySha256": "b243dc809c2c19b26b425cd1f721fde2e6ba05f9772b8cff728ad87b72fb4315",
+  "captureSha256": "a339ff20172831d673bd12e8e035ba7cf5b1a4b0df94175edda9589294467221",
+  "manifestHash": "06080db323af8f89364355323cd585824f3772963e96316dd8ae72aa0fc54416",
+  "snapshotHash": "bc6bdbf6f6fcd6c4259987b9b010514109b5fdffe044c50f0fa52329a5c74a53",
+  "inventory": {
+    "catalog_tables": [
+      "historical_figures",
+      "media_assets",
+      "sources"
+    ],
+    "event_count": 46,
+    "figure_columns": [
+      "id",
+      "name",
+      "slug",
+      "other_names",
+      "birth_year",
+      "death_year",
+      "biography",
+      "portrait_url",
+      "workflow_status",
+      "review_note"
+    ],
+    "figure_media": [
+      {
+        "figure_id": "c6eb511d-898f-4fab-8875-42ddd0700cd4",
+        "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/figures/pham-van-dong/pham-van-dong-1972-1200.webp",
+        "id": "0ff15f7d-d276-4f74-be24-ed957ad4e98a",
+        "source_id": null,
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Ph%E1%BA%A1m_V%C4%83n_%C4%90%E1%BB%93ng_1972.jpg"
+      },
+      {
+        "figure_id": "dff00764-7ef6-4b82-981e-9f66f080d653",
+        "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/figures/le-duan/le-duan-1978-1200.webp",
+        "id": "58fee0ad-5bad-490a-9d2f-6b70834d708c",
+        "source_id": null,
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Le_Duan.png"
+      },
+      {
+        "figure_id": "2bd5b2d6-9ab1-48b3-bf6e-f53a76484e4b",
+        "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/figures/nguyen-van-linh/nguyen-van-linh-1984-1200.webp",
+        "id": "90f377e2-02a4-4381-9f2c-27d5f16aa64f",
+        "source_id": null,
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:T%C3%A1m_L%C3%AA_Thanh_v%C3%A0_Nguy%E1%BB%85n_V%C4%83n_Linh_(cropped)_(2).jpg"
+      },
+      {
+        "figure_id": "d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+        "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/figures/vo-nguyen-giap/vo-nguyen-giap-2008-1200.webp",
+        "id": "c02c2eaf-e19f-487b-a610-c542e560236d",
+        "source_id": null,
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Vo_Nguyen_Giap_2008.jpg"
+      },
+      {
+        "figure_id": "2ee65d28-bade-48b1-8658-9c2c0d55009b",
+        "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/figures/nguyen-thi-binh/nguyen-thi-binh-1200.webp",
+        "id": "c02dd7a8-9bda-44e8-9af0-f11efb847886",
+        "source_id": null,
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Nguyen_Thi_Binh.jpg"
+      },
+      {
+        "figure_id": "01e2955b-8989-4765-95b8-f1f4a0685168",
+        "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/figures/truong-chinh/truong-chinh-1978-1200.webp",
+        "id": "c36132ee-6025-4337-9695-0eba85a23554",
+        "source_id": null,
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Truong_Chinh,_Le_Duan,_Nicolae_og_Elena_Ceausescu_(cropped)(b).jpg"
+      }
+    ],
+    "figures": [
+      {
+        "event_links": 9,
+        "id": "757037f8-03a7-4a97-919e-00fc98236801",
+        "is_local_hero": null,
+        "name": "Hồ Chí Minh",
+        "slug": "ho-chi-minh",
+        "status": "published"
+      },
+      {
+        "event_links": 1,
+        "id": "dff00764-7ef6-4b82-981e-9f66f080d653",
+        "is_local_hero": null,
+        "name": "Lê Duẩn",
+        "slug": "le-duan",
+        "status": "published"
+      },
+      {
+        "event_links": 1,
+        "id": "016a56fa-2a90-4bf4-ae8f-6975f0486282",
+        "is_local_hero": null,
+        "name": "Lê Đức Thọ",
+        "slug": "le-duc-tho",
+        "status": "published"
+      },
+      {
+        "event_links": 1,
+        "id": "2ee65d28-bade-48b1-8658-9c2c0d55009b",
+        "is_local_hero": null,
+        "name": "Nguyễn Thị Bình",
+        "slug": "nguyen-thi-binh",
+        "status": "published"
+      },
+      {
+        "event_links": 1,
+        "id": "2bd5b2d6-9ab1-48b3-bf6e-f53a76484e4b",
+        "is_local_hero": null,
+        "name": "Nguyễn Văn Linh",
+        "slug": "nguyen-van-linh",
+        "status": "published"
+      },
+      {
+        "event_links": 1,
+        "id": "c6eb511d-898f-4fab-8875-42ddd0700cd4",
+        "is_local_hero": null,
+        "name": "Phạm Văn Đồng",
+        "slug": "pham-van-dong",
+        "status": "published"
+      },
+      {
+        "event_links": 1,
+        "id": "01e2955b-8989-4765-95b8-f1f4a0685168",
+        "is_local_hero": null,
+        "name": "Trường Chinh",
+        "slug": "truong-chinh",
+        "status": "published"
+      },
+      {
+        "event_links": 1,
+        "id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "is_local_hero": null,
+        "name": "Văn Tiến Dũng",
+        "slug": "van-tien-dung",
+        "status": "published"
+      },
+      {
+        "event_links": 1,
+        "id": "d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+        "is_local_hero": null,
+        "name": "Võ Nguyên Giáp",
+        "slug": "vo-nguyen-giap",
+        "status": "published"
+      }
+    ],
+    "migration_table_exists": false,
+    "server_version": "17.6",
+    "sources": [
+      {
+        "id": "00fae9da-6be0-4f34-8ca2-b1a18826a22f",
+        "title": "Vài nét về Quốc hội nước CHXHCN Việt Nam",
+        "url": "https://baochinhphu.vn/vai-net-ve-quoc-hoi-nuoc-chxhcn-viet-nam-10271664.htm"
+      },
+      {
+        "id": "1033030d-91fa-427a-8b0a-17056283fb45",
+        "title": "Hiệp định CPTPP chính thức có hiệu lực đối với Việt Nam từ ngày 14/01/2019",
+        "url": "https://moit.gov.vn/tin-tuc/thi-truong-nuoc-ngoai/hiep-dinh-cptpp-chinh-thuc-co-hieu-luc-doi-voi-viet-nam-tu-n.html"
+      },
+      {
+        "id": "208a1863-9298-4e6d-83cb-7d7597e8f3e8",
+        "title": "Thông tin cơ bản về ASEAN và quan hệ Việt Nam – ASEAN",
+        "url": "https://mofa.gov.vn/tin-chi-tiet/chi-tiet/thong-tin-co-ban-ve-asean-va-quan-he-viet-nam-asean-166.html"
+      },
+      {
+        "id": "29728779-fe76-428b-8a0a-b7605a6fd68a",
+        "title": "Chiến dịch Biên giới Thu đông (16/9–17/10/1950): sự thành công trong sử dụng kế hoạch tác chiến",
+        "url": "https://baotanglichsu.vn/vi/Articles/2002/68257/chien-dich-bien-gioi-thu-djong-16-9-17-10-1950-su-thanh-cong-trong-su-dung-ke-hoach-tac-chien.html"
+      },
+      {
+        "id": "33a42d34-12d3-4f86-8b73-3406fabb5bbc",
+        "title": "Báo cáo Chính trị của Ban Chấp hành Trung ương Đảng khóa VII tại Đại hội VIII",
+        "url": "https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-viii/bao-cao-chinh-tri-cua-ban-chap-hanh-trung-uong-dang-khoa-vii-tai-dai-hoi-dai-bieu-toan-quoc-lan-thu-viii-cua-dang-1549?categoryId=104000022"
+      },
+      {
+        "id": "355b2355-b7c2-4900-8cf3-a6fce1294b05",
+        "title": "Nhớ về chiến dịch mang tính bước ngoặt của mùa Xuân 1975",
+        "url": "https://baochinhphu.vn/nho-ve-chien-dich-mang-tinh-buoc-ngoat-cua-mua-xuan-1975-102270035.htm"
+      },
+      {
+        "id": "36b971e4-5a0e-4830-8273-d417f9f289b2",
+        "title": "Di tích Núi Báo Đông nơi Chủ tịch Hồ Chí Minh quan sát trận đánh đồn Đông Khê",
+        "url": "https://baotanghochiminh.vn/di-tich-nui-bao-dong-noi-chu-tich-ho-chi-minh-quan-sat-tran-danh-don-dong-khe-chien-dich-bien-gioi-1950.htm"
+      },
+      {
+        "id": "3a080ca6-f9e2-4728-8d4b-4eb7b33b18c7",
+        "title": "19/5/1941: Thành lập Mặt trận Việt Minh",
+        "url": "https://baotanglichsu.vn/VI/Articles/3097/16382/19-5-1941-thanh-lap-mat-tran-viet-minh.html"
+      },
+      {
+        "id": "563c5e74-44b3-4df7-8a51-37a7ab9490db",
+        "title": "Chiến thắng Ấp Bắc ngày 2-1-1963",
+        "url": "https://baotanglichsu.vn/vi/Articles/2002/61989/chien-thang-ap-bac-ngay-2-1-1963.html"
+      },
+      {
+        "id": "5931e36f-4a07-4c21-be52-318e7175e611",
+        "title": "Ảnh tư liệu: Bộ đội cắm cờ chiến thắng tại Điện Biên Phủ (1954)",
+        "url": "https://commons.wikimedia.org/wiki/File:Victory_in_Battle_of_Dien_Bien_Phu.jpg"
+      },
+      {
+        "id": "5a0325d9-1264-4b4e-8d2c-5f6a37b1ef7d",
+        "title": "30 năm bình thường hóa quan hệ Việt – Mỹ: Nỗ lực phi thường, hành trình độc đáo",
+        "url": "https://baochinhphu.vn/30-nam-binh-thuong-hoa-quan-he-viet-my-no-luc-phi-thuong-hanh-trinh-doc-dao-102250711172515901.htm"
+      },
+      {
+        "id": "61ca5bfa-cf1c-41c8-801c-22e406e07e25",
+        "title": "Viet Nam — Accessions",
+        "url": "https://www.wto.org/english/thewto_e/acc_e/a1_vietnam_e.htm"
+      },
+      {
+        "id": "64bb1603-12fe-4cf0-88b1-5576d57b4ad7",
+        "title": "Ảnh tư liệu: Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập tại Quảng trường Ba Đình (2/9/1945)",
+        "url": "https://commons.wikimedia.org/wiki/File:Pr%C3%A9sident_Ho-chi-Minh_lit_la_Proclamation-d%27ind%C3%A9pendance_sur_la_place_Ba-dinh_le_2nd_Sep_1945.jpg"
+      },
+      {
+        "id": "6960bb2a-4e30-4417-8c85-13e7dd38ac68",
+        "title": "Remarks by the President in announcement on normalization of diplomatic relations with Vietnam",
+        "url": "https://clintonwhitehouse6.archives.gov/1995/07/1995-07-11-remarks-on-normalization-of-relations-with-vietnam.html"
+      },
+      {
+        "id": "6e53a4dc-8586-464f-8d6e-8e3d086ed074",
+        "title": "Đại hội đại biểu toàn quốc lần thứ VIII của Đảng",
+        "url": "https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-viii/dai-hoi-dai-bieu-toan-quoc-lan-thu-viii-cua-dang-13"
+      },
+      {
+        "id": "8d87e7fc-143e-4d4d-8e6a-53d63de8b0f9",
+        "title": "Lịch sử Biên niên Đảng Cộng sản Việt Nam — Tập 3",
+        "url": "https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/book/lich-su-dang/lich-su-bien-nien-dang-cong-san-viet-nam-tap-3-176?categoryId=102000083"
+      },
+      {
+        "id": "98fb7418-c447-45b8-8879-9699c33ec4e7",
+        "title": "Kỷ niệm 48 năm (18/8/1965–18/8/2013) — Chiến thắng Vạn Tường",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/14898/ky-niem-48-nam-18-8-1965-18-8-2013-chien-thang-van-tuong.html"
+      },
+      {
+        "id": "9ebc8d23-0a35-4655-a930-3a31601e9801",
+        "title": "Ảnh chân dung: Hồ Chí Minh, khoảng năm 1946",
+        "url": "https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_1946.jpg"
+      },
+      {
+        "id": "a82750b0-48bf-4343-87ab-70b3e391a267",
+        "title": "Thông tin báo chí trưng bày chuyên đề Non sông liền một dải",
+        "url": "https://baotanglichsu.vn/VI/Articles/3090/75384/thong-tin-bao-chi-trung-bay-chuyen-dje-non-song-lien-mot-dai.html"
+      },
+      {
+        "id": "a87707b4-0d19-4f0a-8fc6-5f5efa80a5ca",
+        "title": "Kỷ niệm 54 năm Đồng khởi Bến Tre (17/1/1960–17/1/2014)",
+        "url": "https://baotanglichsu.vn/VI/Articles/3097/15652/ky-niem-54-nam-djong-khoi-ben-tre-17-1-1960-17-1-2014.html"
+      },
+      {
+        "id": "aca474d6-b14e-4b44-a3b8-572f1cf740c1",
+        "title": "Sách giáo khoa Lịch sử 12",
+        "url": null
+      },
+      {
+        "id": "ad8b9226-8f13-4ec4-8c09-77db483065b8",
+        "title": "Chủ tịch Hồ Chí Minh và hành trình 30 năm tìm đường cứu nước giải phóng dân tộc",
+        "url": "https://hochiminh.vn/tin-tuc/chu-tich-ho-chi-minh-va-hanh-trinh-30-nam-tim-duong-cuu-nuoc-giai-phong-dan-toc-9013"
+      },
+      {
+        "id": "b9d2458d-c838-4288-8d20-380f95f2c7ed",
+        "title": "Ngày thành lập Đảng Cộng sản Việt Nam 3-2-1930",
+        "url": "https://tulieuvankien.dangcongsan.vn/ho-so-su-kien-nhan-chung/su-kien-va-nhan-chung/ngay-thanh-lap-dang-cong-san-viet-nam-3-2-1930-3342"
+      },
+      {
+        "id": "bc4d0c3b-76fd-4e00-8970-e3b7a1fefd5e",
+        "title": "Phong trào Đông Du (1905–1908) — Một hình thức xây dựng lực lượng cách mạng những năm đầu thế kỷ XX",
+        "url": "https://baotanglichsu.vn/vi/Articles/3097/14624/phong-trao-djong-du-1905-1908-mot-hinh-thuc-xay-dung-luc-luong-cach-mang-nhung-nam-dau-the-ky-xx.html"
+      },
+      {
+        "id": "c436e7b6-c8b8-4493-8302-4210b2c4c904",
+        "title": "Tri ân liệt sỹ nơi đầu sóng",
+        "url": "https://vov.vn/xa-hoi/tri-an-liet-sy-noi-dau-song-1074040.vov"
+      },
+      {
+        "id": "cd210816-bec6-4635-884a-3a6ba489fa7a",
+        "title": "Giải quyết vấn đề nông nghiệp, nông dân, nông thôn là nhiệm vụ của cả hệ thống chính trị và toàn xã hội",
+        "url": "https://baochinhphu.vn/giai-quyet-van-de-nong-nghiep-nong-dan-nong-thon-la-nhiem-vu-cua-ca-he-thong-chinh-tri-va-toan-xa-hoi-102829.htm"
+      },
+      {
+        "id": "e5f041ac-1d25-4661-82d1-df86f9fe6660",
+        "title": "Tưởng niệm, tri ân 64 liệt sĩ hy sinh tại đảo Gạc Ma",
+        "url": "https://baochinhphu.vn/tuong-niem-tri-an-64-liet-si-hy-sinh-tai-dao-gac-ma-10224031414164731.htm"
+      },
+      {
+        "id": "e658bf4d-97a2-4613-866f-13106816ec18",
+        "title": "Tổng khởi nghĩa Cách mạng tháng Tám năm 1945",
+        "url": "https://baotanglichsuquocgia.vn/vi/Articles/3097/18473/tong-khoi-nghia-cach-mang-thang-tam-nam-1945.html"
+      },
+      {
+        "id": "e9ee84b9-6b6d-475d-8229-5c6b455ae1c0",
+        "title": "Ngày 30-3-1972: Cuộc Tổng tiến công chiến lược năm 1972 bắt đầu",
+        "url": "https://baotanglichsu.vn/vi/Articles/2002/68267/ngay-30-3-1972-cuoc-tong-tien-cong-chien-luoc-nam-1972-bat-djau.html"
+      },
+      {
+        "id": "ea2be649-c67f-47ae-8bc3-40733821cb59",
+        "title": "Nghệ thuật vận dụng thời cơ trong Chiến dịch Trị Thiên",
+        "url": "https://baochinhphu.vn/nghe-thuat-van-dung-thoi-co-trong-chien-dich-tri-thien-102180398.htm"
+      }
+    ]
+  },
+  "selectedCanonicalConflicts": [
+    {
+      "event_links": 1,
+      "id": "dff00764-7ef6-4b82-981e-9f66f080d653",
+      "is_local_hero": null,
+      "name": "Lê Duẩn",
+      "slug": "le-duan",
+      "status": "published",
+      "refusal": "LEGACY_IDENTITY_CONFLICT; event-linked and published legacy row must remain unchanged",
+      "requiredDecision": "Separately approved additive enrollment/reconciliation preserving canonical ID, slug, existing event links, published content and owned media; the local draft importer is not a live enrollment tool."
+    },
+    {
+      "event_links": 1,
+      "id": "c6eb511d-898f-4fab-8875-42ddd0700cd4",
+      "is_local_hero": null,
+      "name": "Phạm Văn Đồng",
+      "slug": "pham-van-dong",
+      "status": "published",
+      "refusal": "LEGACY_IDENTITY_CONFLICT; event-linked and published legacy row must remain unchanged",
+      "requiredDecision": "Separately approved additive enrollment/reconciliation preserving canonical ID, slug, existing event links, published content and owned media; the local draft importer is not a live enrollment tool."
+    },
+    {
+      "event_links": 1,
+      "id": "c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+      "is_local_hero": null,
+      "name": "Văn Tiến Dũng",
+      "slug": "van-tien-dung",
+      "status": "published",
+      "refusal": "LEGACY_IDENTITY_CONFLICT; event-linked and published legacy row must remain unchanged",
+      "requiredDecision": "Separately approved additive enrollment/reconciliation preserving canonical ID, slug, existing event links, published content and owned media; the local draft importer is not a live enrollment tool."
+    }
+  ],
+  "sameUrlSources": [],
+  "featureSchemaPresent": false,
+  "migrationLedgerPresent": false,
+  "externalMutationAuthorized": false,
+  "readiness": "blocked_for_live_application; local rehearsal accepted separately",
+  "limitations": [
+    "This is a point-in-time inventory, not remote RLS/browser acceptance, a backup, an approval or a migration baseline.",
+    "Unrelated connected projects were not substituted for the intended target.",
+    "The missing remote migration ledger requires schema adoption review, not migration repair or replay by assumption."
+  ]
+}

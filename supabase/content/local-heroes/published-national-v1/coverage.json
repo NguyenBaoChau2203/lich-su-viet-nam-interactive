@@ -1,0 +1,668 @@
+{
+  "schemaVersion": 1,
+  "kind": "coverage",
+  "stage": "prepared",
+  "records": [
+    {
+      "code": "01",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a"
+      ],
+      "acceptedPersonKeys": [
+        "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a"
+      ],
+      "completePersonKeys": [
+        "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "04",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:be-van-dan",
+        "new:kim-dong"
+      ],
+      "acceptedPersonKeys": [
+        "new:be-van-dan",
+        "new:kim-dong"
+      ],
+      "completePersonKeys": [
+        "new:be-van-dan",
+        "new:kim-dong"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "08",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "figure:d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+        "new:ta-xuan-thu"
+      ],
+      "acceptedPersonKeys": [
+        "new:ta-xuan-thu"
+      ],
+      "completePersonKeys": [
+        "new:ta-xuan-thu"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "11",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "figure:d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+        "new:be-van-dan",
+        "new:tran-can"
+      ],
+      "acceptedPersonKeys": [
+        "new:be-van-dan",
+        "new:tran-can"
+      ],
+      "completePersonKeys": [
+        "new:be-van-dan",
+        "new:tran-can"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "12",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:tran-quoc-manh"
+      ],
+      "acceptedPersonKeys": [
+        "new:tran-quoc-manh"
+      ],
+      "completePersonKeys": [
+        "new:tran-quoc-manh"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "14",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:lo-van-gia",
+        "new:nguyen-luong-bang",
+        "new:to-hieu"
+      ],
+      "acceptedPersonKeys": [
+        "new:lo-van-gia",
+        "new:to-hieu"
+      ],
+      "completePersonKeys": [
+        "new:lo-van-gia",
+        "new:to-hieu"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "15",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "figure:757037f8-03a7-4a97-919e-00fc98236801",
+        "new:hoang-truong-minh"
+      ],
+      "acceptedPersonKeys": [
+        "new:hoang-truong-minh"
+      ],
+      "completePersonKeys": [
+        "new:hoang-truong-minh"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "19",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:doi-can",
+        "new:luong-ngoc-quyen"
+      ],
+      "acceptedPersonKeys": [
+        "new:doi-can"
+      ],
+      "completePersonKeys": [
+        "new:doi-can"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "20",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:hoang-van-thu",
+        "new:luong-van-tri"
+      ],
+      "acceptedPersonKeys": [
+        "new:hoang-van-thu"
+      ],
+      "completePersonKeys": [
+        "new:hoang-van-thu"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "22",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:nguyen-van-cu",
+        "new:vu-van-hieu"
+      ],
+      "acceptedPersonKeys": [
+        "new:vu-van-hieu"
+      ],
+      "completePersonKeys": [
+        "new:vu-van-hieu"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "24",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "figure:c0bcb4b3-9a6a-4f02-aae5-2d38dbc3c15a",
+        "new:ngo-gia-tu"
+      ],
+      "acceptedPersonKeys": [
+        "new:ngo-gia-tu"
+      ],
+      "completePersonKeys": [
+        "new:ngo-gia-tu"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "25",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:doi-can",
+        "new:nguyen-thai-hoc"
+      ],
+      "acceptedPersonKeys": [
+        "new:nguyen-thai-hoc"
+      ],
+      "completePersonKeys": [
+        "new:nguyen-thai-hoc"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "31",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:nguyen-duc-canh",
+        "new:to-hieu"
+      ],
+      "acceptedPersonKeys": [
+        "new:nguyen-duc-canh"
+      ],
+      "completePersonKeys": [
+        "new:nguyen-duc-canh"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "33",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "figure:2bd5b2d6-9ab1-48b3-bf6e-f53a76484e4b",
+        "new:to-hieu"
+      ],
+      "acceptedPersonKeys": [
+        "new:to-hieu"
+      ],
+      "completePersonKeys": [
+        "new:to-hieu"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "37",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "figure:01e2955b-8989-4765-95b8-f1f4a0685168",
+        "new:luong-van-tuy"
+      ],
+      "acceptedPersonKeys": [
+        "new:luong-van-tuy"
+      ],
+      "completePersonKeys": [
+        "new:luong-van-tuy"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "38",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:hoang-le-kha",
+        "new:to-vinh-dien"
+      ],
+      "acceptedPersonKeys": [
+        "new:to-vinh-dien"
+      ],
+      "completePersonKeys": [
+        "new:to-vinh-dien"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "40",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "figure:757037f8-03a7-4a97-919e-00fc98236801",
+        "new:nguyen-thi-minh-khai"
+      ],
+      "acceptedPersonKeys": [
+        "new:nguyen-thi-minh-khai"
+      ],
+      "completePersonKeys": [
+        "new:nguyen-thi-minh-khai"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "42",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:ha-huy-tap",
+        "new:tran-phu"
+      ],
+      "acceptedPersonKeys": [
+        "new:tran-phu"
+      ],
+      "completePersonKeys": [
+        "new:tran-phu"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "44",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "figure:d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+        "figure:dff00764-7ef6-4b82-981e-9f66f080d653"
+      ],
+      "acceptedPersonKeys": [
+        "figure:dff00764-7ef6-4b82-981e-9f66f080d653"
+      ],
+      "completePersonKeys": [
+        "figure:dff00764-7ef6-4b82-981e-9f66f080d653"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "46",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "figure:d2df1c0a-e5e3-4e03-865a-44bc9f020595",
+        "new:nguyen-chi-dieu"
+      ],
+      "acceptedPersonKeys": [
+        "new:nguyen-chi-dieu"
+      ],
+      "completePersonKeys": [
+        "new:nguyen-chi-dieu"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "48",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:nguyen-van-troi",
+        "new:thai-phien"
+      ],
+      "acceptedPersonKeys": [
+        "new:thai-phien"
+      ],
+      "completePersonKeys": [
+        "new:thai-phien"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "51",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "figure:c6eb511d-898f-4fab-8875-42ddd0700cd4",
+        "new:nguyen-chanh"
+      ],
+      "acceptedPersonKeys": [
+        "figure:c6eb511d-898f-4fab-8875-42ddd0700cd4"
+      ],
+      "completePersonKeys": [
+        "figure:c6eb511d-898f-4fab-8875-42ddd0700cd4"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "52",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:dinh-nup",
+        "new:nay-der"
+      ],
+      "acceptedPersonKeys": [
+        "new:dinh-nup"
+      ],
+      "completePersonKeys": [
+        "new:dinh-nup"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "56",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:vo-van-ky",
+        "new:y-bloc-eban"
+      ],
+      "acceptedPersonKeys": [
+        "new:vo-van-ky"
+      ],
+      "completePersonKeys": [
+        "new:vo-van-ky"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "66",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:tran-phu",
+        "new:y-bloc-eban"
+      ],
+      "acceptedPersonKeys": [
+        "new:y-bloc-eban"
+      ],
+      "completePersonKeys": [
+        "new:y-bloc-eban"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "68",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:le-thi-pha",
+        "new:no-trang-long"
+      ],
+      "acceptedPersonKeys": [
+        "new:le-thi-pha"
+      ],
+      "completePersonKeys": [
+        "new:le-thi-pha"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "75",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:hoang-minh-chanh",
+        "new:huynh-van-nghe"
+      ],
+      "acceptedPersonKeys": [
+        "new:huynh-van-nghe"
+      ],
+      "completePersonKeys": [
+        "new:huynh-van-nghe"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "79",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:hoang-le-kha",
+        "new:nguyen-van-troi"
+      ],
+      "acceptedPersonKeys": [
+        "new:nguyen-van-troi"
+      ],
+      "completePersonKeys": [
+        "new:nguyen-van-troi"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "80",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:chau-van-liem",
+        "new:hoang-le-kha"
+      ],
+      "acceptedPersonKeys": [
+        "new:hoang-le-kha"
+      ],
+      "completePersonKeys": [
+        "new:hoang-le-kha"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "82",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:pham-hung",
+        "new:tran-thi-nhuong"
+      ],
+      "acceptedPersonKeys": [
+        "new:tran-thi-nhuong"
+      ],
+      "completePersonKeys": [
+        "new:tran-thi-nhuong"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "86",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:nguyen-thi-dinh",
+        "new:pham-hung"
+      ],
+      "acceptedPersonKeys": [
+        "new:pham-hung"
+      ],
+      "completePersonKeys": [
+        "new:pham-hung"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "91",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:chau-van-liem",
+        "new:ton-duc-thang"
+      ],
+      "acceptedPersonKeys": [
+        "new:ton-duc-thang"
+      ],
+      "completePersonKeys": [
+        "new:ton-duc-thang"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "92",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:chau-van-liem",
+        "new:le-binh"
+      ],
+      "acceptedPersonKeys": [
+        "new:chau-van-liem"
+      ],
+      "completePersonKeys": [
+        "new:chau-van-liem"
+      ],
+      "gaps": []
+    },
+    {
+      "code": "96",
+      "status": "represented",
+      "candidatePersonKeys": [
+        "new:bong-van-dia",
+        "new:phan-ngoc-hien"
+      ],
+      "acceptedPersonKeys": [
+        "new:bong-van-dia"
+      ],
+      "completePersonKeys": [
+        "new:bong-van-dia"
+      ],
+      "gaps": []
+    }
+  ],
+  "publicSnapshot": {
+    "observedAt": "2026-10-27T11:19:32.343Z",
+    "manifestHash": "06080db323af8f89364355323cd585824f3772963e96316dd8ae72aa0fc54416",
+    "representedLocalities": 34,
+    "eligiblePeople": 35,
+    "byLocality": [
+      {
+        "code": "01",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "04",
+        "eligiblePeople": 2
+      },
+      {
+        "code": "08",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "11",
+        "eligiblePeople": 2
+      },
+      {
+        "code": "12",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "14",
+        "eligiblePeople": 2
+      },
+      {
+        "code": "15",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "19",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "20",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "22",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "24",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "25",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "31",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "33",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "37",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "38",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "40",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "42",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "44",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "46",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "48",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "51",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "52",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "56",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "66",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "68",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "75",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "79",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "80",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "82",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "86",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "91",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "92",
+        "eligiblePeople": 1
+      },
+      {
+        "code": "96",
+        "eligiblePeople": 1
+      }
+    ],
+    "evidenceRef": "docs/audits/2026-10-27-local-heroes-live-publication.md"
+  }
+}

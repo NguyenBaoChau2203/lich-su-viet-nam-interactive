@@ -1,0 +1,1389 @@
+{
+  "schemaVersion": 1,
+  "phase": "07",
+  "recordedAt": "2026-10-27T03:39:11.398Z",
+  "reviewKind": "one-agent-self-review",
+  "branch": "feat/local-revolutionary-heroes",
+  "head": "6a38f582515102c03ccc7ac806ae6d3f1becbbb0",
+  "nationalReleaseReady": false,
+  "contentGate": "BLOCKED",
+  "counts": {
+    "nominees": 53,
+    "acceptedPeople": 35,
+    "heldPeople": 18,
+    "inheritedCompletePeople": 22,
+    "inheritedPreparedLocalities": 21,
+    "reviewCompletePeople": 2,
+    "reviewPreparedLocalities": 2,
+    "acceptedMedia": 6,
+    "heldMedia": 26,
+    "admittedStories": 2
+  },
+  "inputManifestHash": "84d8a8a5833ec66382aa4e96b50cfdfd9495e15fc1c524f2205c4279866e8dfb",
+  "acceptanceSha256": "084769e78ef13f1d1af767651713850384c4c3da0a13d536c3e7f75d6a48831b",
+  "originalInputsUnchanged": true,
+  "artifact": {
+    "schemaVersion": 1,
+    "snapshotHash": "4110c2782371654e0f74621036fb680b995aebe1c1ba1795dddd67ed0d43cbc8",
+    "inputManifestHash": "84d8a8a5833ec66382aa4e96b50cfdfd9495e15fc1c524f2205c4279866e8dfb",
+    "acceptanceSha256": "084769e78ef13f1d1af767651713850384c4c3da0a13d536c3e7f75d6a48831b",
+    "files": [
+      {
+        "name": "draft-import.sql",
+        "sha256": "60100056794361bd1d3cf863aba6c204cfef70d68901d24d4b5e22dda95f66cf"
+      },
+      {
+        "name": "local-promotion-rehearsal.sql",
+        "sha256": "ce822ad6895e78f43dcc6332ecfb1347e589d4ba8539fa01e40090c42e92f848"
+      },
+      {
+        "name": "rollback.sql",
+        "sha256": "a74a128f18bd4ae886ee589ac2d7be8ea8f3e37919c9f19f35ab993bcca2cafe"
+      },
+      {
+        "name": "snapshot.json",
+        "sha256": "a535252da4460464277afc79de8af3e143e7595ec34147211fdb49a554ae11b0"
+      }
+    ]
+  },
+  "disposableTarget": {
+    "project": "local-heroes-phase02-disposable",
+    "container": "supabase_db_local-heroes-phase02-disposable",
+    "host": "127.0.0.1",
+    "database": "postgres",
+    "apiPort": 55341,
+    "dbPort": 55342,
+    "onlyMutationTarget": true,
+    "finalBaseline": {
+      "auth": 0,
+      "staff": 0,
+      "people": 0,
+      "sources": 0,
+      "stories": 0,
+      "claims": 0,
+      "storyClaims": 0,
+      "localities": 0,
+      "media": 0,
+      "mediaEvidence": 0,
+      "registry": 34
+    },
+    "baselineEvidence": ".task-reports/local-heroes-phase-07/db-import-acceptance-final.log"
+  },
+  "remote": {
+    "workingProjectVisibleThroughConnector": false,
+    "connectorResult": "Three unrelated projects; no intended historical project; no unrelated project queried",
+    "schemaReadiness": "unverified",
+    "identityReconciliation": "unverified",
+    "externalMutations": false
+  },
+  "commands": [
+    {
+      "key": "content-research-final",
+      "command": [
+        "node",
+        "scripts/content/check-local-heroes.mjs"
+      ],
+      "startedAt": "2026-10-27T03:26:47.3735570+00:00",
+      "endedAt": "2026-10-27T03:26:47.6294047+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/content-research-final.log",
+      "logSha256": "59524d8d426f3f0c3ed7c2fc10507a834238c8a44dffeb56314c4c134e10b491",
+      "result": "Structurally valid v17; releaseReady=false; inherited 22/35 people,21/34 localities"
+    },
+    {
+      "key": "content-release-final",
+      "command": [
+        "node",
+        "scripts/content/check-local-heroes.mjs",
+        "--package",
+        "supabase/content/local-heroes/national-v1",
+        "--mode",
+        "release"
+      ],
+      "startedAt": "2026-10-27T03:26:59.5602021+00:00",
+      "endedAt": "2026-10-27T03:26:59.8007144+00:00",
+      "exitCode": 2,
+      "evidence": ".task-reports/local-heroes-phase-07/content-release-final.log",
+      "logSha256": "a6c8589bbd7b3954116d85ec2def780c204ad7e0af583590c80adbf7d8efb2e8",
+      "result": "EXPECTED BLOCK: exit 2; 34 coverage issues + approval + incomplete roster"
+    },
+    {
+      "key": "focused-owner-final",
+      "command": [
+        "pnpm",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/local-heroes-state.test.ts",
+        "tests/unit/local-heroes-query.test.ts",
+        "tests/unit/local-heroes-content.test.ts",
+        "tests/unit/local-heroes-admin.test.ts",
+        "tests/unit/local-heroes-detail.test.ts"
+      ],
+      "startedAt": "2026-10-27T03:26:47.3735553+00:00",
+      "endedAt": "2026-10-27T03:26:52.3107553+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/focused-owner-final.log",
+      "logSha256": "e1d9685d593a672c6f2954aa0a0001baaadeb298997667abcbb450968d342641",
+      "result": "5 files / 93 tests passed"
+    },
+    {
+      "key": "corrections-unit-final",
+      "command": [
+        "pnpm",
+        "exec",
+        "vitest",
+        "run",
+        "tests/unit/local-heroes-preview-evidence.test.ts",
+        "tests/unit/local-heroes-release-artifact.test.ts"
+      ],
+      "startedAt": "2026-10-27T03:29:00.1197220+00:00",
+      "endedAt": "2026-10-27T03:29:03.1377563+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/corrections-unit-final.log",
+      "logSha256": "4d9f7e6792896fdf33f537ec09ebde245842b3d168e608433b275b354109d01f",
+      "result": "2 files / 7 tests passed: preview evidence4 + deterministic artifact3"
+    },
+    {
+      "key": "prepare-artifact-final",
+      "command": [
+        "node",
+        "scripts/content/prepare-local-heroes-release.mjs"
+      ],
+      "startedAt": "2026-10-27T03:04:56.5694034+00:00",
+      "endedAt": "2026-10-27T03:04:56.9511054+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/prepare-artifact-final.log",
+      "logSha256": "49ed10510031b23d2dedc6f0913fb4d4831cfb204396785d9bd4cbed7740ad8d",
+      "result": "35 drafts; two reviewed graphs; deterministic snapshot 4110c278…; nationalReleaseReady=false"
+    },
+    {
+      "key": "db-acceptance-final",
+      "command": [
+        "supabase",
+        "test",
+        "db",
+        "--local",
+        "--workdir",
+        ".task-reports/local-heroes-phase-02-work/db"
+      ],
+      "startedAt": "2026-10-27T03:25:41.3095493+00:00",
+      "endedAt": "2026-10-27T03:25:46.0168669+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/db-acceptance-final.log",
+      "logSha256": "d4185d2c70c7676a56befea0826eae308be80fc26cc67ce27ab122a378a64bd4",
+      "result": "2 SQL files / 296 pgTAP assertions passed on dedicated disposable DB"
+    },
+    {
+      "key": "db-races-final",
+      "command": [
+        "node",
+        "tests/rls/local-heroes-concurrency.mjs",
+        "--target",
+        ".task-reports/local-heroes-disposable-db.json"
+      ],
+      "startedAt": "2026-10-27T03:25:50.5538859+00:00",
+      "endedAt": "2026-10-27T03:26:41.4930567+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/db-races-final.log",
+      "logSha256": "dfeee2f3bd9950cf3fb960e75a7402d24526313070720db16ef79055edd3c3e9",
+      "result": "2/2 two-session races; lock waits observed; disposable cleanup true"
+    },
+    {
+      "key": "db-import-acceptance-final",
+      "command": [
+        "node",
+        "tests/rls/local-heroes-import-rehearsal.mjs",
+        "--target",
+        ".task-reports/local-heroes-disposable-db.json"
+      ],
+      "startedAt": "2026-10-27T03:27:07.4767101+00:00",
+      "endedAt": "2026-10-27T03:27:14.8832853+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/db-import-acceptance-final.log",
+      "logSha256": "dc8305653fd3ac478b8909823925851e50b2a152272db877d428d9eaacf2654d",
+      "result": "6/6 rollback cases; 35 drafts/2 temporary promotions; before=after empty with registry34"
+    },
+    {
+      "key": "public-build-media-final",
+      "command": [
+        "node",
+        "scripts/agent/local-heroes-e2e.mjs",
+        "build"
+      ],
+      "startedAt": "2026-10-27T03:09:10.8444322+00:00",
+      "endedAt": "2026-10-27T03:09:36.0516078+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/public-build-media-final.log",
+      "logSha256": "54e960d0eb00b0a2a43527e83346baa6cea6594ba7ea0be0860b882420c96545",
+      "result": "Isolated read-only-fixture Next production build passed"
+    },
+    {
+      "key": "public-browser-media-final",
+      "command": [
+        "pnpm",
+        "exec",
+        "playwright",
+        "test",
+        "--config",
+        "playwright.local-heroes.config.ts"
+      ],
+      "startedAt": "2026-10-27T03:12:36.6993839+00:00",
+      "endedAt": "2026-10-27T03:16:19.4220375+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/public-browser-media-final.log",
+      "logSha256": "0056e7a9a1c4acef8973dd31e54e6ebf4959d0cb541b0e7aeb8351fad3ce3b84",
+      "result": "72/72; 18 cases × four desktops; no retries"
+    },
+    {
+      "key": "performance-media-final",
+      "command": [
+        "node",
+        "scripts/agent/local-heroes-performance.mjs",
+        "final"
+      ],
+      "startedAt": "2026-10-27T03:16:25.9520455+00:00",
+      "endedAt": "2026-10-27T03:16:35.3582242+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/performance-media-final.log",
+      "logSha256": "03ed3a47fd100c9c1fad4effa5955d61d6326bf14caa38a210ddf0b8b5bfd5d2",
+      "result": "23 scripts; +5609 gzip bytes; all measured budgets passed; hardware Intel UHD"
+    },
+    {
+      "key": "original-media-performance-final",
+      "command": [
+        "node",
+        ".task-reports/local-heroes-phase-07/image-performance.mjs"
+      ],
+      "startedAt": "2026-10-27T03:12:03.7760191+00:00",
+      "endedAt": "2026-10-27T03:12:10.3276314+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/original-media-performance-final.log",
+      "logSha256": "1617ecb3b0caa20d4a52b4117a7b56cd6d3ce5150194744083f36284aaf1b3e5",
+      "result": "12/12 actual original images through Next at DPR1/2; max11532 bytes; no route mocking"
+    },
+    {
+      "key": "globe-regressions-final",
+      "command": [
+        "pnpm",
+        "exec",
+        "playwright",
+        "test",
+        "--config",
+        "playwright.local-heroes-regression.config.ts"
+      ],
+      "startedAt": "2026-10-27T03:16:39.6069854+00:00",
+      "endedAt": "2026-10-27T03:17:20.3558776+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/globe-regressions-final.log",
+      "logSha256": "1dfc0c6e712b1b9e54c871ace73d6ac0db9726102d3e133b8fc67017419e2c98",
+      "result": "10/10 selected read-only globe/journey/timeline regressions"
+    },
+    {
+      "key": "admin-build-role-final",
+      "command": [
+        "node",
+        "scripts/agent/local-heroes-admin-e2e.mjs",
+        "build"
+      ],
+      "startedAt": "2026-10-27T03:17:54.0227923+00:00",
+      "endedAt": "2026-10-27T03:18:25.6443568+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/admin-build-role-final.log",
+      "logSha256": "2231a17014c1dd789551d96f82912a120c721d036c995f00063bf4247a0abf06",
+      "result": "Isolated real disposable Auth/PostgREST Next production build passed"
+    },
+    {
+      "key": "admin-browser-role-final",
+      "command": [
+        "pnpm",
+        "exec",
+        "playwright",
+        "test",
+        "--config",
+        "playwright.local-heroes-admin.config.ts"
+      ],
+      "startedAt": "2026-10-27T03:18:31.1120622+00:00",
+      "endedAt": "2026-10-27T03:19:44.1161709+00:00",
+      "exitCode": 1,
+      "evidence": ".task-reports/local-heroes-phase-07/admin-browser-role-final.log",
+      "logSha256": "23029c1180d253f3245935cdfa84d39604b73feafe5550dcce0a55b7cb73e584",
+      "result": "RED: 7/8; second-save test awaited previous success notice; raw8-role matrix passed"
+    },
+    {
+      "key": "reset-admin-role-rerun",
+      "command": [
+        "supabase",
+        "db",
+        "reset",
+        "--local",
+        "--no-seed",
+        "--yes",
+        "--workdir",
+        ".task-reports/local-heroes-phase-02-work/db"
+      ],
+      "startedAt": "2026-10-27T03:21:04.9575030+00:00",
+      "endedAt": "2026-10-27T03:21:40.0084730+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/reset-admin-role-rerun.log",
+      "logSha256": "a72dc8743b475bb7bf1a3e9af180b2bb9109b14218c7ffb3809019b64cd7b08e",
+      "result": "Dedicated local reset only; known pg-delta catalog warning; baseline verified by setup"
+    },
+    {
+      "key": "admin-browser-acceptance-final",
+      "command": [
+        "pnpm",
+        "exec",
+        "playwright",
+        "test",
+        "--config",
+        "playwright.local-heroes-admin.config.ts"
+      ],
+      "startedAt": "2026-10-27T03:21:54.0556547+00:00",
+      "endedAt": "2026-10-27T03:22:38.3013468+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/admin-browser-acceptance-final.log",
+      "logSha256": "06b9e35e4afe070d6b09795130143c0d5274e03db678fafb42974ee70969de9e",
+      "result": "8/8; four viewport axe zero; stale/input/review/preview plus actual raw HTTP8 roles"
+    },
+    {
+      "key": "reset-admin-cleanup-final",
+      "command": [
+        "supabase",
+        "db",
+        "reset",
+        "--local",
+        "--no-seed",
+        "--yes",
+        "--workdir",
+        ".task-reports/local-heroes-phase-02-work/db"
+      ],
+      "startedAt": "2026-10-27T03:24:59.8646538+00:00",
+      "endedAt": "2026-10-27T03:25:36.6206674+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/reset-admin-cleanup-final.log",
+      "logSha256": "a72dc8743b475bb7bf1a3e9af180b2bb9109b14218c7ffb3809019b64cd7b08e",
+      "result": "Synthetic admin data removed from verified disposable project only; baseline subsequently verified"
+    },
+    {
+      "key": "graph-sync-final",
+      "command": [
+        "pnpm",
+        "agent:sync"
+      ],
+      "startedAt": "2026-10-27T03:29:00.1587506+00:00",
+      "endedAt": "2026-10-27T03:29:06.2262978+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/graph-sync-final.log",
+      "logSha256": "fafa72ad2b4eb86abf59d3cacd57d6ab86eb17f9a54230ebdfab3c73b5af0ab3",
+      "result": "829 supported source files; complete, no pending changes"
+    },
+    {
+      "key": "verify-final",
+      "command": [
+        "pnpm",
+        "verify"
+      ],
+      "startedAt": "2026-10-27T03:29:15.8052496+00:00",
+      "endedAt": "2026-10-27T03:31:35.0355061+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/verify-final.log",
+      "logSha256": "932531071609df86d946ace5abb542692a46b86afed2aa71423f2c3914319274",
+      "result": "PASS: agent check, history42, lint0errors/3existing warnings, strict typecheck,102files/1177tests +26script tests,build103pages"
+    },
+    {
+      "key": "smoke-build-final",
+      "command": [
+        "pnpm",
+        "build:smoke"
+      ],
+      "startedAt": "2026-10-27T03:31:46.0046867+00:00",
+      "endedAt": "2026-10-27T03:32:18.4122955+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/smoke-build-final.log",
+      "logSha256": "9896f01fa49e99b9956a97fe06ddd92076b3b50f9c45e5cb88f453aa6edefd96",
+      "result": "Synthetic public smoke production build"
+    },
+    {
+      "key": "smoke-browser-final",
+      "command": [
+        "pnpm",
+        "test:e2e:smoke"
+      ],
+      "startedAt": "2026-10-27T03:32:56.6890572+00:00",
+      "endedAt": "2026-10-27T03:33:44.0619460+00:00",
+      "exitCode": 1,
+      "evidence": ".task-reports/local-heroes-phase-07/smoke-browser-final.log",
+      "logSha256": "77e6ff873697bcdc6680c62600cde4b96aa15a32d68cc8153480e9da6c65c01a",
+      "result": "RED:8/8 failed before page navigation; agent set E2E_BASE_URL empty; invalid storage origin, no product assertion executed"
+    },
+    {
+      "key": "smoke-browser-acceptance-final",
+      "command": [
+        "pnpm",
+        "test:e2e:smoke"
+      ],
+      "startedAt": "2026-10-27T03:34:06.0085427+00:00",
+      "endedAt": "2026-10-27T03:34:35.6166151+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/smoke-browser-acceptance-final.log",
+      "logSha256": "764397a53fdbbe46bf525521e2f9b802588edd8a76e46ef5913aaae832dc060f",
+      "result": "8/8 public smoke passed at all four desktops; E2E_CHANNEL=msedge, E2E_BASE_URL absent, loopback only"
+    },
+    {
+      "key": "restore-build-final",
+      "command": [
+        "pnpm",
+        "build"
+      ],
+      "startedAt": "2026-10-27T03:34:55.5114993+00:00",
+      "endedAt": "2026-10-27T03:35:20.8770910+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/restore-build-final.log",
+      "logSha256": "1cd4c7e8dc1161d5c4f33e81d426baca0a098bdc73e1eebc7aa87567713853b8",
+      "result": "Ordinary configured .next production build restored after smoke"
+    },
+    {
+      "key": "graph-status-final",
+      "command": [
+        "pnpm",
+        "agent:status"
+      ],
+      "startedAt": "2026-10-27T03:38:12.8272172+00:00",
+      "endedAt": "2026-10-27T03:38:14.3363562+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/graph-status-final.log",
+      "logSha256": "e2f46e444c9ba658552471f666611786b693f1ac2dfaf73d49a2625cbbfb93ae",
+      "result": "Final graph source freshness status"
+    },
+    {
+      "key": "diff-final",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "startedAt": "2026-10-27T03:38:12.8041360+00:00",
+      "endedAt": "2026-10-27T03:38:13.0410457+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/diff-final.log",
+      "logSha256": "3290d4fe05f29bf577515bd89a9f80e57e9f21ab7d7ca42d727552c1fd2e8f04",
+      "result": "git diff --check"
+    },
+    {
+      "key": "status-final",
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "startedAt": "2026-10-27T03:38:15.2584094+00:00",
+      "endedAt": "2026-10-27T03:38:15.5665488+00:00",
+      "exitCode": 0,
+      "evidence": ".task-reports/local-heroes-phase-07/status-final.log",
+      "logSha256": "c8ff92525b318b7c0b860b3231806407d01db5cfbd38cc746486f072a8b6c3fc",
+      "result": "Final branch/working tree; no staged changes"
+    }
+  ],
+  "pendingCommands": [],
+  "sourceFiles": [
+    {
+      "path": "lib/queries/figures.ts",
+      "sha256": "f930eeb6ef224a5a90adb9c8a50ad222006a263b2181f1e3d3feac01e278ad95"
+    },
+    {
+      "path": "components/admin/figures/StoryEditor.tsx",
+      "sha256": "74f857d29faad404b569ec9049066363fe873b072cd2d521b7b876a8466920b7"
+    },
+    {
+      "path": "components/admin/figures/MediaEvidenceEditor.tsx",
+      "sha256": "36622cd7e6cc3afbca1f40554a9e5285133002ddbee8c011e2f449a05afa9ce6"
+    },
+    {
+      "path": "next.config.ts",
+      "sha256": "30273cd0355ccef635b7eb009788192fb2291f8895cca3df13f3a4dff70af9aa"
+    },
+    {
+      "path": "tests/e2e/home-local-heroes.spec.ts",
+      "sha256": "b007a619c86cfe562a4362c972faa4f5933c75dc1248bcde5345689485fdc62f"
+    },
+    {
+      "path": "tests/e2e/admin-local-heroes.spec.ts",
+      "sha256": "ac982f691985730378d1ec9a1fd187a552235508b3061254642c6d4cd4f7b3d0"
+    },
+    {
+      "path": "tests/unit/local-heroes-detail.test.ts",
+      "sha256": "38893c05b84f81a9e4df3749aea9a6d68e850196402a076e329986b175a15b4c"
+    },
+    {
+      "path": "tests/unit/local-heroes-preview-evidence.test.ts",
+      "sha256": "3ae3139eb7ca6bb6d860b61df82a351fe79ad209701f06d31e2a6d30566e8e92"
+    },
+    {
+      "path": "tests/unit/local-heroes-release-artifact.test.ts",
+      "sha256": "0236ffa7a755e4451d8115d8172dafafd64a76ed3e09006d472a1c1a7dfec7d0"
+    },
+    {
+      "path": "scripts/content/prepare-local-heroes-release.mjs",
+      "sha256": "c1838606d73473a096f4f3f59907f5ead228cfd473f2421d5f0591d322f481dd"
+    },
+    {
+      "path": "tests/rls/local-heroes-import-rehearsal.mjs",
+      "sha256": "115a1f7edbb9bdeece03106d306640d5a6d1e253fa7ea86f8e9d9d0a494a5282"
+    },
+    {
+      "path": "supabase/tests/local_heroes_claim_groups.sql",
+      "sha256": "c67ad6d4a3ae52e87dc5e2f15839dc4c9b50bd69065674b3e5b254cb4421e009"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "output/playwright/local-heroes/screenshots/detail-1280x720.png",
+      "sha256": "c0e50a4a7a6e896ea0d0ea67a378c4649161afbe0cc2a64d8040ca7c2bb52e01"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/detail-1366x768.png",
+      "sha256": "114d5aa28b2d27105cca409df7111464b297f4f4c6e4ced69e5452fd736c8a0e"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/detail-1440x900.png",
+      "sha256": "e162757fc2f33ba24702098fe535fafc24e6a6bc71da97ad5b0b74075626421f"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/detail-1920x1080.png",
+      "sha256": "e8bf32afd1f0bff1565e1aa3c454f5cd4b280a0d91f4698c3964cb2df063a3bc"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-js-1280x720.png",
+      "sha256": "d84fa2fe7c19d02457317ec50ffcaffda21857be473c323428ffe9d9fd906da8"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-js-1366x768.png",
+      "sha256": "5f21c572dec92c2017c85cdebde481df6093b82236376920ba9433dae059410e"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-js-1440x900.png",
+      "sha256": "6760d306fb59168faed0ad7995fee1f15ce84c5649e0e4d6241b21f7d398a423"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-js-1920x1080.png",
+      "sha256": "9cf99c23bcffeb77d7c3c73085984b8ec492f6cae2c96397b6ee4be21fd2f8b2"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-webgl-1280x720.png",
+      "sha256": "d9adeb59d059a8b578657eb385b6fd7bb8ef59ab96062f285c1e9388648bc4be"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-webgl-1366x768.png",
+      "sha256": "6dc5d28edd91af1755dd1234301e5dc8b5293b8b244ec23449549ff5a4900793"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-webgl-1440x900.png",
+      "sha256": "c5661b290c4777618a117188101596e530da2dd98058f992c901a3c86aba893b"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/no-webgl-1920x1080.png",
+      "sha256": "bc65a0472d7727af95ebf71c662265e7bf5dd9d1f1d835e67867955403b25b51"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/people-1280x720.png",
+      "sha256": "6d2b14185f359b030015f921dce446ec25cd2cedc69b77f628cc18834e6101ed"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/people-1366x768.png",
+      "sha256": "41938b47f29cbb32d6f133112fc596daaeed572742dc9daf69754acfbb8a03c5"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/people-1440x900.png",
+      "sha256": "8ef4f46bfdb120edc8b8afe58760e425dea6f1af20b729106367ccdf98d3deb5"
+    },
+    {
+      "path": "output/playwright/local-heroes/screenshots/people-1920x1080.png",
+      "sha256": "d5a6bae13b21d37657d9511ce3fcae5b5c2ddad3f63ea04701f16a83d78090b0"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/editor-1280x720.png",
+      "sha256": "b96eb2513e4354b35ae1aabb5e27b320c7aaba72ece4faa23a51d05c7659a46e"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/editor-1366x768.png",
+      "sha256": "7ce89ae0e6a94c9a0f1eaae389069d14de67809ba5410dc6dcd18c749ad62329"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/editor-1440x900.png",
+      "sha256": "60d66b5066fc249de955c04bd925d37105a9e249347c0616100fbd9f9d913e7d"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/editor-1920x1080.png",
+      "sha256": "3b0ad22db173d7af7e2d10b340dcce191cde095125fd99aa35d5086ff6875889"
+    }
+  ],
+  "accessibility": [
+    {
+      "path": "output/playwright/local-heroes/accessibility/1280x720.json",
+      "violations": 0,
+      "sha256": "a7c4936aa82af29174402d2b7749891d0d5894c3c971028e9b3d53b16920b429"
+    },
+    {
+      "path": "output/playwright/local-heroes/accessibility/1366x768.json",
+      "violations": 0,
+      "sha256": "a7c4936aa82af29174402d2b7749891d0d5894c3c971028e9b3d53b16920b429"
+    },
+    {
+      "path": "output/playwright/local-heroes/accessibility/1440x900.json",
+      "violations": 0,
+      "sha256": "a7c4936aa82af29174402d2b7749891d0d5894c3c971028e9b3d53b16920b429"
+    },
+    {
+      "path": "output/playwright/local-heroes/accessibility/1920x1080.json",
+      "violations": 0,
+      "sha256": "a7c4936aa82af29174402d2b7749891d0d5894c3c971028e9b3d53b16920b429"
+    },
+    {
+      "path": "output/playwright/local-heroes/accessibility/detail-1280x720.json",
+      "violations": 0,
+      "sha256": "2f37f6bb13c6ff5889e45e77b44a04115fad6697bbf1a5942a8d8fa491b42c4c"
+    },
+    {
+      "path": "output/playwright/local-heroes/accessibility/detail-1366x768.json",
+      "violations": 0,
+      "sha256": "023dec7793bc77e8db67506c6a93f2b47f84eff7978e643d574659654c38316e"
+    },
+    {
+      "path": "output/playwright/local-heroes/accessibility/detail-1440x900.json",
+      "violations": 0,
+      "sha256": "0d1723c98be1915b5f2f697c702a365be46ef65894f0e2288a4da28373ff54f9"
+    },
+    {
+      "path": "output/playwright/local-heroes/accessibility/detail-1920x1080.json",
+      "violations": 0,
+      "sha256": "f0f505af774c4e9293735edc2bab9e6817ab8a691290426dd16ecfab4488c5c6"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/axe-1280x720.json",
+      "violations": 0,
+      "sha256": "9298be22b7ef3a0ed20b3318fd01e5dc7185fd83787858b7d09fbe3a786d430f"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/axe-1366x768.json",
+      "violations": 0,
+      "sha256": "b1bbc34711d01c3f7bd1f7e973d876b9580895d34da5151500e1b5f631d9da78"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/axe-1440x900.json",
+      "violations": 0,
+      "sha256": "174c1379f21087dd12701eb0d754165145fe8768beb6b8e0b505229fd9bf2c92"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/axe-1920x1080.json",
+      "violations": 0,
+      "sha256": "099e36ed89eb40ced777e71e0ed5e9dce351dca4132282b20fb70e1bd6b1202f"
+    }
+  ],
+  "diagnostics": [
+    {
+      "root": "output/playwright/local-heroes/diagnostics",
+      "files": 72,
+      "records": 320,
+      "pageErrors": [],
+      "kinds": {
+        "requestfailed": 168,
+        "intentional-broken-image": 70,
+        "console-error": 78,
+        "http-error": 4
+      },
+      "filesSha256": [
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-accessibility-zero-axe-violations-and-full-keyboard-accessibility-on-detail.json",
+          "sha256": "f6e622bfa1426f5c0a3e876cbf19db4f77f167b7d85bf93a8abc701bdde6595e"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-all-34-choices-distinct-locality-counts-pagination-and-Vietnamese-aliases.json",
+          "sha256": "4f2e4b876015a60146cad784b01e5d31f115484422db900768974d333175dc31"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-broken-image-does-not-remove-stories-credits-or-return-navigation.json",
+          "sha256": "95b28b4f891df04f291eb4d1855d290e8ec81cd2b801c2cb38c567a658536f74"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-default-network-is-deferred-one-page-RPC-supplies-count-coverage-without-N-1.json",
+          "sha256": "bff803ec44bfe9e176828dcad1d7a5e63bc3a5bb613c712e0131fc63c6484dca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-entering-during-the-active-intro-cancels-the-flight-without-a-second-camera.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-entry-during-journey-playback-restores-its-paused-selection-and-camera.json",
+          "sha256": "7b7c5a02472ca1fe7a0c46c102a2cee8d883258fcae39fb23df1eb903c8672f2"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-figure-detail-renders-sourced-stories-citations-and-locality-roles-in-logical-heading-orde.json",
+          "sha256": "2da40612ca2764335706e40fdec012acd68f9ce2392b59f88bd05fd792bb4216"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-homepage-locality-entry-exposes-a-bounded-public-list.json",
+          "sha256": "32f0c537c62443df91e3d900ea537aacfa93ada2d9ca18810ba56736ff83e494"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-HTML-catalog-without-WebGL-remains-keyboard-operable.json",
+          "sha256": "8ee2420aa672d9265f4f9d5d00ea4e5c8ea3f968937140c1108a4e88123786c0"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-independent-errors-retry-clamping-and-broken-accepted-images.json",
+          "sha256": "af876ff90ae5b260dbc763be1c3a665e31bdb27a2c70d03a0b04d48986255a2f"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-keyboard-focus-scrolling-contrast-and-reduced-motion.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-late-locality-and-search-responses-cannot-replace-the-newest-intent.json",
+          "sha256": "7b7c5a02472ca1fe7a0c46c102a2cee8d883258fcae39fb23df1eb903c8672f2"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-people-entry-before-scene-readiness-cancels-intro-and-never-replays-it.json",
+          "sha256": "e91bdc76e30083eacd69b57368cd1981926bd50744770bc4d619cdedd89e53ba"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-public-detail-rejects-ineligible-profiles-sanitizes-outages-and-keeps-legacy-access.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-reload-share-Back-forward-and-detail-return-preserve-exact-people-context.json",
+          "sha256": "23a9c795e84efd185ab2690fd4ac0fc39a3e38a2ffa8eb8bae5a159316f99829"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-safe-return-rejects-malicious-return-links-and-restores-exact-people-state.json",
+          "sha256": "ae823eccf9f14ea28effb8860610fe21f6fb73a8cc7d12f67147181b7e60b6dc"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-selecting-every-canonical-locality-commits-its-own-page-and-matching-result-state.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1280x720-SSR-GET-without-JavaScript-follows-locality-pagination-detail-and-return.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-accessibility-zero-axe-violations-and-full-keyboard-accessibility-on-detail.json",
+          "sha256": "2aa9867ac5e85a586c6b20f17f8142c86a9cf73aad0ac2cd9fb02ddac174c217"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-all-34-choices-distinct-locality-counts-pagination-and-Vietnamese-aliases.json",
+          "sha256": "997cb12bba718a07b4f10a9c929acd7c6a613baf24ccd157e7ff608ebbeef38c"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-broken-image-does-not-remove-stories-credits-or-return-navigation.json",
+          "sha256": "6e5aa142a594554a03a3ade3e0790c3fa420df69abdd974b9e26e874571ea900"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-default-network-is-deferred-one-page-RPC-supplies-count-coverage-without-N-1.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-entering-during-the-active-intro-cancels-the-flight-without-a-second-camera.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-entry-during-journey-playback-restores-its-paused-selection-and-camera.json",
+          "sha256": "7b7c5a02472ca1fe7a0c46c102a2cee8d883258fcae39fb23df1eb903c8672f2"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-figure-detail-renders-sourced-stories-citations-and-locality-roles-in-logical-heading-orde.json",
+          "sha256": "729c4f7fee289983a3eeb6a735809bcc6d5c5aee4cad6089663f0a7d37c541fb"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-homepage-locality-entry-exposes-a-bounded-public-list.json",
+          "sha256": "e91bdc76e30083eacd69b57368cd1981926bd50744770bc4d619cdedd89e53ba"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-HTML-catalog-without-WebGL-remains-keyboard-operable.json",
+          "sha256": "8ee2420aa672d9265f4f9d5d00ea4e5c8ea3f968937140c1108a4e88123786c0"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-independent-errors-retry-clamping-and-broken-accepted-images.json",
+          "sha256": "e52e328f687d369239bb4b5bc430fdf8b73051d24f7e6f86f2e4f91704930e72"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-keyboard-focus-scrolling-contrast-and-reduced-motion.json",
+          "sha256": "e91bdc76e30083eacd69b57368cd1981926bd50744770bc4d619cdedd89e53ba"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-late-locality-and-search-responses-cannot-replace-the-newest-intent.json",
+          "sha256": "7b7c5a02472ca1fe7a0c46c102a2cee8d883258fcae39fb23df1eb903c8672f2"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-people-entry-before-scene-readiness-cancels-intro-and-never-replays-it.json",
+          "sha256": "e91bdc76e30083eacd69b57368cd1981926bd50744770bc4d619cdedd89e53ba"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-public-detail-rejects-ineligible-profiles-sanitizes-outages-and-keeps-legacy-access.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-reload-share-Back-forward-and-detail-return-preserve-exact-people-context.json",
+          "sha256": "d532a92ceeef442b765c9b2ab0ec1d4bbbc25c6a4204a4725c6c05cd895b58f2"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-safe-return-rejects-malicious-return-links-and-restores-exact-people-state.json",
+          "sha256": "1335b3b551eadcd77cd53226fa755dc0e10345d38224f288691987859e0005b4"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-selecting-every-canonical-locality-commits-its-own-page-and-matching-result-state.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1366x768-SSR-GET-without-JavaScript-follows-locality-pagination-detail-and-return.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-accessibility-zero-axe-violations-and-full-keyboard-accessibility-on-detail.json",
+          "sha256": "94cd980ddfc99cace7cc6b6369adb7a39e81a211ad09cd772ecfee55f568099d"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-all-34-choices-distinct-locality-counts-pagination-and-Vietnamese-aliases.json",
+          "sha256": "4f2e4b876015a60146cad784b01e5d31f115484422db900768974d333175dc31"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-broken-image-does-not-remove-stories-credits-or-return-navigation.json",
+          "sha256": "1956579936b3cd7043204ed6ece3753710f3cbec10d8a5784315766ff55ef136"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-default-network-is-deferred-one-page-RPC-supplies-count-coverage-without-N-1.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-entering-during-the-active-intro-cancels-the-flight-without-a-second-camera.json",
+          "sha256": "e91bdc76e30083eacd69b57368cd1981926bd50744770bc4d619cdedd89e53ba"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-entry-during-journey-playback-restores-its-paused-selection-and-camera.json",
+          "sha256": "45eccc1c595b8771ef831ce711d5ca490a362e2e64d53f800349b419d043418b"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-figure-detail-renders-sourced-stories-citations-and-locality-roles-in-logical-heading-orde.json",
+          "sha256": "39bc7dfe5e2548ac0c616611f9de9d95619be86404d71369f73f6468f944a867"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-homepage-locality-entry-exposes-a-bounded-public-list.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-HTML-catalog-without-WebGL-remains-keyboard-operable.json",
+          "sha256": "8ee2420aa672d9265f4f9d5d00ea4e5c8ea3f968937140c1108a4e88123786c0"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-independent-errors-retry-clamping-and-broken-accepted-images.json",
+          "sha256": "e52e328f687d369239bb4b5bc430fdf8b73051d24f7e6f86f2e4f91704930e72"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-keyboard-focus-scrolling-contrast-and-reduced-motion.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-late-locality-and-search-responses-cannot-replace-the-newest-intent.json",
+          "sha256": "7b7c5a02472ca1fe7a0c46c102a2cee8d883258fcae39fb23df1eb903c8672f2"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-people-entry-before-scene-readiness-cancels-intro-and-never-replays-it.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-public-detail-rejects-ineligible-profiles-sanitizes-outages-and-keeps-legacy-access.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-reload-share-Back-forward-and-detail-return-preserve-exact-people-context.json",
+          "sha256": "09cbd12859f0cc7544c989db4c3dfa412e74368da284359a319739e01df33c6c"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-safe-return-rejects-malicious-return-links-and-restores-exact-people-state.json",
+          "sha256": "ccaabd460b6c99d941604e586394b62bdcea8cf74578bd646ce276c98eceed43"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-selecting-every-canonical-locality-commits-its-own-page-and-matching-result-state.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1440x900-SSR-GET-without-JavaScript-follows-locality-pagination-detail-and-return.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-accessibility-zero-axe-violations-and-full-keyboard-accessibility-on-detail.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-all-34-choices-distinct-locality-counts-pagination-and-Vietnamese-aliases.json",
+          "sha256": "4f2e4b876015a60146cad784b01e5d31f115484422db900768974d333175dc31"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-broken-image-does-not-remove-stories-credits-or-return-navigation.json",
+          "sha256": "de470dd145b887f343e76a64ffa8c6ef20b2039a4bce14290644cb16b9820dae"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-default-network-is-deferred-one-page-RPC-supplies-count-coverage-without-N-1.json",
+          "sha256": "e91bdc76e30083eacd69b57368cd1981926bd50744770bc4d619cdedd89e53ba"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-entering-during-the-active-intro-cancels-the-flight-without-a-second-camera.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-entry-during-journey-playback-restores-its-paused-selection-and-camera.json",
+          "sha256": "7b7c5a02472ca1fe7a0c46c102a2cee8d883258fcae39fb23df1eb903c8672f2"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-figure-detail-renders-sourced-stories-citations-and-locality-roles-in-logical-heading-orde.json",
+          "sha256": "e09ff12257828b249a4167c7b0d037453a9e3172e183130e18feeb3fa6c63514"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-homepage-locality-entry-exposes-a-bounded-public-list.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-HTML-catalog-without-WebGL-remains-keyboard-operable.json",
+          "sha256": "8ee2420aa672d9265f4f9d5d00ea4e5c8ea3f968937140c1108a4e88123786c0"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-independent-errors-retry-clamping-and-broken-accepted-images.json",
+          "sha256": "181ceeda9c7e3f7fb3b5905f63bc82bab028b648565800d540eca8f072059dab"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-keyboard-focus-scrolling-contrast-and-reduced-motion.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-late-locality-and-search-responses-cannot-replace-the-newest-intent.json",
+          "sha256": "7b7c5a02472ca1fe7a0c46c102a2cee8d883258fcae39fb23df1eb903c8672f2"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-people-entry-before-scene-readiness-cancels-intro-and-never-replays-it.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-public-detail-rejects-ineligible-profiles-sanitizes-outages-and-keeps-legacy-access.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-reload-share-Back-forward-and-detail-return-preserve-exact-people-context.json",
+          "sha256": "629475730566db51a242269a1f321fbc6fcec36c703d1488b1599fea9838cc90"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-safe-return-rejects-malicious-return-links-and-restores-exact-people-state.json",
+          "sha256": "c4ec57bcc6ffabb38eb018b47d4457f4cbaedc36c2a2b1b8a96aed9f3d675e65"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-selecting-every-canonical-locality-commits-its-own-page-and-matching-result-state.json",
+          "sha256": "3f0517db239ef15e579fffbf7b5a539f81df0ee498e85d6d53eb66badf0b95ca"
+        },
+        {
+          "path": "output/playwright/local-heroes/diagnostics/1920x1080-SSR-GET-without-JavaScript-follows-locality-pagination-detail-and-return.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        }
+      ]
+    },
+    {
+      "root": "output/playwright/local-heroes-admin/diagnostics",
+      "files": 8,
+      "records": 187,
+      "pageErrors": [],
+      "kinds": {
+        "requestfailed": 187
+      },
+      "filesSha256": [
+        {
+          "path": "output/playwright/local-heroes-admin/diagnostics/anonymous-reviewer-and-locked-staff-cannot-edit-editor-cannot-review.json",
+          "sha256": "ec65597be3843785855b0a4b793c146e80a304aaea5bf61ef92b06fc9f688904"
+        },
+        {
+          "path": "output/playwright/local-heroes-admin/diagnostics/editor-reviewer-revision-loop-atomic-publish-hide-republish-and-admin-restore.json",
+          "sha256": "6d2fa75a3f8201a889b1d585c9d7ead2edbb8e1bfe1ecf04fd191912137a4cee"
+        },
+        {
+          "path": "output/playwright/local-heroes-admin/diagnostics/raw-Auth-and-PostgREST-prove-all-eight-roles-and-protected-graph-denial.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "output/playwright/local-heroes-admin/diagnostics/real-editor-form-keyboard-and-scrolling-1280x720.json",
+          "sha256": "eb15730510022eaf2b4159eae69961467885774c13576bd41622a63ff0d9d7b9"
+        },
+        {
+          "path": "output/playwright/local-heroes-admin/diagnostics/real-editor-form-keyboard-and-scrolling-1366x768.json",
+          "sha256": "5aaafdd6cb44a6610ed52dec032ba7948021fec193b7239692c8bd3fe3f9c78e"
+        },
+        {
+          "path": "output/playwright/local-heroes-admin/diagnostics/real-editor-form-keyboard-and-scrolling-1440x900.json",
+          "sha256": "4d268c9efddc15eadb9fa283c1f821872a1b00e3af7e5850cd4075b6bdb07a9c"
+        },
+        {
+          "path": "output/playwright/local-heroes-admin/diagnostics/real-editor-form-keyboard-and-scrolling-1920x1080.json",
+          "sha256": "0e7fcedb09dfefacec187b572fb5b8239e656a69466017871b3f714b31052b9c"
+        },
+        {
+          "path": "output/playwright/local-heroes-admin/diagnostics/saves-twice-with-fresh-revisions-preserves-invalid-input-and-rejects-a-stale-tab.json",
+          "sha256": "527699435618a797564aaa36457941261fba5bb20ca0feb02e7e7f57aa1697a0"
+        }
+      ]
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "path": "output/playwright/local-heroes/results.json",
+      "sha256": "cd26ba0a72ee53620bf78ff9df26711f8d8e16ea3188c554a40154fa110394d2"
+    },
+    {
+      "path": "output/playwright/local-heroes/regressions.json",
+      "sha256": "e2b8d85e413c4de2c5b83a0d53907c7371798fddd13611621967bd54c24fea56"
+    },
+    {
+      "path": "output/playwright/local-heroes/performance-baseline.json",
+      "sha256": "86adc2ec0dbaea1342e439b4d477dc9111a08d45acb3920424ef3d668015a2b6"
+    },
+    {
+      "path": "output/playwright/local-heroes/performance-final.json",
+      "sha256": "a2bf43316ba768309fae7d16bf81a30da89463178222c58dfd2aeba39ec1fffa"
+    },
+    {
+      "path": "output/playwright/local-heroes/original-media-performance.json",
+      "sha256": "b22209fe7ff973dc8a3a6f8ced83a745f737bfa9dd8efa89c886457f5c19db2c"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/results.json",
+      "sha256": "97605a81c55443e1c945edb4d0e2824e553b02e0b08a3a1757f1b6bd272aeeb6"
+    },
+    {
+      "path": "output/playwright/local-heroes-admin/raw-role-matrix.json",
+      "sha256": "99fd9e09d1cb954e6f1d364e1185131d66895a3a07ae65e8eeb68315f0e83df0"
+    },
+    {
+      "path": "test-results/e2e.json",
+      "sha256": "00b60b1150e2c244bfdd9a84851e5423c8be28e2d7aaaecbc0aaa025d2e750cf"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/network-evidence.json",
+      "sha256": "101278449b883e05131d0609eb3763dc48fd710673628fd5119b678b3b47a797"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/disposable-input-parity.json",
+      "sha256": "5da6e1e4fcdc18a652aea064bf61aaa6d5d70f6adf19c481744d0b0a39a9c9a1"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/tracked-before.diff",
+      "sha256": "170593adb0c437a418339cfd149f05e59da21ec6c400faabf44608f8022835e9"
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/git-status-before.txt",
+      "sha256": "695624ab2c7c97b10d17213fc9cfd4570a357e2fafc8c532a7a2a271a35779d6"
+    }
+  ],
+  "gateAttemptLogs": [
+    {
+      "path": ".task-reports/local-heroes-phase-07/admin-browser-acceptance-final.log",
+      "sha256": "06b9e35e4afe070d6b09795130143c0d5274e03db678fafb42974ee70969de9e",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/admin-browser-final.log",
+      "sha256": "af2602e49a19e36992e1b754d3f5a2b6d0ca1998597a6174bfacffbcdbcd14fb",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/admin-browser-first.log",
+      "sha256": "16c13a570a2cd0d5fb12ce0952bc58db3af1255a9dfe8a48484cd3e5c6336cf2",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/admin-browser-role-final.log",
+      "sha256": "23029c1180d253f3245935cdfa84d39604b73feafe5550dcce0a55b7cb73e584",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/admin-build-a11y.log",
+      "sha256": "8f07b4938dc22246a1db78c2c60c206a1bc86591b5c9828acd39a927a1f89c46",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/admin-build-role-final.log",
+      "sha256": "2231a17014c1dd789551d96f82912a120c721d036c995f00063bf4247a0abf06",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/admin-build.log",
+      "sha256": "1376af18907815f0955536199dcb68e8e0a6b29c7339dc9b03cd3c15b9559843",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/artifact-green-first.log",
+      "sha256": "4a573969bc78104cf26b73c1fea266f292a3f0494cc499fccaabbd63be5e1a03",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/artifact-red.log",
+      "sha256": "2af1ae69a3bf99f42cf1aa8b1711fc189529c977601306fa01fd4348234935b1",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/collection.log",
+      "sha256": "8c0dcf3a941982e8ebb38f21f3a1f383b109f25f970692862de996a2f052aa8f",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/content-release-final.log",
+      "sha256": "a6c8589bbd7b3954116d85ec2def780c204ad7e0af583590c80adbf7d8efb2e8",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/content-research-final.log",
+      "sha256": "59524d8d426f3f0c3ed7c2fc10507a834238c8a44dffeb56314c4c134e10b491",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/corrections-unit-final.log",
+      "sha256": "4d9f7e6792896fdf33f537ec09ebde245842b3d168e608433b275b354109d01f",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/corrections-unit.log",
+      "sha256": "a2294836a872630ca2c406211b31280469d1030b5faf9471f74e69cbbb172ed9",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/db-acceptance-final.log",
+      "sha256": "d4185d2c70c7676a56befea0826eae308be80fc26cc67ce27ab122a378a64bd4",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/db-claim-groups-red.log",
+      "sha256": "5b7f092953a99f318628a33614e1b9a0c4d0a6b2d07fe737f72e557e2c91cb16",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/db-import-acceptance-final.log",
+      "sha256": "dc8305653fd3ac478b8909823925851e50b2a152272db877d428d9eaacf2654d",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/db-import-final.log",
+      "sha256": "dc8305653fd3ac478b8909823925851e50b2a152272db877d428d9eaacf2654d",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/db-races-final.log",
+      "sha256": "dfeee2f3bd9950cf3fb960e75a7402d24526313070720db16ef79055edd3c3e9",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/db-races.log",
+      "sha256": "dfeee2f3bd9950cf3fb960e75a7402d24526313070720db16ef79055edd3c3e9",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/db-roles-final.log",
+      "sha256": "9b191a304a30fa19c1230b320323df25064283e5cba35c6e5be0bbe53a90eab8",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/db-roles.log",
+      "sha256": "e3dd2dbf16ace3fcc436c1c21e0d99665782dc7874a8cef7e657c3d98ac157ad",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/diff-final.log",
+      "sha256": "3290d4fe05f29bf577515bd89a9f80e57e9f21ab7d7ca42d727552c1fd2e8f04",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/focused-baseline.log",
+      "sha256": "b6a0e42e3e87f1b83d5857607ad77725c082c7e029bb755edfe991c11abcf966",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/focused-owner-final.log",
+      "sha256": "e1d9685d593a672c6f2954aa0a0001baaadeb298997667abcbb450968d342641",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/globe-regressions-final.log",
+      "sha256": "1dfc0c6e712b1b9e54c871ace73d6ac0db9726102d3e133b8fc67017419e2c98",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/graph-status-final.log",
+      "sha256": "e2f46e444c9ba658552471f666611786b693f1ac2dfaf73d49a2625cbbfb93ae",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/graph-sync-final.log",
+      "sha256": "fafa72ad2b4eb86abf59d3cacd57d6ab86eb17f9a54230ebdfab3c73b5af0ab3",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/import-rehearsal-first.log",
+      "sha256": "495aeb464dad8454c195a475aa15d1ab3982b497dbab214bf8aa38e1995b10fc",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/import-rehearsal-second.log",
+      "sha256": "c119e6e00b7a965ddaaa5ba134651597a8b95bb4a1128dbc97faebb2d16706db",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/original-media-performance-final.log",
+      "sha256": "1617ecb3b0caa20d4a52b4117a7b56cd6d3ce5150194744083f36284aaf1b3e5",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/original-media-performance.log",
+      "sha256": "1cf710d62400b591b11c4d4d4b66aaa496e253ab417ae349aafaa9ce4b4971d1",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/performance-final.log",
+      "sha256": "b5f453a0a1c4b1b384648bc4391718139252c871f75ca11abef8069665b75acc",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/performance-media-final.log",
+      "sha256": "03ed3a47fd100c9c1fad4effa5955d61d6326bf14caa38a210ddf0b8b5bfd5d2",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/prepare-artifact-final.log",
+      "sha256": "49ed10510031b23d2dedc6f0913fb4d4831cfb204396785d9bd4cbed7740ad8d",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/preview-green-first.log",
+      "sha256": "1b7686d98f3e376a0304a88f79315af37749aefca54dc5f6bdf5dd4615a05c62",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/preview-green.log",
+      "sha256": "55dfe6bb1d8779d227fc0e86778cc8ab2ebe1a21b9fd5ff55c544a97ca94a8f4",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/preview-red.log",
+      "sha256": "4b081f3e9f48acfab91371824e85c17dcf34ed06402fe908a7481ba330b6913f",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/preview-typecheck.log",
+      "sha256": "9b19a409380c5be387bac360f7b896b9f953cb00937c0482b5946be8b5556e83",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/public-browser-baseline.log",
+      "sha256": "2ae61e852c50039353838541354907cb656bac77e38bb1f9df7634a4c4e2cfef",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/public-browser-final.log",
+      "sha256": "4b6aaf5ea750f9bff13362db330b263b65add73960894e6858570c70a9851822",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/public-browser-media-final.log",
+      "sha256": "0056e7a9a1c4acef8973dd31e54e6ebf4959d0cb541b0e7aeb8351fad3ce3b84",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/public-build-baseline.log",
+      "sha256": "e83f7191d3e144cd9f423c0342f4afaafb76c5c5f402178f1e309fc98d5b56da",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/public-build-final.log",
+      "sha256": "bc9e27f59b8c8ffa6d6ee538424fa7fccf6516b2356b3a199d9c09ae17b09902",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/public-build-media-final.log",
+      "sha256": "54e960d0eb00b0a2a43527e83346baa6cea6594ba7ea0be0860b882420c96545",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/reset-admin-cleanup-final.log",
+      "sha256": "a72dc8743b475bb7bf1a3e9af180b2bb9109b14218c7ffb3809019b64cd7b08e",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/reset-admin-role-rerun.log",
+      "sha256": "a72dc8743b475bb7bf1a3e9af180b2bb9109b14218c7ffb3809019b64cd7b08e",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/reset-after-admin-final.log",
+      "sha256": "a72dc8743b475bb7bf1a3e9af180b2bb9109b14218c7ffb3809019b64cd7b08e",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/reset-after-admin-red.log",
+      "sha256": "a72dc8743b475bb7bf1a3e9af180b2bb9109b14218c7ffb3809019b64cd7b08e",
+      "commandMetadataAvailable": false
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/restore-build-final.log",
+      "sha256": "1cd4c7e8dc1161d5c4f33e81d426baca0a098bdc73e1eebc7aa87567713853b8",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/smoke-browser-acceptance-final.log",
+      "sha256": "764397a53fdbbe46bf525521e2f9b802588edd8a76e46ef5913aaae832dc060f",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/smoke-browser-final.log",
+      "sha256": "77e6ff873697bcdc6680c62600cde4b96aa15a32d68cc8153480e9da6c65c01a",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/smoke-build-final.log",
+      "sha256": "9896f01fa49e99b9956a97fe06ddd92076b3b50f9c45e5cb88f453aa6edefd96",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/status-final.log",
+      "sha256": "c8ff92525b318b7c0b860b3231806407d01db5cfbd38cc746486f072a8b6c3fc",
+      "commandMetadataAvailable": true
+    },
+    {
+      "path": ".task-reports/local-heroes-phase-07/verify-final.log",
+      "sha256": "932531071609df86d946ace5abb542692a46b86afed2aa71423f2c3914319274",
+      "commandMetadataAvailable": true
+    }
+  ],
+  "failuresRetained": [
+    "preview-red.log: four citation/error regressions",
+    "preview-green-first.log: stale mock query chaining, subsequently aligned without changing assertion",
+    "preview-typecheck.log: source_type narrowing corrected",
+    "artifact-red.log: generator missing before implementation",
+    "import-rehearsal-first.log: slug conflict downstream FK, corrected preflight",
+    "admin-browser-first.log/admin-axe-red.json: unnamed selects and contrast",
+    "db-claim-groups-red.log: existing LH_CLAIM_GROUP guard was correct; probe expected message wrong",
+    "original-media-performance.log/original-media-performance-red.json: four Next Image HTTP400 refusals",
+    "admin-browser-role-final.log/admin-save-race-red.png: wait condition reused previous success; strengthened fresh revision wait",
+    "smoke-browser-final.log/smoke-environment-red.json: process-local E2E_BASE_URL was empty; removed variable and reran without product/test change"
+  ],
+  "limitations": [
+    "All 35 selected people remain mandatory. No roster item is removed or downgraded.",
+    "Network response/title/visual checks do not certify all 305 accepted historical claims. Twenty inherited accepted narratives remain held from import because full semantic acceptance is missing or contradicted.",
+    "Six image files could not be decoded/fetched. HTTP 200 and an unchanged hash do not prove image identity.",
+    "Original manifest v17 is immutable input; this acceptance overlay is binding for the local artifact and supersedes inherited completion/media assertions for release decisions.",
+    "No remote readiness/publication or teacher/historian certification is claimed.",
+    "No full legacy mutating E2E suite against the working remote",
+    "Historical optional local-heroes-profile.test.ts is absent; actual detail/boundary suites cover its implemented behavior",
+    "Performance idle capture is not a synchronized GPU/FPS or production load benchmark",
+    "Image delivery result covers six accepted candidates only",
+    "Raw source/image captures and full logs are ignored local evidence; durable compact decisions/hashes are versioned"
+  ],
+  "unexecuted": [
+    "Remote schema migration",
+    "Remote draft import",
+    "Storage upload",
+    "Remote publication",
+    "Commit/stage/push/PR/merge",
+    "Deployment"
+  ]
+}

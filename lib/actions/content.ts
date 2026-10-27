@@ -2,7 +2,7 @@
 
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
+import { redirect, unstable_rethrow } from "next/navigation";
 import {
   canEditContent,
   canSubmitForReview,
@@ -34,6 +34,9 @@ import {
   type MediaOwnerKind,
 } from "@/lib/validation/content";
 import { dbErrorState, readFormValues, zodErrorState, type ActionState } from "@/lib/actions/state";
+import { localHeroActionState, tryLocalHeroWorkflow } from "@/lib/local-heroes/legacy-workflow";
+import { saveLocalHeroGraph } from "@/lib/actions/local-heroes";
+import type { LocalHeroGraphInput } from "@/lib/local-heroes/admin-types";
 
 // Mọi action ở đây chạy bằng PHIÊN của nhân sự → RLS ở database là lớp quyết định cuối cùng.
 // requireRole() chỉ để chặn sớm và cho thông báo thân thiện; nó KHÔNG thay thế RLS.
@@ -123,6 +126,74 @@ export async function saveTopicAction(_previous: ActionState, formData: FormData
 export async function saveFigureAction(_previous: ActionState, formData: FormData): Promise<ActionState> {
   await requireRole(EDIT_ROLES);
   const values = readFormValues(formData);
+
+  if (values.is_local_hero === "true" || values.is_local_hero === "on" || values.catalog_graph_json) {
+    try {
+      const parsedGraph = JSON.parse(values.catalog_graph_json || "{}");
+      const id = values.id?.trim() || null;
+      const expectedRevision = values.expected_revision?.trim() || parsedGraph.expectedRevision || null;
+      const yearErrors: Record<string, string> = {};
+      for (const key of ["birth_year", "death_year"] as const) {
+        const raw = values[key]?.trim() ?? "";
+        if (raw && (!/^\d{1,4}$/u.test(raw) || Number(raw) < 1 || Number(raw) > 2200)) yearErrors[key] = "Năm phải là số nguyên từ 1 đến 2200, hoặc để trống nếu chưa rõ.";
+      }
+      if (Object.keys(yearErrors).length) return { status: "error", message: "Vui lòng kiểm tra lại năm đã nhập.", fieldErrors: yearErrors, values };
+      const birthYear = values.birth_year?.trim() ? Number(values.birth_year.trim()) : null;
+      const deathYear = values.death_year?.trim() ? Number(values.death_year.trim()) : null;
+
+      const graphInput: LocalHeroGraphInput = {
+        figureId: id,
+        expectedRevision,
+        figure: {
+          name: values.name?.trim() ?? "",
+          slug: values.slug?.trim() ?? "",
+          otherNames: values.other_names?.trim() || null,
+          birthYear: Number.isNaN(birthYear) ? null : birthYear,
+          deathYear: Number.isNaN(deathYear) ? null : deathYear,
+          biography: values.biography?.trim() || null,
+          isLocalHero: true,
+          contributionSummary: parsedGraph.figure?.contributionSummary ?? null,
+          contributionStartYear: parsedGraph.figure?.contributionStartYear ?? null,
+          contributionEndYear: parsedGraph.figure?.contributionEndYear ?? null,
+          catalogAliases: parsedGraph.figure?.catalogAliases ?? [],
+        },
+        sources: parsedGraph.sources ?? [],
+        localities: parsedGraph.localities ?? [],
+        stories: parsedGraph.stories ?? [],
+        mediaEvidence: parsedGraph.mediaEvidence ?? [],
+      };
+
+      const result = await saveLocalHeroGraph(graphInput);
+      if (!result.ok) {
+        return {
+          status: "error",
+          message: result.error.message,
+          fieldErrors: Object.fromEntries(Object.entries(result.error.fieldErrors).map(([key, messages]) => [({ "figure.name": "name", "figure.slug": "slug", "figure.otherNames": "other_names", "figure.birthYear": "birth_year", "figure.deathYear": "death_year", "figure.biography": "biography" } as Record<string, string>)[key] ?? key, messages.join(" ")])),
+          values,
+          stale: result.error.code === "STALE",
+          warnings: result.error.readiness?.blocking.map((i) => i.message),
+        };
+      }
+
+      if (!id) {
+        redirect(`${contentPaths.edit("nhan-vat", result.data.figureId)}?thong-bao=da-tao`);
+      }
+
+      return {
+        status: "success",
+        message: "Đã lưu hồ sơ nhân vật trong danh mục địa phương.",
+        values: { ...values, expected_revision: result.data.revision,
+          catalog_graph_json: JSON.stringify({ ...parsedGraph, expectedRevision: result.data.revision }) },
+      };
+    } catch (err) {
+      unstable_rethrow(err);
+      return {
+        status: "error",
+        message: "Dữ liệu danh mục không hợp lệ.",
+        values,
+      };
+    }
+  }
   const parsed = figureSchema.safeParse(values);
   if (!parsed.success) return zodErrorState(parsed.error, values);
 
@@ -462,6 +533,16 @@ export async function submitForReviewAction(_previous: ActionState, formData: Fo
   const id = values.id?.trim() ?? "";
   if (!segment || segment === "nguon" || !isUuid(id)) return errorState("Yêu cầu không hợp lệ.", values);
   const kind: ContentKind = segment;
+
+  if (kind === "nhan-vat") {
+    const catalog = await tryLocalHeroWorkflow(id, "submit", null, values.expected_revision === undefined ? undefined : {
+      expectedRevision: values.expected_revision, storyIds: formData.getAll("story_ids").filter((v): v is string => typeof v === "string"),
+    });
+    if (catalog) {
+      if (!catalog.ok) return localHeroActionState(catalog, values);
+      redirect(`${contentPaths.list(kind)}?thong-bao=da-gui-duyet`);
+    }
+  }
 
   const current = await getReadinessSnapshot(kind, id);
   if (!current) return errorState("Nội dung không tồn tại.", values);

@@ -11,9 +11,13 @@ type Props = {
   journeyButtonRef: RefObject<HTMLButtonElement | null>;
   onExplore(): void;
   onJourney(): void;
+  peopleActive?: boolean;
+  peopleHref?: string;
+  peopleLinkRef?: RefObject<HTMLAnchorElement | null>;
+  onPeople?(): void;
 };
 
-export function HomeAtlasHeader({ journeyActive, journeyButtonRef, onExplore, onJourney }: Props) {
+export function HomeAtlasHeader({ journeyActive, journeyButtonRef, onExplore, onJourney, peopleActive = false, peopleHref = "/?noi-dung=nhan-vat", peopleLinkRef, onPeople }: Props) {
   const secondary = useRef<HTMLDetailsElement>(null);
   useEffect(() => {
     const dismiss = (event: PointerEvent) => {
@@ -27,8 +31,12 @@ export function HomeAtlasHeader({ journeyActive, journeyButtonRef, onExplore, on
     <header className="home-atlas-header" data-testid="home-atlas-header">
       <Link href="/" className="home-atlas-brand">Lịch sử Việt Nam</Link>
       <nav className="home-atlas-modes" aria-label="Cách khám phá">
-        <button type="button" aria-pressed={!journeyActive} onClick={onExplore}>Khám phá</button>
-        <button type="button" ref={journeyButtonRef} aria-pressed={journeyActive} onClick={onJourney}>Hành trình</button>
+        <button type="button" aria-pressed={!peopleActive && !journeyActive} onClick={onExplore}>Khám phá</button>
+        <button type="button" ref={journeyButtonRef} aria-pressed={!peopleActive && journeyActive} onClick={onJourney}>Hành trình</button>
+        <a ref={peopleLinkRef} href={peopleHref} aria-expanded={peopleActive} aria-controls={peopleActive ? "local-heroes-panel" : undefined} className="home-atlas-people-entry" onClick={(event) => {
+          if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || !onPeople) return;
+          event.preventDefault(); onPeople();
+        }}>Nhân vật theo địa phương</a>
         <noscript>
           <span className="home-atlas-modes-noscript">
             <Link href="/?kham-pha=1" className={!journeyActive ? "is-active" : ""}>Khám phá</Link>

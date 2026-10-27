@@ -24,6 +24,7 @@ export default async function NewContentPage({ params }: Props) {
   const segment = parseContentSegment((await params).loai);
   if (!segment) notFound();
   const labels = contentKindLabels[segment];
+  const options = await getFormOptions();
 
   return (
     <div className="flex flex-col gap-6">
@@ -46,6 +47,7 @@ export default async function NewContentPage({ params }: Props) {
       {segment === "nhan-vat" && (
         <FigureForm
           initial={{ name: "", slug: "", other_names: null, birth_year: null, death_year: null, biography: null, portrait_url: null }}
+          sources={options.sources}
         />
       )}
 

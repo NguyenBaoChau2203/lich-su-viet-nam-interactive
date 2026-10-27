@@ -45,6 +45,7 @@ describe("geographic explorer state (synthetic limits)", () => {
   it("recovers from stale event, reversed range, and a legacy 3D camera", () => {
     expect(parseMapExplorerState(new URLSearchParams("tu=1975&den=1930&su-kien=missing&goc=0,1,100,0,0"), limits)).toEqual({
       from: 1930, to: 1975, selectedEvent: null, view: null,
+      legacyCamera: { azimuth: 0, polar: 1, distance: 100, targetX: 0, targetZ: 0 },
     });
   });
 
