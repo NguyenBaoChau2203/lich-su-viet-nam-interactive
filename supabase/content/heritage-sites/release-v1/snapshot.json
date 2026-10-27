@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-27T15:06:26.202Z",
+  "framework": "VN-34-2025",
+  "mode": "publish",
+  "commitMode": false,
+  "totalAcceptedSites": 64,
+  "newSitesCount": 62,
+  "enrolledSitesCount": 2,
+  "enrolledBefore": [
+    {
+      "slug": "dinh-doc-lap",
+      "name": "Dinh Độc Lập",
+      "latitude": 10.7772,
+      "longitude": 106.6953,
+      "accuracy_level": "exact",
+      "workflow_status": "published"
+    },
+    {
+      "slug": "pac-bo-cao-bang",
+      "name": "Pác Bó",
+      "latitude": 22.9075,
+      "longitude": 106.2225,
+      "accuracy_level": "approximate",
+      "workflow_status": "published"
+    }
+  ],
+  "packageHashes": {
+    "manifest.json": "3cd79a448ffdbe0263254628b45b8c78e5550ded6ed176287c71d5e7d6262e82",
+    "sites.json": "535d153ef48a88902f2866c89a18ef8f10f9f1e4aae4a6c094907e02d739933f",
+    "sources.json": "28db2a9df43b6ce0080153f03d6c9eed5c14d11c811dffe1dc2222d5d278f17b",
+    "localities.json": "6defdd026f0eee06f72f978240c9c2fa250cecc6ca4dbb6f71653d2b43f6c4eb"
+  },
+  "generatedSqlHashes": {
+    "import.sql": "bf79a1470e76f9046b47f5de1fb8e14c29feb8d8fd8084d187e986098a3aa178",
+    "rollback.sql": "4c9b069d96531f8d55b0c9e83eb01908f152eb9ac85dfef537cfda34d81013e4"
+  }
+}

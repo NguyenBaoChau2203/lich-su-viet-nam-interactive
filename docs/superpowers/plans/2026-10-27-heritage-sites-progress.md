@@ -160,5 +160,41 @@ Confirmed all facts from Section 2 of implementation plan:
 - Open issues / held items: None.
 - Next allowed Phase: Phase 4 — Server readers, API, release SQL and local rehearsal.
 
+---
+
+## Phase 4 — Server readers, API, release SQL and local rehearsal — 2026-10-27 22:15 (Asia/Saigon)
+- Branch/HEAD: `feat/heritage-sites-by-locality`
+- Skills used: `verify-release-slice`, `model-supabase-history`
+- Changed files:
+  - `lib/heritage/locality-views.ts` (new, explicit 34/34 province mappings and fallback views)
+  - `lib/heritage/state.ts` (new, parsePlaceSelection and groupByLocality)
+  - `lib/heritage/format.ts` (new, tierLabel, eraLabel, usageLabel, videoCountLabel)
+  - `lib/heritage/validation.ts` (new, strict zod schemas for package)
+  - `lib/heritage/markers.ts` (new, heritageMarkerEvents ExplorerEvent adapter)
+  - `lib/heritage/load.ts` (new, loadHeritageCatalog safe loader)
+  - `lib/queries/heritage.ts` (new, getHeritageCatalog server query)
+  - `lib/queries/locations.ts` (extended LocationDetail with heritage, story, videos)
+  - `lib/media.ts` (extended with usage_basis)
+  - `app/api/dia-danh/route.ts` (new API endpoint for heritage catalog)
+  - `scripts/content/heritage-sites-release-sql.mjs` (new release SQL generator for import, rollback, snapshot, README)
+  - `tests/unit/heritage-locality-views.test.ts` (new, 3 tests)
+  - `tests/unit/heritage-state.test.ts` (new, 8 tests)
+  - `tests/unit/heritage-release-sql.test.ts` (new, 2 tests)
+  - `.task-reports/2026-10-27-2215-heritage-phase-4.md` (new, ignored)
+- Commands and results:
+  - `node scripts/content/heritage-sites-release-sql.mjs --package supabase/content/heritage-sites/v1 --out supabase/content/heritage-sites/release-v1 --mode publish`: Generated import.sql, rollback.sql, snapshot.json, README.md with verified hashes.
+  - `pnpm exec vitest run tests/unit/heritage-locality-views.test.ts tests/unit/heritage-state.test.ts tests/unit/heritage-release-sql.test.ts`: 13/13 passed.
+  - `node scripts/content/heritage-sites-validate.mjs --package supabase/content/heritage-sites/v1 --mode release`: 100% success (64/64 sites valid).
+  - `pnpm verify`:
+    - `agent:check`: Valid (5 project skills).
+    - `history:data:check`: 42 passed (2 test files).
+    - `eslint`: 0 errors, 0 warnings.
+    - `typecheck`: 0 errors.
+    - `test`: 84 test files, 1065 unit & agent tests passed.
+    - `build`: 110 static pages generated successfully (exit code 0).
+- Open issues / held items: None.
+- Next allowed Phase: Phase 5 — State, reducer, URL and globe markers.
+
+
 
 

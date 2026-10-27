@@ -5,7 +5,7 @@ import { mediaHonestyLabels } from "@/lib/utils/labels";
 
 /** Cột media_assets cần cho trang công khai (nhúng trong select của bảng chủ). */
 export const PUBLIC_MEDIA_FIELDS =
-  "id, file_url, media_type, caption, alt_text, sort_order, era, year_taken, photographer, license, license_url, source_page_url, is_reenactment, is_colorized, is_cover, focal_point, pair_id, width, height, sources(title)" as const;
+  "id, file_url, media_type, caption, alt_text, sort_order, era, year_taken, photographer, license, license_url, source_page_url, is_reenactment, is_colorized, is_cover, focal_point, pair_id, width, height, sources(title), usage_basis" as const;
 
 export type MediaRow = {
   id: string;
@@ -29,6 +29,7 @@ export type MediaRow = {
   height: number | null;
   // Nguồn có thể bị RLS ẩn với khách (chỉ đọc được nguồn gắn qua event_sources) → null.
   sources: { title: string } | null;
+  usage_basis?: string | null;
 };
 
 export type MediaItem = {
@@ -51,6 +52,7 @@ export type MediaItem = {
   pairId: string | null;
   width: number | null;
   height: number | null;
+  usageBasis?: string | null;
 };
 
 /**
@@ -95,6 +97,7 @@ export function toMediaItem(row: MediaRow): MediaItem {
     pairId: row.pair_id,
     width: row.width,
     height: row.height,
+    usageBasis: row.usage_basis ?? null,
   };
 }
 
