@@ -103,3 +103,46 @@ The target's original schema is adopted through `supabase/releases/local-heroes-
 Implemented learner navigation remains `/` → Nhân vật theo địa phương → locality/name/alias/page → `/nhan-vat/[slug]?kham-pha=...` → primary story/gallery/source anchor → exact return, including reload/Back/forward. Existing admin draft/review/request-changes/resubmit/preview/CAS workflow and the cinematic globe's single history/camera owner are preserved. No account, study, payment or renderer feature was added. The live-release handoff records the earlier local server and 1189-test checkpoint; it is dated evidence, not current server/process state.
 
 The owner's later instruction authorizes final fixes, PR/merge and production synchronization. See `docs/audits/2026-10-27-local-heroes-final-self-review.md`: blank year inputs and portable SQL checkout hashes were corrected, the feature was committed, and current main `ad81a55` merged automatically without conflicts in `c500a7f`, preserving premium-lesson/layout/auth/hook changes. Fresh integrated verification passes 1210 unit tests/109 files and 26 scripts. Public fixture 72 cases, disposable admin 8 cases, database 296 assertions and two concurrency races pass. A new anonymous production read confirms all 35 profiles have images/stories/source claims and cover 34/34 units; the target-specific migration dry run has no pending changes. Remaining CI/PR and final browser outcomes belong to the task's final report. No storage upload or Vercel deployment is implied.
+
+## Heritage places by locality — Phase 08 local acceptance checkpoint (2026-10-27)
+
+Implemented and verified the "Featured historical places by locality" (`HS-1.0`) capability on branch `feat/heritage-sites-by-locality` (baseline `c0d8660`).
+
+1. **Content package & Release SQL:**
+   - Package directory: `supabase/content/heritage-sites/v1/` (`manifest.json`, `localities.json`, `sites.json`, `sources.json`, `roster.md`, `ledger.md`).
+   - Content coverage: 64 accepted sites across all 34 canonical Grade 12 localities (34 Grade 12 primary sites + 30 extended sites), citing 66 deduplicated official sources.
+   - Every Grade 12 site verified on OpenStreetMap with element id (node/way) and within Vietnam bounding box `[8.0, 23.5] x [102.0, 117.5]`.
+   - Release SQL generated under `supabase/content/heritage-sites/release-v1/`: `import.sql` (draft and publish modes), `rollback.sql`, `snapshot.json`, `README.md` with verified SHA-256 hashes.
+   - Migration file: `supabase/migrations/20261101000000_heritage_sites.sql` and copied into `supabase/releases/local-heroes-20261027/supabase/migrations/`.
+
+2. **Homepage & Explorer Integration:**
+   - Header renamed to "Theo địa phương" with tab switcher between "Địa danh" (`?noi-dung=dia-danh`) and "Nhân vật" (`?noi-dung=nhan-vat`), preserving selected locality across tabs.
+   - State and reducer: `lib/local-heroes/state.ts` and `lib/explorer/journeys/playback.ts` manage `places` mode, camera requests, selection, and restoration of explorer state on close.
+   - Globe markers: gold diamond markers for heritage places with `aria-pressed` states, accessible labels, and click-to-open place card.
+   - Components: `HeritagePanel`, `HeritageSiteList`, `HeritageSiteCard`, `LocalityTabs`, `HeritageVideoDialog` (lazy iframe, Escape key cascade, focus restoration).
+
+3. **Detail View (`/dia-diem/[slug]`):**
+   - Renders ordered narrative story sections (`components/heritage/HeritageStory.tsx`), superscript citations `[i]` jumping to `#nguon-[i]`, uncertainty notes for non-verified sections, and ordered source list.
+   - Lazy video embeds (`components/heritage/HeritageVideos.tsx`) with verification date and copyright disclaimer.
+   - "Học sâu trong chuyên đề" card linking to the relevant interactive lesson.
+   - Server component `LocalityPeople.tsx` displaying up to 4 local historical figures linking to `/nhan-vat/[slug]`.
+   - Safe return link parsing via `getPlaceReturnHref(khamPha)` preventing open redirects.
+
+4. **Admin Management & Readiness:**
+   - `LocationForm`: fieldset for heritage tier, locality, rank, historical period, teaser counter (40–360), and lesson selector.
+   - `HeritageStoryEditor`: section manager with reordering, certainty, notes, and source picker.
+   - `HeritageVideoEditor`: video manager with 5s timeout YouTube oEmbed verification, reordering, and external links.
+   - `MediaManager`: added `usage_basis` selection (`open_license`, `public_domain`, `permission`, `coursework_reference`), enforcing license rules.
+   - `lib/admin/readiness.ts`: blocks review submission for heritage places if locality, teaser, period, >= 3 sections, section sources, coordinates, or cover image with usage basis are missing.
+
+5. **Quality Gates & Verification:**
+   - Vitest suite: 118 test files, 1271 unit tests passed (100% green).
+   - E2E Playwright: 39 tests passed across all 4 suites (`figure-stories`, `heritage-detail`, `home-heritage-sites`, `home-local-heroes`).
+   - ESLint: 0 errors, 0 warnings.
+   - TypeScript: 0 errors.
+   - Production build: 110 static pages generated successfully.
+   - Package validator: 100% valid in release mode.
+   - Rehearsal: `scripts/agent/heritage-rehearsal.mjs` passed 34/34 localities audit.
+
+**Remote Publication Gate (Phase 9):** Remote database push and live publication to project `lichsu_12` (`ueolfjujjybutyuyfxha`) is STRICTLY HELD pending explicit owner approval.
+

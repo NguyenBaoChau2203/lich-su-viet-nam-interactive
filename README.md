@@ -35,6 +35,7 @@ Nội dung bám theo SGK Lịch sử 12 (bộ *Kết nối tri thức với cu�
 | Trang | Đường dẫn | Nội dung |
 |---|---|---|
 | Trang chủ | `/` | Địa cầu nền tối tiến về Việt Nam, sự kiện theo thời gian, kéo/phóng to, thẻ tóm tắt và hành trình chọn lọc của Chủ tịch Hồ Chí Minh có nguồn |
+| Khám phá theo địa phương | `/?noi-dung=dia-danh`, `/?noi-dung=nhan-vat` | Bảng chọn 34 địa phương theo khung VN-34-2025: 64 địa danh lịch sử nổi bật (34 địa danh Lớp 12 + 30 mở rộng) và 35 nhân vật cách mạng; ghim kim cương trên quả cầu, thẻ tóm tắt, video tư liệu, liên kết chuyên đề bài học |
 | Mục lục SGK | `/muc-luc`, `/muc-luc/chu-de-N` | 6 chủ đề, 17 bài (Kết nối tri thức), tiến độ từng bài, in được |
 | Bài SGK | `/bai/[số]-[slug]` | Khuôn "trang sách": mục lục bài dính, sự kiện và chuyên đề theo từng mục, luyện tập, bài trước/sau |
 | Chuyên đề tương tác | `/bai-hoc` | Ví dụ *Chiến dịch Điện Biên Phủ*: bản đồ diễn biến 7 bước, ảnh tư liệu, tab Tư liệu (video, hiện vật 3D, di tích), thẻ ghi nhớ |

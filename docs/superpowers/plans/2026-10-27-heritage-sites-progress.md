@@ -266,7 +266,7 @@ Confirmed all facts from Section 2 of implementation plan:
 ---
 
 ## Phase 7 — Admin editing (basic) — 2026-10-27 23:50 (Asia/Saigon)
-- Branch/HEAD: `feat/heritage-sites-by-locality`
+- Branch/HEAD: `feat/heritage-sites-by-locality` @ `9675066`
 - Skills used: `verify-release-slice`
 - Changed files:
   - `lib/validation/content.ts` (extended locationSchema with heritage tier conditional rules; added USAGE_BASES; mediaSchema with usage_basis and coursework_reference rule)
@@ -294,6 +294,34 @@ Confirmed all facts from Section 2 of implementation plan:
     - `build`: 110 static pages generated successfully (exit code 0).
 - Open issues / held items: None.
 - Next allowed Phase: Phase 8 — Acceptance, performance, docs.
+
+---
+
+## Phase 8 — Acceptance, performance, docs — 2026-10-27 23:58 (Asia/Saigon)
+- Branch/HEAD: `feat/heritage-sites-by-locality`
+- Skills used: `verify-release-slice`
+- Changed files:
+  - `scripts/agent/heritage-rehearsal.mjs` (new: automated national rehearsal auditing 34/34 Grade 12 localities, sections, coordinates, and performance budgets)
+  - `docs/agent/CURRENT-STATE.md` (added comprehensive Section for Heritage places by locality HS-1.0)
+  - `README.md` (added table row for Khám phá theo địa phương HS-1.0)
+  - `docs/content/heritage-sites/README.md` (new: authoring guide for heritage places, story structure, source hierarchy, coordinates, licenses)
+  - `docs/audits/2026-10-27-heritage-sites-acceptance.md` (new: formal final acceptance audit report with 34/34 matrix and quality gates)
+  - `.task-reports/2026-10-27-2359-heritage-phase-8.md` (new, ignored)
+- Commands and results:
+  - `node scripts/agent/heritage-rehearsal.mjs`: PASSED (34/34 Grade 12 localities audited, 64 sites total, 66 sources, 64 markers <= 70 budget).
+  - `node scripts/content/heritage-sites-validate.mjs --package supabase/content/heritage-sites/v1 --mode release`: 100% valid.
+  - `pnpm exec playwright test --project 1280x720 --config playwright.local-heroes.config.ts`: 39/39 tests passed across all 4 suites.
+  - `pnpm verify`:
+    - `agent:check`: Valid (5 project skills).
+    - `history:data:check`: 42 passed (2 test files).
+    - `eslint`: 0 errors, 0 warnings.
+    - `typecheck`: 0 errors.
+    - `test`: 118 test files, 1271 unit tests passed + 26 agent tests passed.
+    - `build`: 110 static pages generated successfully (exit code 0).
+- Open issues / held items:
+  - Remote deployment strictly paused at the STOP gate. Remote project `lichsu_12` untouched.
+- Next allowed Phase: Phase 9 — Publication (REQUIRES EXPLICIT OWNER AUTHORIZATION).
+
 
 
 
