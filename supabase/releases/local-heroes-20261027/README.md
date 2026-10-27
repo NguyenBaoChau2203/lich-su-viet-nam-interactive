@@ -19,3 +19,16 @@ Content publication uses the separately generated, hash-checked `../../content/l
 The matching `rollback-content.sql` removes only this release's new rows, preserves all nine existing canonical figure rows and unrelated historical data, and refuses later edits or added references. It was executed and followed by a successful republish on the disposable actual-schema/content mirror. **Do not run rollback routinely after publication.** It is a separately instructed recovery action; first confirm the exact release hash, unchanged rows, current dependent records and fresh backups. A content rollback leaves the additive schema and truthful adopted migration history in place. Reversing the schema requires a separately reviewed dependency-aware migration, never replaying the baseline dump over live data.
 
 Safe before images and full execution/rehearsal logs are retained under the ignored `.task-reports/local-heroes-live-release-20261027/`; portable content before images are in `tests/unit/fixtures/local-heroes-live-baseline.json`. These contain public historical records, not copied Auth/student/payment data. See `adoption-manifest.json` and the versioned live-release handoff for hashes and actual outcomes. Authorization and successful rehearsal alone are not proof of live publication.
+
+## Heritage Sites (HS-1.0) Schema Addition
+
+The additive migration `supabase/migrations/20261101000000_heritage_sites.sql` has been copied into this release track workdir (`supabase/releases/local-heroes-20261027/supabase/migrations/20261101000000_heritage_sites.sql`), with SHA-256 `dc3c3e469669f81644c6bc8e381a36be942b823a2d4b0947dbad3875a2c538c3`.
+
+When live schema deployment is authorized in Phase 9, run the dry run first:
+
+```powershell
+supabase db push --dry-run --linked --workdir supabase/releases/local-heroes-20261027
+```
+
+The dry run must list only `20261101000000_heritage_sites.sql`.
+

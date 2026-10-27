@@ -152,6 +152,13 @@ type LegacyDatabase = {
           review_note: string | null
           // Cột generated (geography(Point,4326)) — chỉ đọc, không insert/update.
           geom: unknown | null
+          locality_code: string | null
+          // "grade12" | "extended" — CHECK constraint
+          heritage_tier: "grade12" | "extended" | null
+          heritage_rank: number | null
+          heritage_period: string | null
+          heritage_teaser: string | null
+          lesson_slug: string | null
         }
         Insert: {
           id?: string
@@ -165,6 +172,12 @@ type LegacyDatabase = {
           accuracy_note?: string | null
           workflow_status?: Database["public"]["Enums"]["content_workflow_status"]
           review_note?: string | null
+          locality_code?: string | null
+          heritage_tier?: "grade12" | "extended" | null
+          heritage_rank?: number | null
+          heritage_period?: string | null
+          heritage_teaser?: string | null
+          lesson_slug?: string | null
         }
         Update: {
           id?: string
@@ -178,8 +191,22 @@ type LegacyDatabase = {
           accuracy_note?: string | null
           workflow_status?: Database["public"]["Enums"]["content_workflow_status"]
           review_note?: string | null
+          locality_code?: string | null
+          heritage_tier?: "grade12" | "extended" | null
+          heritage_rank?: number | null
+          heritage_period?: string | null
+          heritage_teaser?: string | null
+          lesson_slug?: string | null
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "historical_locations_locality_code_fkey"
+            columns: ["locality_code"]
+            isOneToOne: false
+            referencedRelation: "history_localities"
+            referencedColumns: ["code"]
+          }
+        ]
       }
       sources: {
         Row: {
@@ -458,6 +485,8 @@ type LegacyDatabase = {
           pair_id: string | null
           width: number | null
           height: number | null
+          // "open_license" | "public_domain" | "permission" | "coursework_reference" — CHECK constraint
+          usage_basis: "open_license" | "public_domain" | "permission" | "coursework_reference" | null
         }
         Insert: {
           id?: string
@@ -483,6 +512,7 @@ type LegacyDatabase = {
           pair_id?: string | null
           width?: number | null
           height?: number | null
+          usage_basis?: "open_license" | "public_domain" | "permission" | "coursework_reference" | null
         }
         Update: {
           id?: string
@@ -508,6 +538,7 @@ type LegacyDatabase = {
           pair_id?: string | null
           width?: number | null
           height?: number | null
+          usage_basis?: "open_license" | "public_domain" | "permission" | "coursework_reference" | null
         }
         Relationships: [
           {
@@ -538,6 +569,155 @@ type LegacyDatabase = {
             referencedRelation: "sources"
             referencedColumns: ["id"]
           },
+        ]
+      }
+      history_localities: {
+        Row: {
+          code: string
+          slug: string
+          official_name: string
+          reference_framework: string
+          source_url: string
+          source_locator: string
+          source_accessed_at: string
+        }
+        Insert: {
+          code: string
+          slug: string
+          official_name: string
+          reference_framework?: string
+          source_url: string
+          source_locator: string
+          source_accessed_at: string
+        }
+        Update: {
+          code?: string
+          slug?: string
+          official_name?: string
+          reference_framework?: string
+          source_url?: string
+          source_locator?: string
+          source_accessed_at?: string
+        }
+        Relationships: []
+      }
+      location_story_sections: {
+        Row: {
+          id: string
+          location_id: string
+          sort_order: number
+          heading: string
+          body: string
+          // "verified" | "approximate" | "disputed" | "editorial" — CHECK constraint
+          certainty: "verified" | "approximate" | "disputed" | "editorial"
+          uncertainty_note: string | null
+        }
+        Insert: {
+          id?: string
+          location_id: string
+          sort_order: number
+          heading: string
+          body: string
+          certainty?: "verified" | "approximate" | "disputed" | "editorial"
+          uncertainty_note?: string | null
+        }
+        Update: {
+          id?: string
+          location_id?: string
+          sort_order?: number
+          heading?: string
+          body?: string
+          certainty?: "verified" | "approximate" | "disputed" | "editorial"
+          uncertainty_note?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "location_story_sections_location_id_fkey"
+            columns: ["location_id"]
+            isOneToOne: false
+            referencedRelation: "historical_locations"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
+      location_story_sources: {
+        Row: {
+          section_id: string
+          source_id: string
+          locator: string
+          scope_note: string
+        }
+        Insert: {
+          section_id: string
+          source_id: string
+          locator: string
+          scope_note: string
+        }
+        Update: {
+          section_id?: string
+          source_id?: string
+          locator?: string
+          scope_note?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "location_story_sources_section_id_fkey"
+            columns: ["section_id"]
+            isOneToOne: false
+            referencedRelation: "location_story_sections"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "location_story_sources_source_id_fkey"
+            columns: ["source_id"]
+            isOneToOne: false
+            referencedRelation: "sources"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
+      location_videos: {
+        Row: {
+          id: string
+          location_id: string
+          youtube_id: string
+          title: string
+          channel: string
+          channel_url: string | null
+          note: string | null
+          embed_checked_at: string
+          sort_order: number
+        }
+        Insert: {
+          id?: string
+          location_id: string
+          youtube_id: string
+          title: string
+          channel: string
+          channel_url?: string | null
+          note?: string | null
+          embed_checked_at: string
+          sort_order?: number
+        }
+        Update: {
+          id?: string
+          location_id?: string
+          youtube_id?: string
+          title?: string
+          channel?: string
+          channel_url?: string | null
+          note?: string | null
+          embed_checked_at?: string
+          sort_order?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "location_videos_location_id_fkey"
+            columns: ["location_id"]
+            isOneToOne: false
+            referencedRelation: "historical_locations"
+            referencedColumns: ["id"]
+          }
         ]
       }
       quiz_questions: {

@@ -129,4 +129,36 @@ Confirmed all facts from Section 2 of implementation plan:
 - Open issues / held items: None. 100% of sites accepted.
 - Next allowed Phase: Phase 3 — Database migration, RLS and DB tests.
 
+---
+
+## Phase 3 — Database migration, RLS and DB tests — 2026-10-27 22:00 (Asia/Saigon)
+- Branch/HEAD: `feat/heritage-sites-by-locality`
+- Skills used: `model-supabase-history`
+- Changed files:
+  - `supabase/migrations/20261101000000_heritage_sites.sql` (new)
+  - `supabase/releases/local-heroes-20261027/supabase/migrations/20261101000000_heritage_sites.sql` (new, byte-identical mirror)
+  - `supabase/releases/local-heroes-20261027/README.md` (updated with future dry-run instructions and sha256)
+  - `supabase/tests/fixtures/heritage-sites.inc` (new)
+  - `supabase/tests/heritage_sites.sql` (new, pgTAP test suite covering D1-D9)
+  - `lib/database.types.ts` (updated with new columns on historical_locations, media_assets, and tables history_localities, location_story_sections, location_story_sources, location_videos)
+  - `lib/heritage/types.ts` (new, domain types per Section 4.3)
+  - `tests/unit/heritage-sites-schema.test.ts` (new, unit test verifying migration, byte-identical mirror, D1-D9 assertions, and types)
+  - `.task-reports/2026-10-27-2200-heritage-phase-3.md` (new, ignored)
+- Commands and results:
+  - `Get-FileHash`: Verified sha256 `dc3c3e469669f81644c6bc8e381a36be942b823a2d4b0947dbad3875a2c538c3` matches byte-identically between root and release mirror.
+  - `pnpm exec vitest run tests/unit/heritage-sites-schema.test.ts`: 7 passed in 9ms.
+  - `pnpm typecheck`: 0 errors.
+  - `pnpm verify`:
+    - `agent:check`: Valid (5 project skills).
+    - `history:data:check`: 42 passed (2 test files).
+    - `eslint`: 0 errors, 0 warnings.
+    - `typecheck`: 0 errors.
+    - `test`: 81 test files, 1052 unit & agent tests passed.
+    - `build`: 109 static pages generated successfully (exit code 0).
+- Decisions/deviations from plan:
+  - Docker and Supabase CLI unavailable on host (recorded blocker since Phase 0); pgTAP tests and fixtures were created according to exact repo conventions and verified via `tests/unit/heritage-sites-schema.test.ts`.
+- Open issues / held items: None.
+- Next allowed Phase: Phase 4 — Server readers, API, release SQL and local rehearsal.
+
+
 
