@@ -1,10 +1,15 @@
 import { CinemaPlayer } from "@/components/cinema3d/CinemaPlayer";
-import { Credit, exhibitItem, photoItem, SectionHeading } from "@/components/lesson/sections/shared";
+import { Credit, exhibitItem, photoItem, SectionHeading, SectionIntro } from "@/components/lesson/sections/shared";
 import { VideoEmbed } from "@/components/lesson/VideoEmbed";
+import { ModelGallery } from "@/components/model3d/ModelGallery";
 import { DepthPhotoGallery } from "@/components/photo3d/DepthPhotoGallery";
 import { SafeImage } from "@/components/ui/SafeImage";
 import { Tabs, type TabItem } from "@/components/ui/Tabs";
+import { balancedColumns, COLS, type ColCount } from "@/lib/lessons/layout";
+import { cn } from "@/lib/utils/cn";
 import type { Lesson } from "@/lib/lessons/types";
+import { getModelSpec } from "@/lib/models3d/specs";
+import type { ModelSpec } from "@/lib/models3d/types";
 
 /**
  * Mục "Tư liệu" (V-22): video, hiện vật, sa bàn 3D, di tích ngày nay, phim 3D gom vào các tab. Chỉ tab đang mở được
@@ -16,9 +21,9 @@ export function ResourceSection({ lesson }: { lesson: Lesson }) {
   return (
     <section aria-labelledby="tu-lieu">
       <SectionHeading id="tu-lieu" eyebrow="Tư liệu" title="Xem tận mắt: phim, hiện vật và di tích" />
-      <p className="-mt-3 mb-5 max-w-3xl text-muted-foreground">
+      <SectionIntro>
         Chọn một loại tư liệu. Video và mô hình 3D chỉ tải khi em bấm xem, dung lượng ghi rõ trên từng mục; mỗi lúc chỉ mở một trình xem.
-      </p>
+      </SectionIntro>
       <Tabs items={tabs} label="Loại tư liệu" />
     </section>
   );
@@ -27,9 +32,11 @@ export function ResourceSection({ lesson }: { lesson: Lesson }) {
 /** Các tab của mục "Tư liệu"; tab nào không có dữ liệu thì bỏ. Nội dung chỉ được dựng khi tab mở (components/ui/Tabs). */
 function buildResourceTabs(lesson: Lesson): TabItem[] {
   const tabs: TabItem[] = [];
-  const [mainVideo, ...otherVideos] = lesson.videos;
 
-  if (mainVideo) {
+  if (lesson.videos && lesson.videos.length > 0) {
+    const videoCols = balancedColumns(lesson.videos.length, 2, 3) as ColCount;
+    const colClass = COLS[videoCols] || "lg:grid-cols-2";
+
     tabs.push({
       id: "video",
       label: "Phim tư liệu",
@@ -37,15 +44,12 @@ function buildResourceTabs(lesson: Lesson): TabItem[] {
       content: (
         <div data-resource="video">
           <h3 className="mb-4 font-serif text-xl font-bold text-foreground">{lesson.copy.videoTitle}</h3>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]">
-            <VideoEmbed video={mainVideo} />
-            <div className="flex flex-col gap-6">
-              {otherVideos.map((video) => (
-                <VideoEmbed key={video.youtubeId} video={video} />
-              ))}
-            </div>
+          <div className={cn("grid gap-x-6 gap-y-8", colClass)}>
+            {lesson.videos.map((video, idx) => (
+              <VideoEmbed key={video.youtubeId} video={video} priority={idx === 0} />
+            ))}
           </div>
-          <p className="mt-4 text-xs text-muted-foreground">
+          <p className="mt-6 text-xs text-muted-foreground">
             Video phát từ YouTube của kênh truyền hình nêu tên; bản quyền thuộc kênh đó. Video chỉ tải khi bạn bấm phát.
           </p>
         </div>
@@ -94,6 +98,28 @@ function buildResourceTabs(lesson: Lesson): TabItem[] {
         </div>
       ),
     });
+  }
+
+  if (lesson.models3d && lesson.models3d.length > 0) {
+    const specs = lesson.models3d
+      .map((id) => getModelSpec(id))
+      .filter((s): s is ModelSpec => Boolean(s));
+    if (specs.length > 0) {
+      tabs.push({
+        id: "mo-hinh-3d",
+        label: "Mô hình 3D",
+        hint: `${specs.length}`,
+        content: (
+          <div data-resource="mo-hinh-3d">
+            <h3 className="mb-1 font-serif text-xl font-bold text-foreground">Mô hình hiện vật và công trình 3D</h3>
+            <p className="mb-5 max-w-3xl text-muted-foreground">
+              Khám phá chi tiết khí tài quân sự và công trình lịch sử được dựng 3D bằng mã. Bấm vào mô hình để xoay 360°, phóng to, thu nhỏ và tương tác với các điểm chú thích.
+            </p>
+            <ModelGallery specs={specs} label="Chọn mô hình 3D" />
+          </div>
+        ),
+      });
+    }
   }
 
   if (lesson.resultsScan || lesson.resultsImage?.depthSrc) {

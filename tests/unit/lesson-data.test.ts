@@ -128,8 +128,12 @@ describe("kịch bản Chiến dịch Hồ Chí Minh", () => {
     expect(Object.values(byId["dinh-doc-lap"]).every((status) => status === "captured")).toBe(true);
   });
 
-  it("năm cánh quân; mục tiêu nằm ở Đông Nam Bộ", () => {
-    expect(chienDichHoChiMinh1975.unitDefinitions).toHaveLength(5);
+  it("năm cánh quân cùng đơn vị thiết giáp, không quân; mục tiêu nằm ở Đông Nam Bộ", () => {
+    expect(chienDichHoChiMinh1975.unitDefinitions.length).toBeGreaterThanOrEqual(5);
+    const kinds = chienDichHoChiMinh1975.unitDefinitions.map((unit) => unit.kind);
+    expect(kinds.filter((k) => k === "vn-infantry")).toHaveLength(5);
+    expect(kinds).toContain("vn-armor");
+    expect(kinds).toContain("vn-aircraft");
     for (const point of chienDichHoChiMinh1975.strongpointDefinitions ?? []) {
       const [lat, lng] = point.position;
       expect(lat, point.id).toBeGreaterThan(10.5);
@@ -137,6 +141,30 @@ describe("kịch bản Chiến dịch Hồ Chí Minh", () => {
       expect(lng, point.id).toBeGreaterThan(106.3);
       expect(lng, point.id).toBeLessThan(107.4);
     }
+  });
+
+  it("dữ liệu bài học đạt chuẩn tương đương Điện Biên Phủ: hiện vật ≥ 8, di tích ≥ 6, trắc nghiệm = 10, mốc thời gian = 10", () => {
+    const hcmLesson = getLesson("chien-dich-ho-chi-minh-1975");
+    expect(hcmLesson).toBeDefined();
+    expect(hcmLesson!.artifacts?.length).toBeGreaterThanOrEqual(8);
+    expect(hcmLesson!.today.length).toBeGreaterThanOrEqual(6);
+    expect(hcmLesson!.quiz?.length).toBe(10);
+    expect(hcmLesson!.keyDates.length).toBe(10);
+    expect(hcmLesson!.quote).toBeDefined();
+    expect(hcmLesson!.quote?.text).toContain("Tiến lên! Chiến sĩ, đồng bào");
+    expect(hcmLesson!.resultsScan).toBeDefined();
+    expect(hcmLesson!.resultsImage).toBeDefined();
+    expect(hcmLesson!.todayScans?.length).toBeGreaterThanOrEqual(1);
+    expect(hcmLesson!.videos.length).toBe(4);
+    expect(hcmLesson!.flashcards.length).toBe(8);
+    expect(hcmLesson!.mapFilm).toBe("chien-dich-ho-chi-minh");
+    expect(hcmLesson!.models3d).toEqual([
+      "xe-tang-t54-843",
+      "xe-tang-t54-390",
+      "dinh-doc-lap",
+      "may-bay-a37",
+      "truc-thang-uh1",
+    ]);
   });
 });
 

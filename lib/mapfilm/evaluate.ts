@@ -31,7 +31,13 @@ const MARCH_GAP = 0.055;
 const FLAG_DOWN = 1.2;
 const FLAG_UP = 1.6;
 
-const UNIT_PIECE: Partial<Record<UnitKind, PieceKind>> = { "vn-infantry": "infantry", "vn-artillery": "artillery", "vn-hq": "hq" };
+const UNIT_PIECE: Partial<Record<UnitKind, PieceKind>> = {
+  "vn-infantry": "infantry",
+  "vn-artillery": "artillery",
+  "vn-hq": "hq",
+  "vn-armor": "tank",
+  "vn-aircraft": "jet",
+};
 
 type Change = { t: number; status: StrongpointStatus };
 
@@ -249,7 +255,7 @@ export function evaluateScene(script: MapFilmScript, index: number, time: number
     pieces.push({
       key: def.id,
       kind,
-      side: "vn",
+      side: script.slug === "chien-dich-ho-chi-minh" ? "mt" : "vn",
       position,
       heading: travelling ? bearingDegrees(start.position, end.position) : bearingDegrees(end.position, script.origin),
       opacity,

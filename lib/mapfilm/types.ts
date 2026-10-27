@@ -12,9 +12,9 @@ export type CamEase = "inOut" | "linear" | "in" | "out";
 /** Mốc góc máy tại thời điểm `t`; giữa hai mốc camera bay theo đường cong kiểu flyTo, `ease` là nhịp của chặng TỚI mốc này. */
 export type MapCamKey = MapCam & { t: number; ease?: CamEase };
 
-export type Side = "vn" | "fr";
-/** Loại quân cờ 3D: bộ binh, khẩu pháo, sở chỉ huy, dân công. */
-export type PieceKind = "infantry" | "artillery" | "hq" | "porter";
+export type Side = "vn" | "fr" | "mt" | "arvn";
+/** Loại quân cờ 3D: bộ binh, khẩu pháo, sở chỉ huy, dân công, xe tăng, phản lực, trực thăng, dinh độc lập, cổng dinh. */
+export type PieceKind = "infantry" | "artillery" | "hq" | "porter" | "tank" | "jet" | "helicopter" | "palace" | "gate";
 
 /** Đường đi: tọa độ cụ thể hoặc tham chiếu một mũi tên của kịch bản. */
 export type PathRef = LatLng[] | { arrow: string };

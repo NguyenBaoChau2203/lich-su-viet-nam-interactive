@@ -13,7 +13,7 @@ export function VideoEmbed({ video, priority = false }: { video: LessonVideo; pr
   const watchUrl = `https://www.youtube.com/watch?v=${video.youtubeId}`;
 
   return (
-    <figure className="flex flex-col gap-2">
+    <figure className="flex h-full flex-col justify-between gap-3">
       <div className="relative aspect-video overflow-hidden rounded-card border border-border bg-black">
         {playing ? (
           <iframe
@@ -43,7 +43,7 @@ export function VideoEmbed({ video, priority = false }: { video: LessonVideo; pr
           </button>
         )}
       </div>
-      <figcaption className="flex flex-col gap-1">
+      <figcaption className="grid flex-1 grid-rows-[auto_1fr_auto] gap-1">
         <span className="font-semibold text-foreground">{video.title}</span>
         <span className="text-sm text-muted-foreground">
           {video.channel} · {video.note}
@@ -52,7 +52,7 @@ export function VideoEmbed({ video, priority = false }: { video: LessonVideo; pr
           href={watchUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex w-fit items-center gap-1 text-sm font-medium text-accent hover:underline"
+          className="mt-2 inline-flex w-fit items-center gap-1 text-sm font-medium text-accent hover:underline"
         >
           Xem trên YouTube
           <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />

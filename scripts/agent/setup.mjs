@@ -1,11 +1,20 @@
+import { realpathSync } from "node:fs";
 import { chmod, readdir } from "node:fs/promises";
 import path from "node:path";
 import { isMain, projectRoot, runTool } from "./runtime.mjs";
 
+function canonicalPath(target) {
+  try {
+    return realpathSync.native ? realpathSync.native(target) : realpathSync(target);
+  } catch {
+    return path.resolve(target);
+  }
+}
+
 export async function setupHooks(root = projectRoot) {
   const git = (...args) => runTool("git", args, { cwd: root });
   const tree = git("rev-parse", "--show-toplevel");
-  if (tree.status !== 0 || path.resolve(tree.stdout.trim()) !== path.resolve(root))
+  if (tree.status !== 0 || canonicalPath(tree.stdout.trim()) !== canonicalPath(root))
     return { ok: false, message: "Run setup in a complete Git checkout of this repository." };
   const configured = git("config", "--get", "core.hooksPath");
   if (configured.status !== 0 && configured.status !== 1)

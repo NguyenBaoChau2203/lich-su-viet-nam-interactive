@@ -137,14 +137,14 @@ export function BattleReenactment({ scenario }: { scenario: BattleScenario }) {
   }
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
-      <div className="flex min-w-0 flex-col gap-4">
+    <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_23.75rem] lg:items-start">
+      <div className="flex min-w-0 flex-col gap-4 lg:sticky lg:top-24">
         <div className="relative">
           <div
             ref={mapBoxRef}
             role="region"
             aria-label={`Bản đồ mô phỏng ${scenario.title}`}
-            className="h-[22rem] overflow-hidden rounded-card border border-border sm:h-[30rem]"
+            className="h-[22rem] overflow-hidden rounded-card border border-border sm:h-[clamp(24rem,56vh,36rem)]"
           >
             {mapBoxHasSize ? (
               <BattleMap scenario={scenario} frame={frame} camera={camera} flyDuration={reducedMotion ? 0 : MOVE_MS / 1000} />
@@ -282,7 +282,7 @@ export function BattleReenactment({ scenario }: { scenario: BattleScenario }) {
                   }}
                   aria-current={index === to ? "step" : undefined}
                   className={cn(
-                    "flex w-full items-start gap-3 rounded-card border p-3 text-left text-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold",
+                    "flex w-full items-center gap-3 rounded-card border p-2.5 text-left text-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold",
                     index === to
                       ? "border-accent bg-muted font-semibold text-foreground"
                       : "border-border bg-surface text-surface-foreground hover:border-gold",
@@ -290,16 +290,18 @@ export function BattleReenactment({ scenario }: { scenario: BattleScenario }) {
                 >
                   <span
                     className={cn(
-                      "mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold",
+                      "inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold",
                       index === to ? "bg-accent text-accent-foreground" : "bg-muted text-muted-foreground",
                     )}
                     aria-hidden="true"
                   >
                     {index + 1}
                   </span>
-                  <span>
-                    {item.title}
-                    {item.dateText && <span className="block text-xs font-normal text-muted-foreground">{item.dateText}</span>}
+                  <span className="flex min-w-0 flex-1 flex-wrap items-baseline justify-between gap-x-2 gap-y-0.5">
+                    <span className="font-medium text-foreground">{item.title}</span>
+                    {item.dateText && (
+                      <span className="shrink-0 text-xs font-normal text-muted-foreground text-right">{item.dateText}</span>
+                    )}
                   </span>
                 </button>
               </li>

@@ -150,6 +150,8 @@ export type Lesson = {
   cinema?: { href: string; title: string; description: string; posterSrc: string; posterAlt: string };
   /** Ảnh "ngày nay" tại di tích. */
   today: LessonImage[];
+  /** Mô hình 3D dựng minh họa (lib/models3d/specs.ts) hiện ở tab Mô hình 3D. */
+  models3d?: string[];
   /** Các con số/chi tiết cần đối chiếu với SGK bản in trước khi dùng chính thức. */
   toVerify: string[];
 };

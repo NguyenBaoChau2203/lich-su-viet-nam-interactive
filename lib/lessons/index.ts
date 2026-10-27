@@ -23,7 +23,7 @@ export function getLesson(slug: string): Lesson | undefined {
 
 /** Bài học gắn với một sự kiện trong database (dùng cho nút "Xem bài học tương tác" ở trang chi tiết). */
 export function getLessonForEvent(eventSlug: string): Lesson | undefined {
-  return lessons.find((lesson) => lesson.eventSlug === eventSlug || lesson.relatedEventSlugs?.includes(eventSlug));
+  return lessons.find((lesson) => lesson.slug === eventSlug || lesson.eventSlug === eventSlug || lesson.relatedEventSlugs?.includes(eventSlug));
 }
 
 /** Thẻ giới thiệu ở trang chủ và trang /bai-hoc: bài học đầy đủ + các trận tái hiện riêng lẻ. */
