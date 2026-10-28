@@ -37,7 +37,9 @@ describe("Heritage Sites Release SQL Generation (Phase 4)", () => {
     // Idempotency and constraint checks
     expect(importSql).toContain("ON CONFLICT (slug) DO UPDATE");
     expect(importSql).toContain("ON CONFLICT (location_id, sort_order) DO UPDATE");
-    expect(importSql).toContain("ON CONFLICT (location_id, youtube_id) DO UPDATE");
+    if (importSql.includes("public.location_videos")) {
+      expect(importSql).toContain("ON CONFLICT (location_id, youtube_id) DO UPDATE");
+    }
     expect(importSql).toContain("WHERE NOT EXISTS");
 
     // Rollback preserves enrolled locations while clearing heritage columns

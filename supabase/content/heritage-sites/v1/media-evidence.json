@@ -2079,6 +2079,930 @@
       "searchLog": [
         "Sourced for Batch C: File:Tháp bà Ponagar.JPG"
       ]
+    },
+    {
+      "key": "buon-ma-thuot-1975-tuong-dai-chien-thang-buon-ma-thuot",
+      "site": "buon-ma-thuot-1975",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Buôn Ma Thuột city square.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bu%C3%B4n_Ma_Thu%E1%BB%99t_city_square.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Rdavout",
+        "credit": "Rdavout",
+        "originalWidth": 2256,
+        "originalHeight": 1496
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Bu%C3%B4n_Ma_Thu%E1%BB%99t_city_square.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:24.745Z",
+        "sha256": "43b37f1f5e85a8e453f42644ed35a286b22d283e1339df46f9618cb211a053f8",
+        "bytes": 529659,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 265,
+          "bytes": 12974,
+          "sha256": "bc069b57ce68a352d66c7e74ada59e1dda87537802fb94ecc70206207beba518"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 796,
+          "bytes": 80460,
+          "sha256": "eefd8862c202bd73cb1b4ddeecd7318a6bd3193b7d85adf9dd2dd044096e14e2"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1326,
+          "bytes": 145636,
+          "sha256": "5898d677d874da5f715b4c5279fff0077b0f275492bffa981facaf3bcbb81178"
+        }
+      },
+      "visualCheck": "Tượng đài Chiến thắng Buôn Ma Thuột tại Ngã Sáu trung tâm thành phố.",
+      "searchLog": [
+        "Sourced for Batch D: File:Buôn Ma Thuột city square.jpg"
+      ]
+    },
+    {
+      "key": "vung-ro-phu-yen-vinh-vung-ro-ben-tau-khong-so",
+      "site": "vung-ro-phu-yen",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Vịnh Vũng Rô.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:V%E1%BB%8Bnh_V%C5%A9ng_R%C3%B4.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "credit": "Bùi Thụy Đào Nguyên",
+        "originalWidth": 3296,
+        "originalHeight": 2472
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/V%E1%BB%8Bnh_V%C5%A9ng_R%C3%B4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:25.522Z",
+        "sha256": "400d97eff35623d8f6bba511f9a9d12d8c09c25d65e0abab3f71969ec2f39278",
+        "bytes": 1940939,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 19632,
+          "sha256": "dbdb95edfbda25043241f6a8c2989925c7363efd1066af9d51553b9b52319413"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 145980,
+          "sha256": "ad9ee765e1b634058b8ef696d2c568fef206c2650bdb79d829ad98956fae7bdf"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 300108,
+          "sha256": "712eb155b1c9b48acf56964ffe0d4f2a24c3b3775c88fad0c39b20a21cb11fb3"
+        }
+      },
+      "visualCheck": "Toàn cảnh Vịnh Vũng Rô di tích bến Tàu Không số tại Phú Yên.",
+      "searchLog": [
+        "Sourced for Batch D: File:Vịnh Vũng Rô.jpg"
+      ]
+    },
+    {
+      "key": "truong-duc-thanh-khu-di-tich-truong-duc-thanh",
+      "site": "truong-duc-thanh",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Trường Dục Thanh.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tr%C6%B0%E1%BB%9Dng_D%E1%BB%A5c_Thanh.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "credit": "Bùi Thụy Đào Nguyên",
+        "originalWidth": 3648,
+        "originalHeight": 2736
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Tr%C6%B0%E1%BB%9Dng_D%E1%BB%A5c_Thanh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:26.256Z",
+        "sha256": "894f6ab4f239a66c8f3c47a833a6129c9d7be13b2cc671aa6760d630139209f3",
+        "bytes": 2554153,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 21952,
+          "sha256": "ab0421c9c0ec42318e04326a22f34c6e71df53d73edcbc6e6a46c22f07b9cb8c"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 152852,
+          "sha256": "896fa468c29999e183292373f4851ee8941756546c926aa664439c3bd3937585"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 320682,
+          "sha256": "cc035007cf6f4da242e14e90231a192ccf5f79b7badbcb1e99b007de2dae4ff4"
+        }
+      },
+      "visualCheck": "Khu di tích Trường Dục Thanh với các gian nhà cổ truyền thống tại Phan Thiết.",
+      "searchLog": [
+        "Sourced for Batch D: File:Trường Dục Thanh.jpg"
+      ]
+    },
+    {
+      "key": "nha-lao-thieu-nhi-da-lat-cong-vao-nha-lao-thieu-nhi-da-lat",
+      "site": "nha-lao-thieu-nhi-da-lat",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Da Lat Children's Prison 02.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Da_Lat_Children%27s_Prison_02.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Diane Selwyn",
+        "credit": "Diane Selwyn",
+        "originalWidth": 3072,
+        "originalHeight": 2304
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Da_Lat_Children%27s_Prison_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:27.074Z",
+        "sha256": "59e3bd263c9fa6a01a1a3bc1178dca3c96870f03a8137ff4ed721cb814c80570",
+        "bytes": 3665283,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 22992,
+          "sha256": "74fc2c66baa5b447dddb6a978d05af91078d7f4eeecf57a57317ad95c3d9aafe"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 157130,
+          "sha256": "d8a01836996af2ab6c4950f785141dd0f49b09a1b064fd5fe51c71106fa7414a"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 315766,
+          "sha256": "9ec5f7b9bc80996808c2f3e0d3466bf68ec1f2c6e8e2384ffbe27e1e758511f5"
+        }
+      },
+      "visualCheck": "Cổng vào và bia di tích Nhà lao Thiếu nhi Đà Lạt.",
+      "searchLog": [
+        "Sourced for Batch D: File:Da Lat Children's Prison 02.jpg"
+      ]
+    },
+    {
+      "key": "chien-thang-xuan-loc-1975-dap-tan-canh-cua-thep-xuan-loc",
+      "site": "chien-thang-xuan-loc-1975",
+      "origin": "web",
+      "commons": null,
+      "web": {
+        "pageUrl": "https://www.vietnamplus.vn/khoanh-khac-va-su-kien-ngay-2141975-dap-tan-canh-cua-thep-xuan-loc-post1034024.vnp",
+        "imageUrl": "https://media.vietnamplus.vn/images/0f-btEj60lGt0BFs9lOY11sL-kerZiOPU-JLWRiZf0fEEa8Ekr7CveJymyhoJdpvO68Kok39VxEegRpLRCZeeA/720.jpg",
+        "credit": "Tư liệu TTXVN / VietnamPlus",
+        "publishedDate": "1975"
+      },
+      "download": {
+        "url": "https://media.vietnamplus.vn/images/0f-btEj60lGt0BFs9lOY11sL-kerZiOPU-JLWRiZf0fEEa8Ekr7CveJymyhoJdpvO68Kok39VxEegRpLRCZeeA/720.jpg",
+        "at": "2026-10-28T16:56:27.304Z",
+        "sha256": "c36a883ead2746ade50198725bb2bd6fee7e78c7340a595bc53069ec9fae8884",
+        "bytes": 54036,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 225,
+          "bytes": 5972,
+          "sha256": "2815096eecf139d5bdcec9ae715b1fd7f22f945a732203c5782ce29edca699c3"
+        },
+        "1200": {
+          "width": 800,
+          "height": 450,
+          "bytes": 13202,
+          "sha256": "8c878974f370b3555846ec3ffa32649d77216860ba3f42b71e59739935e4c678"
+        },
+        "2000": {
+          "width": 800,
+          "height": 450,
+          "bytes": 11422,
+          "sha256": "69278063548850fa7f5ef4bc6c1ff997b2cc812e23ef9ea2b786fcf20c7ab198"
+        }
+      },
+      "visualCheck": "Tư liệu ảnh lịch sử quân giải phóng giải phóng Xuân Lộc tháng 4/1975.",
+      "searchLog": [
+        "Sourced for Batch D: https://media.vietnamplus.vn/images/0f-btEj60lGt0BFs9lOY11sL-kerZiOPU-JLWRiZf0fEEa8Ekr7CveJymyhoJdpvO68Kok39VxEegRpLRCZeeA/720.jpg"
+      ]
+    },
+    {
+      "key": "can-cu-ta-thiet-can-cu-ta-thiet-loc-ninh",
+      "site": "can-cu-ta-thiet",
+      "origin": "web",
+      "commons": null,
+      "web": {
+        "pageUrl": "https://www.vietnamplus.vn/50-nam-thu-do-khang-chien-vung-dat-do-loc-ninh-o-binh-phuoc-post780152.vnp",
+        "imageUrl": "https://media.vietnamplus.vn/images/9cgL5XPNTuTvOC7riffqUP5bCc6Xz1jmbx5UTQ7TqRWYDUp4qK-gcP5L4QrC4FuT/Loc_Ninh_.jpg",
+        "credit": "Sỹ Tuyên / TTXVN",
+        "publishedDate": "2022"
+      },
+      "download": {
+        "url": "https://media.vietnamplus.vn/images/9cgL5XPNTuTvOC7riffqUP5bCc6Xz1jmbx5UTQ7TqRWYDUp4qK-gcP5L4QrC4FuT/Loc_Ninh_.jpg",
+        "at": "2026-10-28T16:56:27.782Z",
+        "sha256": "7cc302a3c33c27c2512b216e60203aa697b88129a66bb572fd06fb6e8f3b9b3b",
+        "bytes": 548454,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 225,
+          "bytes": 19230,
+          "sha256": "100080c489b3b4c271d1a4f4e1b06a5d808f030913b83efe78d7c032af606c21"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 674,
+          "bytes": 122188,
+          "sha256": "708f2b0ea944d87d39aa593cf262b8ee9621a096579a872549fdc2480612ae7f"
+        },
+        "2000": {
+          "width": 1931,
+          "height": 1085,
+          "bytes": 237602,
+          "sha256": "75ebce9451b4c2edb25154304e71f6bf3027cf372215c59a258c177e05b0046c"
+        }
+      },
+      "visualCheck": "Địa bàn di tích Căn cứ Tà Thiết Lộc Ninh Bình Phước.",
+      "searchLog": [
+        "Sourced for Batch D: https://media.vietnamplus.vn/images/9cgL5XPNTuTvOC7riffqUP5bCc6Xz1jmbx5UTQ7TqRWYDUp4qK-gcP5L4QrC4FuT/Loc_Ninh_.jpg"
+      ]
+    },
+    {
+      "key": "dinh-doc-lap-mat-tien-dinh-doc-lap",
+      "site": "dinh-doc-lap",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Palacio de la Reunificación, Ciudad Ho Chi Minh, Vietnam, 2013-08-14, DD 03.JPG",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Palacio_de_la_Reunificaci%C3%B3n,_Ciudad_Ho_Chi_Minh,_Vietnam,_2013-08-14,_DD_03.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Diego Delso",
+        "credit": "Diego Delso",
+        "originalWidth": 5503,
+        "originalHeight": 2345
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Palacio_de_la_Reunificaci%C3%B3n%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_03.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:29.027Z",
+        "sha256": "10116f328b0f7b3c15f1e356103a8b29fbafb3a3d2dfcc06ccc5fc846ffa9e12",
+        "bytes": 8930477,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 171,
+          "bytes": 13530,
+          "sha256": "42357b58af15c5f71d194af30610c89d56d516cf677858584c3790d4c580d615"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 511,
+          "bytes": 91910,
+          "sha256": "40756237b5f68ea0f8e49b67c64ead56b1fa18592192a23d0bd582cc4c1098e9"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 852,
+          "bytes": 200684,
+          "sha256": "4e913a3f06ab4077d40f753bacf7804aabb8aafe609e768480423ed795c11eb3"
+        }
+      },
+      "visualCheck": "Mặt tiền Dinh Độc Lập với kiến trúc đặc trưng và đài phun nước.",
+      "searchLog": [
+        "Sourced for Batch D: File:Palacio de la Reunificación, Ciudad Ho Chi Minh, Vietnam, 2013-08-14, DD 03.JPG"
+      ]
+    },
+    {
+      "key": "dia-dao-cu-chi-cua-ham-dia-dao-cu-chi",
+      "site": "dia-dao-cu-chi",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Cu Chi Tunnel Entry (1).jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Cu_Chi_Tunnel_Entry_(1).jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Thomas Schoch",
+        "credit": "Thomas Schoch",
+        "originalWidth": 1600,
+        "originalHeight": 1200
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Cu_Chi_Tunnel_Entry_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:30.289Z",
+        "sha256": "636a3f7737959af981a192045e8af2b6a6ba2966ee25559ab01a5dd3d53cebf2",
+        "bytes": 1680730,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 41208,
+          "sha256": "e788dd9acba00e60da127e0935729c3a2c341aa1224bfd49212ec4b2aff98f31"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 251356,
+          "sha256": "866c7d9699a6518361b6955576be9585c14e62425b294d1ce82f4c4698a8da0b"
+        },
+        "2000": {
+          "width": 1600,
+          "height": 1200,
+          "bytes": 329232,
+          "sha256": "5e13a93454eb08a652029f33779bd3735cd09bed2413937426e300f5f197eaf0"
+        }
+      },
+      "visualCheck": "Cửa hầm bí mật địa đạo Củ Chi ngụy trang bằng lá khô.",
+      "searchLog": [
+        "Sourced for Batch D: File:Cu Chi Tunnel Entry (1).jpg"
+      ]
+    },
+    {
+      "key": "can-cu-trung-uong-cuc-mien-nam-duong-vao-can-cu-trung-uong-cuc",
+      "site": "can-cu-trung-uong-cuc-mien-nam",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Ngã Ba vào Trung ương Cục miền Nam - panoramio.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ng%C3%A3_Ba_v%C3%A0o_Trung_%C6%B0%C6%A1ng_C%E1%BB%A5c_mi%E1%BB%81n_Nam_-_panoramio.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Lam Tr Th",
+        "credit": "Lam Tr Th",
+        "originalWidth": 3888,
+        "originalHeight": 2592
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Ng%C3%A3_Ba_v%C3%A0o_Trung_%C6%B0%C6%A1ng_C%E1%BB%A5c_mi%E1%BB%81n_Nam_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:31.403Z",
+        "sha256": "3b7bcd8a0d675cebacd4f2ac96add72408df17b99dd96d023d46150f5d60c1c3",
+        "bytes": 3228689,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 267,
+          "bytes": 21858,
+          "sha256": "fda947c60d25a890527d45eff5f58f5afc3c5ea5d2a5129214d71dead80aa734"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 800,
+          "bytes": 229328,
+          "sha256": "00cad3d46a639a52c2c90ec23ce2654b3d37d078fa1306eaa70512ff1af213f6"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1333,
+          "bytes": 563674,
+          "sha256": "4003eab36b866f54fcf1c8270301768abfe1b79f434c83bcb89a105c8022373f"
+        }
+      },
+      "visualCheck": "Đường rừng vào Căn cứ Trung ương Cục miền Nam tại Tây Ninh.",
+      "searchLog": [
+        "Sourced for Batch D: File:Ngã Ba vào Trung ương Cục miền Nam - panoramio.jpg"
+      ]
+    },
+    {
+      "key": "nga-tu-duc-hoa-cong-vien-tuong-dai-vo-van-tan",
+      "site": "nga-tu-duc-hoa",
+      "origin": "commons",
+      "commons": {
+        "title": "File:CongVienVoVanTan.JPG",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:CongVienVoVanTan.JPG",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "artist": "Myhanh ( thảo luận )",
+        "credit": "Myhanh ( thảo luận )",
+        "originalWidth": 1616,
+        "originalHeight": 1080
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/CongVienVoVanTan.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:32.617Z",
+        "sha256": "a02c24c168670934fbb21464016b20faaaa285da180c717c855ecf18b9bc295d",
+        "bytes": 891939,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 267,
+          "bytes": 22992,
+          "sha256": "85e67d4da3c9c157138977f5c4538924091dc25bb1a6cbd23397154f2f02bd1b"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 802,
+          "bytes": 163206,
+          "sha256": "57536c0fcde4dc71de5f531b42f689fdffcb632c0e621172763b7afc8edd9284"
+        },
+        "2000": {
+          "width": 1616,
+          "height": 1080,
+          "bytes": 225276,
+          "sha256": "9b7033c0f1b0ef510d0506d97916eb927701713f802342c1c827d269a6bf0bef"
+        }
+      },
+      "visualCheck": "Tượng đài đồng chí Võ Văn Tần tại khu di tích Ngã tư Đức Hòa Long An.",
+      "searchLog": [
+        "Sourced for Batch D: File:CongVienVoVanTan.JPG"
+      ]
+    },
+    {
+      "key": "chien-thang-ap-bac-1963-tuong-dai-chien-thang-ap-bac",
+      "site": "chien-thang-ap-bac-1963",
+      "origin": "web",
+      "commons": null,
+      "web": {
+        "pageUrl": "https://www.vietnamplus.vn/chien-thang-ap-bac-buoc-ngoat-trong-cuoc-khang-chien-chong-my-post839211.vnp",
+        "imageUrl": "https://media.vietnamplus.vn/images/9cgL5XPNTuTvOC7riffqUObSo5mjqcLIN0EP9DSNCgCr3LnyR7_0lcgeIwLJbOPC4ZfxPEX5tqxeS5gy8czelQ/chien_thang_ap__bac_3112.jpg",
+        "credit": "Minh Trí / TTXVN",
+        "publishedDate": "2023"
+      },
+      "download": {
+        "url": "https://media.vietnamplus.vn/images/9cgL5XPNTuTvOC7riffqUObSo5mjqcLIN0EP9DSNCgCr3LnyR7_0lcgeIwLJbOPC4ZfxPEX5tqxeS5gy8czelQ/chien_thang_ap__bac_3112.jpg",
+        "at": "2026-10-28T16:56:33.226Z",
+        "sha256": "8b01333449fe6d974a7cd2d6cc5edf0d238efeb96b4e7ee6f79218b133a50695",
+        "bytes": 593101,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 266,
+          "bytes": 16556,
+          "sha256": "6fc047f021fd61d337d75c10a0c506110c3e8d41b423d1f26ae8b8f4acb52a9f"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 800,
+          "bytes": 95222,
+          "sha256": "528c56c6927c023cf967adb8699958ce2e539b66ae08a7919308015b72659a8e"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1334,
+          "bytes": 181512,
+          "sha256": "8df400c573d148b7451934b82dbf7919d0a0eff54943739ba828c184a265d0ab"
+        }
+      },
+      "visualCheck": "Tượng đài Ba chiến sĩ gang thép tại di tích Chiến thắng Ấp Bắc.",
+      "searchLog": [
+        "Sourced for Batch D: https://media.vietnamplus.vn/images/9cgL5XPNTuTvOC7riffqUObSo5mjqcLIN0EP9DSNCgCr3LnyR7_0lcgeIwLJbOPC4ZfxPEX5tqxeS5gy8czelQ/chien_thang_ap__bac_3112.jpg"
+      ]
+    },
+    {
+      "key": "mo-cu-pho-bang-nguyen-sinh-sac-lang-mo-cu-pho-bang-nguyen-sinh-sac",
+      "site": "mo-cu-pho-bang-nguyen-sinh-sac",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Mộ Nguyễn Sinh Sắc ở Cao Lãnh.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:M%E1%BB%99_Nguy%E1%BB%85n_Sinh_S%E1%BA%AFc_%E1%BB%9F_Cao_L%C3%A3nh.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "credit": "Bùi Thụy Đào Nguyên",
+        "originalWidth": 4608,
+        "originalHeight": 3456
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/M%E1%BB%99_Nguy%E1%BB%85n_Sinh_S%E1%BA%AFc_%E1%BB%9F_Cao_L%C3%A3nh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:34.940Z",
+        "sha256": "662f39092decd56f1d1513db363dd6fcd0c21545427ace79a106f7049f6187f9",
+        "bytes": 2756680,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 15546,
+          "sha256": "50e97e0c176797b1f0e13a8079673f2007e60e0aa0a8d0ce6d35f933909d4855"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 95030,
+          "sha256": "6115ef9d5f21b9bcec1fdd85a50b8495ea32f008448ac03c7e370cd3d305ab62"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 191200,
+          "sha256": "eef9a4f436542b133301aedda5faf5538536931e44f236453f37c7e4f5e0f7f2"
+        }
+      },
+      "visualCheck": "Vòm mộ hình hoa sen của Cụ Phó bảng Nguyễn Sinh Sắc tại Cao Lãnh.",
+      "searchLog": [
+        "Sourced for Batch D: File:Mộ Nguyễn Sinh Sắc ở Cao Lãnh.jpg"
+      ]
+    },
+    {
+      "key": "dong-khoi-ben-tre-1960-nha-truyen-thong-dong-khoi",
+      "site": "dong-khoi-ben-tre-1960",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Nha truyen thong Dong Khoi.JPG",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Nha_truyen_thong_Dong_Khoi.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Hoangvantoanajc",
+        "credit": "Hoangvantoanajc",
+        "originalWidth": 4592,
+        "originalHeight": 3056
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Nha_truyen_thong_Dong_Khoi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:36.400Z",
+        "sha256": "e0e06b544a8241cedc46a32a30a4b09dd3302987a1b0481db2116a50382a44c4",
+        "bytes": 5275648,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 266,
+          "bytes": 12794,
+          "sha256": "d01f2bbd6a6559efe72b0bc136675090de9047385c8c6476d323eb50cafa9ffa"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 799,
+          "bytes": 83342,
+          "sha256": "9107079e8ce888ec0a2bfd9651ad27f4de58be6c3993d963f31d47ee3311abda"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1331,
+          "bytes": 187828,
+          "sha256": "43bd99707c2dc4941f72067b045747631244d266a63f09270b948e7f6f5d84be"
+        }
+      },
+      "visualCheck": "Nhà truyền thống di tích phong trào Đồng Khởi tại Định Thủy Mỏ Cày Nam Bến Tre.",
+      "searchLog": [
+        "Sourced for Batch D: File:Nha truyen thong Dong Khoi.JPG"
+      ]
+    },
+    {
+      "key": "khu-tuong-niem-vo-van-kiet-phu-dieu-khu-tuong-niem-vo-van-kiet",
+      "site": "khu-tuong-niem-vo-van-kiet",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Phù điêu Võ Văn Kiệt.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ph%C3%B9_%C4%91i%C3%AAu_V%C3%B5_V%C4%83n_Ki%E1%BB%87t.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Quốc Anh Võ",
+        "credit": "Quốc Anh Võ",
+        "originalWidth": 2560,
+        "originalHeight": 1920
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Ph%C3%B9_%C4%91i%C3%AAu_V%C3%B5_V%C4%83n_Ki%E1%BB%87t.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:38.934Z",
+        "sha256": "f77e90790b88d6b2f7d36632429a8241d74b85b05634d68a9267f8f99e62d0db",
+        "bytes": 2286537,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 32908,
+          "sha256": "5f57206b68c99f47d35248f1fcaddf24630ca1428924c54bceccad48a579b21e"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 215038,
+          "sha256": "9e1763b8cd40b291c89b936e91b2702981a6fd76daa560831870415f55708677"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 372784,
+          "sha256": "a634a819a0ee4cabfa7cf3a3307015c5b57fe98c991bbfafc02425a5859968f2"
+        }
+      },
+      "visualCheck": "Bức phù điêu tại Khu tưởng niệm Cố Thủ tướng Võ Văn Kiệt tại Vũng Liêm Vĩnh Long.",
+      "searchLog": [
+        "Sourced for Batch D: File:Phù điêu Võ Văn Kiệt.jpg"
+      ]
+    },
+    {
+      "key": "nha-tu-phu-quoc-trai-giam-tu-binh-phu-quoc",
+      "site": "nha-tu-phu-quoc",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Phu Quoc Prison 02.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Phu_Quoc_Prison_02.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Frank Fox",
+        "credit": "Frank Fox",
+        "originalWidth": 1200,
+        "originalHeight": 800
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Phu_Quoc_Prison_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:40.719Z",
+        "sha256": "47a959211c31a9c710cac4615957783d88f5559a7613d0ca8ee8589185874400",
+        "bytes": 517210,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 267,
+          "bytes": 21180,
+          "sha256": "a2da1664ae75aa75c7cb76d90044b55b999f0f3e67892bb2846164d8fcf85724"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 800,
+          "bytes": 140884,
+          "sha256": "101b2009e2ec287244d72b63d1c8e690a42e97e22cea01b807bd24d41b38a5d5"
+        },
+        "2000": {
+          "width": 1200,
+          "height": 800,
+          "bytes": 118662,
+          "sha256": "f84e62d52cd61dc17ccc3dca6c2002473f9940fedcd4625b55ab8bfd49520a6e"
+        }
+      },
+      "visualCheck": "Các dãy lán trại giam và hàng rào dây thép gai tại Trại giam Tù binh Phú Quốc.",
+      "searchLog": [
+        "Sourced for Batch D: File:Phu Quoc Prison 02.jpg"
+      ]
+    },
+    {
+      "key": "khu-luu-niem-ton-duc-thang-nha-tuong-niem-chu-tich-ton-duc-thang",
+      "site": "khu-luu-niem-ton-duc-thang",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Le mémorial du Président Ton Duc Thang (île du Tigre, Vietnam) (6635518367).jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Le_m%C3%A9morial_du_Pr%C3%A9sident_Ton_Duc_Thang_(%C3%AEle_du_Tigre,_Vietnam)_(6635518367).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "artist": "Jean-Pierre Dalbéra from Paris, France",
+        "credit": "Jean-Pierre Dalbéra from Paris, France",
+        "originalWidth": 1536,
+        "originalHeight": 1024
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Le_m%C3%A9morial_du_Pr%C3%A9sident_Ton_Duc_Thang_%28%C3%AEle_du_Tigre%2C_Vietnam%29_%286635518367%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:41.679Z",
+        "sha256": "e5aacef1723a8db69d8b38044a378d3ad49c4a5ddb05733ee24e373e07bfabea",
+        "bytes": 2054969,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 267,
+          "bytes": 34526,
+          "sha256": "a9fe24c6a1953306c8838cb6bd9f30b41a0b67cde7d81d9c314ff320fb7dc80f"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 800,
+          "bytes": 273016,
+          "sha256": "cd4fbdcb40d7fb2ed417d03bea86e6276d692b19a9de76631cc48904cda5d200"
+        },
+        "2000": {
+          "width": 1536,
+          "height": 1024,
+          "bytes": 351770,
+          "sha256": "3c676143c8fa101ab18eae4d2a2184a22b144649bbfb6356f3f4116c70ad1ca5"
+        }
+      },
+      "visualCheck": "Khu đền tưởng niệm Bác Tôn tại Cù lao Ông Hổ Mỹ Hòa Hưng An Giang.",
+      "searchLog": [
+        "Sourced for Batch D: File:Le mémorial du Président Ton Duc Thang (île du Tigre, Vietnam) (6635518367).jpg"
+      ]
+    },
+    {
+      "key": "chien-thang-chuong-thien-1973-tuong-dai-chien-thang-75-luot-tieu-doan-chuong-thien",
+      "site": "chien-thang-chuong-thien-1973",
+      "origin": "commons",
+      "commons": {
+        "title": "File:ChuongThien2-73.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:ChuongThien2-73.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Huongdb",
+        "credit": "Huongdb",
+        "originalWidth": 2252,
+        "originalHeight": 3000
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/ChuongThien2-73.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:43.013Z",
+        "sha256": "c03581809a5e0eda05116f5b27d2a13d6ac4a529748fb7b38932d665d1360c17",
+        "bytes": 346742,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 533,
+          "bytes": 13858,
+          "sha256": "bc637a15e968f3216329326b4b0ec0d8964ee8d7f18e031429794b3ee04461ec"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 1599,
+          "bytes": 66090,
+          "sha256": "70537b725fd0c9ff2d2982bb8cd72356d6c9c26bccdc2dacdee4e5a58330c68d"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 2664,
+          "bytes": 110958,
+          "sha256": "44b2d48f65ead1d85fe537c8005923ec594572773fe770135d8c426cf5f1069f"
+        }
+      },
+      "visualCheck": "Cụm tượng đài Chiến thắng Chương Thiện tại thành phố Vị Thanh Hậu Giang.",
+      "searchLog": [
+        "Sourced for Batch D: File:ChuongThien2-73.jpg"
+      ]
+    },
+    {
+      "key": "kham-lon-can-tho-di-tich-kham-lon-can-tho",
+      "site": "kham-lon-can-tho",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Khám lớn Cần Thơ.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Kh%C3%A1m_l%E1%BB%9Bn_C%E1%BA%A7n_Th%C6%A1.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "credit": "Bùi Thụy Đào Nguyên",
+        "originalWidth": 3296,
+        "originalHeight": 2472
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Kh%C3%A1m_l%E1%BB%9Bn_C%E1%BA%A7n_Th%C6%A1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:44.292Z",
+        "sha256": "da85acc133f8e8eb3a4f3b274c19306c0d82f138397bbb8cb15d92be94dcbf49",
+        "bytes": 1870260,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 24446,
+          "sha256": "2dac68ec550e6b380250191e657f2ff942d1bb5cc17e2f31d4351c8fe9c69359"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 159624,
+          "sha256": "0de263a2cbe2a68ee0dcb8ee1cf0996841d0a930d113574de9699692ac3efe90"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 293446,
+          "sha256": "d3aea9add2155852df8b0c88e21d6f479f3b9ac87661d750e0e177bd429ecdf0"
+        }
+      },
+      "visualCheck": "Tường đá và cổng sắt của di tích Khám Lớn Cần Thơ.",
+      "searchLog": [
+        "Sourced for Batch D: File:Khám lớn Cần Thơ.jpg"
+      ]
+    },
+    {
+      "key": "khoi-nghia-hon-khoai-1940-hon-khoai-noi-khoi-nghia-nam-1940",
+      "site": "khoi-nghia-hon-khoai-1940",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Hon Khoai Island.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hon_Khoai_Island.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Sgnpkd",
+        "credit": "Sgnpkd",
+        "originalWidth": 3755,
+        "originalHeight": 3012
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Hon_Khoai_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:56:46.078Z",
+        "sha256": "0da7c7fa91e38a8d5cc22ed8c41375d46087e8a1dcef16a9ba3ca2bfbd37d475",
+        "bytes": 1394561,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 321,
+          "bytes": 3726,
+          "sha256": "61bff85ad8d5a6d33b9f6a1224315726de0abb943ab7f5ec05505007a512015c"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 963,
+          "bytes": 24224,
+          "sha256": "a753f4c377458e236986a0f7eafc97f83154d819d3c89cdd2db78e924183730d"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1604,
+          "bytes": 49052,
+          "sha256": "9cc9c3777eac1c334ca8e47ce16fbc830db8f786f75ee24e451313273a2d496d"
+        }
+      },
+      "visualCheck": "Đảo Hòn Khoai ngoài khơi biển Cà Mau nơi diễn ra Khởi nghĩa Hòn Khoai 1940.",
+      "searchLog": [
+        "Sourced for Batch D: File:Hon Khoai Island.jpg"
+      ]
+    },
+    {
+      "key": "ben-vam-lung-tuong-dai-ben-vam-lung-duong-ho-chi-minh-tren-bien",
+      "site": "ben-vam-lung",
+      "origin": "web",
+      "commons": null,
+      "web": {
+        "pageUrl": "https://www.vietnamplus.vn/ca-mau-bao-ton-di-tich-ben-vam-lung-diem-cuoi-duong-ho-chi-minh-tren-bien-post1034895.vnp",
+        "imageUrl": "https://media.vietnamplus.vn/images/3D2ICSGw-FGdbx8FKgBYyNq1BZotOAp44hAN9M6bxen6f51CenlnsCZHamFIfdLy/ttxvn-ben-vam-lung1.jpg",
+        "credit": "Huỳnh Anh / TTXVN",
+        "publishedDate": "2021"
+      },
+      "download": {
+        "url": "https://media.vietnamplus.vn/images/3D2ICSGw-FGdbx8FKgBYyNq1BZotOAp44hAN9M6bxen6f51CenlnsCZHamFIfdLy/ttxvn-ben-vam-lung1.jpg",
+        "at": "2026-10-28T16:56:46.688Z",
+        "sha256": "8617a52affe16acb63b77435bb040207454f17993369bb0185951dbff8f9918f",
+        "bytes": 408875,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 225,
+          "bytes": 27558,
+          "sha256": "80ddf8e6e0b5847918100842d552ed74601bec59d05d594d8dd923b807879f33"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 675,
+          "bytes": 229938,
+          "sha256": "d9254c70d3b1574d45f9b015accfcb47fc749e704eb15bdc82d39447f917bcd7"
+        },
+        "2000": {
+          "width": 1200,
+          "height": 675,
+          "bytes": 199452,
+          "sha256": "3a1ada1ce7c529a2fcf682455aa6b8cb08dbe5e7b7c168ff9e439b54b62490a7"
+        }
+      },
+      "visualCheck": "Tượng đài kỷ niệm bến Vàm Lũng đường Hồ Chí Minh trên biển Cà Mau.",
+      "searchLog": [
+        "Sourced for Batch D: https://media.vietnamplus.vn/images/3D2ICSGw-FGdbx8FKgBYyNq1BZotOAp44hAN9M6bxen6f51CenlnsCZHamFIfdLy/ttxvn-ben-vam-lung1.jpg"
+      ]
     }
   ],
   "videos": [
