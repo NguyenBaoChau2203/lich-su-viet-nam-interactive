@@ -9,14 +9,21 @@ export type ProjectedMapAnchor = EventMapAnchor & { x: number; y: number };
 export type EventMapGroup = { key: string; x: number; y: number; anchors: ProjectedMapAnchor[] };
 
 /** A city-level label is used only when every grouped location is nearby. */
-export function getMapGroupLabel(group: EventMapGroup, labels: readonly { name: string; lat: number; lng: number }[]): string {
+export function getMapGroupLabel(
+  group: EventMapGroup,
+  labels: readonly { name: string; lat: number; lng: number }[],
+  noun = "sự kiện",
+): string {
   const first = group.anchors[0];
   if (!first) return "";
   if (new Set(group.anchors.map((anchor) => anchor.location.slug)).size === 1)
     return first.location.historicalName || first.location.name;
   const city = labels.find((label) => group.anchors.every(({ location }) =>
     Math.hypot((location.longitude - label.lng) * Math.cos(label.lat * Math.PI / 180), location.latitude - label.lat) * 111.195 <= 25));
-  return city?.name ?? `${new Set(group.anchors.map((anchor) => anchor.event.slug)).size} sự kiện`;
+  const count = noun === "địa danh"
+    ? new Set(group.anchors.map((anchor) => anchor.location.slug)).size
+    : new Set(group.anchors.map((anchor) => anchor.event.slug)).size;
+  return city?.name ?? `${count} ${noun}`;
 }
 
 export function getEventMapAnchors(events: readonly ExplorerEvent[]): EventMapAnchor[] {

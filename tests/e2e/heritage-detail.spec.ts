@@ -134,3 +134,24 @@ test("P8: Axe accessibility check on heritage place detail page", async ({ page 
   );
   expect(seriousOrCritical).toEqual([]);
 });
+
+test("P9: Broken cover shows placeholder, removes broken img and disables lightbox", async ({ page, context }) => {
+  await context.route("https://example.invalid/broken.jpg**", (route) =>
+    route.fulfill({ status: 404, contentType: "text/plain", body: "Not found" }),
+  );
+
+  await page.goto("/dia-diem/synthetic-doi-a1");
+
+  // Cover placeholder visible with text
+  const fallback = page.locator("[data-image-fallback='true']");
+  await expect(fallback.first()).toBeVisible();
+  await expect(fallback.first()).toContainText("Ảnh đang được cập nhật");
+
+  // No img element inside the cover
+  const coverImgs = await page.locator(".relative.isolate.overflow-hidden.rounded-card img").all();
+  expect(coverImgs).toHaveLength(0);
+
+  // Lightbox trigger button is absent for the cover
+  const lightboxButton = page.locator(".rounded-card button[aria-label*='Xem ảnh lớn']");
+  await expect(lightboxButton).toHaveCount(0);
+});

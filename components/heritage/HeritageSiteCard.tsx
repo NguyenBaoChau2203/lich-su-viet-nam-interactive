@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, BookOpen, Video, X } from "lucide-react";
+import { ArrowRight, BookOpen, Landmark, Video, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { SafeImage } from "@/components/ui/SafeImage";
 import { HeritageVideoDialog } from "./HeritageVideoDialog";
@@ -20,8 +20,15 @@ export function HeritageSiteCard({ site, homeHref, onClose }: Props) {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const videoButtonRef = useRef<HTMLButtonElement>(null);
   const [videoDialogOpen, setVideoDialogOpen] = useState(false);
+  const [coverFailed, setCoverFailed] = useState(false);
+  const [prevSlug, setPrevSlug] = useState(site.slug);
   const wasVideoOpen = useRef(false);
   const activeVideoIndex = 0;
+
+  if (site.slug !== prevSlug) {
+    setPrevSlug(site.slug);
+    setCoverFailed(false);
+  }
 
   useEffect(() => {
     headingRef.current?.focus({ preventScroll: true });
@@ -60,12 +67,24 @@ export function HeritageSiteCard({ site, homeHref, onClose }: Props) {
             <SafeImage
               src={site.cover.url}
               alt={site.cover.alt}
-              className="h-36 w-full object-cover"
-              fallbackClassName="h-36"
+              className="h-[112px] w-full object-cover"
+              fallbackClassName="h-[112px] w-full"
+              onFailedChange={setCoverFailed}
+              fallback={
+                <div
+                  data-image-fallback="true"
+                  className="flex h-[112px] w-full flex-col items-center justify-center gap-1.5 bg-[#1b1714] p-2 text-center text-muted-foreground/80"
+                >
+                  <Landmark className="h-6 w-6 text-amber-500/70" aria-hidden="true" />
+                  <span className="text-xs text-white/70">Ảnh đang cập nhật</span>
+                </div>
+              }
             />
-            <span className="absolute bottom-2 left-2 bg-black/75 text-xs text-white px-2 py-0.5 rounded">
-              {eraLabel(site.cover.era)}
-            </span>
+            {!coverFailed && (
+              <span className="absolute bottom-2 left-2 bg-black/75 text-xs text-white px-2 py-0.5 rounded">
+                {eraLabel(site.cover.era)}
+              </span>
+            )}
           </div>
         )}
 

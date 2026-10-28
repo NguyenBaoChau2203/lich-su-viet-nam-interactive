@@ -305,7 +305,7 @@ export const syntheticHeritageSites = [
     },
     media_assets: [
       {
-        file_url: "https://commons.wikimedia.org/wiki/Special:FilePath/A1_Hill.jpg?width=1600",
+        file_url: "https://example.invalid/broken.jpg",
         alt_text: "Synthetic hố bộc phá nghìn cân trên đỉnh đồi A1",
         media_type: "image",
         is_cover: true,
@@ -328,6 +328,8 @@ export const syntheticHeritageSites = [
         sort_order: 1,
       },
     ],
+    location_story_sections: [],
+    event_locations: [],
   },
   {
     id: "40000000-0000-4000-8000-000000000006",

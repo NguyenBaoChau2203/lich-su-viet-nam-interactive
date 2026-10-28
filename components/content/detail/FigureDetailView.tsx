@@ -1,7 +1,7 @@
 import { CompactTimeline } from "@/components/content/CompactTimeline";
 import { LightboxProvider, LightboxTrigger } from "@/components/content/Lightbox";
 import { MediaCredit, MediaLabels } from "@/components/content/MediaCredit";
-import { MediaGallery } from "@/components/content/MediaGallery";
+import { MediaGallerySection } from "@/components/content/MediaGallery";
 import { RichContent } from "@/components/content/RichContent";
 import { SourceList } from "@/components/content/SourceList";
 import { StorySections } from "@/components/local-heroes/StorySections";
@@ -261,12 +261,7 @@ export function FigureDetailView({ figure, preview = false, explorerReturnHref }
         </div>
 
         {gallery.length > 0 && (
-          <section aria-labelledby="anh-nhan-vat" className="mt-12">
-            <h2 id="anh-nhan-vat" className="mb-4 font-serif text-2xl font-bold text-foreground">
-              Hình ảnh
-            </h2>
-            <MediaGallery media={gallery} />
-          </section>
+          <MediaGallerySection media={gallery} title="Hình ảnh" titleId="anh-nhan-vat" />
         )}
 
         {figure.sources && figure.sources.length > 0 && (

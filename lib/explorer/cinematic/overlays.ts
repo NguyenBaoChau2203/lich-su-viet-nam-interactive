@@ -16,6 +16,7 @@ type LayoutOptions = {
   labels: readonly CuratedPlaceLabel[];
   occupied: readonly OverlayRect[];
   labelObstacles?: readonly OverlayRect[];
+  entityNoun?: string;
   measure(text: string): { width: number; height: number };
   selectedEvent?: string | null;
   stop?: JourneyStop | null;
@@ -26,7 +27,7 @@ export function rectanglesOverlap(a: OverlayRect, b: OverlayRect, gap = 0): bool
 }
 const targetBox = ({ x, y }: { x: number; y: number }): OverlayRect => ({ left: x - 16, right: x + 16, top: y - 16, bottom: y + 16 });
 
-export function buildOverlayLayout({ viewport, anchors, labels, occupied, labelObstacles = [], measure, selectedEvent, stop }: LayoutOptions): OverlayLayout {
+export function buildOverlayLayout({ viewport, anchors, labels, occupied, labelObstacles = [], entityNoun, measure, selectedEvent, stop }: LayoutOptions): OverlayLayout {
   const blocked = [...occupied, ...labelObstacles];
   const freeTarget = (point: { x: number; y: number }) => !occupied.some((box) => rectanglesOverlap(targetBox(point), box, 4));
   const placeText = (text: string, point: { x: number; y: number }) => {
@@ -51,7 +52,7 @@ export function buildOverlayLayout({ viewport, anchors, labels, occupied, labelO
   const groups: OverlayGroup[] = groupMapAnchors(anchors.flatMap((anchor) => {
     const point = viewport.project(anchor.location.longitude, anchor.location.latitude);
     return point ? [{ ...anchor, ...point }] : [];
-  })).filter(freeTarget).map((group) => ({ ...group, label: getMapGroupLabel(group, labels) }))
+  })).filter(freeTarget).map((group) => ({ ...group, label: getMapGroupLabel(group, labels, entityNoun) }))
     .sort((a, b) => Number(b.anchors.some((anchor) => anchor.event.slug === selectedEvent))
       - Number(a.anchors.some((anchor) => anchor.event.slug === selectedEvent)));
   blocked.push(...groups.map(targetBox));
