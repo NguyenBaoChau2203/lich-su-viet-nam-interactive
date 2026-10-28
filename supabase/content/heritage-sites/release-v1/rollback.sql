@@ -37,7 +37,5 @@ WHERE slug IN ('pac-bo-cao-bang', 'dinh-doc-lap');
 DELETE FROM public.historical_locations
 WHERE slug IN ('nha-tu-hoa-lo', 'hoang-thanh-thang-long', 'rung-tran-hung-dao', 'khu-di-tich-tan-trao', 'cot-co-lung-cu', 'doi-a1-dien-bien-phu', 'ham-de-castries', 'chien-thang-lai-chau-1953', 'nha-tu-son-la', 'khoi-nghia-yen-bai-1930', 'atk-dinh-hoa', 'atk-cho-don', 'khoi-nghia-bac-son', 'ai-chi-lang', 'mo-than-deo-nai', 'bai-coc-bach-dang', 'atk-ii-hiep-hoa', 'khoi-nghia-yen-the', 'chien-thang-song-lo-doan-hung', 'khu-di-tich-den-hung', 'ben-k15-do-son', 'con-son-kiep-bac', 'tieng-trong-tien-hai', 'pho-hien', 'nha-may-det-nam-dinh', 'co-do-hoa-lu', 'cau-ham-rong', 'thanh-nha-ho', 'khu-di-tich-kim-lien', 'truong-bon', 'nga-ba-dong-loc', 'thanh-co-quang-tri', 'doi-bo-hien-luong-ben-hai', 'ngo-mon-hue', 'kinh-thanh-hue-1968', 'chien-thang-nui-thanh-1965', 'khu-den-thap-my-son', 'khu-chung-tich-son-my', 'dak-to-tan-canh', 'lang-khang-chien-stor', 'bao-tang-quang-trung', 'san-bay-thanh-son', 'thap-ba-ponagar', 'buon-ma-thuot-1975', 'vung-ro-phu-yen', 'truong-duc-thanh', 'nha-lao-thieu-nhi-da-lat', 'chien-thang-xuan-loc-1975', 'can-cu-ta-thiet', 'dia-dao-cu-chi', 'can-cu-trung-uong-cuc-mien-nam', 'nga-tu-duc-hoa', 'chien-thang-ap-bac-1963', 'mo-cu-pho-bang-nguyen-sinh-sac', 'dong-khoi-ben-tre-1960', 'khu-tuong-niem-vo-van-kiet', 'nha-tu-phu-quoc', 'khu-luu-niem-ton-duc-thang', 'chien-thang-chuong-thien-1973', 'kham-lon-can-tho', 'khoi-nghia-hon-khoai-1940', 'ben-vam-lung');
 
-DROP TABLE IF EXISTS public.hs_sources_temp;
-
 SET CONSTRAINTS ALL IMMEDIATE;
 COMMIT;

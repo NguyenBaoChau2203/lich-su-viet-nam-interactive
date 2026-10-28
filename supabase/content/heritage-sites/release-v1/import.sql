@@ -28,473 +28,269 @@ DO $preflight$ BEGIN
 END $preflight$;
 
 -- Deduplicated sources
-CREATE TABLE IF NOT EXISTS public.hs_sources_temp (
-  source_key text PRIMARY KEY,
-  source_id uuid NOT NULL
-);
-TRUNCATE TABLE public.hs_sources_temp;
-
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'OpenStreetMap Geographic Data', 'OpenStreetMap Contributors', 'OpenStreetMap Foundation', 'https://www.openstreetmap.org', 'web', 'OpenStreetMap contributors (2026). OpenStreetMap database.', 2026, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'https://www.openstreetmap.org');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-osm', id FROM public.sources WHERE url = 'https://www.openstreetmap.org' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'OpenStreetMap Geographic Data');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)', 'Vũ Minh Giang, Nghiêm Đình Vì (đồng Tổng Chủ biên) cùng tập thể tác giả', 'Nhà xuất bản Giáo dục Việt Nam', 'https://nxbgd.vn', 'book', 'Bộ Giáo dục và Đào tạo (2024). Lịch sử 12 – Bộ Kết nối tri thức với cuộc sống. NXB Giáo dục Việt Nam.', 2024, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'https://nxbgd.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-sgk-su-12', id FROM public.sources WHERE url = 'https://nxbgd.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Nhà tù Hỏa Lò', 'Cục Di sản văn hóa', 'Bộ Văn hóa, Thể thao và Du lịch', 'http://dsvh.gov.vn', 'official', 'Cục Di sản văn hóa. Di tích lịch sử Nhà tù Hỏa Lò (Hà Nội), Quyết định số 1543-QĐ/VH ngày 18/6/1997.', 1997, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-nha-tu-hoa-lo', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Nhà tù Hỏa Lò');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu trung tâm Hoàng thành Thăng Long', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2009). Quyết định số 1272/QĐ-TTg ngày 12/8/2009.', 2009, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-hoang-thanh-thang-long', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu trung tâm Hoàng thành Thăng Long');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Pác Bó', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.', 2012, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-pac-bo', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Pác Bó');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm lưu niệm thành lập Đội VNTTGPQ', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2013). Quyết định số 2383/QĐ-TTg ngày 09/12/2013.', 2013, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-rung-tran-hung-dao', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm lưu niệm thành lập Đội VNTTGPQ');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Tân Trào', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.', 2012, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-tan-trao', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Tân Trào');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử danh thắng Cột cờ Lũng Cú', 'Sở Văn hóa, Thể thao và Du lịch Hà Giang', 'UBND tỉnh Hà Giang', 'https://hagiang.gov.vn', 'official', 'UBND tỉnh Hà Giang. Hồ sơ Di tích danh thắng Quốc gia Cột cờ Lũng Cú.', 2010, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'https://hagiang.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-cot-co-lung-cu', id FROM public.sources WHERE url = 'https://hagiang.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử danh thắng Cột cờ Lũng Cú');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Chiến trường Điện Biên Phủ', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2009). Quyết định số 1272/QĐ-TTg ngày 12/8/2009 xếp hạng Chiến trường Điện Biên Phủ (Cứ điểm Đồi A1).', 2009, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-doi-a1', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Chiến trường Điện Biên Phủ');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích Hầm Sở chỉ huy Tập đoàn cứ điểm Điện Biên Phủ', 'Ban Quản lý Di tích tỉnh Điện Biên', 'Sở VHTTDL tỉnh Điện Biên', 'https://dienbien.gov.vn', 'official', 'Ban Quản lý Di tích tỉnh Điện Biên. Hồ sơ Di tích Hầm De Castries, Chiến trường Điện Biên Phủ.', 2014, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'https://dienbien.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-ham-de-castries', id FROM public.sources WHERE url = 'https://dienbien.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích Hầm Sở chỉ huy Tập đoàn cứ điểm Điện Biên Phủ');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Chiến thắng giải phóng Lai Châu năm 1953 trong Chiến cuộc Đông - Xuân 1953-1954', 'Viện Lịch sử Quân sự', 'Báo Quân đội nhân dân', 'https://www.qdnd.vn', 'article', 'Viện Lịch sử Quân sự. Chiến thắng giải phóng Lai Châu ngày 12/12/1953 và ý nghĩa chiến lược trong Đông - Xuân 1953-1954.', 2023, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'https://www.qdnd.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-qdnd-lai-chau-1953', id FROM public.sources WHERE url = 'https://www.qdnd.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Chiến thắng giải phóng Lai Châu năm 1953 trong Chiến cuộc Đông - Xuân 1953-1954');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà tù Sơn La', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2014). Quyết định số 2408/QĐ-TTg ngày 31/12/2014.', 2014, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-nha-tu-son-la', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà tù Sơn La');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Khu lăng mộ và Tượng đài Nguyễn Thái Học cùng các nghĩa sĩ Khởi nghĩa Yên Bái', 'Bộ Văn hóa - Thông tin', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa - Thông tin. Quyết định số 135/QĐ-BT ngày 27/9/1990 công nhận Di tích lịch sử quốc gia Khởi nghĩa Yên Bái.', 1990, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-khoi-nghia-yen-bai', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khu lăng mộ và Tượng đài Nguyễn Thái Học cùng các nghĩa sĩ Khởi nghĩa Yên Bái');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) Định Hóa', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.', 2012, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-atk-dinh-hoa', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) Định Hóa');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) Chợ Đồn', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2016). Quyết định số 2499/QĐ-TTg ngày 22/12/2016.', 2016, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-atk-cho-don', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) Chợ Đồn');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Khởi nghĩa Bắc Sơn', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2016). Quyết định số 2499/QĐ-TTg ngày 22/12/2016.', 2016, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-khoi-nghia-bac-son', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Khởi nghĩa Bắc Sơn');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Chi Lăng', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2019). Quyết định số 1959/QĐ-TTg ngày 31/12/2019.', 2019, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-ai-chi-lang', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Chi Lăng');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Địa điểm Bác Hồ về thăm Mỏ than Đèo Nai', 'Bộ Văn hóa, Thể thao và Du lịch', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa, Thể thao và Du lịch. Quyết định số 406/QĐ-BVHTTDL ngày 28/01/2004.', 2004, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-mo-than-deo-nai', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Địa điểm Bác Hồ về thăm Mỏ than Đèo Nai');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Bạch Đằng', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2012). Quyết định số 1419/QĐ-TTg ngày 27/9/2012.', 2012, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-bach-dang', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Bạch Đằng');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) II Hiệp Hòa', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2020). Quyết định số 2280/QĐ-TTg ngày 31/12/2020.', 2020, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-atk-ii-hiep-hoa', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) II Hiệp Hòa');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Những địa điểm Khởi nghĩa Yên Thế', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.', 2012, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-khoi-nghia-yen-the', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Những địa điểm Khởi nghĩa Yên Thế');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Sông Lô – Đoan Hùng', 'Bộ Văn hóa', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa. Quyết định số 1288-VH/QĐ ngày 16/11/1987 công nhận Di tích lịch sử cấp quốc gia Tượng đài Chiến thắng Sông Lô Núi Đồn.', 1987, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-chien-thang-song-lo', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Sông Lô – Đoan Hùng');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Đền Hùng', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2009). Quyết định số 1272/QĐ-TTg ngày 12/8/2009.', 2009, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-den-hung', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Đền Hùng');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích quốc gia Bến K15 Đồ Sơn – Điểm xuất phát Đường Hồ Chí Minh trên biển', 'Bộ Văn hóa, Thể thao và Du lịch', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa, Thể thao và Du lịch. Quyết định số 3463/QĐ-BVHTTDL ngày 18/8/2008.', 2008, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-ben-k15-do-son', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích quốc gia Bến K15 Đồ Sơn – Điểm xuất phát Đường Hồ Chí Minh trên biển');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Quần thể di tích Côn Sơn – Kiếp Bạc', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.', 2012, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-con-son-kiep-bac', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Quần thể di tích Côn Sơn – Kiếp Bạc');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Đình Nho Lâm và Khu lưu niệm Tiếng trống Tiền Hải 1930', 'Bộ Văn hóa - Thông tin', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa - Thông tin. Di tích lịch sử Địa điểm ghi dấu phong trào đấu tranh biểu tình nông dân Tiền Hải ngày 14/10/1930.', 1989, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-tieng-trong-tien-hai', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Đình Nho Lâm và Khu lưu niệm Tiếng trống Tiền Hải 1930');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích Phố Hiến', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2014). Quyết định số 2408/QĐ-TTg ngày 31/12/2014.', 2014, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-pho-hien', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích Phố Hiến');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Nhà máy Dệt Nam Định', 'Bộ Văn hóa, Thể thao và Du lịch', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Cục Di sản văn hóa. Di tích lịch sử văn hóa cấp quốc gia Nhà máy Dệt Nam Định (Bảo tàng Dệt May Việt Nam).', 2012, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-nha-may-det-nam-dinh', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Nhà máy Dệt Nam Định');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Cố đô Hoa Lư', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.', 2012, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-co-do-hoa-lu', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Cố đô Hoa Lư');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử văn hóa Cầu Hàm Rồng', 'Bộ Văn hóa - Thông tin', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa - Thông tin (1975). Quyết định xếp hạng Di tích lịch sử văn hóa cấp quốc gia Cầu Hàm Rồng.', 1975, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-cau-ham-rong', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử văn hóa Cầu Hàm Rồng');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Thành nhà Hồ', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2012). Quyết định số 1419/QĐ-TTg ngày 27/9/2012.', 2012, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-thanh-nha-ho', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Thành nhà Hồ');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Kim Liên', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.', 2012, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-kim-lien', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Kim Liên');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử quốc gia Truông Bồn', 'Bộ Văn hóa, Thể thao và Du lịch', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa, Thể thao và Du lịch. Quyết định số 51/QĐ-BVHTTDL ngày 12/01/2010.', 2010, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-truong-bon', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử quốc gia Truông Bồn');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Ngã ba Đồng Lộc', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2013). Quyết định số 2383/QĐ-TTg ngày 09/12/2013.', 2013, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-nga-ba-dong-loc', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Ngã ba Đồng Lộc');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Thành cổ Quảng Trị và những địa điểm lưu niệm sự kiện 81 ngày đêm năm 1972', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2013). Quyết định số 2383/QĐ-TTg ngày 09/12/2013.', 2013, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-thanh-co-quang-tri', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Thành cổ Quảng Trị và những địa điểm lưu niệm sự kiện 81 ngày đêm năm 1972');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Đôi bờ Hiền Lương – Bến Hải', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2013). Quyết định số 2383/QĐ-TTg ngày 09/12/2013.', 2013, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-hien-luong-ben-hai', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Đôi bờ Hiền Lương – Bến Hải');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di sản Thế giới Quần thể Di tích Cố đô Huế (Khu vực Cửa Ngọ Môn)', 'Trung tâm Bảo tồn Di tích Cố đô Huế', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Trung tâm Bảo tồn Di tích Cố đô Huế. Hồ sơ Di tích Cửa Ngọ Môn và sự kiện vua Bảo Đại thoái vị ngày 30/8/1945.', 1993, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-ngo-mon-hue', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di sản Thế giới Quần thể Di tích Cố đô Huế (Khu vực Cửa Ngọ Môn)');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Sự kiện Mặt trận Thừa Thiên Huế trong cuộc Tổng tiến công và nổi dậy Tết Mậu Thân 1968', 'Bảo tàng Lịch sử Thừa Thiên Huế', 'Sở VHTT tỉnh Thừa Thiên Huế', 'https://baotanglichsu.thuathienhue.gov.vn', 'article', 'Bảo tàng Lịch sử Thừa Thiên Huế. 26 ngày đêm làm chủ thành phố Huế trong Tết Mậu Thân 1968.', 2018, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'https://baotanglichsu.thuathienhue.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-kinh-thanh-hue-1968', id FROM public.sources WHERE url = 'https://baotanglichsu.thuathienhue.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Sự kiện Mặt trận Thừa Thiên Huế trong cuộc Tổng tiến công và nổi dậy Tết Mậu Thân 1968');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Núi Thành', 'Bộ Văn hóa - Thông tin', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa - Thông tin. Quyết định xếp hạng Di tích lịch sử quốc gia Chiến thắng Núi Thành 1965.', 1979, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-chien-thang-nui-thanh', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Núi Thành');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu đền tháp Mỹ Sơn', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.', 2012, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-my-son', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu đền tháp Mỹ Sơn');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm thảm sát Sơn Mỹ', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2014). Quyết định số 2408/QĐ-TTg ngày 31/12/2014.', 2014, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-son-my', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm thảm sát Sơn Mỹ');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Đắk Tô – Tân Cảnh', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2020). Quyết định số 2280/QĐ-TTg ngày 31/12/2020.', 2020, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-dak-to-tan-canh', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Đắk Tô – Tân Cảnh');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Làng kháng chiến Stơr', 'Bộ Văn hóa, Thể thao và Du lịch', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa, Thể thao và Du lịch. Quyết định số 62/QĐ-BVHTTDL ngày 18/3/2011.', 2011, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-lang-khang-chien-stor', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Làng kháng chiến Stơr');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Đền thờ Tây Sơn Tam Kiệt / Bảo tàng Quang Trung', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2014). Quyết định số 2408/QĐ-TTg ngày 31/12/2014.', 2014, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-bao-tang-quang-trung', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Đền thờ Tây Sơn Tam Kiệt / Bảo tàng Quang Trung');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Địa điểm Phi đội Quyết thắng xuất kích tại Sân bay Thành Sơn', 'Bộ Văn hóa - Thông tin', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa - Thông tin. Quyết định xếp hạng Di tích lịch sử cấp quốc gia Sân bay Thành Sơn (Ninh Thuận).', 1999, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-san-bay-thanh-son', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Địa điểm Phi đội Quyết thắng xuất kích tại Sân bay Thành Sơn');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích quốc gia đặc biệt Tháp Bà Ponagar Nha Trang', 'Cục Di sản văn hóa', 'Bộ Văn hóa, Thể thao và Du lịch', 'http://dsvh.gov.vn', 'official', 'Cục Di sản văn hóa. Hồ sơ Di tích kiến trúc nghệ thuật Tháp Bà Ponagar.', 2001, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-thap-ba-ponagar', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích quốc gia đặc biệt Tháp Bà Ponagar Nha Trang');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà đày Buôn Ma Thuột', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2019). Quyết định số 1959/QĐ-TTg ngày 31/12/2019.', 2019, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-buon-ma-thuot', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà đày Buôn Ma Thuột');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Tàu Không số Vịnh Vũng Rô', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2014). Quyết định số 2408/QĐ-TTg ngày 31/12/2014.', 2014, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-vung-ro', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Tàu Không số Vịnh Vũng Rô');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Trường Dục Thanh', 'Bộ Văn hóa', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa. Quyết định số 234/QĐ-BT ngày 12/12/1986 công nhận Di tích lịch sử quốc gia Trường Dục Thanh Phan Thiết.', 1986, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-truong-duc-thanh', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Trường Dục Thanh');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Nhà lao Thiếu nhi Đà Lạt', 'Bộ Văn hóa, Thể thao và Du lịch', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa, Thể thao và Du lịch. Quyết định số 275/QĐ-BVHTTDL ngày 22/01/2009.', 2009, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-nha-lao-thieu-nhi-da-lat', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Nhà lao Thiếu nhi Đà Lạt');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Xuân Lộc 1975', 'Bộ Văn hóa - Thông tin', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa - Thông tin. Di tích lịch sử Tượng đài Chiến thắng Xuân Lộc (Đồng Nai).', 1988, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-chien-thang-xuan-loc', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Xuân Lộc 1975');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Căn cứ Bộ Chỉ huy Miền Tà Thiết', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2013). Quyết định số 2383/QĐ-TTg ngày 09/12/2013.', 2013, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-can-cu-ta-thiet', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Căn cứ Bộ Chỉ huy Miền Tà Thiết');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Dinh Độc Lập', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2009). Quyết định số 1272/QĐ-TTg ngày 12/8/2009.', 2009, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-dinh-doc-lap', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Dinh Độc Lập');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa đạo Củ Chi', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2013). Quyết định số 2383/QĐ-TTg ngày 09/12/2013.', 2013, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-dia-dao-cu-chi', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa đạo Củ Chi');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Căn cứ Trung ương Cục miền Nam', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.', 2012, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-trung-uong-cuc-mien-nam', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Căn cứ Trung ương Cục miền Nam');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Ngã tư Đức Hòa', 'Bộ Văn hóa - Thông tin', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa - Thông tin. Quyết định xếp hạng Di tích lịch sử cấp quốc gia Ngã tư Đức Hòa (Long An).', 1989, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-nga-tu-duc-hoa', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Ngã tư Đức Hòa');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Ấp Bắc', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2020). Quyết định số 2280/QĐ-TTg ngày 31/12/2020.', 2020, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-chien-thang-ap-bac', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Ấp Bắc');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Khu di tích Cụ Phó bảng Nguyễn Sinh Sắc', 'Bộ Văn hóa - Thông tin', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa - Thông tin. Quyết định xếp hạng Di tích lịch sử quốc gia Mộ Cụ Phó bảng Nguyễn Sinh Sắc (Đồng Tháp).', 1992, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-mo-nguyen-sinh-sac', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khu di tích Cụ Phó bảng Nguyễn Sinh Sắc');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Đồng Khởi Bến Tre', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2016). Quyết định số 2499/QĐ-TTg ngày 22/12/2016.', 2016, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-dong-khoi-ben-tre', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Đồng Khởi Bến Tre');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Khu tưởng niệm Thủ tướng Chính phủ Võ Văn Kiệt', 'Sở Văn hóa, Thể thao và Du lịch Vĩnh Long', 'UBND tỉnh Vĩnh Long', 'https://vinhlong.gov.vn', 'official', 'UBND tỉnh Vĩnh Long. Hồ sơ Khu tưởng niệm Cố Thủ tướng Võ Văn Kiệt tại huyện Vũng Liêm.', 2012, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'https://vinhlong.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-vo-van-kiet', id FROM public.sources WHERE url = 'https://vinhlong.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Khu tưởng niệm Thủ tướng Chính phủ Võ Văn Kiệt');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Trại giam Tù binh Chiến tranh Phú Quốc', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2014). Quyết định số 2408/QĐ-TTg ngày 31/12/2014.', 2014, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-nha-tu-phu-quoc', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Trại giam Tù binh Chiến tranh Phú Quốc');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu lưu niệm Chủ tịch Tôn Đức Thắng', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2012). Quyết định số 548/QĐ-TTg ngày 10/5/2012.', 2012, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-ton-duc-thang', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu lưu niệm Chủ tịch Tôn Đức Thắng');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng 75 lượt tiểu đoàn địch của quân và dân khu 9', 'Thủ tướng Chính phủ', 'Cổng Thông tin điện tử Chính phủ', 'http://vanban.chinhphu.vn', 'official', 'Thủ tướng Chính phủ (2013). Quyết định số 2383/QĐ-TTg ngày 09/12/2013.', 2013, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://vanban.chinhphu.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-chien-thang-chuong-thien', id FROM public.sources WHERE url = 'http://vanban.chinhphu.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng 75 lượt tiểu đoàn địch của quân và dân khu 9');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Khám Lớn Cần Thơ', 'Bộ Văn hóa - Thông tin', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa - Thông tin. Quyết định xếp hạng Di tích lịch sử cấp quốc gia Khám Lớn Cần Thơ.', 1996, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-kham-lon-can-tho', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khám Lớn Cần Thơ');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Khởi nghĩa Hòn Khoai 1940', 'Bộ Văn hóa', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa. Quyết định số 839/QĐ-BT ngày 27/4/1990 công nhận Di tích lịch sử quốc gia Khởi nghĩa Hòn Khoai.', 1990, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-khoi-nghia-hon-khoai', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khởi nghĩa Hòn Khoai 1940');
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'Hồ sơ Di tích lịch sử Bến Vàm Lũng – Điểm cuối Đường Hồ Chí Minh trên biển', 'Bộ Văn hóa, Thể thao và Du lịch', 'Cục Di sản văn hóa', 'http://dsvh.gov.vn', 'official', 'Bộ Văn hóa, Thể thao và Du lịch. Quyết định số 2377/QĐ-BVHTTDL ngày 10/11/2010.', 2010, '2026-10-27'
-WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE url = 'http://dsvh.gov.vn');
-
-INSERT INTO hs_sources_temp (source_key, source_id)
-SELECT 'src-dsvh-ben-vam-lung', id FROM public.sources WHERE url = 'http://dsvh.gov.vn' LIMIT 1;
+WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Bến Vàm Lũng – Điểm cuối Đường Hồ Chí Minh trên biển');
 
 -- Insert new historical locations
 INSERT INTO public.historical_locations (
@@ -1523,7 +1319,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-tu-hoa-lo'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Nhà tù Hỏa Lò' LIMIT 1),
     'Hồ sơ di tích, mục I: Lịch sử hình thành',
     'Thời gian khởi công 1896 và vị trí làng Phụ Khánh'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1532,7 +1328,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Hệ thống nhà tù thực dân đàn áp phong trào cách mạng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1554,7 +1350,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-tu-hoa-lo'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Nhà tù Hỏa Lò' LIMIT 1),
     'Hồ sơ di tích, mục II: Phong trào đấu tranh của tù chính trị',
     'Hoạt động biến nhà tù thành trường học và các cuộc vượt ngục'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1576,7 +1372,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-tu-hoa-lo'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Nhà tù Hỏa Lò' LIMIT 1),
     'Khu trưng bày chuyên đề tù binh phi công Mỹ',
     'Giai đoạn 1964-1973 và việc trao trả tù binh sau Hiệp định Paris'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1585,7 +1381,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Chiến dịch Điện Biên Phủ trên không 1972 và trao trả tù binh phi công'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1607,7 +1403,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-tu-hoa-lo'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Nhà tù Hỏa Lò' LIMIT 1),
     'Quyết định xếp hạng di tích quốc gia năm 1997',
     'Cấp xếp hạng và đơn vị quản lý hiện hành'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1629,7 +1425,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-hoang-thanh-thang-long'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu trung tâm Hoàng thành Thăng Long' LIMIT 1),
     'Hồ sơ đệ trình UNESCO, trang 14',
     'Mốc định đô năm 1010 và tính liên tục lịch sử'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1638,7 +1434,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Chuyên đề: Di sản văn hóa Thăng Long - Hà Nội',
     'Chiếu dời đô và vị thế trung tâm chính trị Đại Việt'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1660,7 +1456,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-hoang-thanh-thang-long'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu trung tâm Hoàng thành Thăng Long' LIMIT 1),
     'Khu di tích cách mạng Nhà và Hầm D67',
     'Vai trò chỉ đạo chiến lược của Bộ Chính trị thời chống Mỹ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1682,7 +1478,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-hoang-thanh-thang-long'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu trung tâm Hoàng thành Thăng Long' LIMIT 1),
     'Quyết định 1272/QĐ-TTg và Văn bản ghi nhận UNESCO 2010',
     'Xếp hạng Di tích quốc gia đặc biệt và Di sản thế giới'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1704,7 +1500,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-pac-bo'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Pác Bó' LIMIT 1),
     'Hồ sơ di tích, mục I: Bối cảnh Bác Hồ về nước 1941',
     'Sự kiện ngày 28/1/1941 tại cột mốc 108'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1713,7 +1509,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 13: Cách mạng tháng Tám năm 1945',
     'Nguyễn Ái Quốc về nước lãnh đạo cách mạng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1735,7 +1531,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-pac-bo'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Pác Bó' LIMIT 1),
     'Hồ sơ di tích lán Khuổi Nặm',
     'Hội nghị Trung ương 8 từ ngày 10-19/5/1941'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1744,7 +1540,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 13: Cách mạng tháng Tám năm 1945',
     'Chủ trương chuyển hướng chỉ đạo chiến lược tại Hội nghị TW 8'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1766,7 +1562,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-pac-bo'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Pác Bó' LIMIT 1),
     'Quyết định số 548/QĐ-TTg ngày 10/5/2012',
     'Xếp hạng Di tích quốc gia đặc biệt Pác Bó'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1788,7 +1584,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-rung-tran-hung-dao'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm lưu niệm thành lập Đội VNTTGPQ' LIMIT 1),
     'Chỉ thị thành lập Đội VNTTGPQ của Lãnh tụ Hồ Chí Minh',
     'Nội dung chỉ thị nguyên văn của Bác Hồ tháng 12/1944'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1797,7 +1593,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 13: Cách mạng tháng Tám năm 1945',
     'Sự thành lập Đội Việt Nam Tuyên truyền Giải phóng quân'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1819,7 +1615,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-rung-tran-hung-dao'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm lưu niệm thành lập Đội VNTTGPQ' LIMIT 1),
     'Hồ sơ di tích, mục II: Lễ thành lập 22/12/1944',
     '34 chiến sĩ, đồng chí Võ Nguyên Giáp chỉ huy và chiến thắng Phai Khắt, Nà Ngần'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1841,7 +1637,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-rung-tran-hung-dao'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm lưu niệm thành lập Đội VNTTGPQ' LIMIT 1),
     'Quyết định số 2383/QĐ-TTg ngày 9/12/2013',
     'Xếp hạng Di tích quốc gia đặc biệt Rừng Trần Hưng Đạo'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1863,7 +1659,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-tan-trao'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Tân Trào' LIMIT 1),
     'Hồ sơ di tích lịch sử Tân Trào, mục Tổng quan',
     'Bác Hồ về Tân Trào tháng 5/1945 và thành lập Khu giải phóng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1872,7 +1668,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 13: Cách mạng tháng Tám năm 1945',
     'Tân Trào - Thủ đô Khu giải phóng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1894,7 +1690,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-tan-trao'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Tân Trào' LIMIT 1),
     'Hồ sơ di tích Đình Tân Trào và Cây đa Tân Trào',
     'Quốc dân Đại hội 16-17/8/1945 và lễ xuất quân'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1903,7 +1699,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 13: Cách mạng tháng Tám năm 1945',
     'Quân lệnh số 1 và Quốc dân Đại hội Tân Trào'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1925,7 +1721,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-tan-trao'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Tân Trào' LIMIT 1),
     'Quyết định số 548/QĐ-TTg ngày 10/5/2012',
     'Xếp hạng Di tích quốc gia đặc biệt Tân Trào'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1947,7 +1743,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-cot-co-lung-cu'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử danh thắng Cột cờ Lũng Cú' LIMIT 1),
     'Hồ sơ danh thắng Cột cờ Lũng Cú, phần vị trí địa lý',
     'Độ cao 1.470m và tọa độ điểm cực Bắc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1969,7 +1765,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-cot-co-lung-cu'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử danh thắng Cột cờ Lũng Cú' LIMIT 1),
     'Hồ sơ kiến trúc và quy chuẩn lá cờ 54m2',
     'Ý nghĩa diện tích 54m2 biểu trưng cho 54 dân tộc Việt Nam'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -1991,7 +1787,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-cot-co-lung-cu'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử danh thắng Cột cờ Lũng Cú' LIMIT 1),
     'Quyết định xếp hạng Di tích quốc gia năm 2009',
     'Xếp hạng cấp quốc gia và thông số kỹ thuật công trình'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2013,7 +1809,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-doi-a1'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Chiến trường Điện Biên Phủ' LIMIT 1),
     'Hồ sơ di tích cứ điểm đồi A1, mục Cấu trúc quân sự',
     'Vị trí chiến lược và hệ thống công sự Eliane 2 của Pháp'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2022,7 +1818,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954)',
     'Tập đoàn cứ điểm Điện Biên Phủ và vị thế cứ điểm đồi A1'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2044,7 +1840,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-doi-a1'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Chiến trường Điện Biên Phủ' LIMIT 1),
     'Hồ sơ chiến lệ đồi A1, diễn biến 30/3 - 7/5/1954',
     'Thời gian đào hầm ngầm, khối bộc phá 960kg và thời điểm nổ đêm 6/5'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2053,7 +1849,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954)',
     'Diễn biến đợt tiến công tiêu diệt cứ điểm A1 mở đường giải phóng Mường Thanh'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2075,7 +1871,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-doi-a1'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Chiến trường Điện Biên Phủ' LIMIT 1),
     'Quyết định số 1272/QĐ-TTg ngày 12/8/2009',
     'Xếp hạng Di tích quốc gia đặc biệt Chiến trường Điện Biên Phủ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2097,7 +1893,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ham-de-castries'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích Hầm Sở chỉ huy Tập đoàn cứ điểm Điện Biên Phủ' LIMIT 1),
     'Hồ sơ di tích Hầm De Castries, mô tả kiến trúc',
     'Vật liệu vòm thép, kích thước và hệ thống phòng thủ quanh hầm'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2106,7 +1902,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954)',
     'Sở chỉ huy tập đoàn cứ điểm Mường Thanh'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2128,7 +1924,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ham-de-castries'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích Hầm Sở chỉ huy Tập đoàn cứ điểm Điện Biên Phủ' LIMIT 1),
     'Hồ sơ di tích, diễn biến chiều ngày 7/5/1954',
     'Tổ xung kích đồng chí Tạ Quốc Luật bắt sống bộ chỉ huy Pháp lúc 17h30'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2137,7 +1933,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954)',
     'Toàn thắng Chiến dịch Điện Biên Phủ ngày 7/5/1954'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2159,7 +1955,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ham-de-castries'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích Hầm Sở chỉ huy Tập đoàn cứ điểm Điện Biên Phủ' LIMIT 1),
     'Bảo tồn di tích Chiến trường Điện Biên Phủ',
     'Hiện trạng bảo tồn và quản lý du lịch'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2181,7 +1977,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-qdnd-lai-chau-1953'),
+    (SELECT id FROM public.sources WHERE title = 'Chiến thắng giải phóng Lai Châu năm 1953 trong Chiến cuộc Đông - Xuân 1953-1954' LIMIT 1),
     'Chuyên đề lịch sử Đảng bộ tỉnh Lai Châu, phần Kháng chiến chống Pháp',
     'Âm mưu của Pháp tại Tây Bắc và Kế hoạch Nava'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2190,7 +1986,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954)',
     'Chủ trương tác chiến Đông - Xuân 1953-1954 của Trung ương Đảng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2212,7 +2008,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-qdnd-lai-chau-1953'),
+    (SELECT id FROM public.sources WHERE title = 'Chiến thắng giải phóng Lai Châu năm 1953 trong Chiến cuộc Đông - Xuân 1953-1954' LIMIT 1),
     'Báo Quân đội nhân dân: Chiến thắng giải phóng Lai Châu năm 1953',
     'Diễn biến ngày 12/12/1953 và cuộc truy kích tàn quân Pháp'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2234,7 +2030,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-qdnd-lai-chau-1953'),
+    (SELECT id FROM public.sources WHERE title = 'Chiến thắng giải phóng Lai Châu năm 1953 trong Chiến cuộc Đông - Xuân 1953-1954' LIMIT 1),
     'Báo Quân đội nhân dân, ý nghĩa chiến lược',
     'Buộc Nava điều quân nhảy dù xuống Điện Biên Phủ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2243,7 +2039,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954)',
     'Bước phân tán lực lượng địch trong Đông - Xuân 1953-1954'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2265,7 +2061,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-tu-son-la'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà tù Sơn La' LIMIT 1),
     'Hồ sơ di tích, mục I: Quá trình xây dựng 1908-1940',
     'Thời gian xây dựng trên đỉnh đồi Khau Cả và chế độ giam cầm'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2274,7 +2070,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Hệ thống nhà tù đày ải tù chính trị của thực dân Pháp'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2296,7 +2092,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-tu-son-la'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà tù Sơn La' LIMIT 1),
     'Hồ sơ di tích, mục II: Chi bộ nhà tù và tấm gương đồng chí Tô Hiệu',
     'Thành lập chi bộ tháng 12/1939 và biểu tượng cây đào Tô Hiệu'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2318,7 +2114,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-tu-son-la'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà tù Sơn La' LIMIT 1),
     'Quyết định số 2408/QĐ-TTg ngày 31/12/2014',
     'Xếp hạng Di tích quốc gia đặc biệt Nhà tù Sơn La'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2340,7 +2136,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-khoi-nghia-yen-bai'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khu lăng mộ và Tượng đài Nguyễn Thái Học cùng các nghĩa sĩ Khởi nghĩa Yên Bái' LIMIT 1),
     'Hồ sơ di tích, mục I: Bối cảnh khởi nghĩa 1930',
     'Sự đàn áp của Pháp và quyết định khởi nghĩa của Việt Nam Quốc dân Đảng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2349,7 +2145,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Việt Nam Quốc dân Đảng và cuộc Khởi nghĩa Yên Bái'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2371,7 +2167,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-khoi-nghia-yen-bai'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khu lăng mộ và Tượng đài Nguyễn Thái Học cùng các nghĩa sĩ Khởi nghĩa Yên Bái' LIMIT 1),
     'Hồ sơ di tích, mục II: Diễn biến khởi nghĩa và ngày 17/6/1930',
     'Diễn biến đêm 9 rạng sáng 10/2/1930 và 13 nghĩa sĩ bước lên máy chém'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2380,7 +2176,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Ý nghĩa cuộc Khởi nghĩa Yên Bái và bài học lịch sử'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2402,7 +2198,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-khoi-nghia-yen-bai'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khu lăng mộ và Tượng đài Nguyễn Thái Học cùng các nghĩa sĩ Khởi nghĩa Yên Bái' LIMIT 1),
     'Quyết định xếp hạng Di tích Lịch sử Quốc gia năm 1990',
     'Xếp hạng cấp quốc gia và công trình tượng đài tưởng niệm'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2424,7 +2220,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-atk-dinh-hoa'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) Định Hóa' LIMIT 1),
     'Hồ sơ di tích ATK Định Hóa, phần Tổng quan',
     'Chọn Định Hóa làm An toàn khu trung ương năm 1947'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2433,7 +2229,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954)',
     'Căn cứ địa Việt Bắc và Thủ đô kháng chiến'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2455,7 +2251,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-atk-dinh-hoa'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) Định Hóa' LIMIT 1),
     'Hồ sơ di tích Lán Tỉn Keo, cuộc họp ngày 6/12/1953',
     'Cuộc họp Bộ Chính trị thông qua quyết định mở Chiến dịch Điện Biên Phủ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2464,7 +2260,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954)',
     'Hội nghị Bộ Chính trị tại Tỉn Keo (Định Hóa) ngày 6/12/1953'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2486,7 +2282,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-atk-dinh-hoa'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) Định Hóa' LIMIT 1),
     'Quyết định số 548/QĐ-TTg ngày 10/5/2012',
     'Xếp hạng Di tích quốc gia đặc biệt ATK Định Hóa'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2508,7 +2304,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-atk-cho-don'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) Chợ Đồn' LIMIT 1),
     'Hồ sơ di tích ATK Chợ Đồn, phần Địa thế chiến lược',
     'Vị trí tiếp giáp Định Hóa - Sơn Dương và tam giác ATK Việt Bắc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2530,7 +2326,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-atk-cho-don'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) Chợ Đồn' LIMIT 1),
     'Hồ sơ di tích, mục II: Các điểm di tích Bác Hồ và TW Đảng',
     'Các điểm dừng chân Nà Pậu, Bản Ca, đồi Khau Mạ của lãnh đạo Đảng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2552,7 +2348,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-atk-cho-don'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) Chợ Đồn' LIMIT 1),
     'Quyết định số 2499/QĐ-TTg ngày 22/12/2016',
     'Xếp hạng Di tích quốc gia đặc biệt ATK Chợ Đồn'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2574,7 +2370,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-khoi-nghia-bac-son'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Khởi nghĩa Bắc Sơn' LIMIT 1),
     'Hồ sơ di tích, mục I: Bối cảnh lịch sử',
     'Sự kiện Nhật đánh Lạng Sơn tháng 9/1940 và thời cơ khởi nghĩa'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2583,7 +2379,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 13: Cách mạng tháng Tám năm 1945',
     'Khởi nghĩa Bắc Sơn tháng 9/1940'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2605,7 +2401,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-khoi-nghia-bac-son'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Khởi nghĩa Bắc Sơn' LIMIT 1),
     'Hồ sơ di tích, mục II: Tiến công đồn Mỏ Nhài',
     'Diễn biến đêm 27/9/1940 và sự ra đời Đội Du kích Bắc Sơn'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2614,7 +2410,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 13: Cách mạng tháng Tám năm 1945',
     'Ý nghĩa Đội Cứu quốc quân hình thành từ khởi nghĩa Bắc Sơn'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2636,7 +2432,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-khoi-nghia-bac-son'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Khởi nghĩa Bắc Sơn' LIMIT 1),
     'Quyết định số 2408/QĐ-TTg ngày 31/12/2014',
     'Xếp hạng Di tích quốc gia đặc biệt Địa điểm Khởi nghĩa Bắc Sơn'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2658,7 +2454,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ai-chi-lang'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Chi Lăng' LIMIT 1),
     'Hồ sơ di tích, mục Địa thế thung lũng Chi Lăng',
     'Mô tả địa thế hiểm yếu núi Cai Kinh và ải Chi Lăng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2680,7 +2476,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ai-chi-lang'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Chi Lăng' LIMIT 1),
     'Hồ sơ chiến trận Chi Lăng - Xương Giang 1427',
     'Trận phục kích núi Mã Yên chém đầu Liễu Thăng ngày 10/10/1427'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2689,7 +2485,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Chuyên đề: Truyền thống đánh giặc giữ nước của dân tộc',
     'Nghệ thuật quân sự trận Chi Lăng năm 1427'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2711,7 +2507,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ai-chi-lang'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Chi Lăng' LIMIT 1),
     'Quyết định số 2408/QĐ-TTg ngày 31/12/2014',
     'Xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Chi Lăng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2733,7 +2529,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-mo-than-deo-nai'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Địa điểm Bác Hồ về thăm Mỏ than Đèo Nai' LIMIT 1),
     'Hồ sơ di tích Mỏ than Đèo Nai, phần Lịch sử giai cấp công nhân mỏ',
     'Quá trình khai thác than và phong trào công nhân Cẩm Phả'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2742,7 +2538,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Phong trào đấu tranh của công nhân mỏ than Quảng Ninh'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2764,7 +2560,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-mo-than-deo-nai'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Địa điểm Bác Hồ về thăm Mỏ than Đèo Nai' LIMIT 1),
     'Hồ sơ di tích, mục Sự kiện Bác Hồ về thăm ngày 30/3/1959',
     'Bác Hồ thăm tầng than số 10 và khẩu hiệu Kỷ luật và Đồng tâm'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2773,7 +2569,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 15: Miền Bắc xây dựng CNXH và chi viện miền Nam (1954-1965)',
     'Phong trào thi đua lao động sản xuất công nghiệp miền Bắc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2795,7 +2591,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-mo-than-deo-nai'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Địa điểm Bác Hồ về thăm Mỏ than Đèo Nai' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 1989',
     'Xếp hạng cấp quốc gia và quản lý di tích'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2817,7 +2613,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-bach-dang'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Bạch Đằng' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Bạch Đằng, phần Tổng quan',
     'Ba chiến thắng lẫy lừng 938, 981 và 1288 trên sông Bạch Đằng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2826,7 +2622,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Chuyên đề: Lịch sử truyền thống chống ngoại xâm Đại Việt',
     'Chiến thắng Bạch Đằng năm 1288 của quân dân nhà Trần'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2848,7 +2644,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-bach-dang'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Bạch Đằng' LIMIT 1),
     'Khảo cổ học bãi cọc Yên Hưng và Đồng Má Ngựa',
     'Kỹ thuật vót cọc gỗ và thời điểm thủy triều rút tháng 4/1288'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2870,7 +2666,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-bach-dang'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Bạch Đằng' LIMIT 1),
     'Quyết định số 1419/QĐ-TTg ngày 27/9/2012',
     'Xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Bạch Đằng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2892,7 +2688,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-atk-ii-hiep-hoa'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) II Hiệp Hòa' LIMIT 1),
     'Hồ sơ di tích ATK II Hiệp Hòa, phần Bối cảnh thành lập',
     'Xây dựng ATK II giai đoạn 1940-1945 và vị trí ven sông Cầu'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2901,7 +2697,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 13: Cách mạng tháng Tám năm 1945',
     'Hệ thống an toàn khu bảo vệ cơ quan đầu não Trung ương'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2923,7 +2719,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-atk-ii-hiep-hoa'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) II Hiệp Hòa' LIMIT 1),
     'Hồ sơ di tích, mục Hoạt động của lãnh đạo Đảng',
     'Các đồng chí Trường Chinh, Hoàng Quốc Việt, Võ Nguyên Giáp làm việc tại ATK II'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2945,7 +2741,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-atk-ii-hiep-hoa'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) II Hiệp Hòa' LIMIT 1),
     'Quyết định số 2280/QĐ-TTg ngày 31/12/2020',
     'Xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) II Hiệp Hòa'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2967,7 +2763,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-khoi-nghia-yen-the'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Những địa điểm Khởi nghĩa Yên Thế' LIMIT 1),
     'Hồ sơ di tích Khởi nghĩa Yên Thế, phần Tổng quan',
     'Quy mô và thời gian kéo dài 30 năm (1884-1913)'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2976,7 +2772,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 11: Phong trào yêu nước chống Pháp cuối thế kỷ XIX đầu thế kỷ XX',
     'Khởi nghĩa Yên Thế và tài thao lược của Hoàng Hoa Thám'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -2998,7 +2794,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-khoi-nghia-yen-the'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Những địa điểm Khởi nghĩa Yên Thế' LIMIT 1),
     'Hồ sơ di tích Đồn Phồn Xương',
     'Xây dựng căn cứ Phồn Xương và hai lần buộc Pháp giảng hòa'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3020,7 +2816,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-khoi-nghia-yen-the'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Những địa điểm Khởi nghĩa Yên Thế' LIMIT 1),
     'Quyết định số 548/QĐ-TTg ngày 10/5/2012',
     'Xếp hạng Di tích quốc gia đặc biệt Những địa điểm Khởi nghĩa Yên Thế'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3042,7 +2838,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-song-lo'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Sông Lô – Đoan Hùng' LIMIT 1),
     'Hồ sơ di tích, mục Âm mưu chiến dịch Léa của Pháp',
     'Kế hoạch tiến quân ngược sông Lô của thực dân Pháp thu đông 1947'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3051,7 +2847,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954)',
     'Chiến dịch Việt Bắc Thu - Đông 1947'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3073,7 +2869,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-song-lo'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Sông Lô – Đoan Hùng' LIMIT 1),
     'Hồ sơ trận đánh Sông Lô ngày 24/10/1947',
     'Bắn chìm 2 tàu chiến và bắn cháy 2 tàu khác của Pháp'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3082,7 +2878,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954)',
     'Chiến thắng Đoan Hùng trên sông Lô ngày 24/10/1947'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3104,7 +2900,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-song-lo'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Sông Lô – Đoan Hùng' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 1982',
     'Xếp hạng cấp quốc gia Tượng đài Chiến thắng Sông Lô'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3126,7 +2922,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-den-hung'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Đền Hùng' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Đền Hùng, phần Cội nguồn',
     'Thời kỳ các Vua Hùng dựng nước Văn Lang trên đất Phong Châu'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3135,7 +2931,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Chuyên đề: Cội nguồn văn hóa và nhà nước thời Hùng Vương',
     'Vị thế biểu tượng cội nguồn dân tộc của Đền Hùng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3157,7 +2953,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-den-hung'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Đền Hùng' LIMIT 1),
     'Hồ sơ di tích Đền Giếng, cuộc nói chuyện ngày 19/9/1954',
     'Lời căn dặn bất hủ của Bác Hồ với Đại đoàn Quân Tiên phong'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3166,7 +2962,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954)',
     'Sự kiện chuẩn bị tiếp quản Thủ đô tháng 9/1954'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3188,7 +2984,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-den-hung'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Đền Hùng' LIMIT 1),
     'Quyết định số 1272/QĐ-TTg và Văn bằng UNESCO 2012',
     'Xếp hạng Di tích quốc gia đặc biệt và Di sản thế giới UNESCO'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3210,7 +3006,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ben-k15-do-son'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích quốc gia Bến K15 Đồ Sơn – Điểm xuất phát Đường Hồ Chí Minh trên biển' LIMIT 1),
     'Hồ sơ di tích Bến K15, mục Thành lập Đoàn 759',
     'Thành lập Đoàn 759 tháng 10/1961 và chọn bến K15 Đồ Sơn'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3219,7 +3015,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Đường Hồ Chí Minh trên biển chi viện chiến trường miền Nam'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3241,7 +3037,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ben-k15-do-son'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích quốc gia Bến K15 Đồ Sơn – Điểm xuất phát Đường Hồ Chí Minh trên biển' LIMIT 1),
     'Hồ sơ chuyến đi tàu Phương Đông 1 ngày 11/10/1962',
     '30 tấn vũ khí cập bến Vàm Lũng do thuyền trưởng Lê Văn Một chỉ huy'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3250,7 +3046,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Khai thông tuyến vận tải quân sự chiến lược trên biển'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3272,7 +3068,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ben-k15-do-son'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích quốc gia Bến K15 Đồ Sơn – Điểm xuất phát Đường Hồ Chí Minh trên biển' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 2008',
     'Xếp hạng cấp quốc gia Bến K15 Đồ Sơn'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3294,7 +3090,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-con-son-kiep-bac'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Quần thể di tích Côn Sơn – Kiếp Bạc' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Côn Sơn - Kiếp Bạc, phần Vị trí địa lý',
     'Vị trí địa lý sông Lục Đầu và dãy núi Phượng Hoàng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3316,7 +3112,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-con-son-kiep-bac'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Quần thể di tích Côn Sơn – Kiếp Bạc' LIMIT 1),
     'Hồ sơ di tích, mục Trần Hưng Đạo và Nguyễn Trãi',
     'Vạn Kiếp - đại bản doanh của Trần Hưng Đạo và Côn Sơn của Nguyễn Trãi'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3325,7 +3121,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Chuyên đề: Danh nhân văn hóa và quân sự Đại Việt',
     'Vai trò lịch sử của Hưng Đạo Vương và Nguyễn Trãi'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3347,7 +3143,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-con-son-kiep-bac'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Quần thể di tích Côn Sơn – Kiếp Bạc' LIMIT 1),
     'Quyết định số 548/QĐ-TTg ngày 10/5/2012',
     'Xếp hạng Di tích quốc gia đặc biệt Côn Sơn - Kiếp Bạc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3369,7 +3165,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-tieng-trong-tien-hai'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Đình Nho Lâm và Khu lưu niệm Tiếng trống Tiền Hải 1930' LIMIT 1),
     'Hồ sơ di tích Tiếng trống Tiền Hải, phần Bối cảnh',
     'Chủ trương chia lửa với phong trào Xô viết Nghệ - Tĩnh mùa thu 1930'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3378,7 +3174,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Phong trào cách mạng 1930-1931 và sự kiện Tiếng trống Tiền Hải'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3400,7 +3196,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-tieng-trong-tien-hai'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Đình Nho Lâm và Khu lưu niệm Tiếng trống Tiền Hải 1930' LIMIT 1),
     'Hồ sơ di tích, diễn biến ngày 14/10/1930',
     'Đoàn biểu tình nông dân bao vây huyện lỵ đòi quyền dân sinh'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3409,7 +3205,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Ý nghĩa cuộc biểu tình ngày 14/10/1930 của nông dân Tiền Hải'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3431,7 +3227,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-tieng-trong-tien-hai'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Đình Nho Lâm và Khu lưu niệm Tiếng trống Tiền Hải 1930' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 1989',
     'Xếp hạng cấp quốc gia đình Nho Lâm và khu lưu niệm'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3453,7 +3249,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-pho-hien'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích Phố Hiến' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Phố Hiến, phần Lịch sử hình thành',
     'Giai đoạn hưng thịnh thế kỷ XVI-XVII và vị thế thương cảng Đàng Ngoài'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3462,7 +3258,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Chuyên đề: Đô thị cổ và thương nghiệp Đại Việt thời phong kiến',
     'Phố Hiến - đô thị thương mại phồn hoa Đàng Ngoài'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3484,7 +3280,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-pho-hien'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích Phố Hiến' LIMIT 1),
     'Hồ sơ kiến trúc các điểm di tích Phố Hiến',
     'Kiến trúc Chùa Chuông, Đền Mẫu và Văn miếu Xích Đằng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3506,7 +3302,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-pho-hien'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích Phố Hiến' LIMIT 1),
     'Quyết định số 2408/QĐ-TTg ngày 31/12/2014',
     'Xếp hạng Di tích quốc gia đặc biệt Khu di tích Phố Hiến'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3528,7 +3324,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-may-det-nam-dinh'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Nhà máy Dệt Nam Định' LIMIT 1),
     'Hồ sơ di tích, mục I: Quá trình thành lập năm 1898',
     'Quy mô xưởng dệt và hơn 1 vạn công nhân lao động khổ sai'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3537,7 +3333,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Giai cấp công nhân Việt Nam tại các khu công nghiệp dệt Nam Định'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3559,7 +3355,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-may-det-nam-dinh'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Nhà máy Dệt Nam Định' LIMIT 1),
     'Hồ sơ di tích, mục Bãi công tháng 3/1930 và Bác Hồ 3 lần về thăm',
     'Cuộc bãi công 4.000 thợ dệt và kỷ niệm Bác Hồ về thăm'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3568,7 +3364,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 15: Miền Bắc xây dựng CNXH và chi viện miền Nam (1954-1965)',
     'Khẩu hiệu Tay thoi tay súng của công nhân dệt Nam Định'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3590,7 +3386,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-may-det-nam-dinh'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Nhà máy Dệt Nam Định' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia',
     'Cấp xếp hạng quốc gia và Bảo tàng Dệt may Nam Định'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3612,7 +3408,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-co-do-hoa-lu'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Cố đô Hoa Lư' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Cố đô Hoa Lư, phần Định đô năm 968',
     'Đinh Tiên Hoàng dẹp loạn 12 sứ quân và định đô tại Hoa Lư'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3621,7 +3417,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Chuyên đề: Nhà nước phong kiến tập quyền thời Đinh - Tiền Lê',
     'Kinh đô Hoa Lư và quốc hiệu Đại Cồ Việt'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3643,7 +3439,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-co-do-hoa-lu'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Cố đô Hoa Lư' LIMIT 1),
     'Hồ sơ di tích, mục Ba triều đại Đinh - Tiền Lê - Lý',
     '42 năm định đô và sự kiện Vua Lý Thái Tổ dời đô năm 1010'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3652,7 +3448,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Chuyên đề: Di sản Thăng Long - Hoa Lư',
     'Chiếu dời đô năm 1010 từ Hoa Lư về Thăng Long'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3674,7 +3470,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-co-do-hoa-lu'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Cố đô Hoa Lư' LIMIT 1),
     'Quyết định số 548/QĐ-TTg và Văn bằng Di sản thế giới Tràng An',
     'Xếp hạng Di tích quốc gia đặc biệt và Di sản thế giới UNESCO'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3696,7 +3492,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-cau-ham-rong'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử văn hóa Cầu Hàm Rồng' LIMIT 1),
     'Hồ sơ di tích, mục Vị trí chiến lược cầu Hàm Rồng',
     'Vị trí huyết mạch giao thông chi viện chiến trường miền Nam'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3705,7 +3501,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Tuyến chi viện chiến lược Bắc - Nam và phong trào bảo vệ giao thông'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3727,7 +3523,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-cau-ham-rong'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử văn hóa Cầu Hàm Rồng' LIMIT 1),
     'Hồ sơ chiến lệ Hàm Rồng 1965-1972',
     'Chiến công bắn rơi 117 máy bay Mỹ và tinh thần bám trụ nhịp cầu'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3736,7 +3532,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Chiến thắng Hàm Rồng - biểu tượng kiên cường chống chiến tranh phá hoại'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3758,7 +3554,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-cau-ham-rong'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử văn hóa Cầu Hàm Rồng' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 1975',
     'Xếp hạng cấp quốc gia Cầu Hàm Rồng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3780,7 +3576,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-thanh-nha-ho'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Thành nhà Hồ' LIMIT 1),
     'Hồ sơ đệ trình UNESCO Thành nhà Hồ, trang 25',
     'Xây dựng năm 1397 dưới triều Hồ Quý Ly tại Vĩnh Lộc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3789,7 +3585,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Chuyên đề: Cải cách Hồ Quý Ly và kinh thành Tây Đô',
     'Kỹ thuật xây dựng thành lũy bằng đá thời nhà Hồ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3811,7 +3607,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-thanh-nha-ho'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Thành nhà Hồ' LIMIT 1),
     'Khảo cổ học kiến trúc vòm đá Thành nhà Hồ',
     'Kỹ thuật đẽo gọt và ghép khối đá vôi không dùng vữa'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3833,7 +3629,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-thanh-nha-ho'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Thành nhà Hồ' LIMIT 1),
     'Văn bằng công nhận UNESCO 2011 và Quyết định 548/QĐ-TTg',
     'Xếp hạng Di sản văn hóa thế giới và Di tích quốc gia đặc biệt'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3855,7 +3651,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-kim-lien'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Kim Liên' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Kim Liên, phần Tổng quan',
     'Niên thiếu của Bác Hồ tại quê ngoại Hoàng Trù và quê nội Làng Sen'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3864,7 +3660,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Quê hương và thời niên thiếu của Lãnh tụ Nguyễn Ái Quốc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3886,7 +3682,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-kim-lien'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Kim Liên' LIMIT 1),
     'Hồ sơ di tích nếp nhà tranh Làng Sen',
     'Nếp nhà tranh đơn sơ và ảnh hưởng từ thân phụ Nguyễn Sinh Sắc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3908,7 +3704,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-kim-lien'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Kim Liên' LIMIT 1),
     'Quyết định số 548/QĐ-TTg ngày 10/5/2012',
     'Xếp hạng Di tích quốc gia đặc biệt Khu di tích Kim Liên'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3930,7 +3726,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-truong-bon'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử quốc gia Truông Bồn' LIMIT 1),
     'Hồ sơ di tích lịch sử Truông Bồn, phần Bối cảnh',
     'Vị trí yết hầu chiến lược của Quốc lộ 15A qua Truông Bồn'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3939,7 +3735,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Tuyến đường huyết mạch Trường Sơn và tinh thần TNXP'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3961,7 +3757,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-truong-bon'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử quốc gia Truông Bồn' LIMIT 1),
     'Hồ sơ di tích, sự kiện rạng sáng ngày 31/10/1968',
     '13 chiến sĩ TNXP Đại đội 317 hy sinh khi thông đường'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -3983,7 +3779,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-truong-bon'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử quốc gia Truông Bồn' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 2013',
     'Xếp hạng cấp quốc gia Khu di tích lịch sử Truông Bồn'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4005,7 +3801,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nga-ba-dong-loc'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Ngã ba Đồng Lộc' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Ngã ba Đồng Lộc, phần Bối cảnh',
     'Tọa độ lửa giao điểm đường 15A và gần 50.000 quả bom năm 1968'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4014,7 +3810,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Tuyến đường huyết mạch Trường Sơn và ngã ba Đồng Lộc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4036,7 +3832,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nga-ba-dong-loc'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Ngã ba Đồng Lộc' LIMIT 1),
     'Hồ sơ sự kiện 16h30 ngày 24/7/1968',
     'Sự hy sinh của 10 nữ liệt sĩ TNXP do Võ Thị Tần chỉ huy'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4045,7 +3841,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Gương hy sinh anh dũng của 10 nữ liệt sĩ ngã ba Đồng Lộc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4067,7 +3863,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nga-ba-dong-loc'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Ngã ba Đồng Lộc' LIMIT 1),
     'Quyết định số 2383/QĐ-TTg ngày 9/12/2013',
     'Xếp hạng Di tích quốc gia đặc biệt Ngã ba Đồng Lộc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4089,7 +3885,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-thanh-co-quang-tri'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Thành cổ Quảng Trị và những địa điểm lưu niệm sự kiện 81 ngày đêm năm 1972' LIMIT 1),
     'Hồ sơ di tích Thành cổ Quảng Trị, phần Bối cảnh chiến dịch 1972',
     'Cuộc phản công tái chiếm Thành cổ và bối cảnh bàn đàm phán Paris'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4098,7 +3894,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Cuộc tiến công chiến lược năm 1972 và chiến sự Thành cổ Quảng Trị'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4120,7 +3916,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-thanh-co-quang-tri'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Thành cổ Quảng Trị và những địa điểm lưu niệm sự kiện 81 ngày đêm năm 1972' LIMIT 1),
     'Hồ sơ 81 ngày đêm chiến đấu bảo vệ Thành cổ',
     'Hơn 328.000 tấn bom đạn trong 81 ngày đêm từ 28/6 đến 16/9/1972'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4129,7 +3925,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Ý nghĩa cuộc chiến đấu 81 ngày đêm bảo vệ Thành cổ Quảng Trị'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4151,7 +3947,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-thanh-co-quang-tri'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Thành cổ Quảng Trị và những địa điểm lưu niệm sự kiện 81 ngày đêm năm 1972' LIMIT 1),
     'Quyết định số 2383/QĐ-TTg ngày 9/12/2013',
     'Xếp hạng Di tích quốc gia đặc biệt Thành cổ Quảng Trị'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4173,7 +3969,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-hien-luong-ben-hai'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Đôi bờ Hiền Lương – Bến Hải' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Đôi bờ Hiền Lương - Bến Hải, phần Bối cảnh',
     'Hiệp định Genève 1954 quy định giới tuyến quân sự tạm thời tại vĩ tuyến 17'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4182,7 +3978,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 15: Miền Bắc xây dựng CNXH và chi viện miền Nam (1954-1965)',
     'Vĩ tuyến 17 chia cắt đất nước và khát vọng hòa bình thống nhất'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4204,7 +4000,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-hien-luong-ben-hai'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Đôi bờ Hiền Lương – Bến Hải' LIMIT 1),
     'Hồ sơ di tích, mục Các cuộc đấu trí biểu tượng đôi bờ',
     'Cuộc chiến giữ cờ Tổ quốc bờ Bắc và các cuộc đọ sức loa phóng thanh'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4226,7 +4022,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-hien-luong-ben-hai'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Đôi bờ Hiền Lương – Bến Hải' LIMIT 1),
     'Quyết định số 2383/QĐ-TTg ngày 9/12/2013',
     'Xếp hạng Di tích quốc gia đặc biệt Đôi bờ Hiền Lương - Bến Hải'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4248,7 +4044,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ngo-mon-hue'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di sản Thế giới Quần thể Di tích Cố đô Huế (Khu vực Cửa Ngọ Môn)' LIMIT 1),
     'Hồ sơ di sản thế giới Quần thể di tích Cố đô Huế, mục Ngọ Môn',
     'Xây dựng năm 1833 dưới triều Minh Mạng và kiến trúc lầu Ngũ Phụng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4257,7 +4053,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 13: Cách mạng tháng Tám năm 1945',
     'Sự kiện Bảo Đại thoái vị tại cửa Ngọ Môn chiều 30/8/1945'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4279,7 +4075,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ngo-mon-hue'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di sản Thế giới Quần thể Di tích Cố đô Huế (Khu vực Cửa Ngọ Môn)' LIMIT 1),
     'Hồ sơ sự kiện thoái vị ngày 30/8/1945',
     'Bảo Đại trao ấn kiếm cho phái đoàn Chính phủ lâm thời'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4288,7 +4084,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 13: Cách mạng tháng Tám năm 1945',
     'Ý nghĩa lịch sử chấm dứt chế độ phong kiến triều Nguyễn'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4310,7 +4106,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ngo-mon-hue'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di sản Thế giới Quần thể Di tích Cố đô Huế (Khu vực Cửa Ngọ Môn)' LIMIT 1),
     'Văn bằng UNESCO 1993 và Dự án trùng tu Ngọ Môn 2021',
     'Di sản thế giới và công tác bảo tồn di tích'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4332,7 +4128,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-kinh-thanh-hue-1968'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Sự kiện Mặt trận Thừa Thiên Huế trong cuộc Tổng tiến công và nổi dậy Tết Mậu Thân 1968' LIMIT 1),
     'Lịch sử mặt trận Huế Tết Mậu Thân 1968, phần Mở màn',
     'Đòn tiến công bất ngờ đêm 30 rạng sáng 31/1/1968 tại Huế'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4341,7 +4137,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Cuộc Tổng tiến công và nổi dậy Xuân Mậu Thân 1968'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4363,7 +4159,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-kinh-thanh-hue-1968'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Sự kiện Mặt trận Thừa Thiên Huế trong cuộc Tổng tiến công và nổi dậy Tết Mậu Thân 1968' LIMIT 1),
     'Hồ sơ sự kiện cắm cờ trên đỉnh Kỳ Đài sáng 31/1/1968',
     'Lá cờ giải phóng tung bay trên Kỳ Đài và 25 ngày đêm làm chủ thành phố'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4372,7 +4168,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Ý nghĩa chiến dịch Huế Mậu Thân 1968 làm phá sản chiến lược Chiến tranh cục bộ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4394,7 +4190,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-kinh-thanh-hue-1968'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Sự kiện Mặt trận Thừa Thiên Huế trong cuộc Tổng tiến công và nổi dậy Tết Mậu Thân 1968' LIMIT 1),
     'Hồ sơ kiến trúc Kỳ Đài Huế',
     'Quy chuẩn kiến trúc Kỳ Đài và công tác bảo tồn'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4416,7 +4212,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-nui-thanh'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Núi Thành' LIMIT 1),
     'Hồ sơ di tích Chiến thắng Núi Thành, phần Bối cảnh',
     'Mỹ đổ quân vào Chu Lai tháng 3/1965 mở đầu Chiến tranh cục bộ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4425,7 +4221,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Mỹ tiến hành chiến lược Chiến tranh cục bộ ở miền Nam'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4447,7 +4243,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-nui-thanh'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Núi Thành' LIMIT 1),
     'Hồ sơ trận đánh Núi Thành đêm 25/5/1965',
     'Đại đội 2 tiêu diệt gọn đại đội lính thủy đánh bộ Mỹ trong 30 phút'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4456,7 +4252,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Chiến thắng Núi Thành mở đầu phong trào Tìm Mỹ mà đánh'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4478,7 +4274,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-nui-thanh'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Núi Thành' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 1979',
     'Xếp hạng cấp quốc gia Tượng đài Chiến thắng Núi Thành'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4500,7 +4296,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-my-son'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu đền tháp Mỹ Sơn' LIMIT 1),
     'Hồ sơ di sản thế giới Khu đền tháp Mỹ Sơn, phần Lịch sử',
     'Thánh địa tôn giáo Champa từ thế kỷ IV đến thế kỷ XIII'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4509,7 +4305,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Chuyên đề: Văn minh Champa và di sản kiến trúc đền tháp',
     'Thánh địa Mỹ Sơn và nghệ thuật điêu khắc Chăm'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4531,7 +4327,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-my-son'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu đền tháp Mỹ Sơn' LIMIT 1),
     'Khảo sát kiến trúc gạch nung và điêu khắc Mỹ Sơn',
     'Kỹ thuật xây gạch không lộ mạch vữa và phù điêu vũ nữ Apsara'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4553,7 +4349,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-my-son'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu đền tháp Mỹ Sơn' LIMIT 1),
     'Văn bằng UNESCO 1999 và Quyết định số 1272/QĐ-TTg',
     'Xếp hạng Di sản văn hóa thế giới và Di tích quốc gia đặc biệt'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4575,7 +4371,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-son-my'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm thảm sát Sơn Mỹ' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Sơn Mỹ, số liệu nạn nhân',
     '504 thường dân vô tội bị sát hại sáng ngày 16/3/1968'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4584,7 +4380,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Tội ác chiến tranh của đế quốc Mỹ tại Sơn Mỹ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4606,7 +4402,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-son-my'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm thảm sát Sơn Mỹ' LIMIT 1),
     'Tư liệu ảnh phóng viên Ronald Haeberle và dư luận thế giới',
     'Tác động thức tỉnh lương tri nhân loại và phong trào phản chiến quốc tế'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4628,7 +4424,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-son-my'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm thảm sát Sơn Mỹ' LIMIT 1),
     'Quyết định số 2408/QĐ-TTg ngày 31/12/2014',
     'Xếp hạng Di tích quốc gia đặc biệt Khu chứng tích Sơn Mỹ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4650,7 +4446,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-dak-to-tan-canh'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Đắk Tô – Tân Cảnh' LIMIT 1),
     'Hồ sơ di tích Đắk Tô - Tân Cảnh, phần Cấu trúc căn cứ',
     'Sở chỉ huy tiền phương Sư đoàn 22 ngụy tại Bắc Tây Nguyên'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4659,7 +4455,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Cuộc tiến công chiến lược năm 1972 trên chiến trường Tây Nguyên'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4681,7 +4477,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-dak-to-tan-canh'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Đắk Tô – Tân Cảnh' LIMIT 1),
     'Hồ sơ chiến lệ trận Đắk Tô ngày 24/4/1972',
     'Chiến công xe tăng 377 tiêu diệt 7 xe tăng địch và giải phóng căn cứ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4690,7 +4486,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Thắng lợi Chiến dịch Bắc Tây Nguyên năm 1972'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4712,7 +4508,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-dak-to-tan-canh'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Đắk Tô – Tân Cảnh' LIMIT 1),
     'Quyết định số 2280/QĐ-TTg ngày 31/12/2020',
     'Xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Đắk Tô - Tân Cảnh'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4734,7 +4530,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-lang-khang-chien-stor'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Làng kháng chiến Stơr' LIMIT 1),
     'Hồ sơ di tích Làng kháng chiến Stơr, phần Tổng quan',
     'Buôn làng Bahnar theo kháng chiến chống Pháp giai đoạn 1950-1954'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4743,7 +4539,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 14: Cuộc kháng chiến chống thực dân Pháp (1945-1954)',
     'Phong trào chiến tranh du kích của đồng bào các dân tộc Tây Nguyên'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4765,7 +4561,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-lang-khang-chien-stor'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Làng kháng chiến Stơr' LIMIT 1),
     'Hồ sơ di tích, mục Tấm gương Anh hùng Núp',
     'Kỹ thuật bẫy chông, bẫy đá và tiểu thuyết Đất nước đứng lên'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4787,7 +4583,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-lang-khang-chien-stor'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Làng kháng chiến Stơr' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 1993',
     'Xếp hạng cấp quốc gia Làng kháng chiến Stơr'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4809,7 +4605,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-bao-tang-quang-trung'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Đền thờ Tây Sơn Tam Kiệt / Bảo tàng Quang Trung' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Tây Sơn Tam Kiệt, phần Khởi nguồn',
     'Ba anh em Tây Sơn dựng cờ khởi nghĩa năm 1771 tại Kiên Mỹ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4818,7 +4614,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Chuyên đề: Phong trào nông dân Tây Sơn và người anh hùng Nguyễn Huệ',
     'Khởi nghĩa Tây Sơn và sự nghiệp thống nhất non sông'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4840,7 +4636,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-bao-tang-quang-trung'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Đền thờ Tây Sơn Tam Kiệt / Bảo tàng Quang Trung' LIMIT 1),
     'Hồ sơ chiến công Rạch Gầm - Xoài Mút và Ngọc Hồi - Đống Đa',
     'Chiến công đánh tan quân Xiêm 1785 và đại phá quân Thanh 1789'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4862,7 +4658,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-bao-tang-quang-trung'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Đền thờ Tây Sơn Tam Kiệt / Bảo tàng Quang Trung' LIMIT 1),
     'Quyết định số 2383/QĐ-TTg ngày 9/12/2013',
     'Xếp hạng Di tích quốc gia đặc biệt Đền thờ Tây Sơn Tam Kiệt'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4884,7 +4680,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-san-bay-thanh-son'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Địa điểm Phi đội Quyết thắng xuất kích tại Sân bay Thành Sơn' LIMIT 1),
     'Hồ sơ di tích Sân bay Thành Sơn, phần Giải phóng tháng 4/1975',
     'Thu giữ máy bay A-37 tại căn cứ Thành Sơn ngày 16/4/1975'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4893,7 +4689,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Chiến dịch Hồ Chí Minh lịch sử và cuộc tiến công mùa Xuân 1975'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4915,7 +4711,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-san-bay-thanh-son'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Địa điểm Phi đội Quyết thắng xuất kích tại Sân bay Thành Sơn' LIMIT 1),
     'Hồ sơ xuất kích của Phi đội Quyết Thắng chiều 28/4/1975',
     '5 phi công lái A-37 ném bom Tân Sơn Nhất làm tê liệt không quân đối phương'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4924,7 +4720,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Đòn tập kích đường không bất ngờ ngày 28/4/1975'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4946,7 +4742,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-san-bay-thanh-son'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Địa điểm Phi đội Quyết thắng xuất kích tại Sân bay Thành Sơn' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia',
     'Xếp hạng cấp quốc gia địa điểm xuất kích Phi đội Quyết Thắng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4968,7 +4764,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-thap-ba-ponagar'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích quốc gia đặc biệt Tháp Bà Ponagar Nha Trang' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Tháp Bà Ponagar, phần Lịch sử',
     'Xây dựng từ thế kỷ VIII đến XIII thờ Nữ thần Ponagar'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4977,7 +4773,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Chuyên đề: Di sản kiến trúc đền tháp và văn minh Champa',
     'Quần thể Tháp Bà Ponagar Nha Trang'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -4999,7 +4795,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-thap-ba-ponagar'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích quốc gia đặc biệt Tháp Bà Ponagar Nha Trang' LIMIT 1),
     'Hồ sơ kiến trúc tháp chính và pho tượng đá hoa cương',
     'Tháp chính cao 23m và pho tượng Nữ thần Ponagar ngồi trên tòa sen'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5021,7 +4817,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-thap-ba-ponagar'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích quốc gia đặc biệt Tháp Bà Ponagar Nha Trang' LIMIT 1),
     'Quyết định số 2280/QĐ-TTg ngày 31/12/2020',
     'Xếp hạng Di tích quốc gia đặc biệt Tháp Bà Ponagar Nha Trang'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5043,7 +4839,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-buon-ma-thuot'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà đày Buôn Ma Thuột' LIMIT 1),
     'Hồ sơ di tích Chiến thắng Buôn Ma Thuột, phần Kế hoạch chiến lược',
     'Quyết định chọn Buôn Ma Thuột làm đòn điểm huyệt mở màn năm 1975'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5052,7 +4848,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Chiến dịch Tây Nguyên mở màn cuộc Tổng tiến công mùa Xuân 1975'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5074,7 +4870,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-buon-ma-thuot'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà đày Buôn Ma Thuột' LIMIT 1),
     'Hồ sơ diễn biến trận đánh ngày 10-11/3/1975',
     'Diễn biến giải phóng Buôn Ma Thuột và sự sụp đổ của quân ngụy'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5083,7 +4879,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Ý nghĩa chiến thắng Buôn Ma Thuột chuyển cuộc kháng chiến sang tổng tiến công'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5105,7 +4901,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-buon-ma-thuot'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà đày Buôn Ma Thuột' LIMIT 1),
     'Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà đày Buôn Ma Thuột 2018',
     'Xếp hạng cấp quốc gia đặc biệt Nhà đày Buôn Ma Thuột'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5127,7 +4923,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-vung-ro'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Tàu Không số Vịnh Vũng Rô' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Vịnh Vũng Rô, phần Vị trí địa lý',
     'Vị trí vịnh nước sâu kín gió chân đèo Cả và chọn làm bến tiếp nhận'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5136,7 +4932,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Huyền thoại Đường Hồ Chí Minh trên biển và bến Vũng Rô'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5158,7 +4954,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-vung-ro'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Tàu Không số Vịnh Vũng Rô' LIMIT 1),
     'Hồ sơ sự kiện Tàu 41 và Tàu 143 tháng 2/1965',
     '3 chuyến tàu cập bến an toàn và trận nổ hủy Tàu 143 bảo vệ bí mật'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5180,7 +4976,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-vung-ro'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Tàu Không số Vịnh Vũng Rô' LIMIT 1),
     'Quyết định số 548/QĐ-TTg ngày 10/5/2012',
     'Xếp hạng Di tích quốc gia đặc biệt Vịnh Vũng Rô'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5202,7 +4998,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-truong-duc-thanh'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Trường Dục Thanh' LIMIT 1),
     'Hồ sơ di tích Trường Dục Thanh, phần Thành lập năm 1907',
     'Sĩ phu yêu nước phong trào Duy Tân sáng lập trường Dục Thanh'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5211,7 +5007,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 11: Phong trào yêu nước chống Pháp cuối thế kỷ XIX đầu thế kỷ XX',
     'Phong trào Duy Tân và chấn hưng văn hóa dân tộc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5233,7 +5029,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-truong-duc-thanh'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Trường Dục Thanh' LIMIT 1),
     'Hồ sơ thời gian Bác Hồ dạy học tháng 9/1910 - 2/1911',
     'Hoạt động dạy học và chuẩn bị vào Sài Gòn tìm đường cứu nước'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5242,7 +5038,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Nguyễn Tất Thành ra đi tìm đường cứu nước năm 1911'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5264,7 +5060,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-truong-duc-thanh'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Trường Dục Thanh' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 1986',
     'Xếp hạng cấp quốc gia Khu di tích Trường Dục Thanh'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5286,7 +5082,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-lao-thieu-nhi-da-lat'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Nhà lao Thiếu nhi Đà Lạt' LIMIT 1),
     'Hồ sơ di tích Nhà lao Thiếu nhi Đà Lạt, phần Thành lập 1971',
     'Thành lập trại giam cách ly hơn 600 thiếu niên yêu nước miền Nam'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5308,7 +5104,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-lao-thieu-nhi-da-lat'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Nhà lao Thiếu nhi Đà Lạt' LIMIT 1),
     'Hồ sơ di tích, mục Phong trào đấu tranh của tù nhân thiếu nhi',
     'Tổ chức chi bộ bí mật, tuyệt thực và giữ vững khí tiết cách mạng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5330,7 +5126,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-lao-thieu-nhi-da-lat'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Nhà lao Thiếu nhi Đà Lạt' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 2009',
     'Xếp hạng cấp quốc gia và danh hiệu Anh hùng LLVTND'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5352,7 +5148,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-xuan-loc'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Xuân Lộc 1975' LIMIT 1),
     'Hồ sơ di tích Chiến thắng Xuân Lộc 1975, phần Bối cảnh',
     'Phòng tuyến tử thủ Cánh cửa thép bảo vệ hướng đông Sài Gòn'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5361,7 +5157,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Chiến dịch Xuân Lộc mở toang cửa ngõ tiến vào Sài Gòn'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5383,7 +5179,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-xuan-loc'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Xuân Lộc 1975' LIMIT 1),
     'Hồ sơ diễn biến 12 ngày đêm từ 9 đến 21/4/1975',
     'Đập tan phòng tuyến Xuân Lộc ngày 21/4/1975 mở đường vào Sài Gòn'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5392,7 +5188,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Thắng lợi Xuân Lộc tạo thời cơ trực tiếp mở Chiến dịch Hồ Chí Minh'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5414,7 +5210,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-xuan-loc'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Xuân Lộc 1975' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 1988',
     'Xếp hạng cấp quốc gia Tượng đài Chiến thắng Xuân Lộc 1975'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5436,7 +5232,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-can-cu-ta-thiet'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Căn cứ Bộ Chỉ huy Miền Tà Thiết' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Căn cứ Tà Thiết, phần Bối cảnh',
     'Xây dựng căn cứ Bộ Tư lệnh Miền tại Tà Thiết từ năm 1973'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5445,7 +5241,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Sở chỉ huy Chiến dịch Hồ Chí Minh lịch sử'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5467,7 +5263,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-can-cu-ta-thiet'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Căn cứ Bộ Chỉ huy Miền Tà Thiết' LIMIT 1),
     'Hồ sơ di tích lán làm việc Bộ Chỉ huy Chiến dịch Hồ Chí Minh',
     'Đại tướng Văn Tiến Dũng và đồng chí Phạm Hùng chỉ huy chiến dịch tháng 4/1975'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5489,7 +5285,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-can-cu-ta-thiet'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Căn cứ Bộ Chỉ huy Miền Tà Thiết' LIMIT 1),
     'Quyết định số 2383/QĐ-TTg ngày 9/12/2013',
     'Xếp hạng Di tích quốc gia đặc biệt Căn cứ Tà Thiết'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5511,7 +5307,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-dinh-doc-lap'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Dinh Độc Lập' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Dinh Độc Lập, phần Kiến trúc',
     'Thiết kế của KTS Ngô Viết Thụ và vai trò dinh tổng thống'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5520,7 +5316,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Mục tiêu sào huyệt cuối cùng của Chiến dịch Hồ Chí Minh'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5542,7 +5338,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-dinh-doc-lap'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Dinh Độc Lập' LIMIT 1),
     'Hồ sơ sự kiện trưa ngày 30/4/1975',
     'Xe tăng húc cổng và cắm cờ giải phóng trên nóc Dinh Độc Lập lúc 11h30'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5551,7 +5347,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Toàn thắng Chiến dịch Hồ Chí Minh giải phóng hoàn toàn miền Nam'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5573,7 +5369,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-dinh-doc-lap'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Dinh Độc Lập' LIMIT 1),
     'Quyết định số 1272/QĐ-TTg ngày 12/8/2009',
     'Xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Dinh Độc Lập'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5595,7 +5391,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-dia-dao-cu-chi'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa đạo Củ Chi' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Địa đạo Củ Chi, phần Bối cảnh',
     'Vùng đất thép Củ Chi và sự tàn phá bom đạn của quân đội Mỹ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5604,7 +5400,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Thành đồng Củ Chi và thế trận chiến tranh nhân dân'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5626,7 +5422,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-dia-dao-cu-chi'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa đạo Củ Chi' LIMIT 1),
     'Khảo sát cấu trúc 3 tầng hầm địa đạo Củ Chi',
     'Chiều dài hơn 250km và hệ thống phòng ốc sinh hoạt ngầm'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5648,7 +5444,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-dia-dao-cu-chi'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa đạo Củ Chi' LIMIT 1),
     'Quyết định số 2383/QĐ-TTg ngày 9/12/2013',
     'Xếp hạng Di tích quốc gia đặc biệt Địa đạo Củ Chi'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5670,7 +5466,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-trung-uong-cuc-mien-nam'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Căn cứ Trung ương Cục miền Nam' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Căn cứ Trung ương Cục, phần Lịch sử',
     'Thành lập căn cứ năm 1961 và vai trò chỉ đạo cách mạng miền Nam'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5679,7 +5475,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Trung ương Cục miền Nam và Mặt trận Dân tộc Giải phóng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5701,7 +5497,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-trung-uong-cuc-mien-nam'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Căn cứ Trung ương Cục miền Nam' LIMIT 1),
     'Hồ sơ các khu nhà làm việc của đồng chí Nguyễn Văn Linh và Phạm Hùng',
     'Các đồng chí lãnh đạo sống và làm việc chỉ đạo kháng chiến'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5723,7 +5519,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-trung-uong-cuc-mien-nam'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Căn cứ Trung ương Cục miền Nam' LIMIT 1),
     'Quyết định số 548/QĐ-TTg ngày 10/5/2012',
     'Xếp hạng Di tích quốc gia đặc biệt Căn cứ Trung ương Cục miền Nam'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5745,7 +5541,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nga-tu-duc-hoa'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Ngã tư Đức Hòa' LIMIT 1),
     'Hồ sơ di tích Ngã tư Đức Hòa, phần Bối cảnh',
     'Vị trí giao thương và phong trào cách mạng tiền khởi nghĩa'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5754,7 +5550,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Sự ra đời các tổ chức Đảng Cộng sản đầu tiên tại Nam Bộ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5776,7 +5572,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nga-tu-duc-hoa'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Ngã tư Đức Hòa' LIMIT 1),
     'Hồ sơ di tích, cuộc biểu tình ngày 4/6/1930',
     'Thành lập chi bộ 6/3/1930 và gương hy sinh của Châu Văn Liêm'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5798,7 +5594,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nga-tu-duc-hoa'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Ngã tư Đức Hòa' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 1989',
     'Xếp hạng cấp quốc gia Khu di tích Ngã tư Đức Hòa'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5820,7 +5616,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-ap-bac'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Ấp Bắc' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Chiến thắng Ấp Bắc, phần Bối cảnh',
     'Mỹ thử nghiệm chiến thuật Trực thăng vận và Thiết xa vận đầu năm 1963'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5829,7 +5625,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Chiến lược Chiến tranh đặc biệt và trận đánh Ấp Bắc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5851,7 +5647,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-ap-bac'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Ấp Bắc' LIMIT 1),
     'Hồ sơ chiến lệ trận Ấp Bắc ngày 2/1/1963',
     'Bắn rơi 5 trực thăng và 3 xe M-113 làm phá sản chiến thuật của Mỹ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5860,7 +5656,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Ý nghĩa chiến thắng Ấp Bắc dấy lên phong trào Thi đua Ấp Bắc giết giặc lập công'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5882,7 +5678,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-ap-bac'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Ấp Bắc' LIMIT 1),
     'Quyết định số 2280/QĐ-TTg ngày 31/12/2020',
     'Xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Ấp Bắc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5904,7 +5700,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-mo-nguyen-sinh-sac'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khu di tích Cụ Phó bảng Nguyễn Sinh Sắc' LIMIT 1),
     'Hồ sơ di tích Mộ Cụ Phó bảng Nguyễn Sinh Sắc, phần Tiểu sử',
     'Cuộc đời thanh bạch của Cụ Phó bảng và giai đoạn sống tại Hòa An'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5913,7 +5709,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Thân thế thân phụ Chủ tịch Hồ Chí Minh'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5935,7 +5731,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-mo-nguyen-sinh-sac'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khu di tích Cụ Phó bảng Nguyễn Sinh Sắc' LIMIT 1),
     'Hồ sơ di tích, tấm lòng nhân dân Hòa An bảo vệ khu mộ',
     'Tấm lòng đồng bào miền Nam che chở phần mộ qua hai cuộc kháng chiến'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5957,7 +5753,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-mo-nguyen-sinh-sac'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khu di tích Cụ Phó bảng Nguyễn Sinh Sắc' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 1992',
     'Xếp hạng cấp quốc gia Khu di tích Cụ Phó bảng Nguyễn Sinh Sắc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5979,7 +5775,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-dong-khoi-ben-tre'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Đồng Khởi Bến Tre' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Đồng Khởi Bến Tre, phần Bối cảnh',
     'Tội ác Luật 10/59 và ánh sáng Nghị quyết 15 của Đảng năm 1959'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -5988,7 +5784,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 15: Miền Bắc xây dựng CNXH và chi viện miền Nam (1954-1965)',
     'Phong trào Đồng Khởi (1959-1960) chuyển cách mạng từ giữ gìn lực lượng sang tiến công'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6010,7 +5806,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-dong-khoi-ben-tre'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Đồng Khởi Bến Tre' LIMIT 1),
     'Hồ sơ sự kiện ngày 17/1/1960 tại Định Thủy',
     'Đồng chí Nguyễn Thị Định chỉ đạo và sự ra đời Đội quân Tóc dài'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6019,7 +5815,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 15: Miền Bắc xây dựng CNXH và chi viện miền Nam (1954-1965)',
     'Ý nghĩa phong trào Đồng Khởi dẫn đến sự ra đời Mặt trận Dân tộc Giải phóng miền Nam'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6041,7 +5837,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-dong-khoi-ben-tre'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Đồng Khởi Bến Tre' LIMIT 1),
     'Quyết định số 2383/QĐ-TTg ngày 9/12/2013',
     'Xếp hạng Di tích quốc gia đặc biệt Đồng Khởi Bến Tre'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6063,7 +5859,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-vo-van-kiet'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Khu tưởng niệm Thủ tướng Chính phủ Võ Văn Kiệt' LIMIT 1),
     'Hồ sơ Khu tưởng niệm Thủ tướng Võ Văn Kiệt, phần Tiểu sử',
     'Quê hương Vũng Liêm và quá trình giác ngộ cách mạng thời niên thiếu'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6072,7 +5868,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 18: Đất nước trên con đường đổi mới (1986-2000)',
     'Nhà lãnh đạo Đổi Mới kiệt xuất của Đảng và Nhà nước'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6094,7 +5890,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-vo-van-kiet'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Khu tưởng niệm Thủ tướng Chính phủ Võ Văn Kiệt' LIMIT 1),
     'Hồ sơ trưng bày các công trình thế kỷ đường dây 500kV và thoát lũ biển Tây',
     'Những quyết sách đột phá của Thủ tướng Võ Văn Kiệt'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6116,7 +5912,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-vo-van-kiet'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Khu tưởng niệm Thủ tướng Chính phủ Võ Văn Kiệt' LIMIT 1),
     'Văn bản quản lý Khu tưởng niệm Thủ tướng Võ Văn Kiệt',
     'Không gian kiến trúc Vườn ông Sáu Dân và bức chân dung 15.000 tấm ảnh'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6138,7 +5934,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-tu-phu-quoc'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Trại giam Tù binh Chiến tranh Phú Quốc' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Nhà tù Phú Quốc, phần Quy mô',
     'Quy mô 400ha và hơn 40.000 lượt chiến sĩ bị giam giữ từ 1967 đến 1973'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6147,7 +5943,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Chính sách đàn áp tù binh chiến tranh của Mỹ - ngụy'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6169,7 +5965,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-tu-phu-quoc'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Trại giam Tù binh Chiến tranh Phú Quốc' LIMIT 1),
     'Hồ sơ di tích, mục Tội ác tra tấn và các cuộc vượt ngục',
     'Hình phạt chuồng cọp và cuộc vượt ngục bằng đường hầm đào muỗng sắt'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6191,7 +5987,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-nha-tu-phu-quoc'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Trại giam Tù binh Chiến tranh Phú Quốc' LIMIT 1),
     'Quyết định số 2408/QĐ-TTg ngày 31/12/2014',
     'Xếp hạng Di tích quốc gia đặc biệt Trại giam Tù binh Phú Quốc'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6213,7 +6009,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ton-duc-thang'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu lưu niệm Chủ tịch Tôn Đức Thắng' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Bác Tôn, phần Quê hương',
     'Cù lao Ông Hổ - quê hương sinh thành của Chủ tịch Tôn Đức Thắng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6222,7 +6018,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Nhà lãnh đạo công nhân lỗi lạc Tôn Đức Thắng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6244,7 +6040,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ton-duc-thang'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu lưu niệm Chủ tịch Tôn Đức Thắng' LIMIT 1),
     'Hồ sơ sự kiện kéo cờ Biển Đen 1919 và 15 năm Côn Đảo',
     'Sự kiện Biển Đen 1919, Công hội Ba Son và 15 năm đày Côn Đảo'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6253,7 +6049,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Tổ chức Công hội bí mật của Tôn Đức Thắng tại Sài Gòn'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6275,7 +6071,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ton-duc-thang'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Khu lưu niệm Chủ tịch Tôn Đức Thắng' LIMIT 1),
     'Quyết định số 548/QĐ-TTg ngày 10/5/2012',
     'Xếp hạng Di tích quốc gia đặc biệt Khu lưu niệm Chủ tịch Tôn Đức Thắng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6297,7 +6093,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-chuong-thien'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng 75 lượt tiểu đoàn địch của quân và dân khu 9' LIMIT 1),
     'Hồ sơ di tích quốc gia đặc biệt Chiến thắng Chương Thiện, phần Bối cảnh',
     'Kế hoạch tràn ngập lãnh thổ của địch sau Hiệp định Paris 1973'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6306,7 +6102,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Cuộc đấu tranh chống kế hoạch bình định lấn chiếm sau Hiệp định Paris'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6328,7 +6124,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-chuong-thien'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng 75 lượt tiểu đoàn địch của quân và dân khu 9' LIMIT 1),
     'Hồ sơ chiến dịch đánh bại 75 lượt tiểu đoàn địch năm 1973',
     'Thắng lợi bẻ gãy 75 lượt tiểu đoàn địch bảo vệ vùng giải phóng Tây Nam Bộ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6337,7 +6133,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Ý nghĩa chiến thắng Chương Thiện khẳng định con đường bạo lực cách mạng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6359,7 +6155,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-chien-thang-chuong-thien'),
+    (SELECT id FROM public.sources WHERE title = 'Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng 75 lượt tiểu đoàn địch của quân và dân khu 9' LIMIT 1),
     'Quyết định số 2383/QĐ-TTg ngày 9/12/2013',
     'Xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Chương Thiện'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6381,7 +6177,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-kham-lon-can-tho'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khám Lớn Cần Thơ' LIMIT 1),
     'Hồ sơ di tích Khám Lớn Cần Thơ, phần Xây dựng năm 1886',
     'Thực dân Pháp xây dựng nhà tù kiên cố tại trung tâm Cần Thơ năm 1886'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6390,7 +6186,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 12: Phong trào dân tộc dân chủ 1919-1930',
     'Hệ thống nhà tù thực dân đàn áp phong trào cách mạng Nam Bộ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6412,7 +6208,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-kham-lon-can-tho'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khám Lớn Cần Thơ' LIMIT 1),
     'Hồ sơ di tích, hoạt động của các đồng chí tù chính trị',
     'Biến ngục tù thành trường học của các đồng chí Châu Văn Liêm, Quản Trọng Hoàng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6434,7 +6230,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-kham-lon-can-tho'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khám Lớn Cần Thơ' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 1996',
     'Xếp hạng cấp quốc gia Khám Lớn Cần Thơ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6456,7 +6252,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-khoi-nghia-hon-khoai'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khởi nghĩa Hòn Khoai 1940' LIMIT 1),
     'Hồ sơ di tích Khởi nghĩa Hòn Khoai, phần Bối cảnh',
     'Chi bộ Đảng Hòn Khoai và sự chỉ đạo của Phan Ngọc Hiển cuối năm 1940'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6465,7 +6261,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 13: Cách mạng tháng Tám năm 1945',
     'Cao trào đấu tranh vũ trang và Khởi nghĩa Nam Kỳ 1940'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6487,7 +6283,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-khoi-nghia-hon-khoai'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khởi nghĩa Hòn Khoai 1940' LIMIT 1),
     'Hồ sơ diễn biến đêm 13/12/1940 và sự hy sinh ngày 12/7/1941',
     'Đánh chiếm đồn hải đăng đêm 13/12/1940 và khí tiết trước pháp trường'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6496,7 +6292,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 13: Cách mạng tháng Tám năm 1945',
     'Khởi nghĩa Hòn Khoai - dấu mốc lịch sử truyền thống cách mạng Cà Mau'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6518,7 +6314,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-khoi-nghia-hon-khoai'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Khởi nghĩa Hòn Khoai 1940' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 1990',
     'Xếp hạng cấp quốc gia Khởi nghĩa Hòn Khoai và Ngày truyền thống Cà Mau'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6540,7 +6336,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ben-vam-lung'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Bến Vàm Lũng – Điểm cuối Đường Hồ Chí Minh trên biển' LIMIT 1),
     'Hồ sơ di tích Bến Vàm Lũng, phần Vị trí địa lý',
     'Vị trí bí mật giữa rừng ngập mặn Tân Ân tiếp nhận Tàu Không số'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6549,7 +6345,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-sgk-su-12'),
+    (SELECT id FROM public.sources WHERE title = 'Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)' LIMIT 1),
     'Bài 16: Cuộc kháng chiến chống Mỹ, cứu nước (1954-1975)',
     'Điểm cuối Đường Hồ Chí Minh trên biển chi viện Nam Bộ'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6571,7 +6367,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ben-vam-lung'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Bến Vàm Lũng – Điểm cuối Đường Hồ Chí Minh trên biển' LIMIT 1),
     'Hồ sơ đón chuyến tàu Phương Đông 1 ngày 16/10/1962',
     'Đón 30 tấn vũ khí từ tàu Phương Đông 1 do Lê Văn Một chỉ huy cập bến'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -6593,7 +6389,7 @@ DO $sec$ DECLARE loc_id uuid; sec_id uuid; BEGIN
   INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)
   VALUES (
     sec_id,
-    (SELECT source_id FROM hs_sources_temp WHERE source_key = 'src-dsvh-ben-vam-lung'),
+    (SELECT id FROM public.sources WHERE title = 'Hồ sơ Di tích lịch sử Bến Vàm Lũng – Điểm cuối Đường Hồ Chí Minh trên biển' LIMIT 1),
     'Quyết định xếp hạng Di tích lịch sử quốc gia năm 2010',
     'Xếp hạng cấp quốc gia Bến Vàm Lũng'
   ) ON CONFLICT (section_id, source_id) DO UPDATE SET
@@ -7632,8 +7428,6 @@ DO $verify$ DECLARE total_grade12 integer; BEGIN
     RAISE EXCEPTION 'VERIFICATION_FAIL: only % / 34 localities have Grade 12 heritage site', total_grade12;
   END IF;
 END $verify$;
-
-DROP TABLE IF EXISTS public.hs_sources_temp;
 
 SET CONSTRAINTS ALL IMMEDIATE;
 COMMIT;

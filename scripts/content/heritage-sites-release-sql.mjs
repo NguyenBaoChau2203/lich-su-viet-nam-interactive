@@ -108,23 +108,17 @@ export function generateReleaseArtifacts({ pkgDir, outDir, mode = "publish", doC
   importLines.push(`END $preflight$;`);
   importLines.push(``);
 
-  // Sources temp table & insertion
-  importLines.push(`-- Deduplicated sources`);
-  importLines.push(`CREATE TABLE IF NOT EXISTS public.hs_sources_temp (`);
-  importLines.push(`  source_key text PRIMARY KEY,`);
-  importLines.push(`  source_id uuid NOT NULL`);
-  importLines.push(`);`);
-  importLines.push(`TRUNCATE TABLE public.hs_sources_temp;`);
-  importLines.push(``);
-
+  const sourceKeyToTitle = new Map();
   for (const src of sourcesPkg.sources) {
-    const urlCheck = src.url ? `url = ${sqlLiteral(src.url)}` : `title = ${sqlLiteral(src.title)}`;
+    sourceKeyToTitle.set(src.key, src.title);
+  }
+
+  // Deduplicated sources
+  importLines.push(`-- Deduplicated sources`);
+  for (const src of sourcesPkg.sources) {
     importLines.push(`INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)`);
     importLines.push(`SELECT ${sqlLiteral(src.title)}, ${sqlLiteral(src.authorOrg ?? null)}, ${sqlLiteral(src.publisher ?? null)}, ${sqlLiteral(src.url ?? null)}, ${sqlLiteral(src.sourceType)}, ${sqlLiteral(src.citation)}, ${sqlLiteral(src.publishedYear ?? null)}, ${sqlLiteral(src.accessedAt ?? null)}`);
-    importLines.push(`WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE ${urlCheck});`);
-    importLines.push(``);
-    importLines.push(`INSERT INTO hs_sources_temp (source_key, source_id)`);
-    importLines.push(`SELECT ${sqlLiteral(src.key)}, id FROM public.sources WHERE ${urlCheck} LIMIT 1;`);
+    importLines.push(`WHERE NOT EXISTS (SELECT 1 FROM public.sources WHERE title = ${sqlLiteral(src.title)});`);
     importLines.push(``);
   }
 
@@ -185,10 +179,11 @@ export function generateReleaseArtifacts({ pkgDir, outDir, mode = "publish", doC
       importLines.push(``);
 
       for (const cit of sec.sources) {
+        const srcTitle = sourceKeyToTitle.get(cit.sourceKey) ?? cit.sourceKey;
         importLines.push(`  INSERT INTO public.location_story_sources (section_id, source_id, locator, scope_note)`);
         importLines.push(`  VALUES (`);
         importLines.push(`    sec_id,`);
-        importLines.push(`    (SELECT source_id FROM hs_sources_temp WHERE source_key = ${sqlLiteral(cit.sourceKey)}),`);
+        importLines.push(`    (SELECT id FROM public.sources WHERE title = ${sqlLiteral(srcTitle)} LIMIT 1),`);
         importLines.push(`    ${sqlLiteral(cit.locator)},`);
         importLines.push(`    ${sqlLiteral(cit.scopeNote)}`);
         importLines.push(`  ) ON CONFLICT (section_id, source_id) DO UPDATE SET`);
@@ -280,8 +275,6 @@ export function generateReleaseArtifacts({ pkgDir, outDir, mode = "publish", doC
   importLines.push(`END $verify$;`);
   importLines.push(``);
 
-  importLines.push(`DROP TABLE IF EXISTS public.hs_sources_temp;`);
-  importLines.push(``);
   importLines.push(`SET CONSTRAINTS ALL IMMEDIATE;`);
   importLines.push(doCommit ? `COMMIT;` : `ROLLBACK;`);
   importLines.push(``);
@@ -351,8 +344,6 @@ export function generateReleaseArtifacts({ pkgDir, outDir, mode = "publish", doC
     rollbackLines.push(``);
   }
 
-  rollbackLines.push(`DROP TABLE IF EXISTS public.hs_sources_temp;`);
-  rollbackLines.push(``);
   rollbackLines.push(`SET CONSTRAINTS ALL IMMEDIATE;`);
   rollbackLines.push(`COMMIT;`);
   rollbackLines.push(``);
