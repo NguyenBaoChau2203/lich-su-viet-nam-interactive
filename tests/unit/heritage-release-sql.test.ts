@@ -42,6 +42,14 @@ describe("Heritage Sites Release SQL Generation (Phase 4)", () => {
     }
     expect(importSql).toContain("WHERE NOT EXISTS");
 
+    // Zero fabricated patterns or temporary tables
+    expect(importSql).not.toContain("Special:FilePath");
+    expect(importSql).not.toContain("/uploads/images/");
+    expect(importSql).not.toContain("CREATE TEMP TABLE");
+    expect(importSql).not.toContain("hs_sources_temp");
+    expect(importSql).toContain("BEGIN;");
+    expect(importSql).toContain("pg_advisory_xact_lock");
+
     // Rollback preserves enrolled locations while clearing heritage columns
     expect(rollbackSql).toContain("UPDATE public.historical_locations SET");
     expect(rollbackSql).toContain("locality_code = NULL");

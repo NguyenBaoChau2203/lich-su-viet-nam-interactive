@@ -1,0 +1,1654 @@
+[
+  {
+    "id": "23006960-2b00-4ab1-82cd-3314ebfdd647",
+    "slug": "hoang-thanh-thang-long",
+    "locality_code": "01",
+    "name": "Khu trung tâm Hoàng thành Thăng Long",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "788efc9c-c9b1-4c76-ad18-51740f1f0f79",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Cổng Đoan Môn – cửa ngõ chính vào Cấm thành Thăng Long tại trung tâm Hà Nội.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Cổng Đoan Môn cổ kính bằng gạch ngói với ba tầng lầu nhìn ra sân cỏ rộng",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Doan_Mon_-_Hanoi_Citadel.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Doan_Mon_-_Hanoi_Citadel.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "24f1792d-d1b9-43ff-863a-97cd66fe3781",
+    "slug": "thanh-nha-ho",
+    "locality_code": "38",
+    "name": "Di sản Thế giới Thành nhà Hồ",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "9f86bd65-6097-457c-bab9-22c464ac3b66",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Cổng Nam Thành nhà Hồ với 3 vòm cuốn bằng đá nguyên khối tráng lệ trải qua hơn 6 thế kỷ.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Bức tường thành bằng đá xám vĩ đại với ba cửa vòm vươn cao giữa cánh đồng cỏ rộng",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thanh_nha_Ho_Cong_Nam.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Thanh_nha_Ho_Cong_Nam.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "818865b9-2c62-4e8d-9dc1-c2c03aa23067",
+    "slug": "nha-tu-hoa-lo",
+    "locality_code": "01",
+    "name": "Nhà tù Hỏa Lò",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "b8cc55c9-18ce-4cb3-9257-22f88c16afdb",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Cổng chính Di tích Lịch sử Nhà tù Hỏa Lò (Maison Centrale) tại quận Hoàn Kiếm, Hà Nội.",
+        "license": "CC BY-SA 3.0",
+        "alt_text": "Cổng chính kiến trúc kiên cố bằng đá sẫm màu của Nhà tù Hỏa Lò tại Hà Nội",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maison_Centrale_Hanoi_entrance.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Maison_Centrale_Hanoi_entrance.jpg"
+      }
+    ],
+    "location_videos": [
+      {
+        "id": "5499857d-0cdf-4dc3-8592-71a41d584a07",
+        "title": "Ký ức Hỏa Lò – Di tích lịch sử Quốc gia",
+        "youtube_id": "W6_bO4m3F6c"
+      }
+    ]
+  },
+  {
+    "id": "3f5286d3-da5f-41d4-bec6-5528404dcf7e",
+    "slug": "rung-tran-hung-dao",
+    "locality_code": "04",
+    "name": "Khu di tích Rừng Trần Hưng Đạo",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "383b7e6c-378b-4742-b993-8e19fd4aa9d2",
+        "width": 1200,
+        "height": 800,
+        "caption": "Bia ghi danh 34 chiến sĩ Đội Việt Nam Tuyên truyền Giải phóng quân giữa cánh rừng đại ngàn Trần Hưng Đạo, Nguyên Bình, Cao Bằng.",
+        "license": null,
+        "alt_text": "Bia đá di tích hình đóm lửa dựng giữa tán rừng cây cổ thụ râm mát",
+        "file_url": "https://caobang.gov.vn/uploads/images/2021/12/khu-di-tich-rung-tran-hung-dao.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử tỉnh Cao Bằng",
+        "source_page_url": "https://caobang.gov.vn/di-tich-rung-tran-hung-dao"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "6e2c1a83-4ff8-4383-910d-d4ad651af218",
+    "slug": "khu-di-tich-tan-trao",
+    "locality_code": "08",
+    "name": "Khu di tích Quốc gia đặc biệt Tân Trào",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "f608e946-2407-4196-8b56-1fbbba38f0d0",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Đình Tân Trào – nơi diễn ra Quốc dân Đại hội tháng 8/1945 quyết định Tổng khởi nghĩa giành chính quyền.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Ngôi đình gỗ mái lá đơn sơ truyền thống tọa lạc giữa vườn cây xanh ngát ở Tuyên Quang",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dinh_Tan_Trao.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Dinh_Tan_Trao.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "8b522207-d85a-4609-bbb6-b0fc42ab2190",
+    "slug": "cot-co-lung-cu",
+    "locality_code": "08",
+    "name": "Cột cờ Lũng Cú",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "284b2009-d6f6-44c8-bb69-20627fbc272c",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Cột cờ Quốc gia Lũng Cú sừng sững trên đỉnh núi Rồng, lá cờ 54m² bay phấp phới giữa đất trời biên cương.",
+        "license": "CC BY-SA 3.0",
+        "alt_text": "Tháp cột cờ bằng đá vươn cao trên đỉnh núi đá hùng vĩ với lá cờ đỏ sao vàng lớn đang bay",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cot_co_Lung_Cu_-_Ha_Giang.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Cot_co_Lung_Cu_-_Ha_Giang.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "4eb6bc89-feb6-4ccf-917c-cd5203760c88",
+    "slug": "khu-den-thap-my-son",
+    "locality_code": "48",
+    "name": "Khu đền tháp Mỹ Sơn",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "4a3d854b-b792-42ab-a8ed-9dfda2692be3",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Quần thể các đền tháp gạch nung rêu phong cổ kính giữa thung lũng xanh Thánh địa Mỹ Sơn.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Các khối đền tháp Chăm bằng gạch nung màu đỏ trầm sừng sững giữa cây rừng nhiệt đới",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/My_Son_Sanctuary_Quang_Nam.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:My_Son_Sanctuary_Quang_Nam.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "3d956bed-c6c5-4e9a-8405-59e6a8c653dc",
+    "slug": "doi-a1-dien-bien-phu",
+    "locality_code": "11",
+    "name": "Cứ điểm Đồi A1 – Điện Biên Phủ",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "74cfeed9-0c1b-45e2-8201-207b16a5ff79",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Hố phễu bộc phá lịch sử sâu hoắm trên đỉnh Đồi A1 sau tiếng nổ đêm 6/5/1954 trong Chiến dịch Điện Biên Phủ.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Miệng hố đất đá hình phễu khổng lồ do khối bộc phá tạo ra trên đỉnh đồi thoai thoải",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Doi_A1_Dien_Bien_Phu.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Doi_A1_Dien_Bien_Phu.jpg"
+      }
+    ],
+    "location_videos": [
+      {
+        "id": "8b1baa34-8339-4343-8632-43fff0ecf56c",
+        "title": "Ký ức 39 ngày đêm quyết chiến đồi A1 Điện Biên Phủ",
+        "youtube_id": "W5i3h-h9K2Q"
+      }
+    ]
+  },
+  {
+    "id": "bdfcd814-9bbb-4b9b-810c-567161c0db7e",
+    "slug": "ham-de-castries",
+    "locality_code": "11",
+    "name": "Hầm Chỉ huy Tướng De Castries",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "62cc1be4-8776-43b5-aa7b-bf0d1f64a8e2",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Cửa vào Hầm Sở chỉ huy Tướng De Castries với kết cấu vòm thép và bao cát tại cánh đồng Mường Thanh.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Lối vào hầm ngầm xây bằng vòm sắt uốn cong phủ các lớp bao cát đất bảo vệ xung quanh",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ham_De_Castries_Dien_Bien_Phu.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Ham_De_Castries_Dien_Bien_Phu.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "c46a312b-efd2-4a8f-a6f2-c2822607d29f",
+    "slug": "chien-thang-lai-chau-1953",
+    "locality_code": "12",
+    "name": "Địa điểm Chiến thắng Giải phóng Lai Châu 1953",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "7bd20f07-9c22-4e10-87f5-e0709fa42656",
+        "width": 1200,
+        "height": 800,
+        "caption": "Tượng đài Chiến thắng Giải phóng Lai Châu năm 1953 sừng sững bên dòng sông Đà hùng vĩ.",
+        "license": null,
+        "alt_text": "Tượng đài chiến sĩ bộ đội và nhân dân các dân tộc Tây Bắc giương cao cờ chiến thắng",
+        "file_url": "https://laichau.gov.vn/uploads/images/2023/12/chien-thang-lai-chau-1953.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử tỉnh Lai Châu",
+        "source_page_url": "https://laichau.gov.vn/di-tich-chien-thang-lai-chau-1953"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "e9e17617-f439-4116-829d-90c5f5cdf0cb",
+    "slug": "nha-tu-son-la",
+    "locality_code": "14",
+    "name": "Di tích Quốc gia đặc biệt Nhà tù Sơn La",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "25bb0ec1-afc6-40d9-95aa-54593153d02f",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Bức tường đá kiên cố và các dãy xà lim Di tích Quốc gia Đặc biệt Nhà tù Sơn La trên đồi Khau Cả.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Khu phế tích tường đá cổ xám rêu phong của các buồng giam nhà lao Sơn La",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nha_tu_Son_La.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Nha_tu_Son_La.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "95a3d690-868e-4521-9826-5099e49c9ffa",
+    "slug": "khoi-nghia-yen-bai-1930",
+    "locality_code": "15",
+    "name": "Khu tưởng niệm Khởi nghĩa Yên Bái 1930",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "d41f5dfc-cc39-45f1-9b1d-cd5985bd27b6",
+        "width": 1200,
+        "height": 800,
+        "caption": "Tượng đài nhà yêu nước Nguyễn Thái Học cùng các nghĩa sĩ Khởi nghĩa Yên Bái năm 1930 tại công viên Yên Hòa.",
+        "license": null,
+        "alt_text": "Tượng đài đá cẩm thạch tạc hình người chiến sĩ yêu nước đứng hiên ngang giữa quảng trường xanh",
+        "file_url": "https://yenbai.gov.vn/uploads/images/2020/02/khu-tuong-niem-nguyen-thai-hoc.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử tỉnh Yên Bái",
+        "source_page_url": "https://yenbai.gov.vn/di-tich-khoi-nghia-yen-bai"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "f6d142be-66ae-4665-bfdc-1fbd81f6b5ca",
+    "slug": "atk-dinh-hoa",
+    "locality_code": "19",
+    "name": "Khu di tích Quốc gia đặc biệt ATK Định Hóa",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "eab40afa-ab78-4dcb-b578-75c6bb8f09ff",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Căn lán gỗ mộc mạc tại lán Tỉn Keo, ATK Định Hóa – nơi Bác Hồ chủ trì cuộc họp Bộ Chính trị mở Chiến dịch Điện Biên Phủ.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Ngôi lán nhỏ bằng tre nứa mái cọ lợp tranh đơn sơ nép mình bên sườn đồi xanh",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lan_Na_Nua_ATK_Dinh_Hoa.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Lan_Na_Nua_ATK_Dinh_Hoa.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "17f26959-a5c9-4edd-99b4-f1f45254b0d5",
+    "slug": "atk-cho-don",
+    "locality_code": "19",
+    "name": "Khu di tích Quốc gia đặc biệt ATK Chợ Đồn",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "02e4a1ea-a25f-430b-a563-5de021c7e5b0",
+        "width": 1200,
+        "height": 800,
+        "caption": "Khu di tích lịch sử lán Nà Pậu – nơi Chủ tịch Hồ Chí Minh sống và làm việc đầu năm 1951 tại ATK Chợ Đồn.",
+        "license": null,
+        "alt_text": "Căn lán gỗ sàn truyền thống nép mình bên gốc cây đại ngàn giữa núi rừng xanh thẳm",
+        "file_url": "https://backan.gov.vn/uploads/images/2022/05/atk-cho-don.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử tỉnh Bắc Kạn",
+        "source_page_url": "https://backan.gov.vn/di-tich-atk-cho-don"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "bf0392b4-481a-486b-8c15-3b2dfdf002f7",
+    "slug": "khoi-nghia-bac-son",
+    "locality_code": "20",
+    "name": "Khu di tích Quốc gia đặc biệt Khởi nghĩa Bắc Sơn",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "92d25f85-2d5d-4b5e-a40d-df00cbf63d45",
+        "width": 1200,
+        "height": 800,
+        "caption": "Địa điểm Đồn Mỏ Nhài – nơi nhân dân Bắc Sơn đánh chiếm đêm 27/9/1940 mở đầu khởi nghĩa vũ trang.",
+        "license": null,
+        "alt_text": "Bia đá di tích và công viên đài tưởng niệm Khởi nghĩa Bắc Sơn tại Lạng Sơn",
+        "file_url": "https://langson.gov.vn/uploads/images/2021/09/di-tich-don-mo-nhai-bac-son.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử tỉnh Lạng Sơn",
+        "source_page_url": "https://langson.gov.vn/di-tich-khoi-nghia-bac-son"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "cfadc2cd-ea51-441c-b9a1-1a78d3a73347",
+    "slug": "ai-chi-lang",
+    "locality_code": "20",
+    "name": "Khu di tích Lịch sử Chi Lăng",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "148d4502-9bcb-4fe8-bd57-9310d026bbe5",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Thung lũng Ải Chi Lăng nhìn về hướng núi Mã Yên – nơi nghĩa quân Lam Sơn chém tướng Liễu Thăng năm 1427.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Toàn cảnh thung lũng xanh mướt với những dãy núi đá vôi sừng sững bao bọc hai bên",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ai_Chi_Lang_Lang_Son.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Ai_Chi_Lang_Lang_Son.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "bfb1007f-a8bf-46f9-b4c9-b8226eee6e77",
+    "slug": "mo-than-deo-nai",
+    "locality_code": "22",
+    "name": "Khu di tích Mỏ than Đèo Nai – Cẩm Phả",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "1468b1ac-6586-4388-8c75-2a5880b0a193",
+        "width": 1200,
+        "height": 800,
+        "caption": "Khu di tích lịch sử Tượng đài Bác Hồ về thăm mỏ than Đèo Nai tại thành phố Cẩm Phả, Quảng Ninh.",
+        "license": null,
+        "alt_text": "Tượng đài Chủ tịch Hồ Chí Minh đứng giản dị vẫy tay chào thợ mỏ giữa khuôn viên râm mát",
+        "file_url": "https://quangninh.gov.vn/uploads/images/2021/03/di-tich-bac-ho-ve-tham-deo-nai.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử tỉnh Quảng Ninh",
+        "source_page_url": "https://quangninh.gov.vn/di-tich-mo-than-deo-nai"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "96a063bd-cea5-47aa-bf90-259cb42b65f5",
+    "slug": "bai-coc-bach-dang",
+    "locality_code": "22",
+    "name": "Khu di tích Quốc gia đặc biệt Bạch Đằng",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "a338a171-ea01-4407-8a58-4251633dee43",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Bãi cọc gỗ lim lịch sử được khai quật và bảo tồn nguyên trạng tại Di tích Bạch Đằng, Quảng Ninh.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Những đầu cọc gỗ lim cổ thụ đen bóng vùi sâu trong bùn đất được che mái bảo tồn cẩn thận",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bai_coc_Bach_Dang_Yen_Hung.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Bai_coc_Bach_Dang_Yen_Hung.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "7025a327-e060-4ebe-9546-185906d6edac",
+    "slug": "atk-ii-hiep-hoa",
+    "locality_code": "24",
+    "name": "Khu di tích Quốc gia đặc biệt ATK II Hiệp Hòa",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "ef5ea1a9-1116-437b-86d9-4d31a3a274bf",
+        "width": 1200,
+        "height": 800,
+        "caption": "Đình Xuân Biều – một trong những điểm di tích lịch sử trung tâm của An toàn khu ATK II Hiệp Hòa.",
+        "license": null,
+        "alt_text": "Ngôi đình làng cổ mái ngói rêu phong nằm yên bình dưới rặng đa cổ thụ",
+        "file_url": "https://bacninh.gov.vn/uploads/images/2021/01/di-tich-atk2-hiep-hoa.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử tỉnh",
+        "source_page_url": "https://bacninh.gov.vn/di-tich-atk-ii-hiep-hoa"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "0f552c94-8159-4ae7-b955-7184cc4b43cb",
+    "slug": "khoi-nghia-yen-the",
+    "locality_code": "24",
+    "name": "Khu di tích Quốc gia đặc biệt Khởi nghĩa Yên Thế",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "f130b771-7a8c-4170-a442-69eb8041acaa",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Cổng vào Di tích Đồn Phồn Xương – đại bản doanh kiên cố của thủ lĩnh Hoàng Hoa Thám tại Yên Thế.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Cổng lũy đất đá kiên cố được phục dựng trang nghiêm giữa vườn cây xanh",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Don_Phon_Xuong_Yen_The.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Don_Phon_Xuong_Yen_The.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "5134c6ff-a389-49d8-98b2-b298cbf613f7",
+    "slug": "chien-thang-song-lo-doan-hung",
+    "locality_code": "25",
+    "name": "Di tích Lịch sử Chiến thắng Sông Lô – Đoan Hùng",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "15323e78-37cb-451b-91e0-4e9504cc8b8d",
+        "width": 1200,
+        "height": 800,
+        "caption": "Tượng đài Chiến thắng Sông Lô oai nghiêm trên đỉnh đồi cao thị trấn Đoan Hùng nhìn xuống dòng sông cuộn sóng.",
+        "license": null,
+        "alt_text": "Tượng đài pháo binh và người chiến sĩ giải phóng quân đứng hiên ngang trên đỉnh đồi",
+        "file_url": "https://phutho.gov.vn/uploads/images/2021/10/tuong-dai-chien-thang-song-lo.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử tỉnh Phú Thọ",
+        "source_page_url": "https://phutho.gov.vn/di-tich-chien-thang-song-lo"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "7effacac-f92f-4d08-816a-36a474e0f5a2",
+    "slug": "khu-di-tich-den-hung",
+    "locality_code": "25",
+    "name": "Khu di tích Quốc gia đặc biệt Đền Hùng",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "ec0cb811-1181-4021-8050-be7614657eb2",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Cổng chính lối lên các ngôi đền cổ kính trên núi Nghĩa Lĩnh, Khu di tích lịch sử Đền Hùng.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Cổng đền tam quan bằng đá ngói uy nghi dưới chân rừng cây cổ thụ Đền Hùng",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cong_Den_Hung_Phu_Tho.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Cong_Den_Hung_Phu_Tho.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "691fa58a-dc9e-46a2-ae0b-06a47a44e1e1",
+    "slug": "ben-k15-do-son",
+    "locality_code": "31",
+    "name": "Di tích Bến K15 Đồ Sơn – Đường Hồ Chí Minh trên biển",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "76e54387-386c-4d53-81f3-cc0e77aaf671",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Các trụ cầu cảng bê tông lịch sử của Bến K15 Đồ Sơn – nơi những con Tàu Không số xuất phát ra khơi.",
+        "license": "CC BY-SA 3.0",
+        "alt_text": "Các khối bê tông mố cầu tàu cổ vươn ra bờ biển đá sóng vỗ tại Đồ Sơn Hải Phòng",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ben_K15_Do_Son_Hai_Phong.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Ben_K15_Do_Son_Hai_Phong.jpg"
+      }
+    ],
+    "location_videos": [
+      {
+        "id": "5a611332-5706-424f-87bd-7d770d262713",
+        "title": "Huyền thoại Đường Hồ Chí Minh trên biển – Bến K15 Đồ Sơn",
+        "youtube_id": "n4m17K-a128"
+      }
+    ]
+  },
+  {
+    "id": "afd7ad19-f4c0-4c29-bb85-929ce460362d",
+    "slug": "con-son-kiep-bac",
+    "locality_code": "31",
+    "name": "Khu di tích Quốc gia đặc biệt Côn Sơn – Kiếp Bạc",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "7ab39638-a397-4769-9bbe-db4f3f15d003",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Cổng tam quan Đền Kiếp Bạc uy nghiêm bên bến sông Lục Đầu lịch sử.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Cổng đền tam quan cổ kính bằng đá gạch mái vòm nhìn ra bến sông rộng lớn",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Den_Kiep_Bac_Chi_Linh.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Den_Kiep_Bac_Chi_Linh.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "375f22b4-9e56-4277-adfc-b73d8152e998",
+    "slug": "tieng-trong-tien-hai",
+    "locality_code": "33",
+    "name": "Khu di tích Tiếng trống Tiền Hải 1930",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "b6d20340-cf17-46f7-8f09-c5527edfee05",
+        "width": 1200,
+        "height": 800,
+        "caption": "Tượng đài tái hiện cuộc biểu tình Tiếng trống Tiền Hải ngày 14/10/1930 tại khu lưu niệm.",
+        "license": null,
+        "alt_text": "Nhóm tượng đài nông dân tay giương cao cờ đỏ búa liềm và dùi trống biểu tình",
+        "file_url": "https://hungyen.gov.vn/uploads/images/2021/10/di-tich-tieng-trong-tien-hai.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử tỉnh",
+        "source_page_url": "https://hungyen.gov.vn/di-tich-tieng-trong-tien-hai"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "f0be034e-add9-4318-bdc5-36b18c856e02",
+    "slug": "pho-hien",
+    "locality_code": "33",
+    "name": "Khu di tích Quốc gia đặc biệt Phố Hiến",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "39d0e0d1-28b5-46e3-bd26-fc7512d56a18",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Chùa Chuông (Kim Chung Tự) – 'Phố Hiến đệ nhất danh lam' với kiến trúc cổ kính tuyệt đẹp.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Ngôi chùa cổ kính mái ngói mũi hài rêu phong in bóng bên mặt hồ nước phẳng lặng",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chua_Chuong_Pho_Hien.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Chua_Chuong_Pho_Hien.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "f38572df-3c8a-4116-b9ea-779b224f5bd1",
+    "slug": "nha-may-det-nam-dinh",
+    "locality_code": "37",
+    "name": "Di tích Lịch sử Nhà máy Dệt Nam Định",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "ef7f5ad2-8f68-49a7-8ef9-e84e57ca3486",
+        "width": 1200,
+        "height": 800,
+        "caption": "Khuôn viên Bảo tàng Dệt May Nam Định – nơi lưu giữ ký ức phong trào công nhân kiên cường.",
+        "license": null,
+        "alt_text": "Tòa nhà kiến trúc thời Pháp cổ bằng gạch đỏ lưu giữ hiện vật nhà máy dệt",
+        "file_url": "https://ninhbinh.gov.vn/uploads/images/2021/05/bao-tang-det-may-nam-dinh.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử",
+        "source_page_url": "https://ninhbinh.gov.vn/di-tich-nha-may-det-nam-dinh"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "fe239230-3563-413d-aebd-2890ecfa175d",
+    "slug": "co-do-hoa-lu",
+    "locality_code": "37",
+    "name": "Khu di tích Quốc gia đặc biệt Cố đô Hoa Lư",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "bf474e18-11c1-4b95-8d95-de29a2344a41",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Đền thờ Vua Đinh Tiên Hoàng cổ kính uy nghiêm giữa thung lũng đá vôi Cố đô Hoa Lư.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Ngôi đền thờ cổ lợp ngói vảy cá với sân rồng đá uy nghi dưới chân dãy núi đá sừng sững",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Den_Vua_Dinh_Tien_Hoang_Hoa_Lu.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Den_Vua_Dinh_Tien_Hoang_Hoa_Lu.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "940c726d-1630-4132-a66f-56e0138f7da7",
+    "slug": "cau-ham-rong",
+    "locality_code": "38",
+    "name": "Di tích Lịch sử Cầu Hàm Rồng",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "bc64b3f9-e9db-423a-9571-55cc33c17cf4",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Cây cầu Hàm Rồng bằng thép kiên cường vắt qua dòng sông Mã oai hùng tại Thanh Hóa.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Nhịp cầu thép sừng sững bắc qua dòng sông Mã rộng lớn uốn lượn dưới chân núi đá râm mát",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cau_Ham_Rong_Thanh_Hoa.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Cau_Ham_Rong_Thanh_Hoa.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "ad7c4c97-8527-42e7-a7e9-b9d0ebac2cfd",
+    "slug": "khu-di-tich-kim-lien",
+    "locality_code": "40",
+    "name": "Khu di tích Quốc gia đặc biệt Kim Liên",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "90ae4451-1f34-48ef-8b9c-95afd54d6218",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Nếp nhà lá 5 gian đơn sơ mộc mạc của gia đình Bác Hồ tại Làng Sen, Kim Liên, Nam Đàn, Nghệ An.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Ngôi nhà gỗ mái tranh mộc mạc nép mình dưới rặng tre và hàng cau xanh ngát",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nha_Bac_Ho_Lang_Sen_Nghe_An.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Nha_Bac_Ho_Lang_Sen_Nghe_An.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "8924958a-b5a8-43d5-b771-186cd799ab71",
+    "slug": "truong-bon",
+    "locality_code": "40",
+    "name": "Khu di tích Lịch sử Quốc gia Truông Bồn",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "25e34de1-f255-4db8-a149-3e1fe32c633c",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Khu tưởng niệm Di tích Lịch sử Quốc gia Truông Bồn – nơi ghi dấu sự hy sinh anh dũng của 13 chiến sĩ TNXP.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Khuôn viên tưởng niệm trang nghiêm với đài tháp lửa vươn cao giữa núi rừng Đô Lương",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khu_di_tich_Truong_Bon_Nghe_An.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Khu_di_tich_Truong_Bon_Nghe_An.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "ab7e411c-bc69-4665-86ac-d5fbe2b58a77",
+    "slug": "nga-ba-dong-loc",
+    "locality_code": "42",
+    "name": "Khu di tích Quốc gia đặc biệt Ngã ba Đồng Lộc",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "dfe44165-3544-41c8-ab5c-67ffa1d63dbd",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Quần thể Khu tưởng niệm Di tích Quốc gia Đặc biệt Ngã ba Đồng Lộc tại Can Lộc, Hà Tĩnh.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Khu di tích trang nghiêm với tượng đài và tháp chuông tưởng niệm giữa thung lũng xanh",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nga_ba_Dong_Loc_Ha_Tinh.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Nga_ba_Dong_Loc_Ha_Tinh.jpg"
+      }
+    ],
+    "location_videos": [
+      {
+        "id": "98e081d5-0c82-4caa-ba29-303ff12440e9",
+        "title": "Ký ức ngã ba Đồng Lộc – Mười đóa hoa bất tử",
+        "youtube_id": "W4P81Jc96zU"
+      }
+    ]
+  },
+  {
+    "id": "e66687cb-6122-4ef9-b761-245b501e89c2",
+    "slug": "thanh-co-quang-tri",
+    "locality_code": "44",
+    "name": "Khu di tích Quốc gia đặc biệt Thành cổ Quảng Trị",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "09a9df77-9fd6-45a8-b041-f99c2671606d",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Đài tưởng niệm trung tâm Thành cổ Quảng Trị mô phỏng ngọn thiên đăng tri ân các anh hùng liệt sĩ.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Đài tưởng niệm hình bát giác uy nghiêm giữa công viên cỏ xanh rợp bóng cây Thành cổ Quảng Trị",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thanh_co_Quang_Tri_Dai_tuong_niem.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Thanh_co_Quang_Tri_Dai_tuong_niem.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "a55201c2-3ea3-428f-8bd4-ea4cf36805d8",
+    "slug": "doi-bo-hien-luong-ben-hai",
+    "locality_code": "44",
+    "name": "Khu di tích Quốc gia đặc biệt Đôi bờ Hiền Lương – Bến Hải",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "0c4da11c-d9d1-46cc-9bae-e697a0119250",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Cầu Hiền Lương lịch sử bắc qua sông Bến Hải chia cắt vĩ tuyến 17 được phục dựng nguyên trạng.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Cây cầu sắt sơn hai màu xanh và vàng chia đôi nhịp cầu bắc qua con sông Bến Hải êm đềm",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cau_Hien_Luong_Ben_Hai_Quang_Tri.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Cau_Hien_Luong_Ben_Hai_Quang_Tri.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "d3b2133f-e210-46b4-8f80-8cc38035cc24",
+    "slug": "ngo-mon-hue",
+    "locality_code": "46",
+    "name": "Di tích Cửa Ngọ Môn – Cố đô Huế",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "61004769-5064-40b7-8bfb-62878e311dc9",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Cửa Ngọ Môn và lầu Ngũ Phụng uy nghi tráng lệ – nơi Vua Bảo Đại thoái vị ngày 30/8/1945.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Cổng đá lớn màu xám có 5 cửa vòm nâng đỡ lầu gác gỗ nhiều tầng mái ngói vàng rực rỡ",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ngo_Mon_Hue_Imperial_City.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Ngo_Mon_Hue_Imperial_City.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "5d61c6c6-7cff-4db2-8292-e296542bd7a8",
+    "slug": "kinh-thanh-hue-1968",
+    "locality_code": "46",
+    "name": "Kỳ Đài Huế – Mặt trận Tết Mậu Thân 1968",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "e3f6b25e-78fa-49a0-ac88-565984ce82ac",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Kỳ Đài Huế sừng sững trước Hoàng thành – nơi lá cờ Mặt trận Giải phóng tung bay suốt 25 ngày đêm Tết Mậu Thân 1968.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Bệ đài gạch ba tầng đồ sộ nâng đỡ cột cờ cao vút giữa quảng trường Ngọ Môn",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ky_Dai_Hue_Flag_Tower.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Ky_Dai_Hue_Flag_Tower.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "92bc9227-8845-4ac1-9519-a62316d26bf3",
+    "slug": "chien-thang-nui-thanh-1965",
+    "locality_code": "48",
+    "name": "Di tích Lịch sử Chiến thắng Núi Thành",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "6f9f0d0b-fc7b-41d2-9d05-d8abf0c4e099",
+        "width": 1200,
+        "height": 800,
+        "caption": "Tượng đài Chiến thắng Núi Thành sừng sững trên đỉnh đồi – nơi mở đầu phong trào đánh thắng quân viễn chinh Mỹ.",
+        "license": null,
+        "alt_text": "Tượng đài người chiến sĩ giải phóng quân tay nắm chắc súng vươn cao trên đỉnh đồi",
+        "file_url": "https://danang.gov.vn/uploads/images/2021/05/tuong-dai-chien-thang-nui-thanh.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử",
+        "source_page_url": "https://danang.gov.vn/di-tich-chien-thang-nui-thanh"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "69dc7426-e86d-4310-9478-4c8c51c6a4e0",
+    "slug": "khu-chung-tich-son-my",
+    "locality_code": "51",
+    "name": "Khu chứng tích Quốc gia đặc biệt Sơn Mỹ",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "0ff7735e-33c8-42e5-96f7-5e9e11afbcb2",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Cụm tượng đài người mẹ Sơn Mỹ ôm con che chở trước bom đạn tại Khu chứng tích Quốc gia Đặc biệt.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Bức tượng đá tạc hình người mẹ quặn thắt ôm chặt đứa con nhỏ giữa vườn tưởng niệm",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khu_chung_tich_Son_My_Quang_Ngai.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Khu_chung_tich_Son_My_Quang_Ngai.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "7faa4164-964e-4bc0-8ffb-1b1d072ccf20",
+    "slug": "dak-to-tan-canh",
+    "locality_code": "51",
+    "name": "Khu di tích Quốc gia đặc biệt Đắk Tô – Tân Cảnh",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "4a20030b-75bc-4817-9871-d3cb547bc1bc",
+        "width": 1200,
+        "height": 800,
+        "caption": "Tượng đài Chiến thắng Đắk Tô – Tân Cảnh và xác xe tăng lịch sử tại thị trấn Đắk Tô.",
+        "license": null,
+        "alt_text": "Tượng đài chiến thắng bằng đá vươn cao bên cạnh chiếc xe tăng T-54 lịch sử",
+        "file_url": "https://quangngai.gov.vn/uploads/images/2021/04/tuong-dai-chien-thang-dak-to.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử",
+        "source_page_url": "https://quangngai.gov.vn/di-tich-dak-to-tan-canh"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "5d8254c2-977d-4609-be45-aaa40680a536",
+    "slug": "lang-khang-chien-stor",
+    "locality_code": "52",
+    "name": "Di tích Lịch sử Làng kháng chiến Stơr",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "f28c7e02-70f0-4a6b-8267-c36eeccb772d",
+        "width": 1200,
+        "height": 800,
+        "caption": "Mái nhà Rông truyền thống uy nghiêm tại Làng kháng chiến Stơr – quê hương Anh hùng Núp.",
+        "license": null,
+        "alt_text": "Ngôi nhà rông Bahnar mái lợp tranh cao vút vươn thẳng lên bầu trời xanh giữa rừng cây",
+        "file_url": "https://gialai.gov.vn/uploads/images/2021/08/lang-khang-chien-stor.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử tỉnh Gia Lai",
+        "source_page_url": "https://gialai.gov.vn/di-tich-lang-stor"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "9a82e520-4d0f-4582-8fed-df45599809b3",
+    "slug": "bao-tang-quang-trung",
+    "locality_code": "52",
+    "name": "Khu di tích Quốc gia đặc biệt Tây Sơn Tam Kiệt",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "32cf8f15-4068-4af1-b839-15c453ca4036",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Tượng đài Hoàng đế Quang Trung – Nguyễn Huệ oai phong lẫm liệt trước sân Bảo tàng Quang Trung.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Tượng đài người anh hùng áo vải cất cao thanh kiếm chỉ huy xung trận giữa quảng trường hoa",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bao_tang_Quang_Trung_Binh_Dinh.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Bao_tang_Quang_Trung_Binh_Dinh.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "df7b25ae-e74b-4348-83b3-b971da7bc01a",
+    "slug": "san-bay-thanh-son",
+    "locality_code": "56",
+    "name": "Di tích Sân bay Thành Sơn – Phi đội Quyết thắng",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "04712de9-a030-44b8-a1a5-45a9e7f6538f",
+        "width": 1200,
+        "height": 800,
+        "caption": "Bia di tích kỷ niệm nơi Phi đội Quyết Thắng xuất kích chiều ngày 28/4/1975 tại Sân bay Thành Sơn.",
+        "license": null,
+        "alt_text": "Bia đá di tích hình cánh chim máy bay cất cánh giữa khuôn viên sân bay rộng lớn",
+        "file_url": "https://khanhhoa.gov.vn/uploads/images/2021/04/di-tich-san-bay-thanh-son.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử",
+        "source_page_url": "https://khanhhoa.gov.vn/di-tich-san-bay-thanh-son"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "6f546132-6678-4ec3-aef9-162068fee506",
+    "slug": "thap-ba-ponagar",
+    "locality_code": "56",
+    "name": "Khu di tích Quốc gia đặc biệt Tháp Bà Ponagar",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "f123ee15-f494-4edc-bc50-2a7ea30bea56",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Các tòa tháp cổ Tháp Bà Ponagar xây bằng gạch nung đỏ rực rỡ bên bờ sông Cái Nha Trang.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Các khối tháp Chăm bằng gạch nung màu cam đỏ vươn cao trên đồi cây nhìn xuống cửa biển",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thap_Ba_Ponagar_Nha_Trang.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Thap_Ba_Ponagar_Nha_Trang.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "7d3e5142-cc70-40ff-91ec-56cad88fd8ce",
+    "slug": "buon-ma-thuot-1975",
+    "locality_code": "66",
+    "name": "Tượng đài Chiến thắng Buôn Ma Thuột & Nhà đày",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "19506177-71d0-44c0-adf6-48f9fd17ea29",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Tượng đài Chiến thắng Buôn Ma Thuột với chiếc xe tăng lịch sử tại Ngã Sáu trung tâm thành phố.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Bệ tượng đài bê tông cao vút nâng đỡ chiếc xe tăng hướng mũi tên về phía trước giữa vòng xoay",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tuong_dai_Chien_thang_Buon_Ma_Thuot.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Tuong_dai_Chien_thang_Buon_Ma_Thuot.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "55fdba39-a298-4550-8b8b-46a7c0c78d4c",
+    "slug": "vung-ro-phu-yen",
+    "locality_code": "66",
+    "name": "Khu di tích Quốc gia đặc biệt Vịnh Vũng Rô",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "f739d546-bece-4af3-996b-7f695d2e90ed",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Toàn cảnh Vịnh Vũng Rô xanh biếc dưới chân Đèo Cả – nơi ghi dấu huyền thoại Tàu Không số.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Vịnh biển nước xanh ngắt hình bán nguyệt nép mình dưới chân những dãy núi đá cao hùng vĩ",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vinh_Vung_Ro_Phu_Yen.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Vinh_Vung_Ro_Phu_Yen.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "485ab12c-0d4e-42e3-b7ca-e6d734145d87",
+    "slug": "truong-duc-thanh",
+    "locality_code": "68",
+    "name": "Khu di tích Lịch sử Trường Dục Thanh",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "aea4c68b-b61e-4d85-86a2-4be4dfd3706f",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Mái nhà gỗ cổ kính và vườn cây xanh Trường Dục Thanh – nơi thầy giáo Nguyễn Tất Thành dạy học năm 1910.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Ngôi nhà gỗ lợp ngói âm dương cổ kính với hàng hiên thoáng mát giữa vườn cây râm mát",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Truong_Duc_Thanh_Phan_Thiet.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Truong_Duc_Thanh_Phan_Thiet.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "8fef1b92-28ad-49cd-9c33-2419de61b89a",
+    "slug": "nha-lao-thieu-nhi-da-lat",
+    "locality_code": "68",
+    "name": "Di tích Lịch sử Nhà lao Thiếu nhi Đà Lạt",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "a4e8c2a8-a84e-4c43-85a8-057c0e8b6551",
+        "width": 1200,
+        "height": 800,
+        "caption": "Khuôn viên Di tích Lịch sử Quốc gia Nhà lao Thiếu nhi Đà Lạt giữa rừng thông thơ mộng.",
+        "license": null,
+        "alt_text": "Các dãy nhà giam tường đá kiên cố mái tôn xám nép mình bên sườn đồi thông Đà Lạt",
+        "file_url": "https://lamdong.gov.vn/uploads/images/2021/06/nha-lao-thieu-nhi-da-lat.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử tỉnh Lâm Đồng",
+        "source_page_url": "https://lamdong.gov.vn/di-tich-nha-lao-thieu-nhi"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "f2fbc2ed-28e7-4969-b7d1-62914e17887e",
+    "slug": "chien-thang-xuan-loc-1975",
+    "locality_code": "75",
+    "name": "Di tích Lịch sử Chiến thắng Xuân Lộc 1975",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "9f91075e-a5a5-4076-a923-ff87a167c7ef",
+        "width": 1200,
+        "height": 800,
+        "caption": "Tượng đài Chiến thắng Xuân Lộc 1975 sừng sững tại trung tâm thành phố Long Khánh, Đồng Nai.",
+        "license": null,
+        "alt_text": "Tượng đài hình mũi tên chiến thắng bằng đá hoa cương vươn thẳng lên bầu trời xanh",
+        "file_url": "https://dongnai.gov.vn/uploads/images/2021/04/tuong-dai-chien-thang-xuan-loc.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử tỉnh Đồng Nai",
+        "source_page_url": "https://dongnai.gov.vn/di-tich-chien-thang-xuan-loc"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "32547377-371f-4f1c-8a5d-99a4c4eb2333",
+    "slug": "can-cu-ta-thiet",
+    "locality_code": "75",
+    "name": "Khu di tích Quốc gia đặc biệt Căn cứ Tà Thiết",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "c2de2b7c-03d7-42d1-aca6-68efdc9104ba",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Lán làm việc bán âm đơn sơ của Bộ Chỉ huy Chiến dịch Hồ Chí Minh tại Căn cứ Tà Thiết.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Ngôi lán gỗ mái lợp lá trung quân nép mình dưới bóng cây rừng đại ngàn râm mát",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Can_cu_Ta_Thiet_Binh_Phuoc.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Can_cu_Ta_Thiet_Binh_Phuoc.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "54c48533-6e8a-4c09-a627-0fd8c73f6a00",
+    "slug": "dia-dao-cu-chi",
+    "locality_code": "79",
+    "name": "Khu di tích Quốc gia đặc biệt Địa đạo Củ Chi",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "579406a5-7caf-4874-b867-a1ae7dde08c3",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Nắp hầm bí mật ngụy trang bằng lá khô mở lối vào hệ thống mê cung Địa đạo Củ Chi.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Nắp hầm gỗ nhỏ ngụy trang lá cây vừa một người chui lọt giữa rừng cao su Củ Chi",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dia_dao_Cu_Chi_Ben_Dinh.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Dia_dao_Cu_Chi_Ben_Dinh.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "21c4b7ec-ea5a-4295-84e2-1072916d6b77",
+    "slug": "can-cu-trung-uong-cuc-mien-nam",
+    "locality_code": "80",
+    "name": "Khu di tích Quốc gia đặc biệt Căn cứ Trung ương Cục miền Nam",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "2cbe2204-a57d-4cd5-9d52-1c6bb7af2fbb",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Nhà làm việc lợp lá trung quân mộc mạc tại Di tích Quốc gia Đặc biệt Căn cứ Trung ương Cục miền Nam.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Ngôi nhà gỗ đơn sơ mái lá trung quân nép mình dưới bóng rừng đại ngàn Tân Biên",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Can_cu_Trung_uong_Cuc_Tay_Ninh.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Can_cu_Trung_uong_Cuc_Tay_Ninh.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "3e3d45ae-de54-4e29-91c2-7d8760afa794",
+    "slug": "nga-tu-duc-hoa",
+    "locality_code": "80",
+    "name": "Khu di tích Lịch sử Ngã tư Đức Hòa",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "fda09b6d-ff03-4060-b457-2962f38febcf",
+        "width": 1200,
+        "height": 800,
+        "caption": "Tượng đài đồng chí Võ Văn Tần tại Khu di tích Lịch sử Quốc gia Ngã tư Đức Hòa.",
+        "license": null,
+        "alt_text": "Tượng đài nhà cách mạng kiên trung bằng đá đứng uy nghiêm giữa quảng trường hoa",
+        "file_url": "https://tayninh.gov.vn/uploads/images/2021/06/di-tich-nga-tu-duc-hoa.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử",
+        "source_page_url": "https://tayninh.gov.vn/di-tich-nga-tu-duc-hoa"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "453aed77-b35d-4220-a49f-4a1743ce7b52",
+    "slug": "chien-thang-ap-bac-1963",
+    "locality_code": "82",
+    "name": "Khu di tích Quốc gia đặc biệt Địa điểm Chiến thắng Ấp Bắc",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "323d8814-3d4a-48a6-8b12-afcfc00fa7fd",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Tượng đài ba chiến sĩ gang thép tại Khu di tích Quốc gia Đặc biệt Chiến thắng Ấp Bắc.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Nhóm tượng đài bằng đồng đỏ tạc ba người chiến sĩ giải phóng quân xung trận anh dũng",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khu_di_tich_Ap_Bac_Tien_Giang.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Khu_di_tich_Ap_Bac_Tien_Giang.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "fec39fe5-407a-4ccf-a1d7-3c1cf31fb136",
+    "slug": "mo-cu-pho-bang-nguyen-sinh-sac",
+    "locality_code": "82",
+    "name": "Khu di tích Mộ Cụ Phó bảng Nguyễn Sinh Sắc",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "b4fed9b1-f028-4df5-9e96-0c2e7a12f782",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Khu lăng mộ Cụ Phó bảng Nguyễn Sinh Sắc với vòm mái hình cánh sen cách điệu tại thành phố Cao Lãnh.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Vòm mái kiến trúc hình cánh hoa sen trắng thanh thoát vươn trên mặt hồ nước phẳng lặng",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mo_Cu_Nguyen_Sinh_Sac_Dong_Thap.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Mo_Cu_Nguyen_Sinh_Sac_Dong_Thap.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "96af01b9-5503-46b6-b8a7-873c52da66bc",
+    "slug": "dong-khoi-ben-tre-1960",
+    "locality_code": "86",
+    "name": "Khu di tích Quốc gia đặc biệt Đồng Khởi Bến Tre",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "21fd0e40-3587-4f54-bdc4-a8b9bfab137a",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Nhà truyền thống Khu di tích Quốc gia Đặc biệt Đồng Khởi tại xã Định Thủy, huyện Mỏ Cày.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Nhà trưng bày mái dốc trang nhã bên rặng dừa xanh ngút ngàn của xứ dừa Bến Tre",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khu_di_tich_Dong_Khoi_Ben_Tre.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Khu_di_tich_Dong_Khoi_Ben_Tre.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "df28c47a-0f07-4fe6-95f1-c2ab841a7762",
+    "slug": "khu-tuong-niem-vo-van-kiet",
+    "locality_code": "86",
+    "name": "Khu tưởng niệm Cố Thủ tướng Võ Văn Kiệt",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "0394812e-70d8-4511-bf7e-722c06270b1e",
+        "width": 1200,
+        "height": 800,
+        "caption": "Không gian xanh mát Khu tưởng niệm Cố Thủ tướng Võ Văn Kiệt (Vườn ông Sáu Dân) tại Vũng Liêm.",
+        "license": null,
+        "alt_text": "Khuôn viên nhà tưởng niệm mái cong kiến trúc mở giữa vườn hoa cỏ xanh mướt",
+        "file_url": "https://vinhlong.gov.vn/uploads/images/2021/11/khu-tuong-niem-vo-van-kiet.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử tỉnh Vĩnh Long",
+        "source_page_url": "https://vinhlong.gov.vn/di-tich-vo-van-kiet"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "26b5fca5-d780-4d7b-8e58-bf6908973e6b",
+    "slug": "nha-tu-phu-quoc",
+    "locality_code": "91",
+    "name": "Di tích Quốc gia đặc biệt Trại giam Tù binh Phú Quốc",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "4139a5a7-1b17-46a0-bd20-bfa35a8613ce",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Mô hình phục dựng chuồng cọp kẽm gai ngoài trời tại Di tích Quốc gia Đặc biệt Nhà tù Phú Quốc.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Khung dây thép gai sắc nhọn bao quanh buồng nhốt chật hẹp ngoài trời trên nền cát trắng",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nha_tu_Phu_Quoc_Chuong_cop.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Nha_tu_Phu_Quoc_Chuong_cop.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "324981f3-2a9d-4b4f-9fca-72c278501424",
+    "slug": "khu-luu-niem-ton-duc-thang",
+    "locality_code": "91",
+    "name": "Khu lưu niệm Chủ tịch Tôn Đức Thắng",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "2168d110-6806-4c24-a528-428e6b2825c2",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Đền thờ Chủ tịch Tôn Đức Thắng kiến trúc cổ truyền tại Khu di tích Quốc gia Đặc biệt cù lao Ông Hổ.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Ngôi đền thờ gỗ cổ lợp ngói âm dương uy nghi giữa hoa viên cây xanh cù lao Ông Hổ",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khu_luu_niem_Ton_Duc_Thang_An_Giang.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Khu_luu_niem_Ton_Duc_Thang_An_Giang.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "2ab84ab5-2b9d-48e0-b57c-60ed211616b8",
+    "slug": "chien-thang-chuong-thien-1973",
+    "locality_code": "92",
+    "name": "Khu di tích Quốc gia đặc biệt Địa điểm Chiến thắng Chương Thiện 1973",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "21f18486-3f7d-4f3c-800f-d98ba2555ab3",
+        "width": 1200,
+        "height": 800,
+        "caption": "Khuôn viên Tượng đài Chiến thắng Chương Thiện – nơi đánh bại 75 lượt tiểu đoàn địch năm 1973.",
+        "license": null,
+        "alt_text": "Cụm tượng đài chiến sĩ bộ đội và nhân dân miền Tây Nam Bộ xung phong tiến công",
+        "file_url": "https://cantho.gov.vn/uploads/images/2021/07/di-tich-chien-thang-chuong-thien.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử",
+        "source_page_url": "https://cantho.gov.vn/di-tich-chien-thang-chuong-thien"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "b238f90e-58e1-4c07-b692-b64b3936f034",
+    "slug": "kham-lon-can-tho",
+    "locality_code": "92",
+    "name": "Di tích Lịch sử Khám Lớn Cần Thơ",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "f1b2e2d7-577f-43cb-b380-0d16e4670abc",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Bức tường đá kiên cố và cổng vào Di tích Lịch sử Quốc gia Khám Lớn Cần Thơ.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Tường thành nhà tù bằng đá xám cổ kính rêu phong với cổng vòm sắt sơn đen",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kham_Lon_Can_Tho_Prison.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Kham_Lon_Can_Tho_Prison.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "057f612e-8be6-4108-8a60-fab9c6e06935",
+    "slug": "khoi-nghia-hon-khoai-1940",
+    "locality_code": "96",
+    "name": "Di tích Lịch sử Khởi nghĩa Hòn Khoai 1940",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "e5ae2c04-4370-4a79-9d01-7eab1e5b7c39",
+        "width": 1200,
+        "height": 800,
+        "caption": "Ngọn hải đăng cổ kính trên đỉnh Hòn Khoai – nơi nổ ra cuộc khởi nghĩa vũ trang đêm 13/12/1940.",
+        "license": null,
+        "alt_text": "Ngọn tháp hải đăng cổ bằng đá xám vươn cao trên đỉnh núi phủ đầy rừng nhiệt đới giữa biển xanh",
+        "file_url": "https://camau.gov.vn/uploads/images/2021/12/hai-dang-hon-khoai-ca-mau.jpg",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "coursework_reference",
+        "photographer": "Cổng Thông tin Điện tử tỉnh Cà Mau",
+        "source_page_url": "https://camau.gov.vn/di-tich-khoi-nghia-hon-khoai"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "128511a7-f54a-44cb-832e-9bd6143fa5d4",
+    "slug": "ben-vam-lung",
+    "locality_code": "96",
+    "name": "Di tích Lịch sử Bến Vàm Lũng – Đường Hồ Chí Minh trên biển",
+    "heritage_tier": "extended",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "74dbc826-7cb1-4e14-a522-c204ae54e771",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Tượng đài kỷ niệm Bến Vàm Lũng – điểm cập bến lịch sử của những chuyến Tàu Không số tại Cà Mau.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Bia đá di tích hình con thuyền xé sóng đứng uy nghiêm bên cửa sông rừng đước ngập mặn",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ben_Vam_Lung_Ca_Mau.jpg?width=1600",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Ben_Vam_Lung_Ca_Mau.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "f0d2ff65-5110-4bf2-9bda-0697801120f9",
+    "slug": "pac-bo-cao-bang",
+    "locality_code": "04",
+    "name": "Pác Bó",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "5e35a38d-3f65-49f7-a075-9c631bf69d03",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Dòng suối Lê-nin trong xanh uốn lượn dưới chân núi Các Mác tại Khu di tích lịch sử Pác Bó, Cao Bằng.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Dòng suối nước màu xanh ngọc bích chảy quanh chân vách núi đá vôi phủ đầy cây rừng",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Suoi_Lenin_Pac_Bo.jpg?width=1600",
+        "is_cover": false,
+        "sort_order": 2,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Suoi_Lenin_Pac_Bo.jpg"
+      },
+      {
+        "id": "6931c617-1299-4f78-ab5f-7db9c3eb02d9",
+        "width": 2000,
+        "height": 1125,
+        "caption": "Suối Lê-nin, khu di tích Pác Bó, năm 2016.",
+        "license": "CC BY-SA 3.0",
+        "alt_text": "Dòng suối trong xanh chảy giữa núi đá ở khu di tích Pác Bó",
+        "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/pac-bo-cao-bang/suoi-le-nin-pac-bo-1200.webp",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Tycho (shansov.net)",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:P%C3%A1c_B%C3%B3.jpg"
+      }
+    ],
+    "location_videos": []
+  },
+  {
+    "id": "6fa76e00-2c99-4c4f-8d3e-73a48341a0df",
+    "slug": "dinh-doc-lap",
+    "locality_code": "79",
+    "name": "Dinh Độc Lập",
+    "heritage_tier": "grade12",
+    "workflow_status": "published",
+    "media_assets": [
+      {
+        "id": "1235ccda-2036-4e2c-a788-a4e5ac841fec",
+        "width": 1600,
+        "height": 1067,
+        "caption": "Toàn cảnh Di tích Quốc gia Đặc biệt Dinh Độc Lập (Hội trường Thống Nhất) tại Quận 1, TP. Hồ Chí Minh.",
+        "license": "CC BY-SA 4.0",
+        "alt_text": "Tòa nhà dinh thự kiến trúc hiện đại với rèm hoa đá trắng trang nhã nhìn ra bãi cỏ tròn xanh mướt",
+        "file_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dinh_Doc_Lap_Reunification_Palace.jpg?width=1600",
+        "is_cover": false,
+        "sort_order": 2,
+        "usage_basis": "open_license",
+        "photographer": "Wikimedia Commons Contributor",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Dinh_Doc_Lap_Reunification_Palace.jpg"
+      },
+      {
+        "id": "4bb12c15-d48d-4d86-b67a-aebb20c47ba4",
+        "width": 2000,
+        "height": 1333,
+        "caption": "Dinh Độc Lập (Dinh Thống Nhất) năm 2019.",
+        "license": "CC0",
+        "alt_text": "Mặt tiền Dinh Độc Lập với bãi cỏ rộng phía trước",
+        "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/dinh-doc-lap/20190923-independence-palace-10-1200.webp",
+        "is_cover": true,
+        "sort_order": 1,
+        "usage_basis": "open_license",
+        "photographer": "Balon Greyjoy",
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:20190923_Independence_Palace-10.jpg"
+      }
+    ],
+    "location_videos": []
+  }
+]
