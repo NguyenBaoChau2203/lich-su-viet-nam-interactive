@@ -14,8 +14,7 @@
 /coverage
 /playwright-report/
 /test-results/
-/output/playwright/
-/output/prototypes/
+/output/
 /outputs/
 /.review-render*/
 /.playwright-cli/
