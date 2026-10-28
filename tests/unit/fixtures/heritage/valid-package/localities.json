@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "framework": "VN-34-2025",
+  "localities": [
+    {
+      "code": "01",
+      "slug": "ha-noi",
+      "officialName": "Thành phố Hà Nội"
+    },
+    {
+      "code": "04",
+      "slug": "cao-bang",
+      "officialName": "Tỉnh Cao Bằng"
+    },
+    {
+      "code": "08",
+      "slug": "tuyen-quang",
+      "officialName": "Tỉnh Tuyên Quang"
+    },
+    {
+      "code": "11",
+      "slug": "dien-bien",
+      "officialName": "Tỉnh Điện Biên"
+    },
+    {
+      "code": "12",
+      "slug": "lai-chau",
+      "officialName": "Tỉnh Lai Châu"
+    },
+    {
+      "code": "14",
+      "slug": "son-la",
+      "officialName": "Tỉnh Sơn La"
+    },
+    {
+      "code": "15",
+      "slug": "lao-cai",
+      "officialName": "Tỉnh Lào Cai"
+    },
+    {
+      "code": "19",
+      "slug": "thai-nguyen",
+      "officialName": "Tỉnh Thái Nguyên"
+    },
+    {
+      "code": "20",
+      "slug": "lang-son",
+      "officialName": "Tỉnh Lạng Sơn"
+    },
+    {
+      "code": "22",
+      "slug": "quang-ninh",
+      "officialName": "Tỉnh Quảng Ninh"
+    },
+    {
+      "code": "24",
+      "slug": "bac-ninh",
+      "officialName": "Tỉnh Bắc Ninh"
+    },
+    {
+      "code": "25",
+      "slug": "phu-tho",
+      "officialName": "Tỉnh Phú Thọ"
+    },
+    {
+      "code": "31",
+      "slug": "hai-phong",
+      "officialName": "Thành phố Hải Phòng"
+    },
+    {
+      "code": "33",
+      "slug": "hung-yen",
+      "officialName": "Tỉnh Hưng Yên"
+    },
+    {
+      "code": "37",
+      "slug": "ninh-binh",
+      "officialName": "Tỉnh Ninh Bình"
+    },
+    {
+      "code": "38",
+      "slug": "thanh-hoa",
+      "officialName": "Tỉnh Thanh Hóa"
+    },
+    {
+      "code": "40",
+      "slug": "nghe-an",
+      "officialName": "Tỉnh Nghệ An"
+    },
+    {
+      "code": "42",
+      "slug": "ha-tinh",
+      "officialName": "Tỉnh Hà Tĩnh"
+    },
+    {
+      "code": "44",
+      "slug": "quang-tri",
+      "officialName": "Tỉnh Quảng Trị"
+    },
+    {
+      "code": "46",
+      "slug": "hue",
+      "officialName": "Thành phố Huế"
+    },
+    {
+      "code": "48",
+      "slug": "da-nang",
+      "officialName": "Thành phố Đà Nẵng"
+    },
+    {
+      "code": "51",
+      "slug": "quang-ngai",
+      "officialName": "Tỉnh Quảng Ngãi"
+    },
+    {
+      "code": "52",
+      "slug": "gia-lai",
+      "officialName": "Tỉnh Gia Lai"
+    },
+    {
+      "code": "56",
+      "slug": "khanh-hoa",
+      "officialName": "Tỉnh Khánh Hòa"
+    },
+    {
+      "code": "66",
+      "slug": "dak-lak",
+      "officialName": "Tỉnh Đắk Lắk"
+    },
+    {
+      "code": "68",
+      "slug": "lam-dong",
+      "officialName": "Tỉnh Lâm Đồng"
+    },
+    {
+      "code": "75",
+      "slug": "dong-nai",
+      "officialName": "Tỉnh Đồng Nai"
+    },
+    {
+      "code": "79",
+      "slug": "ho-chi-minh",
+      "officialName": "Thành phố Hồ Chí Minh"
+    },
+    {
+      "code": "80",
+      "slug": "tay-ninh",
+      "officialName": "Tỉnh Tây Ninh"
+    },
+    {
+      "code": "82",
+      "slug": "dong-thap",
+      "officialName": "Tỉnh Đồng Tháp"
+    },
+    {
+      "code": "86",
+      "slug": "vinh-long",
+      "officialName": "Tỉnh Vĩnh Long"
+    },
+    {
+      "code": "91",
+      "slug": "an-giang",
+      "officialName": "Tỉnh An Giang"
+    },
+    {
+      "code": "92",
+      "slug": "can-tho",
+      "officialName": "Thành phố Cần Thơ"
+    },
+    {
+      "code": "96",
+      "slug": "ca-mau",
+      "officialName": "Tỉnh Cà Mau"
+    }
+  ]
+}

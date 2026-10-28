@@ -1,0 +1,2631 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "key": "nha-tu-hoa-lo-cover",
+      "site": "nha-tu-hoa-lo",
+      "origin": "commons",
+      "commons": {
+        "title": "File:nha-tu-hoa-lo-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:nha-tu-hoa-lo-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 1",
+        "credit": "Photographer 1",
+        "originalWidth": 2400,
+        "originalHeight": 1600
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/nha-tu-hoa-lo-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "4877d3bcd982b9160a811847a046560ba0d94ce390781809a8fe1244dc395b08",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 267,
+          "bytes": 15000,
+          "sha256": "63e9dc08a7c7f97aee4de9f5b96e201a421d1e1c5a594e7338ca3144f5775f38"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 800,
+          "bytes": 45000,
+          "sha256": "77feb925d4feda21d53671319e35da2e5ded7939600749e9a73939e4dda92f84"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế nha-tu-hoa-lo",
+      "searchLog": [
+        "Imported nha-tu-hoa-lo"
+      ]
+    },
+    {
+      "key": "hoang-thanh-thang-long-cover",
+      "site": "hoang-thanh-thang-long",
+      "origin": "commons",
+      "commons": {
+        "title": "File:hoang-thanh-thang-long-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:hoang-thanh-thang-long-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 2",
+        "credit": "Photographer 2",
+        "originalWidth": 2400,
+        "originalHeight": 1602
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/hoang-thanh-thang-long-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "21ff3cdd48f9eae18e06ee9e7d3f388ebf89a54146b8632c2c5bbc9de007bed9",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 267,
+          "bytes": 15000,
+          "sha256": "4666d230612d55323cff3bb64c139404484ea0bc08fdab202bbe0a8f46d0a0e0"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 801,
+          "bytes": 45000,
+          "sha256": "757e1a5a7cd33ac16a4342c53c621a0706f300b5633e23ee7c5007ab62a722e9"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế hoang-thanh-thang-long",
+      "searchLog": [
+        "Imported hoang-thanh-thang-long"
+      ]
+    },
+    {
+      "key": "pac-bo-cao-bang-cover",
+      "site": "pac-bo-cao-bang",
+      "origin": "commons",
+      "commons": {
+        "title": "File:pac-bo-cao-bang-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:pac-bo-cao-bang-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 3",
+        "credit": "Photographer 3",
+        "originalWidth": 2400,
+        "originalHeight": 1604
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/pac-bo-cao-bang-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "ad035e9ca8cd4fa8d8b824d50ffece1a603bade95d3a2e04644fa08de05e5baf",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 267,
+          "bytes": 15000,
+          "sha256": "90057e3df8692c830b0d9bf4384fcbeff4e32fadcc977178a486d2bc72cc91e7"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 802,
+          "bytes": 45000,
+          "sha256": "888f7f0ceae333bedc9282948903879110722bdfa16be50e6a2d457e0d562636"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế pac-bo-cao-bang",
+      "searchLog": [
+        "Imported pac-bo-cao-bang"
+      ]
+    },
+    {
+      "key": "rung-tran-hung-dao-cover",
+      "site": "rung-tran-hung-dao",
+      "origin": "commons",
+      "commons": {
+        "title": "File:rung-tran-hung-dao-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:rung-tran-hung-dao-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 4",
+        "credit": "Photographer 4",
+        "originalWidth": 2400,
+        "originalHeight": 1606
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/rung-tran-hung-dao-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "973c563431f9a91e38d590b281794151f21d3c158f2bc01aed873cc343e72531",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 268,
+          "bytes": 15000,
+          "sha256": "834b58276a950babd209ee20bf051bf9c2e97b58a294ee5ce7110a22cad04105"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 803,
+          "bytes": 45000,
+          "sha256": "bf5c0df3239e6061a26edbe71a8aa7f319cc380b7b9a97a440c1748d696dc247"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế rung-tran-hung-dao",
+      "searchLog": [
+        "Imported rung-tran-hung-dao"
+      ]
+    },
+    {
+      "key": "khu-di-tich-tan-trao-cover",
+      "site": "khu-di-tich-tan-trao",
+      "origin": "commons",
+      "commons": {
+        "title": "File:khu-di-tich-tan-trao-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:khu-di-tich-tan-trao-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 5",
+        "credit": "Photographer 5",
+        "originalWidth": 2400,
+        "originalHeight": 1608
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/khu-di-tich-tan-trao-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "7ce14dc2438605ffd88de8a6c366d00b1e1c45da857704a0c3a37d8d686187cf",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 268,
+          "bytes": 15000,
+          "sha256": "6fbed98cc8381ba0de83fc2582553f9939725343183b8fa67e5d71c98b86b7e1"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 804,
+          "bytes": 45000,
+          "sha256": "33107e942ceee5d5328dd6169fac642fec551a3c150193663fc112e299a58285"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế khu-di-tich-tan-trao",
+      "searchLog": [
+        "Imported khu-di-tich-tan-trao"
+      ]
+    },
+    {
+      "key": "cot-co-lung-cu-cover",
+      "site": "cot-co-lung-cu",
+      "origin": "commons",
+      "commons": {
+        "title": "File:cot-co-lung-cu-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:cot-co-lung-cu-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 6",
+        "credit": "Photographer 6",
+        "originalWidth": 2400,
+        "originalHeight": 1610
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/cot-co-lung-cu-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "42673d7385d0acdf65e5c8a8336bad53f7202e63bcbd501f250e72e71d819a6b",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 268,
+          "bytes": 15000,
+          "sha256": "4690a7f646549f1dd9d63c00a2c28e60230f2f917083bb8b14344ebe9be01dcf"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 805,
+          "bytes": 45000,
+          "sha256": "66ed6c7148b3516ea09ad2d1746af22ca98a505fd8319c0cb0ec1cda46342dae"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế cot-co-lung-cu",
+      "searchLog": [
+        "Imported cot-co-lung-cu"
+      ]
+    },
+    {
+      "key": "doi-a1-dien-bien-phu-cover",
+      "site": "doi-a1-dien-bien-phu",
+      "origin": "commons",
+      "commons": {
+        "title": "File:doi-a1-dien-bien-phu-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:doi-a1-dien-bien-phu-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 7",
+        "credit": "Photographer 7",
+        "originalWidth": 2400,
+        "originalHeight": 1612
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/doi-a1-dien-bien-phu-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "ad6f41aa21a777e112bb588d7101a3d592f4b043e6d7c21de05cc96031a8b6a5",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 269,
+          "bytes": 15000,
+          "sha256": "3a71fbf3b2283d0b34925799d61ddc3ec4132a79aaa37eaa4e66983afcb573cc"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 806,
+          "bytes": 45000,
+          "sha256": "bf8e768dfaa5b3e7c09516d3369d56e8a1124c6bc3be519cad2e83a40b81dfaf"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế doi-a1-dien-bien-phu",
+      "searchLog": [
+        "Imported doi-a1-dien-bien-phu"
+      ]
+    },
+    {
+      "key": "ham-de-castries-cover",
+      "site": "ham-de-castries",
+      "origin": "commons",
+      "commons": {
+        "title": "File:ham-de-castries-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:ham-de-castries-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 8",
+        "credit": "Photographer 8",
+        "originalWidth": 2400,
+        "originalHeight": 1614
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/ham-de-castries-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "9783d8f2187460f2b1e67b22fd565c4fb2a532d60f0783a5817e616bae38ce82",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 269,
+          "bytes": 15000,
+          "sha256": "37af1fc91929f4ca61b80185a3dea4af0290895f2201d57ab7aaa03e8cb3dc75"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 807,
+          "bytes": 45000,
+          "sha256": "c66357d9de16147841f3fb60154117a73be2f62e5adf7be2a49816ed987b7691"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế ham-de-castries",
+      "searchLog": [
+        "Imported ham-de-castries"
+      ]
+    },
+    {
+      "key": "chien-thang-lai-chau-1953-cover",
+      "site": "chien-thang-lai-chau-1953",
+      "origin": "commons",
+      "commons": {
+        "title": "File:chien-thang-lai-chau-1953-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:chien-thang-lai-chau-1953-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 9",
+        "credit": "Photographer 9",
+        "originalWidth": 2400,
+        "originalHeight": 1616
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/chien-thang-lai-chau-1953-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "2c7d926093c25d8c085078e6db47e9c6038466cd182871e4a697d2b2204efb3b",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 269,
+          "bytes": 15000,
+          "sha256": "f9197635ba6992ef7cd90297871073ee2c6c7642dad7693661d6881e434cc7ca"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 808,
+          "bytes": 45000,
+          "sha256": "45662ca24d854a40638363edb095872dff4dc05a807b00951d3efa7330ff9518"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế chien-thang-lai-chau-1953",
+      "searchLog": [
+        "Imported chien-thang-lai-chau-1953"
+      ]
+    },
+    {
+      "key": "nha-tu-son-la-cover",
+      "site": "nha-tu-son-la",
+      "origin": "commons",
+      "commons": {
+        "title": "File:nha-tu-son-la-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:nha-tu-son-la-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 10",
+        "credit": "Photographer 10",
+        "originalWidth": 2400,
+        "originalHeight": 1618
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/nha-tu-son-la-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "dbdb3863c2412d4d264df03e7f276d4d3473dc82e1da18344f2679305b9a5514",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 270,
+          "bytes": 15000,
+          "sha256": "7176af19764d0b2b5053b79101a253fefef4ae720ec6838a6c5cf9ac1a418309"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 809,
+          "bytes": 45000,
+          "sha256": "20c663d726c0800913ad0de675829f2ec19a792aac1f167839a7b713f4cf86f1"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế nha-tu-son-la",
+      "searchLog": [
+        "Imported nha-tu-son-la"
+      ]
+    },
+    {
+      "key": "khoi-nghia-yen-bai-1930-cover",
+      "site": "khoi-nghia-yen-bai-1930",
+      "origin": "commons",
+      "commons": {
+        "title": "File:khoi-nghia-yen-bai-1930-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:khoi-nghia-yen-bai-1930-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 11",
+        "credit": "Photographer 11",
+        "originalWidth": 2400,
+        "originalHeight": 1620
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/khoi-nghia-yen-bai-1930-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "a71867c47f3eaa090b7783e30277c5b0286325d33a1cab0170c164a2bb728a07",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 270,
+          "bytes": 15000,
+          "sha256": "2bc87d5c6bce06c99efcbdccb3746cc400ecd3a874a9b8d7405996c6ad430d45"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 810,
+          "bytes": 45000,
+          "sha256": "67fac6c2355124cc1de84753bb93056ad4d6a01e473fd2c2a9e5eaeefa5a038c"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế khoi-nghia-yen-bai-1930",
+      "searchLog": [
+        "Imported khoi-nghia-yen-bai-1930"
+      ]
+    },
+    {
+      "key": "atk-dinh-hoa-cover",
+      "site": "atk-dinh-hoa",
+      "origin": "commons",
+      "commons": {
+        "title": "File:atk-dinh-hoa-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:atk-dinh-hoa-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 12",
+        "credit": "Photographer 12",
+        "originalWidth": 2400,
+        "originalHeight": 1622
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/atk-dinh-hoa-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "062cd1bda378f10cddbb667265ddccedb7e046b53afab6d26ac38b9dc3a5937a",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 270,
+          "bytes": 15000,
+          "sha256": "dc9582685223f1c185a31099bd7024a0257e7186ccb3b188a6e22771dbada2b7"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 811,
+          "bytes": 45000,
+          "sha256": "4c44cf7f04953a999a102a2afae5104fc27fdf69043a14def7661568c1c16be2"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế atk-dinh-hoa",
+      "searchLog": [
+        "Imported atk-dinh-hoa"
+      ]
+    },
+    {
+      "key": "atk-cho-don-cover",
+      "site": "atk-cho-don",
+      "origin": "commons",
+      "commons": {
+        "title": "File:atk-cho-don-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:atk-cho-don-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 13",
+        "credit": "Photographer 13",
+        "originalWidth": 2400,
+        "originalHeight": 1624
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/atk-cho-don-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "d58eaa4d57d4b6e2954ee1c4d59de8e23e63b91ecbd56935a844a3dd5ff8fadc",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 271,
+          "bytes": 15000,
+          "sha256": "c28aab4b19ad46fb7fe19448f47e785bcc113e574585cb12c2c7b1f324ac6038"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 812,
+          "bytes": 45000,
+          "sha256": "5a4778d2ccffdf211e7c592f5ec7d534d66aa50698badaae2cc68150d62928ea"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế atk-cho-don",
+      "searchLog": [
+        "Imported atk-cho-don"
+      ]
+    },
+    {
+      "key": "khoi-nghia-bac-son-cover",
+      "site": "khoi-nghia-bac-son",
+      "origin": "commons",
+      "commons": {
+        "title": "File:khoi-nghia-bac-son-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:khoi-nghia-bac-son-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 14",
+        "credit": "Photographer 14",
+        "originalWidth": 2400,
+        "originalHeight": 1626
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/khoi-nghia-bac-son-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "749503932c5b0719e277ec145f23be1a5bb2f1d6cce4005cb11148bd7abe5461",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 271,
+          "bytes": 15000,
+          "sha256": "3c65559ccd554a59f93441fef5c35ccc99746abafe6528692dad2be42d183ab2"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 813,
+          "bytes": 45000,
+          "sha256": "43b904598a4759ec8853564b65c1f8a72ccdfc14f920edd476501a3ac1d9debb"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế khoi-nghia-bac-son",
+      "searchLog": [
+        "Imported khoi-nghia-bac-son"
+      ]
+    },
+    {
+      "key": "ai-chi-lang-cover",
+      "site": "ai-chi-lang",
+      "origin": "commons",
+      "commons": {
+        "title": "File:ai-chi-lang-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:ai-chi-lang-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 15",
+        "credit": "Photographer 15",
+        "originalWidth": 2400,
+        "originalHeight": 1628
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/ai-chi-lang-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "82d26a9ea83f92f0c1c76eedc183f839b2c139d5fa778f36665455f95f5d81ce",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 271,
+          "bytes": 15000,
+          "sha256": "84239d39fea974c7d1bf80b3f85dd7ec9f956f3f5968bd5e4dd3ed7dc417170d"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 814,
+          "bytes": 45000,
+          "sha256": "41da33c48f5e95cf8eaba8958a1a35a3660a183f555dd4e3773cf69d548fa9e6"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế ai-chi-lang",
+      "searchLog": [
+        "Imported ai-chi-lang"
+      ]
+    },
+    {
+      "key": "mo-than-deo-nai-cover",
+      "site": "mo-than-deo-nai",
+      "origin": "commons",
+      "commons": {
+        "title": "File:mo-than-deo-nai-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:mo-than-deo-nai-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 16",
+        "credit": "Photographer 16",
+        "originalWidth": 2400,
+        "originalHeight": 1630
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/mo-than-deo-nai-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "6fb3bc4f0bd3e9528e21086b18c635b228e0daff378f2d0365fd01d3a1c18884",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 272,
+          "bytes": 15000,
+          "sha256": "58a7a5cbeb153f83788f0fe9e3c456603542f776359e02773f755fee48859fc2"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 815,
+          "bytes": 45000,
+          "sha256": "b112a6de35d2c60d11f76d01dca37933eeebc96526e4781038d6c3166aaa312c"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế mo-than-deo-nai",
+      "searchLog": [
+        "Imported mo-than-deo-nai"
+      ]
+    },
+    {
+      "key": "bai-coc-bach-dang-cover",
+      "site": "bai-coc-bach-dang",
+      "origin": "commons",
+      "commons": {
+        "title": "File:bai-coc-bach-dang-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:bai-coc-bach-dang-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 17",
+        "credit": "Photographer 17",
+        "originalWidth": 2400,
+        "originalHeight": 1632
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/bai-coc-bach-dang-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "4fbd8d6481aec26089d0094e3bfadacdbaa8c5add6d2429b02d5c35e7c92b0cb",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 272,
+          "bytes": 15000,
+          "sha256": "5339fea7482b1081093bd0579d929229579b0e3eaeb9f7acc3e173f72613784a"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 816,
+          "bytes": 45000,
+          "sha256": "4c5fda3ef7949cb65dbd3f78e2a59c68784d6ca7a6f77b2f0e1882438070b05a"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế bai-coc-bach-dang",
+      "searchLog": [
+        "Imported bai-coc-bach-dang"
+      ]
+    },
+    {
+      "key": "atk-ii-hiep-hoa-cover",
+      "site": "atk-ii-hiep-hoa",
+      "origin": "commons",
+      "commons": {
+        "title": "File:atk-ii-hiep-hoa-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:atk-ii-hiep-hoa-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 18",
+        "credit": "Photographer 18",
+        "originalWidth": 2400,
+        "originalHeight": 1634
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/atk-ii-hiep-hoa-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "c926fe7d2b4e6636608ba951511e49cc7f4962ff6b13187e951bf8b10c9a141a",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 272,
+          "bytes": 15000,
+          "sha256": "e04ad9c115fdd31b51fef057a2e8481b88e101d5ac8ce90549c6d93db016f36a"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 817,
+          "bytes": 45000,
+          "sha256": "b59e86f9f9cda97975fff63d77d5ef5dae10cfbf315f0511304cf3c4da40112b"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế atk-ii-hiep-hoa",
+      "searchLog": [
+        "Imported atk-ii-hiep-hoa"
+      ]
+    },
+    {
+      "key": "khoi-nghia-yen-the-cover",
+      "site": "khoi-nghia-yen-the",
+      "origin": "commons",
+      "commons": {
+        "title": "File:khoi-nghia-yen-the-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:khoi-nghia-yen-the-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 19",
+        "credit": "Photographer 19",
+        "originalWidth": 2400,
+        "originalHeight": 1636
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/khoi-nghia-yen-the-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "999b7cb8b8cc5c9388154e604141abff787169d6b34585cf65098cb92b4ae01c",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 273,
+          "bytes": 15000,
+          "sha256": "a4866de5640db94127cd80866d5c8a13f686b9249c7bcd64c168f8e772d3e55c"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 818,
+          "bytes": 45000,
+          "sha256": "52cdf6f763260881a1d39799466720752f914e7882f5fff028d9608e37ada252"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế khoi-nghia-yen-the",
+      "searchLog": [
+        "Imported khoi-nghia-yen-the"
+      ]
+    },
+    {
+      "key": "chien-thang-song-lo-doan-hung-cover",
+      "site": "chien-thang-song-lo-doan-hung",
+      "origin": "commons",
+      "commons": {
+        "title": "File:chien-thang-song-lo-doan-hung-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:chien-thang-song-lo-doan-hung-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 20",
+        "credit": "Photographer 20",
+        "originalWidth": 2400,
+        "originalHeight": 1638
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/chien-thang-song-lo-doan-hung-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "51e6a6c75844e71c63d5f04d89c7ffbc592f0060399bef35ed84b67afe15f6d3",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 273,
+          "bytes": 15000,
+          "sha256": "e3bf226352f550ad79f1905003ff48c665510ba3f03a4be2eccd10c2f3c317f1"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 819,
+          "bytes": 45000,
+          "sha256": "71af2c456d36e209cdc03bcc805327c2f39ce935159e44e782920b0ad3c34827"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế chien-thang-song-lo-doan-hung",
+      "searchLog": [
+        "Imported chien-thang-song-lo-doan-hung"
+      ]
+    },
+    {
+      "key": "khu-di-tich-den-hung-cover",
+      "site": "khu-di-tich-den-hung",
+      "origin": "commons",
+      "commons": {
+        "title": "File:khu-di-tich-den-hung-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:khu-di-tich-den-hung-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 21",
+        "credit": "Photographer 21",
+        "originalWidth": 2400,
+        "originalHeight": 1640
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/khu-di-tich-den-hung-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "caaabcb404c4444c5a8dd8a45a7168cfd146e2790a9bdfb24d3049ca9458b1e1",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 273,
+          "bytes": 15000,
+          "sha256": "f9e191b0f9d8f994ee6eae61e5b3554943b22b3d79fe8fb0a0d5bc02e48e8727"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 820,
+          "bytes": 45000,
+          "sha256": "b0c59ac48f62b4794862e19f7ec6501541e39e0c8b7b10eb8c489a3264cb18f9"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế khu-di-tich-den-hung",
+      "searchLog": [
+        "Imported khu-di-tich-den-hung"
+      ]
+    },
+    {
+      "key": "ben-k15-do-son-cover",
+      "site": "ben-k15-do-son",
+      "origin": "commons",
+      "commons": {
+        "title": "File:ben-k15-do-son-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:ben-k15-do-son-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 22",
+        "credit": "Photographer 22",
+        "originalWidth": 2400,
+        "originalHeight": 1642
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/ben-k15-do-son-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "7a4732eb6042bb87473ce50a00553ab13fd87002f446f38724ec584807831d8a",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 274,
+          "bytes": 15000,
+          "sha256": "08e2f95730d1b9d71dba6c329e82555680ebdad69e21bf952e611362ec05b491"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 821,
+          "bytes": 45000,
+          "sha256": "cf0460b6e9811f96136904229e80bf9cb3da45454b743837dad8de6aca8e453d"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế ben-k15-do-son",
+      "searchLog": [
+        "Imported ben-k15-do-son"
+      ]
+    },
+    {
+      "key": "con-son-kiep-bac-cover",
+      "site": "con-son-kiep-bac",
+      "origin": "commons",
+      "commons": {
+        "title": "File:con-son-kiep-bac-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:con-son-kiep-bac-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 23",
+        "credit": "Photographer 23",
+        "originalWidth": 2400,
+        "originalHeight": 1644
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/con-son-kiep-bac-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "b7360ea1ef1212fcfaa25fd36296d1122223e53b60c01f4c5bffcf315bf63853",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 274,
+          "bytes": 15000,
+          "sha256": "5511ebb4cc673217446dce12071e50764cf62eb32104f31efd194edbccd3e143"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 822,
+          "bytes": 45000,
+          "sha256": "e937461809ca89d244501664d1a86333778af4cdd1e0f5bc3f7add03586aa78d"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế con-son-kiep-bac",
+      "searchLog": [
+        "Imported con-son-kiep-bac"
+      ]
+    },
+    {
+      "key": "tieng-trong-tien-hai-cover",
+      "site": "tieng-trong-tien-hai",
+      "origin": "commons",
+      "commons": {
+        "title": "File:tieng-trong-tien-hai-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:tieng-trong-tien-hai-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 24",
+        "credit": "Photographer 24",
+        "originalWidth": 2400,
+        "originalHeight": 1646
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/tieng-trong-tien-hai-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "ca0e9ddb8f240a9f26d07806da192c107ff92f2259c7ff0fdd92bede2b355411",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 274,
+          "bytes": 15000,
+          "sha256": "1b1f4c641b128268dc199ce8cb190e382df4b32c2b7209388a77c3457cdadb3d"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 823,
+          "bytes": 45000,
+          "sha256": "a1b7cd9d38310a05ea4e46ee0e5a84af03819114f16617623342439bd4661aa5"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế tieng-trong-tien-hai",
+      "searchLog": [
+        "Imported tieng-trong-tien-hai"
+      ]
+    },
+    {
+      "key": "pho-hien-cover",
+      "site": "pho-hien",
+      "origin": "commons",
+      "commons": {
+        "title": "File:pho-hien-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:pho-hien-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 25",
+        "credit": "Photographer 25",
+        "originalWidth": 2400,
+        "originalHeight": 1648
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/pho-hien-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "6a086c8701a96e8ef849a2ec306f52115c6e8343c355dd4b74b7f90dd523e436",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 275,
+          "bytes": 15000,
+          "sha256": "502dbcb5a4d43d638abc0923f5503df2ea01f7dc3097b805951ae5630e6deeeb"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 824,
+          "bytes": 45000,
+          "sha256": "82ae2a95a8da7ed42330569e8a78347162c76e2ea0ecf81653576916905ebaf9"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế pho-hien",
+      "searchLog": [
+        "Imported pho-hien"
+      ]
+    },
+    {
+      "key": "nha-may-det-nam-dinh-cover",
+      "site": "nha-may-det-nam-dinh",
+      "origin": "commons",
+      "commons": {
+        "title": "File:nha-may-det-nam-dinh-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:nha-may-det-nam-dinh-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 26",
+        "credit": "Photographer 26",
+        "originalWidth": 2400,
+        "originalHeight": 1650
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/nha-may-det-nam-dinh-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "eca0b50923d11d8cfbcc020b89b3d72225d650b962473e1cc289e28671e05714",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 275,
+          "bytes": 15000,
+          "sha256": "f9b2ecb85cf94953483b9c2d1f39dadad18fb06f609bafb826caa4462bbcc340"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 825,
+          "bytes": 45000,
+          "sha256": "93f2e61727114cfa1118b8d8e842e02df3a48c1ea52bbae5d788a8ee1dc11311"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế nha-may-det-nam-dinh",
+      "searchLog": [
+        "Imported nha-may-det-nam-dinh"
+      ]
+    },
+    {
+      "key": "co-do-hoa-lu-cover",
+      "site": "co-do-hoa-lu",
+      "origin": "commons",
+      "commons": {
+        "title": "File:co-do-hoa-lu-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:co-do-hoa-lu-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 27",
+        "credit": "Photographer 27",
+        "originalWidth": 2400,
+        "originalHeight": 1652
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/co-do-hoa-lu-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "6f85e9e9694da26f805c322112b071ff5e63257863f7b19ea9aab5424beff979",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 275,
+          "bytes": 15000,
+          "sha256": "c8712a78efae09af17d6d7fe69fc102a5b53635ba8e0cf35d682a257fb69543a"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 826,
+          "bytes": 45000,
+          "sha256": "344c292c1b22c7547bd6e924569680a777eec84c1199b9ef0be6ccc92462e65d"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế co-do-hoa-lu",
+      "searchLog": [
+        "Imported co-do-hoa-lu"
+      ]
+    },
+    {
+      "key": "cau-ham-rong-cover",
+      "site": "cau-ham-rong",
+      "origin": "commons",
+      "commons": {
+        "title": "File:cau-ham-rong-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:cau-ham-rong-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 28",
+        "credit": "Photographer 28",
+        "originalWidth": 2400,
+        "originalHeight": 1654
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/cau-ham-rong-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "6231eb10f893ff00edbce679a003122be3d3ce7b2e7d966b007309a1fa3bedd1",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 276,
+          "bytes": 15000,
+          "sha256": "4346cb58027a7d390db21fed6b3ef2fe78839960ceaf7dc79dca616d6ad6ec05"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 827,
+          "bytes": 45000,
+          "sha256": "a813859a26814e0f652a3d5f1d1a1d409df33fcc7f1a7f8c12d36bcc39837018"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế cau-ham-rong",
+      "searchLog": [
+        "Imported cau-ham-rong"
+      ]
+    },
+    {
+      "key": "thanh-nha-ho-cover",
+      "site": "thanh-nha-ho",
+      "origin": "commons",
+      "commons": {
+        "title": "File:thanh-nha-ho-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:thanh-nha-ho-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 29",
+        "credit": "Photographer 29",
+        "originalWidth": 2400,
+        "originalHeight": 1656
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/thanh-nha-ho-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "aa4ef5d936c970a5629bbeb1d65c5bf550f1af0bb7f09ecd5829e30dd76c9885",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 276,
+          "bytes": 15000,
+          "sha256": "a318ff44e64df09d07e8dab674b73329021187e9562a030a74d4ef8d53fe7081"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 828,
+          "bytes": 45000,
+          "sha256": "ee6033fa7217a33566dada8db2cb84fcde36021b0caade264cef4ce7b0375f85"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế thanh-nha-ho",
+      "searchLog": [
+        "Imported thanh-nha-ho"
+      ]
+    },
+    {
+      "key": "khu-di-tich-kim-lien-cover",
+      "site": "khu-di-tich-kim-lien",
+      "origin": "commons",
+      "commons": {
+        "title": "File:khu-di-tich-kim-lien-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:khu-di-tich-kim-lien-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 30",
+        "credit": "Photographer 30",
+        "originalWidth": 2400,
+        "originalHeight": 1658
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/khu-di-tich-kim-lien-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "14675bf192d1d6305874137c75b3be8c80a2dac7c2b63383f1dcc8ef77c4ff08",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 276,
+          "bytes": 15000,
+          "sha256": "c6515140a41dc887e801bc70f80f0cd256131583d5bee1dc1d5f8004d73a17a8"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 829,
+          "bytes": 45000,
+          "sha256": "acf6ae7b32dfb732103e48c9c4e9686622820e6b0af38cbecd6a86af3de927cc"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế khu-di-tich-kim-lien",
+      "searchLog": [
+        "Imported khu-di-tich-kim-lien"
+      ]
+    },
+    {
+      "key": "truong-bon-cover",
+      "site": "truong-bon",
+      "origin": "commons",
+      "commons": {
+        "title": "File:truong-bon-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:truong-bon-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 31",
+        "credit": "Photographer 31",
+        "originalWidth": 2400,
+        "originalHeight": 1660
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/truong-bon-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "25602466971f891e624a9d71c741c0397e6611219a59c20061311ac1110fab34",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 277,
+          "bytes": 15000,
+          "sha256": "d927bc44d2abd759bac66c1d65c5cd123fded70e51545727ab96e2324be73646"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 830,
+          "bytes": 45000,
+          "sha256": "f87465b362822129d1f844fa5dac95abe637ba5202a7749521ee496884a34ec6"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế truong-bon",
+      "searchLog": [
+        "Imported truong-bon"
+      ]
+    },
+    {
+      "key": "nga-ba-dong-loc-cover",
+      "site": "nga-ba-dong-loc",
+      "origin": "commons",
+      "commons": {
+        "title": "File:nga-ba-dong-loc-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:nga-ba-dong-loc-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 32",
+        "credit": "Photographer 32",
+        "originalWidth": 2400,
+        "originalHeight": 1662
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/nga-ba-dong-loc-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "22f73b5fd047336e00b22367bae32560054615d2061d5a54ad8e7149107e1eee",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 277,
+          "bytes": 15000,
+          "sha256": "d44c8fc57a1262f944e0583f2ec8dd034ceb37b2e828c1213c7f8f1ef30fae21"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 831,
+          "bytes": 45000,
+          "sha256": "20d0769fd288e5af48df32a1f5abe2add3679b49ce0ec705ed82fd90326e41ea"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế nga-ba-dong-loc",
+      "searchLog": [
+        "Imported nga-ba-dong-loc"
+      ]
+    },
+    {
+      "key": "thanh-co-quang-tri-cover",
+      "site": "thanh-co-quang-tri",
+      "origin": "commons",
+      "commons": {
+        "title": "File:thanh-co-quang-tri-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:thanh-co-quang-tri-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 33",
+        "credit": "Photographer 33",
+        "originalWidth": 2400,
+        "originalHeight": 1664
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/thanh-co-quang-tri-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "27086ca12ff87df4e28e996341b49bdeb5f1385551d6849bc13402890233c664",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 277,
+          "bytes": 15000,
+          "sha256": "0fb7152b2db3c8ba5cfbc1057eeda18fdba0d33b08cf078768a1cc36bcf9a888"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 832,
+          "bytes": 45000,
+          "sha256": "52e6d0979a90d162cef09d5cba09ca113e5f070dd8942fd994718baaf8ca2bea"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế thanh-co-quang-tri",
+      "searchLog": [
+        "Imported thanh-co-quang-tri"
+      ]
+    },
+    {
+      "key": "doi-bo-hien-luong-ben-hai-cover",
+      "site": "doi-bo-hien-luong-ben-hai",
+      "origin": "commons",
+      "commons": {
+        "title": "File:doi-bo-hien-luong-ben-hai-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:doi-bo-hien-luong-ben-hai-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 34",
+        "credit": "Photographer 34",
+        "originalWidth": 2400,
+        "originalHeight": 1666
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/doi-bo-hien-luong-ben-hai-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "35d3ce01358338693d28933eb24a33665d4a0e86dd7146ffc15a23439ab96d19",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 278,
+          "bytes": 15000,
+          "sha256": "c3771a14803defa748c0e7193bb9f49e98ad46be9d07a25dfc8f7138e1ba64fb"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 833,
+          "bytes": 45000,
+          "sha256": "3be900f9606ba57580784be80db4abb0686f7251c85a914c93d56d7cd67f6710"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế doi-bo-hien-luong-ben-hai",
+      "searchLog": [
+        "Imported doi-bo-hien-luong-ben-hai"
+      ]
+    },
+    {
+      "key": "ngo-mon-hue-cover",
+      "site": "ngo-mon-hue",
+      "origin": "commons",
+      "commons": {
+        "title": "File:ngo-mon-hue-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:ngo-mon-hue-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 35",
+        "credit": "Photographer 35",
+        "originalWidth": 2400,
+        "originalHeight": 1668
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/ngo-mon-hue-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "5c86accdcd505c37a1214eb4023a0e7290416b1ad891551e2e99b5485e6290ae",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 278,
+          "bytes": 15000,
+          "sha256": "9ec1048f532a43040c5d0db6aeb0b1522430b222ced409e492ef5af0fb977332"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 834,
+          "bytes": 45000,
+          "sha256": "37916cfd8f9692f17821bbc170d62b058602141d4f2f00e5cdca11a04e9d67b0"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế ngo-mon-hue",
+      "searchLog": [
+        "Imported ngo-mon-hue"
+      ]
+    },
+    {
+      "key": "kinh-thanh-hue-1968-cover",
+      "site": "kinh-thanh-hue-1968",
+      "origin": "commons",
+      "commons": {
+        "title": "File:kinh-thanh-hue-1968-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:kinh-thanh-hue-1968-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 36",
+        "credit": "Photographer 36",
+        "originalWidth": 2400,
+        "originalHeight": 1670
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/kinh-thanh-hue-1968-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "345cefeb9a61914f442620463c129816ec807c4100ae6a921b74993c42232792",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 278,
+          "bytes": 15000,
+          "sha256": "8667d6de0905407ca15da61de88d6af642484fcf307bc9b1494a59f3884a476c"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 835,
+          "bytes": 45000,
+          "sha256": "f5c01ea5790a28add7d8084562db507ea8a8956e27d776c550e9332eb357687b"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế kinh-thanh-hue-1968",
+      "searchLog": [
+        "Imported kinh-thanh-hue-1968"
+      ]
+    },
+    {
+      "key": "chien-thang-nui-thanh-1965-cover",
+      "site": "chien-thang-nui-thanh-1965",
+      "origin": "commons",
+      "commons": {
+        "title": "File:chien-thang-nui-thanh-1965-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:chien-thang-nui-thanh-1965-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 37",
+        "credit": "Photographer 37",
+        "originalWidth": 2400,
+        "originalHeight": 1672
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/chien-thang-nui-thanh-1965-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "037a1f925286aa07334129200773acd7c7fd11f72742e34790166863f1f12e8b",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 279,
+          "bytes": 15000,
+          "sha256": "43aa60f070674b22ef6e03bd803536aacceb8dd79046078f95728d498ae86997"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 836,
+          "bytes": 45000,
+          "sha256": "cff7d97d461f54e276c841f799ef3366e960d0ed0c66697b754782e172869d56"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế chien-thang-nui-thanh-1965",
+      "searchLog": [
+        "Imported chien-thang-nui-thanh-1965"
+      ]
+    },
+    {
+      "key": "khu-den-thap-my-son-cover",
+      "site": "khu-den-thap-my-son",
+      "origin": "commons",
+      "commons": {
+        "title": "File:khu-den-thap-my-son-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:khu-den-thap-my-son-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 38",
+        "credit": "Photographer 38",
+        "originalWidth": 2400,
+        "originalHeight": 1674
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/khu-den-thap-my-son-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "bb5cecdf231a717aa40aa08669dbabe83047f9c820ae8899c611c72e9f52c605",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 279,
+          "bytes": 15000,
+          "sha256": "2a9c3092ae8cad7ab0102e085430357c66a69da5702c1686041330f7dea402c3"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 837,
+          "bytes": 45000,
+          "sha256": "bada0b0f1c0ba311b3f14e1e52cdc96a03d69d079fa3aec5787450943a827683"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế khu-den-thap-my-son",
+      "searchLog": [
+        "Imported khu-den-thap-my-son"
+      ]
+    },
+    {
+      "key": "khu-chung-tich-son-my-cover",
+      "site": "khu-chung-tich-son-my",
+      "origin": "commons",
+      "commons": {
+        "title": "File:khu-chung-tich-son-my-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:khu-chung-tich-son-my-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 39",
+        "credit": "Photographer 39",
+        "originalWidth": 2400,
+        "originalHeight": 1676
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/khu-chung-tich-son-my-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "af165dcdd0205df232b9d020254c07b31e0ec1b4432544785d21785b87d25e3a",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 279,
+          "bytes": 15000,
+          "sha256": "f7c157c559f26714f8fbb51af311effd61ec0efe1d3f7be5a750776d2bb448f2"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 838,
+          "bytes": 45000,
+          "sha256": "977a63565c289f303cc89f8f0c13917a1120e02828a41490ad7352c4905f7f37"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế khu-chung-tich-son-my",
+      "searchLog": [
+        "Imported khu-chung-tich-son-my"
+      ]
+    },
+    {
+      "key": "dak-to-tan-canh-cover",
+      "site": "dak-to-tan-canh",
+      "origin": "commons",
+      "commons": {
+        "title": "File:dak-to-tan-canh-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:dak-to-tan-canh-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 40",
+        "credit": "Photographer 40",
+        "originalWidth": 2400,
+        "originalHeight": 1678
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/dak-to-tan-canh-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "64d8458462626d3deb8b1bad72ae7ad31a443ad6484ba015ab45fb21642e488c",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 280,
+          "bytes": 15000,
+          "sha256": "0bd84b107fcec0132d0fbfeb5218b232dce10085bf4a1c66417febf888b17726"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 839,
+          "bytes": 45000,
+          "sha256": "0b4d12410108e46ca007aa49b9926c693f067317aa21d8a4c3d36075a376e45e"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế dak-to-tan-canh",
+      "searchLog": [
+        "Imported dak-to-tan-canh"
+      ]
+    },
+    {
+      "key": "lang-khang-chien-stor-cover",
+      "site": "lang-khang-chien-stor",
+      "origin": "commons",
+      "commons": {
+        "title": "File:lang-khang-chien-stor-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:lang-khang-chien-stor-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 41",
+        "credit": "Photographer 41",
+        "originalWidth": 2400,
+        "originalHeight": 1680
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/lang-khang-chien-stor-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "b4954d5e8e8b3e84efb1008d911332953782c6768cc70409da7a8eb38dc78783",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 280,
+          "bytes": 15000,
+          "sha256": "d5249106c32882d732db630b61c53f60ac866b80e8e38f34842dc04e7bb050b1"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 840,
+          "bytes": 45000,
+          "sha256": "824613dd4bbaccd1ff3c989ccb021cb6a8d449510feb43820ca2b0af4fb07bc0"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế lang-khang-chien-stor",
+      "searchLog": [
+        "Imported lang-khang-chien-stor"
+      ]
+    },
+    {
+      "key": "bao-tang-quang-trung-cover",
+      "site": "bao-tang-quang-trung",
+      "origin": "commons",
+      "commons": {
+        "title": "File:bao-tang-quang-trung-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:bao-tang-quang-trung-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 42",
+        "credit": "Photographer 42",
+        "originalWidth": 2400,
+        "originalHeight": 1682
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/bao-tang-quang-trung-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "ee4f7778cca686db6f27f7e3e5be3f2e53183ff95cc20247649f722bf9dcae66",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 280,
+          "bytes": 15000,
+          "sha256": "d7e1776b57bfb8ec3192dfce72cd08f1f595e67109bec34aa68114a75e3f0ad0"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 841,
+          "bytes": 45000,
+          "sha256": "828b14c85455226b47edebe7d225c2958e844d9e19065fec445846b868267ca9"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế bao-tang-quang-trung",
+      "searchLog": [
+        "Imported bao-tang-quang-trung"
+      ]
+    },
+    {
+      "key": "san-bay-thanh-son-cover",
+      "site": "san-bay-thanh-son",
+      "origin": "commons",
+      "commons": {
+        "title": "File:san-bay-thanh-son-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:san-bay-thanh-son-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 43",
+        "credit": "Photographer 43",
+        "originalWidth": 2400,
+        "originalHeight": 1684
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/san-bay-thanh-son-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "ed2b456d75856f78ae4e26ab1033aa0aeb67c7816b534fa91ab1d58d7152f160",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 281,
+          "bytes": 15000,
+          "sha256": "9447969a57fee676208c99901c2146139249b8184df0b5de91b2353ad5644d77"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 842,
+          "bytes": 45000,
+          "sha256": "c3327194eeb422d5667764d081033730319e1cdf050721d1cdc9fe198e4b71f7"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế san-bay-thanh-son",
+      "searchLog": [
+        "Imported san-bay-thanh-son"
+      ]
+    },
+    {
+      "key": "thap-ba-ponagar-cover",
+      "site": "thap-ba-ponagar",
+      "origin": "commons",
+      "commons": {
+        "title": "File:thap-ba-ponagar-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:thap-ba-ponagar-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 44",
+        "credit": "Photographer 44",
+        "originalWidth": 2400,
+        "originalHeight": 1686
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/thap-ba-ponagar-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "dbd0a4b4d139aa65b7224d5bbbe5d826c83f201ba251f45e829f816f80eccd4b",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 281,
+          "bytes": 15000,
+          "sha256": "647ac6056a4fda7a18de22f5b5b9dd024092669c0449968ed56d7e4fc17f7527"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 843,
+          "bytes": 45000,
+          "sha256": "f10f03900b6b9fc9b93a5283b0bf513e347b75883f2494464259548b06733eaa"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế thap-ba-ponagar",
+      "searchLog": [
+        "Imported thap-ba-ponagar"
+      ]
+    },
+    {
+      "key": "buon-ma-thuot-1975-cover",
+      "site": "buon-ma-thuot-1975",
+      "origin": "commons",
+      "commons": {
+        "title": "File:buon-ma-thuot-1975-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:buon-ma-thuot-1975-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 45",
+        "credit": "Photographer 45",
+        "originalWidth": 2400,
+        "originalHeight": 1688
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/buon-ma-thuot-1975-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "57bfe97728a2f7adb2518c3f05c8d092622b7d1f70834030817ceadd627a8ea0",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 281,
+          "bytes": 15000,
+          "sha256": "23a2a460c5bab7b593cf5cb538ed23b654dc7cacf52f99ff1e290e98a63ac6b8"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 844,
+          "bytes": 45000,
+          "sha256": "63d51cd478bd928b8545abcce67ccb710a4acf945cb155e99cc7396e648a6b89"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế buon-ma-thuot-1975",
+      "searchLog": [
+        "Imported buon-ma-thuot-1975"
+      ]
+    },
+    {
+      "key": "vung-ro-phu-yen-cover",
+      "site": "vung-ro-phu-yen",
+      "origin": "commons",
+      "commons": {
+        "title": "File:vung-ro-phu-yen-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:vung-ro-phu-yen-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 46",
+        "credit": "Photographer 46",
+        "originalWidth": 2400,
+        "originalHeight": 1690
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/vung-ro-phu-yen-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "65cdd255be75c58089c530772e43d49464e267f436ef167c37863dda56890c5b",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 282,
+          "bytes": 15000,
+          "sha256": "4a21f5015cc1474f5ad89198ecedb1a51a0535e7684a2ed76bffaae02712a951"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 845,
+          "bytes": 45000,
+          "sha256": "9771957aa49f6001c61fa8b1a864f2608bde55aa4347bb7eca151a4905a12a5f"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế vung-ro-phu-yen",
+      "searchLog": [
+        "Imported vung-ro-phu-yen"
+      ]
+    },
+    {
+      "key": "truong-duc-thanh-cover",
+      "site": "truong-duc-thanh",
+      "origin": "commons",
+      "commons": {
+        "title": "File:truong-duc-thanh-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:truong-duc-thanh-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 47",
+        "credit": "Photographer 47",
+        "originalWidth": 2400,
+        "originalHeight": 1692
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/truong-duc-thanh-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "264e0afc6f25d09add414839c93fade5898248e3e3f6acd95fdb51865fff313d",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 282,
+          "bytes": 15000,
+          "sha256": "8e493e7c794059a9b392bcf6671dd7d7b0eac8b42f52381fa2f96ec4a2064e91"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 846,
+          "bytes": 45000,
+          "sha256": "9219b55816a7e010e0e7fb1c17eee6d251f5a85b3249de6568630c463c053687"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế truong-duc-thanh",
+      "searchLog": [
+        "Imported truong-duc-thanh"
+      ]
+    },
+    {
+      "key": "nha-lao-thieu-nhi-da-lat-cover",
+      "site": "nha-lao-thieu-nhi-da-lat",
+      "origin": "commons",
+      "commons": {
+        "title": "File:nha-lao-thieu-nhi-da-lat-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:nha-lao-thieu-nhi-da-lat-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 48",
+        "credit": "Photographer 48",
+        "originalWidth": 2400,
+        "originalHeight": 1694
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/nha-lao-thieu-nhi-da-lat-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "97cc686302689356e67704750c7e396bd82df0b5e93fcc75b91a300d87329c78",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 282,
+          "bytes": 15000,
+          "sha256": "9e7184c6afa986b62f2b38c11b96de30496f2c579c8f990793b5b65fab55b420"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 847,
+          "bytes": 45000,
+          "sha256": "8488b34830b8b72db2e9adc13f9370515aced0512a6666f42e0b317cb8d755ef"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế nha-lao-thieu-nhi-da-lat",
+      "searchLog": [
+        "Imported nha-lao-thieu-nhi-da-lat"
+      ]
+    },
+    {
+      "key": "chien-thang-xuan-loc-1975-cover",
+      "site": "chien-thang-xuan-loc-1975",
+      "origin": "commons",
+      "commons": {
+        "title": "File:chien-thang-xuan-loc-1975-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:chien-thang-xuan-loc-1975-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 49",
+        "credit": "Photographer 49",
+        "originalWidth": 2400,
+        "originalHeight": 1696
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/chien-thang-xuan-loc-1975-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "05f65faaa447a53e5cf8e86818c727b67b559f36a3bea8f8d83af96cd0c66f6d",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 283,
+          "bytes": 15000,
+          "sha256": "8875c2e18efe50943eab1a027b70b044d66b06807f1151e97c77702b5afac5fa"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 848,
+          "bytes": 45000,
+          "sha256": "71507c57a8d5b7e7579dec8d0bbe86330982702f51a01b4a5e02988aa6a759a1"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế chien-thang-xuan-loc-1975",
+      "searchLog": [
+        "Imported chien-thang-xuan-loc-1975"
+      ]
+    },
+    {
+      "key": "can-cu-ta-thiet-cover",
+      "site": "can-cu-ta-thiet",
+      "origin": "commons",
+      "commons": {
+        "title": "File:can-cu-ta-thiet-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:can-cu-ta-thiet-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 50",
+        "credit": "Photographer 50",
+        "originalWidth": 2400,
+        "originalHeight": 1698
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/can-cu-ta-thiet-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "777dedc0d3a9bb237a1b7a0c1e25414aa3e028855d1becc880eeaf04c9157576",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 283,
+          "bytes": 15000,
+          "sha256": "a920829c8a50ae8c804d6984b6de45ac12c5d826f26c93d8608fe4f0cfb8c6f6"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 849,
+          "bytes": 45000,
+          "sha256": "d6af8b2b5b50102becf41f190953c849925f9583a3a39ea9cea1c66f36fabb17"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế can-cu-ta-thiet",
+      "searchLog": [
+        "Imported can-cu-ta-thiet"
+      ]
+    },
+    {
+      "key": "dinh-doc-lap-cover",
+      "site": "dinh-doc-lap",
+      "origin": "commons",
+      "commons": {
+        "title": "File:dinh-doc-lap-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:dinh-doc-lap-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 51",
+        "credit": "Photographer 51",
+        "originalWidth": 2400,
+        "originalHeight": 1600
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/dinh-doc-lap-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "3f844d853cbda823fb43528f43b0189773d6b47ef6674f114381dbf710c39c3d",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 267,
+          "bytes": 15000,
+          "sha256": "3dccf13e1d81a2bab59ef32ff7f0c248565a8091bd6f230d0c1d1a2e484ab353"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 800,
+          "bytes": 45000,
+          "sha256": "39ae4e0aa2a075dd164f486a8a62603f21982cc10efa9f59c27618b9c0bf5e3a"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế dinh-doc-lap",
+      "searchLog": [
+        "Imported dinh-doc-lap"
+      ]
+    },
+    {
+      "key": "dia-dao-cu-chi-cover",
+      "site": "dia-dao-cu-chi",
+      "origin": "commons",
+      "commons": {
+        "title": "File:dia-dao-cu-chi-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:dia-dao-cu-chi-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 52",
+        "credit": "Photographer 52",
+        "originalWidth": 2400,
+        "originalHeight": 1602
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/dia-dao-cu-chi-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "037a08eca0a57655553645671221a32a11661ac47184d0d27fd5154e60754109",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 267,
+          "bytes": 15000,
+          "sha256": "9ccd18480a8efe6cfd7a44e4637863164cde54ea8457a30d83d95f33876ce9a9"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 801,
+          "bytes": 45000,
+          "sha256": "567e84ac928fad4472667d952c44e49b7b006c7a7f12b7c9ed4716f7426b39a6"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế dia-dao-cu-chi",
+      "searchLog": [
+        "Imported dia-dao-cu-chi"
+      ]
+    },
+    {
+      "key": "can-cu-trung-uong-cuc-mien-nam-cover",
+      "site": "can-cu-trung-uong-cuc-mien-nam",
+      "origin": "commons",
+      "commons": {
+        "title": "File:can-cu-trung-uong-cuc-mien-nam-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:can-cu-trung-uong-cuc-mien-nam-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 53",
+        "credit": "Photographer 53",
+        "originalWidth": 2400,
+        "originalHeight": 1604
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/can-cu-trung-uong-cuc-mien-nam-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "8ca5ed8d6595aef055fc7db8f8e94d78bad041eaee58e1c4f5341b9b139dfc41",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 267,
+          "bytes": 15000,
+          "sha256": "05f667484a1989ccf44edff0a017670f5efd710f38639f58f9b77a10a8511eb5"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 802,
+          "bytes": 45000,
+          "sha256": "4269648860d4af5f45b76ebadb9605e56fbb235089e1e432f3c566f002a4333e"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế can-cu-trung-uong-cuc-mien-nam",
+      "searchLog": [
+        "Imported can-cu-trung-uong-cuc-mien-nam"
+      ]
+    },
+    {
+      "key": "nga-tu-duc-hoa-cover",
+      "site": "nga-tu-duc-hoa",
+      "origin": "commons",
+      "commons": {
+        "title": "File:nga-tu-duc-hoa-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:nga-tu-duc-hoa-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 54",
+        "credit": "Photographer 54",
+        "originalWidth": 2400,
+        "originalHeight": 1606
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/nga-tu-duc-hoa-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "bf5490aea30f5855398f70352328f121db3de99abf5527ec41bcc6e80ced3dd1",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 268,
+          "bytes": 15000,
+          "sha256": "e933acb55aef0e840a8731189516fb38f08e1cded0417eb3de528d0bdd528677"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 803,
+          "bytes": 45000,
+          "sha256": "70177f9ba2d0d4ff1f6a7580ab029b39bcc3b94c27f4f07ce2396f67f0720001"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế nga-tu-duc-hoa",
+      "searchLog": [
+        "Imported nga-tu-duc-hoa"
+      ]
+    },
+    {
+      "key": "chien-thang-ap-bac-1963-cover",
+      "site": "chien-thang-ap-bac-1963",
+      "origin": "commons",
+      "commons": {
+        "title": "File:chien-thang-ap-bac-1963-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:chien-thang-ap-bac-1963-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 55",
+        "credit": "Photographer 55",
+        "originalWidth": 2400,
+        "originalHeight": 1608
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/chien-thang-ap-bac-1963-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "6df7aa6fbfd20b330ac5dcc1b75540d4970926b4aee301be3d518bf3a17759e0",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 268,
+          "bytes": 15000,
+          "sha256": "447e753ad1cbed581ab130550bf8e1497fc473b81de2c7bfdf7a436c82e54c17"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 804,
+          "bytes": 45000,
+          "sha256": "ec6e2fb5d3b5aa1c75c90e1a1749b6ceb63cc9a4d85c5633d7b3e31ea635278d"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế chien-thang-ap-bac-1963",
+      "searchLog": [
+        "Imported chien-thang-ap-bac-1963"
+      ]
+    },
+    {
+      "key": "mo-cu-pho-bang-nguyen-sinh-sac-cover",
+      "site": "mo-cu-pho-bang-nguyen-sinh-sac",
+      "origin": "commons",
+      "commons": {
+        "title": "File:mo-cu-pho-bang-nguyen-sinh-sac-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:mo-cu-pho-bang-nguyen-sinh-sac-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 56",
+        "credit": "Photographer 56",
+        "originalWidth": 2400,
+        "originalHeight": 1610
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/mo-cu-pho-bang-nguyen-sinh-sac-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "ee56cb7c748648bdabebbcaac0c65b76bc192e52b8ff7bb5651a3d9641fadf54",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 268,
+          "bytes": 15000,
+          "sha256": "2b368f54e3ebaf10a896fdbab8b971029b16c63bbe808f525decf854dae8d684"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 805,
+          "bytes": 45000,
+          "sha256": "8f9816a8ca46deedb53c71d06432f1a2faa3c7f8913b79241d4deb506dc7ab73"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế mo-cu-pho-bang-nguyen-sinh-sac",
+      "searchLog": [
+        "Imported mo-cu-pho-bang-nguyen-sinh-sac"
+      ]
+    },
+    {
+      "key": "dong-khoi-ben-tre-1960-cover",
+      "site": "dong-khoi-ben-tre-1960",
+      "origin": "commons",
+      "commons": {
+        "title": "File:dong-khoi-ben-tre-1960-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:dong-khoi-ben-tre-1960-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 57",
+        "credit": "Photographer 57",
+        "originalWidth": 2400,
+        "originalHeight": 1612
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/dong-khoi-ben-tre-1960-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "87ebe149154cc51a08678f185022ecb021dc9ea1a27f0979d23c8969b7a45c65",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 269,
+          "bytes": 15000,
+          "sha256": "95864dabc226612e1b6fa20926fde346e22cd69f2860b97c3ebd88d32fd63a79"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 806,
+          "bytes": 45000,
+          "sha256": "d42da07e7edc3eb9d74efa3fe2b0badb586a471fb620ad250e743eed8dceb71b"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế dong-khoi-ben-tre-1960",
+      "searchLog": [
+        "Imported dong-khoi-ben-tre-1960"
+      ]
+    },
+    {
+      "key": "khu-tuong-niem-vo-van-kiet-cover",
+      "site": "khu-tuong-niem-vo-van-kiet",
+      "origin": "commons",
+      "commons": {
+        "title": "File:khu-tuong-niem-vo-van-kiet-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:khu-tuong-niem-vo-van-kiet-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 58",
+        "credit": "Photographer 58",
+        "originalWidth": 2400,
+        "originalHeight": 1614
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/khu-tuong-niem-vo-van-kiet-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "45f5469b6bf6f13740355d04817d0ab2b428436d463af6c18eebb6eb4770f907",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 269,
+          "bytes": 15000,
+          "sha256": "eaaf4fe9a4ae16b9e5095b8b217e8d8c4fd1ce902cc58ad045822d6618461efe"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 807,
+          "bytes": 45000,
+          "sha256": "78f22af872b598a293de69cb2ddd36d620cfc2b818159d638d03a98625027a96"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế khu-tuong-niem-vo-van-kiet",
+      "searchLog": [
+        "Imported khu-tuong-niem-vo-van-kiet"
+      ]
+    },
+    {
+      "key": "nha-tu-phu-quoc-cover",
+      "site": "nha-tu-phu-quoc",
+      "origin": "commons",
+      "commons": {
+        "title": "File:nha-tu-phu-quoc-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:nha-tu-phu-quoc-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 59",
+        "credit": "Photographer 59",
+        "originalWidth": 2400,
+        "originalHeight": 1616
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/nha-tu-phu-quoc-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "c61c0c6459c92f1ddb38b27a22e2d7f36c9f709f9ba64147a0d30f92c227c378",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 269,
+          "bytes": 15000,
+          "sha256": "3fe508d4a517ce16626b9d51a73e4da9fcaa85b174ae444040292b1017665f35"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 808,
+          "bytes": 45000,
+          "sha256": "61958743f3eef8e81923e5bb7da84a4eed80b67d77800e31ef99526fedee7352"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế nha-tu-phu-quoc",
+      "searchLog": [
+        "Imported nha-tu-phu-quoc"
+      ]
+    },
+    {
+      "key": "khu-luu-niem-ton-duc-thang-cover",
+      "site": "khu-luu-niem-ton-duc-thang",
+      "origin": "commons",
+      "commons": {
+        "title": "File:khu-luu-niem-ton-duc-thang-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:khu-luu-niem-ton-duc-thang-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 60",
+        "credit": "Photographer 60",
+        "originalWidth": 2400,
+        "originalHeight": 1618
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/khu-luu-niem-ton-duc-thang-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "aba7412868894083c5cd2be1c4a3f9b6d15312ffd87ad0c4d0e306493d19045f",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 270,
+          "bytes": 15000,
+          "sha256": "468c5c8b28b2fa18bc44ddf8e0b8b18a26566a558b86bed7327d70ec4999665b"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 809,
+          "bytes": 45000,
+          "sha256": "c0f0e11fbc410f9a30608fc11912c9eecdb94c4cee82dd79206139aceed0044a"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế khu-luu-niem-ton-duc-thang",
+      "searchLog": [
+        "Imported khu-luu-niem-ton-duc-thang"
+      ]
+    },
+    {
+      "key": "chien-thang-chuong-thien-1973-cover",
+      "site": "chien-thang-chuong-thien-1973",
+      "origin": "commons",
+      "commons": {
+        "title": "File:chien-thang-chuong-thien-1973-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:chien-thang-chuong-thien-1973-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 61",
+        "credit": "Photographer 61",
+        "originalWidth": 2400,
+        "originalHeight": 1620
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/chien-thang-chuong-thien-1973-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "85951fd7719ebd28256cffef94ca5f53a878f97797fbf23fcac8bd7fe86d3706",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 270,
+          "bytes": 15000,
+          "sha256": "9675829f1885823780598706fcfed45d86a5fc18a61283f665b81db18fa80172"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 810,
+          "bytes": 45000,
+          "sha256": "c17db56f20bf5b84dcac420e72c32adb636ec19c1b273c681855169b4ec10c3c"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế chien-thang-chuong-thien-1973",
+      "searchLog": [
+        "Imported chien-thang-chuong-thien-1973"
+      ]
+    },
+    {
+      "key": "kham-lon-can-tho-cover",
+      "site": "kham-lon-can-tho",
+      "origin": "commons",
+      "commons": {
+        "title": "File:kham-lon-can-tho-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:kham-lon-can-tho-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 62",
+        "credit": "Photographer 62",
+        "originalWidth": 2400,
+        "originalHeight": 1622
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/kham-lon-can-tho-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "50fd6ab2ba56119fc12393aa44dfd4bdc9e573256819b570f225bbd8820d688c",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 270,
+          "bytes": 15000,
+          "sha256": "f64ebd8fccc9a3c5f0c095fb7d3e2fb134d55279cb926e152d05f32adf488d2c"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 811,
+          "bytes": 45000,
+          "sha256": "56c8c6f30ba7333598e95a27b2f0cdc2238314a1f194dd7c7518ecbdd28840c9"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế kham-lon-can-tho",
+      "searchLog": [
+        "Imported kham-lon-can-tho"
+      ]
+    },
+    {
+      "key": "khoi-nghia-hon-khoai-1940-cover",
+      "site": "khoi-nghia-hon-khoai-1940",
+      "origin": "commons",
+      "commons": {
+        "title": "File:khoi-nghia-hon-khoai-1940-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:khoi-nghia-hon-khoai-1940-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 63",
+        "credit": "Photographer 63",
+        "originalWidth": 2400,
+        "originalHeight": 1624
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/khoi-nghia-hon-khoai-1940-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "a7a1af5fcd8140cc9c2688f5061b89774a0cac9af1b798a4f90adaa23dd6f0c6",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 271,
+          "bytes": 15000,
+          "sha256": "780412b2b3158bd232db59caff8d36070eae7a15a569d6e54e7499f64a06e1a6"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 812,
+          "bytes": 45000,
+          "sha256": "1aa6d388f84dd521234cbf19c929b781a4d0709aa245af2c1d080888b3c96cd5"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế khoi-nghia-hon-khoai-1940",
+      "searchLog": [
+        "Imported khoi-nghia-hon-khoai-1940"
+      ]
+    },
+    {
+      "key": "ben-vam-lung-cover",
+      "site": "ben-vam-lung",
+      "origin": "commons",
+      "commons": {
+        "title": "File:ben-vam-lung-cover.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:ben-vam-lung-cover.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "artist": "Photographer 64",
+        "credit": "Photographer 64",
+        "originalWidth": 2400,
+        "originalHeight": 1626
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/test/ben-vam-lung-cover.jpg",
+        "at": "2026-10-28T00:00:00.000Z",
+        "sha256": "09a2ef788ae739d38aa9ba25fe54bf05c001e904f7f0b6fed2061249f7760f94",
+        "bytes": 150000,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 271,
+          "bytes": 15000,
+          "sha256": "cd91782b0889bd307cf897975d7bd20f95c357047b7020fb4a7baee51fb05df9"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 813,
+          "bytes": 45000,
+          "sha256": "181dcbda1e86fa72862165d8c7108e52be9d01e992b0dbcc5834a473271168e8"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế ben-vam-lung",
+      "searchLog": [
+        "Imported ben-vam-lung"
+      ]
+    }
+  ],
+  "videos": [],
+  "notFound": []
+}
