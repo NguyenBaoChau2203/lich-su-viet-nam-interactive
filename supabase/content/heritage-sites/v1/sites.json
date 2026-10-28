@@ -91,36 +91,27 @@
       ],
       "media": [
         {
-          "key": "nha-tu-hoa-lo-cong-chinh",
-          "fileUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Maison_Centrale_Hanoi_entrance.jpg?width=1600",
-          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Maison_Centrale_Hanoi_entrance.jpg",
+          "key": "nha-tu-hoa-lo-cong-chinh-maison-centrale",
+          "fileUrl": "storage:locations/heritage/nha-tu-hoa-lo/cong-chinh-maison-centrale-1200.webp",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Hoa_Lo_Prison_(Maison_Centrale),_Hanoi_(6923115824).jpg",
           "era": "today",
-          "yearTaken": 2018,
-          "photographer": "Wikimedia Commons Contributor",
-          "license": "CC BY-SA 3.0",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "yearTaken": 2012,
+          "photographer": "David McKelvey from Brisbane, Australia",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "usageBasis": "open_license",
-          "caption": "Cổng chính Di tích Lịch sử Nhà tù Hỏa Lò (Maison Centrale) tại quận Hoàn Kiếm, Hà Nội.",
-          "altText": "Cổng chính kiến trúc kiên cố bằng đá sẫm màu của Nhà tù Hỏa Lò tại Hà Nội",
+          "caption": "Cổng vào Di tích Nhà tù Hỏa Lò (Maison Centrale), phố Hỏa Lò, Hà Nội",
+          "altText": "Cổng vào Di tích Nhà tù Hỏa Lò với dòng chữ Maison Centrale nổi bật",
           "isCover": true,
-          "pairKey": "p1",
+          "pairKey": null,
           "isReenactment": false,
           "isColorized": false,
-          "width": 1600,
-          "height": 1067,
-          "checkedAt": "2026-10-27"
+          "width": 1200,
+          "height": 675,
+          "checkedAt": "2026-10-28"
         }
       ],
-      "videos": [
-        {
-          "youtubeId": "W6_bO4m3F6c",
-          "title": "Ký ức Hỏa Lò – Di tích lịch sử Quốc gia",
-          "channel": "VTV24",
-          "channelUrl": "https://www.youtube.com/@vtv24",
-          "note": "Phim tài liệu ngắn của Đài Truyền hình Việt Nam ghi lại chứng tích kiên trung của các chiến sĩ cách mạng tại Hỏa Lò.",
-          "embedCheckedAt": "2026-10-27"
-        }
-      ]
+      "videos": []
     },
     {
       "key": "hoang-thanh-thang-long",
@@ -193,24 +184,24 @@
       ],
       "media": [
         {
-          "key": "hoang-thanh-thang-long-doan-mon",
-          "fileUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Doan_Mon_-_Hanoi_Citadel.jpg?width=1600",
-          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Doan_Mon_-_Hanoi_Citadel.jpg",
+          "key": "hoang-thanh-thang-long-doan-mon-hoang-thanh",
+          "fileUrl": "storage:locations/heritage/hoang-thanh-thang-long/doan-mon-hoang-thanh-1200.webp",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:%C4%90oan_M%C3%B4n,_Ho%C3%A0ng_th%C3%A0nh_Th%C4%83ng_Long,_H%C3%A0_N%E1%BB%99i_001.JPG",
           "era": "today",
-          "yearTaken": 2019,
-          "photographer": "Wikimedia Commons Contributor",
+          "yearTaken": 2014,
+          "photographer": "Phan Minh Tuấn",
           "license": "CC BY-SA 4.0",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "usageBasis": "open_license",
-          "caption": "Cổng Đoan Môn – cửa ngõ chính vào Cấm thành Thăng Long tại trung tâm Hà Nội.",
-          "altText": "Cổng Đoan Môn cổ kính bằng gạch ngói với ba tầng lầu nhìn ra sân cỏ rộng",
+          "caption": "Cổng Đoan Môn – cổng chính phía Nam dẫn vào Cấm thành Thăng Long, Hà Nội",
+          "altText": "Toàn cảnh di tích cổng Đoan Môn cổ kính với các vòm cuốn bằng đá",
           "isCover": true,
-          "pairKey": "p1",
+          "pairKey": null,
           "isReenactment": false,
           "isColorized": false,
-          "width": 1600,
-          "height": 1067,
-          "checkedAt": "2026-10-27"
+          "width": 1200,
+          "height": 900,
+          "checkedAt": "2026-10-28"
         }
       ],
       "videos": []
@@ -291,24 +282,24 @@
       ],
       "media": [
         {
-          "key": "pac-bo-suoi-lenin",
-          "fileUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Suoi_Lenin_Pac_Bo.jpg?width=1600",
-          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Suoi_Lenin_Pac_Bo.jpg",
+          "key": "pac-bo-cao-bang-suoi-lenin-nui-cac-mac",
+          "fileUrl": "storage:locations/heritage/pac-bo-cao-bang/suoi-lenin-nui-cac-mac-1200.webp",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:P%C3%A1c_B%C3%B3.jpg",
           "era": "today",
-          "yearTaken": 2020,
-          "photographer": "Wikimedia Commons Contributor",
-          "license": "CC BY-SA 4.0",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "yearTaken": 2016,
+          "photographer": "[Tycho] talk , http://shansov.net",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "usageBasis": "open_license",
-          "caption": "Dòng suối Lê-nin trong xanh uốn lượn dưới chân núi Các Mác tại Khu di tích lịch sử Pác Bó, Cao Bằng.",
-          "altText": "Dòng suối nước màu xanh ngọc bích chảy quanh chân vách núi đá vôi phủ đầy cây rừng",
+          "caption": "Suối Lê-nin và núi Các Mác tại Khu di tích lịch sử Pác Bó, xã Trường Hà, huyện Hà Quảng, tỉnh Cao Bằng",
+          "altText": "Dòng suối Lê-nin nước trong xanh như ngọc bích chảy dưới chân vách núi Các Mác",
           "isCover": true,
-          "pairKey": "p1",
+          "pairKey": null,
           "isReenactment": false,
           "isColorized": false,
-          "width": 1600,
-          "height": 1067,
-          "checkedAt": "2026-10-27"
+          "width": 1200,
+          "height": 675,
+          "checkedAt": "2026-10-28"
         }
       ],
       "videos": []
@@ -384,24 +375,24 @@
       ],
       "media": [
         {
-          "key": "rung-tran-hung-dao-bia-di-tich",
-          "fileUrl": "https://caobang.gov.vn/uploads/images/2021/12/khu-di-tich-rung-tran-hung-dao.jpg",
-          "sourcePageUrl": "https://caobang.gov.vn/di-tich-rung-tran-hung-dao",
+          "key": "rung-tran-hung-dao-nha-trung-bay-rung-tran-hung-dao",
+          "fileUrl": "storage:locations/heritage/rung-tran-hung-dao/nha-trung-bay-rung-tran-hung-dao-1200.webp",
+          "sourcePageUrl": "https://www.vietnamplus.vn/bao-ton-va-phat-huy-gia-tri-khu-di-tich-lich-su-rung-tran-hung-dao-post292417.vnp",
           "era": "today",
-          "yearTaken": 2021,
-          "photographer": "Cổng Thông tin Điện tử tỉnh Cao Bằng",
+          "yearTaken": 2014,
+          "photographer": "TTXVN",
           "license": null,
           "licenseUrl": null,
           "usageBasis": "coursework_reference",
-          "caption": "Bia ghi danh 34 chiến sĩ Đội Việt Nam Tuyên truyền Giải phóng quân giữa cánh rừng đại ngàn Trần Hưng Đạo, Nguyên Bình, Cao Bằng.",
-          "altText": "Bia đá di tích hình đóm lửa dựng giữa tán rừng cây cổ thụ râm mát",
+          "caption": "Khu nhà đón tiếp và trưng bày truyền thống tại Khu di tích Quốc gia đặc biệt Rừng Trần Hưng Đạo, huyện Nguyên Bình, tỉnh Cao Bằng",
+          "altText": "Khu nhà trưng bày truyền thống mái ngói đỏ giữa rừng nguyên sinh Trần Hưng Đạo",
           "isCover": true,
-          "pairKey": "p1",
+          "pairKey": null,
           "isReenactment": false,
           "isColorized": false,
-          "width": 1200,
-          "height": 800,
-          "checkedAt": "2026-10-27"
+          "width": 600,
+          "height": 450,
+          "checkedAt": "2026-10-28"
         }
       ],
       "videos": []
@@ -482,24 +473,24 @@
       ],
       "media": [
         {
-          "key": "tan-trao-dinh-tan-trao",
-          "fileUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dinh_Tan_Trao.jpg?width=1600",
-          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Dinh_Tan_Trao.jpg",
+          "key": "khu-di-tich-tan-trao-dinh-tan-trao",
+          "fileUrl": "storage:locations/heritage/khu-di-tich-tan-trao/dinh-tan-trao-1200.webp",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:%C4%90%C3%ACnh_T%C3%A2n_Tr%C3%A0o.jpg",
           "era": "today",
-          "yearTaken": 2019,
-          "photographer": "Wikimedia Commons Contributor",
+          "yearTaken": 2013,
+          "photographer": "Bùi Thụy Đào Nguyên",
           "license": "CC BY-SA 4.0",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "usageBasis": "open_license",
-          "caption": "Đình Tân Trào – nơi diễn ra Quốc dân Đại hội tháng 8/1945 quyết định Tổng khởi nghĩa giành chính quyền.",
-          "altText": "Ngôi đình gỗ mái lá đơn sơ truyền thống tọa lạc giữa vườn cây xanh ngát ở Tuyên Quang",
+          "caption": "Đình Tân Trào, nơi diễn ra Quốc dân Đại hội tháng 8 năm 1945, xã Tân Trào, huyện Sơn Dương, tỉnh Tuyên Quang",
+          "altText": "Toàn cảnh mái đình Tân Trào lợp lá cọ truyền thống giữa cây cối xanh tươi",
           "isCover": true,
-          "pairKey": "p1",
+          "pairKey": null,
           "isReenactment": false,
           "isColorized": false,
-          "width": 1600,
-          "height": 1067,
-          "checkedAt": "2026-10-27"
+          "width": 1200,
+          "height": 800,
+          "checkedAt": "2026-10-28"
         }
       ],
       "videos": []
@@ -570,24 +561,24 @@
       ],
       "media": [
         {
-          "key": "lung-cu-cot-co",
-          "fileUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cot_co_Lung_Cu_-_Ha_Giang.jpg?width=1600",
-          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Cot_co_Lung_Cu_-_Ha_Giang.jpg",
+          "key": "cot-co-lung-cu-cot-co-lung-cu-dinh-nui-rong",
+          "fileUrl": "storage:locations/heritage/cot-co-lung-cu/cot-co-lung-cu-dinh-nui-rong-1200.webp",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:C%E1%BB%99t_c%E1%BB%9D_L%C5%A9ng_C%C3%BA_-_H%C3%A0_Giang.JPG",
           "era": "today",
-          "yearTaken": 2018,
-          "photographer": "Wikimedia Commons Contributor",
-          "license": "CC BY-SA 3.0",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-          "usageBasis": "open_license",
-          "caption": "Cột cờ Quốc gia Lũng Cú sừng sững trên đỉnh núi Rồng, lá cờ 54m² bay phấp phới giữa đất trời biên cương.",
-          "altText": "Tháp cột cờ bằng đá vươn cao trên đỉnh núi đá hùng vĩ với lá cờ đỏ sao vàng lớn đang bay",
+          "yearTaken": 2011,
+          "photographer": "vi:User:Leminhel",
+          "license": "Public domain",
+          "licenseUrl": null,
+          "usageBasis": "public_domain",
+          "caption": "Cột cờ Quốc gia Lũng Cú trên đỉnh núi Rồng, xã Lũng Cú, huyện Đồng Văn, tỉnh Hà Giang",
+          "altText": "Cột cờ Lũng Cú với lá cờ đỏ sao vàng tung bay trên nền trời biên cương",
           "isCover": true,
-          "pairKey": "p1",
+          "pairKey": null,
           "isReenactment": false,
           "isColorized": false,
-          "width": 1600,
-          "height": 1067,
-          "checkedAt": "2026-10-27"
+          "width": 1200,
+          "height": 800,
+          "checkedAt": "2026-10-28"
         }
       ],
       "videos": []
@@ -668,36 +659,27 @@
       ],
       "media": [
         {
-          "key": "doi-a1-ho-boc-pha",
-          "fileUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Doi_A1_Dien_Bien_Phu.jpg?width=1600",
-          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Doi_A1_Dien_Bien_Phu.jpg",
+          "key": "doi-a1-dien-bien-phu-dai-tuong-niem-dinh-doi-a1",
+          "fileUrl": "storage:locations/heritage/doi-a1-dien-bien-phu/dai-tuong-niem-dinh-doi-a1-1200.webp",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Monument_to_Vietminh_Assault_-_Hill_A1_(Eliane_2)_-_Dien_Bien_Phu_-_Vietnam_(48168816427).jpg",
           "era": "today",
           "yearTaken": 2019,
-          "photographer": "Wikimedia Commons Contributor",
-          "license": "CC BY-SA 4.0",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "photographer": "Adam Jones from Kelowna, BC, Canada",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
           "usageBasis": "open_license",
-          "caption": "Hố phễu bộc phá lịch sử sâu hoắm trên đỉnh Đồi A1 sau tiếng nổ đêm 6/5/1954 trong Chiến dịch Điện Biên Phủ.",
-          "altText": "Miệng hố đất đá hình phễu khổng lồ do khối bộc phá tạo ra trên đỉnh đồi thoai thoải",
+          "caption": "Đài tưởng niệm các chiến sĩ tại đỉnh cứ điểm Đồi A1 (Eliane 2), thành phố Điện Biên Phủ",
+          "altText": "Đài tưởng niệm trên đồi A1 với bia đá và hàng rào phòng thủ của quân Pháp",
           "isCover": true,
-          "pairKey": "p1",
+          "pairKey": null,
           "isReenactment": false,
           "isColorized": false,
-          "width": 1600,
-          "height": 1067,
-          "checkedAt": "2026-10-27"
+          "width": 1200,
+          "height": 900,
+          "checkedAt": "2026-10-28"
         }
       ],
-      "videos": [
-        {
-          "youtubeId": "W5i3h-h9K2Q",
-          "title": "Ký ức 39 ngày đêm quyết chiến đồi A1 Điện Biên Phủ",
-          "channel": "Truyền hình Quốc phòng Việt Nam QPVN",
-          "channelUrl": "https://www.youtube.com/@qpvn",
-          "note": "Phim tài liệu quân sự phục dựng trận đào hầm bộc phá và giây phút tiêu diệt cứ điểm đồi A1.",
-          "embedCheckedAt": "2026-10-27"
-        }
-      ]
+      "videos": []
     },
     {
       "key": "ham-de-castries",
@@ -775,24 +757,24 @@
       ],
       "media": [
         {
-          "key": "ham-de-castries-vom-thep",
-          "fileUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ham_De_Castries_Dien_Bien_Phu.jpg?width=1600",
-          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ham_De_Castries_Dien_Bien_Phu.jpg",
+          "key": "ham-de-castries-ham-chi-huy-de-castries",
+          "fileUrl": "storage:locations/heritage/ham-de-castries/ham-chi-huy-de-castries-1200.webp",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:H%E1%BA%A7m_ch%E1%BB%89_huy_t%E1%BA%ADp_%C4%91o%C3%A0n_c%E1%BB%A9_%C4%91i%E1%BB%83m_%C4%90i%E1%BB%87n_Bi%C3%AAn_Ph%E1%BB%A7_(2022).jpg",
           "era": "today",
-          "yearTaken": 2019,
-          "photographer": "Wikimedia Commons Contributor",
-          "license": "CC BY-SA 4.0",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "yearTaken": 2022,
+          "photographer": "Ioe2015",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
           "usageBasis": "open_license",
-          "caption": "Cửa vào Hầm Sở chỉ huy Tướng De Castries với kết cấu vòm thép và bao cát tại cánh đồng Mường Thanh.",
-          "altText": "Lối vào hầm ngầm xây bằng vòm sắt uốn cong phủ các lớp bao cát đất bảo vệ xung quanh",
+          "caption": "Hầm chỉ huy của tướng De Castries tại trung tâm tập đoàn cứ điểm Điện Biên Phủ",
+          "altText": "Nóc hầm chỉ huy De Castries với các tấm thép uốn lượn và bao cát phòng thủ",
           "isCover": true,
-          "pairKey": "p1",
+          "pairKey": null,
           "isReenactment": false,
           "isColorized": false,
-          "width": 1600,
-          "height": 1067,
-          "checkedAt": "2026-10-27"
+          "width": 1200,
+          "height": 900,
+          "checkedAt": "2026-10-28"
         }
       ],
       "videos": []
@@ -873,24 +855,24 @@
       ],
       "media": [
         {
-          "key": "lai-chau-tuong-dai-chien-thang",
-          "fileUrl": "https://laichau.gov.vn/uploads/images/2023/12/chien-thang-lai-chau-1953.jpg",
-          "sourcePageUrl": "https://laichau.gov.vn/di-tich-chien-thang-lai-chau-1953",
+          "key": "chien-thang-lai-chau-1953-tuong-dai-quang-truong-lai-chau",
+          "fileUrl": "storage:locations/heritage/chien-thang-lai-chau-1953/tuong-dai-quang-truong-lai-chau-1200.webp",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Lai_Ch%C3%A2u_Town_Square_Monument_(2014).jpg",
           "era": "today",
-          "yearTaken": 2023,
-          "photographer": "Cổng Thông tin Điện tử tỉnh Lai Châu",
-          "license": null,
-          "licenseUrl": null,
-          "usageBasis": "coursework_reference",
-          "caption": "Tượng đài Chiến thắng Giải phóng Lai Châu năm 1953 sừng sững bên dòng sông Đà hùng vĩ.",
-          "altText": "Tượng đài chiến sĩ bộ đội và nhân dân các dân tộc Tây Bắc giương cao cờ chiến thắng",
+          "yearTaken": 2014,
+          "photographer": "Idan Robbins",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "usageBasis": "open_license",
+          "caption": "Tượng đài Bác Hồ với đồng bào các dân tộc Lai Châu tại Quảng trường thành phố Lai Châu",
+          "altText": "Cụm tượng đài Bác Hồ giữa trung tâm quảng trường thành phố Lai Châu",
           "isCover": true,
-          "pairKey": "p1",
+          "pairKey": null,
           "isReenactment": false,
           "isColorized": false,
           "width": 1200,
-          "height": 800,
-          "checkedAt": "2026-10-27"
+          "height": 675,
+          "checkedAt": "2026-10-28"
         }
       ],
       "videos": []
@@ -966,24 +948,24 @@
       ],
       "media": [
         {
-          "key": "son-la-nha-tu-khau-ca",
-          "fileUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nha_tu_Son_La.jpg?width=1600",
-          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Nha_tu_Son_La.jpg",
+          "key": "nha-tu-son-la-nha-tu-son-la-khu-giam-cam",
+          "fileUrl": "storage:locations/heritage/nha-tu-son-la/nha-tu-son-la-khu-giam-cam-1200.webp",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Nh%C3%A0_t%C3%B9_S%C6%A1n_La_-_panoramio.jpg",
           "era": "today",
-          "yearTaken": 2019,
-          "photographer": "Wikimedia Commons Contributor",
-          "license": "CC BY-SA 4.0",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "yearTaken": 2011,
+          "photographer": "ChieuTimViet",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
           "usageBasis": "open_license",
-          "caption": "Bức tường đá kiên cố và các dãy xà lim Di tích Quốc gia Đặc biệt Nhà tù Sơn La trên đồi Khau Cả.",
-          "altText": "Khu phế tích tường đá cổ xám rêu phong của các buồng giam nhà lao Sơn La",
+          "caption": "Khu di tích Quốc gia đặc biệt Nhà tù Sơn La trên đồi Khau Cả, thành phố Sơn La",
+          "altText": "Tường đá cổ và những song sắt kiên cố của các xà lim Nhà tù Sơn La",
           "isCover": true,
-          "pairKey": "p1",
+          "pairKey": null,
           "isReenactment": false,
           "isColorized": false,
-          "width": 1600,
-          "height": 1067,
-          "checkedAt": "2026-10-27"
+          "width": 1200,
+          "height": 797,
+          "checkedAt": "2026-10-28"
         }
       ],
       "videos": []
@@ -1064,24 +1046,24 @@
       ],
       "media": [
         {
-          "key": "yen-bai-tuong-dai-nguyen-thai-hoc",
-          "fileUrl": "https://yenbai.gov.vn/uploads/images/2020/02/khu-tuong-niem-nguyen-thai-hoc.jpg",
-          "sourcePageUrl": "https://yenbai.gov.vn/di-tich-khoi-nghia-yen-bai",
-          "era": "today",
-          "yearTaken": 2020,
-          "photographer": "Cổng Thông tin Điện tử tỉnh Yên Bái",
-          "license": null,
+          "key": "khoi-nghia-yen-bai-1930-chan-dung-13-liet-si-khoi-nghia-yen-bai",
+          "fileUrl": "storage:locations/heritage/khoi-nghia-yen-bai-1930/chan-dung-13-liet-si-khoi-nghia-yen-bai-1200.webp",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Portraits_of_13_nationalists_executed_in_Yen-Bay_on_17_June_1930.png",
+          "era": "historical",
+          "yearTaken": 1930,
+          "photographer": "Báo chí đương thời (1930)",
+          "license": "Public domain",
           "licenseUrl": null,
-          "usageBasis": "coursework_reference",
-          "caption": "Tượng đài nhà yêu nước Nguyễn Thái Học cùng các nghĩa sĩ Khởi nghĩa Yên Bái năm 1930 tại công viên Yên Hòa.",
-          "altText": "Tượng đài đá cẩm thạch tạc hình người chiến sĩ yêu nước đứng hiên ngang giữa quảng trường xanh",
+          "usageBasis": "public_domain",
+          "caption": "Chân dung 13 nghĩa sĩ Việt Nam Quốc dân Đảng hy sinh tại Yên Bái ngày 17 tháng 6 năm 1930",
+          "altText": "Tài liệu lịch sử năm 1930 in ảnh chân dung 13 chiến sĩ Khởi nghĩa Yên Bái trước máy chém",
           "isCover": true,
-          "pairKey": "p1",
+          "pairKey": null,
           "isReenactment": false,
           "isColorized": false,
           "width": 1200,
-          "height": 800,
-          "checkedAt": "2026-10-27"
+          "height": 1800,
+          "checkedAt": "2026-10-28"
         }
       ],
       "videos": []
@@ -1162,24 +1144,24 @@
       ],
       "media": [
         {
-          "key": "dinh-hoa-lan-tin-keo",
-          "fileUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Lan_Na_Nua_ATK_Dinh_Hoa.jpg?width=1600",
-          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Lan_Na_Nua_ATK_Dinh_Hoa.jpg",
+          "key": "atk-dinh-hoa-nha-tuong-niem-bac-ho-deo-de",
+          "fileUrl": "storage:locations/heritage/atk-dinh-hoa/nha-tuong-niem-bac-ho-deo-de-1200.webp",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:ATK_DINH_HOA.JPG",
           "era": "today",
-          "yearTaken": 2018,
-          "photographer": "Wikimedia Commons Contributor",
-          "license": "CC BY-SA 4.0",
-          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "yearTaken": 2009,
+          "photographer": "Minhminh284",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
           "usageBasis": "open_license",
-          "caption": "Căn lán gỗ mộc mạc tại lán Tỉn Keo, ATK Định Hóa – nơi Bác Hồ chủ trì cuộc họp Bộ Chính trị mở Chiến dịch Điện Biên Phủ.",
-          "altText": "Ngôi lán nhỏ bằng tre nứa mái cọ lợp tranh đơn sơ nép mình bên sườn đồi xanh",
+          "caption": "Nhà tưởng niệm Chủ tịch Hồ Chí Minh tại Đèo De, xã Phú Đình, huyện Định Hóa, tỉnh Thái Nguyên (ATK Định Hóa)",
+          "altText": "Khu nhà tưởng niệm kiến trúc mái ngói cổ truyền tọa lạc trang nghiêm trên đỉnh Đèo De",
           "isCover": true,
-          "pairKey": "p1",
+          "pairKey": null,
           "isReenactment": false,
           "isColorized": false,
-          "width": 1600,
-          "height": 1067,
-          "checkedAt": "2026-10-27"
+          "width": 1200,
+          "height": 900,
+          "checkedAt": "2026-10-28"
         }
       ],
       "videos": []
@@ -1250,24 +1232,24 @@
       ],
       "media": [
         {
-          "key": "cho-don-lan-na-pau",
-          "fileUrl": "https://backan.gov.vn/uploads/images/2022/05/atk-cho-don.jpg",
-          "sourcePageUrl": "https://backan.gov.vn/di-tich-atk-cho-don",
+          "key": "atk-cho-don-di-tich-deo-so-cho-don",
+          "fileUrl": "storage:locations/heritage/atk-cho-don/di-tich-deo-so-cho-don-1200.webp",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:%C4%90%C3%A8o_So.jpg",
           "era": "today",
-          "yearTaken": 2022,
-          "photographer": "Cổng Thông tin Điện tử tỉnh Bắc Kạn",
-          "license": null,
+          "yearTaken": 2016,
+          "photographer": "Gió Đông",
+          "license": "Public domain",
           "licenseUrl": null,
-          "usageBasis": "coursework_reference",
-          "caption": "Khu di tích lịch sử lán Nà Pậu – nơi Chủ tịch Hồ Chí Minh sống và làm việc đầu năm 1951 tại ATK Chợ Đồn.",
-          "altText": "Căn lán gỗ sàn truyền thống nép mình bên gốc cây đại ngàn giữa núi rừng xanh thẳm",
+          "usageBasis": "public_domain",
+          "caption": "Đèo So, cửa ngõ lịch sử nối liền ATK Định Hóa và ATK Chợ Đồn, xã Yên Nhuận, huyện Chợ Đồn, tỉnh Bắc Kạn",
+          "altText": "Con đèo uốn lượn qua các dãy núi rừng xanh mướt của chiến khu Việt Bắc",
           "isCover": true,
-          "pairKey": "p1",
+          "pairKey": null,
           "isReenactment": false,
           "isColorized": false,
           "width": 1200,
-          "height": 800,
-          "checkedAt": "2026-10-27"
+          "height": 679,
+          "checkedAt": "2026-10-28"
         }
       ],
       "videos": []

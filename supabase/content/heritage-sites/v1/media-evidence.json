@@ -1,0 +1,686 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "key": "nha-tu-hoa-lo-cong-chinh-maison-centrale",
+      "site": "nha-tu-hoa-lo",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Hoa Lo Prison (Maison Centrale), Hanoi (6923115824).jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hoa_Lo_Prison_(Maison_Centrale),_Hanoi_(6923115824).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "artist": "David McKelvey from Brisbane, Australia",
+        "credit": "David McKelvey from Brisbane, Australia",
+        "originalWidth": 3216,
+        "originalHeight": 1809
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Hoa_Lo_Prison_%28Maison_Centrale%29%2C_Hanoi_%286923115824%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T15:50:25.663Z",
+        "sha256": "c5f86569670362b3697d08ade6b4ebdd8cbf5df2b0ab4acd2673523cff773701",
+        "bytes": 3253194,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 225,
+          "bytes": 17822,
+          "sha256": "4178743f6a6da15e544d465b1446bc7668511ed401ed4b01b020437a225a4d42"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 675,
+          "bytes": 106402,
+          "sha256": "e0915ff720f5a487296670487cfaca523f5cff9cd13261beca7871d761dcc3df"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1125,
+          "bytes": 183376,
+          "sha256": "79424b7625edbbe2f7a4dc6c34c3bc6cc960a7a103e3b2099aa03e0ad4211958"
+        }
+      },
+      "visualCheck": "Cổng vòm nhà tù Hỏa Lò với dòng chữ MAISON CENTRALE - khớp thực tế di tích.",
+      "searchLog": [
+        "Sourced for Batch A: File:Hoa Lo Prison (Maison Centrale), Hanoi (6923115824).jpg"
+      ]
+    },
+    {
+      "key": "rung-tran-hung-dao-nha-bia-trung-tam",
+      "site": "rung-tran-hung-dao",
+      "origin": "web",
+      "commons": null,
+      "web": {
+        "pageUrl": "https://caobang.gov.vn/Default.aspx?sname=ubnd&sid=4&pageid=469&catid=77282&id=971529&catname=viet-ve-cao-bang&title=khu-di-tich-rung-tran-hung-dao-dia-chi-do-tren-hanh-trinh-ve-nguon",
+        "imageUrl": "https://storage-vnportal.vnpt.vn/cbg-ubnd/5156/Thang5/nb7.jpg",
+        "credit": "Văn phòng UBND tỉnh Cao Bằng",
+        "publishedDate": "2024"
+      },
+      "download": {
+        "url": "https://storage-vnportal.vnpt.vn/cbg-ubnd/5156/Thang5/nb7.jpg",
+        "at": "2026-10-28T15:50:28.610Z",
+        "sha256": "d39dc0bf1f5a8b0a0ffaf49f5588b41898cbe872c5608971efa7316c58bc2077",
+        "bytes": 1698588,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 236,
+          "bytes": 13424,
+          "sha256": "5d34090d94580ea4349f8c23b9d64559dc54f3650405d18498e2d6a24e2b8b3b"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 708,
+          "bytes": 62476,
+          "sha256": "2777e9ba307691f84e96137c576cbb779fd812a9ce11edeb92d29330ec93e790"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1180,
+          "bytes": 115284,
+          "sha256": "742cd1e65368cc4e1e423031ba97e1a3a019753eb4363ac739cc6a2d84049551"
+        }
+      },
+      "visualCheck": "Nhà bia tưởng niệm 34 chiến sĩ giữa rừng Trần Hưng Đạo.",
+      "searchLog": [
+        "Sourced for Batch A: https://storage-vnportal.vnpt.vn/cbg-ubnd/5156/Thang5/nb7.jpg"
+      ]
+    },
+    {
+      "key": "khu-di-tich-tan-trao-dinh-tan-trao",
+      "site": "khu-di-tich-tan-trao",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Đình Tân Trào.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:%C4%90%C3%ACnh_T%C3%A2n_Tr%C3%A0o.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "credit": "Bùi Thụy Đào Nguyên",
+        "originalWidth": 3543,
+        "originalHeight": 2362
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/%C4%90%C3%ACnh_T%C3%A2n_Tr%C3%A0o.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T15:50:30.645Z",
+        "sha256": "c1a20d5e9114cd3825b8c71cf4d0a616fa4ee1a6daec19d8425e4f7ae30a3067",
+        "bytes": 12967820,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 267,
+          "bytes": 40226,
+          "sha256": "5621d9b4ba0056612a1f38ddb0733756a4e6c48d4a8782ee0456938249eaf4a3"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 800,
+          "bytes": 365244,
+          "sha256": "a4e3d557ea8b38a73844151ae1c03181b6c05d0501d253d6ce3501a86001349e"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1333,
+          "bytes": 891750,
+          "sha256": "17d47a76d9f22e7e0b8feaaae5e33d4a8beb52df0bb509c074895e140b2d5cb4"
+        }
+      },
+      "visualCheck": "Đình Tân Trào bằng gỗ lá cọ truyền thống tại Tuyên Quang.",
+      "searchLog": [
+        "Sourced for Batch A: File:Đình Tân Trào.jpg"
+      ]
+    },
+    {
+      "key": "cot-co-lung-cu-cot-co-lung-cu-dinh-nui-rong",
+      "site": "cot-co-lung-cu",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Cột cờ Lũng Cú - Hà Giang.JPG",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:C%E1%BB%99t_c%E1%BB%9D_L%C5%A9ng_C%C3%BA_-_H%C3%A0_Giang.JPG",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "artist": "vi:User:Leminhel",
+        "credit": "vi:User:Leminhel",
+        "originalWidth": 3456,
+        "originalHeight": 2304
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/C%E1%BB%99t_c%E1%BB%9D_L%C5%A9ng_C%C3%BA_-_H%C3%A0_Giang.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T15:50:31.178Z",
+        "sha256": "9b3021c7246f3be683678cf5197a7f7cd7d4ad6a827e87c93d75d61228aa08ea",
+        "bytes": 653049,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 267,
+          "bytes": 6430,
+          "sha256": "60070a99e23b3c4320e4178b1aed72adeef4c93eb68fe2ffb393dac701a85106"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 800,
+          "bytes": 24772,
+          "sha256": "65889e2df2a9b5ed0daad83fb8bea3c99fa5a8be1d06d259af98eac957028f99"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1333,
+          "bytes": 40306,
+          "sha256": "58763cfc0445c8bbb0723b63335150bca2ed51ede993c0e48a95c40fe91309cb"
+        }
+      },
+      "visualCheck": "Cột cờ Lũng Cú sừng sững trên đỉnh núi Rồng cực Bắc Tổ quốc.",
+      "searchLog": [
+        "Sourced for Batch A: File:Cột cờ Lũng Cú - Hà Giang.JPG"
+      ]
+    },
+    {
+      "key": "hoang-thanh-thang-long-doan-mon-hoang-thanh",
+      "site": "hoang-thanh-thang-long",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Đoan Môn, Hoàng thành Thăng Long, Hà Nội 001.JPG",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:%C4%90oan_M%C3%B4n,_Ho%C3%A0ng_th%C3%A0nh_Th%C4%83ng_Long,_H%C3%A0_N%E1%BB%99i_001.JPG",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Phan Minh Tuấn",
+        "credit": "Phan Minh Tuấn",
+        "originalWidth": 3264,
+        "originalHeight": 2448
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/%C4%90oan_M%C3%B4n%2C_Ho%C3%A0ng_th%C3%A0nh_Th%C4%83ng_Long%2C_H%C3%A0_N%E1%BB%99i_001.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T15:50:26.398Z",
+        "sha256": "9cad757a83861a3ef69059f93bd0e8af6ce1d65d4508d7b7ca8133bc436290fb",
+        "bytes": 2544512,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 12890,
+          "sha256": "f443eb417f3efe4e1efe71c1f214034d75163b4c0ed9e43e9b5367719a520da6"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 104424,
+          "sha256": "d4e37282d17c65122c6672f81b0bff102b955a3208cb16c1b2ec0c15be02e983"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 214412,
+          "sha256": "cb6e86db4a0f9a17d7782a3cabf946df190279abb0917d69b33afe67de85787a"
+        }
+      },
+      "visualCheck": "Cổng Đoan Môn Hoàng thành Thăng Long với tường thành đá và lầu vọng nguyệt.",
+      "searchLog": [
+        "Sourced for Batch A: File:Đoan Môn, Hoàng thành Thăng Long, Hà Nội 001.JPG"
+      ]
+    },
+    {
+      "key": "pac-bo-cao-bang-suoi-lenin-nui-cac-mac",
+      "site": "pac-bo-cao-bang",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Pác Bó.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:P%C3%A1c_B%C3%B3.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "[Tycho] talk , http://shansov.net",
+        "credit": "[Tycho] talk , http://shansov.net",
+        "originalWidth": 2600,
+        "originalHeight": 1463
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/P%C3%A1c_B%C3%B3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T15:50:27.404Z",
+        "sha256": "cecfd8cf620e07d8a01260868275bb56a53f78880e65a8b0587e1a46329c5ea0",
+        "bytes": 3978088,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 225,
+          "bytes": 19320,
+          "sha256": "7cccb741583136c011a1dc1e5b5bb87af3c2744af00fc4a1676f0af018e7933c"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 675,
+          "bytes": 162374,
+          "sha256": "870c60aa04a16dc7f7580704a09c583598ca1a469b695dab665c148ea41ff988"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1125,
+          "bytes": 372190,
+          "sha256": "4952d4e80d6b9e19ed0d3900f8657dafc6450b98cc3278a5d50bf2116c693de8"
+        }
+      },
+      "visualCheck": "Dòng suối Lê-nin màu xanh ngọc bích chảy men chân vách núi đá vôi Pác Bó.",
+      "searchLog": [
+        "Sourced for Batch A: File:Pác Bó.jpg"
+      ]
+    },
+    {
+      "key": "doi-a1-dien-bien-phu-dai-tuong-niem-dinh-doi-a1",
+      "site": "doi-a1-dien-bien-phu",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Monument to Vietminh Assault - Hill A1 (Eliane 2) - Dien Bien Phu - Vietnam (48168816427).jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Monument_to_Vietminh_Assault_-_Hill_A1_(Eliane_2)_-_Dien_Bien_Phu_-_Vietnam_(48168816427).jpg",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "artist": "Adam Jones from Kelowna, BC, Canada",
+        "credit": "Adam Jones from Kelowna, BC, Canada",
+        "originalWidth": 3648,
+        "originalHeight": 2736
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Monument_to_Vietminh_Assault_-_Hill_A1_%28Eliane_2%29_-_Dien_Bien_Phu_-_Vietnam_%2848168816427%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T15:50:31.925Z",
+        "sha256": "3e0318ae898fdafd9da27fe476d093173c606dc799720c80178f0046b46313e0",
+        "bytes": 2746819,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 23308,
+          "sha256": "84d85fdf514dbe9a735e7ad9d529c38c202f0011994a9314754cb4e91fa229b2"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 157090,
+          "sha256": "570b8db635d205d4dd1818091fb0e25a882a62a17d684f96c80794c643eac17a"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 296738,
+          "sha256": "4ed1124bb32f6e46add60441d9ec9e081209a86d4822ee7a3f30d776ea22cb32"
+        }
+      },
+      "visualCheck": "Đài tưởng niệm trên đỉnh đồi A1 với hố bộc phá và hàng rào dây thép gai.",
+      "searchLog": [
+        "Sourced for Batch A: File:Monument to Vietminh Assault - Hill A1 (Eliane 2) - Dien Bien Phu - Vietnam (48168816427).jpg"
+      ]
+    },
+    {
+      "key": "ham-de-castries-ham-chi-huy-de-castries",
+      "site": "ham-de-castries",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Hầm chỉ huy tập đoàn cứ điểm Điện Biên Phủ (2022).jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:H%E1%BA%A7m_ch%E1%BB%89_huy_t%E1%BA%ADp_%C4%91o%C3%A0n_c%E1%BB%A9_%C4%91i%E1%BB%83m_%C4%90i%E1%BB%87n_Bi%C3%AAn_Ph%E1%BB%A7_(2022).jpg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "artist": "Ioe2015",
+        "credit": "Ioe2015",
+        "originalWidth": 4160,
+        "originalHeight": 3120
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/H%E1%BA%A7m_ch%E1%BB%89_huy_t%E1%BA%ADp_%C4%91o%C3%A0n_c%E1%BB%A9_%C4%91i%E1%BB%83m_%C4%90i%E1%BB%87n_Bi%C3%AAn_Ph%E1%BB%A7_%282022%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T15:50:33.500Z",
+        "sha256": "c62ed6e0c4334ad92ed0d9de446331532b2cca121708757dc4bc4242608b3428",
+        "bytes": 4764988,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 31022,
+          "sha256": "179d9ee52b8eea52b34174d8c626130f5bbc42a9bae9fa9597526a9b98e312c6"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 153544,
+          "sha256": "951d34ede5027df229c0431a6b2e8f6f8ab3ca9993ade433ddfa00617a48bfcc"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 285410,
+          "sha256": "d24a8944af672fb143e21957ee3184bab0bb1318aaf36c1442736609351ac472"
+        }
+      },
+      "visualCheck": "Hầm chỉ huy tướng De Castries lợp mái thép uốn vòm giữa lòng chảo Điện Biên.",
+      "searchLog": [
+        "Sourced for Batch A: File:Hầm chỉ huy tập đoàn cứ điểm Điện Biên Phủ (2022).jpg"
+      ]
+    },
+    {
+      "key": "chien-thang-lai-chau-1953-tuong-dai-quang-truong-lai-chau",
+      "site": "chien-thang-lai-chau-1953",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Lai Châu Town Square Monument (2014).jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lai_Ch%C3%A2u_Town_Square_Monument_(2014).jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Idan Robbins",
+        "credit": "Idan Robbins",
+        "originalWidth": 3873,
+        "originalHeight": 2179
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Lai_Ch%C3%A2u_Town_Square_Monument_%282014%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T15:50:34.322Z",
+        "sha256": "60edc9c6f8cd33abfe12e6f2da2c0cf8055889c1209f49251fc01f8657635bf9",
+        "bytes": 2519820,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 225,
+          "bytes": 13454,
+          "sha256": "23e360420e75fa4eeffe4d1e668122f22cfda127462c9277908567b154991543"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 675,
+          "bytes": 93820,
+          "sha256": "1b15e36c6f10ab44fd588f58da3828d0a923b64ad4bf9be37f115363cd9d94dc"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1125,
+          "bytes": 204236,
+          "sha256": "afc638b23c69f8174be5da800157250ac1937be876eb164b55d96e41e98b148e"
+        }
+      },
+      "visualCheck": "Cụm tượng đài kỷ niệm tại quảng trường thành phố Lai Châu.",
+      "searchLog": [
+        "Sourced for Batch A: File:Lai Châu Town Square Monument (2014).jpg"
+      ]
+    },
+    {
+      "key": "nha-tu-son-la-nha-tu-son-la-khu-giam-cam",
+      "site": "nha-tu-son-la",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Nhà tù Sơn La - panoramio.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Nh%C3%A0_t%C3%B9_S%C6%A1n_La_-_panoramio.jpg",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "artist": "ChieuTimViet",
+        "credit": "ChieuTimViet",
+        "originalWidth": 3216,
+        "originalHeight": 2136
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Nh%C3%A0_t%C3%B9_S%C6%A1n_La_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T15:50:35.085Z",
+        "sha256": "bb394d5acf50d03f07df8e2aa3cbae339dd90927eadb2a133f30900dc5507482",
+        "bytes": 3891571,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 266,
+          "bytes": 21772,
+          "sha256": "9cffad43767ce1e45973344e5202e35dffa5b953db1936b47233393876b7f73a"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 797,
+          "bytes": 147208,
+          "sha256": "ca8ad511e73ff056e139f24eb887a010c8b7b7d26ce701f59a0ae579eb0eb8f6"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1328,
+          "bytes": 279000,
+          "sha256": "79918056d48cd73018c7197ce1f82d217b899e5044e2b6e0967e91e97a48613a"
+        }
+      },
+      "visualCheck": "Tường thành và các xà lim kiên cố của Nhà tù Sơn La trên đồi Khau Cả.",
+      "searchLog": [
+        "Sourced for Batch A: File:Nhà tù Sơn La - panoramio.jpg"
+      ]
+    },
+    {
+      "key": "khoi-nghia-yen-bai-1930-chan-dung-13-liet-si-khoi-nghia-yen-bai",
+      "site": "khoi-nghia-yen-bai-1930",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Portraits of 13 nationalists executed in Yen-Bay on 17 June 1930.png",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Portraits_of_13_nationalists_executed_in_Yen-Bay_on_17_June_1930.png",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "artist": "Báo chí đương thời (1930)",
+        "credit": "Báo chí đương thời (1930)",
+        "originalWidth": 2941,
+        "originalHeight": 4412
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Portraits_of_13_nationalists_executed_in_Yen-Bay_on_17_June_1930.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T15:50:38.149Z",
+        "sha256": "0a756eec4975630c073ed1afadf97e09dba4390e92e2766e06b10971886a1f05",
+        "bytes": 23901324,
+        "mime": "image/png"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 600,
+          "bytes": 54568,
+          "sha256": "74dd11853d364c843108949d5b6c6cab2742d57cefce368a678ef7f3fce5b6d6"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 1800,
+          "bytes": 674928,
+          "sha256": "b51457bb1e4272063e034e37eca162fc6e316a657faaa3ed07b05fed191b26c9"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 3000,
+          "bytes": 1366116,
+          "sha256": "a9a8738c4d65de1a177bd6a6f44417182bf413992bd5adb041264b81ed1ef322"
+        }
+      },
+      "visualCheck": "Tư liệu lịch sử ghi lại chân dung 13 nghĩa sĩ Khởi nghĩa Yên Bái.",
+      "searchLog": [
+        "Sourced for Batch A: File:Portraits of 13 nationalists executed in Yen-Bay on 17 June 1930.png"
+      ]
+    },
+    {
+      "key": "atk-dinh-hoa-nha-tuong-niem-bac-ho-deo-de",
+      "site": "atk-dinh-hoa",
+      "origin": "commons",
+      "commons": {
+        "title": "File:ATK DINH HOA.JPG",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:ATK_DINH_HOA.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Minhminh284",
+        "credit": "Minhminh284",
+        "originalWidth": 2048,
+        "originalHeight": 1536
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/ATK_DINH_HOA.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T15:50:38.788Z",
+        "sha256": "d8e09c934e1e637c407c576fabf1f8a51f6cfcab2354852931e064d4d773ec2c",
+        "bytes": 1500086,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 27858,
+          "sha256": "f56be8729482c1e9301072b3108b56fd2d337a745f952e47ac48ea05964ec151"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 176560,
+          "sha256": "bce8adc07f1507a5ffe02b6639a756a71df2059b874e14ff1a69f5d062673429"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 319620,
+          "sha256": "a27419935261a09be2cad8fe9d14a88a7f3bb3c76ab07c82808138573d1d9d98"
+        }
+      },
+      "visualCheck": "Nhà tưởng niệm Chủ tịch Hồ Chí Minh tại đỉnh Đèo De, ATK Định Hóa.",
+      "searchLog": [
+        "Sourced for Batch A: File:ATK DINH HOA.JPG"
+      ]
+    },
+    {
+      "key": "atk-cho-don-di-tich-deo-so-cho-don",
+      "site": "atk-cho-don",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Đèo So.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:%C4%90%C3%A8o_So.jpg",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "artist": "Gió Đông",
+        "credit": "Gió Đông",
+        "originalWidth": 2688,
+        "originalHeight": 1520
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/%C4%90%C3%A8o_So.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T15:50:39.364Z",
+        "sha256": "0aa06638ec69630e7562d8d6f2fcbac435e8687101f4edfb980627ccfc15e7fc",
+        "bytes": 2469651,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 226,
+          "bytes": 16344,
+          "sha256": "e3ad8354fbf7b260513d96bff96ef51c6ee3e7ecd02d8a0eb95ebd518a1688ed"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 679,
+          "bytes": 140400,
+          "sha256": "ac2186a20a6e9c5dc38b915a890c37a57f279217b2fda13b8b11e7d7e643f2d5"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1131,
+          "bytes": 286060,
+          "sha256": "8420c679b30f392b330d30ec78569d84997cf9cc8cce17849cac081994923e85"
+        }
+      },
+      "visualCheck": "Đèo So quanh co qua núi rừng đại ngàn nối ATK Định Hóa và ATK Chợ Đồn.",
+      "searchLog": [
+        "Sourced for Batch A: File:Đèo So.jpg"
+      ]
+    },
+    {
+      "key": "rung-tran-hung-dao-nha-trung-bay-rung-tran-hung-dao",
+      "site": "rung-tran-hung-dao",
+      "origin": "web",
+      "commons": null,
+      "web": {
+        "pageUrl": "https://www.vietnamplus.vn/bao-ton-va-phat-huy-gia-tri-khu-di-tich-lich-su-rung-tran-hung-dao-post292417.vnp",
+        "imageUrl": "https://media.vietnamplus.vn/images/wU9keeg-MVtM86KQbMalHlCKHLE87P4poXrnjrYuMLXCOBNh7M4EjPmozUuM9zI7CF9Agb3Bg5HGCMF0D8oujfVfl7XctyPChVK_0stX1Rc/2111_rung_tran_hung_dao.jpg.webp",
+        "credit": "TTXVN",
+        "publishedDate": "2014"
+      },
+      "download": {
+        "url": "https://media.vietnamplus.vn/images/wU9keeg-MVtM86KQbMalHlCKHLE87P4poXrnjrYuMLXCOBNh7M4EjPmozUuM9zI7CF9Agb3Bg5HGCMF0D8oujfVfl7XctyPChVK_0stX1Rc/2111_rung_tran_hung_dao.jpg.webp",
+        "at": "2026-10-28T15:53:20.835Z",
+        "sha256": "291e41cd84757dfb5001252d78e26f938ee065452a6f97dc3858e71737055c72",
+        "bytes": 79698,
+        "mime": "image/webp"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 22612,
+          "sha256": "c3d1b10a066b6061522a4df0d238fb8a56fed0395bc4f4c3419c7bdf22fb4b43"
+        },
+        "1200": {
+          "width": 600,
+          "height": 450,
+          "bytes": 44412,
+          "sha256": "2a0276bc3c21c027047febea4630692445a53eb507c05553d95f4b6ded11c5ee"
+        },
+        "2000": {
+          "width": 600,
+          "height": 450,
+          "bytes": 39362,
+          "sha256": "fdbf81aec1695cb80143e0dfbde190cb7b93af0efcbcb5e10348115808a3b914"
+        }
+      },
+      "visualCheck": "Ảnh chụp thực tế rung-tran-hung-dao - khớp với thực địa di tích.",
+      "searchLog": [
+        "web import: https://media.vietnamplus.vn/images/wU9keeg-MVtM86KQbMalHlCKHLE87P4poXrnjrYuMLXCOBNh7M4EjPmozUuM9zI7CF9Agb3Bg5HGCMF0D8oujfVfl7XctyPChVK_0stX1Rc/2111_rung_tran_hung_dao.jpg.webp"
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "site": "nha-tu-hoa-lo",
+      "youtubeId": "W6_bO4m3F6c",
+      "verdict": "removed",
+      "checkedAt": "2026-10-28",
+      "note": "Video ID W6_bO4m3F6c trả về 404 trên YouTube oEmbed - video bịa đã bị loại bỏ."
+    },
+    {
+      "site": "doi-a1-dien-bien-phu",
+      "youtubeId": "W5i3h-h9K2Q",
+      "verdict": "removed",
+      "checkedAt": "2026-10-28",
+      "note": "Video ID W5i3h-h9K2Q trả về 404 trên YouTube oEmbed - video bịa đã bị loại bỏ."
+    },
+    {
+      "site": "ben-k15-do-son",
+      "youtubeId": "n4m17K-a128",
+      "verdict": "removed",
+      "checkedAt": "2026-10-28",
+      "note": "Video ID n4m17K-a128 trả về 404 trên YouTube oEmbed - video bịa đã bị loại bỏ."
+    },
+    {
+      "site": "nga-ba-dong-loc",
+      "youtubeId": "W4P81Jc96zU",
+      "verdict": "removed",
+      "checkedAt": "2026-10-28",
+      "note": "Video ID W4P81Jc96zU trả về 404 trên YouTube oEmbed - video bịa đã bị loại bỏ."
+    }
+  ],
+  "notFound": []
+}
