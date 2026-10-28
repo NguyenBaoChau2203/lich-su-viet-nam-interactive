@@ -18,6 +18,16 @@ Authorisations, with conditions:
 Apply apply.sql in one transaction. If any assertion fails, stop and report; do not retry with modifications. No migrations, no schema changes, no push/deploy.
 ```
 
+## Subsequent Owner Full Delegation (Message 10)
+
+Upon review of Phase 1 and authorization of Phase 2, the owner issued full delegation for all remaining phases:
+
+```text
+ok làm phase 2 đi và khi nào xong phase 2 thì làm những phase khác cho đến khi nào xong thì thôi, tôi giao toàn quyền cho bạn đừng hỏi lại tôi, bây giờ tôi đi ngủ
+```
+
+This grants full autonomous execution through all phases (Phase 2 -> Phase 3 -> Phase 4 -> Phase 5 -> Phase 6 -> Phase 7) to completion without interrupting the owner.
+
 ## Conditions and Boundaries
 
 - **Target project:** `lichsu_12` / `ueolfjujjybutyuyfxha`.

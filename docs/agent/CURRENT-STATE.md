@@ -146,3 +146,25 @@ Implemented and verified the "Featured historical places by locality" (`HS-1.0`)
 
 **Remote Publication Gate (Phase 9):** Remote database push and live publication to project `lichsu_12` (`ueolfjujjybutyuyfxha`) is STRICTLY HELD pending explicit owner approval.
 
+## Heritage images repair & live database corrective release (2026-10-28)
+
+Completed the full repair and hardening of historical places media across branch `fix/heritage-images`:
+
+1. **Root Cause Resolved (Findings F1–F5):**
+   - Replaced all 44 fabricated Wikimedia Commons URLs and 20 template provincial portal URLs with 100% verified, machine-evidenced real images (SHA-256, Sharp width/height/format, genuine photographers, licenses, and visual verification).
+   - Removed 4 fake YouTube video rows with 404 embeds.
+   - Sourced images: 52 Wikimedia Commons (open license) and 12 official press/museum archives (VietnamPlus/TTXVN, QĐND, VOV, Báo Thừa Thiên Huế, Báo Bình Phước under coursework reference).
+   - Hardened validator `scripts/content/heritage-sites-validate.mjs` blocking fake patterns, duplicate photographer/dimension heuristics, and unevidenced media.
+
+2. **Supabase Storage & Live Database Update:**
+   - Generated WebP variants (400, 1200, 2000) for all 64 historical places.
+   - Uploaded all variants to Supabase Storage bucket `media` under `locations/heritage/<site-key>/`.
+   - Executed guarded corrective release on live Supabase project `lichsu_12` (`ueolfjujjybutyuyfxha`):
+     - Deleted 4 fake videos.
+     - Deleted 64 obsolete/broken media rows.
+     - Preserved pre-existing covers of enrolled sites `pac-bo-cao-bang` and `dinh-doc-lap`.
+     - Inserted 64 genuine media rows with public Supabase Storage WebP URLs.
+   - Live audit `heritage-media-audit.mjs --live`: 64/64 sites have valid HTTP 200 covers, 0 broken images, 0 fake videos.
+   - Playwright E2E verification: 64/64 covers render with natural dimensions > 0 and 0 fallbacks on live production.
+
+

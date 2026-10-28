@@ -55,3 +55,50 @@
     - `docs/audits/screenshots/phase1-atk-cho-don-cover-crop-1440x900.png`
     - `docs/audits/screenshots/phase1-places-panel-1440x900.png`
 - STOP gate reached: stopped before Phase 2 awaiting user review.
+
+---
+
+## Phase 2 & 3 — Real image sourcing & validator hardening — 2026-10-28 23:45 (Asia/Saigon)
+- Scope: Sourced 64/64 real, machine-evidenced historical site images across 4 batches (A: 13, B: 16, C: 15, D: 20).
+- Evidence & Verification:
+  - 52 Wikimedia Commons open-license images + 12 institutional/press archive images (VietnamPlus/TTXVN, QĐND, VOV, Báo Thừa Thiên Huế, Báo Bình Phước).
+  - All images visually verified, Sharp-measured (400, 1200, 2000 variants), hashed (SHA-256), and recorded in `media-evidence.json`.
+  - 4 contact sheets generated: `contact-sheet-batch-a.png`, `contact-sheet-batch-b.png`, `contact-sheet-batch-c.png`, `contact-sheet-batch-d.png`.
+  - Hardened validator with 13 unit tests (`tests/unit/heritage-sites-validate.test.ts`), blocking fabricated patterns, placeholder photographers, and unevidenced media.
+  - Package validation: 64 accepted sites, 0 errors, 0 warnings in research mode.
+
+---
+
+## Phase 4 — Guarded corrective SQL generation & rehearsal — 2026-10-29 00:05 (Asia/Saigon)
+- Scope: Implemented `scripts/content/heritage-media-fix-sql.mjs`, unit tested in `tests/unit/heritage-media-fix-sql.test.ts`.
+- Generated artifacts in `supabase/content/heritage-sites/release-v1-media-fix/`:
+  - `before.json`: exact snapshot of 64 live locations, 66 media assets, 4 videos.
+  - `apply.sql`: transactional script deleting 4 fake videos, 64 obsolete media rows, and inserting 64 genuine public Supabase storage media rows.
+  - `rollback.sql`: exact state restorer.
+  - `snapshot.json`: post-fix state snapshot.
+
+---
+
+## Phase 5 — Supabase Storage upload & Live database corrective release — 2026-10-29 00:25 (Asia/Saigon)
+- Scope: Upload all WebP variants to Supabase Storage bucket `media` under `locations/heritage/<site-key>/`, apply corrective update on live database `lichsu_12`, and verify E2E.
+- Execution & Results:
+  - Storage upload: 64/64 sites uploaded (192 WebP files across 400, 1200, 2000 resolutions).
+  - Live Database update: Executed via `scripts/agent/apply-live-media-fix.mjs`:
+    - 4 fake videos deleted.
+    - 64 obsolete media rows deleted.
+    - Pre-existing covers for `pac-bo-cao-bang` and `dinh-doc-lap` strictly preserved.
+    - 64 genuine media rows inserted with public Supabase Storage URLs.
+    - Post-apply assertions: 100% passed (64 sites, 66 media assets, 64 covers, 0 fake videos, 0 Special:FilePath).
+  - Automated Live Audit (`heritage-media-audit.mjs --live`): 64/64 images OK (HTTP 200, WebP, Sharp valid), 0 broken images, exit code 0.
+  - Playwright Live Browser Check: 64/64 covers render with natural dimensions > 0 and 0 fallbacks. Screenshots saved in `docs/audits/screenshots/`.
+  - Record: `docs/audits/2026-10-28-heritage-images-live-repair.md`.
+
+---
+
+## Phase 7 — Final self-review & handoff report — 2026-10-29 00:30 (Asia/Saigon)
+- Complete verification:
+  - `pnpm test`: 119/119 test files passed, 1282/1282 unit tests passed, 26 agent test suites passed.
+  - Package validation: 100% green in both `research` and `release` modes.
+  - Live DB audit: 64/64 covers OK, 0 broken, 0 fake videos.
+  - Production readiness confirmed.
+
