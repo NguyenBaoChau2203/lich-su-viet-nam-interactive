@@ -650,6 +650,742 @@
       "searchLog": [
         "web import: https://media.vietnamplus.vn/images/wU9keeg-MVtM86KQbMalHlCKHLE87P4poXrnjrYuMLXCOBNh7M4EjPmozUuM9zI7CF9Agb3Bg5HGCMF0D8oujfVfl7XctyPChVK_0stX1Rc/2111_rung_tran_hung_dao.jpg.webp"
       ]
+    },
+    {
+      "key": "khoi-nghia-bac-son-bao-tang-khoi-nghia-bac-son",
+      "site": "khoi-nghia-bac-son",
+      "origin": "web",
+      "commons": null,
+      "web": {
+        "pageUrl": "http://langsontourism.com.vn/vi/khoinghiabacson",
+        "imageUrl": "https://dltm-cdn.vnptit3.vn/resources/portal//Images/LSN/phucvt.lsn/dia%20diem/Di%20t%c3%adch%20L%e1%bb%8bch%20S%e1%bb%ad%20-%20VH/baotang_bacson.jpg_636692575102221816.jpg",
+        "credit": "Trung tâm Thông tin Xúc tiến Du lịch Lạng Sơn",
+        "publishedDate": "2021"
+      },
+      "download": {
+        "url": "https://dltm-cdn.vnptit3.vn/resources/portal//Images/LSN/phucvt.lsn/dia%20diem/Di%20t%c3%adch%20L%e1%bb%8bch%20S%e1%bb%ad%20-%20VH/baotang_bacson.jpg_636692575102221816.jpg",
+        "at": "2026-10-28T16:12:09.683Z",
+        "sha256": "98f3e960c0cd8e378640fb533b9b58859318c5929ae9102c931c0c58b6d76b5f",
+        "bytes": 748585,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 266,
+          "bytes": 23582,
+          "sha256": "f284ffc22457bd7a2cf641fc0175a37129969a3105a0598775758761b1e19a87"
+        },
+        "1200": {
+          "width": 1024,
+          "height": 682,
+          "bytes": 127868,
+          "sha256": "b6c03c35368593a75d25ba09ef9b20a87719554a152bc18670bbf72e01182633"
+        },
+        "2000": {
+          "width": 1024,
+          "height": 682,
+          "bytes": 109966,
+          "sha256": "f08f5c6f4fe6a2ff5cd441a844190a971aa8eda1d12add25cfb557faf9e85e14"
+        }
+      },
+      "visualCheck": "Bảo tàng Khởi nghĩa Bắc Sơn tại Lạng Sơn bên chân núi đá vôi.",
+      "searchLog": [
+        "Sourced for Batch B: https://dltm-cdn.vnptit3.vn/resources/portal//Images/LSN/phucvt.lsn/dia%20diem/Di%20t%c3%adch%20L%e1%bb%8bch%20S%e1%bb%ad%20-%20VH/baotang_bacson.jpg_636692575102221816.jpg"
+      ]
+    },
+    {
+      "key": "ai-chi-lang-thung-lung-ai-chi-lang",
+      "site": "ai-chi-lang",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Chi Lăng 2.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chi_L%C4%83ng_2.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "credit": "Bùi Thụy Đào Nguyên",
+        "originalWidth": 4255,
+        "originalHeight": 3043
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Chi_L%C4%83ng_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:12:11.651Z",
+        "sha256": "fdab6e76bb7e90019f62676f160ea2a5f850198501b4b10c8ebe96392191cd35",
+        "bytes": 2107840,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 286,
+          "bytes": 8010,
+          "sha256": "540e0cff5126cfcee6cd93bf03fd207e076c8feb224847df04ed6043b54ccf8f"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 858,
+          "bytes": 45422,
+          "sha256": "c7859881d477eccf1fddab9c6fb02a4572a30e041f78979122f285eb832e878c"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1430,
+          "bytes": 91496,
+          "sha256": "49758a1b760a7763c3cbc6177efa8a40f78a9e399530f259d3fc69b2e3978463"
+        }
+      },
+      "visualCheck": "Núi Mã Yên và quang cảnh thung lũng Ải Chi Lăng Lạng Sơn.",
+      "searchLog": [
+        "Sourced for Batch B: File:Chi Lăng 2.jpg"
+      ]
+    },
+    {
+      "key": "mo-than-deo-nai-bia-bac-ho-ve-tham-mo-deo-nai",
+      "site": "mo-than-deo-nai",
+      "origin": "web",
+      "commons": null,
+      "web": {
+        "pageUrl": "https://baoquangninh.vn/di-tich-noi-bac-ho-ve-tham-mo-deo-nai-post2342565.html",
+        "imageUrl": "https://assets.baoquangninh.vn/images/OlyUTCBq9YKfKAvTlrypRzTzmd7DUiThaCzGL6BrcTKbSrs9JNo4ybWs0IAZZMSpvgBz2tpxuoTr30Hji32qIg/images939247_Tra4.jpg",
+        "credit": "Báo Quảng Ninh",
+        "publishedDate": "2022"
+      },
+      "download": {
+        "url": "https://assets.baoquangninh.vn/images/OlyUTCBq9YKfKAvTlrypRzTzmd7DUiThaCzGL6BrcTKbSrs9JNo4ybWs0IAZZMSpvgBz2tpxuoTr30Hji32qIg/images939247_Tra4.jpg",
+        "at": "2026-10-28T16:12:11.958Z",
+        "sha256": "0e4d9e3023ed0f28f50e1a400a8919017cb3730dc1ac14e54ce1af70c2629326",
+        "bytes": 200373,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 265,
+          "bytes": 28968,
+          "sha256": "e49a5069707fb1c5a398201f97a80c725050cb755d26d2704e1a651c6b5eeefa"
+        },
+        "1200": {
+          "width": 800,
+          "height": 530,
+          "bytes": 91876,
+          "sha256": "7438e56ffe3f788b8e31dd529b3169644c58086247d39e4f0672f7927c908be6"
+        },
+        "2000": {
+          "width": 800,
+          "height": 530,
+          "bytes": 80062,
+          "sha256": "751b92c3a178c6a04affc29ab102c809d9028ddee8812fc6397267588f370e69"
+        }
+      },
+      "visualCheck": "Bia lưu niệm Bác Hồ về thăm mỏ than Đèo Nai tại Cẩm Phả Quảng Ninh.",
+      "searchLog": [
+        "Sourced for Batch B: https://assets.baoquangninh.vn/images/OlyUTCBq9YKfKAvTlrypRzTzmd7DUiThaCzGL6BrcTKbSrs9JNo4ybWs0IAZZMSpvgBz2tpxuoTr30Hji32qIg/images939247_Tra4.jpg"
+      ]
+    },
+    {
+      "key": "bai-coc-bach-dang-bai-coc-yen-giang",
+      "site": "bai-coc-bach-dang",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Cọc Bạch Đằng.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "credit": "Bùi Thụy Đào Nguyên",
+        "originalWidth": 1772,
+        "originalHeight": 1181
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:12:12.851Z",
+        "sha256": "f1b59793d2ec3f2394d02736a5a53898a7a74c88a7b1470a25960cc512122da7",
+        "bytes": 2088175,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 266,
+          "bytes": 32426,
+          "sha256": "06330a3c129afe40f0341de52453cc32444af33819dd15a7b703de8004b94715"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 800,
+          "bytes": 144420,
+          "sha256": "99e08f62d8433df4d782f501eca6f39ca51f473fb0e7b87d1078b74c83a76f28"
+        },
+        "2000": {
+          "width": 1772,
+          "height": 1181,
+          "bytes": 195126,
+          "sha256": "23670712da3b4bf6b419b83fefd1e99b6dd73f570d5d0c0455c228e7a66b479b"
+        }
+      },
+      "visualCheck": "Những chiếc cọc gỗ lim tại bãi cọc Yên Giang Bạch Đằng Quảng Ninh.",
+      "searchLog": [
+        "Sourced for Batch B: File:Cọc Bạch Đằng.jpg"
+      ]
+    },
+    {
+      "key": "atk-ii-hiep-hoa-cay-da-cho-van-atk-ii",
+      "site": "atk-ii-hiep-hoa",
+      "origin": "commons",
+      "commons": {
+        "title": "File:HiepHoaCayDa.JPG",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:HiepHoaCayDa.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Bùi Thế Tâm",
+        "credit": "Bùi Thế Tâm",
+        "originalWidth": 3648,
+        "originalHeight": 2736
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/HiepHoaCayDa.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:12:14.976Z",
+        "sha256": "03dda4d973de1c236649e3f9319511dc07b1969803d85b4b26d10d5188ca5da4",
+        "bytes": 3385486,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 29686,
+          "sha256": "e833ddd3eafb13acf2c271c3ca57256eed5a1d106dfdea547d55d0397ef82b9b"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 208428,
+          "sha256": "a14fbb836650309f3aaa0f6c2d0813201c510bc31af8ebfe9d962f7befcb6480"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 425600,
+          "sha256": "295178333c77d53de4a6dab1de3775ce31286ae272f6d3c67faefb0b9ab4ae2e"
+        }
+      },
+      "visualCheck": "Cây đa Chợ Vân thuộc di tích ATK II Hiệp Hòa Bắc Giang.",
+      "searchLog": [
+        "Sourced for Batch B: File:HiepHoaCayDa.JPG"
+      ]
+    },
+    {
+      "key": "khoi-nghia-yen-the-hoang-hoa-tham-tren-ngua",
+      "site": "khoi-nghia-yen-the",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Hoàng Hoa Thám riding a horse.png",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ho%C3%A0ng_Hoa_Th%C3%A1m_riding_a_horse.png",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "artist": "unknown",
+        "credit": "unknown",
+        "originalWidth": 1127,
+        "originalHeight": 2037
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Ho%C3%A0ng_Hoa_Th%C3%A1m_riding_a_horse.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:12:17.765Z",
+        "sha256": "d3753567fc61470b9aa698b809c1d0045ebe4b39941e795f968f130e36de28dc",
+        "bytes": 4134543,
+        "mime": "image/png"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 723,
+          "bytes": 79632,
+          "sha256": "0b377c24686a1c1ef16e9862e66008347de90b4cc010c8bc948888884aff1eaa"
+        },
+        "1200": {
+          "width": 1127,
+          "height": 2037,
+          "bytes": 371956,
+          "sha256": "632670baf37b34c2d189f1813567afa898050876d2a74f85c077a63e0d01b6c1"
+        },
+        "2000": {
+          "width": 1127,
+          "height": 2037,
+          "bytes": 316712,
+          "sha256": "63e11ea4b2f92901dbc7b96e9d6f217c7baa4bcffd46aa1c08dd90e4a6427bdb"
+        }
+      },
+      "visualCheck": "Ảnh tư liệu Đề Thám Hoàng Hoa Thám cưỡi ngựa trong khởi nghĩa Yên Thế.",
+      "searchLog": [
+        "Sourced for Batch B: File:Hoàng Hoa Thám riding a horse.png"
+      ]
+    },
+    {
+      "key": "chien-thang-song-lo-doan-hung-tuong-dai-song-lo",
+      "site": "chien-thang-song-lo-doan-hung",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Tượng đài chiến thắng Sông Lô.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_chi%E1%BA%BFn_th%E1%BA%AFng_S%C3%B4ng_L%C3%B4.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Vhung1214",
+        "credit": "Vhung1214",
+        "originalWidth": 1024,
+        "originalHeight": 768
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_chi%E1%BA%BFn_th%E1%BA%AFng_S%C3%B4ng_L%C3%B4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:12:18.955Z",
+        "sha256": "a1341ccf7121b27c87b9fdae0579f7c79563fa7ef27687706434ac2e5022d3b9",
+        "bytes": 87318,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 11720,
+          "sha256": "be90d7564f87aa6fd5c157f862a5dcdab77e415d9b2714cca0ce81abed7bf89d"
+        },
+        "1200": {
+          "width": 1024,
+          "height": 768,
+          "bytes": 53886,
+          "sha256": "6b8c9966f7dba945df6e7a50da4f8599b0ba07ba549b276366b58c65fb044ca1"
+        },
+        "2000": {
+          "width": 1024,
+          "height": 768,
+          "bytes": 45098,
+          "sha256": "4983388b484ae54a9c38512f0e3acf3ea549310eac1ce89ec90d912769f988d3"
+        }
+      },
+      "visualCheck": "Tượng đài Chiến thắng Sông Lô trên đỉnh đồi Đoan Hùng Phú Thọ.",
+      "searchLog": [
+        "Sourced for Batch B: File:Tượng đài chiến thắng Sông Lô.jpg"
+      ]
+    },
+    {
+      "key": "khu-di-tich-den-hung-cong-vao-den-hung",
+      "site": "khu-di-tich-den-hung",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Đền Hùng.JPG",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BB%81n_H%C3%B9ng.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Hoangvantoanajc",
+        "credit": "Hoangvantoanajc",
+        "originalWidth": 1673,
+        "originalHeight": 1199
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/%C4%90%E1%BB%81n_H%C3%B9ng.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:12:20.220Z",
+        "sha256": "512df08d16fb60aaae0d84bd29b82c6e31e2a216f4fb5b52a9e8d3316ffb5a17",
+        "bytes": 1182482,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 287,
+          "bytes": 39090,
+          "sha256": "9053b10fd349695050ec3d2ac613d73b87477749353e3319d21de53da4422498"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 860,
+          "bytes": 254230,
+          "sha256": "b3ee2dfeff1910b58dfc730861fc9ea2fa16a7c2f7bf532e6750445ed4b619bd"
+        },
+        "2000": {
+          "width": 1673,
+          "height": 1199,
+          "bytes": 384552,
+          "sha256": "320564b0f99a13e661405ef5c057b1a694f812337db78d68bfe4dbb9c96172b8"
+        }
+      },
+      "visualCheck": "Cổng chính Khu di tích lịch sử Đền Hùng núi Nghĩa Lĩnh.",
+      "searchLog": [
+        "Sourced for Batch B: File:Đền Hùng.JPG"
+      ]
+    },
+    {
+      "key": "ben-k15-do-son-tuong-dai-ben-k15-do-son",
+      "site": "ben-k15-do-son",
+      "origin": "web",
+      "commons": null,
+      "web": {
+        "pageUrl": "https://chinhsachcuocsong.vnanet.vn/ben-tau-khong-so-k15-dia-chi-do-nhac-nho-the-he-tre-ve-gia-tri-cua-hoa-binh-doc-lap/83591.html",
+        "imageUrl": "https://imgchinhsachcuocsong.vnanet.vn/MediaUpload/Org/2026/03/30/125118-vna_potal_hai_phong_dai_le_ho_quoc_tieu_tai_cau_an_cau_sieu_anh_hung_liet_si_tai_ben_tau_khong_so_stand.jpg",
+        "credit": "Thông tấn xã Việt Nam (TTXVN)",
+        "publishedDate": "2026"
+      },
+      "download": {
+        "url": "https://imgchinhsachcuocsong.vnanet.vn/MediaUpload/Org/2026/03/30/125118-vna_potal_hai_phong_dai_le_ho_quoc_tieu_tai_cau_an_cau_sieu_anh_hung_liet_si_tai_ben_tau_khong_so_stand.jpg",
+        "at": "2026-10-28T16:12:20.562Z",
+        "sha256": "be52c63f8c67e809677a6f7eec99825f004778e53a52e0986aed21a0680358e7",
+        "bytes": 74068,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 267,
+          "bytes": 13396,
+          "sha256": "489c39179d14dcadf4e0397393433a1c38d4c1fce6e3c1f6bceb61bbfd92636d"
+        },
+        "1200": {
+          "width": 1024,
+          "height": 684,
+          "bytes": 39858,
+          "sha256": "3e6ae531b2942d9c7a9d2e88ef6584c5cb942117a9192722c2a4c3bfa10d8eb4"
+        },
+        "2000": {
+          "width": 1024,
+          "height": 684,
+          "bytes": 34926,
+          "sha256": "ba39821590c4033f3884812f9210118d198ecd18e3cdec961fc3c600a2709617"
+        }
+      },
+      "visualCheck": "Tượng đài cánh buồm kỷ niệm Đường Hồ Chí Minh trên biển tại Bến K15 Đồ Sơn.",
+      "searchLog": [
+        "Sourced for Batch B: https://imgchinhsachcuocsong.vnanet.vn/MediaUpload/Org/2026/03/30/125118-vna_potal_hai_phong_dai_le_ho_quoc_tieu_tai_cau_an_cau_sieu_anh_hung_liet_si_tai_ben_tau_khong_so_stand.jpg"
+      ]
+    },
+    {
+      "key": "con-son-kiep-bac-cong-nghi-mon-den-kiep-bac",
+      "site": "con-son-kiep-bac",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Den kiep bac.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Den_kiep_bac.jpg",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "artist": "Handyhuy ( thảo luận ) 14:20, ngày 21 tháng 4 năm 2008 (UTC)",
+        "credit": "Handyhuy ( thảo luận ) 14:20, ngày 21 tháng 4 năm 2008 (UTC)",
+        "originalWidth": 3072,
+        "originalHeight": 2304
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Den_kiep_bac.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:12:21.481Z",
+        "sha256": "936f71d6edd81086ac4bfac564c324fcc7f3770ce9093e9a9ef974601b5e4c74",
+        "bytes": 1459685,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 28234,
+          "sha256": "16c6b01c32d748068cb7ea746e8708806bc79b2720d3a3368a8a0a07ef15019a"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 184280,
+          "sha256": "c07fd52b4a6d7c583128ba7efbafff739757010c323392b6e35e18ad86390168"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 347876,
+          "sha256": "a6b8b11782f322f870e9f13a9979b53975a7799689b6e1351cc65b99a51967f6"
+        }
+      },
+      "visualCheck": "Cổng nghi môn và đền Kiếp Bạc Chí Linh Hải Dương.",
+      "searchLog": [
+        "Sourced for Batch B: File:Den kiep bac.jpg"
+      ]
+    },
+    {
+      "key": "tieng-trong-tien-hai-dinh-lang-nho-lam-le-ky-niem",
+      "site": "tieng-trong-tien-hai",
+      "origin": "web",
+      "commons": null,
+      "web": {
+        "pageUrl": "https://dongchau.hungyen.gov.vn/dinh-lang-nho-lam-to-chuc-le-ky-niem-ngay-truyen-thong-cach-mang-c260.html",
+        "imageUrl": "https://dongchau.hungyen.gov.vn/updload_ubt/userfiles/files/%C4%91%C3%ACnh%20l%C3%A0ng%20nho%20l%C3%A2m%201.jpg",
+        "credit": "Cổng Thông tin Điện tử xã Đông Châu",
+        "publishedDate": "2025"
+      },
+      "download": {
+        "url": "https://dongchau.hungyen.gov.vn/updload_ubt/userfiles/files/%C4%91%C3%ACnh%20l%C3%A0ng%20nho%20l%C3%A2m%201.jpg",
+        "at": "2026-10-28T16:12:21.840Z",
+        "sha256": "c63202f2d7da7b72c3422c9bdb7d3191d3bd5dcf657aabaae8ac5f761f70aab3",
+        "bytes": 436312,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 30894,
+          "sha256": "16bc67e71ad7072cc014c11243481205f364f3d1f1789a1958b824d643a51418"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 899,
+          "bytes": 164012,
+          "sha256": "4e479121f1b08883af9c48d879ae017b853e015de0429fcf9e70534c79cd003d"
+        },
+        "2000": {
+          "width": 1276,
+          "height": 956,
+          "bytes": 157146,
+          "sha256": "90d51085c133bf78466dc24bde37dd45bea902ae3a739d251cd9d0c87e46e072"
+        }
+      },
+      "visualCheck": "Đình làng Nho Lâm nơi vang lên tiếng trống Tiền Hải 1930.",
+      "searchLog": [
+        "Sourced for Batch B: https://dongchau.hungyen.gov.vn/updload_ubt/userfiles/files/%C4%91%C3%ACnh%20l%C3%A0ng%20nho%20l%C3%A2m%201.jpg"
+      ]
+    },
+    {
+      "key": "pho-hien-tam-quan-van-mieu-xich-dang",
+      "site": "pho-hien",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Văn miếu Xích Đằng 01.JPG",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:V%C4%83n_mi%E1%BA%BFu_X%C3%ADch_%C4%90%E1%BA%B1ng_01.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Nguyễn Thanh Quang",
+        "credit": "Nguyễn Thanh Quang",
+        "originalWidth": 4000,
+        "originalHeight": 3000
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/V%C4%83n_mi%E1%BA%BFu_X%C3%ADch_%C4%90%E1%BA%B1ng_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:12:24.668Z",
+        "sha256": "bba4954cf46ebe1efa351448066b7ebc7a1e9bfdd80c2a8d0ed1be0226537921",
+        "bytes": 2759870,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 15418,
+          "sha256": "58fd07c47b4aa8314fb31abc5ba2b2f765939100f4dc23de5343ea798d207037"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 110616,
+          "sha256": "5b32478ecb569c070b26a9769ef8675b62c7c89e837a93659f6e2a0960e9de25"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 212270,
+          "sha256": "6e46f1eac3754178e150126b6eedd8c363f0671fd476d99bb4c02779f764e969"
+        }
+      },
+      "visualCheck": "Cổng tam quan Văn miếu Xích Đằng Phố Hiến Hưng Yên.",
+      "searchLog": [
+        "Sourced for Batch B: File:Văn miếu Xích Đằng 01.JPG"
+      ]
+    },
+    {
+      "key": "nha-may-det-nam-dinh-so-do-nha-may-det-nam-dinh",
+      "site": "nha-may-det-nam-dinh",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Sơ đồ Nhà máy Dệt Nam Định (Bảo tàng tỉnh Nam Định).jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:S%C6%A1_%C4%91%E1%BB%93_Nh%C3%A0_m%C3%A1y_D%E1%BB%87t_Nam_%C4%90%E1%BB%8Bnh_(B%E1%BA%A3o_t%C3%A0ng_t%E1%BB%89nh_Nam_%C4%90%E1%BB%8Bnh).jpg",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "artist": "The government of the French protectorate of Annam and Tonkin, French Indo-China.",
+        "credit": "The government of the French protectorate of Annam and Tonkin, French Indo-China.",
+        "originalWidth": 10000,
+        "originalHeight": 5055
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/S%C6%A1_%C4%91%E1%BB%93_Nh%C3%A0_m%C3%A1y_D%E1%BB%87t_Nam_%C4%90%E1%BB%8Bnh_%28B%E1%BA%A3o_t%C3%A0ng_t%E1%BB%89nh_Nam_%C4%90%E1%BB%8Bnh%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:12:28.906Z",
+        "sha256": "2c1cada43d1f230f12b77fb73a3dbf086e416c0bd1858aa8d87385549e8b8517",
+        "bytes": 14983458,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 202,
+          "bytes": 12220,
+          "sha256": "35726d93e35705ff2a5a6f7c80bc81bb8bbb9ebea3397ee0ebea654928b8438c"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 606,
+          "bytes": 72856,
+          "sha256": "205ab6fc819499ab7eadd7d3630abe125015980ed640e96f6c78d77d95814402"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1010,
+          "bytes": 126450,
+          "sha256": "4d52deb695a066217eddb47710037d609b902f9fb0e739a870f78f1fd0ca2d96"
+        }
+      },
+      "visualCheck": "Bản vẽ sơ đồ mặt bằng Nhà máy Dệt Nam Định thời Pháp thuộc tại Bảo tàng Nam Định.",
+      "searchLog": [
+        "Sourced for Batch B: File:Sơ đồ Nhà máy Dệt Nam Định (Bảo tàng tỉnh Nam Định).jpg"
+      ]
+    },
+    {
+      "key": "co-do-hoa-lu-cong-vao-co-do-hoa-lu",
+      "site": "co-do-hoa-lu",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Gate at Hoa Lu - Vietnam - August 2023.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gate_at_Hoa_Lu_-_Vietnam_-_August_2023.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Anass Sedrati",
+        "credit": "Anass Sedrati",
+        "originalWidth": 4032,
+        "originalHeight": 3024
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Gate_at_Hoa_Lu_-_Vietnam_-_August_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:12:32.408Z",
+        "sha256": "1d509d3acf8520a1f31cd72aa3b3374fef1d9fca5d69fdec6d0a635ba9c828f2",
+        "bytes": 5993233,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 36710,
+          "sha256": "485e790df8f05b68681498259a24f13144c886f62dcc44e60ab86fe9995c8358"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 321786,
+          "sha256": "0c19762922ba44df429f7d5af85b839e1c1ccd7881913a9f601b0f76a5be1e35"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 758630,
+          "sha256": "2cefc35d32a3c47a2956444e1e4dd504bac6c200bcf8e4656bd50213383e8a1d"
+        }
+      },
+      "visualCheck": "Cổng vòm đá Cố đô Hoa Lư soi bóng bên hồ nước non Ninh Bình.",
+      "searchLog": [
+        "Sourced for Batch B: File:Gate at Hoa Lu - Vietnam - August 2023.jpg"
+      ]
+    },
+    {
+      "key": "cau-ham-rong-cau-ham-rong-song-ma",
+      "site": "cau-ham-rong",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Ham Rong Bridge.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ham_Rong_Bridge.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Rolers.FTU",
+        "credit": "Rolers.FTU",
+        "originalWidth": 1280,
+        "originalHeight": 960
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Ham_Rong_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:12:33.532Z",
+        "sha256": "6097719f0ad1f74d7364bc5e5c6bbb30ee4d4e37f1e492e3c250f30dba07149e",
+        "bytes": 966162,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 26570,
+          "sha256": "3777cb6233889fe1e25d6ff227dd78be168ca12c5bf623ef3758a32b17e02f3f"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 141092,
+          "sha256": "1f67e37d3539d0c72e53a8990bfebe0f8f3b5bfd0852bcf27150a4205839b267"
+        },
+        "2000": {
+          "width": 1280,
+          "height": 960,
+          "bytes": 142852,
+          "sha256": "21a214175441cef360db44b8a9a0def76cb16430aea7de4f2e36d5069a5944aa"
+        }
+      },
+      "visualCheck": "Cầu Hàm Rồng bắc qua sông Mã Thanh Hóa.",
+      "searchLog": [
+        "Sourced for Batch B: File:Ham Rong Bridge.jpg"
+      ]
+    },
+    {
+      "key": "thanh-nha-ho-cong-nam-thanh-nha-ho",
+      "site": "thanh-nha-ho",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Tay Do castle South gate.JPG",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tay_Do_castle_South_gate.JPG",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "artist": "vi:Thành viên:Silviculture",
+        "credit": "vi:Thành viên:Silviculture",
+        "originalWidth": 2816,
+        "originalHeight": 2112
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Tay_Do_castle_South_gate.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:12:34.547Z",
+        "sha256": "1702078203ea691d47fc0c29df1e6385fdc3df18537bf787ead756b2940b62bd",
+        "bytes": 2867289,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 21570,
+          "sha256": "cdd5fc61ab05add6c0ddd0c2f45d86d0cbf9f5d4636a9f459bc5cc41d7a07ecf"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 182450,
+          "sha256": "58510ae089593fc7a6551657913666fbbed49ca7718d1170db9f16f03147324b"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 351528,
+          "sha256": "8d1fe62ddf16ce50dccc249c185b8870433b9cdfe737df90201768e96fa1f1dc"
+        }
+      },
+      "visualCheck": "Cổng Nam Thành nhà Hồ với 3 vòm cuốn bằng khối đá xanh đồ sộ.",
+      "searchLog": [
+        "Sourced for Batch B: File:Tay Do castle South gate.JPG"
+      ]
     }
   ],
   "videos": [

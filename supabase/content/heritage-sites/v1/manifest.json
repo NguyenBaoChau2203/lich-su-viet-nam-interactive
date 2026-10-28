@@ -14,6 +14,8 @@
   "files": {
     "localities.json": "6defdd026f0eee06f72f978240c9c2fa250cecc6ca4dbb6f71653d2b43f6c4eb",
     "sources.json": "28db2a9df43b6ce0080153f03d6c9eed5c14d11c811dffe1dc2222d5d278f17b",
-    "sites.json": "39a81943450abbc82a898e4ca107133f8e3cf4ca70aaf6a58ba707ee41777ec8"
+    "sites.json": "ec2f2e1a84818a507a9ea772246645dddb5b975638d9299afc125a7828947830",
+    "roster.md": "dd64607b6859d1af9fbb9c013d6b8518d92c3aa0af3a130ca4c44a39d3000904",
+    "ledger.md": "ec58ecb2a39f14aa471b19a17551bfb2c81b1da075ca788a84e9e3772fa8c97b"
   }
 }

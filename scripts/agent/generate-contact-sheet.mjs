@@ -56,10 +56,11 @@ export async function createContactSheet(batchName, siteKeys, outFile) {
     });
   }
 
+  const escapedBatchName = String(batchName).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   const headerSvg = Buffer.from(`
     <svg width="${totalWidth}" height="50">
       <rect width="${totalWidth}" height="50" fill="#2d2218" />
-      <text x="20" y="32" fill="#d97706" font-size="18" font-family="sans-serif" font-weight="bold">Heritage Images Contact Sheet — ${batchName}</text>
+      <text x="20" y="32" fill="#d97706" font-size="18" font-family="sans-serif" font-weight="bold">Heritage Images Contact Sheet — ${escapedBatchName}</text>
     </svg>
   `);
   composites.unshift({ input: headerSvg, left: 0, top: 0 });
