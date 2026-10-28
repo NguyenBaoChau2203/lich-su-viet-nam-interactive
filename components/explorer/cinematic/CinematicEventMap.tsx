@@ -7,7 +7,7 @@ import { GlobeMarkers } from "@/components/explorer/GlobeMarkers";
 import { CLOSEST_USEFUL_EVENT_ZOOM, journeyFlightDurationMs, panView, vietnamOverviewView, worldOverviewView, zoomView } from "@/lib/explorer/cinematic/camera";
 import { createGlobeCameraController, type GlobeCameraController } from "@/lib/explorer/cinematic/camera-controller";
 import type { CinematicScene } from "@/lib/explorer/cinematic/scene";
-import type { EventMapProps, GlobeCameraRequest, GlobePlaceLabel, GlobeViewport } from "@/lib/explorer/globe-contract";
+import type { EventMapProps, GlobeCameraRequest, GlobePlaceLabel, GlobeViewport, JourneyPopupAnchor } from "@/lib/explorer/globe-contract";
 import { sameJourneyArrival } from "@/lib/explorer/journey";
 import type { MapView } from "@/lib/explorer/map-view";
 import { usePrefersReducedMotion } from "@/lib/hooks/usePrefersReducedMotion";
@@ -16,6 +16,31 @@ import type { ProvinceBoundarySource } from "@/lib/explorer/cinematic/province-b
 
 const INTRO_KEY = "ls12:globe-intro-seen";
 const ASSETS = { day: "/maps/globe/earth-day-4096x2048.jpg", normal: "/maps/globe/earth-normal-2048x1024.jpg", specular: "/maps/globe/earth-specular-2048x1024.jpg" };
+
+const PROJECTION_SAMPLE_COORDS: readonly [number, number][] = [
+  [105.85, 21.03], // Hanoi
+  [108.20, 16.05], // Da Nang
+  [106.66, 10.76], // HCMC
+  [0, 0],          // Equator / Meridian
+  [-100, 40],      // North America
+  [140, -25],      // Australia
+];
+
+function areViewportsEquivalent(a: GlobeViewport | null, b: GlobeViewport | null): boolean {
+  if (a === b) return true;
+  if (!a || !b) return false;
+  if (a.width !== b.width || a.height !== b.height || Math.abs(a.zoom - b.zoom) > 0.001) return false;
+
+  for (const [lng, lat] of PROJECTION_SAMPLE_COORDS) {
+    const pA = a.project(lng, lat);
+    const pB = b.project(lng, lat);
+    if (Boolean(pA) !== Boolean(pB)) return false;
+    if (pA && pB) {
+      if (Math.abs(pA.x - pB.x) > 0.5 || Math.abs(pA.y - pB.y) > 0.5) return false;
+    }
+  }
+  return true;
+}
 
 export function CinematicEventMap(props: EventMapProps) {
   const stageRef = useRef<HTMLDivElement>(null);
@@ -36,6 +61,7 @@ export function CinematicEventMap(props: EventMapProps) {
   const handledFocus = useRef<{ slug: string; nonce: number } | null>(null);
   const handledPlacesCamera = useRef<number | null>(null);
   const activeJourney = useRef<GlobeCameraRequest | null>(null);
+  const lastJourneyAnchor = useRef<JourneyPopupAnchor | null>(null);
   const clearInput = useCallback(() => {
     clearTimeout(wheelTimer.current ?? undefined);
     wheelTimer.current = null; drag.current = null;
@@ -65,18 +91,47 @@ export function CinematicEventMap(props: EventMapProps) {
 
   useEffect(() => {
     if (!scene) return;
-    const update = () => setViewport(scene.getViewport());
+    const update = () => {
+      const next = scene.getViewport();
+      setViewport((prev) => (areViewportsEquivalent(prev, next) ? prev : next));
+    };
     update();
     return scene.subscribe(update);
   }, [scene]);
 
   useEffect(() => {
     const request = props.journeyPathRequest, stop = props.journeyStop, stage = stageRef.current;
-    if (!request || !stop || !viewport || !scene || !stage) { callbacks.current.onJourneyAnchor?.(null); return; }
+    if (!request || !stop || !viewport || !scene || !stage) {
+      if (lastJourneyAnchor.current !== null) {
+        lastJourneyAnchor.current = null;
+        callbacks.current.onJourneyAnchor?.(null);
+      }
+      return;
+    }
     const origin = stage.getBoundingClientRect(), parent = stage.closest(".home-history-map")?.getBoundingClientRect();
-    callbacks.current.onJourneyAnchor?.({ journeyId: request.journeyId, stopId: request.stopId, nonce: request.nonce,
-      point: viewport.project(stop.view.lng, stop.view.lat), stageSize: { width: viewport.width, height: viewport.height },
-      offset: { x: origin.left - (parent?.left ?? origin.left), y: origin.top - (parent?.top ?? origin.top) } });
+    const point = viewport.project(stop.view.lng, stop.view.lat);
+    const stageSize = { width: viewport.width, height: viewport.height };
+    const offset = { x: origin.left - (parent?.left ?? origin.left), y: origin.top - (parent?.top ?? origin.top) };
+
+    const prev = lastJourneyAnchor.current;
+    const samePoint = (prev?.point === null && point === null) ||
+      (prev?.point && point && Math.abs(prev.point.x - point.x) < 0.5 && Math.abs(prev.point.y - point.y) < 0.5);
+    const sameStage = prev?.stageSize.width === stageSize.width && prev?.stageSize.height === stageSize.height;
+    const sameOffset = prev && Math.abs(prev.offset.x - offset.x) < 0.5 && Math.abs(prev.offset.y - offset.y) < 0.5;
+    const sameIntent = prev?.journeyId === request.journeyId && prev?.stopId === request.stopId && prev?.nonce === request.nonce;
+
+    if (prev && samePoint && sameStage && sameOffset && sameIntent) return;
+
+    const nextAnchor: JourneyPopupAnchor = {
+      journeyId: request.journeyId,
+      stopId: request.stopId,
+      nonce: request.nonce,
+      point,
+      stageSize,
+      offset,
+    };
+    lastJourneyAnchor.current = nextAnchor;
+    callbacks.current.onJourneyAnchor?.(nextAnchor);
   }, [viewport, scene, props.journeyPathRequest, props.journeyStop]);
 
   useEffect(() => {

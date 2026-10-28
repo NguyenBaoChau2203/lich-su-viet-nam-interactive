@@ -102,7 +102,10 @@ export function GlobeMarkers({ viewport, stageRef, events, selectedEvent, labels
     const mutation = new MutationObserver((records) => {
       // Measuring text changes this overlay's own DOM. Only external shell
       // changes should trigger another measurement; otherwise it feeds itself.
-      if (records.some((record) => !(record.target instanceof Element && record.target.closest(".globe-overlay")))) observe();
+      if (records.some((record) => {
+        const el = record.target instanceof Element ? record.target : record.target.parentElement;
+        return !el || !el.closest(".globe-overlay");
+      })) observe();
     });
     mutation.observe(shell, { childList: true, subtree: true, attributes: true, attributeFilter: ["open"] });
     observe();
