@@ -47,3 +47,17 @@ npx supabase db query --file supabase/content/heritage-sites/release-v1/import.s
 1. Open the **SQL Editor** on [Supabase Dashboard (project `ueolfjujjybutyuyfxha`)](https://supabase.com/dashboard/project/ueolfjujjybutyuyfxha/sql).
 2. Paste and run the contents of [`supabase/migrations/20261101000000_heritage_sites.sql`](../../supabase/migrations/20261101000000_heritage_sites.sql).
 3. Paste and run the contents of [`supabase/content/heritage-sites/release-v1/import.sql`](../../supabase/content/heritage-sites/release-v1/import.sql).
+
+---
+
+## Live Observation & Production Verification (Phase 9 Complete)
+
+Executed directly by owner via Supabase SQL Editor on project **`lichsu_12` / `ueolfjujjybutyuyfxha`** and verified anonymously via public REST API at **2026-10-28T09:12:47+07:00**:
+
+- **Total Heritage Sites:** **64** sites published.
+  - **Grade 12:** **34** sites (100% full coverage across all 34 canonical localities `VN-34-2025`).
+  - **Extended:** **30** sites.
+- **Story Sections Live:** **193** sourced narrative sections.
+- **Videos Live:** **4** official educational documentary embeds.
+- **Constraints & RLS:** Verified intact; zero constraint violations; advisory transaction locks released cleanly upon `COMMIT`.
+- **Status:** **PHASE 9 LIVE PUBLICATION COMPLETE & OFFICIALLY DEPLOYED.**
