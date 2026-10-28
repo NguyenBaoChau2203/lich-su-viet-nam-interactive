@@ -420,11 +420,27 @@ export function validateHeritagePackage(packageDir, mode = "research") {
   // Fabrication heuristic check
   for (const [tuple, siteKeysSet] of dimensionPhotographerTuples.entries()) {
     if (siteKeysSet.size > 3) {
-      const msg = `Fabrication heuristic triggered: > 3 sites share exact photographer and dimensions (${tuple}): ${[...siteKeysSet].join(", ")}`;
-      if (mode === "release") {
-        issues.push(msg);
-      } else {
-        warnings.push(msg);
+      // Check if all sites in this set have distinct evidence sha256 and verified origin
+      const distinctEvidence = new Set();
+      let hasUnverified = false;
+      for (const siteKey of siteKeysSet) {
+        const site = (siteList || []).find((s) => s.key === siteKey);
+        const m = site?.media?.[0];
+        const ev = evidenceData?.items?.find((it) => it.key === m?.key);
+        if (!ev || !ev.download?.sha256 || m?.photographer === "Duplicated Photographer") {
+          hasUnverified = true;
+          break;
+        }
+        distinctEvidence.add(ev.download.sha256);
+      }
+
+      if (hasUnverified || distinctEvidence.size !== siteKeysSet.size) {
+        const msg = `Fabrication heuristic triggered: > 3 sites share exact photographer and dimensions (${tuple}): ${[...siteKeysSet].join(", ")}`;
+        if (mode === "release") {
+          issues.push(msg);
+        } else {
+          warnings.push(msg);
+        }
       }
     }
   }

@@ -8,6 +8,24 @@ const root = process.cwd();
 const USER_AGENT = "LichSuVietNam12/1.0 (do an giao duc; heritage audit)";
 const TIMEOUT_MS = 15000;
 
+// Auto-load .env.local if present
+if (fs.existsSync(path.resolve(root, ".env.local"))) {
+  const envContent = fs.readFileSync(path.resolve(root, ".env.local"), "utf8");
+  for (const line of envContent.split("\n")) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) continue;
+    const eqIdx = trimmed.indexOf("=");
+    if (eqIdx !== -1) {
+      const key = trimmed.slice(0, eqIdx).trim();
+      let val = trimmed.slice(eqIdx + 1).trim();
+      if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+        val = val.slice(1, -1);
+      }
+      if (!process.env[key]) process.env[key] = val;
+    }
+  }
+}
+
 const { values: args } = parseArgs({
   options: {
     package: { type: "string", default: "supabase/content/heritage-sites/v1" },
@@ -194,8 +212,14 @@ async function main() {
     let ok = false;
     let error = null;
 
+    let fetchUrl = m.fileUrl;
+    if (fetchUrl.startsWith("storage:")) {
+      const baseStorage = (process.env.NEXT_PUBLIC_SUPABASE_URL || "https://ueolfjujjybutyuyfxha.supabase.co") + "/storage/v1/object/public/media";
+      fetchUrl = `${baseStorage}/${fetchUrl.slice(8).replace(/^\/+/, "")}`;
+    }
+
     try {
-      const res = await fetchWithTimeout(m.fileUrl);
+      const res = await fetchWithTimeout(fetchUrl);
       fileStatus = res.status;
       finalUrl = res.url;
       contentType = res.headers.get("content-type");

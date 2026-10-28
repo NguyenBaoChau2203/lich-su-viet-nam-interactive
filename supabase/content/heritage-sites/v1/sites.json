@@ -92,7 +92,7 @@
       "media": [
         {
           "key": "nha-tu-hoa-lo-cong-chinh-maison-centrale",
-          "fileUrl": "storage:locations/heritage/nha-tu-hoa-lo/cong-chinh-maison-centrale-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-tu-hoa-lo/cong-chinh-maison-centrale-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Hoa_Lo_Prison_(Maison_Centrale),_Hanoi_(6923115824).jpg",
           "era": "today",
           "yearTaken": 2012,
@@ -185,7 +185,7 @@
       "media": [
         {
           "key": "hoang-thanh-thang-long-doan-mon-hoang-thanh",
-          "fileUrl": "storage:locations/heritage/hoang-thanh-thang-long/doan-mon-hoang-thanh-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/hoang-thanh-thang-long/doan-mon-hoang-thanh-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:%C4%90oan_M%C3%B4n,_Ho%C3%A0ng_th%C3%A0nh_Th%C4%83ng_Long,_H%C3%A0_N%E1%BB%99i_001.JPG",
           "era": "today",
           "yearTaken": 2014,
@@ -283,7 +283,7 @@
       "media": [
         {
           "key": "pac-bo-cao-bang-suoi-lenin-nui-cac-mac",
-          "fileUrl": "storage:locations/heritage/pac-bo-cao-bang/suoi-lenin-nui-cac-mac-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/pac-bo-cao-bang/suoi-lenin-nui-cac-mac-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:P%C3%A1c_B%C3%B3.jpg",
           "era": "today",
           "yearTaken": 2016,
@@ -376,7 +376,7 @@
       "media": [
         {
           "key": "rung-tran-hung-dao-nha-trung-bay-rung-tran-hung-dao",
-          "fileUrl": "storage:locations/heritage/rung-tran-hung-dao/nha-trung-bay-rung-tran-hung-dao-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/rung-tran-hung-dao/nha-trung-bay-rung-tran-hung-dao-1200.webp",
           "sourcePageUrl": "https://www.vietnamplus.vn/bao-ton-va-phat-huy-gia-tri-khu-di-tich-lich-su-rung-tran-hung-dao-post292417.vnp",
           "era": "today",
           "yearTaken": 2014,
@@ -474,7 +474,7 @@
       "media": [
         {
           "key": "khu-di-tich-tan-trao-dinh-tan-trao",
-          "fileUrl": "storage:locations/heritage/khu-di-tich-tan-trao/dinh-tan-trao-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-di-tich-tan-trao/dinh-tan-trao-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:%C4%90%C3%ACnh_T%C3%A2n_Tr%C3%A0o.jpg",
           "era": "today",
           "yearTaken": 2013,
@@ -562,7 +562,7 @@
       "media": [
         {
           "key": "cot-co-lung-cu-cot-co-lung-cu-dinh-nui-rong",
-          "fileUrl": "storage:locations/heritage/cot-co-lung-cu/cot-co-lung-cu-dinh-nui-rong-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/cot-co-lung-cu/cot-co-lung-cu-dinh-nui-rong-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:C%E1%BB%99t_c%E1%BB%9D_L%C5%A9ng_C%C3%BA_-_H%C3%A0_Giang.JPG",
           "era": "today",
           "yearTaken": 2011,
@@ -660,7 +660,7 @@
       "media": [
         {
           "key": "doi-a1-dien-bien-phu-dai-tuong-niem-dinh-doi-a1",
-          "fileUrl": "storage:locations/heritage/doi-a1-dien-bien-phu/dai-tuong-niem-dinh-doi-a1-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/doi-a1-dien-bien-phu/dai-tuong-niem-dinh-doi-a1-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Monument_to_Vietminh_Assault_-_Hill_A1_(Eliane_2)_-_Dien_Bien_Phu_-_Vietnam_(48168816427).jpg",
           "era": "today",
           "yearTaken": 2019,
@@ -758,7 +758,7 @@
       "media": [
         {
           "key": "ham-de-castries-ham-chi-huy-de-castries",
-          "fileUrl": "storage:locations/heritage/ham-de-castries/ham-chi-huy-de-castries-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ham-de-castries/ham-chi-huy-de-castries-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:H%E1%BA%A7m_ch%E1%BB%89_huy_t%E1%BA%ADp_%C4%91o%C3%A0n_c%E1%BB%A9_%C4%91i%E1%BB%83m_%C4%90i%E1%BB%87n_Bi%C3%AAn_Ph%E1%BB%A7_(2022).jpg",
           "era": "today",
           "yearTaken": 2022,
@@ -856,7 +856,7 @@
       "media": [
         {
           "key": "chien-thang-lai-chau-1953-tuong-dai-quang-truong-lai-chau",
-          "fileUrl": "storage:locations/heritage/chien-thang-lai-chau-1953/tuong-dai-quang-truong-lai-chau-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-lai-chau-1953/tuong-dai-quang-truong-lai-chau-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Lai_Ch%C3%A2u_Town_Square_Monument_(2014).jpg",
           "era": "today",
           "yearTaken": 2014,
@@ -949,7 +949,7 @@
       "media": [
         {
           "key": "nha-tu-son-la-nha-tu-son-la-khu-giam-cam",
-          "fileUrl": "storage:locations/heritage/nha-tu-son-la/nha-tu-son-la-khu-giam-cam-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-tu-son-la/nha-tu-son-la-khu-giam-cam-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Nh%C3%A0_t%C3%B9_S%C6%A1n_La_-_panoramio.jpg",
           "era": "today",
           "yearTaken": 2011,
@@ -1047,7 +1047,7 @@
       "media": [
         {
           "key": "khoi-nghia-yen-bai-1930-chan-dung-13-liet-si-khoi-nghia-yen-bai",
-          "fileUrl": "storage:locations/heritage/khoi-nghia-yen-bai-1930/chan-dung-13-liet-si-khoi-nghia-yen-bai-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khoi-nghia-yen-bai-1930/chan-dung-13-liet-si-khoi-nghia-yen-bai-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Portraits_of_13_nationalists_executed_in_Yen-Bay_on_17_June_1930.png",
           "era": "historical",
           "yearTaken": 1930,
@@ -1145,7 +1145,7 @@
       "media": [
         {
           "key": "atk-dinh-hoa-nha-tuong-niem-bac-ho-deo-de",
-          "fileUrl": "storage:locations/heritage/atk-dinh-hoa/nha-tuong-niem-bac-ho-deo-de-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/atk-dinh-hoa/nha-tuong-niem-bac-ho-deo-de-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:ATK_DINH_HOA.JPG",
           "era": "today",
           "yearTaken": 2009,
@@ -1233,7 +1233,7 @@
       "media": [
         {
           "key": "atk-cho-don-di-tich-deo-so-cho-don",
-          "fileUrl": "storage:locations/heritage/atk-cho-don/di-tich-deo-so-cho-don-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/atk-cho-don/di-tich-deo-so-cho-don-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:%C4%90%C3%A8o_So.jpg",
           "era": "today",
           "yearTaken": 2016,
@@ -1331,7 +1331,7 @@
       "media": [
         {
           "key": "khoi-nghia-bac-son-bao-tang-khoi-nghia-bac-son",
-          "fileUrl": "storage:locations/heritage/khoi-nghia-bac-son/bao-tang-khoi-nghia-bac-son-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khoi-nghia-bac-son/bao-tang-khoi-nghia-bac-son-1200.webp",
           "sourcePageUrl": "http://langsontourism.com.vn/vi/khoinghiabacson",
           "era": "today",
           "yearTaken": 2021,
@@ -1424,7 +1424,7 @@
       "media": [
         {
           "key": "ai-chi-lang-thung-lung-ai-chi-lang",
-          "fileUrl": "storage:locations/heritage/ai-chi-lang/thung-lung-ai-chi-lang-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ai-chi-lang/thung-lung-ai-chi-lang-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Chi_L%C4%83ng_2.jpg",
           "era": "today",
           "yearTaken": 2013,
@@ -1522,7 +1522,7 @@
       "media": [
         {
           "key": "mo-than-deo-nai-bia-bac-ho-ve-tham-mo-deo-nai",
-          "fileUrl": "storage:locations/heritage/mo-than-deo-nai/bia-bac-ho-ve-tham-mo-deo-nai-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/mo-than-deo-nai/bia-bac-ho-ve-tham-mo-deo-nai-1200.webp",
           "sourcePageUrl": "https://baoquangninh.vn/di-tich-noi-bac-ho-ve-tham-mo-deo-nai-post2342565.html",
           "era": "today",
           "yearTaken": 2022,
@@ -1615,7 +1615,7 @@
       "media": [
         {
           "key": "bai-coc-bach-dang-bai-coc-yen-giang",
-          "fileUrl": "storage:locations/heritage/bai-coc-bach-dang/bai-coc-yen-giang-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/bai-coc-bach-dang/bai-coc-yen-giang-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg",
           "era": "today",
           "yearTaken": 2012,
@@ -1708,7 +1708,7 @@
       "media": [
         {
           "key": "atk-ii-hiep-hoa-cay-da-cho-van-atk-ii",
-          "fileUrl": "storage:locations/heritage/atk-ii-hiep-hoa/cay-da-cho-van-atk-ii-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/atk-ii-hiep-hoa/cay-da-cho-van-atk-ii-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:HiepHoaCayDa.JPG",
           "era": "today",
           "yearTaken": 2009,
@@ -1801,7 +1801,7 @@
       "media": [
         {
           "key": "khoi-nghia-yen-the-hoang-hoa-tham-tren-ngua",
-          "fileUrl": "storage:locations/heritage/khoi-nghia-yen-the/hoang-hoa-tham-tren-ngua-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khoi-nghia-yen-the/hoang-hoa-tham-tren-ngua-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ho%C3%A0ng_Hoa_Th%C3%A1m_riding_a_horse.png",
           "era": "historical",
           "yearTaken": 1905,
@@ -1899,7 +1899,7 @@
       "media": [
         {
           "key": "chien-thang-song-lo-doan-hung-tuong-dai-song-lo",
-          "fileUrl": "storage:locations/heritage/chien-thang-song-lo-doan-hung/tuong-dai-song-lo-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-song-lo-doan-hung/tuong-dai-song-lo-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_chi%E1%BA%BFn_th%E1%BA%AFng_S%C3%B4ng_L%C3%B4.jpg",
           "era": "today",
           "yearTaken": 2021,
@@ -1997,7 +1997,7 @@
       "media": [
         {
           "key": "khu-di-tich-den-hung-cong-vao-den-hung",
-          "fileUrl": "storage:locations/heritage/khu-di-tich-den-hung/cong-vao-den-hung-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-di-tich-den-hung/cong-vao-den-hung-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BB%81n_H%C3%B9ng.JPG",
           "era": "today",
           "yearTaken": 2011,
@@ -2095,7 +2095,7 @@
       "media": [
         {
           "key": "ben-k15-do-son-tuong-dai-ben-k15-do-son",
-          "fileUrl": "storage:locations/heritage/ben-k15-do-son/tuong-dai-ben-k15-do-son-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ben-k15-do-son/tuong-dai-ben-k15-do-son-1200.webp",
           "sourcePageUrl": "https://chinhsachcuocsong.vnanet.vn/ben-tau-khong-so-k15-dia-chi-do-nhac-nho-the-he-tre-ve-gia-tri-cua-hoa-binh-doc-lap/83591.html",
           "era": "today",
           "yearTaken": 2026,
@@ -2188,7 +2188,7 @@
       "media": [
         {
           "key": "con-son-kiep-bac-cong-nghi-mon-den-kiep-bac",
-          "fileUrl": "storage:locations/heritage/con-son-kiep-bac/cong-nghi-mon-den-kiep-bac-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/con-son-kiep-bac/cong-nghi-mon-den-kiep-bac-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Den_kiep_bac.jpg",
           "era": "today",
           "yearTaken": 2008,
@@ -2286,7 +2286,7 @@
       "media": [
         {
           "key": "tieng-trong-tien-hai-dinh-lang-nho-lam-le-ky-niem",
-          "fileUrl": "storage:locations/heritage/tieng-trong-tien-hai/dinh-lang-nho-lam-le-ky-niem-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/tieng-trong-tien-hai/dinh-lang-nho-lam-le-ky-niem-1200.webp",
           "sourcePageUrl": "https://dongchau.hungyen.gov.vn/dinh-lang-nho-lam-to-chuc-le-ky-niem-ngay-truyen-thong-cach-mang-c260.html",
           "era": "today",
           "yearTaken": 2025,
@@ -2379,7 +2379,7 @@
       "media": [
         {
           "key": "pho-hien-tam-quan-van-mieu-xich-dang",
-          "fileUrl": "storage:locations/heritage/pho-hien/tam-quan-van-mieu-xich-dang-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/pho-hien/tam-quan-van-mieu-xich-dang-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:V%C4%83n_mi%E1%BA%BFu_X%C3%ADch_%C4%90%E1%BA%B1ng_01.JPG",
           "era": "today",
           "yearTaken": 2011,
@@ -2477,7 +2477,7 @@
       "media": [
         {
           "key": "nha-may-det-nam-dinh-so-do-nha-may-det-nam-dinh",
-          "fileUrl": "storage:locations/heritage/nha-may-det-nam-dinh/so-do-nha-may-det-nam-dinh-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-may-det-nam-dinh/so-do-nha-may-det-nam-dinh-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:S%C6%A1_%C4%91%E1%BB%93_Nh%C3%A0_m%C3%A1y_D%E1%BB%87t_Nam_%C4%90%E1%BB%8Bnh_(B%E1%BA%A3o_t%C3%A0ng_t%E1%BB%89nh_Nam_%C4%90%E1%BB%8Bnh).jpg",
           "era": "historical",
           "yearTaken": 1925,
@@ -2575,7 +2575,7 @@
       "media": [
         {
           "key": "co-do-hoa-lu-cong-vao-co-do-hoa-lu",
-          "fileUrl": "storage:locations/heritage/co-do-hoa-lu/cong-vao-co-do-hoa-lu-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/co-do-hoa-lu/cong-vao-co-do-hoa-lu-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Gate_at_Hoa_Lu_-_Vietnam_-_August_2023.jpg",
           "era": "today",
           "yearTaken": 2023,
@@ -2673,7 +2673,7 @@
       "media": [
         {
           "key": "cau-ham-rong-cau-ham-rong-song-ma",
-          "fileUrl": "storage:locations/heritage/cau-ham-rong/cau-ham-rong-song-ma-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/cau-ham-rong/cau-ham-rong-song-ma-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ham_Rong_Bridge.jpg",
           "era": "today",
           "yearTaken": 2012,
@@ -2766,7 +2766,7 @@
       "media": [
         {
           "key": "thanh-nha-ho-cong-nam-thanh-nha-ho",
-          "fileUrl": "storage:locations/heritage/thanh-nha-ho/cong-nam-thanh-nha-ho-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/thanh-nha-ho/cong-nam-thanh-nha-ho-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Tay_Do_castle_South_gate.JPG",
           "era": "today",
           "yearTaken": 2008,
@@ -2859,7 +2859,7 @@
       "media": [
         {
           "key": "khu-di-tich-kim-lien-den-tuong-niem-kim-lien",
-          "fileUrl": "storage:locations/heritage/khu-di-tich-kim-lien/den-tuong-niem-kim-lien-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-di-tich-kim-lien/den-tuong-niem-kim-lien-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Kim_Lien_Monuments_Park.JPG",
           "era": "today",
           "yearTaken": 2009,
@@ -2952,7 +2952,7 @@
       "media": [
         {
           "key": "truong-bon-toan-canh-di-tich-truong-bon",
-          "fileUrl": "storage:locations/heritage/truong-bon/toan-canh-di-tich-truong-bon-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/truong-bon/toan-canh-di-tich-truong-bon-1200.webp",
           "sourcePageUrl": "https://nhandan.vn/truong-bon-mot-bieu-tuong-cua-tinh-than-viet-nam-post721703.html",
           "era": "today",
           "yearTaken": 2022,
@@ -3050,7 +3050,7 @@
       "media": [
         {
           "key": "nga-ba-dong-loc-tuong-dai-nga-ba-dong-loc",
-          "fileUrl": "storage:locations/heritage/nga-ba-dong-loc/tuong-dai-nga-ba-dong-loc-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nga-ba-dong-loc/tuong-dai-nga-ba-dong-loc-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Nga_Ba_Dong_Loc.jpg",
           "era": "today",
           "yearTaken": 2013,
@@ -3148,7 +3148,7 @@
       "media": [
         {
           "key": "thanh-co-quang-tri-dai-tuong-niem-thanh-co-quang-tri",
-          "fileUrl": "storage:locations/heritage/thanh-co-quang-tri/dai-tuong-niem-thanh-co-quang-tri-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/thanh-co-quang-tri/dai-tuong-niem-thanh-co-quang-tri-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_4.jpg",
           "era": "today",
           "yearTaken": 2013,
@@ -3241,7 +3241,7 @@
       "media": [
         {
           "key": "doi-bo-hien-luong-ben-hai-cau-hien-luong-song-ben-hai",
-          "fileUrl": "storage:locations/heritage/doi-bo-hien-luong-ben-hai/cau-hien-luong-song-ben-hai-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/doi-bo-hien-luong-ben-hai/cau-hien-luong-song-ben-hai-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Benhai03.JPG",
           "era": "today",
           "yearTaken": 2007,
@@ -3339,7 +3339,7 @@
       "media": [
         {
           "key": "ngo-mon-hue-ngo-mon-hoang-thanh-hue",
-          "fileUrl": "storage:locations/heritage/ngo-mon-hue/ngo-mon-hoang-thanh-hue-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ngo-mon-hue/ngo-mon-hoang-thanh-hue-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Hu%E1%BA%BF_(2024)_-_Meridian_Gate_-_Ng%E1%BB%8D_M%C3%B4n_(Ho%C3%A0ng_th%C3%A0nh_Hu%E1%BA%BF)_-_img_02.jpg",
           "era": "today",
           "yearTaken": 2024,
@@ -3437,7 +3437,7 @@
       "media": [
         {
           "key": "kinh-thanh-hue-1968-ky-dai-kinh-thanh-hue",
-          "fileUrl": "storage:locations/heritage/kinh-thanh-hue-1968/ky-dai-kinh-thanh-hue-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/kinh-thanh-hue-1968/ky-dai-kinh-thanh-hue-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:K%E1%BB%B3_%C4%90%C3%A0i_(Kinh_th%C3%A0nh_Hu%E1%BA%BF).jpg",
           "era": "today",
           "yearTaken": 2014,
@@ -3535,7 +3535,7 @@
       "media": [
         {
           "key": "chien-thang-nui-thanh-1965-tuong-dai-chien-thang-nui-thanh",
-          "fileUrl": "storage:locations/heritage/chien-thang-nui-thanh-1965/tuong-dai-chien-thang-nui-thanh-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-nui-thanh-1965/tuong-dai-chien-thang-nui-thanh-1200.webp",
           "sourcePageUrl": "https://baoquangnam.vn/di-tich-quoc-gia-chien-thang-nui-thanh-nang-tam-va-lan-toa-3027374.html",
           "era": "today",
           "yearTaken": 2020,
@@ -3628,7 +3628,7 @@
       "media": [
         {
           "key": "khu-den-thap-my-son-quan-the-thap-my-son",
-          "fileUrl": "storage:locations/heritage/khu-den-thap-my-son/quan-the-thap-my-son-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-den-thap-my-son/quan-the-thap-my-son-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:2024_-_M%E1%BB%B9_S%C6%A1n_Group_B,_C_and_D_-_img_23.jpg",
           "era": "today",
           "yearTaken": 2024,
@@ -3721,7 +3721,7 @@
       "media": [
         {
           "key": "khu-chung-tich-son-my-tuong-dai-chung-tich-son-my",
-          "fileUrl": "storage:locations/heritage/khu-chung-tich-son-my/tuong-dai-chung-tich-son-my-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-chung-tich-son-my/tuong-dai-chung-tich-son-my-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Monument_of_the_My_Lai_Massacre_(2).jpg",
           "era": "today",
           "yearTaken": 2018,
@@ -3819,7 +3819,7 @@
       "media": [
         {
           "key": "dak-to-tan-canh-tuong-dai-dak-to-tan-canh",
-          "fileUrl": "storage:locations/heritage/dak-to-tan-canh/tuong-dai-dak-to-tan-canh-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/dak-to-tan-canh/tuong-dai-dak-to-tan-canh-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_Chi%E1%BA%BFn_th%E1%BA%AFng_%C4%90%C4%83k_T%C3%B4_-_T%C3%A2n_C%E1%BA%A3nh_(40022454161).jpg",
           "era": "today",
           "yearTaken": 2018,
@@ -3912,7 +3912,7 @@
       "media": [
         {
           "key": "lang-khang-chien-stor-nha-luu-niem-anh-hung-nup",
-          "fileUrl": "storage:locations/heritage/lang-khang-chien-stor/nha-luu-niem-anh-hung-nup-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/lang-khang-chien-stor/nha-luu-niem-anh-hung-nup-1200.webp",
           "sourcePageUrl": "https://gialai.gov.vn/du-khach/di-tich-lich-su-van-hoa/lang-khang-chien-stor.html",
           "era": "today",
           "yearTaken": 2025,
@@ -4005,7 +4005,7 @@
       "media": [
         {
           "key": "bao-tang-quang-trung-bao-tang-quang-trung-tay-son",
-          "fileUrl": "storage:locations/heritage/bao-tang-quang-trung/bao-tang-quang-trung-tay-son-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/bao-tang-quang-trung/bao-tang-quang-trung-tay-son-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:B%E1%BA%A3o_T%C3%A0ng_Quang_Trung.JPG",
           "era": "today",
           "yearTaken": 2009,
@@ -4103,7 +4103,7 @@
       "media": [
         {
           "key": "san-bay-thanh-son-san-bay-phan-rang-thanh-son-1969",
-          "fileUrl": "storage:locations/heritage/san-bay-thanh-son/san-bay-phan-rang-thanh-son-1969-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/san-bay-thanh-son/san-bay-phan-rang-thanh-son-1969-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Douglas_A-1H_Skyraider_of_the_1st_SOS_at_Phan_Rang_Air_Base,_Vietnam,_circa_in_1969_(VA065677).jpg",
           "era": "historical",
           "yearTaken": 1969,
@@ -4196,7 +4196,7 @@
       "media": [
         {
           "key": "thap-ba-ponagar-thap-ba-ponagar-nha-trang",
-          "fileUrl": "storage:locations/heritage/thap-ba-ponagar/thap-ba-ponagar-nha-trang-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/thap-ba-ponagar/thap-ba-ponagar-nha-trang-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Th%C3%A1p_b%C3%A0_Ponagar.JPG",
           "era": "today",
           "yearTaken": 2010,
@@ -4294,7 +4294,7 @@
       "media": [
         {
           "key": "buon-ma-thuot-1975-tuong-dai-chien-thang-buon-ma-thuot",
-          "fileUrl": "storage:locations/heritage/buon-ma-thuot-1975/tuong-dai-chien-thang-buon-ma-thuot-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/buon-ma-thuot-1975/tuong-dai-chien-thang-buon-ma-thuot-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Bu%C3%B4n_Ma_Thu%E1%BB%99t_city_square.jpg",
           "era": "today",
           "yearTaken": 2011,
@@ -4387,7 +4387,7 @@
       "media": [
         {
           "key": "vung-ro-phu-yen-vinh-vung-ro-ben-tau-khong-so",
-          "fileUrl": "storage:locations/heritage/vung-ro-phu-yen/vinh-vung-ro-ben-tau-khong-so-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/vung-ro-phu-yen/vinh-vung-ro-ben-tau-khong-so-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:V%E1%BB%8Bnh_V%C5%A9ng_R%C3%B4.jpg",
           "era": "today",
           "yearTaken": 2011,
@@ -4485,7 +4485,7 @@
       "media": [
         {
           "key": "truong-duc-thanh-khu-di-tich-truong-duc-thanh",
-          "fileUrl": "storage:locations/heritage/truong-duc-thanh/khu-di-tich-truong-duc-thanh-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/truong-duc-thanh/khu-di-tich-truong-duc-thanh-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Tr%C6%B0%E1%BB%9Dng_D%E1%BB%A5c_Thanh.jpg",
           "era": "today",
           "yearTaken": 2012,
@@ -4573,7 +4573,7 @@
       "media": [
         {
           "key": "nha-lao-thieu-nhi-da-lat-cong-vao-nha-lao-thieu-nhi-da-lat",
-          "fileUrl": "storage:locations/heritage/nha-lao-thieu-nhi-da-lat/cong-vao-nha-lao-thieu-nhi-da-lat-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-lao-thieu-nhi-da-lat/cong-vao-nha-lao-thieu-nhi-da-lat-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Da_Lat_Children%27s_Prison_02.jpg",
           "era": "today",
           "yearTaken": 2012,
@@ -4671,7 +4671,7 @@
       "media": [
         {
           "key": "chien-thang-xuan-loc-1975-dap-tan-canh-cua-thep-xuan-loc",
-          "fileUrl": "storage:locations/heritage/chien-thang-xuan-loc-1975/dap-tan-canh-cua-thep-xuan-loc-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-xuan-loc-1975/dap-tan-canh-cua-thep-xuan-loc-1200.webp",
           "sourcePageUrl": "https://www.vietnamplus.vn/khoanh-khac-va-su-kien-ngay-2141975-dap-tan-canh-cua-thep-xuan-loc-post1034024.vnp",
           "era": "historical",
           "yearTaken": 1975,
@@ -4764,7 +4764,7 @@
       "media": [
         {
           "key": "can-cu-ta-thiet-can-cu-ta-thiet-loc-ninh",
-          "fileUrl": "storage:locations/heritage/can-cu-ta-thiet/can-cu-ta-thiet-loc-ninh-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/can-cu-ta-thiet/can-cu-ta-thiet-loc-ninh-1200.webp",
           "sourcePageUrl": "https://www.vietnamplus.vn/50-nam-thu-do-khang-chien-vung-dat-do-loc-ninh-o-binh-phuoc-post780152.vnp",
           "era": "today",
           "yearTaken": 2022,
@@ -4862,7 +4862,7 @@
       "media": [
         {
           "key": "dinh-doc-lap-mat-tien-dinh-doc-lap",
-          "fileUrl": "storage:locations/heritage/dinh-doc-lap/mat-tien-dinh-doc-lap-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/dinh-doc-lap/mat-tien-dinh-doc-lap-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_la_Reunificaci%C3%B3n,_Ciudad_Ho_Chi_Minh,_Vietnam,_2013-08-14,_DD_03.JPG",
           "era": "today",
           "yearTaken": 2013,
@@ -4955,7 +4955,7 @@
       "media": [
         {
           "key": "dia-dao-cu-chi-cua-ham-dia-dao-cu-chi",
-          "fileUrl": "storage:locations/heritage/dia-dao-cu-chi/cua-ham-dia-dao-cu-chi-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/dia-dao-cu-chi/cua-ham-dia-dao-cu-chi-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Cu_Chi_Tunnel_Entry_(1).jpg",
           "era": "today",
           "yearTaken": 2004,
@@ -5048,7 +5048,7 @@
       "media": [
         {
           "key": "can-cu-trung-uong-cuc-mien-nam-duong-vao-can-cu-trung-uong-cuc",
-          "fileUrl": "storage:locations/heritage/can-cu-trung-uong-cuc-mien-nam/duong-vao-can-cu-trung-uong-cuc-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/can-cu-trung-uong-cuc-mien-nam/duong-vao-can-cu-trung-uong-cuc-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ng%C3%A3_Ba_v%C3%A0o_Trung_%C6%B0%C6%A1ng_C%E1%BB%A5c_mi%E1%BB%81n_Nam_-_panoramio.jpg",
           "era": "today",
           "yearTaken": 2010,
@@ -5141,7 +5141,7 @@
       "media": [
         {
           "key": "nga-tu-duc-hoa-cong-vien-tuong-dai-vo-van-tan",
-          "fileUrl": "storage:locations/heritage/nga-tu-duc-hoa/cong-vien-tuong-dai-vo-van-tan-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nga-tu-duc-hoa/cong-vien-tuong-dai-vo-van-tan-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:CongVienVoVanTan.JPG",
           "era": "today",
           "yearTaken": 2017,
@@ -5239,7 +5239,7 @@
       "media": [
         {
           "key": "chien-thang-ap-bac-1963-tuong-dai-chien-thang-ap-bac",
-          "fileUrl": "storage:locations/heritage/chien-thang-ap-bac-1963/tuong-dai-chien-thang-ap-bac-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-ap-bac-1963/tuong-dai-chien-thang-ap-bac-1200.webp",
           "sourcePageUrl": "https://www.vietnamplus.vn/chien-thang-ap-bac-buoc-ngoat-trong-cuoc-khang-chien-chong-my-post839211.vnp",
           "era": "today",
           "yearTaken": 2023,
@@ -5332,7 +5332,7 @@
       "media": [
         {
           "key": "mo-cu-pho-bang-nguyen-sinh-sac-lang-mo-cu-pho-bang-nguyen-sinh-sac",
-          "fileUrl": "storage:locations/heritage/mo-cu-pho-bang-nguyen-sinh-sac/lang-mo-cu-pho-bang-nguyen-sinh-sac-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/mo-cu-pho-bang-nguyen-sinh-sac/lang-mo-cu-pho-bang-nguyen-sinh-sac-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:M%E1%BB%99_Nguy%E1%BB%85n_Sinh_S%E1%BA%AFc_%E1%BB%9F_Cao_L%C3%A3nh.jpg",
           "era": "today",
           "yearTaken": 2012,
@@ -5430,7 +5430,7 @@
       "media": [
         {
           "key": "dong-khoi-ben-tre-1960-nha-truyen-thong-dong-khoi",
-          "fileUrl": "storage:locations/heritage/dong-khoi-ben-tre-1960/nha-truyen-thong-dong-khoi-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/dong-khoi-ben-tre-1960/nha-truyen-thong-dong-khoi-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Nha_truyen_thong_Dong_Khoi.JPG",
           "era": "today",
           "yearTaken": 2011,
@@ -5523,7 +5523,7 @@
       "media": [
         {
           "key": "khu-tuong-niem-vo-van-kiet-phu-dieu-khu-tuong-niem-vo-van-kiet",
-          "fileUrl": "storage:locations/heritage/khu-tuong-niem-vo-van-kiet/phu-dieu-khu-tuong-niem-vo-van-kiet-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-tuong-niem-vo-van-kiet/phu-dieu-khu-tuong-niem-vo-van-kiet-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ph%C3%B9_%C4%91i%C3%AAu_V%C3%B5_V%C4%83n_Ki%E1%BB%87t.jpg",
           "era": "today",
           "yearTaken": 2021,
@@ -5616,7 +5616,7 @@
       "media": [
         {
           "key": "nha-tu-phu-quoc-trai-giam-tu-binh-phu-quoc",
-          "fileUrl": "storage:locations/heritage/nha-tu-phu-quoc/trai-giam-tu-binh-phu-quoc-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-tu-phu-quoc/trai-giam-tu-binh-phu-quoc-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Phu_Quoc_Prison_02.jpg",
           "era": "today",
           "yearTaken": 2015,
@@ -5714,7 +5714,7 @@
       "media": [
         {
           "key": "khu-luu-niem-ton-duc-thang-nha-tuong-niem-chu-tich-ton-duc-thang",
-          "fileUrl": "storage:locations/heritage/khu-luu-niem-ton-duc-thang/nha-tuong-niem-chu-tich-ton-duc-thang-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-luu-niem-ton-duc-thang/nha-tuong-niem-chu-tich-ton-duc-thang-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Le_m%C3%A9morial_du_Pr%C3%A9sident_Ton_Duc_Thang_(%C3%AEle_du_Tigre,_Vietnam)_(6635518367).jpg",
           "era": "today",
           "yearTaken": 2012,
@@ -5812,7 +5812,7 @@
       "media": [
         {
           "key": "chien-thang-chuong-thien-1973-tuong-dai-chien-thang-75-luot-tieu-doan-chuong-thien",
-          "fileUrl": "storage:locations/heritage/chien-thang-chuong-thien-1973/tuong-dai-chien-thang-75-luot-tieu-doan-chuong-thien-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-chuong-thien-1973/tuong-dai-chien-thang-75-luot-tieu-doan-chuong-thien-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:ChuongThien2-73.jpg",
           "era": "today",
           "yearTaken": 2021,
@@ -5905,7 +5905,7 @@
       "media": [
         {
           "key": "kham-lon-can-tho-di-tich-kham-lon-can-tho",
-          "fileUrl": "storage:locations/heritage/kham-lon-can-tho/di-tich-kham-lon-can-tho-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/kham-lon-can-tho/di-tich-kham-lon-can-tho-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Kh%C3%A1m_l%E1%BB%9Bn_C%E1%BA%A7n_Th%C6%A1.jpg",
           "era": "today",
           "yearTaken": 2012,
@@ -6003,7 +6003,7 @@
       "media": [
         {
           "key": "khoi-nghia-hon-khoai-1940-hon-khoai-noi-khoi-nghia-nam-1940",
-          "fileUrl": "storage:locations/heritage/khoi-nghia-hon-khoai-1940/hon-khoai-noi-khoi-nghia-nam-1940-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khoi-nghia-hon-khoai-1940/hon-khoai-noi-khoi-nghia-nam-1940-1200.webp",
           "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Hon_Khoai_Island.jpg",
           "era": "today",
           "yearTaken": 2016,
@@ -6096,7 +6096,7 @@
       "media": [
         {
           "key": "ben-vam-lung-tuong-dai-ben-vam-lung-duong-ho-chi-minh-tren-bien",
-          "fileUrl": "storage:locations/heritage/ben-vam-lung/tuong-dai-ben-vam-lung-duong-ho-chi-minh-tren-bien-1200.webp",
+          "fileUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ben-vam-lung/tuong-dai-ben-vam-lung-duong-ho-chi-minh-tren-bien-1200.webp",
           "sourcePageUrl": "https://www.vietnamplus.vn/ca-mau-bao-ton-di-tich-ben-vam-lung-diem-cuoi-duong-ho-chi-minh-tren-bien-post1034895.vnp",
           "era": "today",
           "yearTaken": 2021,
