@@ -793,10 +793,7 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Kích thước: 1024x684 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
-- [Huyền thoại Đường Hồ Chí Minh trên biển – Bến K15 Đồ Sơn](https://www.youtube.com/watch?v=n4m17K-a128)
-  - Kênh phát hành: Truyền hình Hải Phòng THP (https://www.youtube.com/@thp)
-  - YouTube ID: `n4m17K-a128` | Đã kiểm tra oEmbed: 2026-10-27
-  - Ghi chú nội dung: Phóng sự tư liệu lịch sử ghi nhận điểm xuất phát Bến K15 và ký ức các chiến sĩ tàu không số.
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
 
 ---
 
@@ -1071,13 +1068,13 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-kim-lien`: Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Kim Liên (Quyết định số 548/QĐ-TTg ngày 10/5/2012: Xếp hạng Di tích quốc gia đặc biệt Khu di tích Kim Liên)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Nếp nhà lá 5 gian đơn sơ mộc mạc của gia đình Bác Hồ tại Làng Sen, Kim Liên, Nam Đàn, Nghệ An.**
-  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Nha_Bac_Ho_Lang_Sen_Nghe_An.jpg?width=1600
-  - Trang gốc: https://commons.wikimedia.org/wiki/File:Nha_Bac_Ho_Lang_Sen_Nghe_An.jpg
-  - Thời kỳ: `today` (2020)
-  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
-  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
-  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
+- **[Ảnh bìa] Cụm đền tưởng niệm và cây đa tại Khu di tích Quốc gia đặc biệt Kim Liên, Nam Đàn, Nghệ An.**
+  - URL: storage:locations/heritage/khu-di-tich-kim-lien/den-tuong-niem-kim-lien-1200.webp
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Kim_Lien_Monuments_Park.JPG
+  - Thời kỳ: `today` (2009)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 3.0)
+  - Tác giả / Nguồn ảnh: Liftold at Vietnamese Wikipedia
+  - Kích thước: 1200x900 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -1107,13 +1104,13 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-truong-bon`: Hồ sơ Di tích lịch sử quốc gia Truông Bồn (Quyết định xếp hạng Di tích lịch sử quốc gia năm 2013: Xếp hạng cấp quốc gia Khu di tích lịch sử Truông Bồn)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Khu tưởng niệm Di tích Lịch sử Quốc gia Truông Bồn – nơi ghi dấu sự hy sinh anh dũng của 13 chiến sĩ TNXP.**
-  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Khu_di_tich_Truong_Bon_Nghe_An.jpg?width=1600
-  - Trang gốc: https://commons.wikimedia.org/wiki/File:Khu_di_tich_Truong_Bon_Nghe_An.jpg
-  - Thời kỳ: `today` (2019)
-  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
-  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
-  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
+- **[Ảnh bìa] Toàn cảnh Khu di tích Lịch sử Quốc gia Truông Bồn tại xã Mỹ Sơn, huyện Đô Lương, tỉnh Nghệ An.**
+  - URL: storage:locations/heritage/truong-bon/toan-canh-di-tich-truong-bon-1200.webp
+  - Trang gốc: https://nhandan.vn/truong-bon-mot-bieu-tuong-cua-tinh-than-viet-nam-post721703.html
+  - Thời kỳ: `today` (2022)
+  - Cơ sở sử dụng: `coursework_reference` (Giấy phép: Tư liệu học tập)
+  - Tác giả / Nguồn ảnh: Báo Nhân Dân
+  - Kích thước: 1000x617 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -1144,19 +1141,16 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-nga-ba-dong-loc`: Quyết định xếp hạng Di tích quốc gia đặc biệt Ngã ba Đồng Lộc (Quyết định số 2383/QĐ-TTg ngày 9/12/2013: Xếp hạng Di tích quốc gia đặc biệt Ngã ba Đồng Lộc)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Quần thể Khu tưởng niệm Di tích Quốc gia Đặc biệt Ngã ba Đồng Lộc tại Can Lộc, Hà Tĩnh.**
-  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Nga_ba_Dong_Loc_Ha_Tinh.jpg?width=1600
-  - Trang gốc: https://commons.wikimedia.org/wiki/File:Nga_ba_Dong_Loc_Ha_Tinh.jpg
-  - Thời kỳ: `today` (2019)
+- **[Ảnh bìa] Quần thể tượng đài và khu tưởng niệm 10 cô gái thanh niên xung phong tại Ngã ba Đồng Lộc, Hà Tĩnh.**
+  - URL: storage:locations/heritage/nga-ba-dong-loc/tuong-dai-nga-ba-dong-loc-1200.webp
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Nga_Ba_Dong_Loc.jpg
+  - Thời kỳ: `today` (2013)
   - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
-  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
-  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
+  - Tác giả / Nguồn ảnh: Khoitran1957
+  - Kích thước: 1200x515 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
-- [Ký ức ngã ba Đồng Lộc – Mười đóa hoa bất tử](https://www.youtube.com/watch?v=W4P81Jc96zU)
-  - Kênh phát hành: Truyền hình Hà Tĩnh HTTV (https://www.youtube.com/@httv)
-  - YouTube ID: `W4P81Jc96zU` | Đã kiểm tra oEmbed: 2026-10-27
-  - Ghi chú nội dung: Phim tư liệu lịch sử tái hiện khúc tráng ca 10 nữ liệt sĩ thanh niên xung phong ngã ba Đồng Lộc.
+*Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
 
 ---
 
@@ -1183,13 +1177,13 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-thanh-co-quang-tri`: Quyết định xếp hạng Di tích quốc gia đặc biệt Thành cổ Quảng Trị và những địa điểm lưu niệm sự kiện 81 ngày đêm năm 1972 (Quyết định số 2383/QĐ-TTg ngày 9/12/2013: Xếp hạng Di tích quốc gia đặc biệt Thành cổ Quảng Trị)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Đài tưởng niệm trung tâm Thành cổ Quảng Trị mô phỏng ngọn thiên đăng tri ân các anh hùng liệt sĩ.**
-  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Thanh_co_Quang_Tri_Dai_tuong_niem.jpg?width=1600
-  - Trang gốc: https://commons.wikimedia.org/wiki/File:Thanh_co_Quang_Tri_Dai_tuong_niem.jpg
-  - Thời kỳ: `today` (2019)
-  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
-  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
-  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
+- **[Ảnh bìa] Đài tưởng niệm trung tâm Thành cổ Quảng Trị, biểu tượng tưởng niệm 81 ngày đêm rực lửa năm 1972.**
+  - URL: storage:locations/heritage/thanh-co-quang-tri/dai-tuong-niem-thanh-co-quang-tri-1200.webp
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_4.jpg
+  - Thời kỳ: `today` (2013)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 3.0)
+  - Tác giả / Nguồn ảnh: Bùi Thụy Đào Nguyên
+  - Kích thước: 1200x900 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -1218,13 +1212,13 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-hien-luong-ben-hai`: Quyết định xếp hạng Di tích quốc gia đặc biệt Đôi bờ Hiền Lương – Bến Hải (Quyết định số 2383/QĐ-TTg ngày 9/12/2013: Xếp hạng Di tích quốc gia đặc biệt Đôi bờ Hiền Lương - Bến Hải)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Cầu Hiền Lương lịch sử bắc qua sông Bến Hải chia cắt vĩ tuyến 17 được phục dựng nguyên trạng.**
-  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Cau_Hien_Luong_Ben_Hai_Quang_Tri.jpg?width=1600
-  - Trang gốc: https://commons.wikimedia.org/wiki/File:Cau_Hien_Luong_Ben_Hai_Quang_Tri.jpg
-  - Thời kỳ: `today` (2019)
-  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
-  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
-  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
+- **[Ảnh bìa] Cầu Hiền Lương lịch sử bắc qua sông Bến Hải, vĩ tuyến 17 chia cắt hai miền Nam - Bắc suốt 20 năm.**
+  - URL: storage:locations/heritage/doi-bo-hien-luong-ben-hai/cau-hien-luong-song-ben-hai-1200.webp
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Benhai03.JPG
+  - Thời kỳ: `today` (2007)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 3.0)
+  - Tác giả / Nguồn ảnh: Đỗ Tuấn Hưng
+  - Kích thước: 1200x900 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -1255,13 +1249,13 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-ngo-mon-hue`: Hồ sơ Di sản Thế giới Quần thể Di tích Cố đô Huế (Khu vực Cửa Ngọ Môn) (Văn bằng UNESCO 1993 và Dự án trùng tu Ngọ Môn 2021: Di sản thế giới và công tác bảo tồn di tích)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Cửa Ngọ Môn và lầu Ngũ Phụng uy nghi tráng lệ – nơi Vua Bảo Đại thoái vị ngày 30/8/1945.**
-  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Ngo_Mon_Hue_Imperial_City.jpg?width=1600
-  - Trang gốc: https://commons.wikimedia.org/wiki/File:Ngo_Mon_Hue_Imperial_City.jpg
-  - Thời kỳ: `today` (2021)
-  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
-  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
-  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
+- **[Ảnh bìa] Cửa Ngọ Môn – cổng chính phía Nam của Hoàng thành Huế, Di sản Văn hóa Thế giới.**
+  - URL: storage:locations/heritage/ngo-mon-hue/ngo-mon-hoang-thanh-hue-1200.webp
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Hu%E1%BA%BF_(2024)_-_Meridian_Gate_-_Ng%E1%BB%8D_M%C3%B4n_(Ho%C3%A0ng_th%C3%A0nh_Hu%E1%BA%BF)_-_img_02.jpg
+  - Thời kỳ: `today` (2024)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY 4.0)
+  - Tác giả / Nguồn ảnh: Chainwit.
+  - Kích thước: 1200x900 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -1292,13 +1286,13 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-kinh-thanh-hue-1968`: Hồ sơ Sự kiện Mặt trận Thừa Thiên Huế trong cuộc Tổng tiến công và nổi dậy Tết Mậu Thân 1968 (Hồ sơ kiến trúc Kỳ Đài Huế: Quy chuẩn kiến trúc Kỳ Đài và công tác bảo tồn)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Kỳ Đài Huế sừng sững trước Hoàng thành – nơi lá cờ Mặt trận Giải phóng tung bay suốt 25 ngày đêm Tết Mậu Thân 1968.**
-  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Ky_Dai_Hue_Flag_Tower.jpg?width=1600
-  - Trang gốc: https://commons.wikimedia.org/wiki/File:Ky_Dai_Hue_Flag_Tower.jpg
-  - Thời kỳ: `today` (2019)
+- **[Ảnh bìa] Kỳ Đài Kinh thành Huế – nơi lá cờ Mặt trận Dân tộc Giải phóng miền Nam tung bay trong chiến dịch Tết Mậu Thân 1968.**
+  - URL: storage:locations/heritage/kinh-thanh-hue-1968/ky-dai-kinh-thanh-hue-1200.webp
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:K%E1%BB%B3_%C4%90%C3%A0i_(Kinh_th%C3%A0nh_Hu%E1%BA%BF).jpg
+  - Thời kỳ: `today` (2014)
   - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
-  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
-  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
+  - Tác giả / Nguồn ảnh: Vdongold
+  - Kích thước: 1200x900 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -1328,13 +1322,13 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-chien-thang-nui-thanh`: Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Núi Thành (Quyết định xếp hạng Di tích lịch sử quốc gia năm 1979: Xếp hạng cấp quốc gia Tượng đài Chiến thắng Núi Thành)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Tượng đài Chiến thắng Núi Thành sừng sững trên đỉnh đồi – nơi mở đầu phong trào đánh thắng quân viễn chinh Mỹ.**
-  - URL: https://danang.gov.vn/uploads/images/2021/05/tuong-dai-chien-thang-nui-thanh.jpg
-  - Trang gốc: https://danang.gov.vn/di-tich-chien-thang-nui-thanh
-  - Thời kỳ: `today` (2021)
+- **[Ảnh bìa] Tượng đài Chiến thắng Núi Thành trên đồi Phú Huề (Quảng Nam), ghi dấu trận đầu đánh Mỹ và thắng Mỹ ngày 26/5/1965.**
+  - URL: storage:locations/heritage/chien-thang-nui-thanh-1965/tuong-dai-chien-thang-nui-thanh-1200.webp
+  - Trang gốc: https://baoquangnam.vn/di-tich-quoc-gia-chien-thang-nui-thanh-nang-tam-va-lan-toa-3027374.html
+  - Thời kỳ: `today` (2020)
   - Cơ sở sử dụng: `coursework_reference` (Giấy phép: Tư liệu học tập)
-  - Tác giả / Nguồn ảnh: Cổng Thông tin Điện tử
-  - Kích thước: 1200x800 | Ngày kiểm tra: 2026-10-27
+  - Tác giả / Nguồn ảnh: Báo Quảng Nam
+  - Kích thước: 1200x873 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -1363,13 +1357,13 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-my-son`: Quyết định xếp hạng Di tích quốc gia đặc biệt Khu đền tháp Mỹ Sơn (Văn bằng UNESCO 1999 và Quyết định số 1272/QĐ-TTg: Xếp hạng Di sản văn hóa thế giới và Di tích quốc gia đặc biệt)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Quần thể các đền tháp gạch nung rêu phong cổ kính giữa thung lũng xanh Thánh địa Mỹ Sơn.**
-  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/My_Son_Sanctuary_Quang_Nam.jpg?width=1600
-  - Trang gốc: https://commons.wikimedia.org/wiki/File:My_Son_Sanctuary_Quang_Nam.jpg
-  - Thời kỳ: `today` (2020)
-  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
-  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
-  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
+- **[Ảnh bìa] Quần thể tháp gạch cổ Chăm Pa tại Thung lũng thánh địa Mỹ Sơn, Di sản Văn hóa Thế giới tại Quảng Nam.**
+  - URL: storage:locations/heritage/khu-den-thap-my-son/quan-the-thap-my-son-1200.webp
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:2024_-_M%E1%BB%B9_S%C6%A1n_Group_B,_C_and_D_-_img_23.jpg
+  - Thời kỳ: `today` (2024)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY 4.0)
+  - Tác giả / Nguồn ảnh: Chainwit.
+  - Kích thước: 1200x900 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -1398,13 +1392,13 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-son-my`: Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm thảm sát Sơn Mỹ (Quyết định số 2408/QĐ-TTg ngày 31/12/2014: Xếp hạng Di tích quốc gia đặc biệt Khu chứng tích Sơn Mỹ)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Cụm tượng đài người mẹ Sơn Mỹ ôm con che chở trước bom đạn tại Khu chứng tích Quốc gia Đặc biệt.**
-  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Khu_chung_tich_Son_My_Quang_Ngai.jpg?width=1600
-  - Trang gốc: https://commons.wikimedia.org/wiki/File:Khu_chung_tich_Son_My_Quang_Ngai.jpg
-  - Thời kỳ: `today` (2019)
-  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
-  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
-  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
+- **[Ảnh bìa] Tượng đài tưởng niệm nạn nhân vụ thảm sát Mỹ Lai tại Khu chứng tích Sơn Mỹ, Tịnh Khê, Quảng Ngãi.**
+  - URL: storage:locations/heritage/khu-chung-tich-son-my/tuong-dai-chung-tich-son-my-1200.webp
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Monument_of_the_My_Lai_Massacre_(2).jpg
+  - Thời kỳ: `today` (2018)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY 2.0)
+  - Tác giả / Nguồn ảnh: -JvL- from Netherlands
+  - Kích thước: 1200x674 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -1434,13 +1428,13 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-dak-to-tan-canh`: Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Đắk Tô – Tân Cảnh (Quyết định số 2280/QĐ-TTg ngày 31/12/2020: Xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Đắk Tô - Tân Cảnh)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Tượng đài Chiến thắng Đắk Tô – Tân Cảnh và xác xe tăng lịch sử tại thị trấn Đắk Tô.**
-  - URL: https://quangngai.gov.vn/uploads/images/2021/04/tuong-dai-chien-thang-dak-to.jpg
-  - Trang gốc: https://quangngai.gov.vn/di-tich-dak-to-tan-canh
-  - Thời kỳ: `today` (2021)
-  - Cơ sở sử dụng: `coursework_reference` (Giấy phép: Tư liệu học tập)
-  - Tác giả / Nguồn ảnh: Cổng Thông tin Điện tử
-  - Kích thước: 1200x800 | Ngày kiểm tra: 2026-10-27
+- **[Ảnh bìa] Tượng đài Chiến thắng Đắk Tô – Tân Cảnh ghi dấu chiến công giải phóng cứ điểm Tân Cảnh năm 1972.**
+  - URL: storage:locations/heritage/dak-to-tan-canh/tuong-dai-dak-to-tan-canh-1200.webp
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_Chi%E1%BA%BFn_th%E1%BA%AFng_%C4%90%C4%83k_T%C3%B4_-_T%C3%A2n_C%E1%BA%A3nh_(40022454161).jpg
+  - Thời kỳ: `today` (2018)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY 2.0)
+  - Tác giả / Nguồn ảnh: Vinnie Cartabiano
+  - Kích thước: 1200x1800 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -1469,13 +1463,13 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-lang-khang-chien-stor`: Hồ sơ Di tích lịch sử Làng kháng chiến Stơr (Quyết định xếp hạng Di tích lịch sử quốc gia năm 1993: Xếp hạng cấp quốc gia Làng kháng chiến Stơr)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Mái nhà Rông truyền thống uy nghiêm tại Làng kháng chiến Stơr – quê hương Anh hùng Núp.**
-  - URL: https://gialai.gov.vn/uploads/images/2021/08/lang-khang-chien-stor.jpg
-  - Trang gốc: https://gialai.gov.vn/di-tich-lang-stor
-  - Thời kỳ: `today` (2021)
+- **[Ảnh bìa] Nhà lưu niệm Anh hùng Núp tại Làng kháng chiến Stơr, xã Tơ Tung, huyện Kbang, tỉnh Gia Lai.**
+  - URL: storage:locations/heritage/lang-khang-chien-stor/nha-luu-niem-anh-hung-nup-1200.webp
+  - Trang gốc: https://gialai.gov.vn/du-khach/di-tich-lich-su-van-hoa/lang-khang-chien-stor.html
+  - Thời kỳ: `today` (2025)
   - Cơ sở sử dụng: `coursework_reference` (Giấy phép: Tư liệu học tập)
   - Tác giả / Nguồn ảnh: Cổng Thông tin Điện tử tỉnh Gia Lai
-  - Kích thước: 1200x800 | Ngày kiểm tra: 2026-10-27
+  - Kích thước: 1200x800 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -1504,13 +1498,13 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-bao-tang-quang-trung`: Quyết định xếp hạng Di tích quốc gia đặc biệt Đền thờ Tây Sơn Tam Kiệt / Bảo tàng Quang Trung (Quyết định số 2383/QĐ-TTg ngày 9/12/2013: Xếp hạng Di tích quốc gia đặc biệt Đền thờ Tây Sơn Tam Kiệt)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Tượng đài Hoàng đế Quang Trung – Nguyễn Huệ oai phong lẫm liệt trước sân Bảo tàng Quang Trung.**
-  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Bao_tang_Quang_Trung_Binh_Dinh.jpg?width=1600
-  - Trang gốc: https://commons.wikimedia.org/wiki/File:Bao_tang_Quang_Trung_Binh_Dinh.jpg
-  - Thời kỳ: `today` (2019)
-  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
-  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
-  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
+- **[Ảnh bìa] Khu di tích Điện thờ Tây Sơn Tam Kiệt và Bảo tàng Quang Trung tại thị trấn Phú Phong, Tây Sơn, Bình Định.**
+  - URL: storage:locations/heritage/bao-tang-quang-trung/bao-tang-quang-trung-tay-son-1200.webp
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:B%E1%BA%A3o_T%C3%A0ng_Quang_Trung.JPG
+  - Thời kỳ: `today` (2009)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 3.0)
+  - Tác giả / Nguồn ảnh: Original uploader was Liftold at vi.wikipedia
+  - Kích thước: 1200x900 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -1541,13 +1535,13 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-san-bay-thanh-son`: Hồ sơ Di tích lịch sử Địa điểm Phi đội Quyết thắng xuất kích tại Sân bay Thành Sơn (Quyết định xếp hạng Di tích lịch sử quốc gia: Xếp hạng cấp quốc gia địa điểm xuất kích Phi đội Quyết Thắng)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Bia di tích kỷ niệm nơi Phi đội Quyết Thắng xuất kích chiều ngày 28/4/1975 tại Sân bay Thành Sơn.**
-  - URL: https://khanhhoa.gov.vn/uploads/images/2021/04/di-tich-san-bay-thanh-son.jpg
-  - Trang gốc: https://khanhhoa.gov.vn/di-tich-san-bay-thanh-son
-  - Thời kỳ: `today` (2021)
-  - Cơ sở sử dụng: `coursework_reference` (Giấy phép: Tư liệu học tập)
-  - Tác giả / Nguồn ảnh: Cổng Thông tin Điện tử
-  - Kích thước: 1200x800 | Ngày kiểm tra: 2026-10-27
+- **[Ảnh bìa] Căn cứ không quân Phan Rang (Sân bay Thành Sơn) nơi Phi đội Quyết thắng cất cánh ném bom sân bay Tân Sơn Nhất tháng 4/1975.**
+  - URL: storage:locations/heritage/san-bay-thanh-son/san-bay-phan-rang-thanh-son-1969-1200.webp
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Douglas_A-1H_Skyraider_of_the_1st_SOS_at_Phan_Rang_Air_Base,_Vietnam,_circa_in_1969_(VA065677).jpg
+  - Thời kỳ: `historical` (1969)
+  - Cơ sở sử dụng: `public_domain` (Giấy phép: Public domain)
+  - Tác giả / Nguồn ảnh: U.S. Air Force
+  - Kích thước: 1200x785 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*
@@ -1576,13 +1570,13 @@ Tài liệu kiểm chứng nguồn tư liệu, tọa độ thực tế, hình �
   - Nguồn `src-dsvh-thap-ba-ponagar`: Hồ sơ Di tích quốc gia đặc biệt Tháp Bà Ponagar Nha Trang (Quyết định số 2280/QĐ-TTg ngày 31/12/2020: Xếp hạng Di tích quốc gia đặc biệt Tháp Bà Ponagar Nha Trang)
 
 ### 2. Tư liệu hình ảnh (Media Evidence)
-- **[Ảnh bìa] Các tòa tháp cổ Tháp Bà Ponagar xây bằng gạch nung đỏ rực rỡ bên bờ sông Cái Nha Trang.**
-  - URL: https://commons.wikimedia.org/wiki/Special:FilePath/Thap_Ba_Ponagar_Nha_Trang.jpg?width=1600
-  - Trang gốc: https://commons.wikimedia.org/wiki/File:Thap_Ba_Ponagar_Nha_Trang.jpg
-  - Thời kỳ: `today` (2019)
-  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 4.0)
-  - Tác giả / Nguồn ảnh: Wikimedia Commons Contributor
-  - Kích thước: 1600x1067 | Ngày kiểm tra: 2026-10-27
+- **[Ảnh bìa] Quần thể Tháp Bà Ponagar trên đồi Cù Lao nhìn ra cửa sông Cái, Nha Trang, Khánh Hòa.**
+  - URL: storage:locations/heritage/thap-ba-ponagar/thap-ba-ponagar-nha-trang-1200.webp
+  - Trang gốc: https://commons.wikimedia.org/wiki/File:Th%C3%A1p_b%C3%A0_Ponagar.JPG
+  - Thời kỳ: `today` (2010)
+  - Cơ sở sử dụng: `open_license` (Giấy phép: CC BY-SA 3.0)
+  - Tác giả / Nguồn ảnh: Nguyễn Đông Sơn at Vietnamese Wikipedia
+  - Kích thước: 1200x900 | Ngày kiểm tra: 2026-10-28
 
 ### 3. Video chính thống (Official Videos)
 *Không có video chính thống phù hợp hoặc đang xác minh oEmbed.*

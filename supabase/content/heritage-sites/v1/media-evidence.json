@@ -1386,6 +1386,699 @@
       "searchLog": [
         "Sourced for Batch B: File:Tay Do castle South gate.JPG"
       ]
+    },
+    {
+      "key": "khu-di-tich-kim-lien-den-tuong-niem-kim-lien",
+      "site": "khu-di-tich-kim-lien",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Kim Lien Monuments Park.JPG",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Kim_Lien_Monuments_Park.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Liftold at Vietnamese Wikipedia",
+        "credit": "Liftold at Vietnamese Wikipedia",
+        "originalWidth": 3072,
+        "originalHeight": 2304
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Kim_Lien_Monuments_Park.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:28:51.127Z",
+        "sha256": "b855afe42d8a3ab77410686c0b980e6c3399085679bc0f164d749918689bd684",
+        "bytes": 2825443,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 31058,
+          "sha256": "fab733ab7a8dec080aedb77edc7334846dda67dffee9dfbd4e8525a47b8a759a"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 202682,
+          "sha256": "dc01fbe3cfa32fef7f71c482d71f4e201821ca5e03704e629ff97d054cebafa2"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 361906,
+          "sha256": "22fd1a2291d1fe4bcaf6e50e5ea511b63879cf10477479282d39396b0cbc8af5"
+        }
+      },
+      "visualCheck": "Đền tưởng niệm và cây cổ thụ tại Khu di tích Kim Liên Nam Đàn Nghệ An.",
+      "searchLog": [
+        "Sourced for Batch C: File:Kim Lien Monuments Park.JPG"
+      ]
+    },
+    {
+      "key": "truong-bon-toan-canh-di-tich-truong-bon",
+      "site": "truong-bon",
+      "origin": "web",
+      "commons": null,
+      "web": {
+        "pageUrl": "https://nhandan.vn/truong-bon-mot-bieu-tuong-cua-tinh-than-viet-nam-post721703.html",
+        "imageUrl": "https://cdn.nhandan.vn/images/HvOYxOL7S_B5gKLe14Wz7-X62e0nEym28B3Ga65B_hqI9w0Q_hjQW2ec8Dg4G5q99ssS-SUZcf6rR1lvYNDOVQ/5-bs-11111-3957.jpg",
+        "credit": "Báo Nhân Dân",
+        "publishedDate": "2022"
+      },
+      "download": {
+        "url": "https://cdn.nhandan.vn/images/HvOYxOL7S_B5gKLe14Wz7-X62e0nEym28B3Ga65B_hqI9w0Q_hjQW2ec8Dg4G5q99ssS-SUZcf6rR1lvYNDOVQ/5-bs-11111-3957.jpg",
+        "at": "2026-10-28T16:28:51.367Z",
+        "sha256": "5569d7fa725f2d41eb5d8b654d85741f599c23e9c19ea0bc89dbbf0005c203d2",
+        "bytes": 275071,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 247,
+          "bytes": 28990,
+          "sha256": "a544a343adbdad58033c48bcbedc09240591d2058b275088a01dabff1a1c440d"
+        },
+        "1200": {
+          "width": 1000,
+          "height": 617,
+          "bytes": 134172,
+          "sha256": "580f6c99a795be13a286f5e4b102a71c1affd0dff28f357e1e961daf0ba67af2"
+        },
+        "2000": {
+          "width": 1000,
+          "height": 617,
+          "bytes": 113370,
+          "sha256": "730d1f5b76319e309b6acc10b2200cb35d61edf3edbb0c85d264c976d8362e16"
+        }
+      },
+      "visualCheck": "Toàn cảnh khu di tích Truông Bồn Đô Lương Nghệ An từ trên cao.",
+      "searchLog": [
+        "Sourced for Batch C: https://cdn.nhandan.vn/images/HvOYxOL7S_B5gKLe14Wz7-X62e0nEym28B3Ga65B_hqI9w0Q_hjQW2ec8Dg4G5q99ssS-SUZcf6rR1lvYNDOVQ/5-bs-11111-3957.jpg"
+      ]
+    },
+    {
+      "key": "nga-ba-dong-loc-tuong-dai-nga-ba-dong-loc",
+      "site": "nga-ba-dong-loc",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Nga Ba Dong Loc.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Nga_Ba_Dong_Loc.jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Khoitran1957",
+        "credit": "Khoitran1957",
+        "originalWidth": 3456,
+        "originalHeight": 1482
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Nga_Ba_Dong_Loc.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:28:53.886Z",
+        "sha256": "317e2da7d49996c5f0ab5809ab5c8eb14653c226b8c554fba7412df648bc5f77",
+        "bytes": 2892290,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 171,
+          "bytes": 24810,
+          "sha256": "7fde4ee19359caff4268abf30af098b8cbbfdc9c50c716a90ac92ba328cf4b0c"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 515,
+          "bytes": 216958,
+          "sha256": "bcde7e990e29dc97dcda09f373aec9fe3e354cd2186c28034af7457a6ded84de"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 858,
+          "bytes": 534994,
+          "sha256": "25263abbda7c241a5ca6d37da2a54797811f944f5d4f5f3a735f1391b67e9108"
+        }
+      },
+      "visualCheck": "Cụm tượng đài chiến thắng tại Khu di tích Ngã ba Đồng Lộc Hà Tĩnh.",
+      "searchLog": [
+        "Sourced for Batch C: File:Nga Ba Dong Loc.jpg"
+      ]
+    },
+    {
+      "key": "thanh-co-quang-tri-dai-tuong-niem-thanh-co-quang-tri",
+      "site": "thanh-co-quang-tri",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Thành cổ Quảng Trị 4.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_4.jpg",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "credit": "Bùi Thụy Đào Nguyên",
+        "originalWidth": 4608,
+        "originalHeight": 3456
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:28:54.984Z",
+        "sha256": "fa9d0a6aa33fb9127981b106659e1e27fb5dccc68c586e49eaf241d3b7135d6c",
+        "bytes": 3591387,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 23164,
+          "sha256": "fe5e3ed431301cc88afd82200bd5bd660d9bc6d8cdc77844fc52c29eed08df7d"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 142084,
+          "sha256": "b8d6c4f6f79bd3df78a2cab0652f6b1dee132952a20f652dca32a83365ad2eb1"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 267024,
+          "sha256": "660611d836b657deb509bf630067503d7f2e84d865fdc84185994ecea829dbb2"
+        }
+      },
+      "visualCheck": "Đài tưởng niệm trung tâm Thành cổ Quảng Trị tri ân các anh hùng liệt sĩ.",
+      "searchLog": [
+        "Sourced for Batch C: File:Thành cổ Quảng Trị 4.jpg"
+      ]
+    },
+    {
+      "key": "doi-bo-hien-luong-ben-hai-cau-hien-luong-song-ben-hai",
+      "site": "doi-bo-hien-luong-ben-hai",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Benhai03.JPG",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Benhai03.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "artist": "Đỗ Tuấn Hưng",
+        "credit": "Đỗ Tuấn Hưng",
+        "originalWidth": 1280,
+        "originalHeight": 960
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Benhai03.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:28:56.802Z",
+        "sha256": "7bcba0ca99774d488b67db67925f4563b3d43292f44e2baf0cb20e241d1e89ca",
+        "bytes": 447686,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 8534,
+          "sha256": "41f2cf0aff0b6327db9426c1455fe9a2ecadb48f228d2f90c119b2711ebfb54b"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 47364,
+          "sha256": "0ba648da615bb17d82797e58c777b653f18f2a8d67640d7d55f10319e49975c8"
+        },
+        "2000": {
+          "width": 1280,
+          "height": 960,
+          "bytes": 43846,
+          "sha256": "52e21f3ce2670607ffb052e7b28d6b6ff15a14930726ad31e2462d21a87471ec"
+        }
+      },
+      "visualCheck": "Cầu Hiền Lương bắc qua sông Bến Hải tại vĩ tuyến 17 Quảng Trị.",
+      "searchLog": [
+        "Sourced for Batch C: File:Benhai03.JPG"
+      ]
+    },
+    {
+      "key": "ngo-mon-hue-ngo-mon-hoang-thanh-hue",
+      "site": "ngo-mon-hue",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Huế (2024) - Meridian Gate - Ngọ Môn (Hoàng thành Huế) - img 02.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hu%E1%BA%BF_(2024)_-_Meridian_Gate_-_Ng%E1%BB%8D_M%C3%B4n_(Ho%C3%A0ng_th%C3%A0nh_Hu%E1%BA%BF)_-_img_02.jpg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "artist": "Chainwit.",
+        "credit": "Chainwit.",
+        "originalWidth": 3830,
+        "originalHeight": 2872
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Hu%E1%BA%BF_%282024%29_-_Meridian_Gate_-_Ng%E1%BB%8D_M%C3%B4n_%28Ho%C3%A0ng_th%C3%A0nh_Hu%E1%BA%BF%29_-_img_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:28:58.043Z",
+        "sha256": "d32f01c6d894864e25d24f95ebad8156f1f729d776033612911858783c32b464",
+        "bytes": 2835119,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 24442,
+          "sha256": "470f27e999f58d8dda49c64d9500c3469caca41fb2aabe69eaa8667ae239143a"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 186278,
+          "sha256": "b9a91c1312f6a9b5335256acf0847646d793c6d29e68f60446e7d742877428a7"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 402602,
+          "sha256": "70b164ecc98982cb3e5151fbc28c41ca24fdccaa6ee698a466afb49de29de9b0"
+        }
+      },
+      "visualCheck": "Toàn cảnh cổng Ngọ Môn và Lầu Ngũ Phụng Hoàng thành Huế.",
+      "searchLog": [
+        "Sourced for Batch C: File:Huế (2024) - Meridian Gate - Ngọ Môn (Hoàng thành Huế) - img 02.jpg"
+      ]
+    },
+    {
+      "key": "kinh-thanh-hue-1968-ky-dai-kinh-thanh-hue",
+      "site": "kinh-thanh-hue-1968",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Kỳ Đài (Kinh thành Huế).jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:K%E1%BB%B3_%C4%90%C3%A0i_(Kinh_th%C3%A0nh_Hu%E1%BA%BF).jpg",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "artist": "Vdongold",
+        "credit": "Vdongold",
+        "originalWidth": 4608,
+        "originalHeight": 3456
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/K%E1%BB%B3_%C4%90%C3%A0i_%28Kinh_th%C3%A0nh_Hu%E1%BA%BF%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:29:00.795Z",
+        "sha256": "0b17170047e74312f16afa51f0d9ef921a099e198bd70b60faedc37f5759e754",
+        "bytes": 1966157,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 5946,
+          "sha256": "3e7d48ac309eec65db612e4b8477fa421616b34f185baca91f068fd4cbfaaa4a"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 34306,
+          "sha256": "0270886e30497c4c9ca7fd234ddfcf214c2a9441b232102e2839ce8cd7e22b93"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 72754,
+          "sha256": "fad8991a3ba3ffebf45336cba36235c06e1a4fcb87c7b154b28216a6db9ac305"
+        }
+      },
+      "visualCheck": "Kỳ Đài ba tầng uy nghi trước Hoàng thành Huế.",
+      "searchLog": [
+        "Sourced for Batch C: File:Kỳ Đài (Kinh thành Huế).jpg"
+      ]
+    },
+    {
+      "key": "chien-thang-nui-thanh-1965-tuong-dai-chien-thang-nui-thanh",
+      "site": "chien-thang-nui-thanh-1965",
+      "origin": "web",
+      "commons": null,
+      "web": {
+        "pageUrl": "https://baoquangnam.vn/di-tich-quoc-gia-chien-thang-nui-thanh-nang-tam-va-lan-toa-3027374.html",
+        "imageUrl": "https://bqn.1cdn.vn/2020/09/22/images.baoquangnam.vn-storage-newsportal-2020-9-21-93089-_tnb-30405-01.jpg",
+        "credit": "Báo Quảng Nam",
+        "publishedDate": "2020"
+      },
+      "download": {
+        "url": "https://bqn.1cdn.vn/2020/09/22/images.baoquangnam.vn-storage-newsportal-2020-9-21-93089-_tnb-30405-01.jpg",
+        "at": "2026-10-28T16:29:01.426Z",
+        "sha256": "6331b945c06245680d46ffa6908d5838795a695c13e366b2e19883d1b9389918",
+        "bytes": 542866,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 291,
+          "bytes": 35128,
+          "sha256": "974b0d2f82fa0f5822c1a3987e5fa21676b85f57fadfe2e91af765596aa87a4e"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 873,
+          "bytes": 287574,
+          "sha256": "4e7d1ea73124900a5920042e867f4d9b3dfc4dc37d4403e23a2b4720e3e4daea"
+        },
+        "2000": {
+          "width": 1365,
+          "height": 993,
+          "bytes": 329086,
+          "sha256": "0f2491e2db679e4aca1b970df814ffad01b56788fc26268d7e709799bfd43caa"
+        }
+      },
+      "visualCheck": "Tượng đài Chiến thắng Núi Thành trên đỉnh đồi Phú Huề Quảng Nam.",
+      "searchLog": [
+        "Sourced for Batch C: https://bqn.1cdn.vn/2020/09/22/images.baoquangnam.vn-storage-newsportal-2020-9-21-93089-_tnb-30405-01.jpg"
+      ]
+    },
+    {
+      "key": "khu-den-thap-my-son-quan-the-thap-my-son",
+      "site": "khu-den-thap-my-son",
+      "origin": "commons",
+      "commons": {
+        "title": "File:2024 - Mỹ Sơn Group B, C and D - img 23.jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:2024_-_M%E1%BB%B9_S%C6%A1n_Group_B,_C_and_D_-_img_23.jpg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "artist": "Chainwit.",
+        "credit": "Chainwit.",
+        "originalWidth": 4032,
+        "originalHeight": 3024
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/2024_-_M%E1%BB%B9_S%C6%A1n_Group_B%2C_C_and_D_-_img_23.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:29:03.100Z",
+        "sha256": "1e98fddb7565a33781f99abb4ef05c6c3a06ea1e026a36bfdf40786ea4f36a38",
+        "bytes": 13113886,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 31160,
+          "sha256": "7d0b15e1ea9f43d45c01a3c647a14c0d8988feee6ac1940b09df4f11861bd07e"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 253618,
+          "sha256": "254e7f1b2dba47e9c6703d532432572e2e584a768c2b88aee1f70e70d4eeacc6"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 575760,
+          "sha256": "817a0d864807fab403ee9cf140c757c9df704017ed197f950e615b82fa369ba1"
+        }
+      },
+      "visualCheck": "Quần thể tháp gạch Chăm Pa tại thánh địa Mỹ Sơn Quảng Nam.",
+      "searchLog": [
+        "Sourced for Batch C: File:2024 - Mỹ Sơn Group B, C and D - img 23.jpg"
+      ]
+    },
+    {
+      "key": "khu-chung-tich-son-my-tuong-dai-chung-tich-son-my",
+      "site": "khu-chung-tich-son-my",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Monument of the My Lai Massacre (2).jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Monument_of_the_My_Lai_Massacre_(2).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "artist": "-JvL- from Netherlands",
+        "credit": "-JvL- from Netherlands",
+        "originalWidth": 2048,
+        "originalHeight": 1151
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Monument_of_the_My_Lai_Massacre_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:29:03.955Z",
+        "sha256": "ef1e5a7633e358bcc8adffd90a17e7508c97ecf2631dc24da3294e2ec2377a69",
+        "bytes": 1016393,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 224,
+          "bytes": 19884,
+          "sha256": "02f027a34c55418ccd88e00cbdc8ed15c0ae09738799c3f7011e185777305d7f"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 674,
+          "bytes": 153516,
+          "sha256": "59f0ef29be07d6204ffeb1a24d3595615674f38d77192b59c4ed13a582ff2f90"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1124,
+          "bytes": 317518,
+          "sha256": "58777cf9d99a4534eb601132fca2e39ed79cedfc4a746e7e739a60f2f3ad2236"
+        }
+      },
+      "visualCheck": "Tượng đài tưởng niệm tại Khu chứng tích Sơn Mỹ Quảng Ngãi.",
+      "searchLog": [
+        "Sourced for Batch C: File:Monument of the My Lai Massacre (2).jpg"
+      ]
+    },
+    {
+      "key": "dak-to-tan-canh-tuong-dai-dak-to-tan-canh",
+      "site": "dak-to-tan-canh",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Tượng đài Chiến thắng Đăk Tô - Tân Cảnh (40022454161).jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_Chi%E1%BA%BFn_th%E1%BA%AFng_%C4%90%C4%83k_T%C3%B4_-_T%C3%A2n_C%E1%BA%A3nh_(40022454161).jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "artist": "Vinnie Cartabiano",
+        "credit": "Vinnie Cartabiano",
+        "originalWidth": 4000,
+        "originalHeight": 6000
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_Chi%E1%BA%BFn_th%E1%BA%AFng_%C4%90%C4%83k_T%C3%B4_-_T%C3%A2n_C%E1%BA%A3nh_%2840022454161%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:29:08.473Z",
+        "sha256": "4d62ea933f1a7c1b8eef5fc07cc0b4f9a79b09609a207d6a8124a561d57c063b",
+        "bytes": 15465788,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 600,
+          "bytes": 41896,
+          "sha256": "bd5731459925a12233b5d8cddfceb4f790eec762c6f4dee688aed93ae41ea8cb"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 1800,
+          "bytes": 292598,
+          "sha256": "faf8ba61c4d268ed262f1ec7dcc7e33f85a379b10b9b054044159959464c74fe"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 3000,
+          "bytes": 625006,
+          "sha256": "c0ea1e9fc58d0c017b00627413c710701f8e9ab1dbcd0aee260c54a2f909029c"
+        }
+      },
+      "visualCheck": "Tượng đài Chiến thắng Đắk Tô Tân Cảnh với xe tăng lịch sử tại Kon Tum.",
+      "searchLog": [
+        "Sourced for Batch C: File:Tượng đài Chiến thắng Đăk Tô - Tân Cảnh (40022454161).jpg"
+      ]
+    },
+    {
+      "key": "lang-khang-chien-stor-nha-luu-niem-anh-hung-nup",
+      "site": "lang-khang-chien-stor",
+      "origin": "web",
+      "commons": null,
+      "web": {
+        "pageUrl": "https://gialai.gov.vn/du-khach/di-tich-lich-su-van-hoa/lang-khang-chien-stor.html",
+        "imageUrl": "https://gialai.gov.vn/upload/2005340/20250624/Lang-Khang-chien-Stor2_f5f2b.jpg",
+        "credit": "Cổng Thông tin Điện tử tỉnh Gia Lai",
+        "publishedDate": "2025"
+      },
+      "download": {
+        "url": "https://gialai.gov.vn/upload/2005340/20250624/Lang-Khang-chien-Stor2_f5f2b.jpg",
+        "at": "2026-10-28T16:29:09.600Z",
+        "sha256": "ce07db7ee74a07fa19026f969af360cae848f0783afca4e323ae0ea81e263705",
+        "bytes": 380979,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 267,
+          "bytes": 16066,
+          "sha256": "04759e088a0d96d57a3e13ed2165546af861bfc9f769f74a2d9fede5af7eeb4a"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 800,
+          "bytes": 109010,
+          "sha256": "5bba8c352fdaa4bad06a2eef47b89fa401aa1d9e56ba3be8b5cb5c41d7bf4160"
+        },
+        "2000": {
+          "width": 1200,
+          "height": 800,
+          "bytes": 91940,
+          "sha256": "048113725632ed90f84d670834b38dc3cc3a3627bc741d884d67652c09eb1c7b"
+        }
+      },
+      "visualCheck": "Nhà lưu niệm Anh hùng Núp tại Làng kháng chiến Stơr Gia Lai.",
+      "searchLog": [
+        "Sourced for Batch C: https://gialai.gov.vn/upload/2005340/20250624/Lang-Khang-chien-Stor2_f5f2b.jpg"
+      ]
+    },
+    {
+      "key": "bao-tang-quang-trung-bao-tang-quang-trung-tay-son",
+      "site": "bao-tang-quang-trung",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Bảo Tàng Quang Trung.JPG",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:B%E1%BA%A3o_T%C3%A0ng_Quang_Trung.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Original uploader was Liftold at vi.wikipedia",
+        "credit": "Original uploader was Liftold at vi.wikipedia",
+        "originalWidth": 3072,
+        "originalHeight": 2304
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/B%E1%BA%A3o_T%C3%A0ng_Quang_Trung.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:29:12.017Z",
+        "sha256": "c008ad7f5e8988a4175ad285aa063731b05b7d29606a041d732fcd896cdb45d4",
+        "bytes": 3339164,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 15910,
+          "sha256": "79d3795fcf711e120a2c7dbb0939ff16bf5910b0c03841e78054bc4095be6b87"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 104750,
+          "sha256": "0f8f6032a09faedc832096e6e952074c9052a35f2f130d3801d983598882f088"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 196368,
+          "sha256": "daa4821ed227cfb93463770ab407710bf76d456ef75a4410e3d4111f9b4d31ef"
+        }
+      },
+      "visualCheck": "Điện thờ Tây Sơn Tam Kiệt tại Bảo tàng Quang Trung Bình Định.",
+      "searchLog": [
+        "Sourced for Batch C: File:Bảo Tàng Quang Trung.JPG"
+      ]
+    },
+    {
+      "key": "san-bay-thanh-son-san-bay-phan-rang-thanh-son-1969",
+      "site": "san-bay-thanh-son",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Douglas A-1H Skyraider of the 1st SOS at Phan Rang Air Base, Vietnam, circa in 1969 (VA065677).jpg",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Douglas_A-1H_Skyraider_of_the_1st_SOS_at_Phan_Rang_Air_Base,_Vietnam,_circa_in_1969_(VA065677).jpg",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "artist": "U.S. Air Force",
+        "credit": "U.S. Air Force",
+        "originalWidth": 2362,
+        "originalHeight": 1546
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Douglas_A-1H_Skyraider_of_the_1st_SOS_at_Phan_Rang_Air_Base%2C_Vietnam%2C_circa_in_1969_%28VA065677%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:29:14.120Z",
+        "sha256": "403942dd30aecf1cdc427fff5f7abf8b7a2e8f77013fc03c77adb385078158c1",
+        "bytes": 954081,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 262,
+          "bytes": 8484,
+          "sha256": "43e20bb86bbbedc8bf4570510c5d28b8615b4d8c865d3b0bd817734bdbde64fb"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 785,
+          "bytes": 31696,
+          "sha256": "f0cc0ab84ba4a79a571a742072118a0a12201e1d5a67a1097e35a83c48391fc6"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1309,
+          "bytes": 53198,
+          "sha256": "c1221c0e998c977112ebf17ed0ae2a400cbb1b15dc8041937bd7bdd275540fff"
+        }
+      },
+      "visualCheck": "Ảnh tư liệu lịch sử đường băng sân bay Thành Sơn Phan Rang.",
+      "searchLog": [
+        "Sourced for Batch C: File:Douglas A-1H Skyraider of the 1st SOS at Phan Rang Air Base, Vietnam, circa in 1969 (VA065677).jpg"
+      ]
+    },
+    {
+      "key": "thap-ba-ponagar-thap-ba-ponagar-nha-trang",
+      "site": "thap-ba-ponagar",
+      "origin": "commons",
+      "commons": {
+        "title": "File:Tháp bà Ponagar.JPG",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:Th%C3%A1p_b%C3%A0_Ponagar.JPG",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "artist": "Nguyễn Đông Sơn at Vietnamese Wikipedia",
+        "credit": "Nguyễn Đông Sơn at Vietnamese Wikipedia",
+        "originalWidth": 3264,
+        "originalHeight": 2448
+      },
+      "web": null,
+      "download": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Th%C3%A1p_b%C3%A0_Ponagar.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "at": "2026-10-28T16:29:15.415Z",
+        "sha256": "7c3b2f6f8015d15a1e5957e6aa685c53e5ce423063292a4a0db130c71bdce2b6",
+        "bytes": 2039912,
+        "mime": "image/jpeg"
+      },
+      "variants": {
+        "400": {
+          "width": 400,
+          "height": 300,
+          "bytes": 15968,
+          "sha256": "a997d4925b46b12e656833630634867ca950ccddab9ae192a9a6aece9cc4e51f"
+        },
+        "1200": {
+          "width": 1200,
+          "height": 900,
+          "bytes": 90020,
+          "sha256": "d33adfe067581f6a1d7a1e149707c5dcda1c206d0dbfff5dbb2640f93787d5f1"
+        },
+        "2000": {
+          "width": 2000,
+          "height": 1500,
+          "bytes": 155498,
+          "sha256": "80e16a5518ae6d032dc63ac0612eb25659870f8dbb4d3be25473e1686a55f193"
+        }
+      },
+      "visualCheck": "Tháp gạch Chăm Pa cổ kính tại Tháp Bà Ponagar Nha Trang Khánh Hòa.",
+      "searchLog": [
+        "Sourced for Batch C: File:Tháp bà Ponagar.JPG"
+      ]
     }
   ],
   "videos": [
