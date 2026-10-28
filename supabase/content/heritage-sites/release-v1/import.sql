@@ -28,10 +28,11 @@ DO $preflight$ BEGIN
 END $preflight$;
 
 -- Deduplicated sources
-CREATE TEMP TABLE hs_sources_temp (
+CREATE TABLE IF NOT EXISTS public.hs_sources_temp (
   source_key text PRIMARY KEY,
   source_id uuid NOT NULL
-) ON COMMIT DROP;
+);
+TRUNCATE TABLE public.hs_sources_temp;
 
 INSERT INTO public.sources (title, author_org, publisher, url, source_type, citation, published_year, accessed_at)
 SELECT 'OpenStreetMap Geographic Data', 'OpenStreetMap Contributors', 'OpenStreetMap Foundation', 'https://www.openstreetmap.org', 'web', 'OpenStreetMap contributors (2026). OpenStreetMap database.', 2026, '2026-10-27'
@@ -7631,6 +7632,8 @@ DO $verify$ DECLARE total_grade12 integer; BEGIN
     RAISE EXCEPTION 'VERIFICATION_FAIL: only % / 34 localities have Grade 12 heritage site', total_grade12;
   END IF;
 END $verify$;
+
+DROP TABLE IF EXISTS public.hs_sources_temp;
 
 SET CONSTRAINTS ALL IMMEDIATE;
 COMMIT;

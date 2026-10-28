@@ -110,10 +110,11 @@ export function generateReleaseArtifacts({ pkgDir, outDir, mode = "publish", doC
 
   // Sources temp table & insertion
   importLines.push(`-- Deduplicated sources`);
-  importLines.push(`CREATE TEMP TABLE hs_sources_temp (`);
+  importLines.push(`CREATE TABLE IF NOT EXISTS public.hs_sources_temp (`);
   importLines.push(`  source_key text PRIMARY KEY,`);
   importLines.push(`  source_id uuid NOT NULL`);
-  importLines.push(`) ON COMMIT DROP;`);
+  importLines.push(`);`);
+  importLines.push(`TRUNCATE TABLE public.hs_sources_temp;`);
   importLines.push(``);
 
   for (const src of sourcesPkg.sources) {
@@ -279,6 +280,8 @@ export function generateReleaseArtifacts({ pkgDir, outDir, mode = "publish", doC
   importLines.push(`END $verify$;`);
   importLines.push(``);
 
+  importLines.push(`DROP TABLE IF EXISTS public.hs_sources_temp;`);
+  importLines.push(``);
   importLines.push(`SET CONSTRAINTS ALL IMMEDIATE;`);
   importLines.push(doCommit ? `COMMIT;` : `ROLLBACK;`);
   importLines.push(``);
@@ -348,6 +351,8 @@ export function generateReleaseArtifacts({ pkgDir, outDir, mode = "publish", doC
     rollbackLines.push(``);
   }
 
+  rollbackLines.push(`DROP TABLE IF EXISTS public.hs_sources_temp;`);
+  rollbackLines.push(``);
   rollbackLines.push(`SET CONSTRAINTS ALL IMMEDIATE;`);
   rollbackLines.push(`COMMIT;`);
   rollbackLines.push(``);
