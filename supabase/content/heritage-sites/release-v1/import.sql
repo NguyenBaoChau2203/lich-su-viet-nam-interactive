@@ -6658,7 +6658,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'nha-tu-hoa-lo'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Maison_Centrale_Hanoi_entrance.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Maison_Centrale_Hanoi_entrance.jpg', 'image', 'Cổng chính Di tích Lịch sử Nhà tù Hỏa Lò (Maison Centrale) tại quận Hoàn Kiếm, Hà Nội.', 'Cổng chính kiến trúc kiên cố bằng đá sẫm màu của Nhà tù Hỏa Lò tại Hà Nội',
   'today', 2018, 'Wikimedia Commons Contributor', 'CC BY-SA 3.0', 'https://creativecommons.org/licenses/by-sa/3.0/', 'open_license',
-  true, 'ec0adfb0-db39-4c85-a87c-d7aabb50159e'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'nha-tu-hoa-lo') AND is_cover = true) THEN false ELSE true END, 'ec0adfb0-db39-4c85-a87c-d7aabb50159e'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'nha-tu-hoa-lo')
@@ -6673,12 +6673,18 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'hoang-thanh-thang-long'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Doan_Mon_-_Hanoi_Citadel.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Doan_Mon_-_Hanoi_Citadel.jpg', 'image', 'Cổng Đoan Môn – cửa ngõ chính vào Cấm thành Thăng Long tại trung tâm Hà Nội.', 'Cổng Đoan Môn cổ kính bằng gạch ngói với ba tầng lầu nhìn ra sân cỏ rộng',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '7764d646-f003-4bb1-a272-3ad4ea103600'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'hoang-thanh-thang-long') AND is_cover = true) THEN false ELSE true END, '7764d646-f003-4bb1-a272-3ad4ea103600'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'hoang-thanh-thang-long')
     AND file_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Doan_Mon_-_Hanoi_Citadel.jpg?width=1600'
 );
+
+-- Ensure legacy cover has usage_basis
+UPDATE public.media_assets
+SET usage_basis = COALESCE(usage_basis, 'open_license')
+WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'pac-bo-cao-bang')
+  AND is_cover = true;
 
 INSERT INTO public.media_assets (
   location_id, file_url, source_page_url, media_type, caption, alt_text,
@@ -6688,7 +6694,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'pac-bo-cao-bang'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Suoi_Lenin_Pac_Bo.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Suoi_Lenin_Pac_Bo.jpg', 'image', 'Dòng suối Lê-nin trong xanh uốn lượn dưới chân núi Các Mác tại Khu di tích lịch sử Pác Bó, Cao Bằng.', 'Dòng suối nước màu xanh ngọc bích chảy quanh chân vách núi đá vôi phủ đầy cây rừng',
   'today', 2020, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '7c8dd221-707a-4b6e-acfc-9bfd7191d496'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'pac-bo-cao-bang') AND is_cover = true) THEN false ELSE true END, '7c8dd221-707a-4b6e-acfc-9bfd7191d496'::uuid, false, false, 1600, 1067, COALESCE((SELECT max(sort_order) FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'pac-bo-cao-bang')), 0) + 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'pac-bo-cao-bang')
@@ -6703,7 +6709,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'rung-tran-hung-dao'),
   'https://caobang.gov.vn/uploads/images/2021/12/khu-di-tich-rung-tran-hung-dao.jpg', 'https://caobang.gov.vn/di-tich-rung-tran-hung-dao', 'image', 'Bia ghi danh 34 chiến sĩ Đội Việt Nam Tuyên truyền Giải phóng quân giữa cánh rừng đại ngàn Trần Hưng Đạo, Nguyên Bình, Cao Bằng.', 'Bia đá di tích hình đóm lửa dựng giữa tán rừng cây cổ thụ râm mát',
   'today', 2021, 'Cổng Thông tin Điện tử tỉnh Cao Bằng', NULL, NULL, 'coursework_reference',
-  true, 'c8f1d274-a44b-4332-aecc-be5fa6949c2e'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'rung-tran-hung-dao') AND is_cover = true) THEN false ELSE true END, 'c8f1d274-a44b-4332-aecc-be5fa6949c2e'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'rung-tran-hung-dao')
@@ -6718,7 +6724,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'khu-di-tich-tan-trao'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Dinh_Tan_Trao.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Dinh_Tan_Trao.jpg', 'image', 'Đình Tân Trào – nơi diễn ra Quốc dân Đại hội tháng 8/1945 quyết định Tổng khởi nghĩa giành chính quyền.', 'Ngôi đình gỗ mái lá đơn sơ truyền thống tọa lạc giữa vườn cây xanh ngát ở Tuyên Quang',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '0ef6a5da-ea4e-4b8c-a939-07d3cbf399c7'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khu-di-tich-tan-trao') AND is_cover = true) THEN false ELSE true END, '0ef6a5da-ea4e-4b8c-a939-07d3cbf399c7'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khu-di-tich-tan-trao')
@@ -6733,7 +6739,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'cot-co-lung-cu'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Cot_co_Lung_Cu_-_Ha_Giang.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Cot_co_Lung_Cu_-_Ha_Giang.jpg', 'image', 'Cột cờ Quốc gia Lũng Cú sừng sững trên đỉnh núi Rồng, lá cờ 54m² bay phấp phới giữa đất trời biên cương.', 'Tháp cột cờ bằng đá vươn cao trên đỉnh núi đá hùng vĩ với lá cờ đỏ sao vàng lớn đang bay',
   'today', 2018, 'Wikimedia Commons Contributor', 'CC BY-SA 3.0', 'https://creativecommons.org/licenses/by-sa/3.0/', 'open_license',
-  true, 'bfcea545-532a-4fc6-ac27-ef7521c4ae4b'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'cot-co-lung-cu') AND is_cover = true) THEN false ELSE true END, 'bfcea545-532a-4fc6-ac27-ef7521c4ae4b'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'cot-co-lung-cu')
@@ -6748,7 +6754,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'doi-a1-dien-bien-phu'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Doi_A1_Dien_Bien_Phu.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Doi_A1_Dien_Bien_Phu.jpg', 'image', 'Hố phễu bộc phá lịch sử sâu hoắm trên đỉnh Đồi A1 sau tiếng nổ đêm 6/5/1954 trong Chiến dịch Điện Biên Phủ.', 'Miệng hố đất đá hình phễu khổng lồ do khối bộc phá tạo ra trên đỉnh đồi thoai thoải',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '40a1e3b8-1d04-4e4a-aa8d-792848c52018'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'doi-a1-dien-bien-phu') AND is_cover = true) THEN false ELSE true END, '40a1e3b8-1d04-4e4a-aa8d-792848c52018'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'doi-a1-dien-bien-phu')
@@ -6763,7 +6769,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'ham-de-castries'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Ham_De_Castries_Dien_Bien_Phu.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Ham_De_Castries_Dien_Bien_Phu.jpg', 'image', 'Cửa vào Hầm Sở chỉ huy Tướng De Castries với kết cấu vòm thép và bao cát tại cánh đồng Mường Thanh.', 'Lối vào hầm ngầm xây bằng vòm sắt uốn cong phủ các lớp bao cát đất bảo vệ xung quanh',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '3d321897-eb28-4dce-aba7-e7950f09a9c0'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'ham-de-castries') AND is_cover = true) THEN false ELSE true END, '3d321897-eb28-4dce-aba7-e7950f09a9c0'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'ham-de-castries')
@@ -6778,7 +6784,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-lai-chau-1953'),
   'https://laichau.gov.vn/uploads/images/2023/12/chien-thang-lai-chau-1953.jpg', 'https://laichau.gov.vn/di-tich-chien-thang-lai-chau-1953', 'image', 'Tượng đài Chiến thắng Giải phóng Lai Châu năm 1953 sừng sững bên dòng sông Đà hùng vĩ.', 'Tượng đài chiến sĩ bộ đội và nhân dân các dân tộc Tây Bắc giương cao cờ chiến thắng',
   'today', 2023, 'Cổng Thông tin Điện tử tỉnh Lai Châu', NULL, NULL, 'coursework_reference',
-  true, '76453a7d-a5bd-4fd2-a42d-3ad09408e8b2'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-lai-chau-1953') AND is_cover = true) THEN false ELSE true END, '76453a7d-a5bd-4fd2-a42d-3ad09408e8b2'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-lai-chau-1953')
@@ -6793,7 +6799,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'nha-tu-son-la'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Nha_tu_Son_La.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Nha_tu_Son_La.jpg', 'image', 'Bức tường đá kiên cố và các dãy xà lim Di tích Quốc gia Đặc biệt Nhà tù Sơn La trên đồi Khau Cả.', 'Khu phế tích tường đá cổ xám rêu phong của các buồng giam nhà lao Sơn La',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, 'cdc3638b-2467-4a20-a7f6-8c268d3b47dc'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'nha-tu-son-la') AND is_cover = true) THEN false ELSE true END, 'cdc3638b-2467-4a20-a7f6-8c268d3b47dc'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'nha-tu-son-la')
@@ -6808,7 +6814,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'khoi-nghia-yen-bai-1930'),
   'https://yenbai.gov.vn/uploads/images/2020/02/khu-tuong-niem-nguyen-thai-hoc.jpg', 'https://yenbai.gov.vn/di-tich-khoi-nghia-yen-bai', 'image', 'Tượng đài nhà yêu nước Nguyễn Thái Học cùng các nghĩa sĩ Khởi nghĩa Yên Bái năm 1930 tại công viên Yên Hòa.', 'Tượng đài đá cẩm thạch tạc hình người chiến sĩ yêu nước đứng hiên ngang giữa quảng trường xanh',
   'today', 2020, 'Cổng Thông tin Điện tử tỉnh Yên Bái', NULL, NULL, 'coursework_reference',
-  true, 'bb28b7d4-044d-47ad-a0d7-8de0c31d0696'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khoi-nghia-yen-bai-1930') AND is_cover = true) THEN false ELSE true END, 'bb28b7d4-044d-47ad-a0d7-8de0c31d0696'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khoi-nghia-yen-bai-1930')
@@ -6823,7 +6829,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'atk-dinh-hoa'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Lan_Na_Nua_ATK_Dinh_Hoa.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Lan_Na_Nua_ATK_Dinh_Hoa.jpg', 'image', 'Căn lán gỗ mộc mạc tại lán Tỉn Keo, ATK Định Hóa – nơi Bác Hồ chủ trì cuộc họp Bộ Chính trị mở Chiến dịch Điện Biên Phủ.', 'Ngôi lán nhỏ bằng tre nứa mái cọ lợp tranh đơn sơ nép mình bên sườn đồi xanh',
   'today', 2018, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '7229b408-0969-41e4-afde-81e70578e0a0'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'atk-dinh-hoa') AND is_cover = true) THEN false ELSE true END, '7229b408-0969-41e4-afde-81e70578e0a0'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'atk-dinh-hoa')
@@ -6838,7 +6844,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'atk-cho-don'),
   'https://backan.gov.vn/uploads/images/2022/05/atk-cho-don.jpg', 'https://backan.gov.vn/di-tich-atk-cho-don', 'image', 'Khu di tích lịch sử lán Nà Pậu – nơi Chủ tịch Hồ Chí Minh sống và làm việc đầu năm 1951 tại ATK Chợ Đồn.', 'Căn lán gỗ sàn truyền thống nép mình bên gốc cây đại ngàn giữa núi rừng xanh thẳm',
   'today', 2022, 'Cổng Thông tin Điện tử tỉnh Bắc Kạn', NULL, NULL, 'coursework_reference',
-  true, 'c7f65f37-4d2d-46af-a4b7-a2e553fe9804'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'atk-cho-don') AND is_cover = true) THEN false ELSE true END, 'c7f65f37-4d2d-46af-a4b7-a2e553fe9804'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'atk-cho-don')
@@ -6853,7 +6859,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'khoi-nghia-bac-son'),
   'https://langson.gov.vn/uploads/images/2021/09/di-tich-don-mo-nhai-bac-son.jpg', 'https://langson.gov.vn/di-tich-khoi-nghia-bac-son', 'image', 'Địa điểm Đồn Mỏ Nhài – nơi nhân dân Bắc Sơn đánh chiếm đêm 27/9/1940 mở đầu khởi nghĩa vũ trang.', 'Bia đá di tích và công viên đài tưởng niệm Khởi nghĩa Bắc Sơn tại Lạng Sơn',
   'today', 2021, 'Cổng Thông tin Điện tử tỉnh Lạng Sơn', NULL, NULL, 'coursework_reference',
-  true, '203b93aa-b82c-44f3-adae-9ecf07f5e9d2'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khoi-nghia-bac-son') AND is_cover = true) THEN false ELSE true END, '203b93aa-b82c-44f3-adae-9ecf07f5e9d2'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khoi-nghia-bac-son')
@@ -6868,7 +6874,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'ai-chi-lang'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Ai_Chi_Lang_Lang_Son.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Ai_Chi_Lang_Lang_Son.jpg', 'image', 'Thung lũng Ải Chi Lăng nhìn về hướng núi Mã Yên – nơi nghĩa quân Lam Sơn chém tướng Liễu Thăng năm 1427.', 'Toàn cảnh thung lũng xanh mướt với những dãy núi đá vôi sừng sững bao bọc hai bên',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '4f0a5764-9729-4e39-a870-845660cd79eb'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'ai-chi-lang') AND is_cover = true) THEN false ELSE true END, '4f0a5764-9729-4e39-a870-845660cd79eb'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'ai-chi-lang')
@@ -6883,7 +6889,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'mo-than-deo-nai'),
   'https://quangninh.gov.vn/uploads/images/2021/03/di-tich-bac-ho-ve-tham-deo-nai.jpg', 'https://quangninh.gov.vn/di-tich-mo-than-deo-nai', 'image', 'Khu di tích lịch sử Tượng đài Bác Hồ về thăm mỏ than Đèo Nai tại thành phố Cẩm Phả, Quảng Ninh.', 'Tượng đài Chủ tịch Hồ Chí Minh đứng giản dị vẫy tay chào thợ mỏ giữa khuôn viên râm mát',
   'today', 2021, 'Cổng Thông tin Điện tử tỉnh Quảng Ninh', NULL, NULL, 'coursework_reference',
-  true, '17ea0505-d676-44f8-a2b9-bb1ac873b2fd'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'mo-than-deo-nai') AND is_cover = true) THEN false ELSE true END, '17ea0505-d676-44f8-a2b9-bb1ac873b2fd'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'mo-than-deo-nai')
@@ -6898,7 +6904,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'bai-coc-bach-dang'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Bai_coc_Bach_Dang_Yen_Hung.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Bai_coc_Bach_Dang_Yen_Hung.jpg', 'image', 'Bãi cọc gỗ lim lịch sử được khai quật và bảo tồn nguyên trạng tại Di tích Bạch Đằng, Quảng Ninh.', 'Những đầu cọc gỗ lim cổ thụ đen bóng vùi sâu trong bùn đất được che mái bảo tồn cẩn thận',
   'today', 2020, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '3ea5e648-e351-49db-aef9-e7ebf9a7933b'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'bai-coc-bach-dang') AND is_cover = true) THEN false ELSE true END, '3ea5e648-e351-49db-aef9-e7ebf9a7933b'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'bai-coc-bach-dang')
@@ -6913,7 +6919,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'atk-ii-hiep-hoa'),
   'https://bacninh.gov.vn/uploads/images/2021/01/di-tich-atk2-hiep-hoa.jpg', 'https://bacninh.gov.vn/di-tich-atk-ii-hiep-hoa', 'image', 'Đình Xuân Biều – một trong những điểm di tích lịch sử trung tâm của An toàn khu ATK II Hiệp Hòa.', 'Ngôi đình làng cổ mái ngói rêu phong nằm yên bình dưới rặng đa cổ thụ',
   'today', 2021, 'Cổng Thông tin Điện tử tỉnh', NULL, NULL, 'coursework_reference',
-  true, 'ad51418a-b5bb-4a5d-aaef-e20c4fe6f980'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'atk-ii-hiep-hoa') AND is_cover = true) THEN false ELSE true END, 'ad51418a-b5bb-4a5d-aaef-e20c4fe6f980'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'atk-ii-hiep-hoa')
@@ -6928,7 +6934,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'khoi-nghia-yen-the'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Don_Phon_Xuong_Yen_The.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Don_Phon_Xuong_Yen_The.jpg', 'image', 'Cổng vào Di tích Đồn Phồn Xương – đại bản doanh kiên cố của thủ lĩnh Hoàng Hoa Thám tại Yên Thế.', 'Cổng lũy đất đá kiên cố được phục dựng trang nghiêm giữa vườn cây xanh',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, 'f45e460f-c534-4ffe-ac2f-7fea028389b3'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khoi-nghia-yen-the') AND is_cover = true) THEN false ELSE true END, 'f45e460f-c534-4ffe-ac2f-7fea028389b3'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khoi-nghia-yen-the')
@@ -6943,7 +6949,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-song-lo-doan-hung'),
   'https://phutho.gov.vn/uploads/images/2021/10/tuong-dai-chien-thang-song-lo.jpg', 'https://phutho.gov.vn/di-tich-chien-thang-song-lo', 'image', 'Tượng đài Chiến thắng Sông Lô oai nghiêm trên đỉnh đồi cao thị trấn Đoan Hùng nhìn xuống dòng sông cuộn sóng.', 'Tượng đài pháo binh và người chiến sĩ giải phóng quân đứng hiên ngang trên đỉnh đồi',
   'today', 2021, 'Cổng Thông tin Điện tử tỉnh Phú Thọ', NULL, NULL, 'coursework_reference',
-  true, '2c720485-f432-43fb-abf8-e02a7a134749'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-song-lo-doan-hung') AND is_cover = true) THEN false ELSE true END, '2c720485-f432-43fb-abf8-e02a7a134749'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-song-lo-doan-hung')
@@ -6958,7 +6964,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'khu-di-tich-den-hung'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Cong_Den_Hung_Phu_Tho.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Cong_Den_Hung_Phu_Tho.jpg', 'image', 'Cổng chính lối lên các ngôi đền cổ kính trên núi Nghĩa Lĩnh, Khu di tích lịch sử Đền Hùng.', 'Cổng đền tam quan bằng đá ngói uy nghi dưới chân rừng cây cổ thụ Đền Hùng',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '4fe7701d-a4f3-4edb-afbb-7b6e211a80ae'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khu-di-tich-den-hung') AND is_cover = true) THEN false ELSE true END, '4fe7701d-a4f3-4edb-afbb-7b6e211a80ae'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khu-di-tich-den-hung')
@@ -6973,7 +6979,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'ben-k15-do-son'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Ben_K15_Do_Son_Hai_Phong.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Ben_K15_Do_Son_Hai_Phong.jpg', 'image', 'Các trụ cầu cảng bê tông lịch sử của Bến K15 Đồ Sơn – nơi những con Tàu Không số xuất phát ra khơi.', 'Các khối bê tông mố cầu tàu cổ vươn ra bờ biển đá sóng vỗ tại Đồ Sơn Hải Phòng',
   'today', 2018, 'Wikimedia Commons Contributor', 'CC BY-SA 3.0', 'https://creativecommons.org/licenses/by-sa/3.0/', 'open_license',
-  true, '910f32a1-6d4b-4313-a62b-6daf7d5d6baa'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'ben-k15-do-son') AND is_cover = true) THEN false ELSE true END, '910f32a1-6d4b-4313-a62b-6daf7d5d6baa'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'ben-k15-do-son')
@@ -6988,7 +6994,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'con-son-kiep-bac'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Den_Kiep_Bac_Chi_Linh.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Den_Kiep_Bac_Chi_Linh.jpg', 'image', 'Cổng tam quan Đền Kiếp Bạc uy nghiêm bên bến sông Lục Đầu lịch sử.', 'Cổng đền tam quan cổ kính bằng đá gạch mái vòm nhìn ra bến sông rộng lớn',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '7f1ddd93-bb11-4892-ab2b-75b8e123d883'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'con-son-kiep-bac') AND is_cover = true) THEN false ELSE true END, '7f1ddd93-bb11-4892-ab2b-75b8e123d883'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'con-son-kiep-bac')
@@ -7003,7 +7009,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'tieng-trong-tien-hai'),
   'https://hungyen.gov.vn/uploads/images/2021/10/di-tich-tieng-trong-tien-hai.jpg', 'https://hungyen.gov.vn/di-tich-tieng-trong-tien-hai', 'image', 'Tượng đài tái hiện cuộc biểu tình Tiếng trống Tiền Hải ngày 14/10/1930 tại khu lưu niệm.', 'Nhóm tượng đài nông dân tay giương cao cờ đỏ búa liềm và dùi trống biểu tình',
   'today', 2021, 'Cổng Thông tin Điện tử tỉnh', NULL, NULL, 'coursework_reference',
-  true, 'cc12a0be-b6ab-4dee-a3d2-2a7e30ca809a'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'tieng-trong-tien-hai') AND is_cover = true) THEN false ELSE true END, 'cc12a0be-b6ab-4dee-a3d2-2a7e30ca809a'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'tieng-trong-tien-hai')
@@ -7018,7 +7024,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'pho-hien'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Chua_Chuong_Pho_Hien.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Chua_Chuong_Pho_Hien.jpg', 'image', 'Chùa Chuông (Kim Chung Tự) – ''Phố Hiến đệ nhất danh lam'' với kiến trúc cổ kính tuyệt đẹp.', 'Ngôi chùa cổ kính mái ngói mũi hài rêu phong in bóng bên mặt hồ nước phẳng lặng',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '1ab084c6-1f2f-42ff-a39d-11823fcf5a1b'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'pho-hien') AND is_cover = true) THEN false ELSE true END, '1ab084c6-1f2f-42ff-a39d-11823fcf5a1b'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'pho-hien')
@@ -7033,7 +7039,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'nha-may-det-nam-dinh'),
   'https://ninhbinh.gov.vn/uploads/images/2021/05/bao-tang-det-may-nam-dinh.jpg', 'https://ninhbinh.gov.vn/di-tich-nha-may-det-nam-dinh', 'image', 'Khuôn viên Bảo tàng Dệt May Nam Định – nơi lưu giữ ký ức phong trào công nhân kiên cường.', 'Tòa nhà kiến trúc thời Pháp cổ bằng gạch đỏ lưu giữ hiện vật nhà máy dệt',
   'today', 2021, 'Cổng Thông tin Điện tử', NULL, NULL, 'coursework_reference',
-  true, 'e1ea8656-ec3b-433c-a8a3-480583e47222'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'nha-may-det-nam-dinh') AND is_cover = true) THEN false ELSE true END, 'e1ea8656-ec3b-433c-a8a3-480583e47222'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'nha-may-det-nam-dinh')
@@ -7048,7 +7054,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'co-do-hoa-lu'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Den_Vua_Dinh_Tien_Hoang_Hoa_Lu.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Den_Vua_Dinh_Tien_Hoang_Hoa_Lu.jpg', 'image', 'Đền thờ Vua Đinh Tiên Hoàng cổ kính uy nghiêm giữa thung lũng đá vôi Cố đô Hoa Lư.', 'Ngôi đền thờ cổ lợp ngói vảy cá với sân rồng đá uy nghi dưới chân dãy núi đá sừng sững',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '61fb0cd2-7539-4f06-adb7-4142998367f7'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'co-do-hoa-lu') AND is_cover = true) THEN false ELSE true END, '61fb0cd2-7539-4f06-adb7-4142998367f7'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'co-do-hoa-lu')
@@ -7063,7 +7069,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'cau-ham-rong'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Cau_Ham_Rong_Thanh_Hoa.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Cau_Ham_Rong_Thanh_Hoa.jpg', 'image', 'Cây cầu Hàm Rồng bằng thép kiên cường vắt qua dòng sông Mã oai hùng tại Thanh Hóa.', 'Nhịp cầu thép sừng sững bắc qua dòng sông Mã rộng lớn uốn lượn dưới chân núi đá râm mát',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '59fd45d1-b054-49e3-ab7e-db6f21e300ef'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'cau-ham-rong') AND is_cover = true) THEN false ELSE true END, '59fd45d1-b054-49e3-ab7e-db6f21e300ef'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'cau-ham-rong')
@@ -7078,7 +7084,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'thanh-nha-ho'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Thanh_nha_Ho_Cong_Nam.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Thanh_nha_Ho_Cong_Nam.jpg', 'image', 'Cổng Nam Thành nhà Hồ với 3 vòm cuốn bằng đá nguyên khối tráng lệ trải qua hơn 6 thế kỷ.', 'Bức tường thành bằng đá xám vĩ đại với ba cửa vòm vươn cao giữa cánh đồng cỏ rộng',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, 'e961d634-6c35-4d2c-ae16-fcbfbbc1afdc'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'thanh-nha-ho') AND is_cover = true) THEN false ELSE true END, 'e961d634-6c35-4d2c-ae16-fcbfbbc1afdc'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'thanh-nha-ho')
@@ -7093,7 +7099,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'khu-di-tich-kim-lien'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Nha_Bac_Ho_Lang_Sen_Nghe_An.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Nha_Bac_Ho_Lang_Sen_Nghe_An.jpg', 'image', 'Nếp nhà lá 5 gian đơn sơ mộc mạc của gia đình Bác Hồ tại Làng Sen, Kim Liên, Nam Đàn, Nghệ An.', 'Ngôi nhà gỗ mái tranh mộc mạc nép mình dưới rặng tre và hàng cau xanh ngát',
   'today', 2020, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, 'de2dbb2b-5ddc-44c4-afed-461e2e7b2964'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khu-di-tich-kim-lien') AND is_cover = true) THEN false ELSE true END, 'de2dbb2b-5ddc-44c4-afed-461e2e7b2964'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khu-di-tich-kim-lien')
@@ -7108,7 +7114,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'truong-bon'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Khu_di_tich_Truong_Bon_Nghe_An.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Khu_di_tich_Truong_Bon_Nghe_An.jpg', 'image', 'Khu tưởng niệm Di tích Lịch sử Quốc gia Truông Bồn – nơi ghi dấu sự hy sinh anh dũng của 13 chiến sĩ TNXP.', 'Khuôn viên tưởng niệm trang nghiêm với đài tháp lửa vươn cao giữa núi rừng Đô Lương',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '3b78659a-e692-4938-a901-80b7b8a25eae'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'truong-bon') AND is_cover = true) THEN false ELSE true END, '3b78659a-e692-4938-a901-80b7b8a25eae'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'truong-bon')
@@ -7123,7 +7129,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'nga-ba-dong-loc'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Nga_ba_Dong_Loc_Ha_Tinh.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Nga_ba_Dong_Loc_Ha_Tinh.jpg', 'image', 'Quần thể Khu tưởng niệm Di tích Quốc gia Đặc biệt Ngã ba Đồng Lộc tại Can Lộc, Hà Tĩnh.', 'Khu di tích trang nghiêm với tượng đài và tháp chuông tưởng niệm giữa thung lũng xanh',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '50adbb37-5454-4bec-a874-7b60189b1994'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'nga-ba-dong-loc') AND is_cover = true) THEN false ELSE true END, '50adbb37-5454-4bec-a874-7b60189b1994'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'nga-ba-dong-loc')
@@ -7138,7 +7144,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'thanh-co-quang-tri'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Thanh_co_Quang_Tri_Dai_tuong_niem.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Thanh_co_Quang_Tri_Dai_tuong_niem.jpg', 'image', 'Đài tưởng niệm trung tâm Thành cổ Quảng Trị mô phỏng ngọn thiên đăng tri ân các anh hùng liệt sĩ.', 'Đài tưởng niệm hình bát giác uy nghiêm giữa công viên cỏ xanh rợp bóng cây Thành cổ Quảng Trị',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, 'da0c99e4-c302-4052-a391-68b185c11a2e'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'thanh-co-quang-tri') AND is_cover = true) THEN false ELSE true END, 'da0c99e4-c302-4052-a391-68b185c11a2e'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'thanh-co-quang-tri')
@@ -7153,7 +7159,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'doi-bo-hien-luong-ben-hai'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Cau_Hien_Luong_Ben_Hai_Quang_Tri.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Cau_Hien_Luong_Ben_Hai_Quang_Tri.jpg', 'image', 'Cầu Hiền Lương lịch sử bắc qua sông Bến Hải chia cắt vĩ tuyến 17 được phục dựng nguyên trạng.', 'Cây cầu sắt sơn hai màu xanh và vàng chia đôi nhịp cầu bắc qua con sông Bến Hải êm đềm',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, 'a7db47f5-f003-4f79-aa28-46346cde6ff5'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'doi-bo-hien-luong-ben-hai') AND is_cover = true) THEN false ELSE true END, 'a7db47f5-f003-4f79-aa28-46346cde6ff5'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'doi-bo-hien-luong-ben-hai')
@@ -7168,7 +7174,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'ngo-mon-hue'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Ngo_Mon_Hue_Imperial_City.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Ngo_Mon_Hue_Imperial_City.jpg', 'image', 'Cửa Ngọ Môn và lầu Ngũ Phụng uy nghi tráng lệ – nơi Vua Bảo Đại thoái vị ngày 30/8/1945.', 'Cổng đá lớn màu xám có 5 cửa vòm nâng đỡ lầu gác gỗ nhiều tầng mái ngói vàng rực rỡ',
   'today', 2021, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '07ef7c47-5e4d-4b17-aefe-cabe394f4b33'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'ngo-mon-hue') AND is_cover = true) THEN false ELSE true END, '07ef7c47-5e4d-4b17-aefe-cabe394f4b33'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'ngo-mon-hue')
@@ -7183,7 +7189,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'kinh-thanh-hue-1968'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Ky_Dai_Hue_Flag_Tower.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Ky_Dai_Hue_Flag_Tower.jpg', 'image', 'Kỳ Đài Huế sừng sững trước Hoàng thành – nơi lá cờ Mặt trận Giải phóng tung bay suốt 25 ngày đêm Tết Mậu Thân 1968.', 'Bệ đài gạch ba tầng đồ sộ nâng đỡ cột cờ cao vút giữa quảng trường Ngọ Môn',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '73c784c8-31ea-4907-ad2c-75c3dddc1dfb'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'kinh-thanh-hue-1968') AND is_cover = true) THEN false ELSE true END, '73c784c8-31ea-4907-ad2c-75c3dddc1dfb'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'kinh-thanh-hue-1968')
@@ -7198,7 +7204,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-nui-thanh-1965'),
   'https://danang.gov.vn/uploads/images/2021/05/tuong-dai-chien-thang-nui-thanh.jpg', 'https://danang.gov.vn/di-tich-chien-thang-nui-thanh', 'image', 'Tượng đài Chiến thắng Núi Thành sừng sững trên đỉnh đồi – nơi mở đầu phong trào đánh thắng quân viễn chinh Mỹ.', 'Tượng đài người chiến sĩ giải phóng quân tay nắm chắc súng vươn cao trên đỉnh đồi',
   'today', 2021, 'Cổng Thông tin Điện tử', NULL, NULL, 'coursework_reference',
-  true, '84b948ff-608c-4e5c-a091-749198b13d05'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-nui-thanh-1965') AND is_cover = true) THEN false ELSE true END, '84b948ff-608c-4e5c-a091-749198b13d05'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-nui-thanh-1965')
@@ -7213,7 +7219,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'khu-den-thap-my-son'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/My_Son_Sanctuary_Quang_Nam.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:My_Son_Sanctuary_Quang_Nam.jpg', 'image', 'Quần thể các đền tháp gạch nung rêu phong cổ kính giữa thung lũng xanh Thánh địa Mỹ Sơn.', 'Các khối đền tháp Chăm bằng gạch nung màu đỏ trầm sừng sững giữa cây rừng nhiệt đới',
   'today', 2020, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '2f10682a-d775-4e15-aa3c-9bf20ff9b390'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khu-den-thap-my-son') AND is_cover = true) THEN false ELSE true END, '2f10682a-d775-4e15-aa3c-9bf20ff9b390'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khu-den-thap-my-son')
@@ -7228,7 +7234,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'khu-chung-tich-son-my'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Khu_chung_tich_Son_My_Quang_Ngai.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Khu_chung_tich_Son_My_Quang_Ngai.jpg', 'image', 'Cụm tượng đài người mẹ Sơn Mỹ ôm con che chở trước bom đạn tại Khu chứng tích Quốc gia Đặc biệt.', 'Bức tượng đá tạc hình người mẹ quặn thắt ôm chặt đứa con nhỏ giữa vườn tưởng niệm',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '882004b5-7c58-4b56-ab32-0a9bb1d01a9c'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khu-chung-tich-son-my') AND is_cover = true) THEN false ELSE true END, '882004b5-7c58-4b56-ab32-0a9bb1d01a9c'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khu-chung-tich-son-my')
@@ -7243,7 +7249,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'dak-to-tan-canh'),
   'https://quangngai.gov.vn/uploads/images/2021/04/tuong-dai-chien-thang-dak-to.jpg', 'https://quangngai.gov.vn/di-tich-dak-to-tan-canh', 'image', 'Tượng đài Chiến thắng Đắk Tô – Tân Cảnh và xác xe tăng lịch sử tại thị trấn Đắk Tô.', 'Tượng đài chiến thắng bằng đá vươn cao bên cạnh chiếc xe tăng T-54 lịch sử',
   'today', 2021, 'Cổng Thông tin Điện tử', NULL, NULL, 'coursework_reference',
-  true, '86a61248-e6f9-4ce5-ae33-686ede262e2e'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'dak-to-tan-canh') AND is_cover = true) THEN false ELSE true END, '86a61248-e6f9-4ce5-ae33-686ede262e2e'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'dak-to-tan-canh')
@@ -7258,7 +7264,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'lang-khang-chien-stor'),
   'https://gialai.gov.vn/uploads/images/2021/08/lang-khang-chien-stor.jpg', 'https://gialai.gov.vn/di-tich-lang-stor', 'image', 'Mái nhà Rông truyền thống uy nghiêm tại Làng kháng chiến Stơr – quê hương Anh hùng Núp.', 'Ngôi nhà rông Bahnar mái lợp tranh cao vút vươn thẳng lên bầu trời xanh giữa rừng cây',
   'today', 2021, 'Cổng Thông tin Điện tử tỉnh Gia Lai', NULL, NULL, 'coursework_reference',
-  true, '18d20dd1-9a78-463f-a792-ea27b6190d44'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'lang-khang-chien-stor') AND is_cover = true) THEN false ELSE true END, '18d20dd1-9a78-463f-a792-ea27b6190d44'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'lang-khang-chien-stor')
@@ -7273,7 +7279,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'bao-tang-quang-trung'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Bao_tang_Quang_Trung_Binh_Dinh.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Bao_tang_Quang_Trung_Binh_Dinh.jpg', 'image', 'Tượng đài Hoàng đế Quang Trung – Nguyễn Huệ oai phong lẫm liệt trước sân Bảo tàng Quang Trung.', 'Tượng đài người anh hùng áo vải cất cao thanh kiếm chỉ huy xung trận giữa quảng trường hoa',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, 'a17610b0-fb3e-4848-a14f-72c6f1632481'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'bao-tang-quang-trung') AND is_cover = true) THEN false ELSE true END, 'a17610b0-fb3e-4848-a14f-72c6f1632481'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'bao-tang-quang-trung')
@@ -7288,7 +7294,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'san-bay-thanh-son'),
   'https://khanhhoa.gov.vn/uploads/images/2021/04/di-tich-san-bay-thanh-son.jpg', 'https://khanhhoa.gov.vn/di-tich-san-bay-thanh-son', 'image', 'Bia di tích kỷ niệm nơi Phi đội Quyết Thắng xuất kích chiều ngày 28/4/1975 tại Sân bay Thành Sơn.', 'Bia đá di tích hình cánh chim máy bay cất cánh giữa khuôn viên sân bay rộng lớn',
   'today', 2021, 'Cổng Thông tin Điện tử', NULL, NULL, 'coursework_reference',
-  true, '6063daef-0814-4f35-a61b-b2ddbeaf7bd5'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'san-bay-thanh-son') AND is_cover = true) THEN false ELSE true END, '6063daef-0814-4f35-a61b-b2ddbeaf7bd5'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'san-bay-thanh-son')
@@ -7303,7 +7309,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'thap-ba-ponagar'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Thap_Ba_Ponagar_Nha_Trang.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Thap_Ba_Ponagar_Nha_Trang.jpg', 'image', 'Các tòa tháp cổ Tháp Bà Ponagar xây bằng gạch nung đỏ rực rỡ bên bờ sông Cái Nha Trang.', 'Các khối tháp Chăm bằng gạch nung màu cam đỏ vươn cao trên đồi cây nhìn xuống cửa biển',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '8ddda6e9-988c-4b6a-a2c2-f4298210db7e'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'thap-ba-ponagar') AND is_cover = true) THEN false ELSE true END, '8ddda6e9-988c-4b6a-a2c2-f4298210db7e'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'thap-ba-ponagar')
@@ -7318,7 +7324,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'buon-ma-thuot-1975'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Tuong_dai_Chien_thang_Buon_Ma_Thuot.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Tuong_dai_Chien_thang_Buon_Ma_Thuot.jpg', 'image', 'Tượng đài Chiến thắng Buôn Ma Thuột với chiếc xe tăng lịch sử tại Ngã Sáu trung tâm thành phố.', 'Bệ tượng đài bê tông cao vút nâng đỡ chiếc xe tăng hướng mũi tên về phía trước giữa vòng xoay',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '2ae760e9-709b-4b43-a810-6bdb26b811d9'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'buon-ma-thuot-1975') AND is_cover = true) THEN false ELSE true END, '2ae760e9-709b-4b43-a810-6bdb26b811d9'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'buon-ma-thuot-1975')
@@ -7333,7 +7339,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'vung-ro-phu-yen'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Vinh_Vung_Ro_Phu_Yen.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Vinh_Vung_Ro_Phu_Yen.jpg', 'image', 'Toàn cảnh Vịnh Vũng Rô xanh biếc dưới chân Đèo Cả – nơi ghi dấu huyền thoại Tàu Không số.', 'Vịnh biển nước xanh ngắt hình bán nguyệt nép mình dưới chân những dãy núi đá cao hùng vĩ',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, 'f08d5a02-a430-4ce3-a3c4-4e14f86cb7df'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'vung-ro-phu-yen') AND is_cover = true) THEN false ELSE true END, 'f08d5a02-a430-4ce3-a3c4-4e14f86cb7df'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'vung-ro-phu-yen')
@@ -7348,7 +7354,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'truong-duc-thanh'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Truong_Duc_Thanh_Phan_Thiet.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Truong_Duc_Thanh_Phan_Thiet.jpg', 'image', 'Mái nhà gỗ cổ kính và vườn cây xanh Trường Dục Thanh – nơi thầy giáo Nguyễn Tất Thành dạy học năm 1910.', 'Ngôi nhà gỗ lợp ngói âm dương cổ kính với hàng hiên thoáng mát giữa vườn cây râm mát',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, 'ff3ae632-4eea-4520-af18-dcd5070039b8'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'truong-duc-thanh') AND is_cover = true) THEN false ELSE true END, 'ff3ae632-4eea-4520-af18-dcd5070039b8'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'truong-duc-thanh')
@@ -7363,7 +7369,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'nha-lao-thieu-nhi-da-lat'),
   'https://lamdong.gov.vn/uploads/images/2021/06/nha-lao-thieu-nhi-da-lat.jpg', 'https://lamdong.gov.vn/di-tich-nha-lao-thieu-nhi', 'image', 'Khuôn viên Di tích Lịch sử Quốc gia Nhà lao Thiếu nhi Đà Lạt giữa rừng thông thơ mộng.', 'Các dãy nhà giam tường đá kiên cố mái tôn xám nép mình bên sườn đồi thông Đà Lạt',
   'today', 2021, 'Cổng Thông tin Điện tử tỉnh Lâm Đồng', NULL, NULL, 'coursework_reference',
-  true, '23a5bbf6-8877-4ad9-a4ef-190950838246'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'nha-lao-thieu-nhi-da-lat') AND is_cover = true) THEN false ELSE true END, '23a5bbf6-8877-4ad9-a4ef-190950838246'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'nha-lao-thieu-nhi-da-lat')
@@ -7378,7 +7384,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-xuan-loc-1975'),
   'https://dongnai.gov.vn/uploads/images/2021/04/tuong-dai-chien-thang-xuan-loc.jpg', 'https://dongnai.gov.vn/di-tich-chien-thang-xuan-loc', 'image', 'Tượng đài Chiến thắng Xuân Lộc 1975 sừng sững tại trung tâm thành phố Long Khánh, Đồng Nai.', 'Tượng đài hình mũi tên chiến thắng bằng đá hoa cương vươn thẳng lên bầu trời xanh',
   'today', 2021, 'Cổng Thông tin Điện tử tỉnh Đồng Nai', NULL, NULL, 'coursework_reference',
-  true, '70833069-2c47-4632-af88-b1ae01030595'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-xuan-loc-1975') AND is_cover = true) THEN false ELSE true END, '70833069-2c47-4632-af88-b1ae01030595'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-xuan-loc-1975')
@@ -7393,12 +7399,18 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'can-cu-ta-thiet'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Can_cu_Ta_Thiet_Binh_Phuoc.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Can_cu_Ta_Thiet_Binh_Phuoc.jpg', 'image', 'Lán làm việc bán âm đơn sơ của Bộ Chỉ huy Chiến dịch Hồ Chí Minh tại Căn cứ Tà Thiết.', 'Ngôi lán gỗ mái lợp lá trung quân nép mình dưới bóng cây rừng đại ngàn râm mát',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '0b075f12-998a-4bfc-af10-3f3420c4bd09'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'can-cu-ta-thiet') AND is_cover = true) THEN false ELSE true END, '0b075f12-998a-4bfc-af10-3f3420c4bd09'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'can-cu-ta-thiet')
     AND file_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Can_cu_Ta_Thiet_Binh_Phuoc.jpg?width=1600'
 );
+
+-- Ensure legacy cover has usage_basis
+UPDATE public.media_assets
+SET usage_basis = COALESCE(usage_basis, 'open_license')
+WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'dinh-doc-lap')
+  AND is_cover = true;
 
 INSERT INTO public.media_assets (
   location_id, file_url, source_page_url, media_type, caption, alt_text,
@@ -7408,7 +7420,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'dinh-doc-lap'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Dinh_Doc_Lap_Reunification_Palace.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Dinh_Doc_Lap_Reunification_Palace.jpg', 'image', 'Toàn cảnh Di tích Quốc gia Đặc biệt Dinh Độc Lập (Hội trường Thống Nhất) tại Quận 1, TP. Hồ Chí Minh.', 'Tòa nhà dinh thự kiến trúc hiện đại với rèm hoa đá trắng trang nhã nhìn ra bãi cỏ tròn xanh mướt',
   'today', 2020, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '7bcb9783-c5a5-499e-af10-a9fa6d98325c'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'dinh-doc-lap') AND is_cover = true) THEN false ELSE true END, '7bcb9783-c5a5-499e-af10-a9fa6d98325c'::uuid, false, false, 1600, 1067, COALESCE((SELECT max(sort_order) FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'dinh-doc-lap')), 0) + 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'dinh-doc-lap')
@@ -7423,7 +7435,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'dia-dao-cu-chi'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Dia_dao_Cu_Chi_Ben_Dinh.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Dia_dao_Cu_Chi_Ben_Dinh.jpg', 'image', 'Nắp hầm bí mật ngụy trang bằng lá khô mở lối vào hệ thống mê cung Địa đạo Củ Chi.', 'Nắp hầm gỗ nhỏ ngụy trang lá cây vừa một người chui lọt giữa rừng cao su Củ Chi',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '4a484195-192e-4de0-a6eb-cf368014e17b'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'dia-dao-cu-chi') AND is_cover = true) THEN false ELSE true END, '4a484195-192e-4de0-a6eb-cf368014e17b'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'dia-dao-cu-chi')
@@ -7438,7 +7450,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'can-cu-trung-uong-cuc-mien-nam'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Can_cu_Trung_uong_Cuc_Tay_Ninh.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Can_cu_Trung_uong_Cuc_Tay_Ninh.jpg', 'image', 'Nhà làm việc lợp lá trung quân mộc mạc tại Di tích Quốc gia Đặc biệt Căn cứ Trung ương Cục miền Nam.', 'Ngôi nhà gỗ đơn sơ mái lá trung quân nép mình dưới bóng rừng đại ngàn Tân Biên',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '24460084-c0d8-4935-a3a4-71c3f63b29b1'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'can-cu-trung-uong-cuc-mien-nam') AND is_cover = true) THEN false ELSE true END, '24460084-c0d8-4935-a3a4-71c3f63b29b1'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'can-cu-trung-uong-cuc-mien-nam')
@@ -7453,7 +7465,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'nga-tu-duc-hoa'),
   'https://tayninh.gov.vn/uploads/images/2021/06/di-tich-nga-tu-duc-hoa.jpg', 'https://tayninh.gov.vn/di-tich-nga-tu-duc-hoa', 'image', 'Tượng đài đồng chí Võ Văn Tần tại Khu di tích Lịch sử Quốc gia Ngã tư Đức Hòa.', 'Tượng đài nhà cách mạng kiên trung bằng đá đứng uy nghiêm giữa quảng trường hoa',
   'today', 2021, 'Cổng Thông tin Điện tử', NULL, NULL, 'coursework_reference',
-  true, 'f4b8107c-eec1-4898-a6b7-e8ac3606dded'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'nga-tu-duc-hoa') AND is_cover = true) THEN false ELSE true END, 'f4b8107c-eec1-4898-a6b7-e8ac3606dded'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'nga-tu-duc-hoa')
@@ -7468,7 +7480,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-ap-bac-1963'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Khu_di_tich_Ap_Bac_Tien_Giang.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Khu_di_tich_Ap_Bac_Tien_Giang.jpg', 'image', 'Tượng đài ba chiến sĩ gang thép tại Khu di tích Quốc gia Đặc biệt Chiến thắng Ấp Bắc.', 'Nhóm tượng đài bằng đồng đỏ tạc ba người chiến sĩ giải phóng quân xung trận anh dũng',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, 'df43a25f-72b5-4e20-ae50-51bb7003f92e'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-ap-bac-1963') AND is_cover = true) THEN false ELSE true END, 'df43a25f-72b5-4e20-ae50-51bb7003f92e'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-ap-bac-1963')
@@ -7483,7 +7495,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'mo-cu-pho-bang-nguyen-sinh-sac'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Mo_Cu_Nguyen_Sinh_Sac_Dong_Thap.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Mo_Cu_Nguyen_Sinh_Sac_Dong_Thap.jpg', 'image', 'Khu lăng mộ Cụ Phó bảng Nguyễn Sinh Sắc với vòm mái hình cánh sen cách điệu tại thành phố Cao Lãnh.', 'Vòm mái kiến trúc hình cánh hoa sen trắng thanh thoát vươn trên mặt hồ nước phẳng lặng',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '592b4170-3248-4f85-a2de-624e7f5efbb3'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'mo-cu-pho-bang-nguyen-sinh-sac') AND is_cover = true) THEN false ELSE true END, '592b4170-3248-4f85-a2de-624e7f5efbb3'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'mo-cu-pho-bang-nguyen-sinh-sac')
@@ -7498,7 +7510,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'dong-khoi-ben-tre-1960'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Khu_di_tich_Dong_Khoi_Ben_Tre.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Khu_di_tich_Dong_Khoi_Ben_Tre.jpg', 'image', 'Nhà truyền thống Khu di tích Quốc gia Đặc biệt Đồng Khởi tại xã Định Thủy, huyện Mỏ Cày.', 'Nhà trưng bày mái dốc trang nhã bên rặng dừa xanh ngút ngàn của xứ dừa Bến Tre',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, 'd7ae9f1f-d27e-45c2-a49b-3314478a0608'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'dong-khoi-ben-tre-1960') AND is_cover = true) THEN false ELSE true END, 'd7ae9f1f-d27e-45c2-a49b-3314478a0608'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'dong-khoi-ben-tre-1960')
@@ -7513,7 +7525,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'khu-tuong-niem-vo-van-kiet'),
   'https://vinhlong.gov.vn/uploads/images/2021/11/khu-tuong-niem-vo-van-kiet.jpg', 'https://vinhlong.gov.vn/di-tich-vo-van-kiet', 'image', 'Không gian xanh mát Khu tưởng niệm Cố Thủ tướng Võ Văn Kiệt (Vườn ông Sáu Dân) tại Vũng Liêm.', 'Khuôn viên nhà tưởng niệm mái cong kiến trúc mở giữa vườn hoa cỏ xanh mướt',
   'today', 2021, 'Cổng Thông tin Điện tử tỉnh Vĩnh Long', NULL, NULL, 'coursework_reference',
-  true, '72fde8d9-6ca4-4ee7-ae2c-e8bdbf92f813'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khu-tuong-niem-vo-van-kiet') AND is_cover = true) THEN false ELSE true END, '72fde8d9-6ca4-4ee7-ae2c-e8bdbf92f813'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khu-tuong-niem-vo-van-kiet')
@@ -7528,7 +7540,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'nha-tu-phu-quoc'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Nha_tu_Phu_Quoc_Chuong_cop.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Nha_tu_Phu_Quoc_Chuong_cop.jpg', 'image', 'Mô hình phục dựng chuồng cọp kẽm gai ngoài trời tại Di tích Quốc gia Đặc biệt Nhà tù Phú Quốc.', 'Khung dây thép gai sắc nhọn bao quanh buồng nhốt chật hẹp ngoài trời trên nền cát trắng',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '47ae9424-593d-4a40-abf6-c8af07dbf317'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'nha-tu-phu-quoc') AND is_cover = true) THEN false ELSE true END, '47ae9424-593d-4a40-abf6-c8af07dbf317'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'nha-tu-phu-quoc')
@@ -7543,7 +7555,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'khu-luu-niem-ton-duc-thang'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Khu_luu_niem_Ton_Duc_Thang_An_Giang.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Khu_luu_niem_Ton_Duc_Thang_An_Giang.jpg', 'image', 'Đền thờ Chủ tịch Tôn Đức Thắng kiến trúc cổ truyền tại Khu di tích Quốc gia Đặc biệt cù lao Ông Hổ.', 'Ngôi đền thờ gỗ cổ lợp ngói âm dương uy nghi giữa hoa viên cây xanh cù lao Ông Hổ',
   'today', 2020, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '53ac424c-6344-4ce0-aec2-463990450df6'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khu-luu-niem-ton-duc-thang') AND is_cover = true) THEN false ELSE true END, '53ac424c-6344-4ce0-aec2-463990450df6'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khu-luu-niem-ton-duc-thang')
@@ -7558,7 +7570,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-chuong-thien-1973'),
   'https://cantho.gov.vn/uploads/images/2021/07/di-tich-chien-thang-chuong-thien.jpg', 'https://cantho.gov.vn/di-tich-chien-thang-chuong-thien', 'image', 'Khuôn viên Tượng đài Chiến thắng Chương Thiện – nơi đánh bại 75 lượt tiểu đoàn địch năm 1973.', 'Cụm tượng đài chiến sĩ bộ đội và nhân dân miền Tây Nam Bộ xung phong tiến công',
   'today', 2021, 'Cổng Thông tin Điện tử', NULL, NULL, 'coursework_reference',
-  true, 'd23b8ed2-5e38-4ba7-a344-e5ea96ba7a3a'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-chuong-thien-1973') AND is_cover = true) THEN false ELSE true END, 'd23b8ed2-5e38-4ba7-a344-e5ea96ba7a3a'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'chien-thang-chuong-thien-1973')
@@ -7573,7 +7585,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'kham-lon-can-tho'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Kham_Lon_Can_Tho_Prison.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Kham_Lon_Can_Tho_Prison.jpg', 'image', 'Bức tường đá kiên cố và cổng vào Di tích Lịch sử Quốc gia Khám Lớn Cần Thơ.', 'Tường thành nhà tù bằng đá xám cổ kính rêu phong với cổng vòm sắt sơn đen',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '794a9584-e6de-44e7-adf2-bb043d222c73'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'kham-lon-can-tho') AND is_cover = true) THEN false ELSE true END, '794a9584-e6de-44e7-adf2-bb043d222c73'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'kham-lon-can-tho')
@@ -7588,7 +7600,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'khoi-nghia-hon-khoai-1940'),
   'https://camau.gov.vn/uploads/images/2021/12/hai-dang-hon-khoai-ca-mau.jpg', 'https://camau.gov.vn/di-tich-khoi-nghia-hon-khoai', 'image', 'Ngọn hải đăng cổ kính trên đỉnh Hòn Khoai – nơi nổ ra cuộc khởi nghĩa vũ trang đêm 13/12/1940.', 'Ngọn tháp hải đăng cổ bằng đá xám vươn cao trên đỉnh núi phủ đầy rừng nhiệt đới giữa biển xanh',
   'today', 2021, 'Cổng Thông tin Điện tử tỉnh Cà Mau', NULL, NULL, 'coursework_reference',
-  true, 'b466aff5-ca73-4ad3-a030-ca3b5aaa0e59'::uuid, false, false, 1200, 800, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khoi-nghia-hon-khoai-1940') AND is_cover = true) THEN false ELSE true END, 'b466aff5-ca73-4ad3-a030-ca3b5aaa0e59'::uuid, false, false, 1200, 800, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'khoi-nghia-hon-khoai-1940')
@@ -7603,7 +7615,7 @@ INSERT INTO public.media_assets (
   (SELECT id FROM public.historical_locations WHERE slug = 'ben-vam-lung'),
   'https://commons.wikimedia.org/wiki/Special:FilePath/Ben_Vam_Lung_Ca_Mau.jpg?width=1600', 'https://commons.wikimedia.org/wiki/File:Ben_Vam_Lung_Ca_Mau.jpg', 'image', 'Tượng đài kỷ niệm Bến Vàm Lũng – điểm cập bến lịch sử của những chuyến Tàu Không số tại Cà Mau.', 'Bia đá di tích hình con thuyền xé sóng đứng uy nghiêm bên cửa sông rừng đước ngập mặn',
   'today', 2019, 'Wikimedia Commons Contributor', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0/', 'open_license',
-  true, '4d1803b5-7819-4d51-a271-6c6d628e6bab'::uuid, false, false, 1600, 1067, 1
+  CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'ben-vam-lung') AND is_cover = true) THEN false ELSE true END, '4d1803b5-7819-4d51-a271-6c6d628e6bab'::uuid, false, false, 1600, 1067, 1
 WHERE NOT EXISTS (
   SELECT 1 FROM public.media_assets
   WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = 'ben-vam-lung')
@@ -7621,4 +7633,4 @@ DO $verify$ DECLARE total_grade12 integer; BEGIN
 END $verify$;
 
 SET CONSTRAINTS ALL IMMEDIATE;
-ROLLBACK;
+COMMIT;

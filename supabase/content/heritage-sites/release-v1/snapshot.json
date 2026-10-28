@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T15:06:26.202Z",
+  "generatedAt": "2026-10-28T01:40:53.572Z",
   "framework": "VN-34-2025",
   "mode": "publish",
-  "commitMode": false,
+  "commitMode": true,
   "totalAcceptedSites": 64,
   "newSitesCount": 62,
   "enrolledSitesCount": 2,
@@ -32,7 +32,7 @@
     "localities.json": "6defdd026f0eee06f72f978240c9c2fa250cecc6ca4dbb6f71653d2b43f6c4eb"
   },
   "generatedSqlHashes": {
-    "import.sql": "bf79a1470e76f9046b47f5de1fb8e14c29feb8d8fd8084d187e986098a3aa178",
-    "rollback.sql": "4c9b069d96531f8d55b0c9e83eb01908f152eb9ac85dfef537cfda34d81013e4"
+    "import.sql": "d86f91d886871795b1c41671ab27647a3fb55edac35cd9be9ac7e18ed9c03541",
+    "rollback.sql": "aaeb763981f404e4948e773df91421cc717ba8ecc82c7468e6eb5c58baf557db"
   }
 }

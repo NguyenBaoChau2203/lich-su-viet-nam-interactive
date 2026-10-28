@@ -233,6 +233,22 @@ export function generateReleaseArtifacts({ pkgDir, outDir, mode = "publish", doC
       const sortOrder = i + 1;
       const pairIdLiteral = m.pairKey ? sqlLiteral(deterministicUuid(`${site.key}:${m.pairKey}`)) + "::uuid" : "NULL";
 
+      if (site.enrollExistingSlug && m.isCover) {
+        importLines.push(`-- Ensure legacy cover has usage_basis`);
+        importLines.push(`UPDATE public.media_assets`);
+        importLines.push(`SET usage_basis = COALESCE(usage_basis, ${sqlLiteral(m.usageBasis ?? "open_license")})`);
+        importLines.push(`WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = ${slugLiteral})`);
+        importLines.push(`  AND is_cover = true;`);
+        importLines.push(``);
+      }
+
+      const isCoverExpr = m.isCover
+        ? `CASE WHEN EXISTS (SELECT 1 FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = ${slugLiteral}) AND is_cover = true) THEN false ELSE true END`
+        : "false";
+      const sortOrderExpr = site.enrollExistingSlug
+        ? `COALESCE((SELECT max(sort_order) FROM public.media_assets WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = ${slugLiteral})), 0) + ${sortOrder}`
+        : `${sortOrder}`;
+
       importLines.push(`INSERT INTO public.media_assets (`);
       importLines.push(`  location_id, file_url, source_page_url, media_type, caption, alt_text,`);
       importLines.push(`  era, year_taken, photographer, license, license_url, usage_basis,`);
@@ -241,7 +257,7 @@ export function generateReleaseArtifacts({ pkgDir, outDir, mode = "publish", doC
       importLines.push(`  (SELECT id FROM public.historical_locations WHERE slug = ${slugLiteral}),`);
       importLines.push(`  ${sqlLiteral(m.fileUrl)}, ${sqlLiteral(m.sourcePageUrl)}, 'image', ${sqlLiteral(m.caption)}, ${sqlLiteral(m.altText)},`);
       importLines.push(`  ${sqlLiteral(m.era)}, ${sqlLiteral(m.yearTaken ?? null)}, ${sqlLiteral(m.photographer ?? null)}, ${sqlLiteral(m.license ?? null)}, ${sqlLiteral(m.licenseUrl ?? null)}, ${sqlLiteral(m.usageBasis)},`);
-      importLines.push(`  ${m.isCover ? "true" : "false"}, ${pairIdLiteral}, ${m.isReenactment ? "true" : "false"}, ${m.isColorized ? "true" : "false"}, ${sqlLiteral(m.width ?? null)}, ${sqlLiteral(m.height ?? null)}, ${sortOrder}`);
+      importLines.push(`  ${isCoverExpr}, ${pairIdLiteral}, ${m.isReenactment ? "true" : "false"}, ${m.isColorized ? "true" : "false"}, ${sqlLiteral(m.width ?? null)}, ${sqlLiteral(m.height ?? null)}, ${sortOrderExpr}`);
       importLines.push(`WHERE NOT EXISTS (`);
       importLines.push(`  SELECT 1 FROM public.media_assets`);
       importLines.push(`  WHERE location_id = (SELECT id FROM public.historical_locations WHERE slug = ${slugLiteral})`);
@@ -287,11 +303,15 @@ export function generateReleaseArtifacts({ pkgDir, outDir, mode = "publish", doC
   const enrolledSlugs = enrolledSites.map((s) => s.enrollExistingSlug);
 
   // Delete media assets
-  importLines.push(`-- Delete release media`);
+  const enrolledMediaUrls = enrolledSites.flatMap((s) => s.media.map((m) => m.fileUrl));
   rollbackLines.push(`DELETE FROM public.media_assets`);
   rollbackLines.push(`WHERE location_id IN (`);
-  rollbackLines.push(`  SELECT id FROM public.historical_locations WHERE slug IN (${allSlugs.map(sqlLiteral).join(", ")})`);
-  rollbackLines.push(`);`);
+  rollbackLines.push(`  SELECT id FROM public.historical_locations WHERE slug IN (${newSlugs.map(sqlLiteral).join(", ")})`);
+  rollbackLines.push(`)`);
+  if (enrolledMediaUrls.length > 0) {
+    rollbackLines.push(`  OR file_url IN (${enrolledMediaUrls.map(sqlLiteral).join(", ")})`);
+  }
+  rollbackLines.push(`;`);
   rollbackLines.push(``);
 
   // Delete videos
