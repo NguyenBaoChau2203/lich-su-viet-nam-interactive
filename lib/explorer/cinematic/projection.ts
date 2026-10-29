@@ -75,6 +75,17 @@ export function localBasis(lat: number, lng: number): { up: Vec3; east: Vec3; no
   };
 }
 
+/**
+ * Raised geography is hidden when its unit direction is on the far side of the Earth sphere.
+ * Test the unit direction, not the lifted radius: a radius above 1 can push a limb point
+ * across a `dot > 1` check even though the camera→point segment still enters the Earth.
+ * The exact tangent (`dot <= 1`) counts as occluded so leaders do not sit on the silhouette.
+ */
+export function isEarthOccluded(cameraPosition: Vec3, lat: number, lng: number): boolean {
+  if (![...cameraPosition, lat, lng].every(Number.isFinite)) return true;
+  return !isNearSide(cameraPosition, geoToVector(lat, lng, 1));
+}
+
 /** A unit-sphere point faces a camera at `cameraPosition` when it lies on the camera side of the horizon plane. */
 export function isNearSide(cameraPosition: Vec3, point: Vec3): boolean {
   // For a unit surface point P and exterior camera C the segment C→P meets Earth first at P

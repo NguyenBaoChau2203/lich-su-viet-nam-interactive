@@ -12,7 +12,7 @@ import { parsePlaceSelection } from "@/lib/heritage/state";
  * Shared locality discovery state across historical events, local heroes, and heritage places.
  */
 export type LocalHeroUrlState = {
-  mode: "events" | "people" | "places";
+  mode: "events" | "people" | "places" | "locality";
   filters: LocalHeroFilters;
   place?: string | null;
 };
@@ -23,7 +23,10 @@ export type LocalHeroRuntimeState = {
 };
 
 export type LocalHeroRuntimeAction =
-  | { type: "people-enter"; mode?: "people" | "places" }
+  | { type: "locality-select"; code: LocalHeroFilters["localityCode"] }
+  | { type: "locality-clear-selection" }
+  | { type: "locality-exit-to-explore" }
+  | { type: "people-enter"; mode?: "people" | "places" | "locality" }
   | { type: "people-change"; filters: LocalHeroFilters; keepPlace?: boolean }
   | { type: "people-exit" }
   | { type: "place-select"; slug: string | null };
@@ -32,13 +35,20 @@ export const LOCAL_HERO_KEYS = ["noi-dung", "dia-phuong", "q-nhan-vat", "trang-n
 
 export function parseLocalHeroState(params: URLSearchParams): LocalHeroUrlState {
   const noiDung = params.get("noi-dung");
-  const mode = noiDung === "dia-danh" ? "places" : noiDung === "nhan-vat" ? "people" : "events";
+  const mode =
+    noiDung === "dia-phuong"
+      ? "locality"
+      : noiDung === "dia-danh"
+        ? "places"
+        : noiDung === "nhan-vat"
+          ? "people"
+          : "events";
   const state: LocalHeroUrlState = {
     mode,
     filters: normalizeLocalHeroFilters({
       localityCode: LOCALITIES.find((l) => l.slug === params.get("dia-phuong"))?.code,
-      query: params.get("q-nhan-vat"),
-      page: params.get("trang-nhan-vat"),
+      query: mode === "locality" ? "" : params.get("q-nhan-vat"),
+      page: mode === "locality" ? 1 : params.get("trang-nhan-vat"),
     }),
   };
   if (mode === "places") {
@@ -53,6 +63,12 @@ export function localHeroFilterKey(filters: LocalHeroFilters): string {
 
 export function localHeroParams(people: LocalHeroUrlState): URLSearchParams {
   const params = new URLSearchParams();
+  if (people.mode === "locality") {
+    params.set("noi-dung", "dia-phuong");
+    const locality = LOCALITIES.find((l) => l.code === people.filters.localityCode);
+    if (locality) params.set("dia-phuong", locality.slug);
+    return params;
+  }
   if (people.mode === "places") {
     params.set("noi-dung", "dia-danh");
     const locality = LOCALITIES.find((l) => l.code === people.filters.localityCode);
@@ -108,7 +124,7 @@ export function normalizeLocalHeroReturnHref(
     if (params.getAll(key).length !== 1 || ![...mapKeys, ...LOCAL_HERO_KEYS].includes(key as (typeof LOCAL_HERO_KEYS)[number])) return fallback;
     if (mapKeys.includes(key)) base.set(key, params.get(key)!);
   }
-  if (params.has("noi-dung") && params.get("noi-dung") !== "nhan-vat" && params.get("noi-dung") !== "dia-danh") return fallback;
+  if (params.has("noi-dung") && params.get("noi-dung") !== "nhan-vat" && params.get("noi-dung") !== "dia-danh" && params.get("noi-dung") !== "dia-phuong") return fallback;
   if (params.has("dia-phuong") && !LOCALITIES.some((l) => l.slug === params.get("dia-phuong"))) return fallback;
   if (params.has("trang-nhan-vat") && !/^[1-9][0-9]{0,5}$/u.test(params.get("trang-nhan-vat")!)) return fallback;
   if (params.has("dia-danh")) {

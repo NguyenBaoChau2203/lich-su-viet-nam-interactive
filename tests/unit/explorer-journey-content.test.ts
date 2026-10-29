@@ -26,8 +26,10 @@ const sequences = [
 const limits = { minYear: 1954, maxYear: 1975, eventSlugs: [] };
 
 describe("accepted milestone content contracts", () => {
-  it("exposes four journeys without changing the legacy default", () => {
-    expect(JOURNEY_REGISTRY.journeys).toHaveLength(4);
+  it("exposes the four authored journeys plus the derived total without changing the legacy default", () => {
+    expect(JOURNEY_REGISTRY.journeys.map((journey) => journey.id)).toEqual([
+      "ho-chi-minh-1911-1941", "mua-thu-doc-lap-1945", "khang-chien-chong-phap-1946-1954", "mua-xuan-1975", "hanh-trinh-tong-hop",
+    ]);
     expect(DEFAULT_JOURNEY_ID).toBe("ho-chi-minh-1911-1941");
   });
 

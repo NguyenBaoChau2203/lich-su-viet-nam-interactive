@@ -7,6 +7,44 @@ export type EventMapAnchor = {
 };
 export type ProjectedMapAnchor = EventMapAnchor & { x: number; y: number };
 export type EventMapGroup = { key: string; x: number; y: number; anchors: ProjectedMapAnchor[] };
+export const MAP_LOCATION_UNAVAILABLE_EXPLANATION =
+  "Sự kiện này chưa có địa điểm công khai đủ dữ liệu để đánh dấu trên bản đồ. Bạn vẫn có thể đọc tóm tắt và nguồn.";
+export type EventMapUnavailableReason = "no-public-location" | "missing-coordinates" | "invalid-coordinates";
+export type EventMapAvailability =
+  | { status: "available"; anchors: EventMapAnchor[] }
+  | { status: "unavailable"; reason: EventMapUnavailableReason };
+
+type CoordinateState = "eligible" | "missing" | "invalid";
+
+function coordinateState(location: ExplorerLocation): CoordinateState {
+  const { latitude, longitude } = location;
+  if (latitude === null || longitude === null) return "missing";
+  if (!Number.isFinite(latitude) || !Number.isFinite(longitude) || Math.abs(latitude) > 85 || Math.abs(longitude) > 180) return "invalid";
+  return "eligible";
+}
+
+function eligibleAnchors(event: ExplorerEvent): EventMapAnchor[] {
+  return event.locations.flatMap((location) => {
+    if (coordinateState(location) !== "eligible") return [];
+    const { latitude, longitude } = location;
+    return [{
+      key: `${event.slug}@${location.slug}`,
+      event,
+      location: { ...location, latitude: latitude as number, longitude: longitude as number },
+    }];
+  });
+}
+
+/** Shared marker, list and camera eligibility. Does not invent a coordinate. */
+export function getEventMapAvailability(event: ExplorerEvent): EventMapAvailability {
+  if (event.locations.length === 0) return { status: "unavailable", reason: "no-public-location" };
+  const anchors = eligibleAnchors(event);
+  if (anchors.length > 0) return { status: "available", anchors };
+  return {
+    status: "unavailable",
+    reason: event.locations.some((location) => coordinateState(location) === "invalid") ? "invalid-coordinates" : "missing-coordinates",
+  };
+}
 
 /** A city-level label is used only when every grouped location is nearby. */
 export function getMapGroupLabel(
@@ -27,12 +65,10 @@ export function getMapGroupLabel(
 }
 
 export function getEventMapAnchors(events: readonly ExplorerEvent[]): EventMapAnchor[] {
-  return events.flatMap((event) => event.locations.flatMap((location) => {
-    const { latitude, longitude } = location;
-    if (latitude === null || longitude === null || !Number.isFinite(latitude) || !Number.isFinite(longitude)) return [];
-    if (Math.abs(latitude) > 85 || Math.abs(longitude) > 180) return [];
-    return [{ key: `${event.slug}@${location.slug}`, event, location: { ...location, latitude, longitude } }];
-  }));
+  return events.flatMap((event) => {
+    const availability = getEventMapAvailability(event);
+    return availability.status === "available" ? availability.anchors : [];
+  });
 }
 
 export function groupMapAnchors(anchors: readonly ProjectedMapAnchor[], radius = 36): EventMapGroup[] {

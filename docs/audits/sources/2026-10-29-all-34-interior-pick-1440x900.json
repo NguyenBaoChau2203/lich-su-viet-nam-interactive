@@ -1,0 +1,449 @@
+{
+  "schemaVersion": 1,
+  "viewport": "1440x900",
+  "count": 34,
+  "units": [
+    {
+      "code": "01",
+      "slug": "ha-noi",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 642.3079043944535,
+        "y": 275.4538124269021,
+        "lat": 20.998655512556493,
+        "lng": 105.70060072874557
+      },
+      "geometryCode": "01"
+    },
+    {
+      "code": "04",
+      "slug": "cao-bang",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 648.8046359265951,
+        "y": 250.67408031834216,
+        "lat": 22.74451773723812,
+        "lng": 106.08553239345329
+      },
+      "geometryCode": "04"
+    },
+    {
+      "code": "08",
+      "slug": "tuyen-quang",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 631.9013539770228,
+        "y": 253.21528289325312,
+        "lat": 22.48865593236182,
+        "lng": 105.10111009128572
+      },
+      "geometryCode": "08"
+    },
+    {
+      "code": "11",
+      "slug": "dien-bien",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 595.4356048553606,
+        "y": 262.42046661400616,
+        "lat": 21.710172036168032,
+        "lng": 103.02313382523847
+      },
+      "geometryCode": "11"
+    },
+    {
+      "code": "12",
+      "slug": "lai-chau",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 598.6879907206807,
+        "y": 253.8438095203043,
+        "lat": 22.316697729307776,
+        "lng": 103.18709920878285
+      },
+      "geometryCode": "12"
+    },
+    {
+      "code": "14",
+      "slug": "son-la",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 613.5979099641723,
+        "y": 270.9203654785665,
+        "lat": 21.193023636803346,
+        "lng": 104.07054347488697
+      },
+      "geometryCode": "14"
+    },
+    {
+      "code": "15",
+      "slug": "lao-cai",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 618.7878820269607,
+        "y": 258.577059805127,
+        "lat": 22.05967406890009,
+        "lng": 104.34923840809459
+      },
+      "geometryCode": "15"
+    },
+    {
+      "code": "19",
+      "slug": "thai-nguyen",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 644.4276893739647,
+        "y": 260.6329949589726,
+        "lat": 22.023039560927497,
+        "lng": 105.82549816096984
+      },
+      "geometryCode": "19"
+    },
+    {
+      "code": "20",
+      "slug": "lang-son",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 658.237227660459,
+        "y": 264.19886327192336,
+        "lat": 21.838560648431805,
+        "lng": 106.62064551868119
+      },
+      "geometryCode": "20"
+    },
+    {
+      "code": "22",
+      "slug": "quang-ninh",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 673.4674840791008,
+        "y": 276.02191769457625,
+        "lat": 21.101118809622562,
+        "lng": 107.48044769168958
+      },
+      "geometryCode": "22"
+    },
+    {
+      "code": "24",
+      "slug": "bac-ninh",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 654.8089354338463,
+        "y": 271.6000305531726,
+        "lat": 21.314187016173474,
+        "lng": 106.41559384467453
+      },
+      "geometryCode": "24"
+    },
+    {
+      "code": "25",
+      "slug": "phu-tho",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 635.002668449545,
+        "y": 274.77529993333064,
+        "lat": 21.01441024621349,
+        "lng": 105.2860161794069
+      },
+      "geometryCode": "25"
+    },
+    {
+      "code": "31",
+      "slug": "hai-phong",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 660.4910801746465,
+        "y": 280.64436654904904,
+        "lat": 20.728843604277426,
+        "lng": 106.73107959097985
+      },
+      "geometryCode": "31"
+    },
+    {
+      "code": "33",
+      "slug": "hung-yen",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 656.2585194135135,
+        "y": 283.8261888213348,
+        "lat": 20.497782830004894,
+        "lng": 106.4877881287937
+      },
+      "geometryCode": "33"
+    },
+    {
+      "code": "37",
+      "slug": "ninh-binh",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 652.2544001693764,
+        "y": 289.76261396297843,
+        "lat": 20.088475024580116,
+        "lng": 106.25795020520462
+      },
+      "geometryCode": "37"
+    },
+    {
+      "code": "38",
+      "slug": "thanh-hoa",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 637.7168526002871,
+        "y": 290.9784881301515,
+        "lat": 19.95009146036563,
+        "lng": 105.44340114902778
+      },
+      "geometryCode": "38"
+    },
+    {
+      "code": "40",
+      "slug": "nghe-an",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 631.2032574451821,
+        "y": 302.17882976345174,
+        "lat": 19.20215088304016,
+        "lng": 105.08718724297887
+      },
+      "geometryCode": "40"
+    },
+    {
+      "code": "42",
+      "slug": "ha-tinh",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 646.8885407573048,
+        "y": 316.64105589901806,
+        "lat": 18.34703429833987,
+        "lng": 105.95355383013793
+      },
+      "geometryCode": "42"
+    },
+    {
+      "code": "44",
+      "slug": "quang-tri",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 661.2416285087188,
+        "y": 334.17284183378973,
+        "lat": 17.321580135670672,
+        "lng": 106.73077000179072
+      },
+      "geometryCode": "44"
+    },
+    {
+      "code": "46",
+      "slug": "hue",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 679.5661168232347,
+        "y": 349.42286318798483,
+        "lat": 16.475014133977368,
+        "lng": 107.70956079602924
+      },
+      "geometryCode": "46"
+    },
+    {
+      "code": "48",
+      "slug": "da-nang",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 687.9393250719434,
+        "y": 363.0232203677838,
+        "lat": 15.705259032569574,
+        "lng": 108.1436871844139
+      },
+      "geometryCode": "48"
+    },
+    {
+      "code": "51",
+      "slug": "quang-ngai",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 693.7151045647746,
+        "y": 377.68525605133453,
+        "lat": 14.87870387455466,
+        "lng": 108.43313517711313
+      },
+      "geometryCode": "51"
+    },
+    {
+      "code": "52",
+      "slug": "gia-lai",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 696.9106709311259,
+        "y": 394.72798862768923,
+        "lat": 13.9243968986112,
+        "lng": 108.58078672936423
+      },
+      "geometryCode": "52"
+    },
+    {
+      "code": "56",
+      "slug": "khanh-hoa",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 708.9802859538235,
+        "y": 431.8073069230112,
+        "lat": 11.93206404588012,
+        "lng": 109.16733445281922
+      },
+      "geometryCode": "56"
+    },
+    {
+      "code": "66",
+      "slug": "dak-lak",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 697.5041370594774,
+        "y": 412.0851738466836,
+        "lat": 12.963726144890163,
+        "lng": 108.5925604480138
+      },
+      "geometryCode": "66"
+    },
+    {
+      "code": "68",
+      "slug": "lam-dong",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 692.1850743508495,
+        "y": 448.10071302366043,
+        "lat": 11.011278758052628,
+        "lng": 108.29203631760915
+      },
+      "geometryCode": "68"
+    },
+    {
+      "code": "75",
+      "slug": "dong-nai",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 667.4135442559544,
+        "y": 438.66344652206334,
+        "lat": 11.435611936309412,
+        "lng": 107.03561663439143
+      },
+      "geometryCode": "75"
+    },
+    {
+      "code": "79",
+      "slug": "ho-chi-minh",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 669.9668539927708,
+        "y": 472.74401962534347,
+        "lat": 9.668538340877591,
+        "lng": 107.17086710513532
+      },
+      "geometryCode": "79"
+    },
+    {
+      "code": "80",
+      "slug": "tay-ninh",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 661.5560338981695,
+        "y": 455.6076250606009,
+        "lat": 10.5299,
+        "lng": 106.74476666666668
+      },
+      "geometryCode": "80"
+    },
+    {
+      "code": "82",
+      "slug": "dong-thap",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 645.5798169586377,
+        "y": 455.7029705213505,
+        "lat": 10.482432465769612,
+        "lng": 105.94601099944352
+      },
+      "geometryCode": "82"
+    },
+    {
+      "code": "86",
+      "slug": "vinh-long",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 655.5893067265406,
+        "y": 468.48142013250606,
+        "lat": 9.849111416544678,
+        "lng": 106.4532891027482
+      },
+      "geometryCode": "86"
+    },
+    {
+      "code": "91",
+      "slug": "an-giang",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 614.7986411761512,
+        "y": 466.1841406060658,
+        "lat": 9.867253703994338,
+        "lng": 104.4329487276848
+      },
+      "geometryCode": "91"
+    },
+    {
+      "code": "92",
+      "slug": "can-tho",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 644.2277061048869,
+        "y": 474.11047560814086,
+        "lat": 9.53253127375355,
+        "lng": 105.89437945243112
+      },
+      "geometryCode": "92"
+    },
+    {
+      "code": "96",
+      "slug": "ca-mau",
+      "viewport": "1440x900",
+      "interiorPickPassed": true,
+      "clicked": {
+        "x": 625.0101754348882,
+        "y": 486.23592513530326,
+        "lat": 8.873189340191203,
+        "lng": 104.96333064771731
+      },
+      "geometryCode": "96"
+    }
+  ]
+}

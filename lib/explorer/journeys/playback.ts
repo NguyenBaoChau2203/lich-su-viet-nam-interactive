@@ -86,6 +86,30 @@ export function reduceExplorerRuntime(runtime: ExplorerRuntime, action: Explorer
   const requestStop = (state: MapExplorerState, playing = false): ExplorerRuntime => ({ ...runtime, state,
     cameraRequest: requestFor(state, nonce, registry), settledArrival: null, requestNonce: nonce, playing, popupOpen: false, readerDismissed: false, readerActive: false });
   switch (action.type) {
+    case "locality-select":
+    case "locality-clear-selection": {
+      if (runtime.people.discovery.mode === "events") return runtime;
+      const code = action.type === "locality-select" ? action.code : null;
+      const filters = normalizeLocalHeroFilters({ localityCode: code, query: "", page: 1 });
+      if (runtime.people.discovery.mode === "locality" && runtime.people.discovery.filters.localityCode === filters.localityCode) return runtime;
+      return { ...runtime, people: { ...runtime.people, discovery: { mode: "locality", filters } },
+        cameraRequest: null, settledArrival: null, focusRequest: null, requestNonce: nonce, playing: false };
+    }
+    case "locality-exit-to-explore": {
+      const suspended = runtime.people.suspended;
+      if (runtime.people.discovery.mode === "events" || !suspended) return runtime;
+      // X intentionally exits the journey. Explicit restore/Back and people-exit
+      // retain their saved-context semantics independently of this action.
+      const ordinary = suspended.state.journey ? suspended.exploration : suspended.state;
+      const state: MapExplorerState = ordinary ? structuredClone(ordinary) : {
+        ...suspended.state, journey: undefined, journeyNotice: undefined, selectedEvent: null,
+      };
+      return { ...runtime, state, exploration: null,
+        people: { discovery: { mode: "events", filters: normalizeLocalHeroFilters({}) }, suspended: null },
+        playing: false, readerActive: false, popupOpen: false, readerDismissed: true,
+        cameraRequest: null, settledArrival: null, focusRequest: null,
+        requestNonce: nonce, restoreRequest: runtime.restoreRequest + 1 };
+    }
     case "people-enter": {
       const targetMode = action.mode ?? "people";
       if (runtime.people.discovery.mode === targetMode) return runtime;
@@ -94,6 +118,7 @@ export function reduceExplorerRuntime(runtime: ExplorerRuntime, action: Explorer
           ...runtime.people.discovery,
           mode: targetMode,
         };
+        if (targetMode === "locality") nextDiscovery.filters = { localityCode: nextDiscovery.filters.localityCode, query: "", page: 1 };
         if (targetMode === "places") {
           nextDiscovery.place = runtime.people.discovery.place ?? null;
         } else {
@@ -111,6 +136,7 @@ export function reduceExplorerRuntime(runtime: ExplorerRuntime, action: Explorer
         ...runtime.people.discovery,
         mode: targetMode,
       };
+      if (targetMode === "locality") nextDiscovery.filters = { localityCode: nextDiscovery.filters.localityCode, query: "", page: 1 };
       if (targetMode === "places") nextDiscovery.place = null;
       else delete nextDiscovery.place;
       return {

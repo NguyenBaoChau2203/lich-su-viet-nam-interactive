@@ -13,9 +13,14 @@ type Props = {
   onJourney(): void;
   peopleActive?: boolean;
   placesActive?: boolean;
+  overviewActive?: boolean;
+  /** Presentation-only: whether the locality chooser panel is visible. */
+  localityPanelOpen?: boolean;
+  localityHref?: string;
   peopleHref?: string;
   placesHref?: string;
   peopleLinkRef?: RefObject<HTMLAnchorElement | null>;
+  onLocality?(): void;
   onPeople?(): void;
   onPlaces?(): void;
 };
@@ -27,13 +32,16 @@ export function HomeAtlasHeader({
   onJourney,
   peopleActive = false,
   placesActive = false,
-  placesHref = "/?noi-dung=dia-danh",
+  overviewActive = false,
+  localityPanelOpen = true,
+  localityHref = "/?noi-dung=dia-phuong",
   peopleLinkRef,
+  onLocality,
   onPeople,
   onPlaces,
 }: Props) {
   const secondary = useRef<HTMLDetailsElement>(null);
-  const localityActive = peopleActive || placesActive;
+  const localityActive = peopleActive || placesActive || overviewActive;
   useEffect(() => {
     const dismiss = (event: PointerEvent) => {
       if (secondary.current && event.target instanceof Node && !secondary.current.contains(event.target)) secondary.current.open = false;
@@ -48,9 +56,12 @@ export function HomeAtlasHeader({
       <nav className="home-atlas-modes" aria-label="Cách khám phá">
         <button type="button" aria-pressed={!localityActive && !journeyActive} onClick={onExplore}>Khám phá</button>
         <button type="button" ref={journeyButtonRef} aria-pressed={!localityActive && journeyActive} onClick={onJourney}>Hành trình</button>
-        <a ref={peopleLinkRef} href={placesHref} aria-expanded={localityActive} aria-controls={placesActive ? "locality-panel" : peopleActive ? "local-heroes-panel" : undefined} className="home-atlas-people-entry" onClick={(event) => {
+        <a ref={peopleLinkRef} href={localityHref} aria-expanded={localityActive && localityPanelOpen} aria-controls={localityActive ? "locality-chooser" : undefined} className="home-atlas-people-entry" onClick={(event) => {
           if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-          if (onPlaces) {
+          if (onLocality) {
+            event.preventDefault();
+            onLocality();
+          } else if (onPlaces) {
             event.preventDefault();
             onPlaces();
           } else if (onPeople) {

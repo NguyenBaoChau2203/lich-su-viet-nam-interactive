@@ -4,6 +4,8 @@ import { Globe2, LocateFixed, Minus, Plus } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { CinematicGlobeCanvas } from "@/components/explorer/cinematic/CinematicGlobeCanvas";
 import { GlobeMarkers } from "@/components/explorer/GlobeMarkers";
+import { LocalityMapMarkers } from "@/components/locality/LocalityMapMarkers";
+import { LOCALITY_CENTERS } from "@/lib/heritage/locality-views";
 import { CLOSEST_USEFUL_EVENT_ZOOM, journeyFlightDurationMs, panView, vietnamOverviewView, worldOverviewView, zoomView } from "@/lib/explorer/cinematic/camera";
 import { createGlobeCameraController, type GlobeCameraController } from "@/lib/explorer/cinematic/camera-controller";
 import type { CinematicScene } from "@/lib/explorer/cinematic/scene";
@@ -13,9 +15,14 @@ import type { MapView } from "@/lib/explorer/map-view";
 import { usePrefersReducedMotion } from "@/lib/hooks/usePrefersReducedMotion";
 import { fitClusterView } from "@/lib/explorer/cluster-expansion";
 import type { ProvinceBoundarySource } from "@/lib/explorer/cinematic/province-boundaries";
+import { pointerToNdc } from "@/lib/explorer/cinematic/province-areas";
+import { loadProvinceAreas, provinceAreaAnchor, provinceAreaPolygons } from "@/lib/locality/province-areas";
+import { getEventMapAvailability } from "@/lib/explorer/map-markers";
 
 const INTRO_KEY = "ls12:globe-intro-seen";
 const ASSETS = { day: "/maps/globe/earth-day-4096x2048.jpg", normal: "/maps/globe/earth-normal-2048x1024.jpg", specular: "/maps/globe/earth-specular-2048x1024.jpg" };
+const PROVINCE_AREAS_URL = "/maps/history-vietnam-province-areas.geojson";
+const CLICK_DRAG_PX = 5;
 
 const PROJECTION_SAMPLE_COORDS: readonly [number, number][] = [
   [105.85, 21.03], // Hanoi
@@ -57,10 +64,12 @@ export function CinematicEventMap(props: EventMapProps) {
   const [intro, setIntro] = useState(false);
   const departing = useRef(false);
   const wheelTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const drag = useRef<{ id: number; x: number; y: number } | null>(null);
+  const drag = useRef<{ id: number; x: number; y: number; moved: number } | null>(null);
   const handledFocus = useRef<{ slug: string; nonce: number } | null>(null);
   const handledPlacesCamera = useRef<number | null>(null);
   const activeJourney = useRef<GlobeCameraRequest | null>(null);
+  const areasReady = useRef(false);
+  const [areasEpoch, setAreasEpoch] = useState(0);
   const lastJourneyAnchor = useRef<JourneyPopupAnchor | null>(null);
   const clearInput = useCallback(() => {
     clearTimeout(wheelTimer.current ?? undefined);
@@ -68,10 +77,37 @@ export function CinematicEventMap(props: EventMapProps) {
   }, []);
   useEffect(() => { callbacks.current = props; }, [props]);
   useEffect(() => {
-    if (props.readingMode !== "people" && props.readingMode !== "places") return;
+    if (props.readingMode !== "people" && props.readingMode !== "places" && props.readingMode !== "locality") return;
     activeJourney.current = null;
     camera?.cancel(); clearInput(); scene?.setJourneyPath(null);
   }, [props.readingMode, camera, scene, clearInput]);
+  useEffect(() => {
+    if (!scene) return;
+    const abort = new AbortController();
+    const mark = (status: "loading" | "ready" | "unavailable") => {
+      stageRef.current?.querySelector("[data-testid='globe-map']")?.setAttribute("data-province-areas", status);
+    };
+    areasReady.current = false;
+    mark("loading");
+    void loadProvinceAreas(PROVINCE_AREAS_URL, abort.signal).then(async (collection) => {
+      if (abort.signal.aborted) return;
+      if (!collection) {
+        mark("unavailable");
+        return;
+      }
+      await scene.setProvinceAreas(collection);
+      if (abort.signal.aborted) return;
+      areasReady.current = true;
+      mark("ready");
+      setAreasEpoch((n) => n + 1);
+    });
+    return () => {
+      abort.abort();
+      areasReady.current = false;
+      mark("loading");
+      void scene.setProvinceAreas(null);
+    };
+  }, [scene]);
   useEffect(() => () => {
     camera?.dispose();
     clearInput();
@@ -134,6 +170,68 @@ export function CinematicEventMap(props: EventMapProps) {
     callbacks.current.onJourneyAnchor?.(nextAnchor);
   }, [viewport, scene, props.journeyPathRequest, props.journeyStop]);
 
+  const selectionCode = props.localitySelection?.selectedCode;
+  const selectionNonce = props.localitySelection?.nonce;
+  useEffect(() => {
+    if (!scene || !areasReady.current) return;
+    scene.setSelectedProvinceArea(selectionCode ?? null, {
+      nonce: selectionNonce ?? 0,
+      instant: reducedMotion,
+    });
+  }, [scene, selectionCode, selectionNonce, reducedMotion, areasEpoch]);
+  useEffect(() => {
+    const selection = callbacks.current.localitySelection, stage = stageRef.current;
+    if (!selection?.selectedCode || !viewport || !scene || !stage) { selection?.onProject?.(null); return; }
+    const origin = stage.getBoundingClientRect(), parent = stage.closest(".home-history-map")?.getBoundingClientRect();
+    const center = LOCALITY_CENTERS[selection.selectedCode];
+    const feature = scene.getProvinceAreaFeature(selection.selectedCode);
+    const geom = scene.getSelectedProvinceGeometry();
+    const raisedRadius =
+      geom && geom.status === "admitted" && geom.code === selection.selectedCode ? geom.currentRadius : 1;
+    const areaAnchor = feature ? provinceAreaAnchor(feature) : null;
+    const anchor = areaAnchor ?? center;
+    const visiblePoint = (lat: number, lng: number) => {
+      const point = scene.projectGeo(lat, lng, raisedRadius);
+      if (!point || point.behind || point.occluded || point.clipped || point.offstage) return null;
+      return point;
+    };
+    let bounds: { left: number; right: number; top: number; bottom: number } | null = null;
+    if (feature && !document.hidden) {
+      let left = Infinity, right = -Infinity, top = Infinity, bottom = -Infinity, visible = 0;
+      for (const polygon of provinceAreaPolygons(feature)) {
+        for (const [lng, lat] of polygon[0]) {
+          const point = visiblePoint(lat, lng);
+          if (!point) continue;
+          visible += 1;
+          left = Math.min(left, point.x); right = Math.max(right, point.x);
+          top = Math.min(top, point.y); bottom = Math.max(bottom, point.y);
+        }
+      }
+      if (visible >= 3 && Number.isFinite(left) && right > left && bottom > top) {
+        bounds = { left, right, top, bottom };
+      }
+    }
+    // Once the area layer is loaded, do not fall back to a reference-center leader.
+    // An occluded province keeps its cards and hides the leader.
+    const kind = feature ? "province-area" : "reference-center";
+    const raisedAnchor = document.hidden
+      ? null
+      : feature
+        ? (() => {
+            const projected = visiblePoint(anchor.lat, anchor.lng);
+            return projected ? { x: projected.x, y: projected.y } : null;
+          })()
+        : viewport.project(anchor.lng, anchor.lat);
+    selection.onProject?.({ code: selection.selectedCode, nonce: selection.nonce,
+      point: raisedAnchor,
+      bounds: kind === "province-area" ? bounds : null,
+      kind,
+      // R5: selected-area bounds protect the raised province; label rectangles must not override them.
+      presentationBounds: kind === "province-area" ? bounds : null,
+      stageSize: { width: viewport.width, height: viewport.height },
+      offset: { x: origin.left - (parent?.left ?? origin.left), y: origin.top - (parent?.top ?? origin.top) } });
+  }, [viewport, scene, selectionCode, selectionNonce, areasEpoch]);
+
   useEffect(() => {
     if (!camera || props.restoreRequest === 0) return;
     departing.current = false;
@@ -189,11 +287,12 @@ export function CinematicEventMap(props: EventMapProps) {
     handledPlacesCamera.current = nonce;
     clearInput();
     const instant = reducedMotion || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    void camera.flyTo(view, instant ? 0 : 1100);
-  }, [camera, props.placesCamera, reducedMotion, clearInput]);
+    const duration = props.readingMode === "locality" ? 750 : 1100;
+    void camera.flyTo(view, instant ? 0 : duration);
+  }, [camera, props.placesCamera, props.readingMode, reducedMotion, clearInput]);
 
   useEffect(() => {
-    if (props.readingMode === "people" || props.readingMode === "places" || !scene || !camera || departing.current || camera.isFlying() || drag.current || wheelTimer.current) return;
+    if (props.readingMode === "people" || props.readingMode === "places" || props.readingMode === "locality" || !scene || !camera || departing.current || camera.isFlying() || drag.current || wheelTimer.current) return;
     const view = props.view;
     if (!view) return;
     const current = scene.getView();
@@ -209,18 +308,22 @@ export function CinematicEventMap(props: EventMapProps) {
     // A restored selection is the same intent. Replaying it would overwrite
     // the user's later pan/zoom. The current flight handles motion changes itself.
     if (same) return;
-    const event = props.allEvents.find((item) => item.slug === props.focusRequest?.slug);
-    const location = event?.locations.find((item) => item.latitude !== null && item.longitude !== null);
-    if (!location || location.latitude === null || location.longitude === null) return;
+    const event = props.allEvents.find((item) => item.slug === request.slug);
+    const availability = event ? getEventMapAvailability(event) : null;
     clearInput();
     handledFocus.current = request;
+    if (!availability || availability.status !== "available") {
+      // A summary-only selection supersedes the previous camera destination.
+      camera.cancel(); camera.settle(); return;
+    }
+    const location = availability.anchors[0].location;
     // Selecting a visible local marker must not undo the user's closer view, or
     // jump to an offscreen first location of a multi-location event.
     const current = scene?.getView();
     const visibleMarker = Array.from(stageRef.current?.querySelectorAll<HTMLButtonElement>(".home-event-marker") ?? [])
       .some(marker => marker.dataset.eventSlugs?.split("|").includes(request.slug));
-    if (current && visibleMarker && current.zoom >= CLOSEST_USEFUL_EVENT_ZOOM && event?.locations.some(item => item.latitude !== null && item.longitude !== null
-      && scene?.getViewport().project(item.longitude, item.latitude))) {
+    if (current && visibleMarker && current.zoom >= CLOSEST_USEFUL_EVENT_ZOOM && availability.anchors.some((anchor) =>
+      scene?.getViewport().project(anchor.location.longitude, anchor.location.latitude))) {
       camera.cancel(); camera.settle(); return;
     }
     void camera.flyTo({ lat: location.latitude, lng: location.longitude, zoom: CLOSEST_USEFUL_EVENT_ZOOM }, window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 900);
@@ -268,18 +371,38 @@ export function CinematicEventMap(props: EventMapProps) {
     const down = (event: PointerEvent) => {
       if (event.button !== 0 || departing.current) return;
       manualInput(); canvas.focus({ preventScroll: true });
-      drag.current = { id: event.pointerId, x: event.clientX, y: event.clientY };
+      drag.current = { id: event.pointerId, x: event.clientX, y: event.clientY, moved: 0 };
       canvas.setPointerCapture(event.pointerId);
     };
     const move = (event: PointerEvent) => {
       const active = drag.current;
       if (!active || active.id !== event.pointerId) return;
-      pan(event.clientX - active.x, event.clientY - active.y);
+      const dx = event.clientX - active.x, dy = event.clientY - active.y;
+      active.moved += Math.hypot(dx, dy);
+      pan(dx, dy);
       active.x = event.clientX; active.y = event.clientY;
     };
-    const up = (event: PointerEvent) => {
+    const clearPointerIntent = (event: PointerEvent) => {
       if (drag.current?.id !== event.pointerId) return;
-      drag.current = null; camera.settle();
+      drag.current = null;
+      camera.settle();
+    };
+    const up = (event: PointerEvent) => {
+      // R3: only a valid primary pointerup may commit a province selection.
+      if (event.type !== "pointerup" || event.button !== 0) {
+        clearPointerIntent(event);
+        return;
+      }
+      if (drag.current?.id !== event.pointerId) return;
+      const active = drag.current;
+      drag.current = null;
+      camera.settle();
+      const selection = callbacks.current.localitySelection;
+      if (!selection || !scene || active.moved >= CLICK_DRAG_PX) return;
+      const rect = canvas.getBoundingClientRect();
+      const ndc = pointerToNdc(event.clientX, event.clientY, rect);
+      const code = scene.pickProvinceArea(ndc);
+      if (code) selection.onSelect(code);
     };
     const key = (event: KeyboardEvent) => {
       if (departing.current) return;
@@ -290,14 +413,22 @@ export function CinematicEventMap(props: EventMapProps) {
       else camera.setView(zoomView(scene.getView(), event.key === "-" ? -0.5 : 0.5));
       camera.settle();
     };
-    canvas.addEventListener("wheel", wheel, { passive: false });
+    const wheelClearsClick = (event: WheelEvent) => {
+      drag.current = null;
+      wheel(event);
+    };
+    canvas.addEventListener("wheel", wheelClearsClick, { passive: false });
     canvas.addEventListener("pointerdown", down); canvas.addEventListener("pointermove", move);
-    canvas.addEventListener("pointerup", up); canvas.addEventListener("pointercancel", up); canvas.addEventListener("lostpointercapture", up);
+    canvas.addEventListener("pointerup", up);
+    canvas.addEventListener("pointercancel", clearPointerIntent);
+    canvas.addEventListener("lostpointercapture", clearPointerIntent);
     canvas.addEventListener("keydown", key);
     return () => {
       drag.current = null;
-      canvas.removeEventListener("wheel", wheel); canvas.removeEventListener("pointerdown", down); canvas.removeEventListener("pointermove", move);
-      canvas.removeEventListener("pointerup", up); canvas.removeEventListener("pointercancel", up); canvas.removeEventListener("lostpointercapture", up);
+      canvas.removeEventListener("wheel", wheelClearsClick); canvas.removeEventListener("pointerdown", down); canvas.removeEventListener("pointermove", move);
+      canvas.removeEventListener("pointerup", up);
+      canvas.removeEventListener("pointercancel", clearPointerIntent);
+      canvas.removeEventListener("lostpointercapture", clearPointerIntent);
       canvas.removeEventListener("keydown", key);
     };
   }, [scene, camera, stageSize, manualInput]);
@@ -305,14 +436,14 @@ export function CinematicEventMap(props: EventMapProps) {
   function onSceneReady(ready: CinematicScene) {
     const controller = createGlobeCameraController(ready, (view) => {
       const arrival = activeJourney.current;
-      if (!departing.current && callbacks.current.readingMode !== "people" && callbacks.current.readingMode !== "places" && (!arrival || sameJourneyArrival(arrival, callbacks.current.cameraRequest)))
+      if (!departing.current && callbacks.current.readingMode !== "people" && callbacks.current.readingMode !== "places" && callbacks.current.readingMode !== "locality" && (!arrival || sameJourneyArrival(arrival, callbacks.current.cameraRequest)))
         callbacks.current.onViewChange(view, arrival ?? undefined);
     });
     controller.setVisible(!document.hidden);
     setRuntime({ scene: ready, camera: controller });
     callbacks.current.onReadyChange(true);
     const opening = callbacks.current;
-    if (!departing.current && opening.readingMode !== "people" && opening.readingMode !== "places" && opening.restoreRequest === 0 && !opening.view && !opening.selectedEvent && !opening.journeyStop) {
+    if (!departing.current && opening.readingMode !== "people" && opening.readingMode !== "places" && opening.readingMode !== "locality" && opening.restoreRequest === 0 && !opening.view && !opening.selectedEvent && !opening.journeyStop) {
       let seen = false;
       try { seen = sessionStorage.getItem(INTRO_KEY) === "1"; } catch { /* Optional storage. */ }
       const target = vietnamOverviewView(stageSize());
@@ -338,7 +469,7 @@ export function CinematicEventMap(props: EventMapProps) {
   }
 
   return <div className="globe-stage" data-testid="geographic-map" ref={stageRef}>
-    <div className="globe-map" data-testid="globe-map" data-ready={Boolean(scene)}>
+    <div className="globe-map" data-testid="globe-map" data-ready={Boolean(scene)} data-province-areas="loading">
       <CinematicGlobeCanvas className="globe-map" initialView={initialView} assets={ASSETS} highlightUrl="/maps/vietnam-tabletop.geojson" presentation="homepage"
         onReady={onSceneReady}
         onBoundariesStatus={setBoundaryStatus}
@@ -356,7 +487,14 @@ export function CinematicEventMap(props: EventMapProps) {
         manualInput();
         return camera.flyTo(fit.view, reducedMotion ? 0 : 500);
       }} />}
-    {props.readingMode !== "people" && props.readingMode !== "places" && intro && !props.view && !props.selectedEvent && !props.journeyStop && props.restoreRequest === 0 && !reducedMotion && <button type="button" className="globe-skip" onClick={() => {
+    {scene && viewport && props.localitySelection && (
+      <LocalityMapMarkers
+        viewport={viewport}
+        selectedCode={props.localitySelection.selectedCode}
+        onSelect={props.localitySelection.onSelect}
+      />
+    )}
+    {props.readingMode !== "people" && props.readingMode !== "places" && props.readingMode !== "locality" && intro && !props.view && !props.selectedEvent && !props.journeyStop && props.restoreRequest === 0 && !reducedMotion && <button type="button" className="globe-skip" onClick={() => {
       manualInput(); camera?.jumpTo(vietnamOverviewView(stageSize()));
       stageRef.current?.querySelector("canvas")?.focus({ preventScroll: true });
     }}>Bỏ qua chuyển cảnh</button>}
@@ -370,7 +508,8 @@ export function CinematicEventMap(props: EventMapProps) {
       <p>Natural Earth · Đường biên giới đất liền hiện đại, khái quát theo Natural Earth; không tái dựng biên giới theo năm đang chọn. Một số đường có phân loại chưa chắc chắn trong nguồn được lược bỏ.{boundaryStatus === "unavailable" && " (Lớp biên giới quốc tế tùy chọn hiện không khả dụng.)"}</p>
       <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noreferrer">Dữ liệu địa lý</a> · <a href="/maps/vietnam-tabletop.provenance.json" target="_blank" rel="noreferrer">Phạm vi Việt Nam</a> · <a href="/maps/history-country-boundaries.provenance.json" target="_blank" rel="noreferrer">Ranh giới quốc tế &amp; phân loại</a>
       <p>Ranh giới 34 tỉnh/thành hiện nay là lớp tham chiếu địa lý; không mô tả địa giới tại thời điểm sự kiện.{provinceStatus === "unavailable" && " (Lớp ranh giới tỉnh/thành tùy chọn hiện không khả dụng.)"}</p>
-      {provinceSource && <p>Nguồn: <time dateTime={provinceSource.sourceTimestamp}>{new Date(provinceSource.sourceTimestamp).toISOString().replace("T", " ").replace(".000Z", " UTC")}</time> · {provinceSource.license.attribution} · <a href={provinceSource.license.url} target="_blank" rel="noreferrer">{provinceSource.license.id}</a></p>}
+      {provinceSource && <p>Nguồn đường tham chiếu: <time dateTime={provinceSource.sourceTimestamp}>{new Date(provinceSource.sourceTimestamp).toISOString().replace("T", " ").replace(".000Z", " UTC")}</time> · {provinceSource.license.attribution} · <a href={provinceSource.license.url} target="_blank" rel="noreferrer">{provinceSource.license.id}</a> · <a href="/maps/history-vietnam-province-boundaries.provenance.json" target="_blank" rel="noreferrer">Provenance đường</a></p>}
+      <p>Bề mặt tỉnh/thành nâng lên khi chọn là lớp diện tích tham chiếu hiện đại (VN-34-2025), tách biệt đường nội thất dùng chung. © OpenStreetMap contributors · ODbL-1.0 · <a href="/maps/history-vietnam-province-areas.provenance.json" target="_blank" rel="noreferrer">Provenance diện tích</a></p>
       <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap (ODbL)</a> · <a href="/maps/history-vietnam-province-boundaries.provenance.json" target="_blank" rel="noreferrer">Nguồn và xử lý ranh giới tỉnh/thành</a> · <a href="/maps/history-vietnam-province-boundaries.geojson" target="_blank" rel="noreferrer">Dữ liệu đường tham chiếu</a>
       <p><a href="https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-so-202-2025-qh15-ve-sap-xep-don-vi-hanh-chinh-cap-tinh-119250612174148722.htm" target="_blank" rel="noreferrer">Nghị quyết 202/2025/QH15</a> · <a href="https://datafiles.chinhphu.vn/cpp/files/vbpq/2025/7/19ttg.signed.pdf" target="_blank" rel="noreferrer">QĐ 19/2025/QĐ-TTg</a></p>
       <p>Ảnh bề mặt: Solar System Scope / INOVE, CC BY 4.0; thu nhỏ và chuyển định dạng. Ảnh toàn cầu không thể hiện chi tiết đường phố.</p>

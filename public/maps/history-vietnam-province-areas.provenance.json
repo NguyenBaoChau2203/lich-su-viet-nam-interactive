@@ -1,0 +1,104 @@
+{
+  "createdAt": "2026-10-29T06:35:27.413Z",
+  "inputPath": "D:/lich-su-viet-nam-interactive/.task-reports/province-areas-candidate-20261029-complete/history-vietnam-province-areas.partial.geojson",
+  "inputSha256": "d10ec0031e8b75542ac9bc5dfd3bc308a671144694a731ae506c327d2b095b0d",
+  "outputSha256": "b7562c3d4f255a38d713d9838570082a0516c4448421b5aba9ac0031f167f9fe",
+  "gzipSha256": "6ce8bc61dfdc6690aab796e8a24c421fc06c25ca464c69c29990cdc25a53b5dc",
+  "gzipBytes": 80012,
+  "rawBytes": 309879,
+  "coverageStatus": "complete",
+  "admittedCount": 34,
+  "admittedCodes": [
+    "01",
+    "04",
+    "08",
+    "11",
+    "12",
+    "14",
+    "15",
+    "19",
+    "20",
+    "22",
+    "24",
+    "25",
+    "31",
+    "33",
+    "37",
+    "38",
+    "40",
+    "42",
+    "44",
+    "46",
+    "48",
+    "51",
+    "52",
+    "56",
+    "66",
+    "68",
+    "75",
+    "79",
+    "80",
+    "82",
+    "86",
+    "91",
+    "92",
+    "96"
+  ],
+  "sourceTimestamp": "2026-10-23T20:20:51Z",
+  "sourceSnapshotSha256": "9428ce3e7a5c0325010a05ea713bcc5b5800f939dae0073082fc13fd8271968e",
+  "license": {
+    "id": "ODbL-1.0",
+    "url": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "attribution": "© OpenStreetMap contributors"
+  },
+  "simplification": {
+    "toleranceM": 200,
+    "coordinateDecimals": 4,
+    "pointsBefore": 367775,
+    "pointsAfter": 15994,
+    "sharedArcs": 101,
+    "algorithm": "shared-arc-douglas-peucker",
+    "screenPixelsAtZoom": [
+      {
+        "zoom": 4,
+        "pixels": 0.041
+      },
+      {
+        "zoom": 5,
+        "pixels": 0.082
+      },
+      {
+        "zoom": 6,
+        "pixels": 0.164
+      },
+      {
+        "zoom": 8,
+        "pixels": 0.654
+      }
+    ],
+    "sharedBorderNote": "Each shared arc is simplified once and written identically into every neighboring ring. Junctions stay fixed. Max planar error is the tolerance."
+  },
+  "attempts": [
+    {
+      "toleranceM": 200,
+      "pointsBefore": 367775,
+      "pointsAfter": 15994,
+      "sharedArcs": 101,
+      "rawBytes": 309879,
+      "gzipBytes": 80012,
+      "featureCount": 34,
+      "crossings": 0,
+      "overlaps": 0,
+      "topologyOk": true
+    }
+  ],
+  "topology": {
+    "crossings": 0,
+    "overlaps": 0,
+    "segments": 15951,
+    "pairs": 0
+  },
+  "budgetGzipKiB": 400,
+  "budgetMet": true,
+  "note": "Modern OSM-derived VN-34-2025 reference areas. Not historical administrative borders."
+}

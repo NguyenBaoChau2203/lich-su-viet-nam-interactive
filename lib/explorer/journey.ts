@@ -7,6 +7,7 @@ export type JourneyStop = {
   datePrecision: "day" | "month" | "year"; summary: string;
   accuracy: "approximate"; accuracyNote: string; coordinateSource: JourneySource;
   sources: readonly JourneySource[]; view: MapView; eventSlug?: string;
+  origin?: { journeyId: string; stopId: string };
 };
 export type JourneySelection = { id: string; stop: string };
 

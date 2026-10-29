@@ -7,9 +7,9 @@ import { normalizeLocalHeroQuery } from "@/lib/local-heroes/normalize";
 import { buildLocalHeroHomeHref, type LocalHeroUrlState } from "@/lib/local-heroes/state";
 import { buildMapExplorerUrl, type MapExplorerState } from "@/lib/explorer/map-state";
 import type { LocalHeroFilters, LocalHeroLoadState } from "@/lib/local-heroes/types";
-type Props = { map: MapExplorerState; discovery: LocalHeroUrlState; load: LocalHeroLoadState; tabs?: ReactNode; onChange(filters: LocalHeroFilters): void; onClose(): void; onRetry(): void };
+type Props = { map: MapExplorerState; discovery: LocalHeroUrlState; load: LocalHeroLoadState; tabs?: ReactNode; onChange(filters: LocalHeroFilters): void; onClose(): void; onRetry(): void; onReturnOverview?(): void };
 const modified = (event: MouseEvent) => event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey;
-export function LocalHeroesPanel({ map, discovery, load, tabs, onChange, onClose, onRetry }: Props) {
+export function LocalHeroesPanel({ map, discovery, load, tabs, onChange, onClose, onRetry, onReturnOverview }: Props) {
   const filters = discovery.filters;
   const [search, setSearch] = useState({ committed: filters.query, draft: filters.query });
   if (search.committed !== filters.query) setSearch({ committed: filters.query, draft: filters.query });
@@ -23,11 +23,31 @@ export function LocalHeroesPanel({ map, discovery, load, tabs, onChange, onClose
   const ready = load.status === "ready" ? load.data : null;
   const mapParams = new URL(buildMapExplorerUrl(map), "https://explorer.invalid").searchParams;
   const pageHref = (page: number) => buildLocalHeroHomeHref(map, { ...discovery, filters: { ...filters, page } });
+  const overviewHref = filters.localityCode
+    ? buildLocalHeroHomeHref(map, { ...discovery, mode: "locality" })
+    : null;
   const pages = ready ? Array.from(new Set([1, ready.totalPages, ...Array.from({ length: 5 }, (_, i) => filters.page + i - 2)])).filter((p) => p >= 1 && p <= ready.totalPages).sort((a, b) => a - b) : [];
   return <aside id="local-heroes-panel" className="local-heroes-panel" aria-labelledby="local-heroes-heading" data-testid="local-heroes-panel">
     <div className="local-heroes-top"><div><p className="local-heroes-eyebrow">Con người &amp; địa phương</p><h2 id="local-heroes-heading" tabIndex={-1}>Nhân vật cách mạng theo địa phương</h2></div>
       <a className="local-heroes-close" href={exitHref} aria-label="Đóng danh sách nhân vật" onClick={(event) => { if (!modified(event)) { event.preventDefault(); onClose(); } }}>Đóng <span aria-hidden="true">×</span></a></div>
     {tabs}
+    {overviewHref && (
+      <div className="locality-return-overview">
+        <a
+          href={overviewHref}
+          className="locality-return-overview-link"
+          data-testid="local-heroes-return-overview"
+          onClick={(event) => {
+            if (!modified(event)) {
+              event.preventDefault();
+              onReturnOverview?.();
+            }
+          }}
+        >
+          ← Về tổng quan địa phương
+        </a>
+      </div>
+    )}
     <form method="get" action="/" className="local-heroes-filters" onSubmit={(event) => { event.preventDefault(); onChange({ ...filters, query: normalizeLocalHeroQuery(search.draft), page: 1 }); }}>
       <input type="hidden" name="noi-dung" value="nhan-vat" />
       {Array.from(mapParams).map(([key, value]) => <input key={key} type="hidden" name={key} value={value} />)}

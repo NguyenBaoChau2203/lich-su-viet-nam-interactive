@@ -3,6 +3,7 @@ import { HISTORY_JOURNEY } from "@/lib/explorer/journeys/ho-chi-minh";
 import { MUA_THU_DOC_LAP_1945 } from "@/lib/explorer/journeys/mua-thu-doc-lap-1945";
 import { KHANG_CHIEN_CHONG_PHAP_1946_1954 } from "@/lib/explorer/journeys/khang-chien-chong-phap-1946-1954";
 import { MUA_XUAN_1975 } from "@/lib/explorer/journeys/mua-xuan-1975";
+import { createTotalJourney } from "@/lib/explorer/journeys/total";
 import { formatMapView, parseMapView } from "@/lib/explorer/map-view";
 
 export type JourneyRegistry = {
@@ -36,7 +37,11 @@ export function createJourneyRegistry(records: readonly HistoryJourney[]): Journ
   });
 }
 
-export const JOURNEY_REGISTRY = createJourneyRegistry([
+const BASE_JOURNEYS = [
   HISTORY_JOURNEY, MUA_THU_DOC_LAP_1945, KHANG_CHIEN_CHONG_PHAP_1946_1954, MUA_XUAN_1975,
+];
+export const JOURNEY_REGISTRY = createJourneyRegistry([
+  ...BASE_JOURNEYS,
+  createTotalJourney(BASE_JOURNEYS),
 ]);
 export const DEFAULT_JOURNEY_ID = HISTORY_JOURNEY.id;

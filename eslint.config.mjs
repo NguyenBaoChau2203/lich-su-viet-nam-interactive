@@ -11,6 +11,7 @@ const eslintConfig = defineConfig([
     ".next/**",
     ".next-local-heroes/**",
     ".next-local-heroes-admin/**",
+    ".next-explorer-map-journey/**",
     "out/**",
     "build/**",
     "next-env.d.ts",

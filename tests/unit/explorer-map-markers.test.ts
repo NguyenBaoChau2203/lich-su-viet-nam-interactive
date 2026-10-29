@@ -1,6 +1,11 @@
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
-import { getEventMapAnchors, groupMapAnchors, getMapGroupLabel } from "@/lib/explorer/map-markers";
+import { MapEventCard } from "@/components/explorer/MapEventCard";
+import { MapEventList } from "@/components/explorer/MapEventList";
+import { getEventMapAnchors, getEventMapAvailability, groupMapAnchors, getMapGroupLabel, MAP_LOCATION_UNAVAILABLE_EXPLANATION } from "@/lib/explorer/map-markers";
 import type { ExplorerEvent, ExplorerLocation } from "@/lib/explorer/types";
+import type { MapExplorerState } from "@/lib/explorer/map-state";
 
 // All records in this file are synthetic UI/mathematics fixtures, not historical claims.
 const location = (slug: string, latitude: number | null, longitude: number | null): ExplorerLocation => ({
@@ -59,5 +64,68 @@ describe("event map anchors", () => {
   it("groups diagonal 32px hit areas too, so distinct controls cannot intercept each other", () => {
     const anchors = getEventMapAnchors([event("a", [location("one", 21, 105)]), event("b", [location("two", 21, 105)])]);
     expect(groupMapAnchors(anchors.map((anchor, index) => ({ ...anchor, x: index * 30, y: index * 30 })))).toHaveLength(1);
+  });
+});
+
+const mapState: MapExplorerState = { from: 1954, to: 1975, selectedEvent: null, view: { lat: 15.5, lng: 106.4, zoom: 3.32 } };
+
+describe("event map availability", () => {
+  it("retains every public place and accuracy note when only some places have map coordinates", () => {
+    const unmapped = { ...location("synthetic-unmapped-place", null, null), accuracyNote: "Synthetic unmapped uncertainty" };
+    const mapped = { ...location("synthetic-mapped-place", 21, 105), accuracyNote: "Synthetic mapped uncertainty" };
+    const mixed = event("synthetic-mixed-card", [unmapped, mapped]);
+    const card = renderToStaticMarkup(createElement(MapEventCard, { event: mixed, state: mapState, onClose: () => undefined }));
+    expect(card).toContain("synthetic-unmapped-place");
+    expect(card).toContain("Synthetic unmapped uncertainty");
+    expect(card).toContain("synthetic-mapped-place");
+    expect(card).toContain("Synthetic mapped uncertainty");
+    expect(getEventMapAnchors([mixed]).map((anchor) => anchor.location.slug)).toEqual(["synthetic-mapped-place"]);
+    expect(card).toContain("1 nguồn tham khảo");
+  });
+
+  it("uses one eligibility rule for empty, partial, non-finite, out-of-range, zero and secondary locations", () => {
+    expect(getEventMapAvailability(event("synthetic-empty", []))).toEqual({ status: "unavailable", reason: "no-public-location" });
+    expect(getEventMapAvailability(event("synthetic-null", [location("partial", null, 105)]))).toEqual({ status: "unavailable", reason: "missing-coordinates" });
+    expect(getEventMapAvailability(event("synthetic-half", [location("half", 16, null)]))).toEqual({ status: "unavailable", reason: "missing-coordinates" });
+    for (const bad of [NaN, Infinity, -Infinity, 100, -90]) {
+      const result = getEventMapAvailability(event("synthetic-invalid", [location("bad", bad, 105)]));
+      expect(result.status).toBe("unavailable");
+      if (result.status === "unavailable") expect(result.reason).toBe("invalid-coordinates");
+    }
+    const outOfRange = getEventMapAvailability(event("synthetic-lng", [location("bad", 16, 181)]));
+    expect(outOfRange.status).toBe("unavailable");
+    if (outOfRange.status === "unavailable") expect(outOfRange.reason).toBe("invalid-coordinates");
+    const zero = getEventMapAvailability(event("synthetic-zero", [location("zero", 0, 0)]));
+    expect(zero).toMatchObject({ status: "available" });
+    if (zero.status === "available") expect(zero.anchors.map((anchor) => anchor.key)).toEqual(["synthetic-zero@zero"]);
+    const mixed = getEventMapAvailability(event("synthetic-mixed", [location("primary", 100, 200), location("secondary", 16, 108)]));
+    expect(mixed.status).toBe("available");
+    if (mixed.status === "available") {
+      expect(mixed.anchors.map((anchor) => anchor.location.slug)).toEqual(["secondary"]);
+      expect(mixed.anchors[0].location).toMatchObject({ latitude: 16, longitude: 108 });
+    }
+    expect(getEventMapAnchors([event("synthetic-empty", []), event("synthetic-mixed", [location("primary", NaN, 105), location("secondary", 21, 105)])]).map((anchor) => anchor.key))
+      .toEqual(["synthetic-mixed@secondary"]);
+  });
+
+  it("explains a summary-only event and keeps a map action only for an eligible location", () => {
+    const html = renderToStaticMarkup(createElement(MapEventList, {
+      events: [event("synthetic-empty", []), event("synthetic-mappable", [location("point", 16, 108)])],
+      state: mapState,
+      onSelect: () => undefined,
+      detailsRef: { current: null },
+    }));
+    expect(html).toContain('data-event-slug="synthetic-empty"');
+    expect(html).toContain("Xem tóm tắt");
+    expect(html).not.toContain("Xem tóm tắt trên bản đồ");
+    expect(html).toContain(MAP_LOCATION_UNAVAILABLE_EXPLANATION);
+    expect(html).toContain("Xem vị trí trên bản đồ");
+    expect(html).toContain('data-map-availability="no-public-location"');
+    expect(html).toContain('data-map-availability="available"');
+    const card = renderToStaticMarkup(createElement(MapEventCard, { event: event("synthetic-empty", []), state: mapState, onClose: () => undefined }));
+    expect(card).toContain(MAP_LOCATION_UNAVAILABLE_EXPLANATION);
+    expect(card).not.toContain("Địa điểm đang được bổ sung.");
+    expect(card).toContain("Synthetic");
+    expect(card).toContain("1 nguồn tham khảo");
   });
 });

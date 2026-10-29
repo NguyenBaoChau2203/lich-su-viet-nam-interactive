@@ -20,6 +20,7 @@ type Props = {
   onSwitchMode(mode: "places" | "people"): void;
   onClose(): void;
   onRetry(): void;
+  onReturnOverview?(): void;
 };
 
 const modified = (event: MouseEvent) =>
@@ -34,6 +35,7 @@ export function HeritagePanel({
   onSwitchMode,
   onClose,
   onRetry,
+  onReturnOverview,
 }: Props) {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const selectedLocalityCode = discovery.filters.localityCode;
@@ -47,6 +49,9 @@ export function HeritagePanel({
   const exitHref = buildLocalHeroHomeHref(map, { ...discovery, mode: "events" });
   const peopleHref = buildLocalHeroHomeHref(map, { ...discovery, mode: "people" });
   const placesHref = buildLocalHeroHomeHref(map, { ...discovery, mode: "places" });
+  const overviewHref = selectedLocalityCode
+    ? buildLocalHeroHomeHref(map, { ...discovery, mode: "locality" })
+    : null;
 
   const mapParams = new URL(buildMapExplorerUrl(map), "https://explorer.invalid").searchParams;
 
@@ -98,6 +103,24 @@ export function HeritagePanel({
         peopleHref={peopleHref}
         onSwitch={onSwitchMode}
       />
+
+      {overviewHref && (
+        <div className="locality-return-overview">
+          <a
+            href={overviewHref}
+            className="locality-return-overview-link"
+            data-testid="heritage-return-overview"
+            onClick={(event) => {
+              if (!modified(event)) {
+                event.preventDefault();
+                onReturnOverview?.();
+              }
+            }}
+          >
+            ← Về tổng quan địa phương
+          </a>
+        </div>
+      )}
 
       <form
         method="get"

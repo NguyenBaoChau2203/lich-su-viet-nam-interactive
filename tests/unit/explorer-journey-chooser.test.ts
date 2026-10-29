@@ -26,7 +26,7 @@ describe("JourneyChooser component", () => {
     onSeekStop: vi.fn(),
   };
 
-  it("renders all 4 verified journeys with title, period, and stop count in native selector", () => {
+  it("renders the four authored journeys and the derived total in the native selector", () => {
     const html = renderToStaticMarkup(createElement(JourneyChooser, defaultProps));
 
     // Form and label
@@ -45,6 +45,9 @@ describe("JourneyChooser component", () => {
     expect(html).toContain("Mùa thu độc lập 1945 (19/08 — 02/09/1945) · 4 mốc");
     expect(html).toContain("Những mốc kháng chiến chống Pháp (1946 — 1954) · 5 mốc");
     expect(html).toContain("Mùa Xuân 1975 (10/03 — 30/04/1975) · 4 mốc");
+    expect(html).toContain('value="hanh-trinh-tong-hop"');
+    expect(html).toContain("Hành trình tổng hợp (05/06/1911 — 30/04/1975) · 20 mốc");
+    expect(html.match(/<option /g)).toHaveLength(5);
   });
 
   it("filters out unsupported/unregistered entries so they never appear as functioning choices", () => {

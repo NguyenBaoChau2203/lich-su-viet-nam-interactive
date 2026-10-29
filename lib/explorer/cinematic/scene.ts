@@ -17,11 +17,13 @@ import {
   Mesh,
   NoColorSpace,
   PerspectiveCamera,
+  Raycaster,
   RepeatWrapping,
   Scene,
   SRGBColorSpace,
   Texture,
   TextureLoader,
+  Vector2,
   Vector3,
   WebGLRenderer,
 } from "three";
@@ -59,7 +61,15 @@ import {
   createVietnamHighlightMaterial,
   sunDirectionVector,
 } from "@/lib/explorer/cinematic/materials";
-import { createGlobeViewport, geoToVector, surfaceLayerRadii, type GlobeViewport } from "@/lib/explorer/cinematic/projection";
+import { createGlobeViewport, geoToVector, isEarthOccluded, surfaceLayerRadii, type GlobeViewport } from "@/lib/explorer/cinematic/projection";
+import {
+  createProvinceAreaLayer,
+  earthHitDistance,
+  type ProvinceAreaLayer,
+  type ProvinceSelectionGeometry,
+} from "@/lib/explorer/cinematic/province-areas";
+import type { ProvinceAreaCollection } from "@/lib/locality/province-areas";
+import type { LocalityCode } from "@/lib/local-heroes/types";
 import type { MapView } from "@/lib/explorer/map-view";
 
 export type CinematicAssets = { day: string; normal: string; specular: string };
@@ -105,12 +115,24 @@ export type CinematicScene = {
   setVisible(visible: boolean): void;
   setCountryBoundaries(data: CountryBoundaryCollection | null): void;
   setProvinceBoundaries(data: ProvinceBoundaryCollection | null): void;
+  setProvinceAreas(data: ProvinceAreaCollection | null): Promise<void>;
+  setSelectedProvinceArea(code: LocalityCode | null, options: { nonce: number; instant: boolean }): void;
+  pickProvinceArea(ndc: { x: number; y: number }): LocalityCode | null;
+  getSelectedProvinceGeometry(): ProvinceSelectionGeometry | null;
+  getOutlinePositionBuffer(): object | null;
+  getProvinceAreaFeature(code: LocalityCode): ProvinceAreaCollection["features"][number] | undefined;
   setJourneyPath(request: JourneyPathRequest | null): void;
   stats(): SceneStats;
   beginFrameCapture(options?: { syncGpu?: boolean }): void;
   endFrameCapture(): FrameCapture;
-  /** Debug/verification only: the Three.js camera's own projection of a geographic point. */
-  projectGeo(lat: number, lng: number): { x: number; y: number; behind: boolean };
+  /**
+   * Camera projection of a geographic point at `radius`.
+   * `behind` is true when the point is Earth-occluded or outside the clip volume.
+   * `offstage` is stage bounds only and does not by itself hide a point that is still on the near side.
+   */
+  projectGeo(lat: number, lng: number, radius?: number): {
+    x: number; y: number; behind: boolean; occluded: boolean; clipped: boolean; offstage: boolean;
+  };
   dispose(): void;
 };
 
@@ -163,6 +185,10 @@ export async function createCinematicScene(options: CinematicSceneOptions): Prom
   let removeContextListener = () => {};
   let cleanupBoundaries = () => {};
   let cleanupProvinceBoundaries = () => {};
+  let cleanupProvinceAreas = () => {};
+  let provinceAreas: ProvinceAreaLayer | null = null;
+  let provinceAreasEpoch = 0;
+  const provinceRaycaster = new Raycaster();
   const dispose = () => {
     if (disposed) return;
     disposed = true;
@@ -171,6 +197,7 @@ export async function createCinematicScene(options: CinematicSceneOptions): Prom
     removeContextListener();
     cleanupBoundaries();
     cleanupProvinceBoundaries();
+    cleanupProvinceAreas();
     options.signal?.removeEventListener("abort", dispose);
     for (const item of disposables) item.dispose();
     renderer.dispose(); renderer.forceContextLoss();
@@ -417,6 +444,11 @@ export async function createCinematicScene(options: CinematicSceneOptions): Prom
       camera.near = pose.near;
       camera.far = pose.far;
       camera.aspect = viewport.width / viewport.height;
+      provinceAreas?.setCameraClearance({
+        cameraRadius: Math.hypot(...pose.position),
+        near: pose.near,
+        distanceToTarget: pose.distanceToTarget,
+      });
       // Principal-point shift: the serialized view centre lands on the reading-area anchor.
       camera.setViewOffset(
         viewport.width,
@@ -456,7 +488,34 @@ export async function createCinematicScene(options: CinematicSceneOptions): Prom
       outlineMaterial.resolution.set(width, height);
       boundaryMaterial?.resolution.set(width, height);
       provinceMaterial?.resolution.set(width, height);
+      provinceAreas?.setResolution(width, height);
       applyPose();
+      invalidate();
+    };
+
+    const setProvinceAreas = async (data: ProvinceAreaCollection | null) => {
+      const epoch = ++provinceAreasEpoch;
+      cleanupProvinceAreas();
+      cleanupProvinceAreas = () => {};
+      if (!data || disposed) return;
+      const layer = await createProvinceAreaLayer(data, { resolution: { width: viewport.width, height: viewport.height } });
+      if (disposed || epoch !== provinceAreasEpoch) {
+        layer.dispose();
+        return;
+      }
+      layer.setResolution(viewport.width, viewport.height);
+      layer.setCameraClearance({
+        cameraRadius: Math.hypot(...pose.position),
+        near: pose.near,
+        distanceToTarget: pose.distanceToTarget,
+      });
+      provinceAreas = layer;
+      world.add(layer.group);
+      cleanupProvinceAreas = () => {
+        world.remove(layer.group);
+        layer.dispose();
+        if (provinceAreas === layer) provinceAreas = null;
+      };
       invalidate();
     };
 
@@ -478,6 +537,7 @@ export async function createCinematicScene(options: CinematicSceneOptions): Prom
       frameHandle = 0;
       if (disposed || !visible) return;
       const flying = director.advance(now);
+      const lifting = provinceAreas?.update(now) ?? false;
       const began = performance.now();
       renderer.render(scene, camera);
       for (const listener of listeners) listener();
@@ -487,7 +547,7 @@ export async function createCinematicScene(options: CinematicSceneOptions): Prom
         if (capture.last) capture.intervals.push(now - capture.last);
         capture.last = now;
       }
-      if (flying) invalidate();
+      if (flying || lifting) invalidate();
     };
     function invalidate() {
       if (!frameHandle && !disposed && visible) frameHandle = requestAnimationFrame(renderFrame);
@@ -526,6 +586,26 @@ export async function createCinematicScene(options: CinematicSceneOptions): Prom
       },
       setCountryBoundaries,
       setProvinceBoundaries,
+      setProvinceAreas,
+      setSelectedProvinceArea(code, options) {
+        provinceAreas?.setSelected(code, options);
+        invalidate();
+      },
+      pickProvinceArea(ndc) {
+        if (!provinceAreas) return null;
+        provinceRaycaster.setFromCamera(new Vector2(ndc.x, ndc.y), camera);
+        const earthDistance = earthHitDistance(provinceRaycaster, earth);
+        return provinceAreas.pick(provinceRaycaster, earthDistance);
+      },
+      getSelectedProvinceGeometry() {
+        return provinceAreas?.getSelectedGeometry() ?? null;
+      },
+      getOutlinePositionBuffer() {
+        return provinceAreas?.getOutlinePositionBuffer() ?? null;
+      },
+      getProvinceAreaFeature(code) {
+        return provinceAreas?.getFeature(code);
+      },
       setJourneyPath(request) {
         if (!disposed && journeyPath.setRequest(request)) invalidate();
       },
@@ -560,10 +640,15 @@ export async function createCinematicScene(options: CinematicSceneOptions): Prom
         capture = null;
         return result;
       },
-      projectGeo(lat, lng) {
-        const [x, y, z] = geoToVector(lat, lng);
+      projectGeo(lat, lng, radius = 1) {
+        const [x, y, z] = geoToVector(lat, lng, radius);
         const projected = new Vector3(x, y, z).project(camera);
-        return { x: ((projected.x + 1) / 2) * viewport.width, y: ((1 - projected.y) / 2) * viewport.height, behind: projected.z > 1 };
+        const px = ((projected.x + 1) / 2) * viewport.width;
+        const py = ((1 - projected.y) / 2) * viewport.height;
+        const occluded = isEarthOccluded([camera.position.x, camera.position.y, camera.position.z], lat, lng);
+        const clipped = !Number.isFinite(projected.z) || projected.z < -1 || projected.z > 1;
+        const offstage = !Number.isFinite(px) || !Number.isFinite(py) || px < 0 || py < 0 || px > viewport.width || py > viewport.height;
+        return { x: px, y: py, behind: occluded || clipped, occluded, clipped, offstage };
       },
       dispose,
     };
