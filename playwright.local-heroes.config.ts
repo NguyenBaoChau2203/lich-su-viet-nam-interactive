@@ -2,7 +2,7 @@ import { defineConfig } from "@playwright/test";
 import smoke from "./scripts/agent/smoke-env.json";
 if (process.env.E2E_BASE_URL) throw new Error("Remote/existing-server overrides are forbidden.");
 export default defineConfig({
-  testDir: "./tests/e2e", testMatch: ["home-local-heroes.spec.ts", "figure-stories.spec.ts", "home-heritage-sites.spec.ts", "heritage-detail.spec.ts"], timeout: 60000, expect: { timeout: 15000 }, workers: 1,
+  testDir: "./tests/e2e", testMatch: ["home-local-heroes.spec.ts", "figure-stories.spec.ts", "home-heritage-sites.spec.ts", "heritage-detail.spec.ts", "home-locality-overview.spec.ts"], timeout: 60000, expect: { timeout: 15000 }, workers: 1,
   outputDir: "output/playwright/local-heroes/artifacts", reporter: [["list"], ["json", { outputFile: "output/playwright/local-heroes/results.json" }]],
   use: { baseURL: "http://127.0.0.1:3114", channel: "msedge", screenshot: "only-on-failure", trace: "retain-on-failure" },
   projects: [{ name: "1280x720", use: { viewport: { width: 1280, height: 720 } } }, { name: "1366x768", use: { viewport: { width: 1366, height: 768 } } }, { name: "1440x900", use: { viewport: { width: 1440, height: 900 } } }, { name: "1920x1080", use: { viewport: { width: 1920, height: 1080 } } }],

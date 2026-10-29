@@ -33,8 +33,18 @@ export default async function HomePage({
   const urlSearchParams = toUrlSearchParams(resolvedParams);
   const initialPeople = parseLocalHeroState(urlSearchParams);
   // Start only the requested bounded page. Default event mode makes no people or places query.
-  const peopleRequest = initialPeople.mode === "people" ? loadLocalHeroPage(initialPeople.filters) : null;
-  const placesRequest = initialPeople.mode === "places" ? loadHeritageCatalog() : null;
+  const localityCode = initialPeople.filters.localityCode;
+  const isOverview = initialPeople.mode === "locality";
+  const peopleRequest =
+    initialPeople.mode === "people"
+      ? loadLocalHeroPage(initialPeople.filters)
+      : isOverview && localityCode
+        ? loadLocalHeroPage({ localityCode, query: "", page: 1 })
+        : null;
+  const placesRequest =
+    initialPeople.mode === "places" || (isOverview && localityCode)
+      ? loadHeritageCatalog()
+      : null;
 
   // Explicit test-only error simulation when ?__test_db_error=1 is passed in local/E2E tests
   const simulateDbError =
@@ -64,6 +74,10 @@ export default async function HomePage({
   const initialPeopleLoad: LocalHeroLoadState = peopleResponse ? peopleResponse.ok ? { status: "ready", data: peopleResponse.data }
     : { status: "error", filters: initialPeople.filters, error: peopleResponse.error } : { status: "idle" };
   if (peopleResponse?.ok) initialPeople.filters = peopleResponse.data.filters;
+  if (placesResponse?.ok && initialPeople.mode === "places" && initialPeople.place) {
+    const selected = placesResponse.data.items.find((site) => site.slug === initialPeople.place);
+    if (selected) initialPeople.filters = { ...initialPeople.filters, localityCode: selected.locality.code };
+  }
 
   const initialPlacesLoad: HeritageLoadState = placesResponse
     ? placesResponse.ok

@@ -3,7 +3,7 @@
 import type { MouseEvent } from "react";
 
 type Props = {
-  active: "places" | "people";
+  active?: "places" | "people" | null;
   placesHref: string;
   peopleHref: string;
   onSwitch(mode: "places" | "people"): void;
