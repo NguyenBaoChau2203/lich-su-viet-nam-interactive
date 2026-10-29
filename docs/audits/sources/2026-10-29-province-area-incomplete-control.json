@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "note": "Preserved incomplete-input negative control before Khánh Hòa recovery",
+  "admittedCount": 33,
+  "blocked": [
+    {
+      "code": "56",
+      "officialName": "Tỉnh Khánh Hòa",
+      "osmRelationId": 1887959,
+      "status": "blocked",
+      "blockers": [
+        "MISSING_WAY"
+      ],
+      "partCount": 0,
+      "holeCount": 0,
+      "outerRingCount": 0,
+      "innerRingCount": 0,
+      "missingWays": [
+        {
+          "wayId": 1120240941,
+          "role": "outer"
+        },
+        {
+          "wayId": 1120240942,
+          "role": "outer"
+        },
+        {
+          "wayId": 1120240932,
+          "role": "outer"
+        },
+        {
+          "wayId": 1319181446,
+          "role": "outer"
+        },
+        {
+          "wayId": 1120240928,
+          "role": "outer"
+        },
+        {
+          "wayId": 1120240930,
+          "role": "outer"
+        },
+        {
+          "wayId": 1120240925,
+          "role": "outer"
+        },
+        {
+          "wayId": 1120240927,
+          "role": "outer"
+        },
+        {
+          "wayId": 1199677144,
+          "role": "outer"
+        },
+        {
+          "wayId": 1120240934,
+          "role": "outer"
+        },
+        {
+          "wayId": 1368675506,
+          "role": "outer"
+        },
+        {
+          "wayId": 1120240931,
+          "role": "inner"
+        },
+        {
+          "wayId": 1120240947,
+          "role": "outer"
+        },
+        {
+          "wayId": 1120240923,
+          "role": "outer"
+        },
+        {
+          "wayId": 1120240955,
+          "role": "outer"
+        },
+        {
+          "wayId": 1120240954,
+          "role": "outer"
+        }
+      ]
+    }
+  ]
+}

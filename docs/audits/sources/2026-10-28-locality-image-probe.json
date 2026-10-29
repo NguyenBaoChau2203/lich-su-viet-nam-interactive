@@ -1,0 +1,575 @@
+{
+  "observedAt": "2026-10-28T12:49:23.889Z",
+  "images": [
+    {
+      "slug": "hoang-thanh-thang-long",
+      "localityCode": "01",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Doan_Mon_-_Hanoi_Citadel.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Doan_Mon_-_Hanoi_Citadel.jpg&width=1600"
+    },
+    {
+      "slug": "nha-tu-hoa-lo",
+      "localityCode": "01",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maison_Centrale_Hanoi_entrance.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Maison_Centrale_Hanoi_entrance.jpg&width=1600"
+    },
+    {
+      "slug": "pac-bo-cao-bang",
+      "localityCode": "04",
+      "url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/pac-bo-cao-bang/suoi-le-nin-pac-bo-1200.webp",
+      "allowedByNextImage": false,
+      "status": 200,
+      "contentType": "image/webp",
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/pac-bo-cao-bang/suoi-le-nin-pac-bo-1200.webp"
+    },
+    {
+      "slug": "rung-tran-hung-dao",
+      "localityCode": "04",
+      "url": "https://caobang.gov.vn/uploads/images/2021/12/khu-di-tich-rung-tran-hung-dao.jpg",
+      "allowedByNextImage": false,
+      "status": 404,
+      "contentType": "text/html",
+      "finalUrl": "https://caobang.gov.vn/uploads/images/2021/12/khu-di-tich-rung-tran-hung-dao.jpg"
+    },
+    {
+      "slug": "cot-co-lung-cu",
+      "localityCode": "08",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cot_co_Lung_Cu_-_Ha_Giang.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Cot_co_Lung_Cu_-_Ha_Giang.jpg&width=1600"
+    },
+    {
+      "slug": "khu-di-tich-tan-trao",
+      "localityCode": "08",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dinh_Tan_Trao.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Dinh_Tan_Trao.jpg&width=1600"
+    },
+    {
+      "slug": "doi-a1-dien-bien-phu",
+      "localityCode": "11",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Doi_A1_Dien_Bien_Phu.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Doi_A1_Dien_Bien_Phu.jpg&width=1600"
+    },
+    {
+      "slug": "ham-de-castries",
+      "localityCode": "11",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ham_De_Castries_Dien_Bien_Phu.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Ham_De_Castries_Dien_Bien_Phu.jpg&width=1600"
+    },
+    {
+      "slug": "chien-thang-lai-chau-1953",
+      "localityCode": "12",
+      "url": "https://laichau.gov.vn/uploads/images/2023/12/chien-thang-lai-chau-1953.jpg",
+      "allowedByNextImage": false,
+      "status": 200,
+      "contentType": "text/html; charset=utf-8,gbk",
+      "finalUrl": "https://laichau.gov.vn/uploads/images/2023/12/chien-thang-lai-chau-1953.jpg"
+    },
+    {
+      "slug": "nha-tu-son-la",
+      "localityCode": "14",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nha_tu_Son_La.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Nha_tu_Son_La.jpg&width=1600"
+    },
+    {
+      "slug": "khoi-nghia-yen-bai-1930",
+      "localityCode": "15",
+      "url": "https://yenbai.gov.vn/uploads/images/2020/02/khu-tuong-niem-nguyen-thai-hoc.jpg",
+      "allowedByNextImage": false,
+      "networkError": "fetch failed"
+    },
+    {
+      "slug": "atk-cho-don",
+      "localityCode": "19",
+      "url": "https://backan.gov.vn/uploads/images/2022/05/atk-cho-don.jpg",
+      "allowedByNextImage": false,
+      "networkError": "fetch failed"
+    },
+    {
+      "slug": "atk-dinh-hoa",
+      "localityCode": "19",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lan_Na_Nua_ATK_Dinh_Hoa.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Lan_Na_Nua_ATK_Dinh_Hoa.jpg&width=1600"
+    },
+    {
+      "slug": "ai-chi-lang",
+      "localityCode": "20",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ai_Chi_Lang_Lang_Son.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Ai_Chi_Lang_Lang_Son.jpg&width=1600"
+    },
+    {
+      "slug": "khoi-nghia-bac-son",
+      "localityCode": "20",
+      "url": "https://langson.gov.vn/uploads/images/2021/09/di-tich-don-mo-nhai-bac-son.jpg",
+      "allowedByNextImage": false,
+      "status": 200,
+      "contentType": "text/html",
+      "finalUrl": "https://langson.gov.vn/uploads/images/2021/09/di-tich-don-mo-nhai-bac-son.jpg"
+    },
+    {
+      "slug": "bai-coc-bach-dang",
+      "localityCode": "22",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bai_coc_Bach_Dang_Yen_Hung.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Bai_coc_Bach_Dang_Yen_Hung.jpg&width=1600"
+    },
+    {
+      "slug": "mo-than-deo-nai",
+      "localityCode": "22",
+      "url": "https://quangninh.gov.vn/uploads/images/2021/03/di-tich-bac-ho-ve-tham-deo-nai.jpg",
+      "allowedByNextImage": false,
+      "status": 404,
+      "contentType": null,
+      "finalUrl": "https://quangninh.gov.vn/uploads/images/2021/03/di-tich-bac-ho-ve-tham-deo-nai.jpg"
+    },
+    {
+      "slug": "atk-ii-hiep-hoa",
+      "localityCode": "24",
+      "url": "https://bacninh.gov.vn/uploads/images/2021/01/di-tich-atk2-hiep-hoa.jpg",
+      "allowedByNextImage": false,
+      "status": 404,
+      "contentType": "text/html;charset=UTF-8",
+      "finalUrl": "https://bacninh.gov.vn/uploads/images/2021/01/di-tich-atk2-hiep-hoa.jpg"
+    },
+    {
+      "slug": "khoi-nghia-yen-the",
+      "localityCode": "24",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Don_Phon_Xuong_Yen_The.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Don_Phon_Xuong_Yen_The.jpg&width=1600"
+    },
+    {
+      "slug": "chien-thang-song-lo-doan-hung",
+      "localityCode": "25",
+      "url": "https://phutho.gov.vn/uploads/images/2021/10/tuong-dai-chien-thang-song-lo.jpg",
+      "allowedByNextImage": false,
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://phutho.gov.vn/uploads/images/2021/10/tuong-dai-chien-thang-song-lo.jpg"
+    },
+    {
+      "slug": "khu-di-tich-den-hung",
+      "localityCode": "25",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cong_Den_Hung_Phu_Tho.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Cong_Den_Hung_Phu_Tho.jpg&width=1600"
+    },
+    {
+      "slug": "ben-k15-do-son",
+      "localityCode": "31",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ben_K15_Do_Son_Hai_Phong.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Ben_K15_Do_Son_Hai_Phong.jpg&width=1600"
+    },
+    {
+      "slug": "con-son-kiep-bac",
+      "localityCode": "31",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Den_Kiep_Bac_Chi_Linh.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Den_Kiep_Bac_Chi_Linh.jpg&width=1600"
+    },
+    {
+      "slug": "pho-hien",
+      "localityCode": "33",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chua_Chuong_Pho_Hien.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chua_Chuong_Pho_Hien.jpg&width=1600"
+    },
+    {
+      "slug": "tieng-trong-tien-hai",
+      "localityCode": "33",
+      "url": "https://hungyen.gov.vn/uploads/images/2021/10/di-tich-tieng-trong-tien-hai.jpg",
+      "allowedByNextImage": false,
+      "status": 404,
+      "contentType": null,
+      "finalUrl": "https://hungyen.gov.vn/uploads/images/2021/10/di-tich-tieng-trong-tien-hai.jpg"
+    },
+    {
+      "slug": "co-do-hoa-lu",
+      "localityCode": "37",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Den_Vua_Dinh_Tien_Hoang_Hoa_Lu.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Den_Vua_Dinh_Tien_Hoang_Hoa_Lu.jpg&width=1600"
+    },
+    {
+      "slug": "nha-may-det-nam-dinh",
+      "localityCode": "37",
+      "url": "https://ninhbinh.gov.vn/uploads/images/2021/05/bao-tang-det-may-nam-dinh.jpg",
+      "allowedByNextImage": false,
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://ninhbinh.gov.vn/uploads/images/2021/05/bao-tang-det-may-nam-dinh.jpg"
+    },
+    {
+      "slug": "cau-ham-rong",
+      "localityCode": "38",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cau_Ham_Rong_Thanh_Hoa.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Cau_Ham_Rong_Thanh_Hoa.jpg&width=1600"
+    },
+    {
+      "slug": "thanh-nha-ho",
+      "localityCode": "38",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thanh_nha_Ho_Cong_Nam.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Thanh_nha_Ho_Cong_Nam.jpg&width=1600"
+    },
+    {
+      "slug": "khu-di-tich-kim-lien",
+      "localityCode": "40",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nha_Bac_Ho_Lang_Sen_Nghe_An.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Nha_Bac_Ho_Lang_Sen_Nghe_An.jpg&width=1600"
+    },
+    {
+      "slug": "truong-bon",
+      "localityCode": "40",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khu_di_tich_Truong_Bon_Nghe_An.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Khu_di_tich_Truong_Bon_Nghe_An.jpg&width=1600"
+    },
+    {
+      "slug": "nga-ba-dong-loc",
+      "localityCode": "42",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nga_ba_Dong_Loc_Ha_Tinh.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Nga_ba_Dong_Loc_Ha_Tinh.jpg&width=1600"
+    },
+    {
+      "slug": "doi-bo-hien-luong-ben-hai",
+      "localityCode": "44",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cau_Hien_Luong_Ben_Hai_Quang_Tri.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Cau_Hien_Luong_Ben_Hai_Quang_Tri.jpg&width=1600"
+    },
+    {
+      "slug": "thanh-co-quang-tri",
+      "localityCode": "44",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thanh_co_Quang_Tri_Dai_tuong_niem.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Thanh_co_Quang_Tri_Dai_tuong_niem.jpg&width=1600"
+    },
+    {
+      "slug": "kinh-thanh-hue-1968",
+      "localityCode": "46",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ky_Dai_Hue_Flag_Tower.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Ky_Dai_Hue_Flag_Tower.jpg&width=1600"
+    },
+    {
+      "slug": "ngo-mon-hue",
+      "localityCode": "46",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ngo_Mon_Hue_Imperial_City.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Ngo_Mon_Hue_Imperial_City.jpg&width=1600"
+    },
+    {
+      "slug": "chien-thang-nui-thanh-1965",
+      "localityCode": "48",
+      "url": "https://danang.gov.vn/uploads/images/2021/05/tuong-dai-chien-thang-nui-thanh.jpg",
+      "allowedByNextImage": false,
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "finalUrl": "https://danang.gov.vn/trang-chu"
+    },
+    {
+      "slug": "khu-den-thap-my-son",
+      "localityCode": "48",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/My_Son_Sanctuary_Quang_Nam.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/My_Son_Sanctuary_Quang_Nam.jpg&width=1600"
+    },
+    {
+      "slug": "dak-to-tan-canh",
+      "localityCode": "51",
+      "url": "https://quangngai.gov.vn/uploads/images/2021/04/tuong-dai-chien-thang-dak-to.jpg",
+      "allowedByNextImage": false,
+      "status": 200,
+      "contentType": "text/html",
+      "finalUrl": "https://quangngai.gov.vn/uploads/images/2021/04/tuong-dai-chien-thang-dak-to.jpg"
+    },
+    {
+      "slug": "khu-chung-tich-son-my",
+      "localityCode": "51",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khu_chung_tich_Son_My_Quang_Ngai.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Khu_chung_tich_Son_My_Quang_Ngai.jpg&width=1600"
+    },
+    {
+      "slug": "bao-tang-quang-trung",
+      "localityCode": "52",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bao_tang_Quang_Trung_Binh_Dinh.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Bao_tang_Quang_Trung_Binh_Dinh.jpg&width=1600"
+    },
+    {
+      "slug": "lang-khang-chien-stor",
+      "localityCode": "52",
+      "url": "https://gialai.gov.vn/uploads/images/2021/08/lang-khang-chien-stor.jpg",
+      "allowedByNextImage": false,
+      "status": 404,
+      "contentType": "text/html",
+      "finalUrl": "https://gialai.gov.vn/uploads/images/2021/08/lang-khang-chien-stor.jpg"
+    },
+    {
+      "slug": "san-bay-thanh-son",
+      "localityCode": "56",
+      "url": "https://khanhhoa.gov.vn/uploads/images/2021/04/di-tich-san-bay-thanh-son.jpg",
+      "allowedByNextImage": false,
+      "status": 404,
+      "contentType": "text/html",
+      "finalUrl": "https://khanhhoa.gov.vn/uploads/images/2021/04/di-tich-san-bay-thanh-son.jpg"
+    },
+    {
+      "slug": "thap-ba-ponagar",
+      "localityCode": "56",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thap_Ba_Ponagar_Nha_Trang.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Thap_Ba_Ponagar_Nha_Trang.jpg&width=1600"
+    },
+    {
+      "slug": "buon-ma-thuot-1975",
+      "localityCode": "66",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tuong_dai_Chien_thang_Buon_Ma_Thuot.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Tuong_dai_Chien_thang_Buon_Ma_Thuot.jpg&width=1600"
+    },
+    {
+      "slug": "vung-ro-phu-yen",
+      "localityCode": "66",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vinh_Vung_Ro_Phu_Yen.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Vinh_Vung_Ro_Phu_Yen.jpg&width=1600"
+    },
+    {
+      "slug": "nha-lao-thieu-nhi-da-lat",
+      "localityCode": "68",
+      "url": "https://lamdong.gov.vn/uploads/images/2021/06/nha-lao-thieu-nhi-da-lat.jpg",
+      "allowedByNextImage": false,
+      "status": 404,
+      "contentType": null,
+      "finalUrl": "https://lamdong.gov.vn/uploads/images/2021/06/nha-lao-thieu-nhi-da-lat.jpg"
+    },
+    {
+      "slug": "truong-duc-thanh",
+      "localityCode": "68",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Truong_Duc_Thanh_Phan_Thiet.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Truong_Duc_Thanh_Phan_Thiet.jpg&width=1600"
+    },
+    {
+      "slug": "can-cu-ta-thiet",
+      "localityCode": "75",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Can_cu_Ta_Thiet_Binh_Phuoc.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Can_cu_Ta_Thiet_Binh_Phuoc.jpg&width=1600"
+    },
+    {
+      "slug": "chien-thang-xuan-loc-1975",
+      "localityCode": "75",
+      "url": "https://dongnai.gov.vn/uploads/images/2021/04/tuong-dai-chien-thang-xuan-loc.jpg",
+      "allowedByNextImage": false,
+      "status": 404,
+      "contentType": null,
+      "finalUrl": "https://dongnai.gov.vn/uploads/images/2021/04/tuong-dai-chien-thang-xuan-loc.jpg"
+    },
+    {
+      "slug": "dia-dao-cu-chi",
+      "localityCode": "79",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dia_dao_Cu_Chi_Ben_Dinh.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Dia_dao_Cu_Chi_Ben_Dinh.jpg&width=1600"
+    },
+    {
+      "slug": "dinh-doc-lap",
+      "localityCode": "79",
+      "url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/dinh-doc-lap/20190923-independence-palace-10-1200.webp",
+      "allowedByNextImage": false,
+      "status": 200,
+      "contentType": "image/webp",
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/dinh-doc-lap/20190923-independence-palace-10-1200.webp"
+    },
+    {
+      "slug": "can-cu-trung-uong-cuc-mien-nam",
+      "localityCode": "80",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Can_cu_Trung_uong_Cuc_Tay_Ninh.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Can_cu_Trung_uong_Cuc_Tay_Ninh.jpg&width=1600"
+    },
+    {
+      "slug": "nga-tu-duc-hoa",
+      "localityCode": "80",
+      "url": "https://tayninh.gov.vn/uploads/images/2021/06/di-tich-nga-tu-duc-hoa.jpg",
+      "allowedByNextImage": false,
+      "status": 404,
+      "contentType": "text/html",
+      "finalUrl": "https://tayninh.gov.vn/uploads/images/2021/06/di-tich-nga-tu-duc-hoa.jpg"
+    },
+    {
+      "slug": "chien-thang-ap-bac-1963",
+      "localityCode": "82",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khu_di_tich_Ap_Bac_Tien_Giang.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Khu_di_tich_Ap_Bac_Tien_Giang.jpg&width=1600"
+    },
+    {
+      "slug": "mo-cu-pho-bang-nguyen-sinh-sac",
+      "localityCode": "82",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mo_Cu_Nguyen_Sinh_Sac_Dong_Thap.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Mo_Cu_Nguyen_Sinh_Sac_Dong_Thap.jpg&width=1600"
+    },
+    {
+      "slug": "dong-khoi-ben-tre-1960",
+      "localityCode": "86",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khu_di_tich_Dong_Khoi_Ben_Tre.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Khu_di_tich_Dong_Khoi_Ben_Tre.jpg&width=1600"
+    },
+    {
+      "slug": "khu-tuong-niem-vo-van-kiet",
+      "localityCode": "86",
+      "url": "https://vinhlong.gov.vn/uploads/images/2021/11/khu-tuong-niem-vo-van-kiet.jpg",
+      "allowedByNextImage": false,
+      "status": 404,
+      "contentType": "text/html",
+      "finalUrl": "https://vinhlong.gov.vn/uploads/images/2021/11/khu-tuong-niem-vo-van-kiet.jpg"
+    },
+    {
+      "slug": "khu-luu-niem-ton-duc-thang",
+      "localityCode": "91",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khu_luu_niem_Ton_Duc_Thang_An_Giang.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Khu_luu_niem_Ton_Duc_Thang_An_Giang.jpg&width=1600"
+    },
+    {
+      "slug": "nha-tu-phu-quoc",
+      "localityCode": "91",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nha_tu_Phu_Quoc_Chuong_cop.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Nha_tu_Phu_Quoc_Chuong_cop.jpg&width=1600"
+    },
+    {
+      "slug": "chien-thang-chuong-thien-1973",
+      "localityCode": "92",
+      "url": "https://cantho.gov.vn/uploads/images/2021/07/di-tich-chien-thang-chuong-thien.jpg",
+      "allowedByNextImage": false,
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "finalUrl": "https://cantho.gov.vn/uploads/images/2021/07/di-tich-chien-thang-chuong-thien.jpg"
+    },
+    {
+      "slug": "kham-lon-can-tho",
+      "localityCode": "92",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kham_Lon_Can_Tho_Prison.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Kham_Lon_Can_Tho_Prison.jpg&width=1600"
+    },
+    {
+      "slug": "ben-vam-lung",
+      "localityCode": "96",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ben_Vam_Lung_Ca_Mau.jpg?width=1600",
+      "allowedByNextImage": true,
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "finalUrl": "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Ben_Vam_Lung_Ca_Mau.jpg&width=1600"
+    },
+    {
+      "slug": "khoi-nghia-hon-khoai-1940",
+      "localityCode": "96",
+      "url": "https://camau.gov.vn/uploads/images/2021/12/hai-dang-hon-khoai-ca-mau.jpg",
+      "allowedByNextImage": false,
+      "networkError": "fetch failed"
+    }
+  ]
+}
