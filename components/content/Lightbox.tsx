@@ -146,15 +146,19 @@ export function LightboxTrigger({
   mediaId,
   label,
   className,
+  disabled,
   children,
 }: {
   mediaId: string;
   label: string;
   className?: string;
+  disabled?: boolean;
   children: ReactNode;
 }) {
   const context = useContext(LightboxContext);
-  if (!context) return <>{children}</>;
+  if (!context || disabled) {
+    return <div className={className}>{children}</div>;
+  }
   return (
     <button
       type="button"

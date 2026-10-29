@@ -67,7 +67,7 @@ export function GlobeMarkers({ viewport, stageRef, events, selectedEvent, labels
     // labels, but must not hide that point through the marker's larger hit box.
     const occupied = measured.filter(item => !item.element.matches(".journey-popup")).map(item => item.box);
     const popupRects = measured.filter(item => item.element.matches(".journey-popup")).map(item => item.box);
-    const options = { viewport, anchors, labels: viewport.zoom >= 3 ? labels : [], occupied, labelObstacles: popupRects, selectedEvent, stop,
+    const options = { viewport, anchors, labels: viewport.zoom >= 3 ? labels : [], occupied, labelObstacles: popupRects, entityNoun: entity.many, selectedEvent, stop,
       measure(text: string) {
         const element = measureRef.current!;
         element.textContent = text;
@@ -102,7 +102,10 @@ export function GlobeMarkers({ viewport, stageRef, events, selectedEvent, labels
     const mutation = new MutationObserver((records) => {
       // Measuring text changes this overlay's own DOM. Only external shell
       // changes should trigger another measurement; otherwise it feeds itself.
-      if (records.some((record) => !(record.target instanceof Element && record.target.closest(".globe-overlay")))) observe();
+      if (records.some((record) => {
+        const el = record.target instanceof Element ? record.target : record.target.parentElement;
+        return !el || !el.closest(".globe-overlay");
+      })) observe();
     });
     mutation.observe(shell, { childList: true, subtree: true, attributes: true, attributeFilter: ["open"] });
     observe();

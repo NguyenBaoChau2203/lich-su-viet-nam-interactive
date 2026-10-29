@@ -1,7 +1,7 @@
 "use client";
 
 import { ImageOff } from "lucide-react";
-import { useState, type CSSProperties } from "react";
+import { useState, type CSSProperties, type ReactNode } from "react";
 import { cn } from "@/lib/utils/cn";
 
 type SafeImageProps = {
@@ -10,6 +10,8 @@ type SafeImageProps = {
   className?: string;
   /** Tỉ lệ khung khi ảnh chưa/không tải được, ví dụ "aspect-[4/3]". */
   fallbackClassName?: string;
+  fallback?: ReactNode;
+  onFailedChange?: (failed: boolean) => void;
   style?: CSSProperties;
   /** Kích thước thật (nếu biết) để trình duyệt giữ chỗ, tránh nhảy bố cục. */
   width?: number;
@@ -28,14 +30,46 @@ type SafeImageProps = {
  * Dùng <img> thay vì next/image vì `file_url` có thể trỏ tới bất kỳ máy chủ nào
  * (Wikimedia Commons, Supabase Storage…), không cấu hình trước được từng host.
  */
-export function SafeImage({ src, alt, className, fallbackClassName, style, width, height, srcSet, sizes, priority }: SafeImageProps) {
+export function SafeImage({
+  src,
+  alt,
+  className,
+  fallbackClassName,
+  fallback,
+  onFailedChange,
+  style,
+  width,
+  height,
+  srcSet,
+  sizes,
+  priority,
+}: SafeImageProps) {
   const [failed, setFailed] = useState(false);
+  const [prevSrc, setPrevSrc] = useState(src);
+
+  if (src !== prevSrc) {
+    setPrevSrc(src);
+    setFailed(false);
+  }
+
+  const markFailed = () => {
+    setFailed((current) => {
+      if (!current) {
+        onFailedChange?.(true);
+      }
+      return true;
+    });
+  };
 
   if (failed) {
+    if (fallback) {
+      return <>{fallback}</>;
+    }
     return (
       <div
         role="img"
         aria-label={alt}
+        data-image-fallback="true"
         className={cn(
           "flex flex-col items-center justify-center gap-2 bg-muted p-4 text-center text-sm text-muted-foreground",
           fallbackClassName,
@@ -62,10 +96,10 @@ export function SafeImage({ src, alt, className, fallbackClassName, style, width
       decoding="async"
       className={className}
       style={style}
-      onError={() => setFailed(true)}
+      onError={markFailed}
       // Ảnh có thể đã lỗi TRƯỚC khi React hydrate (onError khi đó không được gọi).
       ref={(img) => {
-        if (img?.complete && img.naturalWidth === 0) setFailed(true);
+        if (img?.complete && img.naturalWidth === 0) markFailed();
       }}
     />
   );

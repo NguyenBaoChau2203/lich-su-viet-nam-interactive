@@ -264,6 +264,7 @@ export function HistoryExplorer({
   }, [localityActive, localityCode, selectedPlaceSlug, localityPanelOpen, closePlace, changeLocalityToChooser, hideLocalityPanel]);
 
   const visibleEvents = useMemo(() => state ? filterExplorerEvents(events, state.from, state.to) : events, [events, state]);
+  const placesMarkerEvents = useMemo(() => heritageMarkerEvents(visibleHeritageSites), [visibleHeritageSites]);
   const selectedEvent = visibleEvents.find((event) => event.slug === state?.selectedEvent) ?? null;
 
   useEffect(() => {
@@ -317,6 +318,14 @@ export function HistoryExplorer({
     dispatch({ type: "select-event", slug });
     if (listRef.current) listRef.current.open = false;
   }, []);
+
+  const handleMapSelect = useCallback((slug: string) => {
+    if (placesActive) {
+      selectPlace(slug.startsWith("place:") ? slug.slice(6) : slug);
+    } else {
+      selectEvent(slug);
+    }
+  }, [placesActive, selectPlace, selectEvent]);
 
   const pauseJourney = useCallback(() => dispatch({ type: "manual" }), []);
   const arrive = useCallback((arrival: JourneyArrival) => {
@@ -430,7 +439,7 @@ export function HistoryExplorer({
         onJourney={() => { if (localityActive) { closePeople(); onChooseJourney(state.journey?.id ?? DEFAULT_JOURNEY_ID); } else enterJourney(); }} />
       <div className="absolute inset-0 z-0" data-testid="home-event-map">
         <EventMap
-          events={placesActive ? heritageMarkerEvents(visibleHeritageSites) : localityActive ? [] : visibleEvents}
+          events={placesActive ? placesMarkerEvents : localityActive ? [] : visibleEvents}
           allEvents={events}
           view={state?.view ?? null}
           selectedEvent={placesActive ? (selectedPlaceSlug ? `place:${selectedPlaceSlug}` : null) : peopleActive ? null : selectedEvent?.slug ?? null}
@@ -441,13 +450,7 @@ export function HistoryExplorer({
             onSelect: selectLocalityFromChooser, onProject: localityProjection.publish,
           } : null}
           focusRequest={localityActive || stop ? null : focusRequest}
-          onSelect={(slug) => {
-            if (placesActive) {
-              selectPlace(slug.startsWith("place:") ? slug.slice(6) : slug);
-            } else {
-              selectEvent(slug);
-            }
-          }}
+          onSelect={handleMapSelect}
           onViewChange={updateView}
           journeyStop={localityActive ? null : stop} cameraRequest={localityActive ? null : cameraRequest}
           journeyPathRequest={journeyPathRequest}

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "framework": "VN-34-2025",
+  "files": {
+    "localities.json": "6defdd026f0eee06f72f978240c9c2fa250cecc6ca4dbb6f71653d2b43f6c4eb",
+    "sources.json": "28db2a9df43b6ce0080153f03d6c9eed5c14d11c811dffe1dc2222d5d278f17b",
+    "sites.json": "a8dcd5312df08a4f0a9387be668a165742c8a6d4d8eb5740e45661821f7e32f8"
+  }
+}

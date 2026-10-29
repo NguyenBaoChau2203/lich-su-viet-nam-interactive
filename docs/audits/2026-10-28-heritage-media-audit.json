@@ -1,0 +1,3929 @@
+{
+  "timestamp": "2026-10-28T17:18:26.977Z",
+  "package": "supabase/content/heritage-sites/v1",
+  "liveAuditIncluded": true,
+  "summary": {
+    "totalSites": 64,
+    "totalMedia": 64,
+    "imagesOk": 64,
+    "imagesBroken": 0,
+    "totalVideos": 0,
+    "videosOk": 0,
+    "videosBroken": 0,
+    "totalSources": 66,
+    "sourcesDomainOnly": 66
+  },
+  "localities": [
+    {
+      "code": "01",
+      "name": "Thành phố Hà Nội",
+      "sites": [
+        "nha-tu-hoa-lo",
+        "hoang-thanh-thang-long"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "04",
+      "name": "Tỉnh Cao Bằng",
+      "sites": [
+        "pac-bo-cao-bang",
+        "rung-tran-hung-dao"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "08",
+      "name": "Tỉnh Tuyên Quang",
+      "sites": [
+        "khu-di-tich-tan-trao",
+        "cot-co-lung-cu"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "11",
+      "name": "Tỉnh Điện Biên",
+      "sites": [
+        "doi-a1-dien-bien-phu",
+        "ham-de-castries"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "12",
+      "name": "Tỉnh Lai Châu",
+      "sites": [
+        "chien-thang-lai-chau-1953"
+      ],
+      "imagesOk": 1,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "14",
+      "name": "Tỉnh Sơn La",
+      "sites": [
+        "nha-tu-son-la"
+      ],
+      "imagesOk": 1,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "15",
+      "name": "Tỉnh Lào Cai",
+      "sites": [
+        "khoi-nghia-yen-bai-1930"
+      ],
+      "imagesOk": 1,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "19",
+      "name": "Tỉnh Thái Nguyên",
+      "sites": [
+        "atk-dinh-hoa",
+        "atk-cho-don"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "20",
+      "name": "Tỉnh Lạng Sơn",
+      "sites": [
+        "khoi-nghia-bac-son",
+        "ai-chi-lang"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "22",
+      "name": "Tỉnh Quảng Ninh",
+      "sites": [
+        "mo-than-deo-nai",
+        "bai-coc-bach-dang"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "24",
+      "name": "Tỉnh Bắc Ninh",
+      "sites": [
+        "atk-ii-hiep-hoa",
+        "khoi-nghia-yen-the"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "25",
+      "name": "Tỉnh Phú Thọ",
+      "sites": [
+        "chien-thang-song-lo-doan-hung",
+        "khu-di-tich-den-hung"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "31",
+      "name": "Thành phố Hải Phòng",
+      "sites": [
+        "ben-k15-do-son",
+        "con-son-kiep-bac"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "33",
+      "name": "Tỉnh Hưng Yên",
+      "sites": [
+        "tieng-trong-tien-hai",
+        "pho-hien"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "37",
+      "name": "Tỉnh Ninh Bình",
+      "sites": [
+        "nha-may-det-nam-dinh",
+        "co-do-hoa-lu"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "38",
+      "name": "Tỉnh Thanh Hóa",
+      "sites": [
+        "cau-ham-rong",
+        "thanh-nha-ho"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "40",
+      "name": "Tỉnh Nghệ An",
+      "sites": [
+        "khu-di-tich-kim-lien",
+        "truong-bon"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "42",
+      "name": "Tỉnh Hà Tĩnh",
+      "sites": [
+        "nga-ba-dong-loc"
+      ],
+      "imagesOk": 1,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "44",
+      "name": "Tỉnh Quảng Trị",
+      "sites": [
+        "thanh-co-quang-tri",
+        "doi-bo-hien-luong-ben-hai"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "46",
+      "name": "Thành phố Huế",
+      "sites": [
+        "ngo-mon-hue",
+        "kinh-thanh-hue-1968"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "48",
+      "name": "Thành phố Đà Nẵng",
+      "sites": [
+        "chien-thang-nui-thanh-1965",
+        "khu-den-thap-my-son"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "51",
+      "name": "Tỉnh Quảng Ngãi",
+      "sites": [
+        "khu-chung-tich-son-my",
+        "dak-to-tan-canh"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "52",
+      "name": "Tỉnh Gia Lai",
+      "sites": [
+        "lang-khang-chien-stor",
+        "bao-tang-quang-trung"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "56",
+      "name": "Tỉnh Khánh Hòa",
+      "sites": [
+        "san-bay-thanh-son",
+        "thap-ba-ponagar"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "66",
+      "name": "Tỉnh Đắk Lắk",
+      "sites": [
+        "buon-ma-thuot-1975",
+        "vung-ro-phu-yen"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "68",
+      "name": "Tỉnh Lâm Đồng",
+      "sites": [
+        "truong-duc-thanh",
+        "nha-lao-thieu-nhi-da-lat"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "75",
+      "name": "Tỉnh Đồng Nai",
+      "sites": [
+        "chien-thang-xuan-loc-1975",
+        "can-cu-ta-thiet"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "79",
+      "name": "Thành phố Hồ Chí Minh",
+      "sites": [
+        "dinh-doc-lap",
+        "dia-dao-cu-chi"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "80",
+      "name": "Tỉnh Tây Ninh",
+      "sites": [
+        "can-cu-trung-uong-cuc-mien-nam",
+        "nga-tu-duc-hoa"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "82",
+      "name": "Tỉnh Đồng Tháp",
+      "sites": [
+        "chien-thang-ap-bac-1963",
+        "mo-cu-pho-bang-nguyen-sinh-sac"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "86",
+      "name": "Tỉnh Vĩnh Long",
+      "sites": [
+        "dong-khoi-ben-tre-1960",
+        "khu-tuong-niem-vo-van-kiet"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "91",
+      "name": "Tỉnh An Giang",
+      "sites": [
+        "nha-tu-phu-quoc",
+        "khu-luu-niem-ton-duc-thang"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "92",
+      "name": "Thành phố Cần Thơ",
+      "sites": [
+        "chien-thang-chuong-thien-1973",
+        "kham-lon-can-tho"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    },
+    {
+      "code": "96",
+      "name": "Tỉnh Cà Mau",
+      "sites": [
+        "khoi-nghia-hon-khoai-1940",
+        "ben-vam-lung"
+      ],
+      "imagesOk": 2,
+      "imagesBroken": 0,
+      "videosOk": 0,
+      "videosBroken": 0,
+      "sourcesDomainOnly": 0
+    }
+  ],
+  "mediaAudits": [
+    {
+      "siteSlug": "nha-tu-hoa-lo",
+      "localityCode": "01",
+      "siteTier": "grade12",
+      "mediaKey": "nha-tu-hoa-lo-cong-chinh-maison-centrale",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Hoa_Lo_Prison_(Maison_Centrale),_Hanoi_(6923115824).jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3216,
+        "height": 1809,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Hoa_Lo_Prison_(Maison_Centrale),_Hanoi_(6923115824).jpg",
+        "artist": "David McKelvey from Brisbane, Australia",
+        "license": "CC BY 2.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/nha-tu-hoa-lo/cong-chinh-maison-centrale-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 675,
+      "declaredPhotographer": "David McKelvey from Brisbane, Australia",
+      "declaredLicense": "CC BY 2.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-tu-hoa-lo/cong-chinh-maison-centrale-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 106402,
+      "realWidth": 1200,
+      "realHeight": 675,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Hoa_Lo_Prison_(Maison_Centrale),_Hanoi_(6923115824).jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "hoang-thanh-thang-long",
+      "localityCode": "01",
+      "siteTier": "extended",
+      "mediaKey": "hoang-thanh-thang-long-doan-mon-hoang-thanh",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Đoan_Môn,_Hoàng_thành_Thăng_Long,_Hà_Nội_001.JPG",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3264,
+        "height": 2448,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%C4%90oan_M%C3%B4n,_Ho%C3%A0ng_th%C3%A0nh_Th%C4%83ng_Long,_H%C3%A0_N%E1%BB%99i_001.JPG",
+        "artist": "Phan Minh Tuấn",
+        "license": "CC BY-SA 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/hoang-thanh-thang-long/doan-mon-hoang-thanh-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Phan Minh Tuấn",
+      "declaredLicense": "CC BY-SA 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/hoang-thanh-thang-long/doan-mon-hoang-thanh-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 104424,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:%C4%90oan_M%C3%B4n,_Ho%C3%A0ng_th%C3%A0nh_Th%C4%83ng_Long,_H%C3%A0_N%E1%BB%99i_001.JPG",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "pac-bo-cao-bang",
+      "localityCode": "04",
+      "siteTier": "grade12",
+      "mediaKey": "pac-bo-cao-bang-suoi-lenin-nui-cac-mac",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Pác_Bó.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 2600,
+        "height": 1463,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:P%C3%A1c_B%C3%B3.jpg",
+        "artist": "[Tycho]  talk , http://shansov.net",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/pac-bo-cao-bang/suoi-lenin-nui-cac-mac-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 675,
+      "declaredPhotographer": "[Tycho] talk , http://shansov.net",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/pac-bo-cao-bang/suoi-lenin-nui-cac-mac-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 162374,
+      "realWidth": 1200,
+      "realHeight": 675,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:P%C3%A1c_B%C3%B3.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "rung-tran-hung-dao",
+      "localityCode": "04",
+      "siteTier": "extended",
+      "mediaKey": "rung-tran-hung-dao-nha-trung-bay-rung-tran-hung-dao",
+      "isCover": true,
+      "isCommons": false,
+      "commonsTitle": null,
+      "commonsMissing": null,
+      "commonsDetails": null,
+      "declaredFileUrl": "storage:locations/heritage/rung-tran-hung-dao/nha-trung-bay-rung-tran-hung-dao-1200.webp",
+      "declaredWidth": 600,
+      "declaredHeight": 450,
+      "declaredPhotographer": "TTXVN",
+      "declaredLicense": null,
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/rung-tran-hung-dao/nha-trung-bay-rung-tran-hung-dao-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 44412,
+      "realWidth": 600,
+      "realHeight": 450,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://www.vietnamplus.vn/bao-ton-va-phat-huy-gia-tri-khu-di-tich-lich-su-rung-tran-hung-dao-post292417.vnp",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "khu-di-tich-tan-trao",
+      "localityCode": "08",
+      "siteTier": "grade12",
+      "mediaKey": "khu-di-tich-tan-trao-dinh-tan-trao",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Đình_Tân_Trào.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3543,
+        "height": 2362,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%C4%90%C3%ACnh_T%C3%A2n_Tr%C3%A0o.jpg",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "license": "CC BY-SA 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/khu-di-tich-tan-trao/dinh-tan-trao-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 800,
+      "declaredPhotographer": "Bùi Thụy Đào Nguyên",
+      "declaredLicense": "CC BY-SA 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-di-tich-tan-trao/dinh-tan-trao-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 365244,
+      "realWidth": 1200,
+      "realHeight": 800,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:%C4%90%C3%ACnh_T%C3%A2n_Tr%C3%A0o.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "cot-co-lung-cu",
+      "localityCode": "08",
+      "siteTier": "extended",
+      "mediaKey": "cot-co-lung-cu-cot-co-lung-cu-dinh-nui-rong",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Cột_cờ_Lũng_Cú_-_Hà_Giang.JPG",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3456,
+        "height": 2304,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:C%E1%BB%99t_c%E1%BB%9D_L%C5%A9ng_C%C3%BA_-_H%C3%A0_Giang.JPG",
+        "artist": "vi:User:Leminhel",
+        "license": "Public domain"
+      },
+      "declaredFileUrl": "storage:locations/heritage/cot-co-lung-cu/cot-co-lung-cu-dinh-nui-rong-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 800,
+      "declaredPhotographer": "vi:User:Leminhel",
+      "declaredLicense": "Public domain",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/cot-co-lung-cu/cot-co-lung-cu-dinh-nui-rong-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 24772,
+      "realWidth": 1200,
+      "realHeight": 800,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:C%E1%BB%99t_c%E1%BB%9D_L%C5%A9ng_C%C3%BA_-_H%C3%A0_Giang.JPG",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "doi-a1-dien-bien-phu",
+      "localityCode": "11",
+      "siteTier": "grade12",
+      "mediaKey": "doi-a1-dien-bien-phu-dai-tuong-niem-dinh-doi-a1",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Monument_to_Vietminh_Assault_-_Hill_A1_(Eliane_2)_-_Dien_Bien_Phu_-_Vietnam_(48168816427).jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3648,
+        "height": 2736,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Monument_to_Vietminh_Assault_-_Hill_A1_(Eliane_2)_-_Dien_Bien_Phu_-_Vietnam_(48168816427).jpg",
+        "artist": "Adam Jones from Kelowna, BC, Canada",
+        "license": "CC BY-SA 2.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/doi-a1-dien-bien-phu/dai-tuong-niem-dinh-doi-a1-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Adam Jones from Kelowna, BC, Canada",
+      "declaredLicense": "CC BY-SA 2.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/doi-a1-dien-bien-phu/dai-tuong-niem-dinh-doi-a1-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 157090,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Monument_to_Vietminh_Assault_-_Hill_A1_(Eliane_2)_-_Dien_Bien_Phu_-_Vietnam_(48168816427).jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "ham-de-castries",
+      "localityCode": "11",
+      "siteTier": "extended",
+      "mediaKey": "ham-de-castries-ham-chi-huy-de-castries",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Hầm_chỉ_huy_tập_đoàn_cứ_điểm_Điện_Biên_Phủ_(2022).jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 4160,
+        "height": 3120,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:H%E1%BA%A7m_ch%E1%BB%89_huy_t%E1%BA%ADp_%C4%91o%C3%A0n_c%E1%BB%A9_%C4%91i%E1%BB%83m_%C4%90i%E1%BB%87n_Bi%C3%AAn_Ph%E1%BB%A7_(2022).jpg",
+        "artist": "Ioe2015",
+        "license": "CC BY 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/ham-de-castries/ham-chi-huy-de-castries-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Ioe2015",
+      "declaredLicense": "CC BY 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ham-de-castries/ham-chi-huy-de-castries-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 153544,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:H%E1%BA%A7m_ch%E1%BB%89_huy_t%E1%BA%ADp_%C4%91o%C3%A0n_c%E1%BB%A9_%C4%91i%E1%BB%83m_%C4%90i%E1%BB%87n_Bi%C3%AAn_Ph%E1%BB%A7_(2022).jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "chien-thang-lai-chau-1953",
+      "localityCode": "12",
+      "siteTier": "grade12",
+      "mediaKey": "chien-thang-lai-chau-1953-tuong-dai-quang-truong-lai-chau",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Lai_Châu_Town_Square_Monument_(2014).jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3873,
+        "height": 2179,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Lai_Ch%C3%A2u_Town_Square_Monument_(2014).jpg",
+        "artist": "Idan Robbins",
+        "license": "CC BY-SA 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/chien-thang-lai-chau-1953/tuong-dai-quang-truong-lai-chau-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 675,
+      "declaredPhotographer": "Idan Robbins",
+      "declaredLicense": "CC BY-SA 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-lai-chau-1953/tuong-dai-quang-truong-lai-chau-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 93820,
+      "realWidth": 1200,
+      "realHeight": 675,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Lai_Ch%C3%A2u_Town_Square_Monument_(2014).jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "nha-tu-son-la",
+      "localityCode": "14",
+      "siteTier": "grade12",
+      "mediaKey": "nha-tu-son-la-nha-tu-son-la-khu-giam-cam",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Nhà_tù_Sơn_La_-_panoramio.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3216,
+        "height": 2136,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Nh%C3%A0_t%C3%B9_S%C6%A1n_La_-_panoramio.jpg",
+        "artist": "ChieuTimViet",
+        "license": "CC BY 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/nha-tu-son-la/nha-tu-son-la-khu-giam-cam-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 797,
+      "declaredPhotographer": "ChieuTimViet",
+      "declaredLicense": "CC BY 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-tu-son-la/nha-tu-son-la-khu-giam-cam-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 147208,
+      "realWidth": 1200,
+      "realHeight": 797,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Nh%C3%A0_t%C3%B9_S%C6%A1n_La_-_panoramio.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "khoi-nghia-yen-bai-1930",
+      "localityCode": "15",
+      "siteTier": "grade12",
+      "mediaKey": "khoi-nghia-yen-bai-1930-chan-dung-13-liet-si-khoi-nghia-yen-bai",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Portraits_of_13_nationalists_executed_in_Yen-Bay_on_17_June_1930.png",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 2941,
+        "height": 4412,
+        "mime": "image/png",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Portraits_of_13_nationalists_executed_in_Yen-Bay_on_17_June_1930.png",
+        "artist": "Monde",
+        "license": "Public domain"
+      },
+      "declaredFileUrl": "storage:locations/heritage/khoi-nghia-yen-bai-1930/chan-dung-13-liet-si-khoi-nghia-yen-bai-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 1800,
+      "declaredPhotographer": "Báo chí đương thời (1930)",
+      "declaredLicense": "Public domain",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khoi-nghia-yen-bai-1930/chan-dung-13-liet-si-khoi-nghia-yen-bai-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 674928,
+      "realWidth": 1200,
+      "realHeight": 1800,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Portraits_of_13_nationalists_executed_in_Yen-Bay_on_17_June_1930.png",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "atk-dinh-hoa",
+      "localityCode": "19",
+      "siteTier": "grade12",
+      "mediaKey": "atk-dinh-hoa-nha-tuong-niem-bac-ho-deo-de",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:ATK_DINH_HOA.JPG",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 2048,
+        "height": 1536,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:ATK_DINH_HOA.JPG",
+        "artist": "Minhminh284",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/atk-dinh-hoa/nha-tuong-niem-bac-ho-deo-de-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Minhminh284",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/atk-dinh-hoa/nha-tuong-niem-bac-ho-deo-de-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 176560,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:ATK_DINH_HOA.JPG",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "atk-cho-don",
+      "localityCode": "19",
+      "siteTier": "extended",
+      "mediaKey": "atk-cho-don-di-tich-deo-so-cho-don",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Đèo_So.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 2688,
+        "height": 1520,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%C4%90%C3%A8o_So.jpg",
+        "artist": "Gió Đông at Vietnamese Wikipedia",
+        "license": "Public domain"
+      },
+      "declaredFileUrl": "storage:locations/heritage/atk-cho-don/di-tich-deo-so-cho-don-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 679,
+      "declaredPhotographer": "Gió Đông",
+      "declaredLicense": "Public domain",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/atk-cho-don/di-tich-deo-so-cho-don-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 140400,
+      "realWidth": 1200,
+      "realHeight": 679,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:%C4%90%C3%A8o_So.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "khoi-nghia-bac-son",
+      "localityCode": "20",
+      "siteTier": "grade12",
+      "mediaKey": "khoi-nghia-bac-son-bao-tang-khoi-nghia-bac-son",
+      "isCover": true,
+      "isCommons": false,
+      "commonsTitle": null,
+      "commonsMissing": null,
+      "commonsDetails": null,
+      "declaredFileUrl": "storage:locations/heritage/khoi-nghia-bac-son/bao-tang-khoi-nghia-bac-son-1200.webp",
+      "declaredWidth": 1024,
+      "declaredHeight": 682,
+      "declaredPhotographer": "Trung tâm Thông tin Xúc tiến Du lịch Lạng Sơn",
+      "declaredLicense": null,
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khoi-nghia-bac-son/bao-tang-khoi-nghia-bac-son-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 127868,
+      "realWidth": 1024,
+      "realHeight": 682,
+      "realFormat": "webp",
+      "sourcePageUrl": "http://langsontourism.com.vn/vi/khoinghiabacson",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "ai-chi-lang",
+      "localityCode": "20",
+      "siteTier": "extended",
+      "mediaKey": "ai-chi-lang-thung-lung-ai-chi-lang",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Chi_Lăng_2.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 4255,
+        "height": 3043,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Chi_L%C4%83ng_2.jpg",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/ai-chi-lang/thung-lung-ai-chi-lang-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 858,
+      "declaredPhotographer": "Bùi Thụy Đào Nguyên",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ai-chi-lang/thung-lung-ai-chi-lang-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 45422,
+      "realWidth": 1200,
+      "realHeight": 858,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Chi_L%C4%83ng_2.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "mo-than-deo-nai",
+      "localityCode": "22",
+      "siteTier": "grade12",
+      "mediaKey": "mo-than-deo-nai-bia-bac-ho-ve-tham-mo-deo-nai",
+      "isCover": true,
+      "isCommons": false,
+      "commonsTitle": null,
+      "commonsMissing": null,
+      "commonsDetails": null,
+      "declaredFileUrl": "storage:locations/heritage/mo-than-deo-nai/bia-bac-ho-ve-tham-mo-deo-nai-1200.webp",
+      "declaredWidth": 800,
+      "declaredHeight": 530,
+      "declaredPhotographer": "Báo Quảng Ninh",
+      "declaredLicense": null,
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/mo-than-deo-nai/bia-bac-ho-ve-tham-mo-deo-nai-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 91876,
+      "realWidth": 800,
+      "realHeight": 530,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://baoquangninh.vn/di-tich-noi-bac-ho-ve-tham-mo-deo-nai-post2342565.html",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "bai-coc-bach-dang",
+      "localityCode": "22",
+      "siteTier": "extended",
+      "mediaKey": "bai-coc-bach-dang-bai-coc-yen-giang",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Cọc_Bạch_Đằng.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 1772,
+        "height": 1181,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/bai-coc-bach-dang/bai-coc-yen-giang-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 800,
+      "declaredPhotographer": "Bùi Thụy Đào Nguyên",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/bai-coc-bach-dang/bai-coc-yen-giang-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 144420,
+      "realWidth": 1200,
+      "realHeight": 800,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "atk-ii-hiep-hoa",
+      "localityCode": "24",
+      "siteTier": "grade12",
+      "mediaKey": "atk-ii-hiep-hoa-cay-da-cho-van-atk-ii",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:HiepHoaCayDa.JPG",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3648,
+        "height": 2736,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:HiepHoaCayDa.JPG",
+        "artist": "Bùi Thế Tâm",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/atk-ii-hiep-hoa/cay-da-cho-van-atk-ii-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Bùi Thế Tâm",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/atk-ii-hiep-hoa/cay-da-cho-van-atk-ii-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 208428,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:HiepHoaCayDa.JPG",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "khoi-nghia-yen-the",
+      "localityCode": "24",
+      "siteTier": "extended",
+      "mediaKey": "khoi-nghia-yen-the-hoang-hoa-tham-tren-ngua",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Hoàng_Hoa_Thám_riding_a_horse.png",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 1127,
+        "height": 2037,
+        "mime": "image/png",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ho%C3%A0ng_Hoa_Th%C3%A1m_riding_a_horse.png",
+        "artist": "unknown",
+        "license": "Public domain"
+      },
+      "declaredFileUrl": "storage:locations/heritage/khoi-nghia-yen-the/hoang-hoa-tham-tren-ngua-1200.webp",
+      "declaredWidth": 1127,
+      "declaredHeight": 2037,
+      "declaredPhotographer": "unknown",
+      "declaredLicense": "Public domain",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khoi-nghia-yen-the/hoang-hoa-tham-tren-ngua-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 371956,
+      "realWidth": 1127,
+      "realHeight": 2037,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ho%C3%A0ng_Hoa_Th%C3%A1m_riding_a_horse.png",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "chien-thang-song-lo-doan-hung",
+      "localityCode": "25",
+      "siteTier": "grade12",
+      "mediaKey": "chien-thang-song-lo-doan-hung-tuong-dai-song-lo",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Tượng_đài_chiến_thắng_Sông_Lô.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 1024,
+        "height": 768,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_chi%E1%BA%BFn_th%E1%BA%AFng_S%C3%B4ng_L%C3%B4.jpg",
+        "artist": "Vhung1214",
+        "license": "CC BY-SA 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/chien-thang-song-lo-doan-hung/tuong-dai-song-lo-1200.webp",
+      "declaredWidth": 1024,
+      "declaredHeight": 768,
+      "declaredPhotographer": "Vhung1214",
+      "declaredLicense": "CC BY-SA 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-song-lo-doan-hung/tuong-dai-song-lo-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 53886,
+      "realWidth": 1024,
+      "realHeight": 768,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_chi%E1%BA%BFn_th%E1%BA%AFng_S%C3%B4ng_L%C3%B4.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "khu-di-tich-den-hung",
+      "localityCode": "25",
+      "siteTier": "extended",
+      "mediaKey": "khu-di-tich-den-hung-cong-vao-den-hung",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Đền_Hùng.JPG",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 1673,
+        "height": 1199,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BB%81n_H%C3%B9ng.JPG",
+        "artist": "Hoangvantoanajc",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/khu-di-tich-den-hung/cong-vao-den-hung-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 860,
+      "declaredPhotographer": "Hoangvantoanajc",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-di-tich-den-hung/cong-vao-den-hung-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 254230,
+      "realWidth": 1200,
+      "realHeight": 860,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BB%81n_H%C3%B9ng.JPG",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "ben-k15-do-son",
+      "localityCode": "31",
+      "siteTier": "grade12",
+      "mediaKey": "ben-k15-do-son-tuong-dai-ben-k15-do-son",
+      "isCover": true,
+      "isCommons": false,
+      "commonsTitle": null,
+      "commonsMissing": null,
+      "commonsDetails": null,
+      "declaredFileUrl": "storage:locations/heritage/ben-k15-do-son/tuong-dai-ben-k15-do-son-1200.webp",
+      "declaredWidth": 1024,
+      "declaredHeight": 684,
+      "declaredPhotographer": "Thông tấn xã Việt Nam (TTXVN)",
+      "declaredLicense": null,
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ben-k15-do-son/tuong-dai-ben-k15-do-son-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 39858,
+      "realWidth": 1024,
+      "realHeight": 684,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://chinhsachcuocsong.vnanet.vn/ben-tau-khong-so-k15-dia-chi-do-nhac-nho-the-he-tre-ve-gia-tri-cua-hoa-binh-doc-lap/83591.html",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "con-son-kiep-bac",
+      "localityCode": "31",
+      "siteTier": "extended",
+      "mediaKey": "con-son-kiep-bac-cong-nghi-mon-den-kiep-bac",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Den_kiep_bac.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3072,
+        "height": 2304,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Den_kiep_bac.jpg",
+        "artist": "Handyhuy (thảo luận) 14:20, ngày 21 tháng 4 năm 2008 (UTC)",
+        "license": "CC BY 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/con-son-kiep-bac/cong-nghi-mon-den-kiep-bac-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Handyhuy ( thảo luận ) 14:20, ngày 21 tháng 4 năm 2008 (UTC)",
+      "declaredLicense": "CC BY 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/con-son-kiep-bac/cong-nghi-mon-den-kiep-bac-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 184280,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Den_kiep_bac.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "tieng-trong-tien-hai",
+      "localityCode": "33",
+      "siteTier": "grade12",
+      "mediaKey": "tieng-trong-tien-hai-dinh-lang-nho-lam-le-ky-niem",
+      "isCover": true,
+      "isCommons": false,
+      "commonsTitle": null,
+      "commonsMissing": null,
+      "commonsDetails": null,
+      "declaredFileUrl": "storage:locations/heritage/tieng-trong-tien-hai/dinh-lang-nho-lam-le-ky-niem-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 899,
+      "declaredPhotographer": "Cổng Thông tin Điện tử xã Đông Châu",
+      "declaredLicense": null,
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/tieng-trong-tien-hai/dinh-lang-nho-lam-le-ky-niem-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 164012,
+      "realWidth": 1200,
+      "realHeight": 899,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://dongchau.hungyen.gov.vn/dinh-lang-nho-lam-to-chuc-le-ky-niem-ngay-truyen-thong-cach-mang-c260.html",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "pho-hien",
+      "localityCode": "33",
+      "siteTier": "extended",
+      "mediaKey": "pho-hien-tam-quan-van-mieu-xich-dang",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Văn_miếu_Xích_Đằng_01.JPG",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 4000,
+        "height": 3000,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:V%C4%83n_mi%E1%BA%BFu_X%C3%ADch_%C4%90%E1%BA%B1ng_01.JPG",
+        "artist": "Nguyễn Thanh Quang",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/pho-hien/tam-quan-van-mieu-xich-dang-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Nguyễn Thanh Quang",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/pho-hien/tam-quan-van-mieu-xich-dang-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 110616,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:V%C4%83n_mi%E1%BA%BFu_X%C3%ADch_%C4%90%E1%BA%B1ng_01.JPG",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "nha-may-det-nam-dinh",
+      "localityCode": "37",
+      "siteTier": "grade12",
+      "mediaKey": "nha-may-det-nam-dinh-so-do-nha-may-det-nam-dinh",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Sơ_đồ_Nhà_máy_Dệt_Nam_Định_(Bảo_tàng_tỉnh_Nam_Định).jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 10000,
+        "height": 5055,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:S%C6%A1_%C4%91%E1%BB%93_Nh%C3%A0_m%C3%A1y_D%E1%BB%87t_Nam_%C4%90%E1%BB%8Bnh_(B%E1%BA%A3o_t%C3%A0ng_t%E1%BB%89nh_Nam_%C4%90%E1%BB%8Bnh).jpg",
+        "artist": "The government of the French protectorate of Annam and Tonkin, French Indo-China.",
+        "license": "Public domain"
+      },
+      "declaredFileUrl": "storage:locations/heritage/nha-may-det-nam-dinh/so-do-nha-may-det-nam-dinh-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 606,
+      "declaredPhotographer": "The government of the French protectorate of Annam and Tonkin, French Indo-China.",
+      "declaredLicense": "Public domain",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-may-det-nam-dinh/so-do-nha-may-det-nam-dinh-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 72856,
+      "realWidth": 1200,
+      "realHeight": 606,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:S%C6%A1_%C4%91%E1%BB%93_Nh%C3%A0_m%C3%A1y_D%E1%BB%87t_Nam_%C4%90%E1%BB%8Bnh_(B%E1%BA%A3o_t%C3%A0ng_t%E1%BB%89nh_Nam_%C4%90%E1%BB%8Bnh).jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "co-do-hoa-lu",
+      "localityCode": "37",
+      "siteTier": "extended",
+      "mediaKey": "co-do-hoa-lu-cong-vao-co-do-hoa-lu",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Gate_at_Hoa_Lu_-_Vietnam_-_August_2023.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 4032,
+        "height": 3024,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Gate_at_Hoa_Lu_-_Vietnam_-_August_2023.jpg",
+        "artist": "Anass Sedrati",
+        "license": "CC BY-SA 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/co-do-hoa-lu/cong-vao-co-do-hoa-lu-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Anass Sedrati",
+      "declaredLicense": "CC BY-SA 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/co-do-hoa-lu/cong-vao-co-do-hoa-lu-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 321786,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Gate_at_Hoa_Lu_-_Vietnam_-_August_2023.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "cau-ham-rong",
+      "localityCode": "38",
+      "siteTier": "grade12",
+      "mediaKey": "cau-ham-rong-cau-ham-rong-song-ma",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Ham_Rong_Bridge.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 1280,
+        "height": 960,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ham_Rong_Bridge.jpg",
+        "artist": "Rolers.FTU",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/cau-ham-rong/cau-ham-rong-song-ma-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Rolers.FTU",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/cau-ham-rong/cau-ham-rong-song-ma-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 141092,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ham_Rong_Bridge.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "thanh-nha-ho",
+      "localityCode": "38",
+      "siteTier": "extended",
+      "mediaKey": "thanh-nha-ho-cong-nam-thanh-nha-ho",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Tay_Do_castle_South_gate.JPG",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 2816,
+        "height": 2112,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Tay_Do_castle_South_gate.JPG",
+        "artist": "vi:Thành viên:Silviculture",
+        "license": "Public domain"
+      },
+      "declaredFileUrl": "storage:locations/heritage/thanh-nha-ho/cong-nam-thanh-nha-ho-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "vi:Thành viên:Silviculture",
+      "declaredLicense": "Public domain",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/thanh-nha-ho/cong-nam-thanh-nha-ho-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 182450,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Tay_Do_castle_South_gate.JPG",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "khu-di-tich-kim-lien",
+      "localityCode": "40",
+      "siteTier": "grade12",
+      "mediaKey": "khu-di-tich-kim-lien-den-tuong-niem-kim-lien",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Kim_Lien_Monuments_Park.JPG",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3072,
+        "height": 2304,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Kim_Lien_Monuments_Park.JPG",
+        "artist": "Liftold at Vietnamese Wikipedia",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/khu-di-tich-kim-lien/den-tuong-niem-kim-lien-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Liftold at Vietnamese Wikipedia",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-di-tich-kim-lien/den-tuong-niem-kim-lien-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 202682,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Kim_Lien_Monuments_Park.JPG",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "truong-bon",
+      "localityCode": "40",
+      "siteTier": "extended",
+      "mediaKey": "truong-bon-toan-canh-di-tich-truong-bon",
+      "isCover": true,
+      "isCommons": false,
+      "commonsTitle": null,
+      "commonsMissing": null,
+      "commonsDetails": null,
+      "declaredFileUrl": "storage:locations/heritage/truong-bon/toan-canh-di-tich-truong-bon-1200.webp",
+      "declaredWidth": 1000,
+      "declaredHeight": 617,
+      "declaredPhotographer": "Báo Nhân Dân",
+      "declaredLicense": null,
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/truong-bon/toan-canh-di-tich-truong-bon-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 134172,
+      "realWidth": 1000,
+      "realHeight": 617,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://nhandan.vn/truong-bon-mot-bieu-tuong-cua-tinh-than-viet-nam-post721703.html",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "nga-ba-dong-loc",
+      "localityCode": "42",
+      "siteTier": "grade12",
+      "mediaKey": "nga-ba-dong-loc-tuong-dai-nga-ba-dong-loc",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Nga_Ba_Dong_Loc.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3456,
+        "height": 1482,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Nga_Ba_Dong_Loc.jpg",
+        "artist": "Khoitran1957",
+        "license": "CC BY-SA 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/nga-ba-dong-loc/tuong-dai-nga-ba-dong-loc-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 515,
+      "declaredPhotographer": "Khoitran1957",
+      "declaredLicense": "CC BY-SA 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nga-ba-dong-loc/tuong-dai-nga-ba-dong-loc-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 216958,
+      "realWidth": 1200,
+      "realHeight": 515,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Nga_Ba_Dong_Loc.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "thanh-co-quang-tri",
+      "localityCode": "44",
+      "siteTier": "grade12",
+      "mediaKey": "thanh-co-quang-tri-dai-tuong-niem-thanh-co-quang-tri",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Thành_cổ_Quảng_Trị_4.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 4608,
+        "height": 3456,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_4.jpg",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/thanh-co-quang-tri/dai-tuong-niem-thanh-co-quang-tri-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Bùi Thụy Đào Nguyên",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/thanh-co-quang-tri/dai-tuong-niem-thanh-co-quang-tri-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 142084,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_4.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "doi-bo-hien-luong-ben-hai",
+      "localityCode": "44",
+      "siteTier": "extended",
+      "mediaKey": "doi-bo-hien-luong-ben-hai-cau-hien-luong-song-ben-hai",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Benhai03.JPG",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 1280,
+        "height": 960,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Benhai03.JPG",
+        "artist": "Đỗ Tuấn Hưng",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/doi-bo-hien-luong-ben-hai/cau-hien-luong-song-ben-hai-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Đỗ Tuấn Hưng",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/doi-bo-hien-luong-ben-hai/cau-hien-luong-song-ben-hai-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 47364,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Benhai03.JPG",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "ngo-mon-hue",
+      "localityCode": "46",
+      "siteTier": "grade12",
+      "mediaKey": "ngo-mon-hue-ngo-mon-hoang-thanh-hue",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Huế_(2024)_-_Meridian_Gate_-_Ngọ_Môn_(Hoàng_thành_Huế)_-_img_02.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3830,
+        "height": 2872,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Hu%E1%BA%BF_(2024)_-_Meridian_Gate_-_Ng%E1%BB%8D_M%C3%B4n_(Ho%C3%A0ng_th%C3%A0nh_Hu%E1%BA%BF)_-_img_02.jpg",
+        "artist": "Chainwit.",
+        "license": "CC BY 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/ngo-mon-hue/ngo-mon-hoang-thanh-hue-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Chainwit.",
+      "declaredLicense": "CC BY 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ngo-mon-hue/ngo-mon-hoang-thanh-hue-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 186278,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Hu%E1%BA%BF_(2024)_-_Meridian_Gate_-_Ng%E1%BB%8D_M%C3%B4n_(Ho%C3%A0ng_th%C3%A0nh_Hu%E1%BA%BF)_-_img_02.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "kinh-thanh-hue-1968",
+      "localityCode": "46",
+      "siteTier": "extended",
+      "mediaKey": "kinh-thanh-hue-1968-ky-dai-kinh-thanh-hue",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Kỳ_Đài_(Kinh_thành_Huế).jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 4608,
+        "height": 3456,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:K%E1%BB%B3_%C4%90%C3%A0i_(Kinh_th%C3%A0nh_Hu%E1%BA%BF).jpg",
+        "artist": "Vdongold",
+        "license": "CC BY-SA 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/kinh-thanh-hue-1968/ky-dai-kinh-thanh-hue-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Vdongold",
+      "declaredLicense": "CC BY-SA 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/kinh-thanh-hue-1968/ky-dai-kinh-thanh-hue-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 34306,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:K%E1%BB%B3_%C4%90%C3%A0i_(Kinh_th%C3%A0nh_Hu%E1%BA%BF).jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "chien-thang-nui-thanh-1965",
+      "localityCode": "48",
+      "siteTier": "grade12",
+      "mediaKey": "chien-thang-nui-thanh-1965-tuong-dai-chien-thang-nui-thanh",
+      "isCover": true,
+      "isCommons": false,
+      "commonsTitle": null,
+      "commonsMissing": null,
+      "commonsDetails": null,
+      "declaredFileUrl": "storage:locations/heritage/chien-thang-nui-thanh-1965/tuong-dai-chien-thang-nui-thanh-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 873,
+      "declaredPhotographer": "Báo Quảng Nam",
+      "declaredLicense": null,
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-nui-thanh-1965/tuong-dai-chien-thang-nui-thanh-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 287574,
+      "realWidth": 1200,
+      "realHeight": 873,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://baoquangnam.vn/di-tich-quoc-gia-chien-thang-nui-thanh-nang-tam-va-lan-toa-3027374.html",
+      "sourcePageStatus": 403,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "khu-den-thap-my-son",
+      "localityCode": "48",
+      "siteTier": "extended",
+      "mediaKey": "khu-den-thap-my-son-quan-the-thap-my-son",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:2024_-_Mỹ_Sơn_Group_B,_C_and_D_-_img_23.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 4032,
+        "height": 3024,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:2024_-_M%E1%BB%B9_S%C6%A1n_Group_B,_C_and_D_-_img_23.jpg",
+        "artist": "Chainwit.",
+        "license": "CC BY 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/khu-den-thap-my-son/quan-the-thap-my-son-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Chainwit.",
+      "declaredLicense": "CC BY 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-den-thap-my-son/quan-the-thap-my-son-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 253618,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:2024_-_M%E1%BB%B9_S%C6%A1n_Group_B,_C_and_D_-_img_23.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "khu-chung-tich-son-my",
+      "localityCode": "51",
+      "siteTier": "grade12",
+      "mediaKey": "khu-chung-tich-son-my-tuong-dai-chung-tich-son-my",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Monument_of_the_My_Lai_Massacre_(2).jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 2048,
+        "height": 1151,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Monument_of_the_My_Lai_Massacre_(2).jpg",
+        "artist": "-JvL- from Netherlands",
+        "license": "CC BY 2.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/khu-chung-tich-son-my/tuong-dai-chung-tich-son-my-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 674,
+      "declaredPhotographer": "-JvL- from Netherlands",
+      "declaredLicense": "CC BY 2.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-chung-tich-son-my/tuong-dai-chung-tich-son-my-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 153516,
+      "realWidth": 1200,
+      "realHeight": 674,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Monument_of_the_My_Lai_Massacre_(2).jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "dak-to-tan-canh",
+      "localityCode": "51",
+      "siteTier": "extended",
+      "mediaKey": "dak-to-tan-canh-tuong-dai-dak-to-tan-canh",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Tượng_đài_Chiến_thắng_Đăk_Tô_-_Tân_Cảnh_(40022454161).jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 4000,
+        "height": 6000,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_Chi%E1%BA%BFn_th%E1%BA%AFng_%C4%90%C4%83k_T%C3%B4_-_T%C3%A2n_C%E1%BA%A3nh_(40022454161).jpg",
+        "artist": "Vinnie Cartabiano",
+        "license": "CC BY 2.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/dak-to-tan-canh/tuong-dai-dak-to-tan-canh-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 1800,
+      "declaredPhotographer": "Vinnie Cartabiano",
+      "declaredLicense": "CC BY 2.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/dak-to-tan-canh/tuong-dai-dak-to-tan-canh-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 292598,
+      "realWidth": 1200,
+      "realHeight": 1800,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_Chi%E1%BA%BFn_th%E1%BA%AFng_%C4%90%C4%83k_T%C3%B4_-_T%C3%A2n_C%E1%BA%A3nh_(40022454161).jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "lang-khang-chien-stor",
+      "localityCode": "52",
+      "siteTier": "grade12",
+      "mediaKey": "lang-khang-chien-stor-nha-luu-niem-anh-hung-nup",
+      "isCover": true,
+      "isCommons": false,
+      "commonsTitle": null,
+      "commonsMissing": null,
+      "commonsDetails": null,
+      "declaredFileUrl": "storage:locations/heritage/lang-khang-chien-stor/nha-luu-niem-anh-hung-nup-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 800,
+      "declaredPhotographer": "Cổng Thông tin Điện tử tỉnh Gia Lai",
+      "declaredLicense": null,
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/lang-khang-chien-stor/nha-luu-niem-anh-hung-nup-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 109010,
+      "realWidth": 1200,
+      "realHeight": 800,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://gialai.gov.vn/du-khach/di-tich-lich-su-van-hoa/lang-khang-chien-stor.html",
+      "sourcePageStatus": 0,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "bao-tang-quang-trung",
+      "localityCode": "52",
+      "siteTier": "extended",
+      "mediaKey": "bao-tang-quang-trung-bao-tang-quang-trung-tay-son",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Bảo_Tàng_Quang_Trung.JPG",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3072,
+        "height": 2304,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:B%E1%BA%A3o_T%C3%A0ng_Quang_Trung.JPG",
+        "artist": "Original uploader was Liftold at vi.wikipedia",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/bao-tang-quang-trung/bao-tang-quang-trung-tay-son-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Original uploader was Liftold at vi.wikipedia",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/bao-tang-quang-trung/bao-tang-quang-trung-tay-son-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 104750,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:B%E1%BA%A3o_T%C3%A0ng_Quang_Trung.JPG",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "san-bay-thanh-son",
+      "localityCode": "56",
+      "siteTier": "grade12",
+      "mediaKey": "san-bay-thanh-son-san-bay-phan-rang-thanh-son-1969",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Douglas_A-1H_Skyraider_of_the_1st_SOS_at_Phan_Rang_Air_Base,_Vietnam,_circa_in_1969_(VA065677).jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 2362,
+        "height": 1546,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Douglas_A-1H_Skyraider_of_the_1st_SOS_at_Phan_Rang_Air_Base,_Vietnam,_circa_in_1969_(VA065677).jpg",
+        "artist": "U.S. Air Force",
+        "license": "Public domain"
+      },
+      "declaredFileUrl": "storage:locations/heritage/san-bay-thanh-son/san-bay-phan-rang-thanh-son-1969-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 785,
+      "declaredPhotographer": "U.S. Air Force",
+      "declaredLicense": "Public domain",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/san-bay-thanh-son/san-bay-phan-rang-thanh-son-1969-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 31696,
+      "realWidth": 1200,
+      "realHeight": 785,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Douglas_A-1H_Skyraider_of_the_1st_SOS_at_Phan_Rang_Air_Base,_Vietnam,_circa_in_1969_(VA065677).jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "thap-ba-ponagar",
+      "localityCode": "56",
+      "siteTier": "extended",
+      "mediaKey": "thap-ba-ponagar-thap-ba-ponagar-nha-trang",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Tháp_bà_Ponagar.JPG",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3264,
+        "height": 2448,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Th%C3%A1p_b%C3%A0_Ponagar.JPG",
+        "artist": "Nguyễn Đông Sơn at Vietnamese Wikipedia",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/thap-ba-ponagar/thap-ba-ponagar-nha-trang-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Nguyễn Đông Sơn at Vietnamese Wikipedia",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/thap-ba-ponagar/thap-ba-ponagar-nha-trang-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 90020,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Th%C3%A1p_b%C3%A0_Ponagar.JPG",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "buon-ma-thuot-1975",
+      "localityCode": "66",
+      "siteTier": "grade12",
+      "mediaKey": "buon-ma-thuot-1975-tuong-dai-chien-thang-buon-ma-thuot",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Buôn_Ma_Thuột_city_square.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 2256,
+        "height": 1496,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Bu%C3%B4n_Ma_Thu%E1%BB%99t_city_square.jpg",
+        "artist": "Rdavout",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/buon-ma-thuot-1975/tuong-dai-chien-thang-buon-ma-thuot-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 796,
+      "declaredPhotographer": "Rdavout",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/buon-ma-thuot-1975/tuong-dai-chien-thang-buon-ma-thuot-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 80460,
+      "realWidth": 1200,
+      "realHeight": 796,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Bu%C3%B4n_Ma_Thu%E1%BB%99t_city_square.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "vung-ro-phu-yen",
+      "localityCode": "66",
+      "siteTier": "extended",
+      "mediaKey": "vung-ro-phu-yen-vinh-vung-ro-ben-tau-khong-so",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Vịnh_Vũng_Rô.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3296,
+        "height": 2472,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:V%E1%BB%8Bnh_V%C5%A9ng_R%C3%B4.jpg",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/vung-ro-phu-yen/vinh-vung-ro-ben-tau-khong-so-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Bùi Thụy Đào Nguyên",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/vung-ro-phu-yen/vinh-vung-ro-ben-tau-khong-so-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 145980,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:V%E1%BB%8Bnh_V%C5%A9ng_R%C3%B4.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "truong-duc-thanh",
+      "localityCode": "68",
+      "siteTier": "grade12",
+      "mediaKey": "truong-duc-thanh-khu-di-tich-truong-duc-thanh",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Trường_Dục_Thanh.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3648,
+        "height": 2736,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Tr%C6%B0%E1%BB%9Dng_D%E1%BB%A5c_Thanh.jpg",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/truong-duc-thanh/khu-di-tich-truong-duc-thanh-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Bùi Thụy Đào Nguyên",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/truong-duc-thanh/khu-di-tich-truong-duc-thanh-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 152852,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Tr%C6%B0%E1%BB%9Dng_D%E1%BB%A5c_Thanh.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "nha-lao-thieu-nhi-da-lat",
+      "localityCode": "68",
+      "siteTier": "extended",
+      "mediaKey": "nha-lao-thieu-nhi-da-lat-cong-vao-nha-lao-thieu-nhi-da-lat",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Da_Lat_Children's_Prison_02.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3072,
+        "height": 2304,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Da_Lat_Children%27s_Prison_02.jpg",
+        "artist": "Diane Selwyn",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/nha-lao-thieu-nhi-da-lat/cong-vao-nha-lao-thieu-nhi-da-lat-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Diane Selwyn",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-lao-thieu-nhi-da-lat/cong-vao-nha-lao-thieu-nhi-da-lat-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 157130,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Da_Lat_Children%27s_Prison_02.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "chien-thang-xuan-loc-1975",
+      "localityCode": "75",
+      "siteTier": "grade12",
+      "mediaKey": "chien-thang-xuan-loc-1975-dap-tan-canh-cua-thep-xuan-loc",
+      "isCover": true,
+      "isCommons": false,
+      "commonsTitle": null,
+      "commonsMissing": null,
+      "commonsDetails": null,
+      "declaredFileUrl": "storage:locations/heritage/chien-thang-xuan-loc-1975/dap-tan-canh-cua-thep-xuan-loc-1200.webp",
+      "declaredWidth": 800,
+      "declaredHeight": 450,
+      "declaredPhotographer": "Tư liệu TTXVN / VietnamPlus",
+      "declaredLicense": null,
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-xuan-loc-1975/dap-tan-canh-cua-thep-xuan-loc-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 13202,
+      "realWidth": 800,
+      "realHeight": 450,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://www.vietnamplus.vn/khoanh-khac-va-su-kien-ngay-2141975-dap-tan-canh-cua-thep-xuan-loc-post1034024.vnp",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "can-cu-ta-thiet",
+      "localityCode": "75",
+      "siteTier": "extended",
+      "mediaKey": "can-cu-ta-thiet-can-cu-ta-thiet-loc-ninh",
+      "isCover": true,
+      "isCommons": false,
+      "commonsTitle": null,
+      "commonsMissing": null,
+      "commonsDetails": null,
+      "declaredFileUrl": "storage:locations/heritage/can-cu-ta-thiet/can-cu-ta-thiet-loc-ninh-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 674,
+      "declaredPhotographer": "Sỹ Tuyên / TTXVN",
+      "declaredLicense": null,
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/can-cu-ta-thiet/can-cu-ta-thiet-loc-ninh-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 122188,
+      "realWidth": 1200,
+      "realHeight": 674,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://www.vietnamplus.vn/50-nam-thu-do-khang-chien-vung-dat-do-loc-ninh-o-binh-phuoc-post780152.vnp",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "dinh-doc-lap",
+      "localityCode": "79",
+      "siteTier": "grade12",
+      "mediaKey": "dinh-doc-lap-mat-tien-dinh-doc-lap",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Palacio_de_la_Reunificación,_Ciudad_Ho_Chi_Minh,_Vietnam,_2013-08-14,_DD_03.JPG",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 5503,
+        "height": 2345,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_la_Reunificaci%C3%B3n,_Ciudad_Ho_Chi_Minh,_Vietnam,_2013-08-14,_DD_03.JPG",
+        "artist": "Diego Delso",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/dinh-doc-lap/mat-tien-dinh-doc-lap-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 511,
+      "declaredPhotographer": "Diego Delso",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/dinh-doc-lap/mat-tien-dinh-doc-lap-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 91910,
+      "realWidth": 1200,
+      "realHeight": 511,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_la_Reunificaci%C3%B3n,_Ciudad_Ho_Chi_Minh,_Vietnam,_2013-08-14,_DD_03.JPG",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "dia-dao-cu-chi",
+      "localityCode": "79",
+      "siteTier": "extended",
+      "mediaKey": "dia-dao-cu-chi-cua-ham-dia-dao-cu-chi",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Cu_Chi_Tunnel_Entry_(1).jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 1600,
+        "height": 1200,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Cu_Chi_Tunnel_Entry_(1).jpg",
+        "artist": "Thomas Schoch",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/dia-dao-cu-chi/cua-ham-dia-dao-cu-chi-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Thomas Schoch",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/dia-dao-cu-chi/cua-ham-dia-dao-cu-chi-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 251356,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Cu_Chi_Tunnel_Entry_(1).jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "can-cu-trung-uong-cuc-mien-nam",
+      "localityCode": "80",
+      "siteTier": "grade12",
+      "mediaKey": "can-cu-trung-uong-cuc-mien-nam-duong-vao-can-cu-trung-uong-cuc",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Ngã_Ba_vào_Trung_ương_Cục_miền_Nam_-_panoramio.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3888,
+        "height": 2592,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ng%C3%A3_Ba_v%C3%A0o_Trung_%C6%B0%C6%A1ng_C%E1%BB%A5c_mi%E1%BB%81n_Nam_-_panoramio.jpg",
+        "artist": "Lam Tr Th",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/can-cu-trung-uong-cuc-mien-nam/duong-vao-can-cu-trung-uong-cuc-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 800,
+      "declaredPhotographer": "Lam Tr Th",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/can-cu-trung-uong-cuc-mien-nam/duong-vao-can-cu-trung-uong-cuc-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 229328,
+      "realWidth": 1200,
+      "realHeight": 800,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ng%C3%A3_Ba_v%C3%A0o_Trung_%C6%B0%C6%A1ng_C%E1%BB%A5c_mi%E1%BB%81n_Nam_-_panoramio.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "nga-tu-duc-hoa",
+      "localityCode": "80",
+      "siteTier": "extended",
+      "mediaKey": "nga-tu-duc-hoa-cong-vien-tuong-dai-vo-van-tan",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:CongVienVoVanTan.JPG",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 1616,
+        "height": 1080,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:CongVienVoVanTan.JPG",
+        "artist": "Myhanh (thảo luận)",
+        "license": "CC BY 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/nga-tu-duc-hoa/cong-vien-tuong-dai-vo-van-tan-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 802,
+      "declaredPhotographer": "Myhanh ( thảo luận )",
+      "declaredLicense": "CC BY 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nga-tu-duc-hoa/cong-vien-tuong-dai-vo-van-tan-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 163206,
+      "realWidth": 1200,
+      "realHeight": 802,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:CongVienVoVanTan.JPG",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "chien-thang-ap-bac-1963",
+      "localityCode": "82",
+      "siteTier": "grade12",
+      "mediaKey": "chien-thang-ap-bac-1963-tuong-dai-chien-thang-ap-bac",
+      "isCover": true,
+      "isCommons": false,
+      "commonsTitle": null,
+      "commonsMissing": null,
+      "commonsDetails": null,
+      "declaredFileUrl": "storage:locations/heritage/chien-thang-ap-bac-1963/tuong-dai-chien-thang-ap-bac-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 800,
+      "declaredPhotographer": "Minh Trí / TTXVN",
+      "declaredLicense": null,
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-ap-bac-1963/tuong-dai-chien-thang-ap-bac-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 95222,
+      "realWidth": 1200,
+      "realHeight": 800,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://www.vietnamplus.vn/chien-thang-ap-bac-buoc-ngoat-trong-cuoc-khang-chien-chong-my-post839211.vnp",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "mo-cu-pho-bang-nguyen-sinh-sac",
+      "localityCode": "82",
+      "siteTier": "extended",
+      "mediaKey": "mo-cu-pho-bang-nguyen-sinh-sac-lang-mo-cu-pho-bang-nguyen-sinh-sac",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Mộ_Nguyễn_Sinh_Sắc_ở_Cao_Lãnh.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 4608,
+        "height": 3456,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:M%E1%BB%99_Nguy%E1%BB%85n_Sinh_S%E1%BA%AFc_%E1%BB%9F_Cao_L%C3%A3nh.jpg",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/mo-cu-pho-bang-nguyen-sinh-sac/lang-mo-cu-pho-bang-nguyen-sinh-sac-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Bùi Thụy Đào Nguyên",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/mo-cu-pho-bang-nguyen-sinh-sac/lang-mo-cu-pho-bang-nguyen-sinh-sac-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 95030,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:M%E1%BB%99_Nguy%E1%BB%85n_Sinh_S%E1%BA%AFc_%E1%BB%9F_Cao_L%C3%A3nh.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "dong-khoi-ben-tre-1960",
+      "localityCode": "86",
+      "siteTier": "grade12",
+      "mediaKey": "dong-khoi-ben-tre-1960-nha-truyen-thong-dong-khoi",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Nha_truyen_thong_Dong_Khoi.JPG",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 4592,
+        "height": 3056,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Nha_truyen_thong_Dong_Khoi.JPG",
+        "artist": "Hoangvantoanajc",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/dong-khoi-ben-tre-1960/nha-truyen-thong-dong-khoi-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 799,
+      "declaredPhotographer": "Hoangvantoanajc",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/dong-khoi-ben-tre-1960/nha-truyen-thong-dong-khoi-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 83342,
+      "realWidth": 1200,
+      "realHeight": 799,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Nha_truyen_thong_Dong_Khoi.JPG",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "khu-tuong-niem-vo-van-kiet",
+      "localityCode": "86",
+      "siteTier": "extended",
+      "mediaKey": "khu-tuong-niem-vo-van-kiet-phu-dieu-khu-tuong-niem-vo-van-kiet",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Phù_điêu_Võ_Văn_Kiệt.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 2560,
+        "height": 1920,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ph%C3%B9_%C4%91i%C3%AAu_V%C3%B5_V%C4%83n_Ki%E1%BB%87t.jpg",
+        "artist": "Quốc Anh Võ",
+        "license": "CC BY-SA 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/khu-tuong-niem-vo-van-kiet/phu-dieu-khu-tuong-niem-vo-van-kiet-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Quốc Anh Võ",
+      "declaredLicense": "CC BY-SA 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-tuong-niem-vo-van-kiet/phu-dieu-khu-tuong-niem-vo-van-kiet-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 215038,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ph%C3%B9_%C4%91i%C3%AAu_V%C3%B5_V%C4%83n_Ki%E1%BB%87t.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "nha-tu-phu-quoc",
+      "localityCode": "91",
+      "siteTier": "grade12",
+      "mediaKey": "nha-tu-phu-quoc-trai-giam-tu-binh-phu-quoc",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Phu_Quoc_Prison_02.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 1200,
+        "height": 800,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Phu_Quoc_Prison_02.jpg",
+        "artist": "Frank Fox",
+        "license": "CC BY-SA 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/nha-tu-phu-quoc/trai-giam-tu-binh-phu-quoc-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 800,
+      "declaredPhotographer": "Frank Fox",
+      "declaredLicense": "CC BY-SA 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-tu-phu-quoc/trai-giam-tu-binh-phu-quoc-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 140884,
+      "realWidth": 1200,
+      "realHeight": 800,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Phu_Quoc_Prison_02.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "khu-luu-niem-ton-duc-thang",
+      "localityCode": "91",
+      "siteTier": "extended",
+      "mediaKey": "khu-luu-niem-ton-duc-thang-nha-tuong-niem-chu-tich-ton-duc-thang",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Le_mémorial_du_Président_Ton_Duc_Thang_(île_du_Tigre,_Vietnam)_(6635518367).jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 1536,
+        "height": 1024,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Le_m%C3%A9morial_du_Pr%C3%A9sident_Ton_Duc_Thang_(%C3%AEle_du_Tigre,_Vietnam)_(6635518367).jpg",
+        "artist": "Jean-Pierre Dalbéra from Paris, France",
+        "license": "CC BY 2.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/khu-luu-niem-ton-duc-thang/nha-tuong-niem-chu-tich-ton-duc-thang-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 800,
+      "declaredPhotographer": "Jean-Pierre Dalbéra from Paris, France",
+      "declaredLicense": "CC BY 2.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-luu-niem-ton-duc-thang/nha-tuong-niem-chu-tich-ton-duc-thang-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 273016,
+      "realWidth": 1200,
+      "realHeight": 800,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Le_m%C3%A9morial_du_Pr%C3%A9sident_Ton_Duc_Thang_(%C3%AEle_du_Tigre,_Vietnam)_(6635518367).jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "chien-thang-chuong-thien-1973",
+      "localityCode": "92",
+      "siteTier": "grade12",
+      "mediaKey": "chien-thang-chuong-thien-1973-tuong-dai-chien-thang-75-luot-tieu-doan-chuong-thien",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:ChuongThien2-73.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 2252,
+        "height": 3000,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:ChuongThien2-73.jpg",
+        "artist": "Huongdb",
+        "license": "CC BY-SA 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/chien-thang-chuong-thien-1973/tuong-dai-chien-thang-75-luot-tieu-doan-chuong-thien-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 1599,
+      "declaredPhotographer": "Huongdb",
+      "declaredLicense": "CC BY-SA 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-chuong-thien-1973/tuong-dai-chien-thang-75-luot-tieu-doan-chuong-thien-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 66090,
+      "realWidth": 1200,
+      "realHeight": 1599,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:ChuongThien2-73.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "kham-lon-can-tho",
+      "localityCode": "92",
+      "siteTier": "extended",
+      "mediaKey": "kham-lon-can-tho-di-tich-kham-lon-can-tho",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Khám_lớn_Cần_Thơ.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3296,
+        "height": 2472,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Kh%C3%A1m_l%E1%BB%9Bn_C%E1%BA%A7n_Th%C6%A1.jpg",
+        "artist": "Bùi Thụy Đào Nguyên",
+        "license": "CC BY-SA 3.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/kham-lon-can-tho/di-tich-kham-lon-can-tho-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 900,
+      "declaredPhotographer": "Bùi Thụy Đào Nguyên",
+      "declaredLicense": "CC BY-SA 3.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/kham-lon-can-tho/di-tich-kham-lon-can-tho-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 159624,
+      "realWidth": 1200,
+      "realHeight": 900,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Kh%C3%A1m_l%E1%BB%9Bn_C%E1%BA%A7n_Th%C6%A1.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "khoi-nghia-hon-khoai-1940",
+      "localityCode": "96",
+      "siteTier": "grade12",
+      "mediaKey": "khoi-nghia-hon-khoai-1940-hon-khoai-noi-khoi-nghia-nam-1940",
+      "isCover": true,
+      "isCommons": true,
+      "commonsTitle": "File:Hon_Khoai_Island.jpg",
+      "commonsMissing": false,
+      "commonsDetails": {
+        "width": 3755,
+        "height": 3012,
+        "mime": "image/jpeg",
+        "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Hon_Khoai_Island.jpg",
+        "artist": "Sgnpkd",
+        "license": "CC BY-SA 4.0"
+      },
+      "declaredFileUrl": "storage:locations/heritage/khoi-nghia-hon-khoai-1940/hon-khoai-noi-khoi-nghia-nam-1940-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 963,
+      "declaredPhotographer": "Sgnpkd",
+      "declaredLicense": "CC BY-SA 4.0",
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khoi-nghia-hon-khoai-1940/hon-khoai-noi-khoi-nghia-nam-1940-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 24224,
+      "realWidth": 1200,
+      "realHeight": 963,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Hon_Khoai_Island.jpg",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    },
+    {
+      "siteSlug": "ben-vam-lung",
+      "localityCode": "96",
+      "siteTier": "extended",
+      "mediaKey": "ben-vam-lung-tuong-dai-ben-vam-lung-duong-ho-chi-minh-tren-bien",
+      "isCover": true,
+      "isCommons": false,
+      "commonsTitle": null,
+      "commonsMissing": null,
+      "commonsDetails": null,
+      "declaredFileUrl": "storage:locations/heritage/ben-vam-lung/tuong-dai-ben-vam-lung-duong-ho-chi-minh-tren-bien-1200.webp",
+      "declaredWidth": 1200,
+      "declaredHeight": 675,
+      "declaredPhotographer": "Huỳnh Anh / TTXVN",
+      "declaredLicense": null,
+      "fileStatus": 200,
+      "finalUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ben-vam-lung/tuong-dai-ben-vam-lung-duong-ho-chi-minh-tren-bien-1200.webp",
+      "contentType": "image/webp",
+      "byteLength": 229938,
+      "realWidth": 1200,
+      "realHeight": 675,
+      "realFormat": "webp",
+      "sourcePageUrl": "https://www.vietnamplus.vn/ca-mau-bao-ton-di-tich-ben-vam-lung-diem-cuoi-duong-ho-chi-minh-tren-bien-post1034895.vnp",
+      "sourcePageStatus": 200,
+      "ok": true,
+      "error": null
+    }
+  ],
+  "videoAudits": [],
+  "sourceAudits": [
+    {
+      "key": "src-osm",
+      "title": "OpenStreetMap Geographic Data",
+      "url": "https://www.openstreetmap.org",
+      "domainOnly": true
+    },
+    {
+      "key": "src-sgk-su-12",
+      "title": "Sách giáo khoa Lịch sử 12 (Kết nối tri thức với cuộc sống)",
+      "url": "https://nxbgd.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-nha-tu-hoa-lo",
+      "title": "Hồ sơ Di tích lịch sử Nhà tù Hỏa Lò",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-hoang-thanh-thang-long",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Khu trung tâm Hoàng thành Thăng Long",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-pac-bo",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Pác Bó",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-rung-tran-hung-dao",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm lưu niệm thành lập Đội VNTTGPQ",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-tan-trao",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Tân Trào",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-cot-co-lung-cu",
+      "title": "Hồ sơ Di tích lịch sử danh thắng Cột cờ Lũng Cú",
+      "url": "https://hagiang.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-doi-a1",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Chiến trường Điện Biên Phủ",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-ham-de-castries",
+      "title": "Hồ sơ Di tích Hầm Sở chỉ huy Tập đoàn cứ điểm Điện Biên Phủ",
+      "url": "https://dienbien.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-qdnd-lai-chau-1953",
+      "title": "Chiến thắng giải phóng Lai Châu năm 1953 trong Chiến cuộc Đông - Xuân 1953-1954",
+      "url": "https://www.qdnd.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-nha-tu-son-la",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà tù Sơn La",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-khoi-nghia-yen-bai",
+      "title": "Hồ sơ Di tích lịch sử Khu lăng mộ và Tượng đài Nguyễn Thái Học cùng các nghĩa sĩ Khởi nghĩa Yên Bái",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-atk-dinh-hoa",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) Định Hóa",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-atk-cho-don",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) Chợ Đồn",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-khoi-nghia-bac-son",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Khởi nghĩa Bắc Sơn",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-ai-chi-lang",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Chi Lăng",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-mo-than-deo-nai",
+      "title": "Hồ sơ Di tích lịch sử Địa điểm Bác Hồ về thăm Mỏ than Đèo Nai",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-bach-dang",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Bạch Đằng",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-atk-ii-hiep-hoa",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt An toàn khu (ATK) II Hiệp Hòa",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-khoi-nghia-yen-the",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Những địa điểm Khởi nghĩa Yên Thế",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-chien-thang-song-lo",
+      "title": "Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Sông Lô – Đoan Hùng",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-den-hung",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Đền Hùng",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-ben-k15-do-son",
+      "title": "Hồ sơ Di tích quốc gia Bến K15 Đồ Sơn – Điểm xuất phát Đường Hồ Chí Minh trên biển",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-con-son-kiep-bac",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Quần thể di tích Côn Sơn – Kiếp Bạc",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-tieng-trong-tien-hai",
+      "title": "Hồ sơ Di tích lịch sử Đình Nho Lâm và Khu lưu niệm Tiếng trống Tiền Hải 1930",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-pho-hien",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích Phố Hiến",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-nha-may-det-nam-dinh",
+      "title": "Hồ sơ Di tích lịch sử Nhà máy Dệt Nam Định",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-co-do-hoa-lu",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Cố đô Hoa Lư",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-cau-ham-rong",
+      "title": "Hồ sơ Di tích lịch sử văn hóa Cầu Hàm Rồng",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-thanh-nha-ho",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Thành nhà Hồ",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-kim-lien",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Khu di tích lịch sử Kim Liên",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-truong-bon",
+      "title": "Hồ sơ Di tích lịch sử quốc gia Truông Bồn",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-nga-ba-dong-loc",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Ngã ba Đồng Lộc",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-thanh-co-quang-tri",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Thành cổ Quảng Trị và những địa điểm lưu niệm sự kiện 81 ngày đêm năm 1972",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-hien-luong-ben-hai",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Đôi bờ Hiền Lương – Bến Hải",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-ngo-mon-hue",
+      "title": "Hồ sơ Di sản Thế giới Quần thể Di tích Cố đô Huế (Khu vực Cửa Ngọ Môn)",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-kinh-thanh-hue-1968",
+      "title": "Hồ sơ Sự kiện Mặt trận Thừa Thiên Huế trong cuộc Tổng tiến công và nổi dậy Tết Mậu Thân 1968",
+      "url": "https://baotanglichsu.thuathienhue.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-chien-thang-nui-thanh",
+      "title": "Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Núi Thành",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-my-son",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Khu đền tháp Mỹ Sơn",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-son-my",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm thảm sát Sơn Mỹ",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-dak-to-tan-canh",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Đắk Tô – Tân Cảnh",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-lang-khang-chien-stor",
+      "title": "Hồ sơ Di tích lịch sử Làng kháng chiến Stơr",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-bao-tang-quang-trung",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Đền thờ Tây Sơn Tam Kiệt / Bảo tàng Quang Trung",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-san-bay-thanh-son",
+      "title": "Hồ sơ Di tích lịch sử Địa điểm Phi đội Quyết thắng xuất kích tại Sân bay Thành Sơn",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-thap-ba-ponagar",
+      "title": "Hồ sơ Di tích quốc gia đặc biệt Tháp Bà Ponagar Nha Trang",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-buon-ma-thuot",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Nhà đày Buôn Ma Thuột",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-vung-ro",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Tàu Không số Vịnh Vũng Rô",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-truong-duc-thanh",
+      "title": "Hồ sơ Di tích lịch sử Trường Dục Thanh",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-nha-lao-thieu-nhi-da-lat",
+      "title": "Hồ sơ Di tích lịch sử Nhà lao Thiếu nhi Đà Lạt",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-chien-thang-xuan-loc",
+      "title": "Hồ sơ Di tích lịch sử Tượng đài Chiến thắng Xuân Lộc 1975",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-can-cu-ta-thiet",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Căn cứ Bộ Chỉ huy Miền Tà Thiết",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-dinh-doc-lap",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Dinh Độc Lập",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-dia-dao-cu-chi",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Địa đạo Củ Chi",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-trung-uong-cuc-mien-nam",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Căn cứ Trung ương Cục miền Nam",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-nga-tu-duc-hoa",
+      "title": "Hồ sơ Di tích lịch sử Ngã tư Đức Hòa",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-chien-thang-ap-bac",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng Ấp Bắc",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-mo-nguyen-sinh-sac",
+      "title": "Hồ sơ Di tích lịch sử Khu di tích Cụ Phó bảng Nguyễn Sinh Sắc",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-dong-khoi-ben-tre",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Di tích lịch sử Đồng Khởi Bến Tre",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-vo-van-kiet",
+      "title": "Hồ sơ Khu tưởng niệm Thủ tướng Chính phủ Võ Văn Kiệt",
+      "url": "https://vinhlong.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-nha-tu-phu-quoc",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Trại giam Tù binh Chiến tranh Phú Quốc",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-ton-duc-thang",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Khu lưu niệm Chủ tịch Tôn Đức Thắng",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-chien-thang-chuong-thien",
+      "title": "Quyết định xếp hạng Di tích quốc gia đặc biệt Địa điểm Chiến thắng 75 lượt tiểu đoàn địch của quân và dân khu 9",
+      "url": "http://vanban.chinhphu.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-kham-lon-can-tho",
+      "title": "Hồ sơ Di tích lịch sử Khám Lớn Cần Thơ",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-khoi-nghia-hon-khoai",
+      "title": "Hồ sơ Di tích lịch sử Khởi nghĩa Hòn Khoai 1940",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    },
+    {
+      "key": "src-dsvh-ben-vam-lung",
+      "title": "Hồ sơ Di tích lịch sử Bến Vàm Lũng – Điểm cuối Đường Hồ Chí Minh trên biển",
+      "url": "http://dsvh.gov.vn",
+      "domainOnly": true
+    }
+  ],
+  "liveAudits": {
+    "totalLocations": 64,
+    "totalMedia": 66,
+    "locations": [
+      {
+        "slug": "hoang-thanh-thang-long",
+        "localityCode": "01",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "954e924d-b083-4390-8bc0-243da88632d0",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/hoang-thanh-thang-long/doan-mon-hoang-thanh-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:%C4%90oan_M%C3%B4n,_Ho%C3%A0ng_th%C3%A0nh_Th%C4%83ng_Long,_H%C3%A0_N%E1%BB%99i_001.JPG"
+          }
+        ]
+      },
+      {
+        "slug": "thanh-nha-ho",
+        "localityCode": "38",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "7c6eb697-b7a8-4fcc-9798-d48b19c3b48d",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/thanh-nha-ho/cong-nam-thanh-nha-ho-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Tay_Do_castle_South_gate.JPG"
+          }
+        ]
+      },
+      {
+        "slug": "nha-tu-hoa-lo",
+        "localityCode": "01",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "d5da58d5-a026-43be-aa62-ebcab9bad1a4",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-tu-hoa-lo/cong-chinh-maison-centrale-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Hoa_Lo_Prison_(Maison_Centrale),_Hanoi_(6923115824).jpg"
+          }
+        ]
+      },
+      {
+        "slug": "rung-tran-hung-dao",
+        "localityCode": "04",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "0f3b591c-45a3-4508-953b-4ff6cfb9dfbd",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/rung-tran-hung-dao/nha-trung-bay-rung-tran-hung-dao-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://www.vietnamplus.vn/bao-ton-va-phat-huy-gia-tri-khu-di-tich-lich-su-rung-tran-hung-dao-post292417.vnp"
+          }
+        ]
+      },
+      {
+        "slug": "khu-di-tich-tan-trao",
+        "localityCode": "08",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "496c8644-a553-4f96-b48c-3b52535ecf28",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-di-tich-tan-trao/dinh-tan-trao-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:%C4%90%C3%ACnh_T%C3%A2n_Tr%C3%A0o.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "cot-co-lung-cu",
+        "localityCode": "08",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "2f705db1-b5c5-45e0-9144-bbb68bef9b62",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/cot-co-lung-cu/cot-co-lung-cu-dinh-nui-rong-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:C%E1%BB%99t_c%E1%BB%9D_L%C5%A9ng_C%C3%BA_-_H%C3%A0_Giang.JPG"
+          }
+        ]
+      },
+      {
+        "slug": "khu-den-thap-my-son",
+        "localityCode": "48",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "34f6c6aa-644a-49cd-8eb6-90ac7c9679b8",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-den-thap-my-son/quan-the-thap-my-son-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:2024_-_M%E1%BB%B9_S%C6%A1n_Group_B,_C_and_D_-_img_23.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "doi-a1-dien-bien-phu",
+        "localityCode": "11",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "90416936-ff21-4ab1-aa31-a94333318291",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/doi-a1-dien-bien-phu/dai-tuong-niem-dinh-doi-a1-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Monument_to_Vietminh_Assault_-_Hill_A1_(Eliane_2)_-_Dien_Bien_Phu_-_Vietnam_(48168816427).jpg"
+          }
+        ]
+      },
+      {
+        "slug": "ham-de-castries",
+        "localityCode": "11",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "21a21ce2-a6e0-4bd7-b513-7e29c48b3f96",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ham-de-castries/ham-chi-huy-de-castries-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:H%E1%BA%A7m_ch%E1%BB%89_huy_t%E1%BA%ADp_%C4%91o%C3%A0n_c%E1%BB%A9_%C4%91i%E1%BB%83m_%C4%90i%E1%BB%87n_Bi%C3%AAn_Ph%E1%BB%A7_(2022).jpg"
+          }
+        ]
+      },
+      {
+        "slug": "chien-thang-lai-chau-1953",
+        "localityCode": "12",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "90030f9d-08d1-4bd1-b190-a3665930bedf",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-lai-chau-1953/tuong-dai-quang-truong-lai-chau-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Lai_Ch%C3%A2u_Town_Square_Monument_(2014).jpg"
+          }
+        ]
+      },
+      {
+        "slug": "nha-tu-son-la",
+        "localityCode": "14",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "c5c26e15-d0a9-4167-a573-c6aac14a6f8a",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-tu-son-la/nha-tu-son-la-khu-giam-cam-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Nh%C3%A0_t%C3%B9_S%C6%A1n_La_-_panoramio.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "khoi-nghia-yen-bai-1930",
+        "localityCode": "15",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "e4aa29cb-8597-42cd-b3b7-93ff5d340f3b",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khoi-nghia-yen-bai-1930/chan-dung-13-liet-si-khoi-nghia-yen-bai-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Portraits_of_13_nationalists_executed_in_Yen-Bay_on_17_June_1930.png"
+          }
+        ]
+      },
+      {
+        "slug": "atk-dinh-hoa",
+        "localityCode": "19",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "45fe97a5-1550-4a75-a333-2edadb2839c9",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/atk-dinh-hoa/nha-tuong-niem-bac-ho-deo-de-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:ATK_DINH_HOA.JPG"
+          }
+        ]
+      },
+      {
+        "slug": "atk-cho-don",
+        "localityCode": "19",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "7c3912e6-9574-45a6-8689-a50a1d3c976c",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/atk-cho-don/di-tich-deo-so-cho-don-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:%C4%90%C3%A8o_So.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "khoi-nghia-bac-son",
+        "localityCode": "20",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "86f77d61-9fc6-4020-bc62-32ffbcb76c28",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khoi-nghia-bac-son/bao-tang-khoi-nghia-bac-son-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "http://langsontourism.com.vn/vi/khoinghiabacson"
+          }
+        ]
+      },
+      {
+        "slug": "ai-chi-lang",
+        "localityCode": "20",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "9a2042a1-d891-4966-b52a-9af18dcdc446",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ai-chi-lang/thung-lung-ai-chi-lang-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Chi_L%C4%83ng_2.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "mo-than-deo-nai",
+        "localityCode": "22",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "dd79ca52-6f87-4d69-bd2f-5dc1f0646b47",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/mo-than-deo-nai/bia-bac-ho-ve-tham-mo-deo-nai-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://baoquangninh.vn/di-tich-noi-bac-ho-ve-tham-mo-deo-nai-post2342565.html"
+          }
+        ]
+      },
+      {
+        "slug": "bai-coc-bach-dang",
+        "localityCode": "22",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "d7e578f8-fa59-476e-abb3-ab61e06bc27c",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/bai-coc-bach-dang/bai-coc-yen-giang-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "atk-ii-hiep-hoa",
+        "localityCode": "24",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "6f01a96d-becc-45eb-89ad-6b61a5960faa",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/atk-ii-hiep-hoa/cay-da-cho-van-atk-ii-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:HiepHoaCayDa.JPG"
+          }
+        ]
+      },
+      {
+        "slug": "khoi-nghia-yen-the",
+        "localityCode": "24",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "baf682c8-82f2-46ef-9ba4-5de42dbddbf0",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khoi-nghia-yen-the/hoang-hoa-tham-tren-ngua-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Ho%C3%A0ng_Hoa_Th%C3%A1m_riding_a_horse.png"
+          }
+        ]
+      },
+      {
+        "slug": "chien-thang-song-lo-doan-hung",
+        "localityCode": "25",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "6b8f43a4-f6d0-448a-bf98-eb56c08002e9",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-song-lo-doan-hung/tuong-dai-song-lo-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_chi%E1%BA%BFn_th%E1%BA%AFng_S%C3%B4ng_L%C3%B4.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "khu-di-tich-den-hung",
+        "localityCode": "25",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "3cca7fa1-d420-4de6-ba4c-b2f35377fd77",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-di-tich-den-hung/cong-vao-den-hung-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BB%81n_H%C3%B9ng.JPG"
+          }
+        ]
+      },
+      {
+        "slug": "ben-k15-do-son",
+        "localityCode": "31",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "925aea57-56f9-45b2-be78-eaa37cbd6b39",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ben-k15-do-son/tuong-dai-ben-k15-do-son-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://chinhsachcuocsong.vnanet.vn/ben-tau-khong-so-k15-dia-chi-do-nhac-nho-the-he-tre-ve-gia-tri-cua-hoa-binh-doc-lap/83591.html"
+          }
+        ]
+      },
+      {
+        "slug": "con-son-kiep-bac",
+        "localityCode": "31",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "e82e919f-5e63-478f-9d48-b1139648e9c3",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/con-son-kiep-bac/cong-nghi-mon-den-kiep-bac-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Den_kiep_bac.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "tieng-trong-tien-hai",
+        "localityCode": "33",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "ce87c759-929f-414f-9446-4a03cd1532e9",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/tieng-trong-tien-hai/dinh-lang-nho-lam-le-ky-niem-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://dongchau.hungyen.gov.vn/dinh-lang-nho-lam-to-chuc-le-ky-niem-ngay-truyen-thong-cach-mang-c260.html"
+          }
+        ]
+      },
+      {
+        "slug": "pho-hien",
+        "localityCode": "33",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "f23d0ae2-b156-421b-8440-3b556684740c",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/pho-hien/tam-quan-van-mieu-xich-dang-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:V%C4%83n_mi%E1%BA%BFu_X%C3%ADch_%C4%90%E1%BA%B1ng_01.JPG"
+          }
+        ]
+      },
+      {
+        "slug": "nha-may-det-nam-dinh",
+        "localityCode": "37",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "3fe5b111-8832-4af6-83dd-7b0dd102120e",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-may-det-nam-dinh/so-do-nha-may-det-nam-dinh-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:S%C6%A1_%C4%91%E1%BB%93_Nh%C3%A0_m%C3%A1y_D%E1%BB%87t_Nam_%C4%90%E1%BB%8Bnh_(B%E1%BA%A3o_t%C3%A0ng_t%E1%BB%89nh_Nam_%C4%90%E1%BB%8Bnh).jpg"
+          }
+        ]
+      },
+      {
+        "slug": "co-do-hoa-lu",
+        "localityCode": "37",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "e58d9788-b881-4862-9d9c-4a2a7c997178",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/co-do-hoa-lu/cong-vao-co-do-hoa-lu-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Gate_at_Hoa_Lu_-_Vietnam_-_August_2023.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "cau-ham-rong",
+        "localityCode": "38",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "a95b9ebb-f44e-41b5-b1a4-9fb0eb677345",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/cau-ham-rong/cau-ham-rong-song-ma-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Ham_Rong_Bridge.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "khu-di-tich-kim-lien",
+        "localityCode": "40",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "ca1b86ef-13d3-42be-9660-b2d7d9a409ae",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-di-tich-kim-lien/den-tuong-niem-kim-lien-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Kim_Lien_Monuments_Park.JPG"
+          }
+        ]
+      },
+      {
+        "slug": "truong-bon",
+        "localityCode": "40",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "5e64e82e-d40d-485e-8628-083640aac0df",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/truong-bon/toan-canh-di-tich-truong-bon-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://nhandan.vn/truong-bon-mot-bieu-tuong-cua-tinh-than-viet-nam-post721703.html"
+          }
+        ]
+      },
+      {
+        "slug": "nga-ba-dong-loc",
+        "localityCode": "42",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "466fd648-a54d-4144-ae6c-35cbbccdb6da",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nga-ba-dong-loc/tuong-dai-nga-ba-dong-loc-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Nga_Ba_Dong_Loc.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "thanh-co-quang-tri",
+        "localityCode": "44",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "4d20d808-77e0-4be0-83ff-efb763d09985",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/thanh-co-quang-tri/dai-tuong-niem-thanh-co-quang-tri-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_4.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "doi-bo-hien-luong-ben-hai",
+        "localityCode": "44",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "9bf9109c-cee2-497a-b2c1-6e758e14f6c9",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/doi-bo-hien-luong-ben-hai/cau-hien-luong-song-ben-hai-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Benhai03.JPG"
+          }
+        ]
+      },
+      {
+        "slug": "ngo-mon-hue",
+        "localityCode": "46",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "26a2a68a-dfc0-417c-81ac-5bafe1e0eb17",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ngo-mon-hue/ngo-mon-hoang-thanh-hue-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Hu%E1%BA%BF_(2024)_-_Meridian_Gate_-_Ng%E1%BB%8D_M%C3%B4n_(Ho%C3%A0ng_th%C3%A0nh_Hu%E1%BA%BF)_-_img_02.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "kinh-thanh-hue-1968",
+        "localityCode": "46",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "374a367a-93a5-403d-b248-dcc5bcc425f4",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/kinh-thanh-hue-1968/ky-dai-kinh-thanh-hue-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:K%E1%BB%B3_%C4%90%C3%A0i_(Kinh_th%C3%A0nh_Hu%E1%BA%BF).jpg"
+          }
+        ]
+      },
+      {
+        "slug": "chien-thang-nui-thanh-1965",
+        "localityCode": "48",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "f8baa561-de74-4704-876d-4560da55ef1f",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-nui-thanh-1965/tuong-dai-chien-thang-nui-thanh-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://baoquangnam.vn/di-tich-quoc-gia-chien-thang-nui-thanh-nang-tam-va-lan-toa-3027374.html"
+          }
+        ]
+      },
+      {
+        "slug": "khu-chung-tich-son-my",
+        "localityCode": "51",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "ecac7ccb-96c0-43e9-ae59-0ba3a7f8df84",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-chung-tich-son-my/tuong-dai-chung-tich-son-my-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Monument_of_the_My_Lai_Massacre_(2).jpg"
+          }
+        ]
+      },
+      {
+        "slug": "dak-to-tan-canh",
+        "localityCode": "51",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "2838bc94-c3cf-4a0f-994e-45643364fbc9",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/dak-to-tan-canh/tuong-dai-dak-to-tan-canh-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_Chi%E1%BA%BFn_th%E1%BA%AFng_%C4%90%C4%83k_T%C3%B4_-_T%C3%A2n_C%E1%BA%A3nh_(40022454161).jpg"
+          }
+        ]
+      },
+      {
+        "slug": "lang-khang-chien-stor",
+        "localityCode": "52",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "5ecdf688-d049-4cae-b146-177da289f100",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/lang-khang-chien-stor/nha-luu-niem-anh-hung-nup-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://gialai.gov.vn/du-khach/di-tich-lich-su-van-hoa/lang-khang-chien-stor.html"
+          }
+        ]
+      },
+      {
+        "slug": "bao-tang-quang-trung",
+        "localityCode": "52",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "8b2dbfad-879a-49db-8970-474d63bac080",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/bao-tang-quang-trung/bao-tang-quang-trung-tay-son-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:B%E1%BA%A3o_T%C3%A0ng_Quang_Trung.JPG"
+          }
+        ]
+      },
+      {
+        "slug": "san-bay-thanh-son",
+        "localityCode": "56",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "1fb46f6c-e500-4e15-b44a-444e999ef053",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/san-bay-thanh-son/san-bay-phan-rang-thanh-son-1969-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Douglas_A-1H_Skyraider_of_the_1st_SOS_at_Phan_Rang_Air_Base,_Vietnam,_circa_in_1969_(VA065677).jpg"
+          }
+        ]
+      },
+      {
+        "slug": "thap-ba-ponagar",
+        "localityCode": "56",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "784a7a05-06a4-4a6f-abf5-7c54a6ff64da",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/thap-ba-ponagar/thap-ba-ponagar-nha-trang-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Th%C3%A1p_b%C3%A0_Ponagar.JPG"
+          }
+        ]
+      },
+      {
+        "slug": "buon-ma-thuot-1975",
+        "localityCode": "66",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "8ac325fd-5145-4cff-b30b-54025a111749",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/buon-ma-thuot-1975/tuong-dai-chien-thang-buon-ma-thuot-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Bu%C3%B4n_Ma_Thu%E1%BB%99t_city_square.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "vung-ro-phu-yen",
+        "localityCode": "66",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "390e62fa-c931-4e97-b76e-def2ac3f12ef",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/vung-ro-phu-yen/vinh-vung-ro-ben-tau-khong-so-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:V%E1%BB%8Bnh_V%C5%A9ng_R%C3%B4.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "truong-duc-thanh",
+        "localityCode": "68",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "0261b03b-4bcb-46c3-9d02-e9e9ad387880",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/truong-duc-thanh/khu-di-tich-truong-duc-thanh-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Tr%C6%B0%E1%BB%9Dng_D%E1%BB%A5c_Thanh.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "nha-lao-thieu-nhi-da-lat",
+        "localityCode": "68",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "ef617c39-7255-4423-af2c-d3746a3d0587",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-lao-thieu-nhi-da-lat/cong-vao-nha-lao-thieu-nhi-da-lat-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Da_Lat_Children%27s_Prison_02.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "chien-thang-xuan-loc-1975",
+        "localityCode": "75",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "501edf88-c459-4266-b4a5-a676a4c8b02f",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-xuan-loc-1975/dap-tan-canh-cua-thep-xuan-loc-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://www.vietnamplus.vn/khoanh-khac-va-su-kien-ngay-2141975-dap-tan-canh-cua-thep-xuan-loc-post1034024.vnp"
+          }
+        ]
+      },
+      {
+        "slug": "can-cu-ta-thiet",
+        "localityCode": "75",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "a1e80238-b792-43f7-9e22-76e4f572c766",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/can-cu-ta-thiet/can-cu-ta-thiet-loc-ninh-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://www.vietnamplus.vn/50-nam-thu-do-khang-chien-vung-dat-do-loc-ninh-o-binh-phuoc-post780152.vnp"
+          }
+        ]
+      },
+      {
+        "slug": "dia-dao-cu-chi",
+        "localityCode": "79",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "5bfff549-9a77-4ac0-af3d-0cab771e09e0",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/dia-dao-cu-chi/cua-ham-dia-dao-cu-chi-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Cu_Chi_Tunnel_Entry_(1).jpg"
+          }
+        ]
+      },
+      {
+        "slug": "can-cu-trung-uong-cuc-mien-nam",
+        "localityCode": "80",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "6d330488-20f0-4af5-84ec-53f6b044f838",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/can-cu-trung-uong-cuc-mien-nam/duong-vao-can-cu-trung-uong-cuc-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Ng%C3%A3_Ba_v%C3%A0o_Trung_%C6%B0%C6%A1ng_C%E1%BB%A5c_mi%E1%BB%81n_Nam_-_panoramio.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "nga-tu-duc-hoa",
+        "localityCode": "80",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "d1e7a081-62d7-46ba-bf43-50f434b9e7a1",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nga-tu-duc-hoa/cong-vien-tuong-dai-vo-van-tan-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:CongVienVoVanTan.JPG"
+          }
+        ]
+      },
+      {
+        "slug": "chien-thang-ap-bac-1963",
+        "localityCode": "82",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "2a7c673b-80f3-4aee-9e4a-0144db6eb91b",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-ap-bac-1963/tuong-dai-chien-thang-ap-bac-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://www.vietnamplus.vn/chien-thang-ap-bac-buoc-ngoat-trong-cuoc-khang-chien-chong-my-post839211.vnp"
+          }
+        ]
+      },
+      {
+        "slug": "mo-cu-pho-bang-nguyen-sinh-sac",
+        "localityCode": "82",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "43c352bd-94e0-4b7e-9991-dacae462c83f",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/mo-cu-pho-bang-nguyen-sinh-sac/lang-mo-cu-pho-bang-nguyen-sinh-sac-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:M%E1%BB%99_Nguy%E1%BB%85n_Sinh_S%E1%BA%AFc_%E1%BB%9F_Cao_L%C3%A3nh.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "dong-khoi-ben-tre-1960",
+        "localityCode": "86",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "d5b10026-83b2-4d13-b6e3-afcedb456b85",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/dong-khoi-ben-tre-1960/nha-truyen-thong-dong-khoi-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Nha_truyen_thong_Dong_Khoi.JPG"
+          }
+        ]
+      },
+      {
+        "slug": "khu-tuong-niem-vo-van-kiet",
+        "localityCode": "86",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "6bf59044-829a-4692-a979-f1688c39a938",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-tuong-niem-vo-van-kiet/phu-dieu-khu-tuong-niem-vo-van-kiet-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Ph%C3%B9_%C4%91i%C3%AAu_V%C3%B5_V%C4%83n_Ki%E1%BB%87t.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "nha-tu-phu-quoc",
+        "localityCode": "91",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "fb2bc4d7-2626-4c12-9063-cfe282889204",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/nha-tu-phu-quoc/trai-giam-tu-binh-phu-quoc-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Phu_Quoc_Prison_02.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "khu-luu-niem-ton-duc-thang",
+        "localityCode": "91",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "15797be9-0f29-4cf2-88a0-20c3408948e5",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khu-luu-niem-ton-duc-thang/nha-tuong-niem-chu-tich-ton-duc-thang-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Le_m%C3%A9morial_du_Pr%C3%A9sident_Ton_Duc_Thang_(%C3%AEle_du_Tigre,_Vietnam)_(6635518367).jpg"
+          }
+        ]
+      },
+      {
+        "slug": "chien-thang-chuong-thien-1973",
+        "localityCode": "92",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "ea595aa1-a288-429c-94d0-d07b97359493",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/chien-thang-chuong-thien-1973/tuong-dai-chien-thang-75-luot-tieu-doan-chuong-thien-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:ChuongThien2-73.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "kham-lon-can-tho",
+        "localityCode": "92",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "099887e9-8436-40f7-b85e-ff990e844af2",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/kham-lon-can-tho/di-tich-kham-lon-can-tho-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Kh%C3%A1m_l%E1%BB%9Bn_C%E1%BA%A7n_Th%C6%A1.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "khoi-nghia-hon-khoai-1940",
+        "localityCode": "96",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "9630ffe7-03c9-4549-a67b-84143877a636",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/khoi-nghia-hon-khoai-1940/hon-khoai-noi-khoi-nghia-nam-1940-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Hon_Khoai_Island.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "ben-vam-lung",
+        "localityCode": "96",
+        "mediaCount": 1,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "116b3eea-7880-4192-afe4-e2cc2783c348",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/ben-vam-lung/tuong-dai-ben-vam-lung-duong-ho-chi-minh-tren-bien-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://www.vietnamplus.vn/ca-mau-bao-ton-di-tich-ben-vam-lung-diem-cuoi-duong-ho-chi-minh-tren-bien-post1034895.vnp"
+          }
+        ]
+      },
+      {
+        "slug": "pac-bo-cao-bang",
+        "localityCode": "04",
+        "mediaCount": 2,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "6931c617-1299-4f78-ab5f-7db9c3eb02d9",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/pac-bo-cao-bang/suoi-le-nin-pac-bo-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:P%C3%A1c_B%C3%B3.jpg"
+          },
+          {
+            "id": "72400d05-18e1-4f48-9363-d70e47c1b034",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/pac-bo-cao-bang/suoi-lenin-nui-cac-mac-1200.webp",
+            "is_cover": false,
+            "sort_order": 2,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:P%C3%A1c_B%C3%B3.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "dinh-doc-lap",
+        "localityCode": "79",
+        "mediaCount": 2,
+        "videoCount": 0,
+        "mediaAssets": [
+          {
+            "id": "4bb12c15-d48d-4d86-b67a-aebb20c47ba4",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/dinh-doc-lap/20190923-independence-palace-10-1200.webp",
+            "is_cover": true,
+            "sort_order": 1,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:20190923_Independence_Palace-10.jpg"
+          },
+          {
+            "id": "254e739e-06ae-45ba-849d-6c66d7f020ae",
+            "file_url": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media/locations/heritage/dinh-doc-lap/mat-tien-dinh-doc-lap-1200.webp",
+            "is_cover": false,
+            "sort_order": 2,
+            "source_page_url": "https://commons.wikimedia.org/wiki/File:Palacio_de_la_Reunificaci%C3%B3n,_Ciudad_Ho_Chi_Minh,_Vietnam,_2013-08-14,_DD_03.JPG"
+          }
+        ]
+      }
+    ]
+  }
+}

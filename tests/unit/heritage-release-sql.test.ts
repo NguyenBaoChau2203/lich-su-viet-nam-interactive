@@ -37,8 +37,18 @@ describe("Heritage Sites Release SQL Generation (Phase 4)", () => {
     // Idempotency and constraint checks
     expect(importSql).toContain("ON CONFLICT (slug) DO UPDATE");
     expect(importSql).toContain("ON CONFLICT (location_id, sort_order) DO UPDATE");
-    expect(importSql).toContain("ON CONFLICT (location_id, youtube_id) DO UPDATE");
+    if (importSql.includes("public.location_videos")) {
+      expect(importSql).toContain("ON CONFLICT (location_id, youtube_id) DO UPDATE");
+    }
     expect(importSql).toContain("WHERE NOT EXISTS");
+
+    // Zero fabricated patterns or temporary tables
+    expect(importSql).not.toContain("Special:FilePath");
+    expect(importSql).not.toContain("/uploads/images/");
+    expect(importSql).not.toContain("CREATE TEMP TABLE");
+    expect(importSql).not.toContain("hs_sources_temp");
+    expect(importSql).toContain("BEGIN;");
+    expect(importSql).toContain("pg_advisory_xact_lock");
 
     // Rollback preserves enrolled locations while clearing heritage columns
     expect(rollbackSql).toContain("UPDATE public.historical_locations SET");

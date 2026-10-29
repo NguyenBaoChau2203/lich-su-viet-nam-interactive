@@ -24,6 +24,8 @@ describe("event map anchors", () => {
     expect(getMapGroupLabel(group, labels)).toBe("Synthetic city");
     const distant = { ...group, anchors: [...group.anchors, { ...group.anchors[0], location: { ...group.anchors[0].location, slug: "far", latitude: 10, longitude: 106 } }] };
     expect(getMapGroupLabel(distant, labels)).toBe("2 sự kiện");
+    expect(getMapGroupLabel(distant, labels, "địa danh")).toBe("3 địa danh");
+    expect(getMapGroupLabel(distant, labels, "di tích")).toBe("2 di tích");
   });
 
   it("retains a single place's historical name at its own marker", () => {

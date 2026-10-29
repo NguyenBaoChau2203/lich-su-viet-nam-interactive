@@ -4,7 +4,7 @@ import { AccuracyBadge } from "@/components/content/AccuracyBadge";
 import { BeforeAfterSlider } from "@/components/content/BeforeAfterSlider";
 import { DetailCover } from "@/components/content/DetailCover";
 import { LightboxProvider } from "@/components/content/Lightbox";
-import { MediaGallery } from "@/components/content/MediaGallery";
+import { MediaGallerySection } from "@/components/content/MediaGallery";
 import { CompactTimeline } from "@/components/content/CompactTimeline";
 import { MiniMapLazy } from "@/components/map/MiniMapLazy";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
@@ -232,12 +232,7 @@ export function LocationDetailView({ location, preview = false, returnHref }: Lo
         </div>
 
         {gallery.length > 0 && (
-          <section aria-labelledby="anh-dia-diem" className="mt-12">
-            <h2 id="anh-dia-diem" className="mb-4 font-serif text-2xl font-bold text-foreground">
-              Hình ảnh
-            </h2>
-            <MediaGallery media={gallery} />
-          </section>
+          <MediaGallerySection media={gallery} title="Hình ảnh" titleId="anh-dia-diem" />
         )}
       </article>
     </LightboxProvider>

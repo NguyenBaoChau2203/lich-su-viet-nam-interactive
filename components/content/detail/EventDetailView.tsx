@@ -6,7 +6,7 @@ import { DetailCover } from "@/components/content/DetailCover";
 import { LightboxProvider } from "@/components/content/Lightbox";
 import { DatePrecisionBadge } from "@/components/content/DatePrecisionBadge";
 import { EventCard } from "@/components/content/EventCard";
-import { MediaFigure, MediaGallery } from "@/components/content/MediaGallery";
+import { MediaFigure, MediaGallerySection } from "@/components/content/MediaGallery";
 import { RichContent } from "@/components/content/RichContent";
 import { SourceList } from "@/components/content/SourceList";
 import { TopicBadge } from "@/components/content/TopicBadge";
@@ -154,12 +154,7 @@ export function EventDetailView({ event, previous, next, sameTopic = [], preview
           )}
 
           {remaining.length > 0 && (
-            <section aria-labelledby="tu-lieu">
-              <h2 id="tu-lieu" className="mb-4 font-serif text-2xl font-bold text-foreground">
-                Hình ảnh và tư liệu
-              </h2>
-              <MediaGallery media={remaining} />
-            </section>
+            <MediaGallerySection media={remaining} title="Hình ảnh và tư liệu" titleId="tu-lieu" className="" />
           )}
 
           <section aria-labelledby="nguon">

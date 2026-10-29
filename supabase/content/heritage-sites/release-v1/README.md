@@ -1,6 +1,9 @@
 # Heritage Sites (HS-1.0) Release Artifact
 
-- Generated: 2026-10-28T02:10:36.912Z
+> [!NOTE]
+> superseded media; use release-v1-media-fix for corrective update on live database. Fresh database deployments receive the updated genuine media assets.
+
+- Generated: 2026-10-28T17:02:54.674Z
 - Mode: `publish` (COMMIT)
 - Package: `supabase/content/heritage-sites/v1`
 - Accepted sites: 64 across 34 localities
@@ -10,8 +13,8 @@
 ## Execution Instructions
 
 1. Verify SHA-256 hashes against `snapshot.json`:
-   - `import.sql`: `7a92b48e877f0c124cbcd0a3f646a1c0a3d96036733241bd62b15c82af490bdc`
-   - `rollback.sql`: `aaeb763981f404e4948e773df91421cc717ba8ecc82c7468e6eb5c58baf557db`
+   - `import.sql`: `c1cba49e6c1fa3f0d05382bc69b86d21f87144d5f91ee9e5e2d57a58366e0633`
+   - `rollback.sql`: `ca253d28506161204dc2b3567a49924aa774a7a2dd4191ef4fcd96396de30357`
 
 2. Dry-run rehearsal (ends in ROLLBACK by default):
    ```powershell

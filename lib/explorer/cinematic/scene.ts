@@ -179,6 +179,7 @@ export async function createCinematicScene(options: CinematicSceneOptions): Prom
   let frameHandle = 0;
   let view = options.initialView;
   let pose: CameraPose;
+  let cachedViewport: GlobeViewport | null = null;
   let viewport: GlobeStageSize = { width: 1, height: 1 };
   let cancelCurrentFlight = () => {};
   let removeContextListener = () => {};
@@ -426,6 +427,7 @@ export async function createCinematicScene(options: CinematicSceneOptions): Prom
 
     // ----- camera / sizing -----
     const applyPose = () => {
+      cachedViewport = null;
       pose = viewToCameraPose(view, viewport);
       const radii = surfaceLayerRadii(pose.distanceToTarget);
       highlightMesh.scale.setScalar(radii.cap / 1.0004);
@@ -478,6 +480,7 @@ export async function createCinematicScene(options: CinematicSceneOptions): Prom
     };
 
     const resize = () => {
+      cachedViewport = null;
       const width = Math.max(1, Math.round(canvas.clientWidth));
       const height = Math.max(1, Math.round(canvas.clientHeight));
       viewport = { width, height };
@@ -561,7 +564,12 @@ export async function createCinematicScene(options: CinematicSceneOptions): Prom
     renderer.render(scene, camera);
 
     const api: CinematicScene = {
-      getViewport: () => createGlobeViewport(pose, viewport, view.zoom),
+      getViewport: () => {
+        if (!cachedViewport) {
+          cachedViewport = createGlobeViewport(pose, viewport, view.zoom);
+        }
+        return cachedViewport;
+      },
       subscribe(listener) { listeners.add(listener); return () => { listeners.delete(listener); }; },
       setView: director.setView,
       getView: () => view,

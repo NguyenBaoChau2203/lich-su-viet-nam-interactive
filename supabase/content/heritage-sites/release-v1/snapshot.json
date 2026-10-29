@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T02:10:36.912Z",
+  "generatedAt": "2026-10-28T17:02:54.674Z",
   "framework": "VN-34-2025",
   "mode": "publish",
   "commitMode": true,
@@ -26,13 +26,13 @@
     }
   ],
   "packageHashes": {
-    "manifest.json": "3cd79a448ffdbe0263254628b45b8c78e5550ded6ed176287c71d5e7d6262e82",
-    "sites.json": "535d153ef48a88902f2866c89a18ef8f10f9f1e4aae4a6c094907e02d739933f",
+    "manifest.json": "5319d0099f51779cac1dc5075ac04b94a6d1c845ea03229681398e5dd64dc566",
+    "sites.json": "bd9943ed12d2f48a5f2444f0ad38e71d58573fb01acb7a81809cc868b0f5d0ec",
     "sources.json": "28db2a9df43b6ce0080153f03d6c9eed5c14d11c811dffe1dc2222d5d278f17b",
     "localities.json": "6defdd026f0eee06f72f978240c9c2fa250cecc6ca4dbb6f71653d2b43f6c4eb"
   },
   "generatedSqlHashes": {
-    "import.sql": "7a92b48e877f0c124cbcd0a3f646a1c0a3d96036733241bd62b15c82af490bdc",
-    "rollback.sql": "aaeb763981f404e4948e773df91421cc717ba8ecc82c7468e6eb5c58baf557db"
+    "import.sql": "c1cba49e6c1fa3f0d05382bc69b86d21f87144d5f91ee9e5e2d57a58366e0633",
+    "rollback.sql": "ca253d28506161204dc2b3567a49924aa774a7a2dd4191ef4fcd96396de30357"
   }
 }

@@ -339,3 +339,28 @@ test("H14: No horizontal overflow and panel, card, controls do not overlap", asy
     expect(panel.x + panel.width).toBeLessThanOrEqual(card.x);
   }
 });
+
+test("H15: Broken cover falls back gracefully without era chip and cluster label contains địa danh", async ({ page, context }) => {
+  await context.route("https://example.invalid/broken.jpg**", (route) =>
+    route.fulfill({ status: 404, contentType: "text/plain", body: "Not found" }),
+  );
+
+  await page.goto("/?noi-dung=dia-danh");
+  await ready(page);
+
+  const row = page.locator('[data-site-slug="synthetic-doi-a1"]');
+  await expect(row).toBeVisible();
+
+  // Row shows [data-image-fallback]
+  const fallback = row.locator("[data-image-fallback='true']");
+  await expect(fallback).toBeVisible();
+  await expect(fallback).toContainText("Ảnh đang cập nhật");
+
+  // No era chip inside the thumb
+  const thumb = row.locator(".heritage-thumb");
+  await expect(thumb.locator(".bg-black\\/80")).toHaveCount(0);
+
+  // Cluster label in places mode contains "địa danh"
+  const measure = page.locator(".globe-label-measure");
+  await expect(measure).toHaveText(/địa danh/);
+});

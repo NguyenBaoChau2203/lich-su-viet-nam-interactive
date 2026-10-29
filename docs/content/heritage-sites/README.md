@@ -67,6 +67,24 @@ Mỗi địa danh cần từ 3 đến 5 phần câu chuyện ngắn gọn, chu�
 - Kiểm tra tính năng nhúng bằng nút "Kiểm tra nhúng" trong trang Quản trị.
 - Ghi nhận ngày kiểm tra `embed_checked_at`.
 
+### 3.6 Quy trình nhập ảnh và lưu trữ bằng chứng (Media Evidence Pipeline)
+Để đảm bảo chống bịa đặt (Anti-Fabrication), mọi ảnh mới bắt buộc phải tuân thủ quy trình kiểm chứng bằng máy:
+1. **Tìm kiếm nguồn thật:**
+   - Ưu tiên Wikimedia Commons: dùng API truy vấn trang file thật (`File:<Tên_thật>.jpg`), đọc giấy phép tự do (`CC BY`, `CC BY-SA`, `Public Domain`), tên tác giả thật và kích thước ảnh gốc.
+   - Trường hợp bài viết báo chí / bảo tàng chính thức: lấy link ảnh trực tiếp từ thẻ DOM hoặc `meta[property="og:image"]`, ghi nhận tác giả / cơ quan phát hành và link bài báo.
+2. **Tạo biến thể ảnh tối ưu:**
+   - Dùng thư viện `sharp` tạo 3 biến thể ảnh WebP: 400px (thumbnail/list), 1200px (chuẩn hiển thị chính), 2000px (màn hình lớn/retina).
+   - Đo đạc chính xác kích thước pixel thực tế, dung lượng byte và mã băm SHA-256 của từng file.
+3. **Lưu trữ bằng chứng:**
+   - Ghi đầy đủ thông tin vào `supabase/content/heritage-sites/v1/media-evidence.json` theo đúng schema quy định.
+   - Kiểm tra bằng mắt nội dung ảnh (visual check) để đảm bảo thể hiện đúng địa danh lịch sử được định danh.
+4. **Tải lên Supabase Storage:**
+   - Tải lên bucket `media` theo định dạng đường dẫn chuẩn: `locations/heritage/<site-key>/<name>-{400,1200,2000}.webp`.
+   - File URL trong `media_assets` hoặc `sites.json` lưu đường dẫn công khai bản 1200: `https://<project-ref>.supabase.co/storage/v1/object/public/media/locations/heritage/<site-key>/<name>-1200.webp`.
+5. **Thẩm định tự động:**
+   - Chạy lệnh `node scripts/content/heritage-sites-validate.mjs --package supabase/content/heritage-sites/v1 --mode release` để đảm bảo không bị trùng lặp giả mạo, không có URL suy diễn và 100% khớp mã băm bằng chứng.
+
+
 ---
 
 ## 4. Các lệnh kiểm tra và thẩm định chất lượng

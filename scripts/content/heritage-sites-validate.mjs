@@ -20,6 +20,19 @@ export const KNOWN_EXISTING_SLUGS = new Set([
   "pac-bo-cao-bang",
 ]);
 
+export const FORBIDDEN_PHOTOGRAPHERS = new Set([
+  "Wikimedia Commons Contributor",
+  "Cổng Thông tin Điện tử",
+  "Cổng Thông tin Điện tử tỉnh",
+]);
+
+export const FORBIDDEN_PHOTOGRAPHER_REGEX = /^Cổng Thông tin Điện tử( tỉnh)?$/i;
+
+export const FORBIDDEN_URL_PATTERNS = [
+  /\/uploads\/images\/\d{4}\/\d{2}\//i,
+  /Special:FilePath/i,
+];
+
 export const ALLOWED_LESSON_SLUGS = new Set([
   "cach-mang-thang-tam-1945",
   "chien-dich-dien-bien-phu",
@@ -71,6 +84,21 @@ export function validateHeritagePackage(packageDir, mode = "research") {
     }
   }
 
+  // Load media-evidence.json if present
+  const evidencePath = path.join(base, "media-evidence.json");
+  let evidenceData = null;
+  if (fs.existsSync(evidencePath)) {
+    try {
+      const evRaw = fs.readFileSync(evidencePath, "utf8");
+      rawTexts["media-evidence.json"] = evRaw;
+      evidenceData = JSON.parse(evRaw);
+    } catch (err) {
+      issues.push(`media-evidence.json: failed to parse JSON: ${err.message}`);
+    }
+  } else if (mode === "release") {
+    issues.push(`media-evidence.json: required file missing in release mode`);
+  }
+
   if (issues.length > 0) {
     return { valid: false, issues, summary: null };
   }
@@ -113,6 +141,8 @@ export function validateHeritagePackage(packageDir, mode = "research") {
   const siteKeys = new Set();
   const localityGrade12 = new Map();
   const localityExtended = new Map();
+  const dimensionPhotographerTuples = new Map();
+  const warnings = [];
 
   let acceptedCount = 0;
   let heldCount = 0;
@@ -261,6 +291,25 @@ export function validateHeritagePackage(packageDir, mode = "research") {
       if (covers.length !== 1) {
         issues.push(`sites.json: site "${key}" must have exactly 1 cover media (found ${covers.length})`);
       }
+
+      // Check pairKey grouping
+      const pairGroups = new Map();
+      for (const m of media) {
+        if (m.pairKey) {
+          if (!pairGroups.has(m.pairKey)) pairGroups.set(m.pairKey, []);
+          pairGroups.get(m.pairKey).push(m);
+        }
+      }
+      for (const [pKey, pItems] of pairGroups.entries()) {
+        const hasHist = pItems.some((it) => it.era === "historical");
+        const hasToday = pItems.some((it) => it.era === "today");
+        if (pItems.length !== 2 || !hasHist || !hasToday) {
+          issues.push(
+            `sites.json: site "${key}" pairKey "${pKey}" must contain exactly 1 historical and 1 today image (found ${pItems.length})`,
+          );
+        }
+      }
+
       for (const m of media) {
         if (!["open_license", "public_domain", "permission", "coursework_reference"].includes(m.usageBasis)) {
           issues.push(`sites.json: site "${key}" media "${m.key}" invalid usageBasis "${m.usageBasis}"`);
@@ -271,11 +320,126 @@ export function validateHeritagePackage(packageDir, mode = "research") {
         if (m.usageBasis === "coursework_reference" && m.license !== null) {
           issues.push(`sites.json: site "${key}" media "${m.key}" coursework_reference must have license = null`);
         }
-        if (!m.fileUrl || !/^https:\/\//.test(m.fileUrl)) {
-          issues.push(`sites.json: site "${key}" media "${m.key}" fileUrl must be https`);
+
+        // 1. Photographer check: reject placeholder photographers
+        if (
+          m.photographer &&
+          (FORBIDDEN_PHOTOGRAPHERS.has(m.photographer) || FORBIDDEN_PHOTOGRAPHER_REGEX.test(m.photographer))
+        ) {
+          issues.push(
+            `sites.json: site "${key}" media "${m.key}" has forbidden placeholder photographer "${m.photographer}"`,
+          );
         }
+
+        // 2. URL check: reject forbidden patterns
+        for (const pattern of FORBIDDEN_URL_PATTERNS) {
+          if (pattern.test(m.fileUrl)) {
+            issues.push(
+              `sites.json: site "${key}" media "${m.key}" fileUrl matches forbidden pattern ${pattern}: "${m.fileUrl}"`,
+            );
+          }
+        }
+
+        // URL domain/scheme check
+        if (mode === "research") {
+          const isStoragePrefix = m.fileUrl?.startsWith(`storage:locations/heritage/${key}/`);
+          const isSupabaseUrl = /^https:\/\/[a-z0-9-]+\.supabase\.co\/storage\/v1\/object\/public\/media\/locations\/heritage\//.test(
+            m.fileUrl || "",
+          );
+          const isHttps = /^https:\/\//.test(m.fileUrl || "");
+          if (!isStoragePrefix && !isSupabaseUrl && !isHttps) {
+            issues.push(
+              `sites.json: site "${key}" media "${m.key}" fileUrl must be storage:locations/heritage/... or https in research mode`,
+            );
+          }
+        } else if (mode === "release") {
+          const isSupabaseUrl = /^https:\/\/[a-z0-9-]+\.supabase\.co\/storage\/v1\/object\/public\/media\/locations\/heritage\//.test(
+            m.fileUrl || "",
+          );
+          if (!isSupabaseUrl) {
+            issues.push(
+              `sites.json: site "${key}" media "${m.key}" release mode requires Supabase public storage URL for fileUrl`,
+            );
+          }
+        }
+
         if (!m.altText || m.altText.length <= 10) {
           issues.push(`sites.json: site "${key}" media "${m.key}" altText must be > 10 chars`);
+        }
+
+        // Track dimension & photographer tuple for fabrication heuristic
+        if (m.photographer && m.width && m.height) {
+          const tuple = `${m.photographer}__${m.width}x${m.height}`;
+          if (!dimensionPhotographerTuples.has(tuple)) {
+            dimensionPhotographerTuples.set(tuple, new Set());
+          }
+          dimensionPhotographerTuples.get(tuple).add(key);
+        }
+
+        // Evidence verification
+        if (evidenceData) {
+          const evItem = (evidenceData.items || []).find(
+            (it) => it.key === m.key || (it.site === key && it.key === m.key),
+          );
+          if (!evItem) {
+            issues.push(`sites.json: site "${key}" media "${m.key}" has no matching entry in media-evidence.json`);
+          } else {
+            const v1200 = evItem.variants?.["1200"];
+            if (!evItem.download?.sha256 && !v1200?.sha256) {
+              issues.push(`media-evidence.json: entry "${m.key}" missing sha256`);
+            }
+            if (!v1200 && !evItem.commons?.originalWidth && !evItem.variants?.["400"]) {
+              issues.push(`media-evidence.json: entry "${m.key}" missing dimensions`);
+            }
+            if (v1200 && m.width && m.height) {
+              if (m.width !== v1200.width || m.height !== v1200.height) {
+                issues.push(
+                  `sites.json: site "${key}" media "${m.key}" declared dimensions ${m.width}x${m.height} do not match evidence 1200 variant dimensions ${v1200.width}x${v1200.height}`,
+                );
+              }
+            }
+          }
+        }
+      }
+
+      // Video verification against evidence
+      if (evidenceData && Array.isArray(site.videos)) {
+        const evVideos = new Map((evidenceData.videos || []).map((v) => [v.youtubeId, v]));
+        for (const v of site.videos) {
+          const ev = evVideos.get(v.youtubeId);
+          if (!ev || ev.verdict === "removed") {
+            issues.push(
+              `sites.json: site "${key}" video "${v.youtubeId}" has no valid evidence in media-evidence.json or was marked removed`,
+            );
+          }
+        }
+      }
+    }
+  }
+
+  // Fabrication heuristic check
+  for (const [tuple, siteKeysSet] of dimensionPhotographerTuples.entries()) {
+    if (siteKeysSet.size > 3) {
+      // Check if all sites in this set have distinct evidence sha256 and verified origin
+      const distinctEvidence = new Set();
+      let hasUnverified = false;
+      for (const siteKey of siteKeysSet) {
+        const site = (siteList || []).find((s) => s.key === siteKey);
+        const m = site?.media?.[0];
+        const ev = evidenceData?.items?.find((it) => it.key === m?.key);
+        if (!ev || !ev.download?.sha256 || m?.photographer === "Duplicated Photographer") {
+          hasUnverified = true;
+          break;
+        }
+        distinctEvidence.add(ev.download.sha256);
+      }
+
+      if (hasUnverified || distinctEvidence.size !== siteKeysSet.size) {
+        const msg = `Fabrication heuristic triggered: > 3 sites share exact photographer and dimensions (${tuple}): ${[...siteKeysSet].join(", ")}`;
+        if (mode === "release") {
+          issues.push(msg);
+        } else {
+          warnings.push(msg);
         }
       }
     }
@@ -311,7 +475,7 @@ export function validateHeritagePackage(packageDir, mode = "research") {
     totalSources: (srcList || []).length,
   };
 
-  return { valid: issues.length === 0, issues, summary };
+  return { valid: issues.length === 0, issues, warnings, summary };
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {

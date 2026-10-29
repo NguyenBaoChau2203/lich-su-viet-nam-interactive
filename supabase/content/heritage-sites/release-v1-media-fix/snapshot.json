@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-10-28T17:14:51.000Z",
+  "mode": "publish",
+  "commitMode": false,
+  "baseUrl": "https://ueolfjujjybutyuyfxha.supabase.co/storage/v1/object/public/media",
+  "counts": {
+    "totalSites": 64,
+    "mediaDeleted": 64,
+    "mediaInserted": 64,
+    "videosDeleted": 4,
+    "videosInserted": 0
+  },
+  "hashes": {
+    "applySql": "0beef1f0ae64c8f55154048e179d06d407cd5abfcd8185399092728e3fdf708a",
+    "rollbackSql": "0c852a51c76ad794268be4cab70f0e250664fc432691359c7e7876f3456576e3",
+    "beforeJson": "dcf026191637a14443e1bd3d9b8c3696e353381fca33d076a0f9c92927e5f5f2"
+  }
+}
