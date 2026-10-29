@@ -1,0 +1,20 @@
+{
+  "createdAt": "2026-10-29T01:52:34.898Z",
+  "coverageStatus": "partial-demo",
+  "admittedCodes": [
+    "01",
+    "31"
+  ],
+  "blockedNationally": [
+    "56"
+  ],
+  "sourceSnapshotSha256": "5504fab937f8f991a4926334e441da1f9f1b6a9219ec303eff82dd44f41c76d0",
+  "sourceTimestamp": "2026-10-23T20:20:51Z",
+  "license": {
+    "id": "ODbL-1.0",
+    "url": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "attribution": "© OpenStreetMap contributors"
+  },
+  "fullCandidate": "/.task-reports/province-areas-candidate-20261029/",
+  "note": "Public demo subset only. Full 33-unit candidate remains under .task-reports until simplified and rights/topology gate for all required units including Khánh Hòa."
+}
