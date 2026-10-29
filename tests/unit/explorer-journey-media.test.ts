@@ -13,10 +13,10 @@ describe("stop-specific reviewed media", () => {
   });
   it("provides a sourced local image within the delivery bound for each authored identity", () => {
     const ledger = JSON.parse(fs.readFileSync("docs/audits/sources/2026-10-25-journey-media.json", "utf8"));
-    const identities = JOURNEY_REGISTRY.journeys.flatMap(journey => journey.stops.map(stop => `${journey.id}:${stop.id}`));
+    const identities = [...new Set(JOURNEY_REGISTRY.journeys.flatMap((journey) => journey.stops.map((stop) => `${stop.origin?.journeyId ?? journey.id}:${stop.origin?.stopId ?? stop.id}`)))];
     expect(ledger.decisions.map((entry: { pair: string }) => entry.pair).sort()).toEqual(identities.sort());
     for (const journey of JOURNEY_REGISTRY.journeys) for (const stop of journey.stops) {
-      const media = resolveJourneyMedia(journey.id, stop.id);
+      const media = resolveJourneyMedia(stop.origin?.journeyId ?? journey.id, stop.origin?.stopId ?? stop.id);
       expect(media, `${journey.id}:${stop.id}`).not.toBeNull();
       const file = fs.readFileSync(`public${media!.url}`);
       expect(file.length).toBeLessThanOrEqual(200 * 1024);

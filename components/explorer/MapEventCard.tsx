@@ -6,6 +6,7 @@ import type { ExplorerEvent } from "@/lib/explorer/types";
 import { buildMapEventHref, type MapExplorerState } from "@/lib/explorer/map-state";
 import { accuracyLevelLabels, datePrecisionLabels } from "@/lib/utils/labels";
 import { getLessonForEvent } from "@/lib/lessons";
+import { getEventMapAvailability, MAP_LOCATION_UNAVAILABLE_EXPLANATION } from "@/lib/explorer/map-markers";
 
 type Props = { event: ExplorerEvent; state: MapExplorerState | null; onClose(): void };
 
@@ -14,6 +15,7 @@ export function MapEventCard({ event, state, onClose }: Props) {
   useEffect(() => { heading.current?.focus({ preventScroll: true }); }, []);
   const lesson = getLessonForEvent(event.slug);
   const detailHref = lesson ? `/bai-hoc/${lesson.slug}` : buildMapEventHref(event.slug, state);
+  const availability = getEventMapAvailability(event);
 
   return (
     <section className="home-map-event-card" aria-labelledby="map-event-heading" data-testid="map-event-card">
@@ -33,7 +35,7 @@ export function MapEventCard({ event, state, onClose }: Props) {
             <span>{location.name}{location.accuracyLevel !== "exact" && ` · ${accuracyLevelLabels[location.accuracyLevel]}`}
               {location.accuracyNote && <span className="block">{location.accuracyNote}</span>}</span>
           </li>)}
-          {event.locations.length === 0 && <li>Địa điểm đang được bổ sung.</li>}
+          {availability.status === "unavailable" && <li data-testid="map-location-unavailable">{MAP_LOCATION_UNAVAILABLE_EXPLANATION}</li>}
         </ul>
         <p className="mt-4 text-sm leading-relaxed text-foreground">{event.summary}</p>
         <p className="mt-4 flex items-center gap-1.5 text-xs text-muted-foreground"><BookOpen size={14} aria-hidden="true" />{event.sourceCount} nguồn tham khảo</p>

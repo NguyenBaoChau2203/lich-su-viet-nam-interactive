@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, Pause, Play, X } from "lucide-react";
+import { useEffect, useRef } from "react";
 import type { HistoryJourney, JourneyStop } from "@/lib/explorer/journey";
 import type { JourneyPopupAnchor } from "@/lib/explorer/globe-contract";
 import { JOURNEY_DWELL_MS } from "@/lib/explorer/journeys/playback";
@@ -16,6 +17,24 @@ type Props = { journey: HistoryJourney; stop: JourneyStop; state: MapExplorerSta
 export function JourneyPanel({ journey, stop, state, playing, settled, travelling, readerActive, reducedMotion, mapAvailable, eventAvailable,
   popupOpen = true, readerDismissed = false, anchor = null, onSeek, onPlay, onExit, onReadingChange, onCloseReader, onOpenReader }: Props) {
   const index = journey.stops.findIndex(item => item.id === stop.id);
+  const timelineRef = useRef<HTMLOListElement>(null);
+  useEffect(() => {
+    const list = timelineRef.current;
+    if (!list) return;
+    const revealCurrent = () => {
+      const current = list.querySelector<HTMLAnchorElement>('[aria-current="step"]');
+      if (!current || list.scrollWidth <= list.clientWidth) return;
+      const outer = list.getBoundingClientRect(), item = current.getBoundingClientRect();
+      const shift = item.left < outer.left ? item.left - outer.left - 12
+        : item.right > outer.right ? item.right - outer.right + 12 : 0;
+      // Scroll only this rail; instant positioning preserves focus and reduced motion.
+      if (shift) list.scrollBy({ left: shift, behavior: "instant" });
+    };
+    revealCurrent();
+    const observer = new ResizeObserver(revealCurrent);
+    observer.observe(list);
+    return () => observer.disconnect();
+  }, [journey.id, stop.id]);
   return <div className="journey-presentation" data-testid="journey-panel">
     {((!mapAvailable && !readerDismissed) || (popupOpen && !travelling)) && <JourneyStopPopup key={`${journey.id}:${stop.id}`} anchor={anchor} mapAvailable={mapAvailable} onReadingChange={onReadingChange}>
       <div className="journey-panel-top"><span>Mốc {index + 1} / {journey.stops.length}</span>
@@ -36,7 +55,7 @@ export function JourneyPanel({ journey, stop, state, playing, settled, travellin
     <p className="sr-only" role="status" aria-live="polite">{settled ? `Mốc ${index + 1} / ${journey.stops.length}: ${stop.title}` : ""}</p>
     <nav className="journey-timeline" aria-label="Các mốc hành trình" data-testid="journey-timeline">
       <div className="journey-timeline-caption"><strong>{journey.period}</strong><span>Các mốc chọn lọc · vị trí gần đúng</span></div>
-      <ol style={{ gridTemplateColumns: `repeat(${journey.stops.length}, minmax(0, 1fr))` }}>{journey.stops.map((item, position) => <li key={item.id}>
+      <ol ref={timelineRef} className={journey.stops.length > 8 ? "is-scrollable" : undefined} style={journey.stops.length > 8 ? undefined : { gridTemplateColumns: `repeat(${journey.stops.length}, minmax(0, 1fr))` }}>{journey.stops.map((item, position) => <li key={item.id}>
         <a href={buildMapExplorerUrl({ ...state, journey: { id: journey.id, stop: item.id }, selectedEvent: null, view: item.view })}
           onClick={event => { if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) { event.preventDefault(); onSeek(item.id); } }}
           aria-current={item.id === stop.id ? "step" : undefined}>

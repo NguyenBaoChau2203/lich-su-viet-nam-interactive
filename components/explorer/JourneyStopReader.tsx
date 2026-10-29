@@ -33,7 +33,7 @@ export function JourneyStopReader({ journeyId, stop, state, eventAvailable, onRe
     <h2 id="journey-stop-heading" tabIndex={-1}>{stop.title}</h2>
     <p className="journey-place">{stop.place}</p>
     <p className="journey-summary">{stop.summary}</p>
-    <JourneyMedia key={`${journeyId}:${stop.id}`} media={resolveJourneyMedia(journeyId, stop.id)} />
+    <JourneyMedia key={`${journeyId}:${stop.id}`} media={resolveJourneyMedia(stop.origin?.journeyId ?? journeyId, stop.origin?.stopId ?? stop.id)} />
     <p className="journey-accuracy">Vị trí gần đúng · {stop.datePrecision === "day" ? "Ngày có nguồn đối chiếu" : stop.datePrecision === "month" ? "Mốc ghi theo tháng" : "Mốc ghi theo năm"}</p>
     <details className="journey-sources" ref={sources}
       onToggle={event => onReadingChange(event.currentTarget.open || Boolean(reading.current?.contains(document.activeElement)))}>

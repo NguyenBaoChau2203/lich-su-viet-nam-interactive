@@ -94,7 +94,9 @@ const nextConfig: NextConfig = {
     ...(process.env.LOCAL_HEROES_E2E === "1" ? [{ protocol: "https" as const, hostname: "example.invalid", pathname: "/local-heroes/**" }] : []),
   ] },
   ...(process.env.LOCAL_HEROES_ADMIN_E2E === "1" ? { distDir: ".next-local-heroes-admin" }
-    : process.env.LOCAL_HEROES_E2E === "1" ? { distDir: ".next-local-heroes" } : {}),
+    : process.env.LOCAL_HEROES_E2E === "1" ? { distDir: ".next-local-heroes" }
+    : process.env.EXPLORER_MAP_E2E === "1" ? { distDir: ".next-explorer-map-journey" } : {}),
+  ...(process.env.EXPLORER_MAP_E2E === "1" ? { allowedDevOrigins: ["127.0.0.1"] } : {}),
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

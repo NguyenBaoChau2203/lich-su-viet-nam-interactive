@@ -152,7 +152,7 @@ test("users can select each registered journey from the compact chooser and see 
   const select = page.getByTestId("journey-select");
   await expect(select).toBeVisible();
   const options = select.locator("option");
-  await expect(options).toHaveCount(4);
+  await expect(options).toHaveCount(5);
 
   // Switch to Mùa thu độc lập 1945
   await select.selectOption("mua-thu-doc-lap-1945");
@@ -185,6 +185,14 @@ test("users can select each registered journey from the compact chooser and see 
   await expect(panel(page)).toContainText("Đang tạm dừng");
   expect(new URL(page.url()).searchParams.get("hanh-trinh")).toBe("mua-xuan-1975");
   expect(new URL(page.url()).searchParams.get("moc")).toBe("buon-ma-thuot-1975");
+
+  // The derived total is a fifth choice; the four authored sequences stay intact.
+  await select.selectOption("hanh-trinh-tong-hop");
+  await expect(page.locator(".globe-description")).toContainText("Hành trình tổng hợp");
+  await expect(page.getByTestId("journey-timeline").getByRole("link")).toHaveCount(20);
+  await expect(page.getByTestId("journey-stop-count")).toContainText("20 mốc");
+  await expect(panel(page).getByRole("heading", { name: "Rời Tổ quốc", exact: true })).toBeVisible();
+  expect(new URL(page.url()).searchParams.get("hanh-trinh")).toBe("hanh-trinh-tong-hop");
 
   // Switch back to Hồ Chí Minh
   await select.selectOption("ho-chi-minh-1911-1941");
@@ -329,7 +337,8 @@ for (const size of [{ width: 1280, height: 720 }, { width: 1366, height: 768 }, 
     await expect(page.getByTestId("globe-map")).toHaveAttribute("data-ready", "true");
     await expect(panel(page)).toContainText("Giảm chuyển động");
     const evidence = [];
-    for (const selected of JOURNEY_REGISTRY.journeys) {
+    const authoredJourneys = JOURNEY_REGISTRY.journeys.filter((journey) => journey.id !== "hanh-trinh-tong-hop");
+    for (const selected of authoredJourneys) {
       await page.getByTestId("journey-select").selectOption(selected.id);
       await expect(page.getByTestId("journey-select")).toHaveValue(selected.id);
       await expect(page.getByRole("button", { name: "Mốc trước", exact: true })).toBeDisabled();

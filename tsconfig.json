@@ -38,7 +38,9 @@
     ".next-local-heroes-admin/types/**/*.ts",
     ".next-local-heroes-admin/dev/types/**/*.ts",
     ".next-local-heroes/types/**/*.ts",
-    ".next-local-heroes/dev/types/**/*.ts"
+    ".next-local-heroes/dev/types/**/*.ts",
+    ".next-explorer-map-journey/types/**/*.ts",
+    ".next-explorer-map-journey/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

@@ -15,7 +15,7 @@ const limits = { minYear: 1954, maxYear: 1975, eventSlugs: [] };
 describe("validated journey registry", () => {
   it("retains the unchanged legacy default alongside the three accepted milestone sequences", () => {
     expect(JOURNEY_REGISTRY.journeys.map((journey) => journey.id)).toEqual([
-      "ho-chi-minh-1911-1941", "mua-thu-doc-lap-1945", "khang-chien-chong-phap-1946-1954", "mua-xuan-1975",
+      "ho-chi-minh-1911-1941", "mua-thu-doc-lap-1945", "khang-chien-chong-phap-1946-1954", "mua-xuan-1975", "hanh-trinh-tong-hop",
     ]);
     expect(JOURNEY_REGISTRY.getJourneyById(HISTORY_JOURNEY.id)).toBe(HISTORY_JOURNEY);
     expect(getJourneyStop(HISTORY_JOURNEY.id, "paris-1919")).toBe(HISTORY_JOURNEY.stops[3]);
